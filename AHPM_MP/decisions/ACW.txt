@@ -41,21 +41,7 @@ political_decisions = {
                 war_exhaustion = -20
             }
         }
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                USA = {
-                    NOT = { state_n_government = 1 }
-                }
-            }
-            modifier = {
-                factor = 0
-                NOT = { year = 1845 }
-            }
-        }
     }
-
 # CSA
     king_cotton = {
         picture = king_cotton
@@ -98,9 +84,7 @@ political_decisions = {
                 tag = USA
                 tag = CSA
             }
-            NOT = {
-                has_global_flag = marching_on_the_trail_of_tears
-            }
+            NOT = { has_global_flag = marching_on_the_trail_of_tears }
         }
 
         allow = {
@@ -129,10 +113,6 @@ political_decisions = {
                 move_pop = 130
             }
             set_global_flag = marching_on_the_trail_of_tears
-        }
-
-        ai_will_do = {
-            factor = 1
         }
     }
 
@@ -197,19 +177,13 @@ political_decisions = {
                 }
             }
         }
-
-        ai_will_do = {
-            factor = 1
-        }
     }
 
     custers_expedition = {
         picture = custers_expedition
         potential = {
             tag = USA
-            NOT = {
-                has_country_flag = custers_expedition_sent
-            }
+            has_country_flag != custers_expedition_sent
             owns = 122
             year = 1874
         }
@@ -256,9 +230,7 @@ political_decisions = {
         picture = bixby_letter
         potential = {
             tag = USA
-            not = {
-                has_country_flag = bixby_letter_sent
-            }
+            has_country_flag != bixby_letter_sent
             war_with = CSA
         }
 
@@ -334,9 +306,7 @@ political_decisions = {
                     reduce_pop = 0.90
                 }
             }
-            CSA = {
-                war_exhaustion = 4
-            }
+            CSA = { war_exhaustion = 4 }
         }
     }
 

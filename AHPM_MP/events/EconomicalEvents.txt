@@ -53,9 +53,7 @@ country_event = {
 
     option = {
         name = "EVTOPTB22500"
-        any_pop = {
-            militancy = 1
-        }
+        any_pop = { militancy = 1 }
         add_country_modifier = {
             name = stock_market_crash
             duration = 365
@@ -108,8 +106,7 @@ country_event = {
         }
     }
 
-    option = {
-        name = "EVTOPTA22510"
+    immediate = {
         any_country = {
             limit = {
                 civilized = yes
@@ -121,6 +118,10 @@ country_event = {
                 duration = 730
             }
         }
+    }
+
+    option = {
+        name = "EVTOPTA22510"
     }
 }
 
@@ -270,12 +271,15 @@ country_event = {
         }
     }
 
-    option = {
-        name = "EVTOPTA22540"
+    immediate = {
         random_state = {
             limit = { is_colonial = no }
             any_owned = { limit = { is_state_capital = yes } add_province_modifier = { name = local_stock_exchange duration = -1 } }
         }
+    }
+
+    option = {
+        name = "EVTOPTA22540"
     }
 }
 
@@ -508,159 +512,11 @@ country_event = {
             }
             owner = { add_country_modifier = { name = mercantilism duration = 3650 } }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 5
-                NOT = { money = 50000 }
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 10
-                NOT = { money = 20000 }
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.5
-                NOT = { money = 10000 }
-            }
-            modifier = {
-                factor = 2
-                NOT = { money = 5000 }
-            }
-            modifier = {
-                factor = 1.5
-                NOT = { industrial_score = 10 }
-            }
-            modifier = {
-                factor = 1.1
-                OR = {
-                    is_greater_power = yes
-                    is_secondary_power = yes
-                }
-            }
-            modifier = {
-                factor = 2
-                OR = {
-                    tag = RUS
-                    tag = TUR
-                }
-            }
-            modifier = {
-                factor = 1.2
-                vote_franschise = none_voting
-            }
-            modifier = {
-                factor = 1.1
-                colonial_nation  = yes
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { literacy = 0.5 }
-            }
-            modifier = {
-                factor = 1.2
-                NOT = { literacy = 0.3 }
-            }
-            modifier = {
-                factor = 1.5
-                ruling_party_ideology = reactionary
-            }
-            modifier = {
-                factor = 2
-                OR = {
-                    ruling_party_ideology = fascist
-                    ruling_party_ideology = communist
-                }
-            }
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_order
-            }
-            modifier = {
-                factor = 1.2
-                OR = {
-                    nationalvalue = nv_autocracy
-                    nationalvalue = nv_tradition
-                }
-            }
-            modifier = {
-                factor = 1.25
-                sphere_owner = { trade_policy = protectionism }
-            }
-            modifier = {
-                factor = 1.5
-                overlord = { trade_policy = protectionism }
-            }
-        }
     }
 
     option = {
         name = "EVTOPTB22581" #No policy
         add_country_modifier = { name = no_trade_policy_set duration = 3650 }
-        ai_chance = {
-            factor = 30
-            modifier = {
-                factor = 2
-                ruling_party_ideology = liberal
-            }
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_productivity
-            }
-            modifier = {
-                factor = 1.2
-                nationalvalue = nv_liberty
-            }
-            modifier = {
-                factor = 2
-                sphere_owner = { trade_policy = free_trade }
-            }
-            modifier = {
-                factor = 3
-                overlord = { trade_policy = free_trade }
-            }
-            modifier = {
-                factor = 1.1
-                money = 100000
-            }
-            modifier = {
-                factor = 1.1
-                money = 200000
-            }
-            modifier = {
-                factor = 1.1
-                money = 400000
-            }
-            modifier = {
-                factor = 1.1
-                money = 800000
-            }
-            modifier = {
-                factor = 1.25
-                money = 1000000
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 100
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 200
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 400
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 800
-            }
-            modifier = {
-                factor = 1.25
-                industrial_score = 1000
-            }
-        }
     }
 
     option = {
@@ -683,76 +539,6 @@ country_event = {
     option = {
         name = "EVTOPTC22581"
         add_country_modifier = { name = economic_nationalism duration = 3650 }
-        ai_chance = {
-            factor = 50
-            modifier = {
-                factor = 1.2
-                OR = {
-                    nationalvalue = nv_autocracy
-                    nationalvalue = nv_tradition
-                }
-            }
-            modifier = {
-                factor = 5
-                NOT = { money = 200000 }
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 10
-                NOT = { money = 50000 }
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.5
-                ruling_party_ideology = reactionary
-            }
-            modifier = {
-                factor = 2
-                OR = {
-                    ruling_party_ideology = fascist
-                    ruling_party_ideology = communist
-                }
-            }
-            modifier = {
-                factor = 2
-                NOT = { money = 5000 }
-            }
-            modifier = {
-                factor = 1.2
-                NOT = { money = 20000 }
-            }
-            modifier = {
-                factor = 1.3
-                NOT = { money = 50000 }
-            }
-            modifier = {
-                factor = 1.1
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { literacy = 0.6 }
-            }
-            modifier = {
-                factor = 1.1
-                is_greater_power = yes
-                NOT = { industrial_score = 50 }
-            }
-            modifier = {
-                factor = 1.1
-                is_greater_power = yes
-                NOT = { industrial_score = 100 }
-            }
-            modifier = {
-                factor = 1.1
-                is_greater_power = yes
-                NOT = { industrial_score = 200 }
-            }
-            modifier = {
-                factor = 1.1
-                colonial_nation  = yes
-            }
-        }
     }
 
     #Mercantilism
@@ -778,118 +564,12 @@ country_event = {
             }
             owner = { add_country_modifier = { name = russian_protectionism duration = 3650 } }
         }
-        ai_chance = {
-            factor = 30
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_order
-            }
-            modifier = {
-                factor = 1.1
-                ruling_party_ideology = conservative
-            }
-            modifier = {
-                factor = 1.1
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.1
-                colonial_nation  = yes
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { literacy = 0.5 }
-            }
-            modifier = {
-                factor = 1.2
-                NOT = { money = 20000 }
-            }
-            modifier = {
-                factor = 1.3
-                NOT = { money = 50000 }
-            }
-            modifier = {
-                factor = 1.25
-                sphere_owner = { trade_policy = protectionism }
-            }
-            modifier = {
-                factor = 1.5
-                overlord = { trade_policy = protectionism }
-            }
-        }
     }
 
     #No policy
     option = {
         name = "EVTOPTB22581"
         add_country_modifier = { name = no_trade_policy_set duration = 3650 }
-        ai_chance = {
-            factor = 20
-            modifier = {
-                factor = 2
-                ruling_party_ideology = liberal
-            }
-            modifier = {
-                factor = 0.9
-                vote_franschise = none_voting
-            }
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_productivity
-            }
-            modifier = {
-                factor = 1.2
-                nationalvalue = nv_liberty
-            }
-            modifier = {
-                factor = 2
-                sphere_owner = { trade_policy = free_trade }
-            }
-            modifier = {
-                factor = 3
-                overlord = { trade_policy = free_trade }
-            }
-            modifier = {
-                factor = 1.1
-                money = 100000
-            }
-            modifier = {
-                factor = 1.1
-                money = 200000
-            }
-            modifier = {
-                factor = 1.1
-                money = 400000
-            }
-            modifier = {
-                factor = 1.1
-                money = 800000
-            }
-            modifier = {
-                factor = 1.25
-                money = 1000000
-            }
-            modifier = {
-                factor = 1.2
-                industrial_score = 100
-            }
-            modifier = {
-                factor = 1.3
-                industrial_score = 200
-            }
-            modifier = {
-                factor = 1.4
-                industrial_score = 400
-            }
-            modifier = {
-                factor = 1.5
-                industrial_score = 800
-            }
-            modifier = {
-                factor = 1.8
-                industrial_score = 1000
-            }
-        }
     }
 
     option = {
@@ -1112,206 +792,21 @@ country_event = {
     option = {
         name = "EVTOPTC22584" #Even more free trade - 0 tariffs max
         add_country_modifier = { name = french_liberal_school duration = 3650 }
-        ai_chance = {
-            factor = 20
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_liberty
-            }
-            modifier = {
-                factor = 1.1
-                money = 1000000
-            }
-            modifier = {
-                factor = 1.25
-                industrial_score = 1000
-            }
-        }
     }
 
     option = {
         name = "EVTOPTA22584" #Free Trade
         add_country_modifier = { name = smithian_school duration = 3650 }
-        ai_chance = {
-            factor = 30
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_productivity
-            }
-            modifier = {
-                factor = 1.2
-                nationalvalue = nv_liberty
-            }
-            modifier = {
-                factor = 1.3
-                sphere_owner = { trade_policy = free_trade }
-            }
-            modifier = {
-                factor = 1.8
-                overlord = { trade_policy = free_trade }
-            }
-            modifier = {
-                factor = 1.1
-                money = 100000
-            }
-            modifier = {
-                factor = 1.1
-                money = 200000
-            }
-            modifier = {
-                factor = 1.1
-                money = 400000
-            }
-            modifier = {
-                factor = 1.1
-                money = 800000
-            }
-            modifier = {
-                factor = 1.25
-                money = 1000000
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 100
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 200
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 400
-            }
-            modifier = {
-                factor = 1.1
-                industrial_score = 800
-            }
-            modifier = {
-                factor = 1.25
-                industrial_score = 1000
-            }
-        }
     }
 
     option = {
         name = "EVTOPTD22584" #Non-Interventionism
         add_country_modifier = { name = non_interventionism_trade_policy duration = 3650 }
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_productivity
-            }
-            modifier = {
-                factor = 1.2
-                nationalvalue = nv_liberty
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { money = 10000 }
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { money = 20000 }
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { money = 30000 }
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { money = 40000 }
-            }
-        }
     }
 
     option = {
         name = "EVTOPTB22581" #No policy
         add_country_modifier = { name = no_trade_policy_set duration = 3650 }
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 2
-                NOT = { ruling_party_ideology = liberal }
-            }
-            modifier = {
-                factor = 2
-                NOT = { money = 100000 }
-                OR = {
-                    tag = AUS
-                    tag = KUK
-                    tag = DNB
-                    tag = TUR
-                    tag = RUS
-                    tag = USA
-                }
-            }
-            modifier = {
-                factor = 2
-                NOT = { money = 5000 }
-            }
-            modifier = {
-                factor = 1.5
-                NOT = { money = 20000 }
-            }
-            modifier = {
-                factor = 1.5
-                NOT = { money = 50000 }
-            }
-            modifier = {
-                factor = 1.1
-                OR = {
-                    is_greater_power = yes
-                    is_secondary_power = yes
-                }
-            }
-            modifier = {
-                factor = 1.2
-                vote_franschise = none_voting
-            }
-            modifier = {
-                factor = 1.1
-                colonial_nation  = yes
-            }
-            modifier = {
-                factor = 1.1
-                NOT = { literacy = 0.5 }
-            }
-            modifier = {
-                factor = 1.2
-                NOT = { literacy = 0.3 }
-            }
-            modifier = {
-                factor = 1.5
-                ruling_party_ideology = reactionary
-            }
-            modifier = {
-                factor = 2
-                OR = {
-                    ruling_party_ideology = fascist
-                    ruling_party_ideology = communist
-                }
-            }
-            modifier = {
-                factor = 1.1
-                nationalvalue = nv_order
-            }
-            modifier = {
-                factor = 1.2
-                OR = {
-                    nationalvalue = nv_autocracy
-                    nationalvalue = nv_tradition
-                }
-            }
-            modifier = {
-                factor = 1.25
-                sphere_owner = { trade_policy = protectionism }
-            }
-            modifier = {
-                factor = 1.5
-                overlord = { trade_policy = protectionism }
-            }
-        }
     }
 
     option = {
@@ -1352,10 +847,13 @@ province_event = {
         }
     }
 
-    option = {
-        name = "EVT22590OPTA"
+    immediate = {
         naval_base = -1
         add_province_modifier = { name = in_disrepair duration = 545 }
+    }
+
+    option = {
+        name = "EVT22590OPTA"
     }
 }
 
@@ -1438,95 +936,3 @@ province_event = {
         }
     }
 }
-
-# # Inflation
-# country_event = {
-    # id = 22590
-    # title = "EVTNAME22590"
-    # desc = "EVTDESC22590"
-    # picture = "private_banks"
-
-    # trigger = {
-        # money = 5000000
-        # ai = yes
-        # NOT = {
-            # has_country_modifier = high_inflation_1
-            # has_country_modifier = high_inflation_2
-            # has_country_modifier = high_inflation_3
-        # }
-    # }
-
-    # mean_time_to_happen = {
-        # months = 60
-        # modifier = {
-            # factor = 0.9
-            # money = 5000000
-        # }
-        # modifier = {
-            # factor = 0.9
-            # money = 5500000
-        # }
-        # modifier = {
-            # factor = 0.9
-            # money = 6000000
-        # }
-        # modifier = {
-            # factor = 0.9
-            # money = 6500000
-        # }
-        # modifier = {
-            # factor = 0.9
-            # money = 7000000
-        # }
-        # modifier = {
-            # factor = 0.9
-            # money = 7500000
-        # }
-        # modifier = {
-            # factor = 0.9
-            # money = 8000000
-        # }
-        # modifier = {
-            # factor = 0.5
-            # money = 10000000
-        # }
-    # }
-
-    # option = {
-        # name = "EVTOPTA22590"
-        # random_owned = {
-            # limit = {
-                # owner = {
-                    # NOT = {
-                        # has_country_modifier = high_inflation_1
-                        # has_country_modifier = high_inflation_2
-                        # has_country_modifier = high_inflation_3
-                    # }
-                # }
-            # }
-            # owner = { add_country_modifier = { name = high_inflation_1 duration = 3650 } }
-        # }
-        # random_owned = {
-            # limit = {
-                # owner = {
-                    # has_country_modifier = high_inflation_1
-                    # NOT = { has_country_modifier = high_inflation_3 }
-                # }
-            # }
-            # owner = {
-                # remove_country_modifier = high_inflation_1
-                # add_country_modifier = { name = high_inflation_2 duration = 3650 }
-            # }
-        # }
-        # random_owned = {
-            # limit = {
-                # owner = { has_country_modifier = high_inflation_2 }
-            # }
-            # owner = {
-                # remove_country_modifier = high_inflation_1
-                # remove_country_modifier = high_inflation_2
-                # add_country_modifier = { name = high_inflation_3 duration = 3650 }
-            # }
-        # }
-    # }
-# }

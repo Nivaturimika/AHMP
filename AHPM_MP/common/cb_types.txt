@@ -5183,41 +5183,25 @@ annex_africa = {
         THIS = {
             nationalism_n_imperialism = 1
             capital_scope = { continent = europe }
-            NOT = { tag = RUS }
-            NOT = { tag = TUR }
             slavery = no_slavery
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes
             }
-              NOT = { has_country_modifier = neutrality_modifier }
+            NOT = { has_country_modifier = neutrality_modifier }
             NOT = { has_country_modifier = claimed_africa }
             NOT = { has_country_flag = congo_award }
             civilized = yes
             has_global_flag = berlin_conference
         }
-        NOT = {
-            tag = MOR
-            tag = ALD
-            tag = TRI
-            tag = LIB
-            tag = CYR
-            primary_culture = kefficho
-            primary_culture = amhara
-            primary_culture = tigray
-            primary_culture = oromo
-            primary_culture = harari
-            has_country_flag = post_colonial_country
-        }
+        has_country_flag != post_colonial_country
         civilized = no
         is_vassal = no
         capital_scope = { continent = africa }
         ai = yes
         OR = {
             war_with = THIS
-            THIS = {
-                NOT = { has_country_modifier = punitive_effects }
-            }
+            THIS = { has_country_modifier != punitive_effects }
         }
 
         #Claimed colonial regions can't be conquered with this CB

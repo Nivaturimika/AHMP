@@ -39,8 +39,7 @@ province_event = {
     title = "EVTNAME1100"
     desc = "EVTDESC1100"
 
-    option = {
-        name = "EVTOPTA1100"
+   immediate = {
         trade_goods = precious_metal
         add_province_modifier = {
             name = gold_rush
@@ -61,6 +60,10 @@ province_event = {
                 owner = { add_country_modifier = { name = gold_rush_country duration = 730 } }
             }
         }
+   }
+
+    option = {
+        name = "EVTOPTA1100"
     }
 }
 

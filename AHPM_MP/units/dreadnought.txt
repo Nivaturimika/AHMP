@@ -5,6 +5,7 @@ dreadnought = {
     type = naval
     sprite = Dreadnought
     unit_type = big_ship
+    transport = yes
     capital = yes
     active = no
     move_sound = steam_move
@@ -49,8 +50,9 @@ dreadnought = {
     }
 
     #Naval Abilities
-    hull = 70
-    gun_power = 50
+    hull = 110
+    gun_power = 110
     fire_range = 0.8
-    evasion = 0
+    evasion = 5
+    torpedo_attack = 80
 }

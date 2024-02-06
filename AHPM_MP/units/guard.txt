@@ -32,7 +32,6 @@ guard = {
         ammunition = 0.1 #0
     }
 
-
     #Land Abilties
     reconnaissance = 0
     attack = 8

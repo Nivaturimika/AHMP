@@ -6,6 +6,7 @@ commerce_raider = {
     sprite = Raider
     active = no
     unit_type = light_ship
+    transport = yes
     move_sound = steam_move
     select_sound = steam_selected
     floating_flag = yes
