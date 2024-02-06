@@ -45,15 +45,12 @@ country_event = {
 }
 
 province_event = {
-
     id = 33004 #will set up DAN36206
     news = yes
     news_desc_long = "EVTDESC33004_NEWS_LONG"
     news_desc_medium = "EVTDESC33004_NEWS_MEDIUM"
     news_desc_short = "EVTDESC33004_NEWS_SHORT"
-
     trigger = {
-        province_id = 371 #Aabenra/North Schleswig
         owned_by = GER
         year = 1896
         culture = danish
@@ -63,10 +60,8 @@ province_event = {
             has_global_flag = NOGermanizeSchlewsigDanes
         }
     }
-
     mean_time_to_happen =  {
         months = 6
-
         modifier = {
             factor = 0.85 #increase likelihood to happen
             year = 1897
@@ -84,9 +79,7 @@ province_event = {
     option = {
         name = "EVTOPTA33004"
         any_pop = {
-            limit = {
-                has_pop_culture = danish
-            }
+            limit = { has_pop_culture = danish }
             militancy = 2
         }
         DEN = { country_event = 36206 }
@@ -107,47 +100,34 @@ province_event = {
 }
 
 country_event = {
-
     id = 33000
+    title = "EVTNAME33000"
+    desc = "EVTDESC33000"
+    picture = "theatre"
     news = yes
     news_desc_long = "EVTDESC33000_NEWS_LONG"
     news_desc_medium = "EVTDESC33000_NEWS_MEDIUM"
     news_desc_short = "EVTDESC33000_NEWS_SHORT"
-
     trigger = {
         tag = GER
         year = 1916
-        NOT = {
-            year = 1920
-        }
     }
 
     fire_only_once = yes
 
     mean_time_to_happen =  {
         months = 5
-
         modifier = {
             factor = 0.75 #increase likelihood to happen
             year = 1917
         }
-
-
         modifier = {
             factor = 0.95 #increase likelihood to happen
             year = 1918
         }
     }
-
-    title = "EVTNAME33000"
-    desc = "EVTDESC33000"
-    picture = "theatre"
-
-    option = {
-        name = "EVTOPTA33000"
-        prestige = 1
-    }
-
+    immediate = { prestige = 1 }
+    option = { name = "EVTOPTA33000" }
 }
 
 country_event = {
@@ -175,8 +155,6 @@ country_event = {
             factor = 0.75 #increase likelihood to happen
             year = 1875
         }
-
-
         modifier = {
             factor = 0.95 #increase likelihood to happen
             year = 1876
@@ -413,21 +391,17 @@ country_event = {
                             is_colonial = yes
                             any_owned_province = { continent = africa OR = { port = yes any_neighbor_province = { owned_by = ENG } } }
                         }
-                    any_owned = { secede_province = ENG }
+                        any_owned = { secede_province = ENG }
                     }
                 }
             }
         }
-
         533 = {
             remove_core = ENG
             secede_province = GER
             add_core = GER
         }
-        random_owned = {
-            limit = { province_id = 2081 2082 = { owned_by = GER } }
-            owner = { 2081 = { secede_province = GER add_core = NMB } }
-        }
+        2081 = { secede_province = GER add_core = NMB }
         relation = { who = GER value = 25 }
         set_country_flag = has_questioned_heligoland
         set_global_flag = heligoland_claimed
@@ -436,14 +410,11 @@ country_event = {
 }
 
 country_event = {
-
     id = 33008
     title = "EVTNAME33008" #Germany Has Refused
     desc = "EVTDESC33008"
     picture = "treaty"
-
     is_triggered_only = yes
-
     option = {
         name = "EVT33008OPTA"
         prestige = -5
@@ -961,12 +932,10 @@ country_event = {
     title = "EVTNAME33031" #German Warships
     desc = "EVTDESC33031"
     picture = "german_east_africa_company"
-
     is_triggered_only = yes
-
+    immediate = { clr_country_flag = delay_unciv_annexation }
     option = {
         name = "EVT33031OPTA"
-        clr_country_flag = delay_unciv_annexation
         prestige = 5
         relation = { who = FROM value = -400 }
         add_casus_belli = {
@@ -994,7 +963,6 @@ country_event = {
 
     option = {
         name = "EVT33031OPTB"
-        clr_country_flag = delay_unciv_annexation
         prestige = -5
         FROM = { prestige = 5 }
         relation = { who = FROM value = 400 }
@@ -1524,12 +1492,7 @@ country_event = {
         industrial_score = 500
         has_global_flag = german_LR_normalized
         any_owned_province = {
-            OR = {
-                region = PRU_701 #Posen
-                region = PRU_690 #Westpreussen
-                region = PRU_695 #Ostpreussen
-                region = PRU_682 #Lower Silesia
-            }
+            has_national_minority = yes
             any_pop = {
                 strata = poor
                 NOT = { everyday_needs = 0.5 }
@@ -1541,32 +1504,20 @@ country_event = {
 
     mean_time_to_happen = {
         months = 24
-
         modifier = {
             factor = 0.8
             any_owned_province = {
-                OR = {
-                    region = PRU_701
-                    region = PRU_690
-                    region = PRU_695
-                    region = PRU_682
-                }
+                has_national_minority = yes
                 any_pop = {
                     strata = poor
                     NOT = { everyday_needs = 0.25 }
                 }
             }
         }
-
         modifier = {
             factor = 0.8
             any_owned_province = {
-                OR = {
-                    region = PRU_701
-                    region = PRU_690
-                    region = PRU_695
-                    region = PRU_682
-                }
+                has_national_minority = yes
                 any_pop = {
                     strata = poor
                     NOT = { everyday_needs = 0.1 }
@@ -1577,12 +1528,7 @@ country_event = {
         modifier = {
             factor = 0.4
             any_owned_province = {
-                OR = {
-                    region = PRU_701 #Posen
-                    region = PRU_690 #Westpreussen
-                    region = PRU_695 #Ostpreussen
-                    region = PRU_682 #Lower Silesia
-                }
+                has_national_minority = yes
                 any_pop = {
                     strata = poor
                     NOT = { life_needs = 0.75 }
@@ -1594,175 +1540,20 @@ country_event = {
     option = {
         name = "EVT33043OPTA"
         random_owned = {
-            limit = { province_id = 580 } #Dusseldorf
+            limit = { is_core = RHI }
             add_province_modifier = { name = population_resettlement duration = 365 }
         }
-        random_owned = {
-            limit = { province_id = 564 } #Frankfurt
-            add_province_modifier = { name = population_resettlement duration = 365 }
-        }
-        random_owned = {
-            limit = { province_id = 575 } #Cologne
-            add_province_modifier = { name = population_resettlement duration = 365 }
-        }
-        random_owned = {
-            limit = { province_id = 580 } #Dortmund
-            add_province_modifier = { name = population_resettlement duration = 365 }
-        }
-        random_owned = {
-            limit = { province_id = 528 } #Hamburg
-            add_province_modifier = { name = population_resettlement duration = 365 }
-        }
-
-        #Silesia
-        random_owned = {
-            limit = { region = PRU_682 } #Silesia
-            owner = {
-                random_list = {
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_682 }
-                            life_rating = -2
-                            add_province_modifier = { name = ostflucht duration = 730 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_682 }
-                            life_rating = -2
-                            add_province_modifier = { name = ostflucht duration = 1095 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_682 }
-                            life_rating = -2
-                            add_province_modifier = { name = ostflucht duration = 1460 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_682 }
-                            life_rating = -2
-                            add_province_modifier = { name = ostflucht duration = 1825 }
-                        }
-                    }
-                }
+        any_owned = {
+            limit = { has_national_minority = yes continent = europe }
+            life_rating = -2
+            random_list = {
+                25 = { add_province_modifier = { name = ostflucht duration = 730 } }
+                25 = { add_province_modifier = { name = ostflucht duration = 1095 } }
+                25 = { add_province_modifier = { name = ostflucht duration = 1460 } }
+                25 = { add_province_modifier = { name = ostflucht duration = 1825 } }
             }
         }
-        #Posen
-        random_owned = {
-            limit = { region = PRU_701 } #Posen
-            owner = {
-                random_list = {
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_701 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 180 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_701 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 365 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_701 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 545 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_701 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 730 }
-                        }
-                    }
-                }
-            }
-        }
-
-        #Westpreussen
-        random_owned = {
-            limit = { region = PRU_690 } #Westpreussen
-            owner = {
-                random_list = {
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_690 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 92 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_690 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 184 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_690 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 276 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_690 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 368 }
-                        }
-                    }
-                }
-            }
-        }
-
-        #Ostpreussen
-        random_owned = {
-            limit = { region = PRU_695 } #Ostpreussen
-            owner = {
-                random_list = {
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_695 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 150 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_695 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 300 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_695 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 450 }
-                        }
-                    }
-                    25 = {
-                        any_owned = {
-                            limit = { region = PRU_695 }
-                            life_rating = -1
-                            add_province_modifier = { name = ostflucht duration = 600 }
-                        }
-                    }
-                }
-            }
-        }
-
     }
-
 }
 
 #The Peace of Vienna
@@ -1771,9 +1562,7 @@ country_event = {
     title = "EVTNAME33044"
     desc = "EVTDESC33044"
     picture = "german_rhine"
-
     is_triggered_only = yes
-
     option = {
         name = "EVT33044OPTA"
         relation = { who = FROM value = 400 }
@@ -1885,7 +1674,6 @@ country_event = {
 
 #This event fires if Austria or Austria-Hungary is in a position to form Germany
 #but still owns non-Austrian/German core provinces
-
 country_event = {
     id = 31510
     title = "EVTNAME31510" #A Greater Austrian Destiny?
@@ -1898,11 +1686,7 @@ country_event = {
     major = yes
 
     trigger = {
-        OR = {
-            tag = AUS
-            tag = KUK
-        }
-        prestige = 45
+        OR = { tag = AUS tag = KUK }
         nationalism_n_imperialism = 1
         is_greater_power = yes
         war = no
@@ -1922,19 +1706,7 @@ country_event = {
                 }
             }
         }
-        any_owned_province = {
-            NOT = {
-                OR = {
-                    is_core = AUS
-                    is_core = GER
-                    is_colonial = yes
-                }
-            }
-        }
-        NOT = {
-            exists = GER
-            has_country_flag = austrian_destiny
-        }
+        has_country_flag != austrian_destiny
     }
 
     mean_time_to_happen = {
@@ -1947,23 +1719,11 @@ country_event = {
         set_country_flag = austrian_greater_germany
         badboy = 40
         all_core = {
-            limit = {
-                NOT = { is_core = HUN }
-            }
+            limit = { has_national_minority = no }
             add_core = GER
         }
         any_owned = {
-            limit = {
-                OR = {
-                    is_core = HUN
-                    is_core = POL
-                    is_core = ROM
-                    is_core = CRO
-                    is_core = VEN
-                    is_core = LOM
-                    is_core = SER
-                }
-            }
+            limit = { has_national_minority = yes }
             add_province_modifier = {
                 name = nationalist_agitation
                 duration = 1095
@@ -2009,7 +1769,7 @@ country_event = {
         name = "EVT31510OPTB"
         set_country_flag = austrian_destiny
         set_country_flag = austrian_greater_germany
-        badboy = 20
+        badboy = 50
         AUS_612 = { add_core = GER remove_core = HUN }
         AUS_734 = { add_core = GER remove_core = HUN }
         AUS_613 = { add_core = GER remove_core = HUN }
@@ -2186,6 +1946,7 @@ country_event = {
                 }
             }
         }
+        ai_chance = { factor = 100 }
     }
 
     option = {
@@ -2256,32 +2017,7 @@ country_event = {
             }
             relation = { who = THIS value = -50 }
         }
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 0
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.1
-                NOT = { badboy = 0.2 }
-            }
-            modifier = {
-                factor = 0
-                tag = KUK
-            }
-            modifier = {
-                factor = 0.5
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 0
-                OR = {
-                    government = democracy
-                    government = hms_government
-                }
-            }
-        }
+        ai_chance = { factor = 0 }
     }
 
     option = {
@@ -2736,29 +2472,21 @@ country_event = {
                 }
             }
             all_core = {
-                limit = {
-                    is_core = HUN
-                    NOT = { province_id = 623 }
-                }
+                limit = { has_national_minority = yes }
                 remove_core = KUK
             }
         }
         FROM = {
             all_core = {
-                limit = {
-                    OR = {
-                        NOT = { is_core = HUN }
-                        region = AUS_623
-                    }
-                }
+                limit = { has_national_minority = no }
                 add_core = GER
             }
         }
         random_country = {
             limit = {
                 OR = {
-                tag = KUK
-                tag = FROM
+                    tag = KUK
+                    tag = FROM
                 }
             }
             all_core = { add_core = AUS }
@@ -2778,17 +2506,6 @@ country_event = {
             }
         }
         any_owned = {
-            limit = {
-                OR = {
-                    is_core = HUN
-                    is_core = POL
-                    is_core = ROM
-                    is_core = CRO
-                    is_core = VEN
-                    is_core = LOM
-                    is_core = SER
-                }
-            }
             any_pop = {
                 limit = {
                     is_primary_culture = no
@@ -2808,7 +2525,7 @@ country_event = {
 
     option = {
         name = "EVT31516OPTB"
-        badboy = 20
+        badboy = 50
         AUS_612 = { add_core = GER remove_core = HUN }
         AUS_734 = { add_core = GER remove_core = HUN }
         AUS_613 = { add_core = GER remove_core = HUN }

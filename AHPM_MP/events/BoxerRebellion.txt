@@ -1,9 +1,3 @@
-#############################################################
-#                                                            #
-#                      Boxer Rebellion Events                    #
-#                                                            #
-#############################################################
-
 #Initialization event
 #The Righteous Harmony Society
 country_event = {
@@ -16,7 +10,6 @@ country_event = {
     news_desc_medium = "EVTDESC99000_NEWS_MEDIUM"
     news_desc_short = "EVTDESC99000_NEWS_SHORT"
     picture = "boxers"
-
     trigger = {
         tag = QNG
         civilized = no

@@ -900,98 +900,60 @@ country_event = {
         any_owned = {
             limit = {
                 controlled_by_rebels = yes
-                OR = {
-                    is_core = ROM
-                    is_core = BUL
-                    is_core = GRE
-                    is_core = MON
-                    is_core = BOS
-                    is_core = SER
-                    is_core = ALB
-                }
+                has_national_minority = yes
+                continent = europe
             }
             change_controller = TUR
         }
 
         # Remove cores
-        TUR_674 = { remove_core = TUR } # Dobrudja
-        TUR_788 = { remove_core = TUR } # Bosnia
-        TUR_810 = { remove_core = TUR } # Bulgaria
-        TUR_803 = { remove_core = TUR } # S.Serbia
-        MON_2582 = { remove_core = TUR } # Montenegro
-        TUR_853 = { remove_core = TUR } # Albania
-        TUR_832 = { remove_core = TUR } # Thessalia
-        847 = { remove_core = TUR } #Chania
-        848 = { remove_core = TUR } #Iraklion
-
+        any_owned = {
+            limit = {
+                 has_national_minority = yes
+                 continent = europe
+            }
+            remove_core = TUR
+        }
         # Free Moldavia & Wallachia, and return Constanta and Tulcea to Wallachia
         random_owned = {
-            limit = {
-                WAL = { exists = no }
-                ROM = { exists = no }
-            }
+            limit = { WAL = { exists = no } ROM = { exists = no } }
             WAL = { set_country_flag = congress_released_country }
         }
-        random_country = {
-            limit = {
-                tag = ROM
-                vassal_of = TUR
-            }
+        ROM = {
+            limit = { vassal_of = TUR }
             set_country_flag = received_congress_benefit
             TUR = { release_vassal = ROM }
             ROM = { any_owned = { limit = { is_core = ROM } remove_core = WAL remove_core = MOL } }
         }
-        random_country = {
-            limit = {
-                tag = MOL
-                vassal_of = TUR
-            }
+        MOL = {
+            limit = { vassal_of = TUR }
             set_country_flag = received_congress_benefit
             TUR = { release_vassal = MOL }
         }
-        random_country = {
-            limit = {
-                tag = WAL
-                vassal_of = TUR
-            }
+        WAL = {
+            limit = { vassal_of = TUR }
             set_country_flag = received_congress_benefit
             TUR = { release_vassal = WAL }
         }
-        random_owned = {
-            limit = {
-                province_id = 674 #Constanta
-                owned_by = TUR
-                NOT = { exists = ROM }
+        if = {
+            limit = { exists = ROM }
+            any_owned = {
+                limit = {
+                    owned_by = TUR
+                    is_core = ROM
+                }
+                secede_province = ROM
+                ROM = { set_country_flag = received_congress_benefit }
             }
-            secede_province = WAL
-            WAL = { set_country_flag = received_congress_benefit }
-        }
-        random_owned = {
-            limit = {
-                province_id = 675 #Tulcea
-                owned_by = TUR
-                NOT = { exists = ROM }
+        } else = {
+            any_owned = {
+                limit = {
+                    owned_by = TUR
+                    is_core = WAL
+                }
+                secede_province = WAL
+                WAL = { set_country_flag = received_congress_benefit }
             }
-            secede_province = WAL
-            WAL = { set_country_flag = received_congress_benefit }
-        }
-        random_owned = {
-            limit = {
-                province_id = 674 #Constanta
-                owned_by = TUR
-                exists = ROM
-            }
-            secede_province = ROM
-            ROM = { set_country_flag = received_congress_benefit }
-        }
-        random_owned = {
-            limit = {
-                province_id = 675 #Tulcea
-                owned_by = TUR
-                exists = ROM
-            }
-            secede_province = ROM
-            ROM = { set_country_flag = received_congress_benefit }
         }
 
         # Free Montenegro if it is owned, return Niksic and Ulcinj

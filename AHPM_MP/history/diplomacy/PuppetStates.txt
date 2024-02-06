@@ -110,21 +110,41 @@ vassal = {
     end_date = 1863.1.1
 }
 
-##Sokoto - Adamawa Emirate
-#vassal = {
-#    first = SOK
-#    second = ADW
-#    start_date = 1808.1.1
-#    end_date = 1936.1.1
-#}
-
-##Wadai - Baguirmi
-#vassal = {
-#    first = WAD
-#    second = BRM
-#    start_date = 1808.1.1
-#    end_date = 1936.1.1
-#}
+##Sokoto - Bornu
+vassal = {
+    first = SOK
+    second = KBO
+    start_date = 1808.1.1
+    end_date = 1936.1.1
+}
+##Sokoto - Damagaram
+vassal = {
+    first = SOK
+    second = DAM
+    start_date = 1808.1.1
+    end_date = 1936.1.1
+}
+##Sokoto - Dahomey
+vassal = {
+    first = SOK
+    second = DAH
+    start_date = 1808.1.1
+    end_date = 1936.1.1
+}
+##Sokoto - Oyo
+vassal = {
+    first = SOK
+    second = OYO
+    start_date = 1808.1.1
+    end_date = 1936.1.1
+}
+##Sokoto - Benin
+vassal = {
+    first = SOK
+    second = BEN
+    start_date = 1808.1.1
+    end_date = 1936.1.1
+}
 
 ##Substates of the Argentine Confederation
 substate = {
@@ -361,13 +381,6 @@ vassal = {
     end_date = 1936.1.1
 }
 
-#vassal = {
-#    first = PAN
-#    second = KAS
-#    start_date = 1780.1.1
-#    end_date = 1936.1.1
-#}
-
 # United Kingdom-Mewar
 vassal = {
     first = ENG
@@ -503,7 +516,7 @@ vassal = {
 vassal = {
     first = SIA
     second = CAM
-    start_date = 1861.1.1
+    start_date = 1836.1.1
     end_date = 1936.1.1
 }
 
@@ -519,7 +532,7 @@ vassal = {
 vassal = {
     first = ENG
     second = KAS
-    start_date = 1861.1.1
+    start_date = 1836.1.1
     end_date = 1936.1.1
 }
 
@@ -527,20 +540,20 @@ vassal = {
 vassal = {
     first = ENG
     second = NEP
-    start_date = 1861.1.1
+    start_date = 1836.1.1
     end_date = 1936.1.1
 }
 # UK - SIK
 vassal = {
     first = ENG
     second = SIK
-    start_date = 1861.1.1
+    start_date = 1836.1.1
     end_date = 1936.1.1
 }
 # UK - BHU
 vassal = {
     first = ENG
     second = BHU
-    start_date = 1861.1.1
+    start_date = 1836.1.1
     end_date = 1936.1.1
 }

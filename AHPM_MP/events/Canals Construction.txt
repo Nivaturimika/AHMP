@@ -28,12 +28,6 @@ country_event = {
             }
             owner = { set_variable = { which = owed_cash_money value = 3000 } }
         }
-
-        # random_owned = {
-            # owner = { country = { treasury = 3000000 } }
-            # limit = { owner = { treasury = -3000000 } }
-        # }
-
         set_global_flag = suez_canal_construction
         random_list = {
             35 = { 1755 = { add_province_modifier = { name = suez_canal_construction duration = 2190 } } }
@@ -42,9 +36,7 @@ country_event = {
             5 = { 1755 = { add_province_modifier = { name = suez_canal_construction duration = 3285 } } }
             5 = { 1755 = { add_province_modifier = { name = suez_canal_construction duration = 3650 } } }
         }
-        ai_chance = {
-            factor = 20
-        }
+        ai_chance = { factor = 20 }
     }
 
     option = {
@@ -67,12 +59,6 @@ country_event = {
             }
             owner = { set_variable = { which = owed_cash_money value = 2500 } }
         }
-
-        # random_owned = {
-            # limit = { owner = { treasury = 2500000 } }
-            # owner = { treasury = -2500000 }
-        # }
-
         set_global_flag = suez_canal_construction
         random_list = {
             30 = { 1755 = { add_province_modifier = { name = suez_canal_construction duration = 2555 } } }
@@ -81,9 +67,7 @@ country_event = {
             10 = { 1755 = { add_province_modifier = { name = suez_canal_construction duration = 3285 } } }
             10 = { 1755 = { add_province_modifier = { name = suez_canal_construction duration = 3650 } } }
         }
-        ai_chance = {
-            factor = 20
-        }
+        ai_chance = { factor = 20 }
     }
 
     option = {

@@ -1,23 +1,17 @@
 #The end of the Initial Baltic States
 country_event = {
-
     id = 31500001
     title = "EVTNAME31500001"
     desc = "EVTDESC31500001"
     picture = "riga"
-
     trigger = {
         tag = UBD
         is_vassal = no
         war = no
-        primary_culture = north_german
         has_country_flag = ubd_substate
     }
-
     fire_only_once = yes
-
     mean_time_to_happen = { months = 1 }
-
     option = {
         name = "EVTOPTA31500001" #Latvian Rule
         primary_culture = latvian

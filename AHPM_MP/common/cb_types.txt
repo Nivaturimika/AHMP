@@ -2695,51 +2695,12 @@ monroe_doctrine = {
     good_relation_militancy_factor = 1
 
     can_use = {
-        THIS = {
-            tag = USA
-            government = democracy
-            is_greater_power = yes
-        }
-        is_vassal = no
-        OR = {
-            capital_scope = { continent = europe }
-            capital_scope = { continent = africa }
-            capital_scope = { continent = asia }
-            capital_scope = { continent = oceania }
-            capital_scope = { continent = australia_new_zealand }
-            capital_scope = { continent = polynesia }
-        }
+        THIS = { OR = { continent = south_america continent = north_america } is_greater_power = yes }
+        capital_scope = { continent != south_america continent != north_america }
         any_owned_province = {
-            OR = {
-                continent = south_america
-                continent = north_america
-            }
+            OR = { continent = south_america continent = north_america }
             any_core = {
-                OR = {
-                    primary_culture = mexican
-                    primary_culture = central_american
-                    primary_culture = north_andean
-                    primary_culture = south_andean
-                    primary_culture = platinean
-                    primary_culture = brazilian
-                    primary_culture = mayan
-                    AND = {
-                        tag = CUB
-                        USA = { has_country_flag = maine_incident }
-                    }
-                }
-            }
-            NOT = {
-                is_core = USA
-                region = ENG_1979 #Guayana
-                #region = ARG_2391 Patagonia Septentrional
-                #region = CHL_2332 Araucania
-                region = ENG_2132
-                #region = NET_2235
-                #region = ARG_2398 Patagonia Meridional
-                province_id = 2131 #Falkland's
-                province_id = 2190
-                province_id = 2200
+                capital_scope = { OR = { continent = south_america continent = north_america } }
             }
         }
         OR = {
@@ -2749,7 +2710,6 @@ monroe_doctrine = {
         OR = {
             NOT = { has_country_flag = dismantle_declared }
             THIS = { NOT = { has_country_flag = in_great_war } }
-            THIS = { ai = no }
         }
     }
 
@@ -2763,23 +2723,8 @@ monroe_doctrine = {
             NOT = { is_core = USA }
         }
         FROM = {
-            OR = {
-                primary_culture = mexican
-                primary_culture = central_american
-                primary_culture = north_andean
-                primary_culture = south_andean
-                primary_culture = platinean
-                primary_culture = brazilian
-                primary_culture = mayan
-                AND = {
-                    tag = CUB
-                    USA = { has_country_flag = maine_incident }
-                }
-            }
-            OR = {
-                exists = yes
-                is_cultural_union = no
-            }
+            capital_scope = { OR = { continent = south_america continent = north_america } }
+            OR = { exists = yes is_cultural_union = no }
         }
     }
 
@@ -2789,26 +2734,7 @@ monroe_doctrine = {
     allowed_states = {
         any_owned_province = {
             is_core = FROM
-            OR = {
-                continent = north_america
-                continent = south_america
-            }
-        }
-        NOT = {
-            any_owned_province = {
-                OR = {
-                    is_core = USA
-                    region = ENG_1979 #Guayana
-                    #region = ARG_2391 Patagonia Septentrional
-                    #region = CHL_2332 Araucania
-                    region = ENG_2132
-                    #region = NET_2235
-                    #region = ARG_2398 Patagonia Meridional
-                    province_id = 2131 #Falkland's
-                    province_id = 2190
-                    province_id = 2200
-                }
-            }
+            OR = { continent = north_america continent = south_america }
         }
     }
 
@@ -4200,7 +4126,6 @@ sahel_jihad_cb = {
             AND = { war_with = THIS ai = no }
             neighbour = THIS
         }
-        is_vassal = no
         civilized = no
         NOT = { is_our_vassal = THIS }
         any_owned_province = {
@@ -4215,7 +4140,6 @@ sahel_jihad_cb = {
                 province_id = 1880
             }
         }
-        NOT = { has_country_flag = sunni_country }
         THIS = {
             civilized = no
             OR = {

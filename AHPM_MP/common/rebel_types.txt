@@ -1417,10 +1417,7 @@ pan_nationalist_rebels = {
         }
         modifier = {
             factor = 0
-            OR = {
-                culture = north_italian
-                culture = south_italian
-            }
+            OR = { culture = north_italian culture = south_italian }
             ITA = { exists = no }
             NOT = {
                 country = { has_global_flag = italian_call_to_union }
@@ -1571,21 +1568,15 @@ pan_nationalist_rebels = {
             owner = { country_event = 96205 }
         }
         random_owned = {
-            limit = {
-                owner = { is_culture_group = germanic }
-            }
+            limit = { owner = { is_culture_group = germanic } }
             owner = { country_event = 96210 }
         }
         random_owned = {
-            limit = {
-                owner = { is_culture_group = scandinavian }
-            }
+            limit = { owner = { is_culture_group = scandinavian } }
             owner = { country_event = 96217 }
         }
         random_owned = {
-            limit = {
-                owner = { is_culture_group = pan_romanian }
-            }
+            limit = { owner = { is_culture_group = pan_romanian } }
             owner = { country_event = 96220 }
         }
         random_owned = {
@@ -2364,19 +2355,15 @@ red_shirts = {
 
         modifier = {
             factor = 0
-            NOT = {
-                OR = {
-                    culture = south_italian
-                    culture = north_italian
-                }
-            }
-        }
-
-        modifier = {
-            factor = 0
-            location = {
+            OR = {
                 NOT = {
-                    is_core = ITA
+                    OR = {
+                        culture = south_italian
+                        culture = north_italian
+                    }
+                }
+                location = {
+                    NOT = { is_core = ITA }
                 }
             }
         }

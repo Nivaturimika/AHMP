@@ -310,21 +310,13 @@ country_event = {
         prestige = -20
         relation = { who = ENG value = 50 }
         relation = { who = NET value = 150 }
-        381 = { remove_core = BEL }
-        397 = { remove_core = BEL }
         random_owned = {
             limit = { LUX = { exists = no } }
             398 = { remove_core = LUX }
         }
         any_owned = {
-            limit = {
-                OR = {
-                    region = NET_379
-                    region = NET_385
-                    region = NET_375
-                    province_id = 397
-                }
-            }
+            limit = { is_core != WLL is_core != FLA }
+            remove_core = BEL
             secede_province = NET
         }
         NET = { country_event = 36711 }
@@ -411,17 +403,11 @@ country_event = {
         BEL_387 = { remove_core = NET }
         381 = { add_core = LBG }
         release_vassal = LBG
-        random_country = {
-                limit = {
-                    OR = {
-                        tag = PRU
-                        tag = NGF
-                        tag = GER
-                    }
-                    neighbour = LBG
-                    exists = yes
-                    is_greater_power = yes
-                }
+        any_country = {
+            limit = {
+                neighbour = LBG
+                exists = yes
+            }
             relation = { who = LBG value = 200 }
             diplomatic_influence = { who = LBG value = 400 }
         }
@@ -430,17 +416,8 @@ country_event = {
             owner = { release_vassal = LUX }
             any_country = {
                 limit = {
-                    OR = {
-                        tag = PRU
-                        tag = NGF
-                        tag = GER
-                        tag = FRA
-                        tag = AUS
-                        tag = KUK
-                        tag = NET
-                    }
+                    neighbour = LUX
                     exists = yes
-                    is_greater_power = yes
                 }
                 relation = { who = LUX value = 125 }
                 diplomatic_influence = { who = LUX value = 50 }

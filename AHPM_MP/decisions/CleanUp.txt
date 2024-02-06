@@ -3543,23 +3543,6 @@ political_decisions = {
         }
     }
 
-    # ghost_country_ends = {
-        # alert = no
-        # potential = {
-            # ai = yes
-            # has_country_flag = cleaning_up_ghosts_country
-            # NOT = { has_country_modifier = law_changed_by_force }
-        # }
-
-        # allow = {
-        # }
-
-        # effect = {
-            # clr_global_flag = cleaning_up_ghosts
-            # clr_country_flag = cleaning_up_ghosts_country
-        # }
-    # }
-
     annex_to_master_cleanup = {
         alert = no
         potential = {

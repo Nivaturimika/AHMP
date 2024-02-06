@@ -94,34 +94,6 @@ political_decisions = {
                     has_country_flag = gtfo
                     NOT = { has_country_flag = gtfo_disabled }
                 }
-                # #Increase Conscription
-                # AND = {
-                    # civilized = yes
-                    # war = yes
-                    # OR = {
-                        # AND = {
-                            # conscription = no_draft
-                            # NOT = { has_country_flag = in_great_war }
-                        # }
-                        # AND = {
-                            # conscription = one_year_draft
-                            # NOT = { has_country_flag = in_great_war }
-                        # }
-                        # AND = {
-                            # conscription = two_year_draft
-                            # NOT = { has_country_flag = in_great_war }
-                        # }
-                        # AND = {
-                            # NOT = { conscription = mandatory_service }
-                            # OR = {
-                                # conscription = four_year_draft
-                                # government = fascist_dictatorship
-                                # government = proletarian_dictatorship
-                                # has_country_flag = in_great_war
-                            # }
-                        # }
-                    # }
-                # }
                 #Reform the Local Government
                 AND = {
                     civilized = yes
@@ -177,16 +149,6 @@ political_decisions = {
                     }
                     debt_law = serfdom
                 }
-                # #Change Border Policy
-                # AND = {
-                    # OR = {
-                        # has_country_flag = government_decisions_on
-                        # ai = yes
-                    # }
-                    # civilized = yes
-                    # NOT = { has_country_flag = change_border_policy }
-                    # NOT = { has_country_modifier = law_changed_by_force }
-                # }
                 #Return Cores
                 AND = {
                     OR = {
@@ -214,8 +176,6 @@ political_decisions = {
                 }
             }
         }
-        allow = {
-        }
         effect = {
             set_country_flag = government_decisions_on
         }
@@ -228,8 +188,6 @@ political_decisions = {
         potential = {
             ai = no
             has_country_flag = government_decisions_on
-        }
-        allow = {
         }
         effect = {
             clr_country_flag = government_decisions_on
@@ -246,7 +204,6 @@ political_decisions = {
                 has_country_flag = organize_colony_decisions
             }
             colonial_nation = yes
-            #nationalism_n_imperialism = 1
             NOT = { capital_scope = { continent = africa } }
             OR = {
                 #Nigeria
@@ -821,9 +778,6 @@ political_decisions = {
             }
         }
 
-        allow = {
-        }
-
         effect = {
             set_country_flag = organize_colony_decisions
         }
@@ -835,10 +789,6 @@ political_decisions = {
         potential = {
             has_country_flag = organize_colony_decisions
         }
-
-        allow = {
-        }
-
         effect = {
             clr_country_flag = organize_colony_decisions
         }
@@ -853,10 +803,6 @@ political_decisions = {
             civilized = yes
             NOT = { has_country_flag = picking_up_a_tech_school }
         }
-
-        allow = {
-        }
-
         effect = {
             set_country_flag = picking_up_a_tech_school
         }
@@ -871,10 +817,6 @@ political_decisions = {
             civilized = yes
             has_country_flag = picking_up_a_tech_school
         }
-
-        allow = {
-        }
-
         effect = {
             clr_country_flag = picking_up_a_tech_school
         }
@@ -884,10 +826,6 @@ political_decisions = {
         picture = marching_soldiers
         alert = no
         potential = {
-            # OR = {
-                # has_country_flag = government_decisions_on
-                # ai = yes
-            # }
             civilized = yes
             war = yes
             OR = {

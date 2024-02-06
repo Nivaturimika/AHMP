@@ -96,17 +96,7 @@ political_decisions = {
 
         effect = {
             any_pop = {
-                limit = {
-                    has_pop_culture = cherokee
-                    NOT = {
-                        location = {
-                            OR = {
-                                province_id = 130
-                                province_id = 131
-                            }
-                        }
-                    }
-                }
+                limit = { has_pop_culture = cherokee }
                 reduce_pop = 0.80
                 consciousness = 2
                 militancy = -1

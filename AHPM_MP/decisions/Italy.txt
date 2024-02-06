@@ -995,13 +995,7 @@ political_decisions = {
                     LUC = { ai = no }
                 }
                 any_owned = { secede_province = LUC }
-                LUC = {
-                    random_owned = {
-                        limit = { province_id = 744 }
-                        owner = { capital = 744 }
-                    }
-                    change_tag = TUS
-                }
+                LUC = { change_tag = TUS }
             }
             random_country = {
                 limit = {
@@ -1011,10 +1005,7 @@ political_decisions = {
                 country_event = 60130
             }
         }
-
-        ai_will_do = {
-            factor = 1
-        }
+        ai_will_do = { factor = 1 }
     }
 
     treaty_of_ouchy = {

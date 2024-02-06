@@ -1666,23 +1666,17 @@ province_event = {
     trigger = {
         province_id = 1251 #Calcutta
         year = 1864
-        NOT = {
-            year = 1867
-            }
-
+        NOT = { year = 1867 }
     }
 
     fire_only_once = yes
 
     mean_time_to_happen =  {
         months = 5
-
         modifier = {
             factor = 0.75 #increase likelihood to happen
             year = 1865
         }
-
-
         modifier = {
             factor = 0.95 #increase likelihood to happen
             year = 1866
@@ -1702,9 +1696,7 @@ province_event = {
             militancy = 3
             consciousness = 2
         }
-
     }
-
 }
 
 country_event = {

@@ -56,20 +56,11 @@ country_event = {
         set_country_flag = civil_war_soon
         release_vassal = CSA
         CSA = {
-            set_country_flag = unreleasable_country
-            set_country_flag = exempt_from_vassal_contribution
-        }
-    }
-
-    option = {
-        name = "EVTOPTA160000"
-        CSA = {
             political_reform = mandatory_service
             social_reform = culture_voting_only
             capital = 60
             leadership = 80
             treasury = 80000
-
             any_pop = { limit = { has_pop_culture = dixie } militancy = -9 }
             random_list = {
                 25 = { add_country_modifier = { name = preparing_for_war duration = 210 } }
@@ -78,30 +69,15 @@ country_event = {
                 25 = { add_country_modifier = { name = preparing_for_war duration = 130 } }
             }
             any_owned = { limit = { port = yes } add_province_modifier = { name = war_economy_ships duration = 210 } }
-            any_owned = {
-                limit = {
-                    OR = {
-                        province_id = 146
-                        province_id = 147
-                        province_id = 148
-                        province_id = 149
-                        province_id = 150
-                        province_id = 217
-                        province_id = 218
-                        province_id = 219
-                        province_id = 220
-                        province_id = 221
-                        province_id = 222
-                        province_id = 2146
-                    }
-                }
-                secede_province = USA
-            }
+            set_country_flag = unreleasable_country
+            set_country_flag = exempt_from_vassal_contribution
         }
-
         diplomatic_influence = { who = CSA value = 400 }
         relation = { who = CSA value = -400 }
+    }
 
+    option = {
+        name = "EVTOPTA160000"
         ai_chance = {
             factor = 100
         }
@@ -110,46 +86,8 @@ country_event = {
     option = {
         name = "EVTOPTB16000"
         set_country_flag = civil_war_soon
-        CSA = {
-            political_reform = mandatory_service
-            social_reform = culture_voting_only
-            capital = 60
-            leadership = 30
-            treasury = 40000
-            any_pop = { limit = { has_pop_culture = dixie } militancy = -9 }
-            random_list = {
-                25 = { add_country_modifier = { name = preparing_for_war duration = 180 } }
-                25 = { add_country_modifier = { name = preparing_for_war duration = 150 } }
-                25 = { add_country_modifier = { name = preparing_for_war duration = 120 } }
-                25 = { add_country_modifier = { name = preparing_for_war duration = 100 } }
-            }
-            any_owned = { limit = { port = yes } add_province_modifier = { name = war_economy_ships duration = 210 } }
-            any_owned = {
-                limit = {
-                    OR = {
-                        province_id = 146
-                        province_id = 147
-                        province_id = 148
-                        province_id = 149
-                        province_id = 150
-                        province_id = 217
-                        province_id = 218
-                        province_id = 219
-                        province_id = 220
-                        province_id = 221
-                        province_id = 222
-                        province_id = 2146
-                    }
-                }
-                secede_province = USA
-            }
-        }
-        diplomatic_influence = { who = CSA value = 400 }
-        relation = { who = CSA value = -400 }
         change_tag_no_core_switch = CSA
-        ai_chance = {
-            factor = 0
-        }
+        ai_chance = { factor = 0 }
     }
 }
 
@@ -185,14 +123,6 @@ country_event = {
             clr_country_flag = unreleasable_country
             neutrality = yes
         }
-    }
-
-    mean_time_to_happen = {
-        days = 1
-    }
-
-    option = {
-        name = "EVTOPTA16000"
         any_pop = {
             consciousness = -7
             militancy = -3
@@ -202,6 +132,14 @@ country_event = {
             attacker_goal = { casus_belli = civil_war }
             defender_goal = { casus_belli = status_quo }
         }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "EVTOPTA16000"
     }
 }
 
@@ -246,9 +184,6 @@ country_event = {
     }
     immediate = {
         set_country_flag = the_slavery_debate
-    }
-    option = {
-        name = "EVTOPTA16001"
         any_owned = {
             limit = { has_pop_type = slaves trade_goods = cotton }
             random_list = {
@@ -263,6 +198,9 @@ country_event = {
             name = the_slavery_debate
             duration = 10950
         }
+    }
+    option = {
+        name = "EVTOPTA16001"
     }
 }
 
@@ -315,18 +253,18 @@ country_event = {
         }
     }
 
-    option = {
-        name = "EVTOPTA16010"
+    immediate = {
         set_country_flag = john_browns_raid
         any_pop = {
             limit = { has_pop_culture = dixie }
             militancy = 1
             consciousness = 2
-            ideology = {
-                value = reactionary
-                factor = 0.05
-            }
+            ideology = { value = reactionary factor = 0.05 }
         }
+    }
+
+    option = {
+        name = "EVTOPTA16010"
     }
 }
 
@@ -379,9 +317,12 @@ country_event = {
         }
     }
 
+    immediate = {
+        set_country_flag = dred_scott_decision
+    }
+
     option = {
         name = "EVTOPTA16020"
-        set_country_flag = dred_scott_decision
         any_pop = {
             limit = { has_pop_culture = yankee }
             militancy = 1
@@ -394,7 +335,6 @@ country_event = {
     }
     option = {
         name = "EVTOPTB16020"
-        set_country_flag = dred_scott_decision
         any_pop = {
             limit = { has_pop_culture = dixie }
             militancy = 1
@@ -4096,17 +4036,7 @@ country_event = {
     option = {
         name = "EVTOPTA16450"
         any_pop = {
-            limit = {
-                has_pop_culture = native_american_minor
-                NOT = {
-                    location = {
-                        OR = {
-                            province_id = 130
-                            province_id = 131
-                        }
-                    }
-                }
-            }
+            limit = { has_pop_culture = native_american_minor }
             militancy = -10
             consciousness = -10
             reduce_pop = 0.8
@@ -4808,8 +4738,7 @@ country_event = {
         }
     }
 
-    option = {
-        name = "EVT16510OPTA"
+    immediate = {
         set_global_flag = american_civil_war_has_happened
         set_global_flag = alt_american_civil_war_has_happened
         primary_culture = dixie
@@ -4823,13 +4752,11 @@ country_event = {
             limit = { is_core = FSA }
             secede_province = FSA
         }
-        FSA = {
-            random_owned = {
-                limit = { province_id = 223 }
-                owner = { capital = 223 }
-            }
-            leadership = 40
-        }
+        FSA = { leadership = 40 }
+    }
+
+    option = {
+        name = "EVT16510OPTA"
         any_state = {
             limit = {
                 OR = {
@@ -4869,26 +4796,6 @@ country_event = {
 
     option = {
         name = "EVT16510OPTB"
-        set_global_flag = american_civil_war_has_happened
-        set_global_flag = alt_american_civil_war_has_happened
-        primary_culture = dixie
-        add_accepted_culture = yankee
-        remove_country_modifier = the_slavery_debate
-        any_pop = {
-            consciousness = -7
-            militancy = -3
-        }
-        any_owned = {
-            limit = { is_core = FSA }
-            secede_province = FSA
-        }
-        FSA = {
-            random_owned = {
-                limit = { province_id = 223 }
-                owner = { capital = 223 }
-            }
-            leadership = 40
-        }
         any_state = {
             limit = {
                 OR = {
@@ -4955,15 +4862,10 @@ country_event = {
         days = 7
     }
 
-    option = {
-        name = "EVT16515OPTA"
+    immediate = {
         prestige = -50
         clr_country_flag = the_slavery_debate
         clr_global_flag = alt_american_civil_war_has_happened
-        random_owned = {
-            limit = { province_id = 60 }
-            owner = { capital = 60 }
-        }
         any_pop = {
             limit = { has_pop_culture = dixie }
             dominant_issue = {
@@ -5009,6 +4911,10 @@ country_event = {
                 any_owned = { remove_core = CSA }
             }
         }
+    }
+
+    option = {
+        name = "EVT16515OPTA"
     }
 }
 
