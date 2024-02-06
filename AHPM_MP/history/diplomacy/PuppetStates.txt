@@ -523,18 +523,24 @@ vassal = {
     end_date = 1936.1.1
 }
 
-# # OE - Romania
-# vassal = {
-    # first = TUR
-    # second = ROM
-    # start_date = 1861.1.1
-    # end_date = 1936.1.1
-# }
-
-# # OE - Hejaz
-# vassal = {
-    # first = TUR
-    # second = HDJ
-    # start_date = 1861.1.1
-    # end_date = 1936.1.1
-# }
+# UK - NEP
+vassal = {
+    first = ENG
+    second = NEP
+    start_date = 1861.1.1
+    end_date = 1936.1.1
+}
+# UK - SIK
+vassal = {
+    first = ENG
+    second = SIK
+    start_date = 1861.1.1
+    end_date = 1936.1.1
+}
+# UK - BHU
+vassal = {
+    first = ENG
+    second = BHU
+    start_date = 1861.1.1
+    end_date = 1936.1.1
+}
