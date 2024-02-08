@@ -4,19 +4,13 @@ political_decisions = {
         alert = yes
         potential = {
             ai = no
-            NOT = { has_global_flag = looking_through_options }
-            NOT = { year = 1837 }
+            has_global_flag != looking_through_options
+            year < 1837
         }
-
-        allow = {
-            NOT = { year = 1837 }
-        }
-
         effect = {
             set_global_flag = looking_through_options
             set_country_flag = country_looking_through_options
         }
-
         ai_will_do = { factor = 0 }
     }
 
@@ -26,17 +20,12 @@ political_decisions = {
         potential = {
             ai = no
             has_country_flag = country_looking_through_options
-            NOT = { year = 1837 }
+            year < 1837
         }
-
-        allow = {
-        }
-
         effect = {
             clr_global_flag = looking_through_options
             clr_country_flag = country_looking_through_options
         }
-
         ai_will_do = { factor = 0 }
     }
 
@@ -83,16 +72,6 @@ political_decisions = {
                         has_country_modifier = bad_debter
                         has_country_modifier = generalised_debt_default
                     }
-                }
-                #Release Vassal
-                AND = {
-                    num_of_vassals_no_substates = 1
-                    is_vassal = no
-                    NOT = { has_country_flag = gtfo has_country_flag = gtfo_disabled }
-                }
-                AND = {
-                    has_country_flag = gtfo
-                    NOT = { has_country_flag = gtfo_disabled }
                 }
                 #Reform the Local Government
                 AND = {
@@ -176,12 +155,8 @@ political_decisions = {
                 }
             }
         }
-        effect = {
-            set_country_flag = government_decisions_on
-        }
+        effect = { set_country_flag = government_decisions_on }
     }
-
-
     turn_off_government_decisions = {
         picture = government_decisions
         alert = no
@@ -189,9 +164,7 @@ political_decisions = {
             ai = no
             has_country_flag = government_decisions_on
         }
-        effect = {
-            clr_country_flag = government_decisions_on
-        }
+        effect = { clr_country_flag = government_decisions_on }
     }
 
     turn_on_organize_colony_decisions = {

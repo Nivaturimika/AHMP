@@ -661,13 +661,6 @@ country_event = {
         }
         relation = { who = GER value = 320 }
         create_alliance = GER
-        random_country = {
-            limit = {
-                tag = GER
-                THIS = { tag = AUS }
-            }
-            diplomatic_influence = { who = THIS value = 200 }
-        }
         any_greater_power = {
             limit = {
                 NOT = {
@@ -793,7 +786,6 @@ country_event = {
     option = {
         name = "EVT33026OPTA"
         treasury = -50000
-        diplomatic_influence = { who = FROM value = 50 }
         FROM = {
             any_owned = {
                 limit = {
@@ -819,7 +811,6 @@ country_event = {
     option = {
         name = "EVT33027OPTA"
         prestige = -10
-        relation = { who = FROM value = -100 }
         diplomatic_influence = { who = FROM value = -200 }
         casus_belli = {
             target = FROM
@@ -840,7 +831,6 @@ country_event = {
         name = "EVT33027OPTB"
         badboy = -1
         prestige = -20
-        relation = { who = FROM value = -25 }
         ai_chance = {
             factor = 20
         }
@@ -922,7 +912,6 @@ country_event = {
         name = "EVT33030OPTB"
         set_country_flag = german_east_africa_company
         badboy = -1
-        relation = { who = ZAN value = 100 }
         ai_chance = { factor = 10 }
     }
 }
@@ -937,7 +926,6 @@ country_event = {
     option = {
         name = "EVT33031OPTA"
         prestige = 5
-        relation = { who = FROM value = -400 }
         add_casus_belli = {
             target = FROM
             type = demand_concession_BC_casus_belli
@@ -965,7 +953,6 @@ country_event = {
         name = "EVT33031OPTB"
         prestige = -5
         FROM = { prestige = 5 }
-        relation = { who = FROM value = 400 }
         FROM = { diplomatic_influence = { who = THIS value = 50 } }
         any_owned = {
             limit = {
@@ -1018,10 +1005,7 @@ country_event = {
             is_culture_group = germanic
             NOT = { capital = 549 }
             NOT = { capital = 619 }
-            OR = {
-                alliance_with = THIS
-                relation = { who = THIS value = 0 }
-            }
+            OR = { alliance_with = THIS }
         }
     }
 
@@ -1037,13 +1021,9 @@ country_event = {
                 is_culture_group = germanic
                 NOT = { capital = 549 }
                 NOT = { capital = 619 }
-                OR = {
-                    alliance_with = THIS
-                    relation = { who = THIS value = 0 }
-                }
+                alliance_with = THIS
             }
             leave_alliance = THIS
-            relation = { who = THIS value = -100 }
         }
     }
 }
@@ -1082,7 +1062,6 @@ country_event = {
             }
         end_military_access = FRA
         leave_alliance = FRA
-        relation = { who = FRA value = -150 }
         FRA = { diplomatic_influence = { who = THIS value = -200 } }
         }
         any_country = {
@@ -1100,7 +1079,6 @@ country_event = {
             }
         end_military_access = FRA
         leave_alliance = FRA
-        relation = { who = FRA value = -150 }
         }
         ai_chance = { factor = 0.95 }
     }
@@ -1116,7 +1094,6 @@ country_event = {
                 primary_culture = south_german
             }
         }
-        relation = { who = FRA value = 50 }
         }
         ai_chance = { factor = 0.05 }
     }
@@ -1364,10 +1341,9 @@ country_event = {
             }
             annex_to = SGF
         }
-            relation = { who = SGF value = 400 }
             diplomatic_influence = { who = SGF value = 100 }
             create_alliance = SGF
-            random_country = { limit = { exists = yes OR = { tag = AUS tag = KUK } } relation = { who = SGF value = 100 }  diplomatic_influence = { who = SGF value = 50 } }
+            random_country = { limit = { exists = yes OR = { tag = AUS tag = KUK } } diplomatic_influence = { who = SGF value = 50 } }
         FRA_412 = { add_core = GER }
         any_pop = {
                 limit = { is_culture_group = germanic }
@@ -1524,7 +1500,6 @@ country_event = {
                 }
             }
         }
-
         modifier = {
             factor = 0.4
             any_owned_province = {
@@ -1565,7 +1540,6 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "EVT33044OPTA"
-        relation = { who = FROM value = 400 }
         random_owned = {
             limit = {
                 owner = {
@@ -1637,7 +1611,6 @@ country_event = {
 
     option = {
         name = "EVT33044OPTB"
-        relation = { who = FROM value = -25 }
         ai_chance = { factor = 10 }
     }
 }
@@ -1653,13 +1626,8 @@ country_event = {
 
     option = {
         name = "EVT33045OPTA"
-        relation = { who = FROM value = -150 }
-        FROM = {
-            diplomatic_influence = { who = THIS value = -400 }
-        }
-        NGF = {
-            diplomatic_influence = { who = THIS value = 75 }
-        }
+        FROM = { diplomatic_influence = { who = THIS value = -400 } }
+        NGF = { diplomatic_influence = { who = THIS value = 75 } }
         ai_chance = { factor = 90 }
     }
 }
