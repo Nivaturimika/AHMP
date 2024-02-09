@@ -1376,17 +1376,12 @@ expansionism = {
 }
 mission_to_civilize = {
     limit = {
-        year = 1860
         state_n_government = 1
         has_country_flag = existing_country
     }
     news = no
     chance = {
         base = 0
-        modifier = {
-            factor = -75
-            NOT = { year = 1860 }
-        }
         modifier = {
             factor = 25
             nationalism_n_imperialism = 1
@@ -1570,10 +1565,6 @@ rhetoric_of_hate = {
     news = no
     chance = {
         base = 3
-        modifier = {
-            factor = 1
-            year = 1900
-        }
         modifier = {
             factor = 2
             OR = {
@@ -1795,10 +1786,6 @@ national_radio_networks = {
     news = no
     chance = {
         base = 3
-        modifier = {
-            factor = 5
-            year = 1920
-        }
         modifier = {
             factor = -1
             NOT = { press_rights = free_press }

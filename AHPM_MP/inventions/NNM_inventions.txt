@@ -35,8 +35,6 @@ declaration_of_the_rights_of_man = {
 caste_privileges = {
     limit = {
         enlightenment_thought = 1
-        year = 1850
-        tag = ENG
     }
     news = no
     chance = {
@@ -44,10 +42,6 @@ caste_privileges = {
         modifier = {
             factor = 2
             religious_policy = moralism
-        }
-        modifier = {
-            factor = 5
-            year = 1855
         }
     }
     effect = {
@@ -62,8 +56,6 @@ caste_privileges = {
 sati_abolished = {
     limit = {
         enlightenment_thought = 1
-        year = 1855
-        tag = ENG
     }
     news = no
     chance = {
@@ -71,10 +63,6 @@ sati_abolished = {
         modifier = {
             factor = 2
             religious_policy = moralism
-        }
-        modifier = {
-            factor = 5
-            year = 1860
         }
     }
     effect = {
@@ -88,8 +76,6 @@ sati_abolished = {
 pig_fat_cartridges = {
     limit = {
         enlightenment_thought = 1
-        year = 1860
-        tag = ENG
     }
     news = no
     chance = {
@@ -97,10 +83,6 @@ pig_fat_cartridges = {
         modifier = {
             factor = 2
             religious_policy = moralism
-        }
-        modifier = {
-            factor = 5
-            year = 1865
         }
     }
     effect = {
@@ -123,10 +105,6 @@ spirit_of_freedom = {
         modifier = {
             factor = 5
             nationalvalue = nv_equality
-        }
-        modifier = {
-            factor = 5
-            year = 1847
         }
         modifier = {
             factor = -12
@@ -175,21 +153,14 @@ carlism = {
 
 the_dark_continent = {
     limit = {
-        has_country_flag = existing_country
         revolution_n_counterrevolution = 1
-        year = 1890
     }
     chance = {
         base = 0
         modifier = {
-            factor = -60
-            NOT = { year = 1890 }
-        }
-        modifier = {
             factor = -100
             NOT = {
                 has_global_flag = called_congo_conference
-                year = 1890
             }
         }
         modifier = {

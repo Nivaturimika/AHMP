@@ -185,7 +185,7 @@ average_literacy = {
 }
 
 plurality = {
-    research_points_modifier = 0.001
+    research_points_modifier = 0.01
 }
 
 generalised_debt_default = {

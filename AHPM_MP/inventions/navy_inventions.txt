@@ -359,10 +359,6 @@ steamer_transports = {
         }
         modifier = {
             factor = 10
-            year = 1850
-        }
-        modifier = {
-            factor = 10
             iron_steamers = 1
         }
     }
@@ -390,10 +386,6 @@ commerce_raiders = {
             factor = 2
             war = yes
             war_countries = { invention = steamer_transports }
-        }
-        modifier = {
-            factor = 10
-            year = 1850
         }
         modifier = {
             factor = 10
@@ -502,14 +494,6 @@ ironclads = {
         }
         modifier = {
             factor = 10
-            year = 1865
-        }
-        modifier = {
-            factor = 10
-            year = 1875
-        }
-        modifier = {
-            factor = 10
             steel_steamers = 1
         }
     }
@@ -548,14 +532,6 @@ monitors = {
         }
         modifier = {
             factor = 10
-            year = 1865
-        }
-        modifier = {
-            factor = 10
-            year = 1875
-        }
-        modifier = {
-            factor = 10
             steel_steamers = 1
         }
     }
@@ -583,14 +559,6 @@ torpedo_boats = {
             factor = 2
             war = yes
             war_countries = { invention = torpedo_boats }
-        }
-        modifier = {
-            factor = 10
-            year = 1865
-        }
-        modifier = {
-            factor = 10
-            year = 1875
         }
         modifier = {
             factor = 10
@@ -631,14 +599,6 @@ protected_cruisers = {
         }
         modifier = {
             factor = 10
-            year = 1890
-        }
-        modifier = {
-            factor = 10
-            year = 1905
-        }
-        modifier = {
-            factor = 10
             steam_turbine_ships = 1
         }
     }
@@ -646,30 +606,6 @@ protected_cruisers = {
         activate_unit = cruiser
     }
 }
-#destroyers = {
-#    limit = { steel_steamers = 1 }
-#    chance = {
-#        base = 5
-#        modifier = {
-#            factor = 2
-#            invention = torpedo_boats
-#        }
-#    }
-#    effect = {
-#    }
-#}
-#submarines = {
-#    limit = { steel_steamers = 1 }
-#    chance = {
-#        base = 5
-#        modifier = {
-#            factor = 2
-#            invention = torpedo_boats
-#        }
-#    }
-#    effect = {
-#    }
-#}
 pre_dreadnought = {
     limit = {
         steel_steamers = 1
@@ -697,14 +633,6 @@ pre_dreadnought = {
             factor = 2
             war = yes
             war_countries = { invention = pre_dreadnought }
-        }
-        modifier = {
-            factor = 10
-            year = 1890
-        }
-        modifier = {
-            factor = 10
-            year = 1905
         }
         modifier = {
             factor = 10
