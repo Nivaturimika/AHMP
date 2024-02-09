@@ -103,17 +103,6 @@ promotion_chance =
             }
         }
     }
-    modifier = {
-        factor = -0.05
-        state_scope = {
-                is_slave = yes
-            }
-    }
-    modifier = {
-        factor = -100
-        location = { NOT = { controlled_by = owner } }
-    }
-
 }
 
 demotion_chance =
@@ -291,10 +280,6 @@ demotion_chance =
         }
 
     }
-    modifier = {
-        factor = -100
-        location = { NOT = { controlled_by = owner } }
-    }
 }
 
 #general migration chance mtth, same for all pops
@@ -320,14 +305,6 @@ migration_chance =
     modifier = {
         factor = -2.2
         state_scope = { is_colonial = yes }
-    }
-
-    modifier = {
-        factor = -100
-        OR = {
-            not = { location = { total_pops = 500 } }
-            not = { location = { controlled_by = owner } }
-        }
     }
 
     group = {
@@ -358,9 +335,7 @@ migration_chance =
 
     modifier = {
         factor = -0.3
-        state_scope = {
-            has_factories = yes
-        }
+        state_scope = { has_factories = yes }
     }
 
     group = {
@@ -447,11 +422,6 @@ colonialmigration_chance =
         }
     }
 
-    #modifier = {
-    #    factor = -0.3
-    #    state_scope = { has_factories = yes }
-    #}
-
     modifier = {
         factor = 0.2
         country = { penal_system = colonial_transportation }
@@ -462,28 +432,20 @@ colonialmigration_chance =
             factor = 0.3
             unemployment = 0.1
         }
-
         modifier = {
             factor = 0.3
-            location = { controlled_by = owner }
             unemployment = 0.2
         }
-
         modifier = {
             factor = 0.3
-            location = { controlled_by = owner }
             unemployment = 0.3
         }
-
         modifier = {
             factor = 0.4
-            location = { controlled_by = owner }
             unemployment = 0.4
         }
-
         modifier = {
             factor = 0.5
-            location = { controlled_by = owner }
             unemployment = 0.5
         }
     }
@@ -493,9 +455,7 @@ colonialmigration_chance =
 emigration_chance =
 {
     factor = 0.5
-
     group = {
-
         modifier = {
             factor = 0.2
             militancy = 5
@@ -584,12 +544,10 @@ emigration_chance =
             factor = 0.3
             unemployment = 0.3
         }
-
         modifier = {
             factor = 0.3
             unemployment = 0.4
         }
-
         modifier = {
             factor = 0.4
             unemployment = 0.5
@@ -611,23 +569,6 @@ emigration_chance =
         factor = 0.1
         NOT = { country = { citizens_rights = all_voting_pops } }
         not = { culture = this }
-    }
-
-    modifier = {
-        factor = -1.0
-        country = {
-            has_country_flag = new_world_nation
-            government = democracy
-        }
-    }
-
-    modifier = {
-        factor = -5
-        OR = {
-            state_scope = { is_colonial = yes }
-            not = { location = { total_pops = 500 } }
-            not = { location = { controlled_by = owner } }
-        }
     }
 
     group = {
@@ -721,7 +662,6 @@ emigration_chance =
 assimilation_chance =
 {
     factor = 1
-
     group = {
         modifier = {
             factor = 0.1
@@ -736,37 +676,14 @@ assimilation_chance =
             literacy = 0.8
         }
     }
-
     modifier = {
         factor = -20
         has_culture_core = yes
     }
-
-    modifier = {
-        factor = 10
-        country = { has_country_flag = new_world_nation }
-        OR = {
-            location = { continent = north_america }
-            location = { continent = south_america }
-            location = { continent = australia_new_zealand }
-        }
-    }
-
     modifier = {
         factor = -0.2
         not = { religion = this }
     }
-
-    modifier = {
-        factor = -1
-        OR = {
-            has_pop_religion = yazidi
-            has_pop_religion = druze
-            has_pop_religion = jewish
-        }
-        not = { religion = this }
-    }
-
     group = {
         modifier = {
             factor = 0.2
@@ -789,8 +706,6 @@ assimilation_chance =
             luxury_needs = 0.9
         }
     }
-
-
     group = {
         modifier = {
             factor = -0.2
@@ -805,7 +720,6 @@ assimilation_chance =
             militancy = 9
         }
     }
-
     group = {
         modifier = {
             factor = 0.05
@@ -816,26 +730,15 @@ assimilation_chance =
             not = { unemployment = 0.05 }
         }
     }
-
     modifier = {
         factor = -1
         is_accepted_culture = yes
     }
-
     modifier = {
         factor = -0.35
         country = {
             has_country_flag = new_world_nation
             has_country_flag = native_assimilation_enacted
-        }
-        OR = {
-            is_culture_group = native_american
-            is_culture_group = oceanic
-        }
-        OR = {
-            location = { continent = north_america }
-            location = { continent = south_america }
-            location = { continent = australia_new_zealand }
         }
     }
 
@@ -845,46 +748,18 @@ assimilation_chance =
             has_country_flag = new_world_nation
             NOT = { has_country_flag = native_assimilation_enacted }
         }
-        OR = {
-            is_culture_group = native_american
-            is_culture_group = oceanic
-        }
-        OR = {
-            location = { continent = north_america }
-            location = { continent = south_america }
-            location = { continent = australia_new_zealand }
-        }
     }
 
     modifier = {
         factor = -80
         country = { NOT = { has_country_flag = african_integration_policy } }
         is_culture_group = african_diaspora_cultures
-        OR = {
-            location = { continent = north_america }
-            location = { continent = south_america }
-        }
     }
 
     modifier = {
         factor = -80
         country = { NOT = { has_country_flag = african_integration_policy } }
         location = { continent = africa }
-        OR = {
-            is_culture_group = african_diaspora_cultures
-            is_culture_group = west_african
-            is_culture_group = central_african
-            is_culture_group = east_african
-            is_culture_group = southern_african
-        }
-        OR = {
-            NOT = { country = { is_culture_group = african_diaspora_cultures } }
-            NOT = { country = { is_culture_group = west_african } }
-            NOT = { country = { is_culture_group = central_african } }
-            NOT = { country = { is_culture_group = east_african } }
-            NOT = { country = { is_culture_group = southern_african } }
-            NOT = { country = { is_culture_group = arab } }
-        }
     }
 }
 
@@ -892,27 +767,6 @@ assimilation_chance =
 conversion_chance =
 {
     factor = 1
-
-    modifier = {
-        factor = -100
-        OR = {
-            not = { location = { controlled_by = owner } }
-            country = { has_country_flag = freedom_of_religion }
-            AND = {
-                OR = {
-                    has_pop_religion = yazidi
-                    has_pop_religion = druze
-                }
-                location = { continent = oceania }
-            }
-        }
-    }
-
-    modifier = {
-        factor = -0.02
-        country = { civilized = no }
-    }
-
     modifier = {
         factor = -1
         country = { has_country_flag = umar_pact }
@@ -945,12 +799,10 @@ conversion_chance =
         location = { continent = africa }
         country = { civilized = yes }
     }
-
     modifier = {
         factor = 0.1
         country = { government = theocracy }
     }
-
     modifier = {
         factor = 0.1
         country = { religious_policy = moralism }
@@ -967,7 +819,6 @@ conversion_chance =
         factor = -0.3
         country = { religious_policy = pro_atheism }
     }
-
     group = {
         modifier = {
             factor = 0.2
@@ -982,7 +833,6 @@ conversion_chance =
             not = { luxury_needs = 0.5 }
         }
     }
-
     group = {
         modifier = {
             factor = 0.05
@@ -997,10 +847,8 @@ conversion_chance =
             not = { life_needs = 0.7 }
         }
     }
-
     modifier = {
         factor = 0.15
         not = { culture = this }
     }
-
 }

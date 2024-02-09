@@ -65,7 +65,7 @@ country = {
     NAVAL_BASE_NON_CORE_SUPPLY_SCORE = 0.3, -- modifier for supply score for naval bases that are not in core provinces.
     COLONIAL_POINTS_FROM_SUPPLY_FACTOR = 1, --Scale this down as you scale up the supply base or everyone will drown in colonial points
     COLONIAL_POINTS_FOR_NON_CORE_BASE = 1,
-    MOBILIZATION_SPEED_BASE = 0.0125, -- Base speed for raising troops
+    MOBILIZATION_SPEED_BASE = 0.25, -- Base speed for raising troops
     MOBILIZATION_SPEED_RAILS_MULT = 5.0, -- Speed modifier for raising troops. It's max value for max railways level in state.
     COLONIZATION_INTEREST_LEAD = 3,
     COLONIZATION_INFLUENCE_LEAD = 3,
@@ -133,21 +133,21 @@ military = {
     REINFORCE_SPEED = 0.5,
     COMBAT_DIFFICULTY_IMPACT = 0.2,
     BASE_COMBAT_WIDTH = 30,
-    POP_MIN_SIZE_FOR_REGIMENT = 100,
+    POP_MIN_SIZE_FOR_REGIMENT = 500,
     POP_SIZE_PER_REGIMENT = 1000,
-    SOLDIER_TO_POP_DAMAGE = 80,
+    SOLDIER_TO_POP_DAMAGE = 3.25,
     LAND_SPEED_MODIFIER = 1,
     NAVAL_SPEED_MODIFIER = 2,
     EXP_GAIN_DIV = 0.05,
-    LEADER_RECRUIT_COST = 10,
+    LEADER_RECRUIT_COST = 20,
     SUPPLY_RANGE = 40,
     POP_MIN_SIZE_FOR_REGIMENT_PROTECTORATE_MULTIPLIER = 6,
     POP_MIN_SIZE_FOR_REGIMENT_COLONY_MULTIPLIER = 4,
     POP_MIN_SIZE_FOR_REGIMENT_NONCORE_MULTIPLIER = 3, -- VALUE * POP_MIN_SIZE_FOR_REGIMENT is min for noncores
     GAS_ATTACK_MODIFIER = 5,
-    COMBATLOSS_WAR_EXHAUSTION = 0.03, -- base war exhaustion in combat
-    LEADER_MAX_RANDOM_PRESTIGE = 0.05, -- max percent of prestige, when randomizing stats for leaders.
-    LEADER_AGE_DEATH_FACTOR = 4, -- higher value means leaders live longer
+    COMBATLOSS_WAR_EXHAUSTION = 0.05, -- base war exhaustion in combat
+    LEADER_MAX_RANDOM_PRESTIGE = 0.5, -- max percent of prestige, when randomizing stats for leaders.
+    LEADER_AGE_DEATH_FACTOR = 2, -- higher value means leaders live longer
     LEADER_PRESTIGE_TO_MORALE_FACTOR = 0.9, -- f.ex. 100% of prestige = +10% morale
     LEADER_PRESTIGE_TO_MAX_ORG_FACTOR = 0.7, -- f.ex. 100% of prestige = +10 max org
     LEADER_TRANSFER_PENALTY_ON_COUNTRY_PRESTIGE = 0.05, -- country prestige penalty on unassign leader (f.ex if leader has 100% prestige, the country loose 4% of its prestige)
@@ -659,18 +659,18 @@ pops = {
     POP_SAVINGS = 0.03,
 
     STATE_CREATION_ADMIN_LIMIT = 0.01,
-    MIL_TO_JOIN_REBEL = 7, -- Rebels over this will join a faction
-    MIL_TO_JOIN_RISING = 8, -- Rebels over this will join a general rising
-    MIL_TO_AUTORISE = 9, -- Rebels over this rise no matter what
+    MIL_TO_JOIN_REBEL = 2, -- Rebels over this will join a faction
+    MIL_TO_JOIN_RISING = 3, -- Rebels over this will join a general rising
+    MIL_TO_AUTORISE = 5, -- Rebels over this rise no matter what
     REDUCTION_AFTER_RISEING = 0.0, -- After a pop spawns a rebellion, its militancy will be reduced this much
     REDUCTION_AFTER_DEFEAT = 7.0, -- After a rebellion is being defeated in combat, its pop militancy will be divided by this number.
                                                                 -- (if value < 1.0, the MIL will be increased) (Beware! value must be > 0)
 
-    POP_TO_LEADERSHIP = 0.01, -- how much leadership every 1000 officers gives each day.
+    POP_TO_LEADERSHIP = 0.0001, -- how much leadership every 1000 officers gives each day.
     ARTISAN_MIN_PRODUCTIVITY = 5, -- Minimum efficiency of an artisan
     SLAVE_GROWTH_DIVISOR = 1, -- Slaves have N times lower growth
 
-    MIL_HIT_FROM_CONQUEST = 2, -- how much militancy grows in a province if taken without being core.
+    MIL_HIT_FROM_CONQUEST = 8, -- how much militancy grows in a province if taken without being core.
     LUXURY_CON_CHANGE = 0.001, -- con boost from over-buying luxury goods
     INVENTION_IMPACT_ON_DEMAND = 0.014, -- how much each invention in a country increases demand for a product in percent
     ARTISAN_SUPPRESSED_COLONIAL_GOODS_CATEGORY = 0, -- Goods category index not produced in colonies

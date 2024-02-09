@@ -11,69 +11,14 @@
 
 
 
-very_easy_player = {
-    supply_consumption = -0.5
-    research_points_modifier = 0.5
-    war_exhaustion = -0.1
-    leadership_modifier = 0.5
-}
-
-easy_player = {
-    supply_consumption = -0.25
-    research_points_modifier = 0.25
-    leadership_modifier = 0.25
-}
-
-hard_player = {
-    loan_interest = 0.1
-    leadership_modifier = -0.25
-    unit_start_experience = -10
-}
-
-very_hard_player = {
-    loan_interest = 0.25
-    leadership_modifier = -0.5
-    unit_start_experience = -10
-    prestige = -0.02
-    research_points_modifier = -0.1
-    tax_efficiency = -0.05
-    education_efficiency_modifier = -0.05
-}
-
-
-
-
-very_easy_ai = {
-    land_organisation = -0.25
-    naval_organisation = -0.25
-
-}
-
-easy_ai = {
-}
-
-hard_ai = {
-    badboy = -0.02
-    research_points_modifier = 0.5
-    land_organisation = 0.25
-    naval_organisation = 0.25
-    leadership_modifier = 0.5
-    unit_start_experience = 5
-    global_pop_militancy_modifier = -0.02
-    war_exhaustion = -0.25
-}
-
-very_hard_ai = {
-    badboy = -0.05
-    research_points_modifier = 1.0
-    land_organisation = 0.5
-    naval_organisation = 0.5
-    leadership_modifier = 1.0
-    unit_start_experience = 10
-    global_pop_militancy_modifier = -0.04
-    war_exhaustion = -0.5
-}
-
+very_easy_player = {}
+easy_player = {}
+hard_player = {}
+very_hard_player = {}
+very_easy_ai = {}
+easy_ai = {}
+hard_ai = {}
+very_hard_ai = {}
 
 ##########################################################################
 # Provincial Static Modifiers
@@ -266,6 +211,5 @@ in_bankrupcy = {
     min_tariff = 0.75
     min_tax = 0.45
     max_military_spending = -0.2
-    #max_social_spending = 0.5
     ruling_party_support = -0.75
 }
