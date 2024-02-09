@@ -15,7 +15,7 @@
 reactionary_rebels = {
     icon = 1
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -265,7 +265,7 @@ reactionary_rebels = {
 fascist_rebels = {
     icon = 2
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -510,7 +510,7 @@ fascist_rebels = {
 communist_rebels = {
     icon = 3
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -753,7 +753,7 @@ communist_rebels = {
 anarcho_liberal_rebels = {
     icon = 4
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -1022,7 +1022,7 @@ anarcho_liberal_rebels = {
 nationalist_rebels = {
     icon = 5
 
-    area = nation_culture                 # Stays within provinces of their culture
+    area = all # Stays within provinces of their culture
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -1250,7 +1250,7 @@ pan_nationalist_rebels = {
     icon = 6
 
     break_alliance_on_win = no
-    area = nation
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -1599,7 +1599,7 @@ pan_nationalist_rebels = {
 carlist_rebels = {
     icon = 16
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -1834,7 +1834,7 @@ carlist_rebels = {
 christino_rebels = {
     icon = 16
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -2263,7 +2263,7 @@ boxer_rebels = {
 red_shirts = {
     icon = 8
 
-    area = nation
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -2468,7 +2468,7 @@ indian_sepoys = {
     icon = 9
     break_alliance_on_win = no
 
-    area = nation
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -2683,7 +2683,7 @@ indian_sepoys = {
 indian_nationalists = {
     icon = 6
 
-    area = nation
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -2872,7 +2872,7 @@ indian_nationalists = {
 liberal_rebels = {
     icon = 7
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -3316,7 +3316,7 @@ liberal_rebels = {
 unciv_reactionary_rebels = {
     icon = 1
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -3520,7 +3520,7 @@ unciv_reactionary_rebels = {
 separatist_rebels = {
     icon = 15
 
-    area = nation_culture                 # Stays within provinces of their culture
+    area = all # Stays within provinces of their culture
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -3746,7 +3746,7 @@ separatist_rebels = {
 socialist_rebels = {
     icon = 10
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
     break_alliance_on_win = no
 
     # <this is the government in the country> = <this is what the rebels want>
@@ -4198,7 +4198,7 @@ socialist_rebels = {
 independence_rebels = {
     icon = 13
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -4334,7 +4334,7 @@ independence_rebels = {
 turkish_nationalist_rebels = {
     icon = 8
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -4550,7 +4550,7 @@ turkish_nationalist_rebels = {
 native_rebels = {
     icon = 12
 
-    area = nation                     # Stays within the nation
+    area = all # Stays within the nation
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -4709,7 +4709,7 @@ sioux_nation = {
     icon = 11
     break_alliance_on_win = no
 
-    area = culture_group
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -4790,7 +4790,7 @@ apache = {
     icon = 11
     break_alliance_on_win = no
 
-    area = culture_group
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -4874,7 +4874,7 @@ slave_revolt = {
     icon = 13
     break_alliance_on_win = no
 
-    area = nation
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
@@ -5007,7 +5007,7 @@ partisan_rebels = {
     icon = 19
     break_alliance_on_win = no
 
-    area = nation
+    area = all 
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
