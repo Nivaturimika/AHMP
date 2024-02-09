@@ -1,3 +1,5 @@
+owner = YDC
+controller = YDC
+add_core = YDC
 trade_goods = fruit
-terrain = dryhills
-life_rating = 10
+life_rating = 15

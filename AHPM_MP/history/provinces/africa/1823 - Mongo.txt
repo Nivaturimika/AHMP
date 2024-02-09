@@ -1,3 +1,5 @@
+owner = YFI
+controller = YFI
+add_core = YFI
 trade_goods = grain
-terrain = semidesert
-life_rating = 10
+life_rating = 15

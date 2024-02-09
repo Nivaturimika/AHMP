@@ -1,7 +1,6 @@
-owner = GON
-controller = GON
-add_core = SHW
-add_core = KAF
+owner = YDV
+controller = YDV
+add_core = YDV
 add_core = ETH
 trade_goods = cattle
-life_rating = 35
+life_rating = 30

@@ -1,6 +1,5 @@
-owner = TRZ
-controller = TRZ
-add_core = TRZ
+owner = YYV
+controller = YYV
+add_core = YYV
 trade_goods = fish
-terrain = desert
 life_rating = 15

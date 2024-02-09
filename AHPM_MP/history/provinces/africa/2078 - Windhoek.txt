@@ -1,5 +1,5 @@
-terrain = dryhills
-add_core = NMB
+owner = YFP
+controller = YFP
+add_core = YFP
 trade_goods = wool
 life_rating = 10
-colonial = 1

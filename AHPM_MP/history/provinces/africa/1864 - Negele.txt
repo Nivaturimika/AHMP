@@ -1,4 +1,5 @@
-add_core = SHW
-add_core = ETH
-trade_goods = grain
-life_rating = 10
+owner = YFD
+controller = YFD
+add_core = YFD
+trade_goods = coffee
+life_rating = 30

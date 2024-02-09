@@ -1,7 +1,5 @@
-owner = DAM
-controller = DAM
-add_core = DAM
-add_core = DND
+owner = YZR
+controller = YZR
+add_core = YZR
 trade_goods = cattle
-life_rating = 32
-terrain = semidesert
+life_rating = 10

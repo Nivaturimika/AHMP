@@ -1,5 +1,5 @@
-owner = JAL
-controller = JAL
-add_core = JAL
+owner = YYN
+controller = YYN
+add_core = YYN
 trade_goods = fruit
-life_rating = 35
+life_rating = 15

@@ -1,6 +1,5 @@
-owner = TRZ
-controller = TRZ
-add_core = TRZ
-trade_goods = cattle
+owner = YYR
+controller = YYR
+add_core = YYR
+trade_goods = timber
 life_rating = 15
-terrain = semidesert

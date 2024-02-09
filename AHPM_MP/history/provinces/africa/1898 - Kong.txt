@@ -1,5 +1,5 @@
-owner = KNG
-controller = KNG
-add_core = KNG
+owner = YYL
+controller = YYL
+add_core = YYL
 trade_goods = cattle
-life_rating = 35
+life_rating = 15

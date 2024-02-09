@@ -1,4 +1,5 @@
-add_core = AZA
-add_core = SHK
+owner = YAV
+controller = YAV
+add_core = YAV
 trade_goods = timber
 life_rating = 15

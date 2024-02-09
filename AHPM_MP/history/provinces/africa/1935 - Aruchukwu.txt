@@ -1,6 +1,5 @@
-owner = ARO
-controller = ARO
-add_core = ARO
-add_core = WRI
-trade_goods = grain
-life_rating = 35
+owner = YZW
+controller = YZW
+add_core = YZW
+trade_goods = fish
+life_rating = 15

@@ -1,6 +1,5 @@
-owner = FRA
-controller = FRA
-add_core = KNG
-trade_goods = coffee
+owner = YYH
+controller = YYH
+add_core = YYH
+trade_goods = cattle
 life_rating = 35
-colonial = 2

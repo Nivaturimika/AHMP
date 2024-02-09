@@ -1,3 +1,5 @@
-trade_goods = grain
-terrain = savanna
-life_rating = 10
+owner = YCY
+controller = YCY
+add_core = YCY
+trade_goods = tea
+life_rating = 15

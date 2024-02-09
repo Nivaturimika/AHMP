@@ -1,7 +1,5 @@
-owner = MAS
-controller = MAS
-add_core = SEG
-add_core = MAS
+owner = YYZ
+controller = YYZ
+add_core = YYZ
 trade_goods = cattle
-terrain = semidesert
-life_rating = 32
+life_rating = 15

@@ -1,5 +1,5 @@
-owner = OYO
-controller = OYO
-add_core = OYO
-trade_goods = fruit
-life_rating = 35
+owner = YXD
+controller = YXD
+add_core = YXD
+trade_goods = tropical_wood
+life_rating = 15

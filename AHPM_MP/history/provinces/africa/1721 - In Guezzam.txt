@@ -1,3 +1,5 @@
+owner = YYW
+controller = YYW
+add_core = YYW
 trade_goods = grain
-terrain = desert
 life_rating = 10

@@ -1,3 +1,5 @@
+owner = YFU
+controller = YFU
+add_core = YFU
 trade_goods = grain
-terrain = semidesert
 life_rating = 15

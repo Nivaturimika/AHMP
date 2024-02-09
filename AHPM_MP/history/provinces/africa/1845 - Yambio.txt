@@ -1,4 +1,5 @@
-add_core = AZA
-add_core = DAR
-trade_goods = tropical_wood
+owner = YAU
+controller = YAU
+add_core = YAU
+trade_goods = grain
 life_rating = 15

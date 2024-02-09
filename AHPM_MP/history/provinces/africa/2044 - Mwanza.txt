@@ -1,3 +1,5 @@
-trade_goods = grain
-terrain = savanna
-life_rating = 10
+owner = YCX
+controller = YCX
+add_core = YCX
+trade_goods = cotton
+life_rating = 15

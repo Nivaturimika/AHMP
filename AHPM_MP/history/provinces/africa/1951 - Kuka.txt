@@ -1,7 +1,5 @@
-owner = KBO
-controller = KBO
-add_core = SOK
-add_core = KBO
-trade_goods = fish
-terrain = semidesert
+owner = YZS
+controller = YZS
+add_core = YZS
+trade_goods = cotton
 life_rating = 35

@@ -1,7 +1,5 @@
-owner = DAM
-controller = DAM
-add_core = DND
-add_core = DAM
+owner = YZO
+controller = YZO
+add_core = YZO
 trade_goods = grain
-life_rating = 32
-terrain = semidesert
+life_rating = 15

@@ -1,3 +1,5 @@
+owner = YAM
+controller = YAM
+add_core = YAM
 trade_goods = grain
-terrain = semidesert
-life_rating = 10
+life_rating = 15

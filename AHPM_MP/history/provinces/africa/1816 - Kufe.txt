@@ -1,8 +1,5 @@
-owner = KBO
-controller = KBO
-add_core = KBO
-add_core = DAM
-add_core = DND
+owner = YZS
+controller = YZS
+add_core = YZS
 trade_goods = grain
-life_rating = 32
-terrain = semidesert
+life_rating = 10

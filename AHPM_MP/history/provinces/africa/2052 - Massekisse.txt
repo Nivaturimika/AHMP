@@ -1,7 +1,5 @@
-owner = GAZ
-controller = GAZ
-add_core = GAZ
-add_core = SHO
+owner = YCP
+controller = YCP
+add_core = YCP
 trade_goods = grain
-terrain = savanna
 life_rating = 35

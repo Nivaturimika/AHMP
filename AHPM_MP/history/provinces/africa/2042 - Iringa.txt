@@ -1,3 +1,5 @@
-trade_goods = fruit
-terrain = montane_forest
-life_rating = 10
+owner = YDG
+controller = YDG
+add_core = YDG
+trade_goods = tobacco
+life_rating = 15

@@ -1,3 +1,5 @@
-add_core = KUB
+owner = YBK
+controller = YBK
+add_core = YBK
 trade_goods = fruit
-life_rating = 10
+life_rating = 15

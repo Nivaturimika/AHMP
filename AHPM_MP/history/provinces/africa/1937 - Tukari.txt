@@ -1,5 +1,5 @@
-owner = SOK
-controller = SOK
-add_core = SOK
+owner = YZX
+controller = YZX
+add_core = YZX
 trade_goods = cattle
 life_rating = 35

@@ -1,8 +1,6 @@
-owner = HAR
-controller = HAR
-add_core = HAR
-add_core = WRL
-add_core = SHW
+owner = YDZ
+controller = YDZ
+add_core = YDZ
 add_core = ETH
 trade_goods = coffee
-life_rating = 35
+life_rating = 30

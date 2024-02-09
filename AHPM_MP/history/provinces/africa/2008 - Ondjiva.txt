@@ -1,4 +1,5 @@
-terrain = savanna
-trade_goods = fruit
-life_rating = 10
-colonial = 2
+owner = YBY
+controller = YBY
+add_core = YBY
+trade_goods = iron
+life_rating = 15

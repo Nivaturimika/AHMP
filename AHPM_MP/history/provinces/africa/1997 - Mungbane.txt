@@ -1,3 +1,5 @@
-add_core = AZA
+owner = YBL
+controller = YBL
+add_core = YBL
 trade_goods = fruit
-life_rating = 10
+life_rating = 15

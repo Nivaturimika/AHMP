@@ -1,10 +1,5 @@
-owner = OMA
-controller = OMA
-add_core = ZAN
-add_core = OMA
+owner = YDF
+controller = YDF
+add_core = YDF
 trade_goods = grain
 life_rating = 35
-1861.1.1 = {
-    owner = ZAN
-    controller = ZAN
-}

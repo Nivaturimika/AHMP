@@ -1,4 +1,5 @@
-add_core = LUN
-add_core = LBA
+owner = YBR
+controller = YBR
+add_core = YBR
 trade_goods = tropical_wood
-life_rating = 10
+life_rating = 15

@@ -1,3 +1,5 @@
-trade_goods = grain
-terrain = savanna
-life_rating = 10
+owner = YDD
+controller = YDD
+add_core = YDD
+trade_goods = tobacco
+life_rating = 15

@@ -1,3 +1,5 @@
-trade_goods = wool
-life_rating = 10
-colonial = 1
+owner = YYM
+controller = YYM
+add_core = YYM
+trade_goods = cattle
+life_rating = 15

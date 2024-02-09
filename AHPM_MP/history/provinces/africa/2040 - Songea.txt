@@ -1,3 +1,5 @@
+owner = YDA
+controller = YDA
+add_core = YDA
 trade_goods = grain
-terrain = montane_forest
-life_rating = 10
+life_rating = 15

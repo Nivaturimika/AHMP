@@ -1,3 +1,5 @@
+owner = YDH
+controller = YDH
+add_core = YDH
 trade_goods = cattle
-terrain = semidesert
-life_rating = 10
+life_rating = 15

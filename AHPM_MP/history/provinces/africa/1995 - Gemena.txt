@@ -1,3 +1,5 @@
-add_core = MNG
-trade_goods = fruit
-life_rating = 10
+owner = YBG
+controller = YBG
+add_core = YBG
+trade_goods = cotton
+life_rating = 15

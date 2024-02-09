@@ -1,5 +1,5 @@
-owner = LOA
-controller = LOA
-add_core = LOA
+owner = YAK
+controller = YAK
+add_core = YAK
 trade_goods = fruit
-life_rating = 35
+life_rating = 15

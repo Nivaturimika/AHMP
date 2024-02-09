@@ -1,5 +1,5 @@
-add_core = ZBW
+owner = YCI
+controller = YCI
+add_core = YCI
 trade_goods = grain
-terrain = dryhills
-life_rating = 10
-colonial = 1
+life_rating = 15

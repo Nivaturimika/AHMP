@@ -1,6 +1,5 @@
-owner = EGY
-controller = EGY
-add_core = EGY
-add_core = SUD
-trade_goods = wool
+owner = YYW
+controller = YYW
+add_core = YYW
+trade_goods = grain
 life_rating = 10
