@@ -659,16 +659,16 @@ pops = {
     POP_SAVINGS = 0.03,
 
     STATE_CREATION_ADMIN_LIMIT = 0.01,
-    MIL_TO_JOIN_REBEL = 2, -- Rebels over this will join a faction
-    MIL_TO_JOIN_RISING = 3, -- Rebels over this will join a general rising
-    MIL_TO_AUTORISE = 5, -- Rebels over this rise no matter what
-    REDUCTION_AFTER_RISEING = 0.0, -- After a pop spawns a rebellion, its militancy will be reduced this much
-    REDUCTION_AFTER_DEFEAT = 7.0, -- After a rebellion is being defeated in combat, its pop militancy will be divided by this number.
+    MIL_TO_JOIN_REBEL = 5, -- Rebels over this will join a faction
+    MIL_TO_JOIN_RISING = 7.5, -- Rebels over this will join a general rising
+    MIL_TO_AUTORISE = 9.5, -- Rebels over this rise no matter what
+    REDUCTION_AFTER_RISEING = 10.0, -- After a pop spawns a rebellion, its militancy will be reduced this much
+    REDUCTION_AFTER_DEFEAT = 10.0, -- After a rebellion is being defeated in combat, its pop militancy will be divided by this number.
                                                                 -- (if value < 1.0, the MIL will be increased) (Beware! value must be > 0)
 
     POP_TO_LEADERSHIP = 0.0001, -- how much leadership every 1000 officers gives each day.
     ARTISAN_MIN_PRODUCTIVITY = 5, -- Minimum efficiency of an artisan
-    SLAVE_GROWTH_DIVISOR = 1, -- Slaves have N times lower growth
+    SLAVE_GROWTH_DIVISOR = 0.001, -- Slaves have N times lower growth
 
     MIL_HIT_FROM_CONQUEST = 8, -- how much militancy grows in a province if taken without being core.
     LUXURY_CON_CHANGE = 0.001, -- con boost from over-buying luxury goods
