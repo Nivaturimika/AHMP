@@ -1,0 +1,17 @@
+is_american_union = {
+	main_parameter = nation
+	this_parameter = nation
+	
+	exists = yes
+	OR = { primary_culture = yankee primary_culture = dixie }
+	is_greater_power = yes
+	government = democracy
+}
+
+is_polish_union = {
+	main_parameter = nation
+	this_parameter = nation
+
+	primary_culture = polish
+	OR = { is_greater_power = yes is_secondary_power = yes }
+}

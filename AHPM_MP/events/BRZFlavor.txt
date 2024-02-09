@@ -175,22 +175,6 @@ country_event = {
 
     option = {
         name = "vargasopt1"
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        set_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = election_started
-        clr_country_flag = conservative_party_in_power
-        clr_country_flag = liberal_party_in_power
-        clr_country_flag = reactionary_party_in_power
-        clr_country_flag = socialist_party_in_power
-        clr_country_flag = communist_party_in_power
-        clr_country_flag = fascist_party_in_power
-        clr_country_flag = anarcho_liberal_party_in_power
         government = presidential_dictatorship
         political_reform = none_voting
         political_reform = party_appointed
@@ -200,7 +184,6 @@ country_event = {
         political_reform = harassment
         political_reform = first_past_the_post
         ruling_party_ideology = conservative
-
         any_owned = {
             limit = {
                 is_colonial = no
@@ -276,14 +259,6 @@ country_event = {
         2461 = { change_province_name = "Florianópolis" }
         government = democracy
         add_country_modifier = { name = small_immigration_boom duration = 1095 }
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        set_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         random_owned = {
             limit = { NOT = { owner = { upper_house_composition = population_equal_weight } } }
             owner = { political_reform = population_equal_weight }
@@ -415,14 +390,6 @@ country_event = {
         2461 = { change_province_name = "Florianópolis" }
         government = democracy
         add_country_modifier = { name = small_immigration_boom duration = 1095 }
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        set_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         political_reform = population_equal_weight
         political_reform = wealth_weighted_voting
         political_reform = yes_meeting

@@ -159,14 +159,6 @@ country_event = {
             limit = { owner = { has_country_modifier = santa_ana_rule } }
             owner = { remove_country_modifier = santa_ana_rule }
         }
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        set_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         government = presidential_dictatorship
         political_reform = none_voting
         political_reform = party_appointed
@@ -595,14 +587,6 @@ country_event = {
             limit = { owner = { has_country_modifier = santa_ana_rule } }
             owner = { remove_country_modifier = santa_ana_rule }
         }
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        set_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         remove_country_modifier = fight_the_power
         government = democracy
         election = yes
@@ -738,14 +722,6 @@ country_event = {
 
     option = {
         name = "EVTOPTA60040"
-        clr_country_flag = communist_gov
-        set_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         government = absolute_monarchy
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
@@ -881,14 +857,6 @@ country_event = {
         name = "EVTNAME60060"
         government = prussian_constitutionalism
         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        set_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -1028,14 +996,6 @@ country_event = {
 
     option = {
         name = "EVTOPTA60070"
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        set_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         government = hms_government
         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
         #Genocide Cleanup
@@ -1177,14 +1137,6 @@ country_event = {
     option = {
         name = "EVT60080OPTA"
         government = presidential_dictatorship
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        set_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -1319,14 +1271,6 @@ country_event = {
     option = {
         name = "EVT60090OPTA"
         government = bourgeois_dictatorship
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        set_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -1461,14 +1405,6 @@ country_event = {
     option = {
         name = "EVT60100OPTA"
         government = proletarian_dictatorship
-        set_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -1604,14 +1540,6 @@ country_event = {
     option = {
         name = "EVT60110OPTA"
         government = fascist_dictatorship
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        set_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -3653,23 +3581,6 @@ country_event = {
     }
 }
 
-# #Non-core to state flip
-# country_event = {
-    # id = 6016815
-    # title = "EVTNAME6016813"
-    # desc = "EVTDESC6016813"
-
-    # is_triggered_only = yes
-
-    # option = {
-        # name = "EVT6016813OPTA"
-        # civilized = no
-        # neutrality = yes
-        # annex_to = FROM
-    # }
-# }
-
-
 #The Long War
 country_event = {
     id = 6016816
@@ -4319,95 +4230,6 @@ country_event = {
                     }
                 }
             }
-        }
-    }
-}
-
-#Ghost Units Cleanup 2/2
-country_event = {
-    id = 6016819
-    title = "EVTNAME6016819"
-    desc = "EVTDESC6016819"
-
-    is_triggered_only = yes
-
-    immediate = {
-        political_reform = no_slavery
-        political_reform = debtors_prisons
-        FROM = {
-            random_owned = {
-                secede_province = THIS
-            }
-        }
-    }
-
-    option = {
-        name = "EVT6016819OPTA"
-        set_country_flag = ghost_country
-        add_country_modifier = { name = neutrality_modifier duration = -1 }
-        political_reform = closed_borders
-        treasury = 1000
-        neutrality = yes
-        any_country = {
-            limit = { war_with = THIS }
-            end_war = THIS
-        }
-        random_owned = {
-            limit = { owner = { civilized = no } }
-            owner = {
-                civilized = yes
-                set_country_flag = uncivilized_on_absorb
-            }
-        }
-    }
-}
-
-#Ghost Units Cleanup 1/2
-country_event = {
-    id = 6016821
-    title = "EVTNAME6016819"
-    desc = "EVTDESC6016819"
-
-    is_triggered_only = yes
-
-    immediate = {
-        FROM = {
-            any_owned = {
-                limit = {
-                    OR = {
-                        province_id = 3319
-                        province_id = 3320
-                        province_id = 3321
-                        province_id = 3322
-                    }
-                }
-                secede_province = TMT
-            }
-        }
-    }
-
-    option = {
-        name = "EVT6016819OPTA"
-        add_country_modifier = { name = neutrality_modifier duration = -1 }
-        political_reform = closed_borders
-        treasury = 1000
-        neutrality = yes
-        any_country = {
-            limit = { war_with = THIS }
-            end_war = THIS
-        }
-        any_country = {
-            limit = {
-                exists = no
-                is_greater_power = no
-                has_country_flag = existing_country
-                capital_scope = { NOT = { province_control_days = 120 } }
-                OR = {
-                    is_mobilised = yes
-                    total_amount_of_ships = 1
-                }
-            }
-            country_event = 6016819
         }
     }
 }

@@ -475,18 +475,6 @@ country_event = {
             owner = { remove_country_modifier = santa_ana_rule }
         }
         remove_country_modifier = freedom_of_religion
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        set_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = wants_to_unify
-        clr_country_flag = does_not_want_to_unify
-        clr_country_flag = paramilitaries_outlawed
-        clr_country_flag = rebels_in_capital
 
         random_owned = {
             limit = { owner = { primary_culture = british accepted_culture = irish } }
@@ -977,17 +965,6 @@ country_event = {
             limit = { owner = { has_country_modifier = santa_ana_rule } }
             owner = { remove_country_modifier = santa_ana_rule }
         }
-        set_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = wants_to_unify
-        clr_country_flag = does_not_want_to_unify
-        clr_country_flag = rebels_in_capital
         random_owned = {
             limit = {
                 owner = {
@@ -1286,13 +1263,6 @@ country_event = {
     option = {
         name = "EVT800053OPTA"
         clr_country_flag = election_started
-        clr_country_flag = conservative_party_in_power
-        clr_country_flag = liberal_party_in_power
-        clr_country_flag = reactionary_party_in_power
-        clr_country_flag = socialist_party_in_power
-        clr_country_flag = communist_party_in_power
-        clr_country_flag = fascist_party_in_power
-        clr_country_flag = anarcho_liberal_party_in_power
         random_owned = {
             limit = {
                 owner = {
@@ -1396,17 +1366,6 @@ country_event = {
             owner = { remove_country_modifier = santa_ana_rule }
         }
         political_reform = open_borders
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        set_country_flag = anarcho_liberal_gov
-        clr_country_flag = wants_to_unify
-        clr_country_flag = does_not_want_to_unify
-        clr_country_flag = rebels_in_capital
         remove_country_modifier = fight_the_power
         random_owned = {
             limit = {
@@ -1461,32 +1420,9 @@ country_event = {
                 is_sphere_leader_of = THIS
                 NOT = { is_our_vassal = THIS }
             }
-            diplomatic_influence = {
-                who = THIS
-                value = -200
-            }
-            relation = {
-                who = THIS
-                value = -50
-            }
             set_country_flag = former_sphere_leader
             leave_alliance = THIS
             country_event = 800056
-        }
-        random_country = {
-            limit = { is_our_vassal = THIS }
-            release_vassal = THIS
-            leave_alliance = THIS
-            diplomatic_influence = {
-                who = THIS
-                value = -200
-            }
-            relation = {
-                who = THIS
-                value = -50
-            }
-            set_country_flag = former_overlord
-            country_event = 800055
         }
         any_country = {
             limit = {
@@ -1505,93 +1441,6 @@ country_event = {
                     factor = 5
                 }
             }
-        }
-        any_country = {
-            limit = {
-                government = proletarian_dictatorship
-                NOT = {
-                    has_country_flag = former_sphere_leader
-                    has_country_flag = former_overlord
-                }
-                is_greater_power = yes
-            }
-            diplomatic_influence = {
-                who = THIS
-                value = -50
-            }
-        }
-        any_country = {
-            limit = {
-                NOT = {
-                    OR = {
-                        ruling_party_ideology = anarcho_liberal
-                        government = proletarian_dictatorship
-                    }
-                    has_country_flag = former_sphere_leader
-                    has_country_flag = former_overlord
-                }
-                is_greater_power = yes
-            }
-            diplomatic_influence = {
-                who = THIS
-                value = -25
-            }
-        }
-        any_country = {
-            limit = {
-                ruling_party_ideology = anarcho_liberal
-                NOT = {
-                    has_country_flag = former_sphere_leader
-                    has_country_flag = former_overlord
-                }
-            }
-            relation = {
-                who = THIS
-                value = 50
-            }
-        }
-        any_country = {
-            limit = {
-                government = proletarian_dictatorship
-                NOT = {
-                    has_country_flag = former_sphere_leader
-                    has_country_flag = former_overlord
-                }
-            }
-            leave_alliance = THIS
-            relation = {
-                who = THIS
-                value = -100
-            }
-        }
-        any_country = {
-            limit = {
-                NOT = {
-                    OR = {
-                        government = proletarian_dictatorship
-                        ruling_party_ideology = anarcho_liberal
-                        ruling_party_ideology = liberal
-                    }
-                    has_country_flag = former_overlord
-                }
-            }
-            relation = {
-                who = THIS
-                value = -25
-            }
-        }
-        any_country = {
-            limit = {
-                alliance_with = THIS
-                NOT = {
-                    ruling_party_ideology = anarcho_liberal
-                    vassal_of = THIS
-                    substate_of = THIS
-                    in_sphere = THIS
-                }
-            }
-            relation = { who = THIS value = -100 }
-            leave_alliance = THIS
         }
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran

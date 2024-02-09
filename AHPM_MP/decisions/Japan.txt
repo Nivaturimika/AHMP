@@ -2,9 +2,8 @@ political_decisions = {
     commodore_perry_expedition = {
     picture = commodore_perry_expedition
         potential = {
-            tag = USA
+            test = is_american_union
             state_n_government = 1
-            is_greater_power = yes
             TKG = {
                 exists = yes
                 civilized = no
@@ -12,7 +11,6 @@ political_decisions = {
                 NOT = { has_country_flag = caved_to_commodore_perry }
                 NOT = { has_country_flag = rejected_commodore_perry }
             }
-            total_amount_of_ships = 4
             any_owned_province = {
                 OR = {
                     region = USA_1
@@ -139,14 +137,10 @@ political_decisions = {
     ganghwa_treaty = {
         picture = unequal_treaty
         potential = {
-            OR = {
-                tag = JAP
-                tag = TKG
-            }
+            primary_culture = japanese
             has_country_flag = rejected_ganghwa_treaty
             NOT = { has_country_flag = negotiate_ganghwa_treaty }
             KOR = {
-                ai = yes
                 civilized = no
                 war_with = THIS
             }
@@ -263,7 +257,6 @@ political_decisions = {
                 is_vassal = no
                 has_country_flag = supports_imperial_edict
                 has_country_flag = angered_by_bakufu
-                ai = no
             }
         }
 
@@ -345,27 +338,6 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
-            modifier = {
-                factor = 0
-                NOT = { year = 1868 }
-                civilized = no
-            }
-            modifier = {
-                factor = 0
-                TKG = { civilized = yes }
-                civilized = no
-            }
-            modifier = {
-                factor = 0
-                OR = {
-                    SAT = { ai = no }
-                    TOS = { ai = no }
-                    CHO = { ai = no }
-                    KAG = { ai = no }
-                    SEN = { ai = no }
-                    YZW = { ai = no }
-                }
-            }
         }
     }
 
@@ -1785,15 +1757,7 @@ political_decisions = {
     picture = shinbutsu_bunri_decision
         potential = {
             is_vassal = no
-            NOT = { has_country_flag = ghost_country }
-            OR = {
-                tag = JAP
-                tag = TKG
-                AND = {
-                    primary_culture = japanese
-                    has_country_flag = mahayana_country
-                }
-            }
+            primary_culture = japanese
             NOT = { has_country_flag = shinto_country }
         }
 
@@ -1814,15 +1778,9 @@ political_decisions = {
     }
 
     meiji_daijokan_ordinances = {
-    picture = japan_land_tax_reform
+        picture = japan_land_tax_reform
         potential = {
-            OR = {
-                owns = 1657
-                owns = 1675
-                owns = 1649
-                owns = 1640
-                owns = 1668
-            }
+            primary_culture = japanese
             NOT = { has_global_flag = japan_industrialized }
         }
 
@@ -1838,33 +1796,12 @@ political_decisions = {
 
         effect = {
             set_global_flag = japan_industrialized
-            #
-            #1679 = { trade_goods = iron }
             1663 = { trade_goods = tobacco }
-            #1664 = { trade_goods = coal }
-            #1661 = { trade_goods = coal }
-            #1660 = { trade_goods = tea }
-            #
             1638 = { trade_goods = cotton }
-            #
             1666 = { trade_goods = timber }
-            #1667 = { trade_goods = tobacco }
-            #
             1675 = { trade_goods = silk }
-            #1648 = { trade_goods = tea }
             1647 = { trade_goods = fish }
-            #
-            #1657 = { trade_goods = tea }
-            #1655 = { trade_goods = tea }
-            #
             1673 = { trade_goods = silk }
-            #1671 = { trade_goods = iron }
-            #
-            #1670 = { trade_goods = sulphur }
-            #1672 = { trade_goods = iron }
-            #
-            #1642 = { trade_goods = iron }
-            #
             1652 = { trade_goods = silk }
             1674 = { trade_goods = silk } #war tobacco
             1649 = { trade_goods = grain }

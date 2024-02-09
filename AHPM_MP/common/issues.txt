@@ -209,12 +209,9 @@ party_issues = {
 political_reforms = {
 
     slavery = {
-
         yes_slavery = {
             rules = { slavery_allowed = yes }
             allow = {
-                NOT = { has_country_flag = communist_gov }
-                NOT = { has_country_flag = fascist_gov }
                 NOT = { has_country_flag = slave_revolution }
                 NOT = { has_country_flag = government_busy_with_something }
             }
@@ -223,14 +220,8 @@ political_reforms = {
         freedom_of_womb = {
             rules = { slavery_allowed = yes }
             allow = {
-                NOT = { has_country_flag = communist_gov }
-                NOT = { has_country_flag = fascist_gov }
                 NOT = { has_country_flag = slave_revolution }
                 NOT = { has_country_flag = government_busy_with_something }
-                OR = {
-                    NOT = { has_country_flag = the_slavery_debate }
-                    year = 1875
-                }
             }
         }
 
@@ -239,10 +230,6 @@ political_reforms = {
             global_immigrant_attract = 0.01
             allow = {
                 NOT = { has_country_flag = government_busy_with_something }
-                OR = {
-                    NOT = { has_country_flag = the_slavery_debate }
-                    year = 1875
-                }
             }
         }
     }
@@ -264,7 +251,6 @@ political_reforms = {
             poor_vote = 0
             global_immigrant_attract = 0.01
             allow = {
-                NOT = { has_country_flag = theocratic_government }
                 NOT = { has_country_flag = government_busy_with_something }
             }
         }
@@ -311,11 +297,6 @@ political_reforms = {
             ruling_party_support = 0.05
             allow = {
                 NOT = { has_country_flag = government_busy_with_something }
-                NOT = {
-                    has_country_flag = absolute_monarchy_gov
-                    has_country_flag = semi_constitutional_monarchy_gov
-                    has_country_flag = constitutional_monarchy_gov
-                }
             }
         }
         appointed = {
@@ -330,7 +311,6 @@ political_reforms = {
             allow = {
                 NOT = { has_country_flag = government_busy_with_something }
                 NOT = { vote_franschise = none_voting }
-                NOT = { has_country_flag = theocratic_government }
             }
             global_immigrant_attract = 0.03
         }
@@ -349,7 +329,6 @@ political_reforms = {
             rules = { largest_share = yes }
             allow = {
                 NOT = { vote_franschise = none_voting }
-                NOT = { has_country_flag = theocratic_government }
                 NOT = { has_country_flag = government_busy_with_something }
             }
         }
@@ -458,7 +437,6 @@ political_reforms = {
             ruling_party_support = 0.15
             global_immigrant_attract = 0.02
             allow = {
-                NOT = { has_country_flag = theocratic_government }
                 NOT = { has_country_flag = government_busy_with_something }
             }
         }
@@ -551,13 +529,6 @@ political_reforms = {
                 NOT = { press_rights = free_press }
                 citizenship_policy = residency
                 NOT = { has_country_flag = government_busy_with_something }
-                OR = {
-                    has_country_flag = absolute_monarchy_gov
-                    has_country_flag = communist_gov
-                    has_country_flag = fascist_gov
-                    has_country_flag = presidential_dictatorship_gov
-                    has_country_flag = theocratic_government
-                }
             }
         }
         quota_immigration = {
@@ -593,10 +564,6 @@ political_reforms = {
             tax_efficiency = 0.05
             allow = {
                 NOT = { has_country_flag = government_busy_with_something }
-                OR = {
-                    has_country_flag = absolute_monarchy_gov
-                    has_country_flag = semi_constitutional_monarchy_gov
-                }
             }
         }
         peonage = {
@@ -1021,7 +988,6 @@ social_reforms = {
             non_accepted_pop_consciousness_modifier = 0.01
             allow = {
                 citizenship_policy = residency
-                NOT = { has_country_flag = theocratic_government }
                 NOT = { has_country_flag = government_busy_with_something }
             }
         }

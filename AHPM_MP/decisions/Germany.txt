@@ -5,13 +5,8 @@ political_decisions = {
             NOT = {
                 has_country_flag = ems_dispatch_sent
             }
-            OR = {
-                tag = PRU
-                tag = NGF
-            }
-            FRA = {
-                any_owned_province = { is_core = GER }
-            }
+            OR = { primary_culture = south_german primary_culture = north_german }
+            FRA = { any_owned_province = { is_core = GER } }
             OR = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
@@ -28,9 +23,6 @@ political_decisions = {
             FRA = {
                 war = no
                 NOT = { truce_with = THIS }
-                NOT = {
-                    relation = { who = THIS value = 100 }
-                }
             }
         }
 
@@ -62,11 +54,7 @@ political_decisions = {
         picture = construct_germania_werft
         potential = {
             NOT = { has_global_flag = germania_werft_has_been_built }
-            OR = {
-                tag = PRU
-                tag = GER
-                tag = NGF
-            }
+            OR = { primary_culture = south_german primary_culture = north_german }
             owns = 369
         }
 
@@ -89,14 +77,8 @@ political_decisions = {
     support_ruhr_industrialism = {
         potential = {
             has_country_flag = prussian_germany
-            OR = {
-                tag = PRU
-                tag = GER
-                tag = NGF
-            }
-            NOT = {
-                tech_school = prussian_tech_school
-            }
+            OR = { primary_culture = south_german primary_culture = north_german }
+            NOT = { tech_school = prussian_tech_school }
         }
 
         allow = {

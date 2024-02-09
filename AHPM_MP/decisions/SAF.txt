@@ -3,9 +3,7 @@ political_decisions = {
         picture = adopt_die_stem
         potential = {
             tag = SAF
-            NOT = {
-                has_country_flag = has_die_stem
-            }
+            NOT = { has_country_flag = has_die_stem }
         }
 
         allow = {
@@ -91,17 +89,6 @@ political_decisions = {
                 who = SAF
                 value = 400
             }
-        }
-
-        ai_will_do = {
-            factor = 0
-            #modifier = {
-            #    factor = 100
-            #    year = 1910
-            #    NOT = { exists = TRN }
-            #    NOT = { exists = ORA }
-            #    NOT = { exists = NAL }
-            #}
         }
     }
 }

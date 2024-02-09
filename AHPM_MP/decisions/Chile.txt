@@ -28,9 +28,8 @@ political_decisions = {
                     2334 = { empty = no }
                     2332 = { empty = no }
                 }
-                2335 = { secede_province = CHL any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+                2335 = { secede_province = CHL }
             }
-
             random_owned = {
                 limit = {
                     2333 = { empty = yes }
@@ -105,13 +104,13 @@ political_decisions = {
         picture = peru_bolivia
         potential = {
             tag = CHL
-            truce_with = PBC
-            PBC = { exists = yes war_with = PEU has_recently_lost_war = yes }
-            SPU = { vassal_of = PBC }
             NOT = { has_country_flag = treaty_of_paucarpata_repudiated }
         }
 
         allow = {
+            truce_with = PBC
+            PBC = { exists = yes war_with = PEU has_recently_lost_war = yes }
+            SPU = { vassal_of = PBC }
             NOT = { has_recently_lost_war = yes }
             NOT = { PBC = { military_score = THIS } }
         }

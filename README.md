@@ -7,6 +7,7 @@ AHMP is a fork of HPM catered for Multiplayer & Project Alice.
 - If the AI can do it, so can the player
 - And if the player can do it, so can the AI
 - There is no wrong option
+- No railroading, use "natural" game mechanics instead of forcing it
 
 ## Changes
 

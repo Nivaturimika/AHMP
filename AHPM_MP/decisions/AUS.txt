@@ -136,13 +136,13 @@ political_decisions = {
         picture = enact_dual_monarchy
         potential = {
             tag = KUK
+        }
+
+        allow = {
             NOT = {
                 has_country_modifier = global_liberal_agitation
                 has_country_modifier = springtime_of_nations
             }
-        }
-
-        allow = {
             war = no
             OR = {
                 AND = {

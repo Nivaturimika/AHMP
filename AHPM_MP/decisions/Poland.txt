@@ -1,15 +1,13 @@
 political_decisions = {
-
     become_poland = {
-
         potential = {
             primary_culture = polish
             NOT = { exists = POL }
-            NOT = { has_country_flag = post_colonial_country }
             NOT = { tag = PLC }
         }
 
         allow = {
+            NOT = { has_country_flag = post_colonial_country }
             prestige = 20
             war = no
             is_vassal = no
@@ -27,10 +25,8 @@ political_decisions = {
             random_owned = {
                 limit = { owner = { accepted_culture = czech } } owner = { remove_accepted_culture = czech }
             }
-            all_core = { remove_core = CPL remove_core = THIS }
             change_tag = POL
             capital = 706
-
         }
 
         ai_will_do = {
@@ -40,17 +36,12 @@ political_decisions = {
 
     become_poland_lithuania = {
         picture = become_poland_lithuania
-
         potential = {
-            OR = {
-                primary_culture = polish
-                primary_culture = lithuanian
-            }
+            OR = { primary_culture = polish primary_culture = lithuanian }
             NOT = { exists = PLC }
-            NOT = { has_country_flag = post_colonial_country }
         }
-
         allow = {
+            NOT = { has_country_flag = post_colonial_country }
             war = no
             is_greater_power = yes
             owns = 706
@@ -87,49 +78,24 @@ political_decisions = {
 
         effect = {
             prestige = 30
-            random_owned = {
-                limit = { owner = { accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
-            }
-            random_owned = {
-                limit = { owner = { accepted_culture = north_german } } owner = { remove_accepted_culture = north_german }
-            }
-            random_owned = {
-                limit = { owner = { accepted_culture = czech } } owner = { remove_accepted_culture = czech }
-            }
-            random_owned = {
+            any_owned = {
                 limit = { owner = { primary_culture = polish } }
                 owner = {
                     add_accepted_culture = lithuanian
-                    all_core = {
-                        add_core = PLC
-                        remove_core = POL
-                    }
-                }
-                LIT = {
                     all_core = { add_core = PLC }
                 }
+                LIT = { all_core = { add_core = PLC } }
             }
-            random_owned = {
-                limit = {
-                    owner = { primary_culture = lithuanian }
-                }
+            any_owned = {
+                limit = { owner = { primary_culture = lithuanian } }
                 owner = {
                     add_accepted_culture = polish
-                    all_core = {
-                        add_core = PLC
-                        remove_core = LIT
-                    }
-                }
-                POL = {
                     all_core = { add_core = PLC }
                 }
+                POL = { all_core = { add_core = PLC } }
             }
-            LAT = {
-                all_core = { add_core = PLC }
-            }
-            BYE = {
-                all_core = { add_core = PLC }
-            }
+            LAT = { all_core = { add_core = PLC } }
+            BYE = { all_core = { add_core = PLC } }
             RUS_958 = { add_core = PLC }
             PRU_695 = { add_core = PLC }
             any_country = {
@@ -237,26 +203,17 @@ political_decisions = {
     }
 
     unite_with_poland = {
-
         potential = {
             primary_culture = polish
             NOT = {
+                is_greater_power = yes
+                is_secondary_power = yes
                 has_country_flag = unite_with_poland
                 has_country_flag = post_colonial_country
-                tag = POL
-                tag = CPL
-                tag = PLC
-            }
-            any_neighbor_country = {
-                is_vassal = no
-                OR = {
-                    tag = POL
-                    tag = CPL
-                }
             }
         }
-
         allow = {
+            any_neighbor_country = { test = is_polish_union }
             war = no
             OR = {
                 AND = {

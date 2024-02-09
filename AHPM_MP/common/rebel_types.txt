@@ -232,15 +232,6 @@ reactionary_rebels = {
 
     demands_enforced_effect = {
         ruling_party_ideology = reactionary
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         political_reform = none_voting
         political_reform = party_appointed
         political_reform = no_meeting
@@ -477,14 +468,6 @@ fascist_rebels = {
     }
     demands_enforced_effect = {
         clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        set_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         ruling_party_ideology = fascist
         political_reform = none_voting
         political_reform = party_appointed
@@ -710,15 +693,6 @@ communist_rebels = {
         }
     }
     demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        set_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         ruling_party_ideology = communist
         social_reform = all_voting_pops
         political_reform = none_voting
@@ -981,15 +955,6 @@ anarcho_liberal_rebels = {
         }
     }
     demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         ruling_party_ideology = anarcho_liberal
         political_reform = universal_voting
         political_reform = party_appointed
@@ -1532,15 +1497,6 @@ pan_nationalist_rebels = {
     }
 
     demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         political_reform = wealth_voting
         political_reform = population_equal_weight
         political_reform = yes_meeting
@@ -1804,15 +1760,6 @@ carlist_rebels = {
                 add_core = SPC
             }
         }
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         change_tag = SPC
         ruling_party_ideology = reactionary
         political_reform = none_voting
@@ -2020,15 +1967,6 @@ christino_rebels = {
                 add_core = SPA
             }
         }
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         change_tag = SPA
         ruling_party_ideology = liberal
         political_reform = wealth_voting
@@ -3204,16 +3142,6 @@ liberal_rebels = {
         }
     }
     demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-
         ruling_party_ideology = liberal
         political_reform = yes_meeting
         political_reform = free_press
@@ -4047,16 +3975,6 @@ socialist_rebels = {
         }
     }
     demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-
         ruling_party_ideology = socialist
         political_reform = universal_voting
         political_reform = population_equal_weight
@@ -4513,16 +4431,6 @@ turkish_nationalist_rebels = {
         }
     }
     demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = turkish_nationalism_activated
         ruling_party_ideology = liberal
         political_reform = no_slavery
         political_reform = universal_weighted_voting
@@ -4677,15 +4585,6 @@ native_rebels = {
         }
     }
     demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         any_country = {
             limit = { is_culture_group = THIS }
             leave_alliance = THIS

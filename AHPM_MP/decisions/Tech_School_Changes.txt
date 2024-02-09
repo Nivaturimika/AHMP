@@ -174,14 +174,6 @@ political_decisions = {
             }
             tech_school = commerce_tech_school
         }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                NOT = { revanchism = 0 }
-            }
-        }
     }
 
     switch_to_industry_tech = {
@@ -224,14 +216,6 @@ political_decisions = {
                 duration = 3650
             }
             tech_school = industrial_tech_school
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                NOT = { revanchism = 0 }
-            }
         }
     }
 
@@ -285,9 +269,6 @@ political_decisions = {
             }
             tech_school = traditional_academic
         }
-        ai_will_do = {
-            factor = 1
-        }
     }
 
     encourage_the_skoda_works = {
@@ -317,23 +298,15 @@ political_decisions = {
         picture = yamagata_aritomo
         potential = {
             NOT = { tech_school = japanese_tech_school }
-            NOT = { has_country_modifier = interment_camps }
-            OR = {
-                tag = JAP
-                tag = TKG
-                tag = EZO
-            }
-            has_country_modifier = line_of_advantage
-            civilized = yes
+            primary_culture = japanese
         }
 
         allow = {
+            NOT = { has_country_modifier = interment_camps }
             military_score = 50
             invention = manifest_destiny
-            OR = {
-                AND = { tag = JAP NOT = { exists = TKG } }
-                AND = { tag = TKG NOT = { exists = JAP } }
-            }
+            has_country_modifier = line_of_advantage
+            civilized = yes
         }
 
         effect = {

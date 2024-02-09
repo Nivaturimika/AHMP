@@ -3,10 +3,9 @@ political_decisions = {
     picture = canadian_dominion
         potential = {
             tag = CAN
-            exists = yes
-            NOT = { has_country_flag = canadian_dominion }
         }
         allow = {
+            NOT = { has_country_flag = canadian_dominion }
             war = no
             owns = 57
         }
@@ -39,7 +38,6 @@ political_decisions = {
         picture = vive_le_quebec
         potential = {
             tag = QUE
-            exists = yes
             NOT = { has_country_flag = vive_le_quebec }
         }
         allow = {
@@ -85,7 +83,6 @@ political_decisions = {
                 tag = ENG
                 tag = ENL
             }
-            year = 1860
             owns = 13
             owns = 14
             owns = 19
@@ -109,46 +106,25 @@ political_decisions = {
         }
     }
 
-
-
     join_confederation = {
         picture = treaty_signing
         potential = {
             OR = {
-                tag = MRU
-                tag = NEW
-                tag = QUE
-                tag = COL
-                tag = MTC
-                tag = RPL
                 primary_culture = anglo_canadian
                 AND = {
                     primary_culture = british
                     accepted_culture = anglo_canadian
                     NOT = { tag = ENG }
-                    NOT = { tag = ENL }
                 }
-            }
-            CAN = {
-                OR = {
-                    government = democracy
-                    government = hms_government
-                }
-            }
-            OR = {
-                government = democracy
-                government = hms_government
             }
             exists = CAN
-            any_owned_province = {
-                any_neighbor_province = { owned_by = CAN }
-            }
             NOT = {
                 has_country_flag = confederation_we_have_applied
                 tag = CAN
             }
         }
         allow = {
+            any_owned_province = { any_neighbor_province = { owned_by = CAN } }
             war = no
             CAN = { war = no }
             OR = {
@@ -183,7 +159,7 @@ political_decisions = {
     form_the_rcmp = {
     picture = form_the_rcmp
         potential = {
-            tag = CAN
+            primary_culture = anglo_canadian
             NOT = { has_country_modifier = rcmp }
         }
         allow = {
@@ -204,12 +180,12 @@ political_decisions = {
     build_the_cnr = {
         picture = whistlestop_tour
         potential = {
-            tag = CAN
-            early_railroad = 1
+            primary_culture = anglo_canadian
             NOT = { has_country_flag = build_the_cnr }
             NOT = { has_country_flag = build_the_cnr3 }
         }
         allow = {
+            early_railroad = 1
             war = no
             money = 3000
             iron_railroad = 1
@@ -243,14 +219,14 @@ political_decisions = {
         news_desc_short = "EVTDESC44355_NEWS_SHORT"
         picture = whistlestop_tour
         potential = {
-            tag = CAN
-            early_railroad = 1
+            primary_culture = anglo_canadian
             has_country_flag = build_the_cnr
             NOT = { has_country_flag = build_the_cnr1 }
             NOT = { has_country_flag = build_the_cnr3 }
         }
 
         allow = {
+            early_railroad = 1
             war = no
             money = 10000
             iron_railroad = 1
@@ -311,8 +287,7 @@ political_decisions = {
     build_the_cnr2 = {
         picture = whistlestop_tour
         potential = {
-            tag = CAN
-            early_railroad = 1
+            primary_culture = anglo_canadian
             has_country_flag = build_the_cnr
             has_country_flag = build_the_cnr1
             NOT = { has_country_flag = build_the_cnr2 }
@@ -320,6 +295,7 @@ political_decisions = {
         }
 
         allow = {
+            early_railroad = 1
             war = no
             money = 15000
             iron_railroad = 1
@@ -398,8 +374,7 @@ political_decisions = {
     build_the_cnr3 = {
         picture = whistlestop_tour
         potential = {
-            tag = CAN
-            early_railroad = 1
+            primary_culture = anglo_canadian
             has_country_flag = build_the_cnr
             has_country_flag = build_the_cnr1
             has_country_flag = build_the_cnr2
@@ -407,6 +382,7 @@ political_decisions = {
         }
 
         allow = {
+            early_railroad = 1
             war = no
             money = 15000
             iron_railroad = 1
@@ -457,54 +433,15 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-#    claim_the_north = {
-#        picture = whistlestop_tour
-#        potential = {
-#            owns = 17
-#            OR = {
-#                tag = ENG
-#                tag = CAN
-#                primary_culture = anglo_canadian
-#            }
-#            6 = { empty = yes }
-#            OR = {
-#                2630 = { empty = no }
-#                2599 = { empty = no }
-#            }
-#        }
-#
-#        allow = {
-#        }
-#
-#        effect = {
-#            6 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-#            random_owned = {
-#                limit = {
-#                    province_id = 6
-#                    any_neighbor_province = { is_core = CAN }
-#                }
-#            add_core = CAN
-#            }
-#            random_owned = {
-#                limit = {
-#                    province_id = 6
-#                    any_neighbor_province = { is_core = RPL }
-#                }
-#            add_core = RPL
-#            }
-#        }
-#        ai_will_do = { factor = 1 }
-#    }
-
     found_ottawa = {
         picture = bytown_1853
         potential = {
-            owns = 57
             NOT = { has_global_flag = ottawa_founded }
-            57 = { NOT = { has_province_modifier = mass_graves } }
         }
 
         allow = {
+            owns = 57
+            57 = { NOT = { has_province_modifier = mass_graves } }
             war = no
             iron_railroad = 1
         }
@@ -519,14 +456,14 @@ political_decisions = {
     integrate_the_metis = {
         picture = bytown_1853
         potential = {
-            NOT = { accepted_culture = metis }
             tag = CAN
-            any_owned_province = {
-                any_pop = { has_pop_culture = metis }
-            }
+            NOT = { accepted_culture = metis }
         }
 
         allow = {
+            any_owned_province = {
+                any_pop = { has_pop_culture = metis }
+            }
             psychoanalysis = 1
             plurality = 50
             NOT = {
@@ -577,10 +514,10 @@ political_decisions = {
         picture = fort_selkirk
         potential = {
             owns = 17
-            6 = { empty = yes }
         }
 
         allow = {
+            6 = { empty = yes }
             war = no
             OR = {
                 invention = mission_to_civilize
@@ -594,7 +531,6 @@ political_decisions = {
         effect = {
             6 = {
                 secede_province = THIS
-                any_pop = { literacy = -0.99 }
                 change_province_name = "Fort Selkirk"
             }
             random_owned = {
@@ -602,14 +538,14 @@ political_decisions = {
                     province_id = 6
                     any_neighbor_province = { is_core = CAN }
                 }
-            add_core = CAN
+                add_core = CAN
             }
             random_owned = {
                 limit = {
                     province_id = 6
                     any_neighbor_province = { is_core = RPL }
                 }
-            add_core = RPL
+                add_core = RPL
             }
         }
         ai_will_do = { factor = 1 }
