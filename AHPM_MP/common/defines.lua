@@ -139,7 +139,7 @@ military = {
     LAND_SPEED_MODIFIER = 1,
     NAVAL_SPEED_MODIFIER = 2,
     EXP_GAIN_DIV = 0.05,
-    LEADER_RECRUIT_COST = 20,
+    LEADER_RECRUIT_COST = 30,
     SUPPLY_RANGE = 40,
     POP_MIN_SIZE_FOR_REGIMENT_PROTECTORATE_MULTIPLIER = 6,
     POP_MIN_SIZE_FOR_REGIMENT_COLONY_MULTIPLIER = 4,
@@ -666,7 +666,7 @@ pops = {
     REDUCTION_AFTER_DEFEAT = 10.0, -- After a rebellion is being defeated in combat, its pop militancy will be divided by this number.
                                                                 -- (if value < 1.0, the MIL will be increased) (Beware! value must be > 0)
 
-    POP_TO_LEADERSHIP = 0.0001, -- how much leadership every 1000 officers gives each day.
+    POP_TO_LEADERSHIP = 0.00001, -- how much leadership every 1000 officers gives each day.
     ARTISAN_MIN_PRODUCTIVITY = 5, -- Minimum efficiency of an artisan
     SLAVE_GROWTH_DIVISOR = 0.001, -- Slaves have N times lower growth
 
