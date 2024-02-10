@@ -650,7 +650,6 @@ country_event = {
 	}
 }
 
-910203
 country_event = {
 	id = 910203
 	title = "EVTNAME910203"
