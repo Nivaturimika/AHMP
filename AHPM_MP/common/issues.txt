@@ -577,7 +577,6 @@ political_reforms = {
                 NOT = { has_country_flag = government_busy_with_something }
                 OR = {
                     NOT = { has_country_flag = serfdom_not_abolished }
-                    year = 1870
                 }
             }
         }

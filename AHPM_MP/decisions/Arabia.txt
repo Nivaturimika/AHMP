@@ -466,22 +466,13 @@ political_decisions = {
         potential = {
             is_greater_power = yes
             NOT = { has_global_flag = arab_nationalism_encouraged }
-            NOT = { tag = TUR }
+            tag != TUR
             TUR = {
                 NOT = { has_country_flag = arab_revolt }
                 any_owned_province = {
-                    any_core = {
-                        OR = {
-                            primary_culture = mashriqi
-                            primary_culture = bedouin
-                            primary_culture = misri
-                            primary_culture = maghrebi
-                        }
-                        exists = no
-                    }
+                    any_core = { is_culture_group = arab }
                 }
             }
-            year = 1900
         }
 
         allow = {
@@ -530,10 +521,7 @@ political_decisions = {
                 }
                 AND = {
                     tag = HAL
-                    OR = {
-                        has_global_flag = house_of_saud_returned
-                        year = 1920
-                    }
+                    has_global_flag = house_of_saud_returned
                     NOT = { exists = NEJ }
                 }
             }
@@ -774,19 +762,6 @@ political_decisions = {
         effect = {
             set_country_flag = trucial_states_integration_qatar
             ABU = { inherit = QAT }
-            relation = { who = ABU value = 50 }
-            diplomatic_influence = { who = ABU value = 25 }
-            any_country = {
-                limit = {
-                    exists = no
-                    civilized = no
-                    OR = {
-                        tag = BHR
-                        tag = QAT
-                    }
-                }
-                tech_school = developing_tech_school
-            }
         }
 
         ai_will_do = { factor = 0 }
@@ -799,13 +774,8 @@ political_decisions = {
                 AND = {
                     tag = TUR
                     NOT = { has_country_flag = qatar_protection }
-                    year = 1880
                 }
-                tag = PER
-                tag = NEJ
-                tag = HAL
-                tag = ARA
-                tag = OMA
+                is_culture_group = arab
             }
             is_canal_enabled = 2
             revolution_n_counterrevolution = 1
@@ -893,7 +863,6 @@ political_decisions = {
                 civilized = yes
                 admin_reform = yes_admin_reform
                 civilization_progress = 0.5
-                year = 1865
             }
         }
 

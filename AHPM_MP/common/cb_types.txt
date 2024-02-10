@@ -733,11 +733,7 @@ colonial_reconquest_cb = {
                 is_secondary_power = yes
                 is_greater_power = yes
             }
-            OR = {
-                government = absolute_monarchy
-                government = prussian_constitutionalism
-                government = hms_government
-            }
+            test = is_monarchy_goverment
             NOT = { revolution_n_counterrevolution = 1 }
         }
         OR = {
@@ -2856,7 +2852,6 @@ oriental_crisis = {
         has_global_flag = oriental_crisis
         any_owned_province = { is_core = TUR }
         NOT = { has_country_modifier = neutrality_modifier }
-        NOT = { year = 1860 }
         OR = {
             war_with = THIS
             THIS = { NOT = { has_country_modifier = no_more_war } }
@@ -3339,11 +3334,7 @@ great_game_cb = {
                 tag = ENG
                 tag = RUS
             }
-            OR = {
-                government = absolute_monarchy
-                government = prussian_constitutionalism
-                government = hms_government
-            }
+            test = is_monarchy_goverment
             NOT = {
                 has_country_flag = no_more_great_game
                 has_country_modifier = punitive_effects
@@ -3440,11 +3431,7 @@ restore_british_raj = {
         }
         THIS = {
             tag = ENG
-            OR = {
-                government = absolute_monarchy
-                government = prussian_constitutionalism
-                government = hms_government
-            }
+            test = is_monarchy_goverment
             NOT = { has_country_modifier = neutrality_modifier }
         }
         OR = {

@@ -20,8 +20,8 @@ is_influenced = {
 	main_parameter = nation
 	this_parameter = nation
 	OR = {
-                vassal_of = THIS
-                substate_of = THIS
+		vassal_of = THIS
+		substate_of = THIS
 		in_sphere = THIS
 	}
 }
@@ -31,8 +31,19 @@ is_influenced = {
 	this_parameter = nation
 	OR = {
 		owned_by = THIS
-                empty = yes
-                owner = { test = is_influenced }
+		empty = yes
+		owner = { test = is_influenced }
 	}
 }
+
+is_monarchy_goverment = {
+	main_parameter = nation
+	this_parameter = nation
+	OR = {
+		government = absolute_monarchy
+		government = prussian_constitutionalism
+		government = hms_government
+	}
+}
+
 

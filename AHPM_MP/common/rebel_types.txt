@@ -2388,10 +2388,6 @@ indian_sepoys = {
             war_exhaustion = 80
             factor = 0.95
         }
-        modifier = {
-            factor = 0.25
-            year = 1880
-        }
     }
 
     # The rebel type with the highest modifier for this pop gets picked
@@ -2575,10 +2571,6 @@ indian_nationalists = {
                 is_culture_group = south_asian
                 is_vassal = no
             }
-        }
-        modifier = {
-            factor = 0.5
-            year = 1910
         }
     }
 

@@ -649,7 +649,6 @@ political_decisions = {
                     owns = 914
                     owns = 915
                     LBN = { exists = no }
-                    year = 1850
                 }
 
                 AND = {
