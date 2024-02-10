@@ -99,7 +99,9 @@ political_decisions = {
 		potential = { test = is_goverment_decision }
 		allow = { num_of_vassals >= 1 }
 		effect = {
-		   any_country = {
+			THIS = { neutrality = yes }
+			THIS = { neutrality = no }
+			any_country = {
 				limit = {
 					OR = {
 						vassal_of = THIS
