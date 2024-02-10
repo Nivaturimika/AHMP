@@ -17,7 +17,6 @@ country_event = {
             revolution_n_counterrevolution = 1
             any_neighbor_country = { has_country_flag = arab_revolt }
         }
-        year = 1900
         NOT = {
             AND = {
                 has_country_modifier = ottomanism_reform
