@@ -1934,7 +1934,6 @@ political_decisions = {
             NOT = { tag = BOS }
             any_owned_province = { is_core = MON }
             NOT = { has_global_flag = montenegro_organized }
-            year = 1870
         }
 
         allow = {

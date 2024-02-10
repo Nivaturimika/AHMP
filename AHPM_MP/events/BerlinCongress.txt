@@ -14,10 +14,7 @@ country_event = {
 
     trigger = {
         NOT = { has_global_flag = berlin_congress_held }
-        OR = {
-            year = 1870
-            has_global_flag = crimea_has_happened
-        }
+        has_global_flag = crimea_has_happened
         is_greater_power = yes
         capital_scope = { continent = europe }
         NOT = {
@@ -100,33 +97,8 @@ country_event = {
             }
         }
         modifier = {
-            factor = 5
-            NOT = { year = 1860 }
-        }
-        modifier = {
-            factor = 3
-            NOT = { year = 1865 }
-        }
-        modifier = {
-            factor = 2
-            NOT = { year = 1870 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { year = 1875 }
-        }
-        modifier = {
-            factor = 0.8
-            year = 1880
-        }
-        modifier = {
             factor = 0.5
             has_global_flag = treaty_of_paris_russia
-            year = 1875
-        }
-        modifier = {
-            factor = 0.8
-            ai = no
         }
     }
 
