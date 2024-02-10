@@ -408,7 +408,7 @@ hyperinflation = {
     }
     core_pop_consciousness_modifier = 0.01
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 #eary_classical_theory
@@ -463,7 +463,7 @@ john_elliot_cairnes = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 robert_torrens = {
@@ -484,7 +484,7 @@ robert_torrens = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 john_stuart_mill = {
@@ -505,7 +505,7 @@ john_stuart_mill = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 #collectivist_theory
@@ -552,7 +552,7 @@ pierre_joseph_proudhon = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 karl_marx = {
@@ -617,7 +617,7 @@ karl_marx = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 friedrich_engels = {
@@ -677,7 +677,7 @@ friedrich_engels = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 eduard_bernstein = {
@@ -706,7 +706,7 @@ eduard_bernstein = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 sidney_webb = {
@@ -733,7 +733,7 @@ sidney_webb = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 karl_kautsky = {
@@ -758,7 +758,7 @@ karl_kautsky = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 jean_jaures = {
@@ -779,7 +779,7 @@ jean_jaures = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 #the_historical_theory
@@ -801,7 +801,7 @@ friedrich_list = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 wilhelm_roscher = {
@@ -822,7 +822,7 @@ wilhelm_roscher = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 bruno_hildebrand = {
@@ -843,7 +843,7 @@ bruno_hildebrand = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 karl_knies = {
@@ -864,7 +864,7 @@ karl_knies = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 gustav_von_schmoller = {
@@ -881,7 +881,7 @@ gustav_von_schmoller = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 adolph_wagner = {
@@ -902,7 +902,7 @@ adolph_wagner = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 william_cunningham = {
@@ -923,7 +923,7 @@ william_cunningham = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 #neoclassical_theory
@@ -945,7 +945,7 @@ johann_heinrich_von_thunen = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 leon_walras = {
@@ -966,7 +966,7 @@ leon_walras = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 stanley_jevons = {
@@ -987,7 +987,7 @@ stanley_jevons = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 carl_menger = {
@@ -1008,7 +1008,7 @@ carl_menger = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 thorstein_veblen = {
@@ -1029,7 +1029,7 @@ thorstein_veblen = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 alfred_marshall = {
@@ -1050,7 +1050,7 @@ alfred_marshall = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 augustin_cournot = {
@@ -1071,7 +1071,7 @@ augustin_cournot = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 jules_dupuit = {
@@ -1092,7 +1092,7 @@ jules_dupuit = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 vilfredo_pareto = {
@@ -1113,7 +1113,7 @@ vilfredo_pareto = {
         }
     }
     effect = {
-        factory_cost = 0.995
+        factory_cost = -0.01 #
     }
 }
 knut_wicksell = {
@@ -1134,7 +1134,7 @@ knut_wicksell = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 irving_fischer = {
@@ -1155,7 +1155,7 @@ irving_fischer = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 joseph_schumpeter = {
@@ -1176,7 +1176,7 @@ joseph_schumpeter = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 eugen_von_bohm_bawerk = {
@@ -1197,7 +1197,7 @@ eugen_von_bohm_bawerk = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 #keynesian_economics
@@ -1221,7 +1221,7 @@ john_maynard_keynes = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 richard_kahn = {
@@ -1242,7 +1242,7 @@ richard_kahn = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 ludwig_von_mises = {
@@ -1267,7 +1267,7 @@ ludwig_von_mises = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 friedrich_hayek = {
@@ -1288,7 +1288,7 @@ friedrich_hayek = {
         }
     }
     effect = {
-        factory_cost = 0.995 #1
+        factory_cost = -0.01 # #1
     }
 }
 #market_structure
