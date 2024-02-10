@@ -819,3 +819,33 @@ vassal = {
     start_date = 1836.1.1
     end_date = 1936.1.1
 }
+vassal = {
+    first = MEX
+    second = RGR
+    start_date = 1836.1.1
+    end_date = 1936.1.1
+}
+vassal = {
+    first = MEX
+    second = CAL
+    start_date = 1836.1.1
+    end_date = 1936.1.1
+}
+vassal = {
+    first = MEX
+    second = CHP
+    start_date = 1836.1.1
+    end_date = 1936.1.1
+}
+vassal = {
+    first = MEX
+    second = YUC
+    start_date = 1836.1.1
+    end_date = 1936.1.1
+}
+vassal = {
+    first = BRZ
+    second = YGC
+    start_date = 1836.1.1
+    end_date = 1936.1.1
+}
