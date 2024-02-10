@@ -156,4 +156,185 @@ political_decisions = {
 			}
 		}
 	}
+
+	specific_trade_policy = {
+		picture = specific_trade_policy
+		potential = { test = is_goverment_decision }
+		allow = {
+			election = no
+			is_vassal = no
+			OR = {
+				civilized = yes
+				NOT = { finance_reform = no_finance_reform }
+			}
+			OR = {
+				AND = {
+					trade_policy = protectionism
+					NOT = { economic_policy = laissez_faire }
+				}
+				AND = {
+					trade_policy = free_trade
+					NOT = { economic_policy = planned_economy }
+				}
+			}
+			NOT = {
+				has_country_flag = trade_policy_choosing_disabled
+				has_country_flag = ghost_country
+				has_country_flag = cant_use_decisions
+				has_global_flag = trade_policy_globally_disabled
+				has_country_modifier = russian_protectionism
+				has_country_modifier = mercantilism
+				has_country_modifier = economic_nationalism
+				has_country_modifier = french_liberal_school
+				has_country_modifier = smithian_school
+				has_country_modifier = non_interventionism_trade_policy
+				has_country_modifier = no_trade_policy_set
+				has_country_modifier = in_bankrupcy
+				has_country_modifier = bad_debter
+				has_country_modifier = generalised_debt_default
+				has_country_modifier = preparing_for_war
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tech_school = commerce_tech_school
+						market_regulations = 1
+					}
+					trade_policy = protectionism
+				}
+				owner = { country_event = 22582 }
+			} else_if = {
+				limit = {
+					NOT = { tech_school = commerce_tech_school market_regulations = 1 }
+					trade_policy = protectionism
+				}
+				owner = { country_event = 22581 }
+			} else_if = {
+				limit = {
+					OR = {
+						tech_school = commerce_tech_school
+						market_regulations = 1
+					}
+					trade_policy = free_trade
+				}
+				owner = { country_event = 22585 }
+			} else_if = {
+				limit = {
+					NOT = { tech_school = commerce_tech_school market_regulations = 1 }
+					trade_policy = free_trade
+				}
+				owner = { country_event = 22584 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	rescind_trade_policy = {
+		picture = specific_trade_policy
+		potential = { test = is_goverment_decision }
+		allow = {
+			OR = {
+				AND = {
+					OR = {
+						has_country_modifier = mercantilism
+						has_country_modifier = economic_nationalism
+					}
+					NOT = { trade_policy = protectionism }
+				}
+				AND = {
+					OR = {
+						has_country_modifier = french_liberal_school
+						has_country_modifier = smithian_school
+					}
+					NOT = { trade_policy = free_trade }
+				}
+				any_neighbor_country = {
+					OR = {
+						has_country_modifier = mercantilism
+						has_country_modifier = economic_nationalism
+					}
+					NOT = { trade_policy = protectionism }
+				}
+				any_neighbor_country = {
+					OR = {
+						has_country_modifier = french_liberal_school
+						has_country_modifier = smithian_school
+					}
+					NOT = { trade_policy = free_trade }
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = { trade_policy = protectionism  }
+					OR = {
+						has_country_modifier = mercantilism
+						has_country_modifier = economic_nationalism
+					}
+				}
+				remove_country_modifier = mercantilism
+				remove_country_modifier = economic_nationalism
+			} else_if = {
+				limit = {
+					NOT = { trade_policy = free_trade  }
+					OR = {
+						has_country_modifier = french_liberal_school
+						has_country_modifier = smithian_school
+					}
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+			}
+			any_neighbor_country = {
+				limit = {
+					OR = {
+						has_country_modifier = mercantilism
+						has_country_modifier = economic_nationalism
+					}
+					NOT = { trade_policy = protectionism }
+				}
+				remove_country_modifier = mercantilism
+				remove_country_modifier = economic_nationalism
+			}
+			any_neighbor_country = {
+				limit = {
+					OR = {
+						has_country_modifier = french_liberal_school
+						has_country_modifier = smithian_school
+					}
+					NOT = { trade_policy = free_trade }
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	ask_for_a_grant = {
+		picture = specific_trade_policy
+		potential = {
+			ai = no
+			test = is_goverment_decision
+		}
+		allow = {
+
+		}
+
+		effect = {
+			any_country = {
+				limit = { ai = no }
+				country_event = 910203
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 }
