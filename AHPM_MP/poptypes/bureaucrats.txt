@@ -51,7 +51,7 @@ luxury_needs = {
     luxury_clothes = 0.25
     opium = 0.25
     automobiles = 0.2
-    telephones 0.45
+    telephones = 0.45
 }
 
 country_migration_target = {
