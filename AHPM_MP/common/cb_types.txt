@@ -7415,7 +7415,6 @@ become_independent = {
 
     can_use = {
         is_our_vassal = THIS
-        THIS = { is_substate = no }
         NOT = { has_country_modifier = neutrality_modifier }
     }
 
