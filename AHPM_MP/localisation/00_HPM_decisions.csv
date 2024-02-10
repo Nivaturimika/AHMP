@@ -1932,8 +1932,6 @@ abolishing_serfs_title;AI: Abolishing Serfdom;;;;;;;;;;;;;
 abolishing_serfs_desc;Serfdom was abolished in one of our neighbours.;;;;;;;;;;;;;
 enabling_crisis_title;AI: Crisis Enabled;;;;;;;;;;;;;
 enabling_crisis_desc;Crisis are enabled.;;;;;;;;;;;;;
-slave_pop_growth_title;AI: Slave Pop Growth;;;;;;;;;;;;;
-slave_pop_growth_desc;The slave population grows.;;;;;;;;;;;;;
 trinket_health_care_spread_title;AI: Trinket Healthcare Spreads;;;;;;;;;;;;;
 trinket_health_care_spread_desc;Trinket Healthcare spreads in one of our neighbours.;;;;;;;;;;;;;
 low_health_care_spread_title;AI: Low Healthcare Spreads;;;;;;;;;;;;;

@@ -1939,14 +1939,6 @@ country_event = {
                 political_reform = state_press
                 political_reform = state_controlled
                 political_reform = underground_parties
-                clr_country_flag = election_started
-                clr_country_flag = conservative_party_in_power
-                clr_country_flag = liberal_party_in_power
-                clr_country_flag = reactionary_party_in_power
-                clr_country_flag = socialist_party_in_power
-                clr_country_flag = communist_party_in_power
-                clr_country_flag = fascist_party_in_power
-                clr_country_flag = anarcho_liberal_party_in_power
             }
         }
         random_owned = {
@@ -1962,14 +1954,6 @@ country_event = {
                 political_reform = state_press
                 political_reform = state_controlled
                 political_reform = underground_parties
-                clr_country_flag = election_started
-                clr_country_flag = conservative_party_in_power
-                clr_country_flag = liberal_party_in_power
-                clr_country_flag = reactionary_party_in_power
-                clr_country_flag = socialist_party_in_power
-                clr_country_flag = communist_party_in_power
-                clr_country_flag = fascist_party_in_power
-                clr_country_flag = anarcho_liberal_party_in_power
             }
         }
         random_owned = {
@@ -1985,14 +1969,6 @@ country_event = {
                 political_reform = state_press
                 political_reform = state_controlled
                 political_reform = underground_parties
-                clr_country_flag = election_started
-                clr_country_flag = conservative_party_in_power
-                clr_country_flag = liberal_party_in_power
-                clr_country_flag = reactionary_party_in_power
-                clr_country_flag = socialist_party_in_power
-                clr_country_flag = communist_party_in_power
-                clr_country_flag = fascist_party_in_power
-                clr_country_flag = anarcho_liberal_party_in_power
             }
         }
         random_owned = {
@@ -2016,14 +1992,6 @@ country_event = {
                 political_reform = state_press
                 political_reform = state_controlled
                 political_reform = underground_parties
-                clr_country_flag = election_started
-                clr_country_flag = conservative_party_in_power
-                clr_country_flag = liberal_party_in_power
-                clr_country_flag = reactionary_party_in_power
-                clr_country_flag = socialist_party_in_power
-                clr_country_flag = communist_party_in_power
-                clr_country_flag = fascist_party_in_power
-                clr_country_flag = anarcho_liberal_party_in_power
             }
         }
         random_owned = {
@@ -2039,14 +2007,6 @@ country_event = {
                 political_reform = state_press
                 political_reform = state_controlled
                 political_reform = underground_parties
-                clr_country_flag = election_started
-                clr_country_flag = conservative_party_in_power
-                clr_country_flag = liberal_party_in_power
-                clr_country_flag = reactionary_party_in_power
-                clr_country_flag = socialist_party_in_power
-                clr_country_flag = communist_party_in_power
-                clr_country_flag = fascist_party_in_power
-                clr_country_flag = anarcho_liberal_party_in_power
             }
         }
         random_owned = {
@@ -2067,14 +2027,6 @@ country_event = {
                 social_reform = good_subsidies
                 social_reform = good_pensions
                 social_reform = good_health_care
-                clr_country_flag = election_started
-                clr_country_flag = conservative_party_in_power
-                clr_country_flag = liberal_party_in_power
-                clr_country_flag = reactionary_party_in_power
-                clr_country_flag = socialist_party_in_power
-                clr_country_flag = communist_party_in_power
-                clr_country_flag = fascist_party_in_power
-                clr_country_flag = anarcho_liberal_party_in_power
             }
         }
         TAI = {
