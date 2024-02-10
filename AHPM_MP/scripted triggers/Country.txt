@@ -15,3 +15,24 @@ is_polish_union = {
 	primary_culture = polish
 	OR = { is_greater_power = yes is_secondary_power = yes }
 }
+
+is_influenced = {
+	main_parameter = nation
+	this_parameter = nation
+	OR = {
+                vassal_of = THIS
+                substate_of = THIS
+		in_sphere = THIS
+	}
+}
+
+is_influenced = {
+	main_parameter = province
+	this_parameter = nation
+	OR = {
+		owned_by = THIS
+                empty = yes
+                owner = { test = is_influenced_nation }
+	}
+}
+
