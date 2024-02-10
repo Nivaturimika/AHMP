@@ -1,6 +1,9 @@
 owner = MPC
 controller = MPC
 add_core = MPC
+add_core = ARC
+add_core = ARG
+add_core = CHL
 trade_goods = cattle
 life_rating = 15
 1861.1.1 = {

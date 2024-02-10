@@ -1,5 +1,8 @@
 owner = MPC
 controller = MPC
 add_core = MPC
+add_core = ARC
+add_core = ARG
+add_core = CHL
 trade_goods = grain
 life_rating = 15

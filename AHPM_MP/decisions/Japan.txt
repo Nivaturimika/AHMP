@@ -371,10 +371,6 @@ political_decisions = {
                 name = fukoku_kyohei
                 duration = -1
             }
-            random_owned = {
-                limit = { 1654 = { empty = yes } }
-                1654 = { secede_province = THIS any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 } }
-            }
             JAP_1088 = { add_core = THIS }
             random_owned = {
                 limit = { province_id = 1089 }
@@ -1680,17 +1676,11 @@ political_decisions = {
         picture = map_yellow_sea
         potential = {
             primary_culture = japanese
-            1643 = { empty = yes }
-            1644 = { empty = yes }
-            owns = 1642
-            exists = yes
         }
-
         allow = {
+            owns = 1642
             war = no
             OR = {
-                1086 = { empty = no }
-                1088 = { empty = no }
                 AND = {
                     tag = JAP
                     TKG = { exists = no }
@@ -1701,16 +1691,15 @@ political_decisions = {
                 }
             }
         }
-
         effect = {
             1643 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
             1644 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
-    ai_will_do = { factor = 1 }
+        ai_will_do = { factor = 1 }
     }
 
     imperial_rescript = {
-    picture = imperial_rescript
+        picture = imperial_rescript
         potential = {
             tag = JAP
             NOT = { has_country_flag = imperial_rescript_decreed }
