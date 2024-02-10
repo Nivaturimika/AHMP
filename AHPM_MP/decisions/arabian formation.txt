@@ -13,14 +13,16 @@ political_decisions = {
                 is_culture_group = arab
                 all_core = { test = is_influenced }
                 war = no
-                is_mobilised = no
             }
         }
         effect = {
             prestige = 10
             add_accepted_culture = bedouin
             add_accepted_culture = mashriqi
-            any_country = { limit = { is_culture_group = arab } any_owned = { add_core = THIS } }
+            any_country = {
+                limit = { is_culture_group = arab }
+                any_owned = { add_core = THIS }
+            }
             any_country = {
                 limit = { tag != THIS is_culture_group = arab test = is_influenced }
                 if = { limit = { ai = yes } annex_to = THIS }

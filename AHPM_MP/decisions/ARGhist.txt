@@ -12,13 +12,15 @@ political_decisions = {
 				exists = yes
 				has_country_flag = occupation_of_araucania
 			}
-			any_owned_province = {
-				OR = {
-					region = ARG_2391
-					region = ARG_2398
-				}
-			}
 			NOT = { has_country_flag = argentina_chile_border_treaty }
+		}
+
+		allow = {
+			war = no
+			CHL = {
+				war = no
+				NOT = { truce_with = THIS }
+			}
 			2332 = { empty = no }
 			2333 = { empty = no }
 			2334 = { empty = no }
@@ -31,14 +33,6 @@ political_decisions = {
 			2398 = { empty = no }
 			2399 = { empty = no }
 			2400 = { empty = no }
-		}
-
-		allow = {
-			war = no
-			CHL = {
-				war = no
-				NOT = { truce_with = THIS }
-			}
 		}
 
 		effect = {

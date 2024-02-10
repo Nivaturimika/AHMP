@@ -217,11 +217,11 @@ YAI_prussian_constitutionalism;Kingdom of Loango
 YAI_hms_government;Kingdom of Loango
 YAJ;Mabochi Groups
 YAJ_ADJ;Mabochi
-YAK;Anziku
-YAK_ADJ;Anziku
-YAK_absolute_monarchy;Anziku Kingdom
-YAK_prussian_constitutionalism;Anziku Kingdom
-YAK_hms_government;Anziku Kingdom
+ANZ;Anziku
+ANZ_ADJ;Anziku
+ANZ_absolute_monarchy;Anziku Kingdom
+ANZ_prussian_constitutionalism;Anziku Kingdom
+ANZ_hms_government;Anziku Kingdom
 YAL;Kakongo
 YAL_ADJ;Kakongo
 YAM;Bagirmi

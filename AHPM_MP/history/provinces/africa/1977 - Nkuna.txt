@@ -1,5 +1,5 @@
-owner = YAK
-controller = YAK
-add_core = YAK
+owner = ANZ
+controller = ANZ
+add_core = ANZ
 trade_goods = fruit
 life_rating = 15

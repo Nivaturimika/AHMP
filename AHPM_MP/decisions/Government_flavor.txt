@@ -103,7 +103,6 @@ political_decisions = {
 			num_of_vassals >= 1
 		}
 		effect = {
-			THIS = { neutrality = yes }
 			any_country = {
 				limit = {
 					OR = {
