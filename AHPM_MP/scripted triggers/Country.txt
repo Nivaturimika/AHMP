@@ -38,7 +38,6 @@ is_influenced = {
 
 is_monarchy_goverment = {
 	main_parameter = nation
-	this_parameter = nation
 	OR = {
 		government = absolute_monarchy
 		government = prussian_constitutionalism
@@ -46,4 +45,11 @@ is_monarchy_goverment = {
 	}
 }
 
+is_goverment_decision = {
+	main_parameter = nation
+	OR = {
+		has_country_flag = government_decisions_on
+		ai = yes
+	}
+}
 
