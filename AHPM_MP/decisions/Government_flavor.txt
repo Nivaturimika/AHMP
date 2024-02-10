@@ -97,7 +97,11 @@ political_decisions = {
 		picture = dissolve_the_parliament
 		alert = no
 		potential = { test = is_goverment_decision }
-		allow = { num_of_vassals >= 1 }
+		allow = {
+			has_recently_lost_war = no
+			war = no
+			num_of_vassals >= 1
+		}
 		effect = {
 			THIS = { neutrality = yes }
 			any_country = {
@@ -123,6 +127,10 @@ political_decisions = {
 		alert = no
 		potential = {
 			OR = { is_vassal = yes is_substate = yes }
+		}
+		allow = {
+			war = no
+			has_recently_lost_war = no
 		}
 		effect = {
 			any_country = {
