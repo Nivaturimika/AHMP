@@ -37,7 +37,6 @@ life_needs = {
     grain = 0.65
 }
 everyday_needs = {
-    coal = 0.25
     liquor = 1.25
     regular_clothes = 1.25
     furniture = 1
@@ -47,8 +46,8 @@ everyday_needs = {
     tea = 1.25
 }
 luxury_needs = {
-    luxury_clothes = 1.25
-    wool = 1.25
+    coal = 0.25
+    luxury_clothes = 0.25
     opium = 0.25
     steel = 0.01
 }

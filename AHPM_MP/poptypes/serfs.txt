@@ -16,26 +16,24 @@ rebel = {
 
 #Total 11.5
 life_needs = {
-    cattle = 1      #2.0
-    wool =  1       #0.7
-    fish =  1       #1.5
-    fruit =  1       #1.8
-    grain =  2.5  #5.5
+    cattle = 0.1      #2.0
+    wool = 0.1       #0.7
+    fish = 0.1       #1.5
+    fruit = 0.1       #1.8
+    grain = 0.5  #5.5
 }
 
 everyday_needs = {
     coal = 1
-    tobacco = 5
-    tea = 2
-    liquor = 2
+    tobacco = 1
+    tea = 1
+    liquor = 1
     regular_clothes = 1.2
     furniture = 1.1
-    opium = 10
+    opium = 1
     fertilizer = 0.5 #0
     explosives = 0.25
 }
-
-
 luxury_needs = {
     regular_clothes = 2
     furniture = 3

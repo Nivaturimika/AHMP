@@ -5,39 +5,27 @@ unemployment = yes
 
 equivalent = farmers
 
-#Total = 11.5
 life_needs = {
-    cattle = 0.75 #1.5
-    wool =  1.72  #1.2
-    fish =  1       #1.5
-    fruit =  1       #1.8
-    grain =  2.5  #5.5
+    cattle = 0.15
+    wool =  0.25
+    fish = 0.25
+    fruit = 0.25
+    grain = 0.65
 }
-
-#Total cash needed: 50.75 - Vanilla value: 49.25
 everyday_needs = {
-    tea = 4
-    coal = 1
-    liquor = 2
-    regular_clothes = 1.2
-    furniture = 1.1
-    coffee = 2
-    tobacco = 1
-    explosives = 0.25
+    liquor = 1.25
+    regular_clothes = 1.25
+    furniture = 0.95
+    tobacco = 0.66
+    tea = 0.95
 }
-
-#Total cash needed: 136.78 - Vanilla value: 125.995
 luxury_needs = {
-    regular_clothes = 3
-    furniture = 3
-    paper = 1.0
-    telephones = 1.0
-    automobiles = 0.5
-    radio = 1.0
-    fuel = 0.1
-    #dye = 0.5
+    coal = 0.25
+    luxury_clothes = 0.25
+    opium = 0.25
+    automobiles = 0.2
+    telephones 0.45
 }
-
 
 country_migration_target = {
     factor = 1
