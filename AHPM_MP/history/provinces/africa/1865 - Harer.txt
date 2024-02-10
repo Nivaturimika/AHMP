@@ -1,6 +1,6 @@
-owner = YDZ
-controller = YDZ
-add_core = YDZ
+owner = HAR
+controller = HAR
+add_core = HAR
 add_core = ETH
 trade_goods = coffee
 life_rating = 30
