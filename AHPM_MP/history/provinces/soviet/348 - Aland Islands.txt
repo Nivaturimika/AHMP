@@ -1,5 +1,6 @@
-owner = RUS
-controller = RUS
+owner = ALA
+controller = ALA
+add_core = ALA
 add_core = RUS
 add_core = FIN
 add_core = SWE

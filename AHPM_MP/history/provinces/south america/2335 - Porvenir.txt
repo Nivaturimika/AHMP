@@ -1,3 +1,6 @@
+owner = MPC
+controller = MPC
+add_core = MPC
 add_core = PTG
 trade_goods = wool
 terrain = new_world_arctic

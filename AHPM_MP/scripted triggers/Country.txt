@@ -32,7 +32,7 @@ is_influenced = {
 	OR = {
 		owned_by = THIS
                 empty = yes
-                owner = { test = is_influenced_nation }
+                owner = { test = is_influenced }
 	}
 }
 

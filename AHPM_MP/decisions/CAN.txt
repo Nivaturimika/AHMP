@@ -51,8 +51,6 @@ political_decisions = {
                 militancy = -4
             }
             capital = 65
-            small_arms = 50
-            regular_clothes = 50
             CAN_60 = {
                 add_core = QUE
                 remove_core = RPL
@@ -83,14 +81,14 @@ political_decisions = {
                 tag = ENG
                 tag = ENL
             }
+            NOT = { has_country_flag = british_columbia_organized }
+        }
+        allow = {
             owns = 13
             owns = 14
             owns = 19
             owns = 2629
             owns = 18
-            NOT = { has_country_flag = british_columbia_organized }
-        }
-        allow = {
             nationalism_n_imperialism = 1
         }
         effect = {
@@ -109,14 +107,7 @@ political_decisions = {
     join_confederation = {
         picture = treaty_signing
         potential = {
-            OR = {
-                primary_culture = anglo_canadian
-                AND = {
-                    primary_culture = british
-                    accepted_culture = anglo_canadian
-                    NOT = { tag = ENG }
-                }
-            }
+            tag != ENG
             exists = CAN
             NOT = {
                 has_country_flag = confederation_we_have_applied
@@ -124,6 +115,13 @@ political_decisions = {
             }
         }
         allow = {
+            OR = {
+                primary_culture = anglo_canadian
+                AND = {
+                    primary_culture = british
+                    accepted_culture = anglo_canadian
+                }
+            }
             any_owned_province = { any_neighbor_province = { owned_by = CAN } }
             war = no
             CAN = { war = no }

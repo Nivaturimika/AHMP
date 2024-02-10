@@ -15,17 +15,13 @@ political_decisions = {
                 is_mobilised = no
             }
         }
-
         effect = {
             prestige = 10
             add_accepted_culture = bedouin
             add_accepted_culture = mashriqi
-            any_province = {
-                limit = { owner = { is_culture_group = arab } }
-                add_core = ARA
-            }
+            any_country = { limit = { is_culture_group = arab } any_owned = { add_core = THIS } }
             any_country = {
-                limit = { is_culture_group = arab }
+                limit = { tag != THIS is_culture_group = arab test = is_influenced }
                 if = { limit = { ai = yes } annex_to = THIS }
                 else = { country_event = 11101 }
             }
@@ -51,9 +47,11 @@ political_decisions = {
 
         effect = {
             prestige = 10
-            any_province = {
-                limit = { owner = { is_culture_group = arab } }
-                add_core = ARA
+            any_country = {
+                any_owned = {
+                    limit = { owner = { is_culture_group = arab } }
+                    add_core = ARA
+                }
             }
             any_country = {
                 limit = { test = is_influenced }
@@ -192,14 +190,14 @@ political_decisions = {
         }
 
         allow = {
-            any_province = { culture = maghrebi }
+            any_country = { tag != THIS any_owned = { culture = maghrebi } }
         }
 
         effect = {
             set_country_flag = maghrebi_claims
             prestige = 10
-            badboy = 5
-            any_province = { limit = { culture = maghrebi } add_core = THIS }
+            badboy = 1
+            any_country = { any_owned = { limit = { culture = maghrebi } add_core = THIS } }
         }
         ai_will_do = { factor = 1 }
     }
@@ -222,7 +220,7 @@ political_decisions = {
             set_country_flag = arab_union_claims
             badboy = 2
             prestige = 10
-            any_province = { limit = { culture = maghrebi } add_core = THIS }
+            any_country = { any_owned = { limit = { culture = maghrebi } add_core = THIS } }
             add_accepted_culture = maghrebi
 
         }

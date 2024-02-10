@@ -1343,10 +1343,6 @@ country_event = {
         set_country_flag = agreed_ruperts_land
         prestige = 10
         treasury = -50000
-        #ENG_6 = {
-        #    remove_core = RPL
-        #    add_core = CAN
-        #}
         ENG_9 = {
             remove_core = RPL
             add_core = CAN
@@ -1755,7 +1751,7 @@ country_event = {
     }
 }
 
-#Louis Riel and the 1st Métis Rebellion
+#Louis Riel and the 1st Mï¿½tis Rebellion
 country_event = {
     id = 44301
     title = "EVTNAME44301"
