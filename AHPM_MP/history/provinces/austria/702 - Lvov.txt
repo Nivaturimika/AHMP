@@ -1,5 +1,5 @@
-owner = AUS
-controller = AUS
+owner = GLM
+controller = GLM
 add_core = GLM
 add_core = RUT
 add_core = POL

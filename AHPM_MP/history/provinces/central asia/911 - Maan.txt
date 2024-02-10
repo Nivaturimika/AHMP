@@ -1,3 +1,5 @@
+owner = HAL
+controller = HAL
 add_core = JOR
 trade_goods = cattle
 life_rating = 10

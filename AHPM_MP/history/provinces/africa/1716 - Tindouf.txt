@@ -1,3 +1,7 @@
+owner = MOR
+controller = MOR
+add_core = MOR
+add_core = YYW
 trade_goods = fish
 terrain = semidesert
 life_rating = 10

@@ -1,3 +1,5 @@
+owner = SIB
+controller = SIB
 add_core = RUS
 add_core = YAK
 trade_goods = timber

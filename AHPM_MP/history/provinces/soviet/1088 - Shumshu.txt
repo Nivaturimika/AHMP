@@ -1,9 +1,9 @@
+owner = KAM
+controller = KAM
+add_core = RUS
+add_core = TKG
+add_core = KAM
 trade_goods = coal
 life_rating = 15
 colonial = 1
 terrain = arctic
-1861.1.1 = {
-    owner = RUS
-    controller = RUS
-    add_core = RUS
-}

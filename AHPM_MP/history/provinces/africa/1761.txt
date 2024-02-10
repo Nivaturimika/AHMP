@@ -1,3 +1,6 @@
+owner = YFG
+controller = YFG
+add_core = YFG
 trade_goods = fish
 terrain = semidesert
 life_rating = 10

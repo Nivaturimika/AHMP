@@ -1,3 +1,5 @@
+owner = HAL
+controller = HAL
 add_core = SYR
 add_core = KDS
 trade_goods = grain

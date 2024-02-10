@@ -1,3 +1,5 @@
+owner = HAL
+controller = HAL
 add_core = SYR
 trade_goods = grain
 life_rating = 10

@@ -758,6 +758,8 @@ YGB 	= "countries/YGB.txt"
 
 MPC 	= "countries/Mapuche.txt"
 ALA 	= "countries/Aland.txt"
+YGC 	= "countries/YGC.txt"
+GUR 	= "countries/GUR.txt"
 
 ##HoD Dominions
 dynamic_tags  = yes # any tags after this is considered dynamic dominions

@@ -1,5 +1,6 @@
-owner = BRZ
-controller = BRZ
+owner = YGC
+controller = YGC
+add_core = YGC
 add_core = BRZ
 trade_goods = rubber
 life_rating = 31

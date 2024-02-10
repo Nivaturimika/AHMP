@@ -479,6 +479,7 @@ country_event = {
             country_event = { id = 96165 days = 20 }
         }
         prestige = 10
+        release_vassal = THIS
         ai_chance = {
             factor = 95
         }
@@ -510,14 +511,6 @@ country_event = {
     option = {
         name = "EVT11104OPTA"
         prestige = 5
-        diplomatic_influence = {
-            who = FROM
-            value = 200
-        }
-        relation = {
-            who = FROM
-            value = 200
-        }
         any_country = {
             limit = {
                 is_culture_group = THIS
@@ -535,17 +528,12 @@ country_event = {
             }
         }
         ai_chance = {
-            factor = 100
+            factor = 1
         }
     }
 
     option = {
         name = "EVT11104OPTB"
-        prestige = -5
-        diplomatic_influence = {
-            who = FROM
-            value = -50
-        }
         ai_chance = {
             factor = 0
         }

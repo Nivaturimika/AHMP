@@ -1,6 +1,6 @@
-owner = HES
-controller = HES
-add_core = HES
+owner = PRU
+controller = PRU
+add_core = PRU
 add_core = GER
 trade_goods = fruit
 life_rating = 40
