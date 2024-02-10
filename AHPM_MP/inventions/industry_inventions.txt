@@ -1380,7 +1380,7 @@ pressure_chambers_for_thorax_surgery = {
         }
     }
     effect = {
-        shared_prestige = 10
+        factory_cost = 0.995 #10
     }
 }
 #inorganic_chemistry

@@ -115,7 +115,6 @@ fire_control_systems = {
     cost = 7200
     unciv_military = yes
     navy_base = { build_time = -10 }
-
     colonial_prestige = 0.1
 }
 weapon_platforms = {

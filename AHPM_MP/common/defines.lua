@@ -25,7 +25,7 @@ country = {
     CAMPAIGN_EVENT_STATE_SCALE = -3,    -- every non-colonial state reduces by 3 days.
     CAMPAIGN_DURATION = 6,    -- a campaign lasts these amount of months
     COLONIAL_RANK = 32, -- Minimum rank a nation must have to send colonists
-    COLONY_TO_STATE_PRESTIGE_GAIN = 5, -- Prestige gain when turning colony to state
+    COLONY_TO_STATE_PRESTIGE_GAIN = 0, -- Prestige gain when turning colony to state
     COLONIAL_LIFERATING = 35,
     BASE_GREATPOWER_DAILY_INFLUENCE = 0.40, -- Influence value which is distributed each day
     AI_SUPPORT_REFORM = 0.025, -- At least this many % needs to support a reform for the AI to take it
@@ -34,7 +34,7 @@ country = {
     PROVINCE_OVERSEAS_PENALTY = 0.015, -- Each province req. this many goods flagged as overseas penalty
     NONCORE_TAX_PENALTY = -0.05, -- -5% for each non-core in state
     BASE_TARIFF_EFFICIENCY = 0.2, -- baseline tariff efficiency
-    COLONY_FORMED_PRESTIGE = 1, -- prestige from founding a colony.
+    COLONY_FORMED_PRESTIGE = 0, -- prestige from founding a colony.
     CREATED_CB_VALID_TIME = 12,  -- how many months
     LOYALTY_BOOST_ON_PARTY_WIN = 0.1,
     MOVEMENT_RADICALISM_BASE = 25,
@@ -54,7 +54,7 @@ country = {
     TECH_YEAR_SPAN = 150,
     TECH_FACTOR_VASSAL = 0.5, -- cost reduction factor if overlord has research the tech
     MAX_SUPPRESSION = 100,
-    PRESTIGE_HIT_ON_BREAK_COUNTRY = -0.20, -- percentage reduction when country gets taken by rebels
+    PRESTIGE_HIT_ON_BREAK_COUNTRY = -0.50, -- percentage reduction when country gets taken by rebels
     MIN_MOBILIZE_LIMIT = 3,
     POP_GROWTH_COUNTRY_CACHE_DAYS = 30, -- period of cached pop growth (used for player)
     NEWSPAPER_PRINTING_FREQUENCY = 350, -- days frequency when the news attempt to be printed (may not print if not enough facts collected, and retry after another X days)
@@ -146,11 +146,11 @@ military = {
     POP_MIN_SIZE_FOR_REGIMENT_NONCORE_MULTIPLIER = 3, -- VALUE * POP_MIN_SIZE_FOR_REGIMENT is min for noncores
     GAS_ATTACK_MODIFIER = 5,
     COMBATLOSS_WAR_EXHAUSTION = 0.05, -- base war exhaustion in combat
-    LEADER_MAX_RANDOM_PRESTIGE = 0.5, -- max percent of prestige, when randomizing stats for leaders.
+    LEADER_MAX_RANDOM_PRESTIGE = 0.0001, -- max percent of prestige, when randomizing stats for leaders.
     LEADER_AGE_DEATH_FACTOR = 2, -- higher value means leaders live longer
-    LEADER_PRESTIGE_TO_MORALE_FACTOR = 0.9, -- f.ex. 100% of prestige = +10% morale
-    LEADER_PRESTIGE_TO_MAX_ORG_FACTOR = 0.7, -- f.ex. 100% of prestige = +10 max org
-    LEADER_TRANSFER_PENALTY_ON_COUNTRY_PRESTIGE = 0.05, -- country prestige penalty on unassign leader (f.ex if leader has 100% prestige, the country loose 4% of its prestige)
+    LEADER_PRESTIGE_TO_MORALE_FACTOR = 0.009, -- f.ex. 100% of prestige = +10% morale
+    LEADER_PRESTIGE_TO_MAX_ORG_FACTOR = 0.007, -- f.ex. 100% of prestige = +10 max org
+    LEADER_TRANSFER_PENALTY_ON_COUNTRY_PRESTIGE = 0.001, -- country prestige penalty on unassign leader (f.ex if leader has 100% prestige, the country loose 4% of its prestige)
     LEADER_PRESTIGE_LAND_GAIN = 0.3, -- extra speed gain on prestige for land combat
     LEADER_PRESTIGE_NAVAL_GAIN = 0.3, -- extra speed gain on prestige for naval combat
     NAVAL_COMBAT_SEEKING_CHANCE = 0.5, -- base chance of picking a target (increased by leader reconnaissance)
@@ -477,8 +477,8 @@ diplomacy = {
 
     DISARMAMENT_ARMY_HIT = 0.5,
     REPARATIONS_TAX_HIT = 0.25,
-    PRESTIGE_REDUCTION_BASE = 25,
-    PRESTIGE_REDUCTION = 0.1, -- Base value + % of recipient's prestige
+    PRESTIGE_REDUCTION_BASE = 45,
+    PRESTIGE_REDUCTION = 0.25, -- Base value + % of recipient's prestige
     REPARATIONS_YEARS = 5,
 
     -- No longer used:
@@ -512,7 +512,7 @@ diplomacy = {
     WARGOAL_JINGOISM_REQUIREMENT = 0.07,
 
     LIBERATE_STATE_RELATION_INCREASE = 50,
-    DISHONORED_CALLALLY_PRESTIGE_PENALTY = 2,
+    DISHONORED_CALLALLY_PRESTIGE_PENALTY = 0,
     BASE_TRUCE_MONTHS = 24,
     MAX_INFLUENCE = 100,
     WARSUBSIDIES_PERCENT = 0.80, -- How many percent of imports you are going to pay each day(mil. constructions and mil. maintainence)
@@ -522,7 +522,7 @@ diplomacy = {
     PUPPET_BONUS_INFLUENCE_PERCENT = 1.0, -- bonus if they are our puppet
 
     -- effects of manually releasing a nation
-    RELEASE_NATION_PRESTIGE = 0,
+    RELEASE_NATION_PRESTIGE = -50,
     RELEASE_NATION_INFAMY = -5,
 
     INFAMY_CLEAR_UNION_SPHERE = 0, -- Infamy for asserting hegemony
@@ -578,8 +578,8 @@ diplomacy = {
     CRISIS_OFFER_DIPLOMATIC_COST = 0,
     CRISIS_OFFER_RELATION_ON_ACCEPT = 0,
     CRISIS_OFFER_RELATION_ON_DECLINE = 0,
-    CRISIS_DID_NOT_TAKE_SIDE_PRESTIGE_FACTOR_BASE = -0.1,
-    CRISIS_DID_NOT_TAKE_SIDE_PRESTIGE_FACTOR_YEAR = -0.002,
+    CRISIS_DID_NOT_TAKE_SIDE_PRESTIGE_FACTOR_BASE = -0.25,
+    CRISIS_DID_NOT_TAKE_SIDE_PRESTIGE_FACTOR_YEAR = -0.02,
     CRISIS_WINNER_PRESTIGE_FACTOR_BASE = 10,
     CRISIS_WINNER_PRESTIGE_FACTOR_YEAR = 0.4,
     CRISIS_WINNER_RELATIONS_IMPACT = 25, -- negative for losers and backers with unfulfilled goals

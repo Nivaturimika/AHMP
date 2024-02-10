@@ -342,10 +342,6 @@ international_monetary_exchange_rates = {
             invention = fixed_intramonetary_exchange_rates
         }
         modifier = {
-            factor = 1
-            prestige = 40
-        }
-        modifier = {
             factor = 2
             is_greater_power = yes
         }
@@ -412,7 +408,7 @@ hyperinflation = {
     }
     core_pop_consciousness_modifier = 0.01
     effect = {
-        factory_cost = 0.1
+        factory_cost = 0.995
     }
 }
 #eary_classical_theory
@@ -421,10 +417,6 @@ john_ramsay_mcculloch = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 1
-            prestige = 30
-        }
         modifier = {
             factor = 2
             is_greater_power = yes
@@ -452,26 +444,6 @@ nassau_william_sr = {
         loan_interest = -0.002
     }
 }
-
-# james_mill = {
-    # limit = { early_classical_theory_and_critique = 1 }
-    # news = no
-    # chance = {
-        # base = 2
-        # modifier = {
-            # factor = 2
-            # nationalvalue = nv_equality
-        # }
-        # modifier = {
-            # factor = 1
-            # ruling_party_ideology = liberal
-        # }
-    # }
-    # effect = {
-        # activate_building = luxury_furniture_factory
-    # }
-# }
-
 #late_classical_theory
 john_elliot_cairnes = {
     limit = {
@@ -491,7 +463,7 @@ john_elliot_cairnes = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 robert_torrens = {
@@ -512,7 +484,7 @@ robert_torrens = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 john_stuart_mill = {
@@ -533,7 +505,7 @@ john_stuart_mill = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 #collectivist_theory
@@ -580,7 +552,7 @@ pierre_joseph_proudhon = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 karl_marx = {
@@ -645,7 +617,7 @@ karl_marx = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 friedrich_engels = {
@@ -705,7 +677,7 @@ friedrich_engels = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 eduard_bernstein = {
@@ -734,7 +706,7 @@ eduard_bernstein = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 sidney_webb = {
@@ -761,7 +733,7 @@ sidney_webb = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 karl_kautsky = {
@@ -786,7 +758,7 @@ karl_kautsky = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 jean_jaures = {
@@ -807,7 +779,7 @@ jean_jaures = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 #the_historical_theory
@@ -829,7 +801,7 @@ friedrich_list = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 wilhelm_roscher = {
@@ -850,7 +822,7 @@ wilhelm_roscher = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 bruno_hildebrand = {
@@ -871,7 +843,7 @@ bruno_hildebrand = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 karl_knies = {
@@ -892,7 +864,7 @@ karl_knies = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 gustav_von_schmoller = {
@@ -907,13 +879,9 @@ gustav_von_schmoller = {
             factor = 2
             economic_policy = interventionism
         }
-        modifier = {
-            factor = 2
-            prestige = 30
-        }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 adolph_wagner = {
@@ -934,7 +902,7 @@ adolph_wagner = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 william_cunningham = {
@@ -955,7 +923,7 @@ william_cunningham = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 #neoclassical_theory
@@ -977,7 +945,7 @@ johann_heinrich_von_thunen = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 leon_walras = {
@@ -998,7 +966,7 @@ leon_walras = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 stanley_jevons = {
@@ -1019,7 +987,7 @@ stanley_jevons = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 carl_menger = {
@@ -1040,7 +1008,7 @@ carl_menger = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 thorstein_veblen = {
@@ -1061,7 +1029,7 @@ thorstein_veblen = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 alfred_marshall = {
@@ -1082,7 +1050,7 @@ alfred_marshall = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 augustin_cournot = {
@@ -1103,7 +1071,7 @@ augustin_cournot = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 jules_dupuit = {
@@ -1124,7 +1092,7 @@ jules_dupuit = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 vilfredo_pareto = {
@@ -1145,7 +1113,7 @@ vilfredo_pareto = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995
     }
 }
 knut_wicksell = {
@@ -1166,7 +1134,7 @@ knut_wicksell = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 irving_fischer = {
@@ -1187,7 +1155,7 @@ irving_fischer = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 joseph_schumpeter = {
@@ -1208,7 +1176,7 @@ joseph_schumpeter = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 eugen_von_bohm_bawerk = {
@@ -1229,7 +1197,7 @@ eugen_von_bohm_bawerk = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 #keynesian_economics
@@ -1253,7 +1221,7 @@ john_maynard_keynes = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 richard_kahn = {
@@ -1274,7 +1242,7 @@ richard_kahn = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 ludwig_von_mises = {
@@ -1299,7 +1267,7 @@ ludwig_von_mises = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 friedrich_hayek = {
@@ -1320,7 +1288,7 @@ friedrich_hayek = {
         }
     }
     effect = {
-        permanent_prestige = 1
+        factory_cost = 0.995 #1
     }
 }
 #market_structure
