@@ -325,11 +325,9 @@ political_decisions = {
 			ai = no
 			test = is_goverment_decision
 		}
-		allow = {
-
-		}
 
 		effect = {
+			prestige = -25
 			any_country = {
 				limit = { ai = no }
 				country_event = 910203
