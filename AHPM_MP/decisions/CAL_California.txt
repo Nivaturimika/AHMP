@@ -61,8 +61,7 @@ rancho = {
             tag = MEX
             tag = CAL
         }
-        NOT = {    has_global_flag = rancho }
-        year = 1836
+        NOT = { has_global_flag = rancho }
         any_owned_province = {
             OR = {
                 province_id = 84

@@ -2,83 +2,21 @@ political_decisions = {
     international_african_association = {
         picture = the_congo_conference
         potential = {
-            year = 1870
-            capital_scope = { continent = europe }
-            NOT = {
-                tag = TUR
-                tag = RUS
-                is_vassal = yes
-                has_global_flag = called_congo_conference
-            }
-            1984 = { empty = yes }
-            any_owned_province = { has_building = naval_base }
-            num_of_cities = 6
-            number_of_states = 2
+            is_greater_power = yes
+            has_global_flag = called_congo_conference
         }
 
         allow = {
             has_global_flag = berlin_conference
-            slavery = no_slavery
             war = no
-            total_pops = 800000
-            OR = {
-                AND = {
-                    is_secondary_power = yes
-                    is_greater_power = no
-                }
-                tag = BEL
-            }
-            OR = {
-                government = hms_government
-                government = prussian_constitutionalism
-                government = absolute_monarchy
-            }
-            OR = {
-                AND = {
-                    NOT = { badboy = 0.4 }
-                    NOT = { num_of_vassals = 1 }
-                    NOT = { any_owned_province = { is_colonial = yes } }
-                    blue_and_brown_water_schools = 1
-                }
-                AND = {
-                    NOT = { badboy = 0.2 }
-                    NOT = { num_of_vassals = 1 }
-                    NOT = { any_owned_province = { is_colonial = yes } }
-                    blue_and_brown_water_schools = 1
-                }
-                AND = {
-                    NOT = { badboy = 0.1 }
-                    NOT = { any_owned_province = { continent = africa } }
-                    naval_logistics = 1
-                    year = 1885
-                }
-                AND = {
-                    NOT = { badboy = 0.01 }
-                    NOT = { any_owned_province = { continent = africa } }
-                    NOT = { any_owned_province = { is_colonial = yes } }
-                    raider_group_doctrine = 1
-                    year = 1886
-                }
-                AND = {
-                    NOT = { badboy = 0.3 }
-                    NOT = { any_owned_province = { continent = africa } }
-                    tech_school = naval_tech_school
-                    raider_group_doctrine = 1
-                }
-                AND = {
-                    NOT = { badboy = 0.5 }
-                    NOT = { any_owned_province = { continent = africa } }
-                    tag = BEL
-                    year = 1885
-                    raider_group_doctrine = 1
-                }
-            }
+            any_owned_province = { has_building = naval_base }
+            test = is_monarchy_goverment
         }
 
         effect = {
             set_global_flag = called_congo_conference
             any_country = {
-                limit = { is_greater_power = yes capital_scope = {continent = europe } NOT = { tag = TUR tag = RUS tag = THIS } }
+                limit = { is_greater_power = yes }
                 country_event = 955182
             }
             set_variable = { which = no_to_congo value = 0 }
@@ -87,16 +25,11 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-
     force_publique = {
-    picture = force_publique
+        picture = force_publique
         potential = {
             tag = BEL
-            OR = {
-                government = hms_government
-                government = prussian_constitutionalism
-                government = absolute_monarchy
-            }
+            test = is_monarchy_goverment
             NOT = { has_country_flag = force_publique_formed }
         }
         allow = {
@@ -137,7 +70,6 @@ political_decisions = {
 
     rename_the_congo = {
         potential = {
-            exists = yes
             OR = {
                 AND = {
                     exists = CNG
@@ -147,7 +79,6 @@ political_decisions = {
             }
             NOT = { has_global_flag = congo_renamed }
         }
-
         allow = {
             invention = mission_to_civilize
             owns = 1987
@@ -157,7 +88,6 @@ political_decisions = {
             owns = 1982
             owns = 1985
         }
-
         effect = {
             prestige = 5
             CNG = { capital = 1982 }

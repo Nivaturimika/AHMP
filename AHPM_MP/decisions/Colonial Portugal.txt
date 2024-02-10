@@ -10,19 +10,14 @@ political_decisions = {
 
         allow = {
             nationalism_n_imperialism = 1
-            OR = {
-                phenomenalism = 1
-                year = 1900
-            }
+            phenomenalism = 1
         }
 
         effect = {
             set_country_flag = portuguese_civil_code
             prestige = 10
             any_pop = {
-                limit = {
-                    location = { is_colonial = no }
-                }
+                limit = { location = { is_colonial = no } }
                 militancy = -3
                 consciousness = 1
             }
@@ -291,10 +286,7 @@ political_decisions = {
         }
 
         allow = {
-            OR = {
-                military_plans = 1
-                year = 1840
-            }
+            military_plans = 1
             war = no
         }
 
@@ -343,10 +335,10 @@ political_decisions = {
             random_owned = { limit = { owner = { primary_culture = portuguese owns = 2009 } } 2009 = { change_province_name = "Malanje" } }
             random_owned = { limit = { owner = { primary_culture = portuguese owns = 2006 } } 2006 = { change_province_name = "Silva Porto" } }
             random_owned = { limit = { owner = { primary_culture = portuguese owns = 2011 } } 2011 = { change_province_name = "Luso" } }
-            random_owned = { limit = { owner = { primary_culture = portuguese owns = 2002 } } 2002 = { change_province_name = "Uíge" } }
+            random_owned = { limit = { owner = { primary_culture = portuguese owns = 2002 } } 2002 = { change_province_name = "Uï¿½ge" } }
             random_owned = {
                 limit = { owner = { primary_culture = portuguese owns = 2001 } }
-                2001 = { change_province_name = "São Salvador" }
+                2001 = { change_province_name = "Sï¿½o Salvador" }
             }
             random_owned = {
                 limit = { owner = { primary_culture = portuguese owns = 2010 } }
