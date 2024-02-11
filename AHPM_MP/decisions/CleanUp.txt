@@ -1441,8 +1441,6 @@ political_decisions = {
 							tag = RUS
 						}
 					}
-					tech_school = naval_tech_school
-					tech_school = japanese_tech_school
 				}
 				state_n_government = 1
 				OR = {
