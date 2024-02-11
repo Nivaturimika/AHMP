@@ -4,3 +4,8 @@ add_core = ENG
 trade_goods = fish
 life_rating = 35
 terrain = small_island
+state_building = {
+    level = 4
+    building = machine_parts_factory
+    upgrade = yes
+}

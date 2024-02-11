@@ -861,3 +861,27 @@ vassal = {
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
+vassal = {
+	first = ENG
+	second = SRI
+	start_date = 1836.1.1
+	end_date = 1936.1.1
+}
+vassal = {
+	first = RUS
+	second = GEO
+	start_date = 1836.1.1
+	end_date = 1936.1.1
+}
+vassal = {
+	first = ENG
+	second = ASM
+	start_date = 1836.1.1
+	end_date = 1936.1.1
+}
+vassal = {
+	first = ENG
+	second = SCO
+	start_date = 1836.1.1
+	end_date = 1936.1.1
+}
