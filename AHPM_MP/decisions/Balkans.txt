@@ -1951,32 +1951,4 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-
-    move_capital_to_belgrade = {
-        picture = belgrade_view
-        potential = {
-            tag = SER
-            owns = 794
-            NOT = { capital = 794 }
-        }
-
-        allow = {
-            war = no
-            NOT = { in_sphere = TUR }
-            state_n_government = 1
-        }
-
-        effect = {
-            capital = 794
-            prestige = 1
-            random_owned = {
-                limit = {
-                    province_id = 794
-                    NOT = { life_rating = 36 }
-                }
-                life_rating = 1
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
 }

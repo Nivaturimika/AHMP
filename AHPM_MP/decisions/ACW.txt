@@ -2119,7 +2119,6 @@ political_decisions = {
 		effect = {
 			any_country = {
 				limit = {
-					ai = no
 					has_country_modifier = forceful_back_to_africa
 					OR = {
 						ruling_party_ideology = liberal

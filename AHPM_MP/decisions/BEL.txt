@@ -369,26 +369,6 @@ political_decisions = {
                 }
                 life_rating = 25
             }
-            any_owned = {
-                limit = {
-                    OR = {
-                        is_core = CNG
-                        region = BEL_1984
-                        region = BEL_1987
-                        region = BEL_1990
-                        province_id = 1982
-                        province_id = 1983
-                        province_id = 1985
-                    }
-                }
-                remove_core = KON
-                remove_core = KUB
-                remove_core = KZB
-                remove_core = LBA
-                remove_core = LUN
-                remove_core = AZA
-                remove_core = MNG
-            }
         }
     }
 
@@ -534,8 +514,6 @@ political_decisions = {
             random_country = {
                 limit = {
                     tag = WLL
-                    exists = yes
-                    ai = no
                 }
                 country_event = 11101
             }

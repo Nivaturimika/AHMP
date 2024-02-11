@@ -131,9 +131,8 @@ political_decisions = {
 
         effect = {
             set_country_flag = unite_with_greece
-            random_country = {
+            GRE = {
                 limit = {
-                    tag = GRE
                     ai = yes
                     THIS = { ai = yes }
                 }
@@ -143,9 +142,8 @@ political_decisions = {
                 }
                 inherit = THIS
             }
-            random_country = {
+            GRE = {
                 limit = {
-                    tag = GRE
                     ai = yes
                     THIS = { ai = no }
                 }
@@ -161,11 +159,8 @@ political_decisions = {
                     change_tag = GRE
                 }
             }
-            random_country = {
-                limit = {
-                    tag = GRE
-                    ai = no
-                }
+            GRE = {
+                limit = { ai = no }
                 country_event = 60130
             }
         }

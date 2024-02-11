@@ -31,14 +31,6 @@ country_event = {
                 is_culture_group = THIS
                 is_cultural_union = yes
             }
-            diplomatic_influence = {
-                who = THIS
-                value = 100
-            }
-            relation = {
-                who = THIS
-                value = 100
-            }
             country_event = 60130
         }
         random_country = {

@@ -328,7 +328,10 @@ political_decisions = {
 		effect = {
 			prestige = -25
 			any_country = {
-				limit = { ai = no }
+				limit = {
+					tag != THIS
+					ai = no
+				}
 				country_event = 910203
 			}
 		}
