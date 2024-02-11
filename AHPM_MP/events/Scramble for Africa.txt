@@ -6,7 +6,6 @@
 #################################################################################################################
 
 country_event = {
-
     id = 95500
     title = "EVTNAME95500" #The Berlin Conference
     desc = "EVTDESC95500"
@@ -38,10 +37,6 @@ country_event = {
 
     mean_time_to_happen = {
         months = 6
-        modifier = {
-            factor = 0.8
-            capital = 549
-        }
     }
 
     option = {

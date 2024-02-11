@@ -4137,7 +4137,7 @@ country_event = {
             name = national_confusion
             duration = 365
         }
-        country_event = 800052
+        country_event = 800050
         ai_chance = {
             factor = 20
             modifier = {
@@ -4535,7 +4535,7 @@ country_event = {
             }
             relation = { who = THIS value = 50 }
         }
-        country_event = 800051
+        country_event = 800050
         ai_chance = {
             factor = 10
             modifier = {
@@ -4643,7 +4643,7 @@ country_event = {
             }
             relation = { who = THIS value = 50 }
         }
-        country_event = 800052
+        country_event = 800050
         ai_chance = {
             factor = 20
             modifier = {

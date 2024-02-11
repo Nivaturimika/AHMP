@@ -107,32 +107,12 @@ country_event = {
                 }
             }
         }
-        ai_chance = {
-            factor = 75
-            modifier = {
-                factor = 0.5
-                is_greater_power = no
-            }
-            modifier = {
-                factor = 0.3
-                badboy = 0.8
-            }
-        }
+        ai_chance = { factor = 1 }
     }
     option = {
         name = "EVT800060OPTB"
         prestige = -5
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 2
-                is_greater_power = no
-            }
-            modifier = {
-                factor = 3
-                badboy = 0.8
-            }
-        }
+        ai_chance = { factor = 0 }
     }
 }
 

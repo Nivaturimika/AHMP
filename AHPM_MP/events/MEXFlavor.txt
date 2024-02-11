@@ -84,7 +84,7 @@ country_event = {
             name = national_confusion
             duration = 365
         }
-        country_event = 800054
+        country_event = 800050
     }
 }
 

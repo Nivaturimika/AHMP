@@ -458,7 +458,7 @@ fascist_rebels = {
         }
         prestige_factor = -0.25
         plurality = -25
-        country_event = 800051
+        country_event = 800050
     }
 }
 
@@ -684,7 +684,7 @@ communist_rebels = {
         }
         prestige_factor = -0.25
         plurality = -25
-        country_event = 800052
+        country_event = 800050
     }
 }
 
@@ -936,7 +936,7 @@ anarcho_liberal_rebels = {
 
         prestige_factor = -0.25
         plurality = -25
-        country_event = 800053
+        country_event = 800050
     }
 }
 
@@ -3090,9 +3090,8 @@ liberal_rebels = {
 
         random_owned = {
             limit = { owner = { NOT = { tag = URU } } }
-            owner = { country_event = 800054 plurality = -10 }
+            owner = { country_event = 800050 plurality = -10 }
         }
-
         random_owned = {
             limit = { owner = { tag = URU NOT = { has_country_flag = colorado_victory } } }
             owner = { country_event = 600057 }
@@ -4281,7 +4280,7 @@ turkish_nationalist_rebels = {
             duration = 365
         }
         prestige_factor = -0.25
-        country_event = 800054
+        country_event = 800050
     }
 }
 

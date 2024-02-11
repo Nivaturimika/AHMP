@@ -83,3 +83,119 @@ is_warable_country = {
 		}
 	}
 }
+
+is_same_ruling_party_ideology = {
+	main_parameter = nation
+	this_parameter = nation
+
+	OR = {
+		THIS = { ruling_party_ideology = reactionary }
+		ruling_party_ideology = reactionary
+	}
+	OR = {
+		THIS = { ruling_party_ideology = conservative }
+		ruling_party_ideology = conservative
+	}
+	OR = {
+		THIS = { ruling_party_ideology = liberal }
+		ruling_party_ideology = liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = socialist }
+		ruling_party_ideology = socialist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = communist }
+		ruling_party_ideology = communist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = anarcho_liberal }
+		ruling_party_ideology = anarcho_liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = fascist }
+		ruling_party_ideology = fascist
+	}
+}
+
+is_same_ruling_party_ideology = {
+	main_parameter = nation
+	this_parameter = nation
+
+	OR = {
+		THIS = { ruling_party_ideology = reactionary }
+		ruling_party_ideology = reactionary
+	}
+	OR = {
+		THIS = { ruling_party_ideology = conservative }
+		ruling_party_ideology = conservative
+	}
+	OR = {
+		THIS = { ruling_party_ideology = liberal }
+		ruling_party_ideology = liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = socialist }
+		ruling_party_ideology = socialist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = communist }
+		ruling_party_ideology = communist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = anarcho_liberal }
+		ruling_party_ideology = anarcho_liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = fascist }
+		ruling_party_ideology = fascist
+	}
+}
+
+is_same_ruling_party_ideology = {
+	main_parameter = pop
+	this_parameter = nation
+
+	OR = {
+		THIS = { ruling_party_ideology = reactionary }
+		pop_majority_ideology = reactionary
+	}
+	OR = {
+		THIS = { ruling_party_ideology = conservative }
+		pop_majority_ideology = conservative
+	}
+	OR = {
+		THIS = { ruling_party_ideology = liberal }
+		pop_majority_ideology = liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = socialist }
+		pop_majority_ideology = socialist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = communist }
+		pop_majority_ideology = communist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = anarcho_liberal }
+		pop_majority_ideology = anarcho_liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = fascist }
+		pop_majority_ideology = fascist
+	}
+}
+
+has_elections = {
+	main_parameter = nation
+	OR = {
+		government = prussian_constitutionalism
+		government = hms_government
+		government = democracy
+	}
+	OR = {
+		vote_franschise = wealth_voting
+		vote_franschise = universal_weighted_voting
+		vote_franschise = universal_voting
+	}
+}

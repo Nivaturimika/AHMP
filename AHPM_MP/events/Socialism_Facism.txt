@@ -2330,7 +2330,7 @@ country_event = {
 			name = national_confusion
 			duration = 365
 		}
-		country_event = 800051
+		country_event = 800050
 		ai_chance = {
 			factor = 25
 			modifier = {

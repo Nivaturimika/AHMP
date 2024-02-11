@@ -99,9 +99,7 @@ release_puppet_AI
 steal_puppet
 great_game_cb
 make_puppet
-install_fascism_make_puppet
-install_communism_make_puppet
-install_democracy_make_puppet
+install_ideology_make_puppet
 gunboat
 cut_down_to_size
 cut_down_to_size_boxer
@@ -6042,7 +6040,7 @@ treaty_port_casus_belli = {
 	}
 }
 
-install_fascism_make_puppet = {
+install_ideology_make_puppet = {
 	sprite_index = 17
 	is_triggered_only = yes
 	constructing_cb = no
@@ -6079,87 +6077,22 @@ install_fascism_make_puppet = {
 		}
 	}
 
-	on_po_accepted = { THIS = { set_country_flag = friendly_fascist_puppet } country_event = 96086 }
-}
-
-install_communism_make_puppet = {
-	sprite_index = 12
-	is_triggered_only = yes
-	constructing_cb = no
-	months = 12
-	crisis = no
-
-	badboy_factor = 2
-	prestige_factor = 1
-	peace_cost_factor = 1.17
-	penalty_factor = 1
-
-	break_truce_prestige_factor = 1
-	break_truce_infamy_factor = 1
-	break_truce_militancy_factor = 1
-	truce_months = 48
-
-	good_relation_prestige_factor = 1
-	good_relation_infamy_factor = 1
-	good_relation_militancy_factor = 1
-
-	can_use = {
-		test = is_warable_country
-	}
-
-	po_make_puppet = yes
-
-	war_name = WAR_NAME
-
-	on_add = {
-		move_issue_percentage = {
-			from = jingoism
-			to = pro_military
-			value = 0.05
+	on_po_accepted = {
+		if = {
+			limit = { ruling_party_ideology = fascist }
+			country_event = 96086
+		} else_if = {
+			limit = {
+				OR = {
+					ruling_party_ideology = communist
+					ruling_party_ideology = socialist
+				}
+			}
+			country_event = 96087
+		} else_if = {
+			country_event = 96088
 		}
 	}
-
-	on_po_accepted = { THIS = { set_country_flag = friendly_communist_puppet } country_event = 96087 }
-}
-
-install_democracy_make_puppet = {
-	sprite_index = 19
-	is_triggered_only = yes
-	constructing_cb = no
-	months = 12
-	crisis = no
-
-	badboy_factor = 2
-	prestige_factor = 1
-	peace_cost_factor = 1.17
-	penalty_factor = 1
-
-	break_truce_prestige_factor = 1
-	break_truce_infamy_factor = 1
-	break_truce_militancy_factor = 1
-	truce_months = 48
-
-	good_relation_prestige_factor = 1
-	good_relation_infamy_factor = 1
-	good_relation_militancy_factor = 1
-
-	can_use = {
-		test = is_warable_country
-	}
-
-	po_make_puppet = yes
-
-	war_name = WAR_NAME
-
-	on_add = {
-		move_issue_percentage = {
-			from = jingoism
-			to = pro_military
-			value = 0.05
-		}
-	}
-
-	on_po_accepted = { THIS = { set_country_flag = friendly_democracy_puppet } country_event = 96085 }
 }
 
 #Colonial Conquest/Imperialism CB
