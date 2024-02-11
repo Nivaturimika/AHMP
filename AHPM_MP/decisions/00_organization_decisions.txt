@@ -51,7 +51,7 @@ political_decisions = {
 			if = {
 				limit = { has_country_flag = picking_up_a_tech_school }
 				clr_country_flag = picking_up_a_tech_school
-			} else {
+			} else = {
 				set_country_flag = picking_up_a_tech_school
 			}
 		}

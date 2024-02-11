@@ -119,40 +119,6 @@ is_same_ruling_party_ideology = {
 }
 
 is_same_ruling_party_ideology = {
-	main_parameter = nation
-	this_parameter = nation
-
-	OR = {
-		THIS = { ruling_party_ideology = reactionary }
-		ruling_party_ideology = reactionary
-	}
-	OR = {
-		THIS = { ruling_party_ideology = conservative }
-		ruling_party_ideology = conservative
-	}
-	OR = {
-		THIS = { ruling_party_ideology = liberal }
-		ruling_party_ideology = liberal
-	}
-	OR = {
-		THIS = { ruling_party_ideology = socialist }
-		ruling_party_ideology = socialist
-	}
-	OR = {
-		THIS = { ruling_party_ideology = communist }
-		ruling_party_ideology = communist
-	}
-	OR = {
-		THIS = { ruling_party_ideology = anarcho_liberal }
-		ruling_party_ideology = anarcho_liberal
-	}
-	OR = {
-		THIS = { ruling_party_ideology = fascist }
-		ruling_party_ideology = fascist
-	}
-}
-
-is_same_ruling_party_ideology = {
 	main_parameter = pop
 	this_parameter = nation
 
