@@ -408,29 +408,25 @@ political_decisions = {
 
 	declare_neutrality = {
 		potential = {
-			tag = SWI
-			NOT = {
-				has_country_modifier = neutrality_modifier
-				has_country_flag = abandoned_neutrality
-				has_country_flag = neutrality_violated
-			}
+			has_country_modifier != neutrality_modifier
+			has_country_flag != abandoned_neutrality
+			has_country_flag != neutrality_violated
 		}
 		allow = {
 			NOT = { any_owned_province = { is_core = THIS } }
-			NOT = { badboy = 1 }
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = neutrality_modifier
 				duration = -1
 			}
 		}
-
 		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0 government = fascist_dictatorship }
-			modifier = { factor = 0 government = proletarian_dictatorship }
+			factor = 0
+			modifier = {
+				factor = 1
+				tag = SWI
+			}
 		}
 	}
 
@@ -447,30 +443,9 @@ political_decisions = {
 		effect = {
 			set_country_flag = abandoned_neutrality
 			prestige = -20
-			badboy = 5
+			badboy = 25
 			remove_country_modifier = neutrality_modifier
 		}
 		ai_will_do = { factor = 0 }
-	}
-
-	enforce_neutrality = {
-		picture = declare_neutrality
-		potential = {
-			has_country_modifier = neutrality_modifier
-		}
-		allow = {
-			war = yes
-		}
-		effect = {
-			release_vassal = THIS
-			any_country = {
-				limit = {
-					badboy <= 28
-					war = THIS
-				}
-				badboy = 1
-			}
-		}
-		ai_will_do = { factor = 1 }
 	}
 }
