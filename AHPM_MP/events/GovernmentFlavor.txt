@@ -664,7 +664,7 @@ country_event = {
 		if = {
 			limit = { money >= 10000 }
 			FROM = { money = 10000 }
-			THIS = { money = -10000 }
+			money = -10000
 		}
 	}
 	option = {
@@ -672,7 +672,7 @@ country_event = {
 		if = {
 			limit = { money >= 100000 }
 			FROM = { money = 100000 }
-			THIS = { money = -100000 }
+			money = -100000
 		}
 	}
 	option = {
@@ -680,7 +680,7 @@ country_event = {
 		if = {
 			limit = { money >= 1000000 }
 			FROM = { money = 1000000 }
-			THIS = { money = -1000000 }
+			money = -1000000
 		}
 	}
 	option = {
@@ -688,7 +688,7 @@ country_event = {
 		if = {
 			limit = { money >= 10000000 }
 			FROM = { money = 10000000 }
-			THIS = { money = -10000000 }
+			money = -10000000
 		}
 	}
 }
