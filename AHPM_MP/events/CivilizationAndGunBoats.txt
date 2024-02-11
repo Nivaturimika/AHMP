@@ -3807,13 +3807,11 @@ country_event = {
 
     trigger = {
         vassal_of = ENG
-        ai = yes
         NOT = {
             tag = PAK
             tag = HND
             is_cultural_union = yes
             has_country_flag = no_british_doctrine
-            has_global_flag = eic_spawned
         }
         overlord = {
             is_disarmed = no

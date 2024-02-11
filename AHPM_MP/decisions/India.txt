@@ -785,10 +785,8 @@ political_decisions = {
         picture = last_mughal
         potential = {
             tag = MUG
-            vassal_of = ENG
             NOT = { has_country_flag = mughal_independence }
             NOT = { has_country_flag = mughal_reborn }
-            NOT = { has_global_flag = eic_spawned }
         }
 
         allow = {

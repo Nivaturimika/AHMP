@@ -154,9 +154,7 @@ country_event = {
     picture = "AnarchoLiberals"
 
     trigger = {
-        NOT = { is_ideology_enabled = anarcho_liberal }
-        NOT = { has_global_flag = anarcho_liberals_disabled }
-        year = 1848
+        is_ideology_enabled != anarcho_liberal
         civilized = yes
         literacy = 0.6
         OR = {

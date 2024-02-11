@@ -42,13 +42,12 @@ province_event = {
     desc = "EVTDESC20100"
     picture = "crisis"
     trigger = {
-        has_global_flag = revolution_n_counter_researched
         owner = { is_greater_power = yes }
         state_scope = {
             has_flashpoint = yes
             flashpoint_tension = 5
             NOT = { flashpoint_tension = 90 }
-            }
+        }
     }
 
     mean_time_to_happen =  {
@@ -98,7 +97,6 @@ province_event = {
     picture = "crisis"
 
     trigger = {
-        has_global_flag = revolution_n_counter_researched
         owner = { is_greater_power = no }
         state_scope = {
             has_flashpoint = yes
@@ -364,8 +362,6 @@ province_event = {
         owner = {
             crisis_exist = no
             NOT = { is_culture_group = native_american }
-            NOT = { year = 1900 }
-            has_global_flag = revolution_n_counter_researched
         }
         any_core = {
             is_culture_group = native_american
@@ -474,7 +470,6 @@ province_event = {
     trigger = {
         owner = {
             crisis_exist = no
-            has_global_flag = revolution_n_counter_researched
         }
         state_scope = {
             has_flashpoint = yes
@@ -531,7 +526,6 @@ province_event = {
     trigger = {
         owner = {
             crisis_exist = no
-            has_global_flag = revolution_n_counter_researched
         }
         state_scope = {
             has_flashpoint = yes
@@ -587,7 +581,6 @@ province_event = {
             civilized = yes
             crisis_exist = no
             badboy = 0.6
-            has_global_flag = revolution_n_counter_researched
         }
         state_scope = {
             has_flashpoint = yes
