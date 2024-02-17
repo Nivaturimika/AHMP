@@ -2900,7 +2900,7 @@ sahel_jihad_cb = {
 				province_id = 1880
 			}
 		}
-		NOT = { has_country_flag = sunni_country }
+		NOT = { primary_religion = sunni }
 		THIS = {
 			civilized = no
 			OR = {

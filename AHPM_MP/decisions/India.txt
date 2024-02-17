@@ -894,7 +894,7 @@ political_decisions = {
 					capital = 1254
 					religion = sunni
 					clr_country_flag = hindu_country
-					set_country_flag = sunni_country
+					
 				}
 			}
 			random_owned = { limit = { owner = { owns = 1254 } } ENG_1252 = { add_core = PAK } }
@@ -963,7 +963,7 @@ political_decisions = {
 					capital = 1254
 					religion = sunni
 					clr_country_flag = hindu_country
-					set_country_flag = sunni_country
+					
 				}
 			}
 			random_owned = { limit = { owner = { owns = 1254 } } ENG_1252 = { add_core = PAK } }

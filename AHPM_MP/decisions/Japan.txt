@@ -1747,7 +1747,7 @@ political_decisions = {
         potential = {
             is_vassal = no
             primary_culture = japanese
-            NOT = { has_country_flag = shinto_country }
+            NOT = { primary_religion = shinto }
         }
 
         allow = {

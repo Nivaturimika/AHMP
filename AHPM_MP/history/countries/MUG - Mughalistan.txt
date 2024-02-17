@@ -51,7 +51,7 @@ border_policy = open_borders
 foreign_artillery = yes_foreign_artillery
 foreign_weapons = yes_foreign_weapons
 
-set_country_flag = sunni_country
+
 
 # Technologies
 flintlock_rifles = 1

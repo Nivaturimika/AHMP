@@ -192,7 +192,7 @@ country_event = {
         }
         any_neighbor_country = {
             civilized = no
-            NOT = { has_country_flag = sunni_country }
+            NOT = { primary_religion = sunni }
             NOT = { truce_with = THIS }
             any_owned_province = {
                 OR = {

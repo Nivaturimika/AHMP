@@ -185,8 +185,8 @@ country_event = {
                 }
             }
             AND = {
-                has_country_flag = sunni_country
-                has_country_flag = shiite_country
+                primary_religion = sunni
+                primary_religion = shiite
                 average_consciousness = 5
                 average_militancy = 3
                 OR = {

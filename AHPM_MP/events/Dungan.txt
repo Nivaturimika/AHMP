@@ -151,7 +151,7 @@ country_event = {
             end_war = YNN
         }
         YNN = { change_tag = PGG }
-        PGG = { religion = sunni set_country_flag = sunni_country clr_country_flag = mahayana_country }
+        PGG = { religion = sunni clr_country_flag = mahayana_country }
         casus_belli = {
             target = PGG
             type = make_puppet

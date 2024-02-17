@@ -5,9 +5,9 @@ political_decisions = {
         potential = {
             has_country_flag = umar_pact
             OR = {
-                has_country_flag = sunni_country
-                has_country_flag = shiite_country
-                has_country_flag = ibadi_country
+                primary_religion = sunni
+                primary_religion = shiite
+                primary_religion = ibadi
             }
         }
 
@@ -28,9 +28,9 @@ political_decisions = {
                 limit = {
                     exists = yes
                     NOT = {
-                        has_country_flag = sunni_country
-                        has_country_flag = shiite_country
-                        has_country_flag = ibadi_country
+                        primary_religion = sunni
+                        primary_religion = shiite
+                        primary_religion = ibadi
                     }
                 }
                 relation = { who = THIS value = -50 }
@@ -40,9 +40,9 @@ political_decisions = {
                     exists = yes
                     has_country_flag = umar_pact
                     OR = {
-                        has_country_flag = sunni_country
-                        has_country_flag = shiite_country
-                        has_country_flag = ibadi_country
+                        primary_religion = sunni
+                        primary_religion = shiite
+                        primary_religion = ibadi
                     }
                 }
                 relation = { who = THIS value = -25 }
@@ -106,9 +106,9 @@ political_decisions = {
             NOT = { has_country_flag = secularized_muslim_society }
             civilized = yes
             OR = {
-                has_country_flag = sunni_country
-                has_country_flag = shiite_country
-                has_country_flag = ibadi_country
+                primary_religion = sunni
+                primary_religion = shiite
+                primary_religion = ibadi
             }
         }
 
@@ -566,9 +566,9 @@ political_decisions = {
     picture = the_holy_city
         potential = {
             OR = {
-                has_country_flag = sunni_country
-                has_country_flag = shiite_country
-                has_country_flag = ibadi_country
+                primary_religion = sunni
+                primary_religion = shiite
+                primary_religion = ibadi
             }
             1151 = {
                 owned_by = THIS
@@ -847,9 +847,9 @@ political_decisions = {
             owns = 2036
             capital_scope = {
                 OR = {
-                    has_country_flag = sunni_country
-                    has_country_flag = shiite_country
-                    has_country_flag = ibadi_country
+                    primary_religion = sunni
+                    primary_religion = shiite
+                    primary_religion = ibadi
                 }
             }
             NOT = { has_global_flag = dar_es_salaam_built }

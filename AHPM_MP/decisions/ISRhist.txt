@@ -4,9 +4,9 @@ political_decisions = {
         picture = form_israel
         potential = {
             civilized = yes
-            NOT = { has_country_flag = sunni_country }
-            NOT = { has_country_flag = shiite_country }
-            NOT = { has_country_flag = ibadi_country }
+            NOT = { primary_religion = sunni }
+            NOT = { primary_religion = shiite }
+            NOT = { primary_religion = ibadi }
             NOT = { has_global_flag = israel_has_her_cores }
             916 = {
                 OR = {

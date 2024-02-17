@@ -55,7 +55,7 @@ upper_house = {
 consciousness = 0
 nonstate_consciousness = 0
 
-set_country_flag = sunni_country
+
 
 oob = "GEL_oob.txt"
 1861.1.1 = {

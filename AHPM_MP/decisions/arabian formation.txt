@@ -75,9 +75,9 @@ political_decisions = {
             NOT = { has_country_flag = post_colonial_country }
             is_culture_group = arab
             OR = {
-                has_country_flag = sunni_country
-                has_country_flag = shiite_country
-                has_country_flag = ibadi_country
+                primary_religion = sunni
+                primary_religion = shiite
+                primary_religion = ibadi
             }
             NOT = {
                 exists = ARU
