@@ -4,3 +4,8 @@ add_core = VNZ
 trade_goods = coffee
 terrain = montane_forest
 life_rating = 33
+state_building = {
+    level = 3
+    building = steel_factory
+    upgrade = yes
+}

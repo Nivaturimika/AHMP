@@ -4,3 +4,8 @@ add_core = BRZ
 trade_goods = cattle
 terrain = savanna
 life_rating = 31
+state_building = {
+    level = 3
+    building = steel_factory
+    upgrade = yes
+}

@@ -3,3 +3,8 @@ controller = PRG
 add_core = PRG
 trade_goods = cattle
 life_rating = 39
+state_building = {
+    level = 3
+    building = steel_factory
+    upgrade = yes
+}

@@ -4,3 +4,8 @@ add_core = GUR
 trade_goods = timber
 terrain = savanna
 life_rating = 15
+state_building = {
+    level = 3
+    building = steel_factory
+    upgrade = yes
+}

@@ -3,3 +3,8 @@ controller = BRZ
 add_core = BRZ
 trade_goods = tropical_wood
 life_rating = 31
+state_building = {
+    level = 3
+    building = steel_factory
+    upgrade = yes
+}
