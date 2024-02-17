@@ -56,9 +56,7 @@ no_adjacent_controlled = {
 	supply_limit = -3
 }
 
-core = {
-	pop_militancy_modifier = -0.01
-}
+core = {}
 
 has_siege = {
 	population_growth = -0.01
@@ -82,8 +80,6 @@ infrastructure = {
 	immigrant_attract = 1.05
 	supply_limit = 8
 }
-
-
 
 ##########################################################################
 # Global Static Modifiers
