@@ -36,8 +36,7 @@ border_policy = open_borders
 
 set_country_flag = catholic_country
 
-ruling_party = GLC_conservative
-last_election = 1834.1.1
+ruling_party = DOM_conservative
 upper_house = {
     fascist = 0
     liberal = 35

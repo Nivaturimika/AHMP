@@ -218,7 +218,6 @@ COALITION_WIN;A coalition of �Y$IDE$�W got $VAL$% of the seats and will form
 RULE_PRIMARY_CULTURE_VOTING;\nPrimary culture can vote;;;;;;;;;;;;;
 RULE_CULTURE_VOTING;\nAccepted cultures can vote;;;;;;;;;;;;;
 RULE_ALL_VOTING;\nAll cultures can vote;;;;;;;;;;;;;
-lacking_writing_system;Lacks Writing System;;;;;;;;;;;;;
 clay_and_douglas_draft_enacted;Clay and Douglas Draft Signed;;;;;;;;;;;;;
 wilmot_proviso_providing;Wilmot Proviso Signed;;;;;;;;;;;;;
 timber;Wood;;;;;;;;;;;;;

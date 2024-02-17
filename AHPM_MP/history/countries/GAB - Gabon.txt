@@ -38,7 +38,7 @@ set_country_flag = catholic_country
 
 set_country_flag = post_colonial_country
 
-ruling_party = GAB_conservative
+ruling_party = DOM_conservative
 upper_house = {
     fascist = 0
     liberal = 16

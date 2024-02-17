@@ -35,9 +35,7 @@ child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = closed_borders
 
-
-
-ruling_party = FJN_conservative
+ruling_party = DOM_conservative
 upper_house = {
     fascist = 0
     liberal = 5

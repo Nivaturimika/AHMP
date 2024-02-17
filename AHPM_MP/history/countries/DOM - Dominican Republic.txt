@@ -37,7 +37,7 @@ border_policy = open_borders
 
 set_country_flag = catholic_country
 
-ruling_party = DOM_conservative_3
+ruling_party = DOM_conservative
 upper_house = {
     fascist = 0
     liberal = 0

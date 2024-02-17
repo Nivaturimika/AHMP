@@ -39,7 +39,7 @@ border_policy = open_borders
 
 set_country_flag = animist_country
 
-ruling_party = GAZ_conservative
+ruling_party = DOM_conservative
 upper_house = {
     fascist = 0
     liberal = 0

@@ -40,7 +40,7 @@ set_country_flag = theocratic_government
 set_country_flag = new_world_nation
 
 
-ruling_party = DES_reactionary
+ruling_party = DOM_conservative
 upper_house = {
     fascist = 0
     liberal = 15

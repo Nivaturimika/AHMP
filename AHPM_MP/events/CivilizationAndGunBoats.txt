@@ -4020,7 +4020,6 @@ country_event = {
         civilized = yes
         prestige = 5
         tech_school = traditional_academic
-        clr_country_flag = lacking_writing_system
         remove_country_modifier = lacks_writing_system
         random_owned = { limit = { owner = { ai = yes } } owner = { add_country_modifier = { name = law_changed_by_force duration = 3 } } }
         random_owned = {
@@ -4637,7 +4636,6 @@ country_event = {
         name = "EVT90962OPTA"
         add_country_modifier = { name = missionary_activity duration = 1825 }
         clr_country_flag = animist_country
-        clr_country_flag = lacking_writing_system
         remove_country_modifier = lacks_writing_system
         random_owned = {
             limit = { owner = { has_country_flag = change_to_catholic } }
