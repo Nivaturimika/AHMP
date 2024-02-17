@@ -2,10 +2,10 @@ political_decisions = {
 	restore_mexican_empire = {
 		potential = {
 			tag = MEX
-			government = democracy
-			FRA = { tag = is_monarchy_goverment }
+			government != hms_government
 		}
 		allow = {
+			FRA = { test = is_monarchy_goverment }
 			war = no
 			OR = {
 				ruling_party_ideology = conservative
@@ -17,10 +17,7 @@ political_decisions = {
 		effect = {
 			government = hms_government
 			election = yes
-			random_owned = {
-				limit = { owner = { has_country_modifier = santa_ana_rule } }
-				owner = { remove_country_modifier = santa_ana_rule }
-			}
+			remove_country_modifier = santa_ana_rule
 			any_pop = {
 				scaled_militancy = {
 					ideology = liberal

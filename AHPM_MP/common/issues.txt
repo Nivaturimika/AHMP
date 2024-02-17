@@ -234,8 +234,10 @@ political_reforms = {
 				test = is_stable_goverment
 			}
 			on_execute = {
-				remove_country_modifier = female_suffrage
-				country_event = 60150
+				effect = {
+					remove_country_modifier = female_suffrage
+					country_event = 60150
+				}
 			}
 		}
 		landed_voting = {

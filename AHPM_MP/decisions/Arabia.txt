@@ -845,12 +845,10 @@ political_decisions = {
         picture = tanzania_shop
         potential = {
             owns = 2036
-            capital_scope = {
-                OR = {
-                    religion = sunni
-                    religion = shiite
-                    religion = ibadi
-                }
+            OR = {
+                religion = sunni
+                religion = shiite
+                religion = ibadi
             }
             NOT = { has_global_flag = dar_es_salaam_built }
         }
