@@ -301,14 +301,12 @@ political_reforms = {
 			rules = { state_vote = yes }
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
-				NOT = { vote_franschise = none_voting }
 			}
 			global_immigrant_attract = 0.03
 		}
 		population_equal_weight = {
 			rules = { population_vote = yes }
 			allow = {
-				NOT = { vote_franschise = none_voting }
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 			global_immigrant_attract = 0.03
@@ -319,14 +317,12 @@ political_reforms = {
 		first_past_the_post = {
 			rules = { largest_share = yes }
 			allow = {
-				NOT = { vote_franschise = none_voting }
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
 		jefferson_method = {
 			rules = { dhont = yes }
 			allow = {
-				NOT = { vote_franschise = none_voting }
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -334,7 +330,6 @@ political_reforms = {
 			rules = { sainte_laque = yes }
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
-				NOT = { vote_franschise = none_voting }
 			}
 		}
 	}
@@ -435,7 +430,6 @@ political_reforms = {
 			ruling_party_support = 0.10
 			global_immigrant_attract = 0.03
 			allow = {
-				NOT = { vote_franschise = none_voting }
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -443,14 +437,12 @@ political_reforms = {
 			ruling_party_support = 0.05
 			global_immigrant_attract = 0.04
 			allow = {
-				NOT = { vote_franschise = none_voting }
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
 		secret_ballots = {
 			global_immigrant_attract = 0.05
 			allow = {
-				NOT = { vote_franschise = none_voting }
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -490,10 +482,6 @@ political_reforms = {
 			land_unit_start_experience = -2
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
-				OR = {
-					NOT = { war_policy = jingoism }
-					NOT = { war_policy = pro_military}
-				}
 			}
 		}
 		no_draft = {
@@ -501,10 +489,6 @@ political_reforms = {
 			land_unit_start_experience = -5
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
-				OR = {
-					NOT = { war_policy = jingoism }
-					NOT = { war_policy = pro_military}
-				}
 			}
 		}
 	}
@@ -516,9 +500,7 @@ political_reforms = {
 			literacy_con_impact = -0.1
 			administrative_multiplier = 6
 			allow = {
-				vote_franschise = none_voting
 				NOT = { press_rights = free_press }
-				citizenship_policy = residency
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -528,15 +510,6 @@ political_reforms = {
 			core_pop_militancy_modifier = -0.01
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
-				OR = {
-					is_culture_group = latin_american_cultures
-					is_culture_group = american_cultures
-					is_culture_group = african_diaspora_cultures
-					is_culture_group = native_american
-					primary_culture = australian
-					primary_culture = anglo_canadian
-					primary_culture = french_canadian
-				}
 			}
 		}
 		open_borders = {
@@ -566,9 +539,7 @@ political_reforms = {
 			poor_savings_modifier = -0.25
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
-				OR = {
-					NOT = { has_country_flag = serfdom_not_abolished }
-				}
+				NOT = { has_country_flag = serfdom_not_abolished }
 			}
 		}
 
@@ -830,7 +801,7 @@ social_reforms = {
 			administrative_multiplier = 1
 			global_immigrant_attract = 0.01
 			allow = {
-				has_country_flag = medicine_invented
+				medicine = 1
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -839,7 +810,7 @@ social_reforms = {
 			administrative_multiplier = 2
 			global_immigrant_attract = 0.02
 			allow = {
-				has_country_flag = germs_invented
+				inorganic_chemistry = 1
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -848,7 +819,7 @@ social_reforms = {
 			administrative_multiplier = 3
 			global_immigrant_attract = 0.03
 			allow = {
-				has_country_flag = gaslights_invented
+				organic_chemistry = 1
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -857,7 +828,7 @@ social_reforms = {
 			administrative_multiplier = 4
 			global_immigrant_attract = 0.04
 			allow = {
-				has_country_flag = electricity_invented
+				electricity = 1
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -977,7 +948,6 @@ social_reforms = {
 			rules = { primary_culture_voting = yes }
 			non_accepted_pop_consciousness_modifier = 0.01
 			allow = {
-				citizenship_policy = residency
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
