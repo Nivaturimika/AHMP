@@ -118,24 +118,30 @@ political_decisions = {
 
 		effect = {
 			add_country_modifier = { name = law_changed_by_force duration = 3650 }
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						NOT = { conscription = mandatory_service }
-						OR = {
-							government = fascist_dictatorship
-							government = proletarian_dictatorship
-							government = bourgeois_dictatorship
-							has_country_flag = in_great_war
-						}
+					conscription != mandatory_service
+					OR = {
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						has_country_flag = in_great_war
 					}
 				}
-				owner = { political_reform = mandatory_service }
+				political_reform = mandatory_service
+			} else_if = {
+				limit = { conscription = four_year_draft }
+				political_reform = mandatory_service
+			} else_if = {
+				limit = { conscription = two_year_draft }
+				political_reform = four_year_draft
+			} else_if = {
+				limit = { conscription = one_year_draft }
+				political_reform = two_year_draft
+			} else_if = {
+				limit = { conscription = no_draft }
+				political_reform = one_year_draft
 			}
-			random_owned = { limit = { owner = { conscription = four_year_draft } } owner = { political_reform = mandatory_service } }
-			random_owned = { limit = { owner = { conscription = two_year_draft } } owner = { political_reform = four_year_draft } }
-			random_owned = { limit = { owner = { conscription = one_year_draft } } owner = { political_reform = two_year_draft } }
-			random_owned = { limit = { owner = { conscription = no_draft } } owner = { political_reform = one_year_draft } }
 		}
 		ai_will_do = { factor = 0 }
 	}
