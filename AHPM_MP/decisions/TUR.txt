@@ -790,7 +790,7 @@ political_decisions = {
 
 		effect = {
 			clr_country_flag = sunni_country
-			set_country_flag = yazidi_country
+			
 			religion = yazidi
 			any_pop = { limit = { is_state_religion = no } militancy = 9 }
 		}

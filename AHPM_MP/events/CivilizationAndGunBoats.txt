@@ -4584,20 +4584,20 @@ country_event = {
             limit = { owner = { has_country_flag = protestant_country } }
             FROM = { religion = protestant set_country_flag = protestant_country }
         }
-        random_owned = { limit = { owner = { primary_religion = orthodox } } FROM = { religion = orthodox set_country_flag = orthodox_country } }
-        random_owned = { limit = { owner = { primary_religion = mormon } } FROM = { religion = mormon set_country_flag = mormon_country } }
-        random_owned = { limit = { owner = { primary_religion = coptic } } FROM = { religion = coptic set_country_flag = coptic_country } }
+        random_owned = { limit = { owner = { primary_religion = orthodox } } FROM = { religion = orthodox  } }
+        random_owned = { limit = { owner = { primary_religion = mormon } } FROM = { religion = mormon  } }
+        random_owned = { limit = { owner = { primary_religion = coptic } } FROM = { religion = coptic  } }
         random_owned = { limit = { owner = { primary_religion = sunni } } FROM = { religion = sunni } }
-        random_owned = { limit = { owner = { primary_religion = shiite } } FROM = { religion = shiite set_country_flag = shiite_country } }
-        random_owned = { limit = { owner = { primary_religion = shinto } } FROM = { religion = shinto set_country_flag = shinto_country } }
-        random_owned = { limit = { owner = { primary_religion = mahayana } } FROM = { religion = mahayana set_country_flag = mahayana_country } }
+        random_owned = { limit = { owner = { primary_religion = shiite } } FROM = { religion = shiite  } }
+        random_owned = { limit = { owner = { primary_religion = shinto } } FROM = { religion = shinto  } }
+        random_owned = { limit = { owner = { primary_religion = mahayana } } FROM = { religion = mahayana  } }
         random_owned = { limit = { owner = { primary_religion = gelugpa } } FROM = { religion = gelugpa  } }
         random_owned = { limit = { owner = { primary_religion = theravada } } FROM = { religion = theravada  } }
         random_owned = { limit = { owner = { primary_religion = hindu } } FROM = { religion = hindu  } }
         random_owned = { limit = { owner = { primary_religion = sikh } } FROM = { religion = sikh  } }
-        random_owned = { limit = { owner = { primary_religion = jewish } } FROM = { religion = jewish set_country_flag = jewish_country } }
-        random_owned = { limit = { owner = { primary_religion = ibadi } } FROM = { religion = ibadi set_country_flag = ibadi_country } }
-        random_owned = { limit = { owner = { primary_religion = yazidi } } FROM = { religion =  yazidi set_country_flag = yazidi_country } }
+        random_owned = { limit = { owner = { primary_religion = jewish } } FROM = { religion = jewish  } }
+        random_owned = { limit = { owner = { primary_religion = ibadi } } FROM = { religion = ibadi  } }
+        random_owned = { limit = { owner = { primary_religion = yazidi } } FROM = { religion =  yazidi  } }
 
         FROM = { country_event = 90962 }
         ai_chance = {
@@ -4661,7 +4661,7 @@ country_event = {
             limit = { owner = { has_country_flag = change_to_orthodox } }
             owner = {
                 religion = orthodox
-                set_country_flag = orthodox_country
+                
                 clr_country_flag = change_to_orthodox
                 FROM = { relation = { who = THIS value = 150 } diplomatic_influence = { who = THIS value = 100 } }
             }

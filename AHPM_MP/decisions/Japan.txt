@@ -1758,7 +1758,7 @@ political_decisions = {
         effect = {
             any_pop = { limit = { has_pop_religion = mahayana } consciousness = 1 }
             any_pop = { limit = { has_pop_religion = shinto } militancy = -1 }
-            set_country_flag = shinto_country
+            
             clr_country_flag = mahayana_country
             religion = shinto
         }

@@ -437,7 +437,7 @@ political_decisions = {
 		effect = {
 			TCA = {
 				capital = 1102
-				set_country_flag = shiite_country
+				
 				clr_country_flag = sunni_country
 				clr_country_flag = orthodox_country
 				religion = shiite
@@ -478,7 +478,7 @@ political_decisions = {
 		effect = {
 			TCA = {
 				capital = 1090
-				set_country_flag = orthodox_country
+				
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				religion = orthodox
@@ -521,7 +521,7 @@ political_decisions = {
 		effect = {
 			ABK = {
 				clr_country_flag = sunni_country
-				set_country_flag = orthodox_country
+				
 				religion = orthodox
 				any_pop = {
 					limit = { NOT = { has_pop_religion = orthodox } }
