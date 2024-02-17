@@ -963,7 +963,8 @@ political_decisions = {
 		picture = vassal_payment
 		alert = no
 		potential = {
-			has_country_flag = government_decisions_on
+			test = is_goverment_decision
+			ai = no
 			any_neighbor_country = {
 				vassal_of = THIS
 				NOT = { has_country_flag = exempt_from_vassal_contribution }

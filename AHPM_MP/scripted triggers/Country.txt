@@ -48,7 +48,7 @@ is_monarchy_goverment = {
 is_goverment_decision = {
 	main_parameter = nation
 	OR = {
-		has_country_flag = government_decisions_on
+		has_country_flag = government_decisions
 		ai = yes
 	}
 }
@@ -164,4 +164,9 @@ has_elections = {
 		vote_franschise = universal_weighted_voting
 		vote_franschise = universal_voting
 	}
+}
+
+is_stable_goverment = {
+	main_parameter = nation
+	
 }

@@ -192,10 +192,7 @@ political_decisions = {
 	switch_to_traditional_academic = {
 		alert = no
 		potential = {
-			OR = {
-				has_country_flag = government_decisions_on
-				ai = yes
-			}
+			test = is_goverment_decision
 			NOT = { tech_school = traditional_academic }
 			NOT = { has_country_modifier = interment_camps }
 			OR = {
