@@ -172,7 +172,7 @@ political_decisions = {
 						province_id = 495
 					}
 				}
-			any_pop = { literacy = -0.02 }
+				any_pop = { literacy = -0.02 }
 			}
 
 			any_owned = {
@@ -712,76 +712,6 @@ political_decisions = {
 			}
 		}
 		ai_will_do = { factor = 1 }
-	}
-
-	EGY_1836_setup = {
-		picture = constantinople
-		potential = {
-			tag = EGY
-			always = no
-		}
-
-		allow = {
-			tag = EGY
-		}
-
-		effect = {
-			any_pop = {
-				limit = { OR = { has_pop_culture = turkish has_pop_culture = circassian has_pop_culture = chechen } }
-				literacy = 0.02
-			}
-
-			any_pop = {
-				limit = {
-					NOT = { has_pop_religion = sunni }
-					OR = { has_pop_culture = ashkenazi has_pop_culture = sephardic }
-				}
-			literacy = 0.2
-			}
-
-			any_pop = { limit = { has_pop_religion = catholic NOT = { has_pop_culture = assyrian} } literacy = 0.01 }
-			any_pop = { limit = { OR = { has_pop_culture = greek has_pop_culture = armenian } } literacy = 0.05 }
-		}
-	}
-
-	kurdish_1836_setup = {
-		picture = constantinople
-		potential = {
-			primary_culture = kurdish
-			always = no
-		}
-
-		allow = {
-			primary_culture = kurdish
-		}
-
-		effect = {
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_culture = turkish
-						has_pop_culture = persian
-						has_pop_culture = azerbaijani
-						has_pop_culture = circassian
-						has_pop_culture = chechen
-						has_pop_culture = armenian
-					}
-				}
-				literacy = 0.02
-			}
-
-			any_pop = {
-				limit = {
-					NOT = { has_pop_religion = sunni }
-					OR = { has_pop_culture = ashkenazi has_pop_culture = sephardic }
-				}
-			literacy = 0.2
-			}
-
-			any_pop = { limit = { is_culture_group = arab } literacy = 0.01 }
-			any_pop = { limit = { has_pop_religion = catholic NOT = { has_pop_culture = assyrian } } literacy = 0.01 }
-			any_pop = { limit = { has_pop_culture = greek } literacy = 0.07 }
-		}
 	}
 
 	persia_1836_setup = {
@@ -1807,20 +1737,6 @@ political_decisions = {
 			}
 			#################Setup SWI######################
 
-			#################1832 War with Colombia######################
-			ECU = { war_exhaustion = 50 any_pop = { militancy = 3 } }
-			#################1832 War with Colombia######################
-
-			#################Isolationist Uncivs Setup######################
-			any_country = {
-				limit = {
-					has_country_modifier = lacks_writing_system
-					exists = yes
-				}
-				add_country_modifier = { name = lacks_writing_system duration = -1 }
-			}
-			#################Isolationist Uncivs Setup######################
-
 			#################Uncivs  Pops Setup######################
 			ZUL = { add_country_modifier = { name = assegai duration = -1 } }
 			NEJ = { add_country_modifier = { name = wahhabism_in_nejd duration = -1 } }
@@ -1953,32 +1869,11 @@ political_decisions = {
 		}
 	}
 
-	LEB_1836_setup = {
-		picture = constantinople
-		potential = {
-			tag = EGY
-			always = no
-		}
-
-		allow = {
-			tag = EGY
-		}
-
+	setup_lacks_writing = {
+		potential = { always = no }
+		allow = { always = no }
 		effect = {
-			913 = { #Beirut
-				any_pop = {
-					limit = {
-						NOT = { has_pop_culture = armenian }
-						OR = {
-							has_pop_religion = catholic
-							has_pop_religion = orthodox
-						}
-					}
-					literacy = 0.15
-				}
-			}
-			912 = { any_pop = { limit = { has_pop_religion = shiite } militancy = 5 } } #Baalbeck
-			915 = { any_pop = { limit = { has_pop_religion = shiite } militancy = 5 } } #Sidon
+			add_country_modifier = lacks_writing_system
 		}
 	}
 }

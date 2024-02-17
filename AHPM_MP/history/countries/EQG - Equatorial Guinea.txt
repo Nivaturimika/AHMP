@@ -50,7 +50,7 @@ upper_house = {
 }
 
 schools = developing_tech_school
-set_country_flag = lacking_writing_system
+decision = setup_lacks_writing
 
 # Technologies
 

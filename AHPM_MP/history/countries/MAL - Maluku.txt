@@ -47,4 +47,4 @@ upper_house = {
 }
 
 
-set_country_flag = lacking_writing_system
+decision = setup_lacks_writing

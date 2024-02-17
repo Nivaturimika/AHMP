@@ -36,7 +36,7 @@ border_policy = open_borders
 
 set_country_flag = animist_country
 
-set_country_flag = lacking_writing_system
+decision = setup_lacks_writing
 
 ruling_party = SHA_conservative
 upper_house = {
