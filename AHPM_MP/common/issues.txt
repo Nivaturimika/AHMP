@@ -439,7 +439,6 @@ political_reforms = {
 			literacy_con_impact = -0.1
 			administrative_multiplier = 6
 			allow = {
-				NOT = { press_rights = free_press }
 				test = is_stable_goverment
 			}
 		}
@@ -454,14 +453,17 @@ political_reforms = {
 		}
 	}
 
-		debt_law = {
+	debt_law = {
 		next_step_only = yes
 		serfdom = {
 			education_efficiency_modifier = -0.15
 			poor_savings_modifier = -0.5
 			global_immigrant_attract = -0.1
 			tax_efficiency = 0.05
-			allow = { test = is_stable_goverment }
+			allow = {
+				test = is_stable_goverment
+				has_country_flag != serfdom_not_abolished
+			}
 		}
 		peonage = {
 			education_efficiency_modifier = -0.03
@@ -472,14 +474,12 @@ political_reforms = {
 			poor_savings_modifier = -0.25
 			allow = {
 				test = is_stable_goverment
-				NOT = { has_country_flag = serfdom_not_abolished }
+				has_country_flag != serfdom_not_abolished
 			}
 		}
-
 		debtors_prisons = {
 			allow = { test = is_stable_goverment }
 		}
-
 		bankruptcy = {
 			administrative_efficiency_modifier = 0.05
 			tariff_efficiency_modifier = 0.05
