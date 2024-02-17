@@ -48,7 +48,6 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
-set_country_flag = unreleasable_country
 
 # Technologies
 post_napoleonic_thought = 1

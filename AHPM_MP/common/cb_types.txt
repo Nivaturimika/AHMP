@@ -1196,7 +1196,6 @@ unification_release_puppet_cb = {
 	allowed_countries = {
 		is_our_vassal = FROM
 		FROM = { is_culture_group = THIS is_substate = no }
-		FROM = { NOT = { has_country_flag = unreleasable_country } }
 	}
 
 	po_release_puppet = yes
@@ -1354,12 +1353,7 @@ free_peoples = {
 	# FROM - country scope is possible match?
 	# war target country of goal is scope
 	allowed_countries = {
-		FROM = {
-			OR = {
-				NOT = { has_country_flag = unreleasable_country }
-				exists = yes
-			}
-		}
+		FROM = { exists = yes }
 		NOT = {
 			tag = FROM
 			FROM = { tag = THIS }
@@ -1530,13 +1524,7 @@ liberate_country = {
 	# FROM - country scope is possible match?
 	# war target country of goal is scope
 	allowed_countries = {
-		FROM = {
-			OR = {
-				NOT = { has_country_flag = unreleasable_country }
-				exists = yes
-			}
-		}
-
+		FROM = { exists = yes }
 		OR = {
 			is_releasable_vassal = FROM
 			FROM = { exists = yes }
@@ -2149,10 +2137,7 @@ release_puppet = {
 	# war target country of goal is scope
 	allowed_countries = {
 		is_our_vassal = FROM
-		FROM = {
-			is_substate = no
-			NOT = { has_country_flag = unreleasable_country }
-		}
+		FROM = { is_substate = no }
 	}
 
 	po_release_puppet = yes
@@ -7609,8 +7594,6 @@ steal_puppet = {
 				exists = yes
 				vassal_of = FROM
 				is_substate = no
-				NOT = { total_pops = 5000000 }
-				NOT = { has_country_flag = unreleasable_country }
 				OR = {
 					AND = {
 						THIS = { total_amount_of_ships = 5 }

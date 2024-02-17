@@ -716,7 +716,6 @@ province_event = {
     option = {
         name = "EVT1010023OPTA"
         owner = {
-            set_country_flag = unthinkable_stupidity
             set_country_flag = easter_rising
             any_owned = {
                 limit = {
@@ -791,7 +790,7 @@ province_event = {
 
 country_event = {
     id = 1010024
-    title = "EVTNAME1010024" #The Sinn Féin Demand
+    title = "EVTNAME1010024" #The Sinn Fï¿½in Demand
     desc = "EVTDESC1010024"
     news = yes
     news_desc_long = "EVTDESC1010024_NEWS_LONG"
@@ -819,10 +818,6 @@ country_event = {
 
     mean_time_to_happen = {
         months = 120
-        modifier = {
-            factor = 0.1
-            has_country_flag = unthinkable_stupidity
-        }
         modifier = {
             factor = 0.5
             has_country_flag = no_help_for_the_irish

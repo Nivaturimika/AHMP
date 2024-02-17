@@ -69,7 +69,6 @@ country_event = {
                 25 = { add_country_modifier = { name = preparing_for_war duration = 130 } }
             }
             any_owned = { limit = { port = yes } add_province_modifier = { name = war_economy_ships duration = 210 } }
-            set_country_flag = unreleasable_country
             set_country_flag = exempt_from_vassal_contribution
         }
         diplomatic_influence = { who = CSA value = 400 }
@@ -120,7 +119,6 @@ country_event = {
         relation = { who = CSA value = -400 }
         CSA = {
             set_country_flag = the_slavery_debate
-            clr_country_flag = unreleasable_country
             neutrality = yes
         }
         any_pop = {

@@ -35,11 +35,8 @@ political_decisions = {
 				}
 			}
 		}
-
-		allow = { war = no }
-
+		allow = { }
 		effect = {
-
 			random_owned = {
 				limit = { owner = { slavery = no_slavery } }
 				any_country = {
