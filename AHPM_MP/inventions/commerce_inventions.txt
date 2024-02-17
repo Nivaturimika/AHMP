@@ -1681,9 +1681,9 @@ modern_winemaking = {
         guild_based_production = 1
         OR = {
             NOT = {
-                has_country_flag = sunni_country
-                has_country_flag = shiite_country
-                has_country_flag = ibadi_country
+                primary_religion = sunni
+                primary_religion = shiite
+                primary_religion = ibadi
             }
             has_country_flag = secularized_muslim_society
             has_country_flag = post_colonial_country

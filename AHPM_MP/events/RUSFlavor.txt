@@ -559,7 +559,7 @@ country_event = {
 		random_owned = { limit = { owner = { primary_religion = shiite } } LSK = { religion = shiite set_country_flag = shiite_country } }
 		random_owned = { limit = { owner = { primary_religion = shinto } } LSK = { religion = shinto set_country_flag = shinto_country } }
 		random_owned = { limit = { owner = { primary_religion = mahayana } } LSK = { religion = mahayana set_country_flag = mahayana_country } }
-		random_owned = { limit = { owner = { primary_religion = gelugpa } } LSK = { religion = gelugpa set_country_flag = gelugpa_country } }
+		random_owned = { limit = { owner = { primary_religion = gelugpa } } LSK = { religion = gelugpa  } }
 		random_owned = { limit = { owner = { primary_religion = theravada } } LSK = { religion = theravada  } }
 		random_owned = { limit = { owner = { primary_religion = hindu } } LSK = { religion = hindu  } }
 		random_owned = { limit = { owner = { primary_religion = sikh } } LSK = { religion = sikh  } }
