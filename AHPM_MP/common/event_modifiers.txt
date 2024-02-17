@@ -1139,7 +1139,7 @@ female_suffrage = {
     middle_vote = 0.02
     rich_vote = -0.01
     core_pop_militancy_modifier = -0.02
-    global_immigrant_attract = 0.05
+    global_immigrant_attract = 0.095
     icon = 7
 }
 

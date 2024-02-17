@@ -161,16 +161,7 @@ is_same_ruling_party_ideology = {
 
 has_elections = {
 	main_parameter = nation
-	OR = {
-		government = prussian_constitutionalism
-		government = hms_government
-		government = democracy
-	}
-	OR = {
-		vote_franschise = wealth_voting
-		vote_franschise = universal_weighted_voting
-		vote_franschise = universal_voting
-	}
+	vote_franschise != none_voting
 }
 
 is_stable_goverment = {

@@ -203,8 +203,7 @@ political_reforms = {
 		yes_slavery = {
 			rules = { slavery_allowed = yes }
 			allow = {
-				NOT = { has_country_flag = slave_revolution }
-				test = is_stable_goverment
+				has_country_flag != slave_revolution
 				test = is_stable_goverment
 			}
 		}
@@ -212,7 +211,7 @@ political_reforms = {
 		freedom_of_womb = {
 			rules = { slavery_allowed = yes }
 			allow = {
-				NOT = { has_country_flag = slave_revolution }
+				has_country_flag != slave_revolution
 				test = is_stable_goverment
 			}
 		}
@@ -231,8 +230,12 @@ political_reforms = {
 			middle_vote = 0
 			poor_vote = 0
 			allow = {
-				NOT = { election = yes }
+				election != yes
 				test = is_stable_goverment
+			}
+			on_execute = {
+				remove_country_modifier = female_suffrage
+				country_event = 60150
 			}
 		}
 		landed_voting = {
@@ -253,7 +256,6 @@ political_reforms = {
 			rich_vote = 1
 			middle_vote = 1
 			poor_vote = 0
-
 			global_immigrant_attract = 0.08
 		}
 		universal_weighted_voting = {
