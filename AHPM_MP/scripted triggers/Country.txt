@@ -45,6 +45,14 @@ is_monarchy_goverment = {
 	}
 }
 
+is_constitutional_goverment = {
+	main_parameter = nation
+	OR = {
+		government = prussian_constitutionalism
+		government = hms_government
+	}
+}
+
 is_goverment_decision = {
 	main_parameter = nation
 	OR = {
@@ -121,7 +129,6 @@ is_same_ruling_party_ideology = {
 is_same_ruling_party_ideology = {
 	main_parameter = pop
 	this_parameter = nation
-
 	OR = {
 		THIS = { ruling_party_ideology = reactionary }
 		pop_majority_ideology = reactionary
@@ -168,5 +175,27 @@ has_elections = {
 
 is_stable_goverment = {
 	main_parameter = nation
-	
+}
+
+is_minority_culture = {
+	main_parameter = pop
+	is_primary_culture = no
+	is_accepted_culture = no
+}
+
+has_citizen_rights = {
+	main_parameter = pop
+	OR = {
+		AND = {
+			owner = { citizens_rights = primary_culture_only }
+			is_primary_culture = yes
+		}
+		AND = {
+			owner = { citizens_rights = culture_voting_only }
+			test != is_minority_culture
+		}
+		AND = {
+			owner = { citizens_rights = all_voting_pops }
+		}
+	}
 }
