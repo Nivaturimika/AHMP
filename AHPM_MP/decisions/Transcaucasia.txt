@@ -384,14 +384,14 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			TCA = {
-				NOT = { primary_religion = sunni }
+				NOT = { religion = sunni }
 				owns = 1102
 				exists = yes
 			}
 				is_our_vassal = TCA
 				OR = {
-					primary_religion = sunni
-					primary_religion = ibadi
+					religion = sunni
+					religion = ibadi
 				}
 			}
 
@@ -422,12 +422,12 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			TCA = {
-				NOT = { primary_religion = shiite }
+				NOT = { religion = shiite }
 				owns = 1102
 				exists = yes
 			}
 			is_our_vassal = TCA
-			primary_religion = shiite
+			religion = shiite
 		}
 
 		allow = {
@@ -457,7 +457,7 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			TCA = {
-				NOT = { primary_religion = orthodox }
+				NOT = { religion = orthodox }
 				owns = 1090
 				exists = yes
 			}
@@ -465,9 +465,9 @@ political_decisions = {
 			OR = {
 				has_country_flag = catholic_country
 				has_country_flag = protestant_country
-				primary_religion = mormon
-				primary_religion = orthodox
-				primary_religion = coptic
+				religion = mormon
+				religion = orthodox
+				religion = coptic
 			}
 		}
 
@@ -498,7 +498,7 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			ABK = {
-				NOT = { primary_religion = orthodox }
+				NOT = { religion = orthodox }
 				exists = yes
 			}
 			OR = {
@@ -508,9 +508,9 @@ political_decisions = {
 			OR = {
 				has_country_flag = catholic_country
 				has_country_flag = protestant_country
-				primary_religion = mormon
-				primary_religion = orthodox
-				primary_religion = coptic
+				religion = mormon
+				religion = orthodox
+				religion = coptic
 			}
 		}
 
@@ -536,14 +536,14 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			ABK = {
-				NOT = { primary_religion = sunni }
+				NOT = { religion = sunni }
 				exists = yes
 			}
 			OR = {
 				is_our_vassal = TCA
 				ABK = { in_sphere = THIS }
 			}
-			primary_religion = sunni
+			religion = sunni
 		}
 
 		allow = {

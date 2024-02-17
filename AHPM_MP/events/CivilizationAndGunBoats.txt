@@ -4523,7 +4523,7 @@ country_event = {
                 OR = {
                     AND = {
                         is_greater_power = yes
-                        primary_religion = orthodox
+                        religion = orthodox
                     }
                     tag = RUS
                 }
@@ -4532,7 +4532,7 @@ country_event = {
         }
         ai_chance = {
             factor = 25
-            modifier = { factor = 100 any_neighbor_country = { is_greater_power = yes primary_religion = orthodox } }
+            modifier = { factor = 100 any_neighbor_country = { is_greater_power = yes religion = orthodox } }
         }
     }
 
@@ -4545,7 +4545,7 @@ country_event = {
                 OR = {
                     AND = {
                         is_greater_power = yes
-                        primary_religion = sunni
+                        religion = sunni
                     }
                     tag = TUR
                 }
@@ -4554,7 +4554,7 @@ country_event = {
         }
         ai_chance = {
             factor = 25
-            modifier = { factor = 100 any_neighbor_country = { is_greater_power = yes primary_religion = sunni } }
+            modifier = { factor = 100 any_neighbor_country = { is_greater_power = yes religion = sunni } }
         }
     }
 
@@ -4584,20 +4584,20 @@ country_event = {
             limit = { owner = { has_country_flag = protestant_country } }
             FROM = { religion = protestant set_country_flag = protestant_country }
         }
-        random_owned = { limit = { owner = { primary_religion = orthodox } } FROM = { religion = orthodox  } }
-        random_owned = { limit = { owner = { primary_religion = mormon } } FROM = { religion = mormon  } }
-        random_owned = { limit = { owner = { primary_religion = coptic } } FROM = { religion = coptic  } }
-        random_owned = { limit = { owner = { primary_religion = sunni } } FROM = { religion = sunni } }
-        random_owned = { limit = { owner = { primary_religion = shiite } } FROM = { religion = shiite  } }
-        random_owned = { limit = { owner = { primary_religion = shinto } } FROM = { religion = shinto  } }
-        random_owned = { limit = { owner = { primary_religion = mahayana } } FROM = { religion = mahayana  } }
-        random_owned = { limit = { owner = { primary_religion = gelugpa } } FROM = { religion = gelugpa  } }
-        random_owned = { limit = { owner = { primary_religion = theravada } } FROM = { religion = theravada  } }
-        random_owned = { limit = { owner = { primary_religion = hindu } } FROM = { religion = hindu  } }
-        random_owned = { limit = { owner = { primary_religion = sikh } } FROM = { religion = sikh  } }
-        random_owned = { limit = { owner = { primary_religion = jewish } } FROM = { religion = jewish  } }
-        random_owned = { limit = { owner = { primary_religion = ibadi } } FROM = { religion = ibadi  } }
-        random_owned = { limit = { owner = { primary_religion = yazidi } } FROM = { religion =  yazidi  } }
+        random_owned = { limit = { owner = { religion = orthodox } } FROM = { religion = orthodox  } }
+        random_owned = { limit = { owner = { religion = mormon } } FROM = { religion = mormon  } }
+        random_owned = { limit = { owner = { religion = coptic } } FROM = { religion = coptic  } }
+        random_owned = { limit = { owner = { religion = sunni } } FROM = { religion = sunni } }
+        random_owned = { limit = { owner = { religion = shiite } } FROM = { religion = shiite  } }
+        random_owned = { limit = { owner = { religion = shinto } } FROM = { religion = shinto  } }
+        random_owned = { limit = { owner = { religion = mahayana } } FROM = { religion = mahayana  } }
+        random_owned = { limit = { owner = { religion = gelugpa } } FROM = { religion = gelugpa  } }
+        random_owned = { limit = { owner = { religion = theravada } } FROM = { religion = theravada  } }
+        random_owned = { limit = { owner = { religion = hindu } } FROM = { religion = hindu  } }
+        random_owned = { limit = { owner = { religion = sikh } } FROM = { religion = sikh  } }
+        random_owned = { limit = { owner = { religion = jewish } } FROM = { religion = jewish  } }
+        random_owned = { limit = { owner = { religion = ibadi } } FROM = { religion = ibadi  } }
+        random_owned = { limit = { owner = { religion = yazidi } } FROM = { religion =  yazidi  } }
 
         FROM = { country_event = 90962 }
         ai_chance = {

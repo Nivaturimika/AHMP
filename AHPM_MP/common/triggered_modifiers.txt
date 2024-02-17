@@ -121,9 +121,9 @@ islamic_law_triggered = {
 		exists = yes
 		civilized = yes
 		OR = {
-			primary_religion = sunni
-			primary_religion = shiite
-			primary_religion = ibadi
+			religion = sunni
+			religion = shiite
+			religion = ibadi
 		}
 		NOT = { has_country_flag = secularized_muslim_society }
 		NOT = { has_country_flag = post_colonial_country }

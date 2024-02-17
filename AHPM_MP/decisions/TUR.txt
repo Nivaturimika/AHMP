@@ -623,7 +623,7 @@ political_decisions = {
 		potential = {
 			tag = BHT
 			NOT = { has_country_flag = yazidi_kurdistan }
-			primary_religion = yazidi
+			religion = yazidi
 		}
 
 		allow = {
@@ -647,7 +647,7 @@ political_decisions = {
 		picture = map_kurdistan
 		potential = {
 			NOT = { tag = KDS }
-			NOT = { primary_religion = yazidi }
+			NOT = { religion = yazidi }
 			NOT = { has_country_flag = became_kurdistan }
 			KDS = { exists = no }
 			primary_culture = kurdish
@@ -780,7 +780,7 @@ political_decisions = {
 		picture = yazidi_symbol
 		potential = {
 			tag = BHT
-			NOT = { primary_religion = yazidi }
+			NOT = { religion = yazidi }
 		}
 
 		allow = {

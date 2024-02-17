@@ -1846,9 +1846,9 @@ political_decisions = {
 			any_country = {
 				limit = {
 					OR = {
-						primary_religion = sunni
-						primary_religion = shiite
-						primary_religion = ibadi
+						religion = sunni
+						religion = shiite
+						religion = ibadi
 					}
 				}
 				set_country_flag = umar_pact
@@ -1857,9 +1857,9 @@ political_decisions = {
 				limit = {
 					exists = yes
 					OR = {
-						primary_religion = sunni
-						primary_religion = shiite
-						primary_religion = ibadi
+						religion = sunni
+						religion = shiite
+						religion = ibadi
 					}
 					any_owned_province = {
 						any_pop = {

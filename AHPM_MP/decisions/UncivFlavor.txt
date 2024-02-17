@@ -620,14 +620,14 @@ political_decisions = {
 			NOT = { primary_culture = japanese }
 			NOT = { tag = HYD }
 			NOT = { tag = MUG }
-			NOT = { primary_religion = sunni }
-			NOT = { primary_religion = shiite }
-			NOT = { primary_religion = ibadi }
-			NOT = { primary_religion = jewish }
+			NOT = { religion = sunni }
+			NOT = { religion = shiite }
+			NOT = { religion = ibadi }
+			NOT = { religion = jewish }
 			NOT = { has_country_flag = catholic_country }
-			NOT = { primary_religion = orthodox }
+			NOT = { religion = orthodox }
 			NOT = { has_country_flag = protestant_country }
-			NOT = { primary_religion = coptic }
+			NOT = { religion = coptic }
 			NOT = { has_country_modifier = missionary_activity }
 			civilized = no
 			OR = {

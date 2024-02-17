@@ -1186,7 +1186,7 @@ country_event = {
 
 		relation = { who = CYR value = -300 }
 		any_greater_power = {
-			limit = { OR = { NOT = { primary_religion = sunni } tag = THIS } }
+			limit = { OR = { NOT = { religion = sunni } tag = THIS } }
 			relation = { who = CYR value = -400 }
 			diplomatic_influence = { who = CYR value = -400 }
 		}
@@ -1210,7 +1210,7 @@ country_event = {
 		diplomatic_influence = { who = CYR value = -400 }
 
 		any_greater_power = {
-			limit = { OR = { NOT = { primary_religion = sunni } tag = TUR } }
+			limit = { OR = { NOT = { religion = sunni } tag = TUR } }
 			relation = { who = CYR value = -400 }
 			diplomatic_influence = { who = CYR value = -400 }
 		}

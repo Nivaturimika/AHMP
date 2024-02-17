@@ -379,7 +379,7 @@ country_event = {
         civilized = yes
         owns = 1405
         ATJ = { exists = no }
-        NOT = { primary_religion = sunni }
+        NOT = { religion = sunni }
         year = 1890
     }
 
@@ -415,7 +415,7 @@ province_event = {
     trigger = {
         OR = {
             owned_by = ATJ
-            owner = { primary_religion = sunni }
+            owner = { religion = sunni }
         }
         is_core = ATJ
         has_global_flag = aceh_jihad

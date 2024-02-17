@@ -552,20 +552,20 @@ country_event = {
 			limit = { owner = { has_country_flag = protestant_country } }
 			LSK = { religion = protestant set_country_flag = protestant_country }
 		}
-		random_owned = { limit = { owner = { primary_religion = orthodox } } LSK = { religion = orthodox  } }
-		random_owned = { limit = { owner = { primary_religion = mormon } } LSK = { religion = mormon  } }
-		random_owned = { limit = { owner = { primary_religion = coptic } } LSK = { religion = coptic  } }
-		random_owned = { limit = { owner = { primary_religion = sunni } } LSK = { religion = sunni } }
-		random_owned = { limit = { owner = { primary_religion = shiite } } LSK = { religion = shiite  } }
-		random_owned = { limit = { owner = { primary_religion = shinto } } LSK = { religion = shinto  } }
-		random_owned = { limit = { owner = { primary_religion = mahayana } } LSK = { religion = mahayana  } }
-		random_owned = { limit = { owner = { primary_religion = gelugpa } } LSK = { religion = gelugpa  } }
-		random_owned = { limit = { owner = { primary_religion = theravada } } LSK = { religion = theravada  } }
-		random_owned = { limit = { owner = { primary_religion = hindu } } LSK = { religion = hindu  } }
-		random_owned = { limit = { owner = { primary_religion = sikh } } LSK = { religion = sikh  } }
-		random_owned = { limit = { owner = { primary_religion = jewish } } LSK = { religion = jewish  } }
-		random_owned = { limit = { owner = { primary_religion = ibadi } } LSK = { religion = ibadi  } }
-		random_owned = { limit = { owner = { primary_religion = yazidi } } LSK = { religion = yazidi  } }
+		random_owned = { limit = { owner = { religion = orthodox } } LSK = { religion = orthodox  } }
+		random_owned = { limit = { owner = { religion = mormon } } LSK = { religion = mormon  } }
+		random_owned = { limit = { owner = { religion = coptic } } LSK = { religion = coptic  } }
+		random_owned = { limit = { owner = { religion = sunni } } LSK = { religion = sunni } }
+		random_owned = { limit = { owner = { religion = shiite } } LSK = { religion = shiite  } }
+		random_owned = { limit = { owner = { religion = shinto } } LSK = { religion = shinto  } }
+		random_owned = { limit = { owner = { religion = mahayana } } LSK = { religion = mahayana  } }
+		random_owned = { limit = { owner = { religion = gelugpa } } LSK = { religion = gelugpa  } }
+		random_owned = { limit = { owner = { religion = theravada } } LSK = { religion = theravada  } }
+		random_owned = { limit = { owner = { religion = hindu } } LSK = { religion = hindu  } }
+		random_owned = { limit = { owner = { religion = sikh } } LSK = { religion = sikh  } }
+		random_owned = { limit = { owner = { religion = jewish } } LSK = { religion = jewish  } }
+		random_owned = { limit = { owner = { religion = ibadi } } LSK = { religion = ibadi  } }
+		random_owned = { limit = { owner = { religion = yazidi } } LSK = { religion = yazidi  } }
 	}
 }
 

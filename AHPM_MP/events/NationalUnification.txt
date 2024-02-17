@@ -1929,7 +1929,7 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0.05
-				primary_religion = sunni
+				religion = sunni
 			}
 			modifier = {
 				factor = 0.02
@@ -1947,7 +1947,7 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 1.25
-				primary_religion = sunni
+				religion = sunni
 			}
 			modifier = {
 				factor = 1.25
