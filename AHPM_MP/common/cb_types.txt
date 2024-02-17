@@ -346,7 +346,7 @@ great_war_penalty_cb = {
 
 	can_use = {
 		test = is_warable_country
-	    is_disarmed = no
+		is_disarmed = no
 	}
 
 	on_add = {
