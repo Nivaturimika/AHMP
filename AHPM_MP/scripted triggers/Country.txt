@@ -185,17 +185,16 @@ is_minority_culture = {
 
 has_citizen_rights = {
 	main_parameter = pop
+	this_parameter = nation
 	OR = {
 		AND = {
-			owner = { citizens_rights = primary_culture_only }
+			THIS = { citizens_rights = primary_culture_only }
 			is_primary_culture = yes
 		}
 		AND = {
-			owner = { citizens_rights = culture_voting_only }
+			THIS = { citizens_rights = culture_voting_only }
 			test != is_minority_culture
 		}
-		AND = {
-			owner = { citizens_rights = all_voting_pops }
-		}
+		THIS = { citizens_rights = all_voting_pops }
 	}
 }
