@@ -46,7 +46,7 @@ upper_house = {
     socialist = 0
     communist = 0
 }
-decision = lacks_writing_system
+decision = setup_lacks_writing
 
 # Starting Consciousness
 consciousness = 0
