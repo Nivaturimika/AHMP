@@ -1814,7 +1814,7 @@ political_decisions = {
 			#################Isolationist Uncivs Setup######################
 			any_country = {
 				limit = {
-					has_country_flag = lacking_writing_system
+					has_country_modifier = lacks_writing_system
 					exists = yes
 				}
 				add_country_modifier = { name = lacks_writing_system duration = -1 }

@@ -503,7 +503,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				has_country_modifier = lacks_writing_system
-				has_country_flag = lacking_writing_system
+				has_country_modifier = lacks_writing_system
 			}
 		}
 
@@ -672,7 +672,7 @@ political_decisions = {
 					owner = {
 						part_of_sphere = no
 						OR = {
-							NOT = { has_country_flag = lacking_writing_system }
+							NOT = { has_country_modifier = lacks_writing_system }
 							has_country_flag = changed_religion
 						}
 					}
@@ -756,7 +756,7 @@ political_decisions = {
 			civilized = no
 			civilization_progress = 0.2
 			NOT = {
-				has_country_flag = lacking_writing_system
+				has_country_modifier = lacks_writing_system
 				any_owned_province = { has_building = naval_base }
 			}
 			flintlock_rifles = 1

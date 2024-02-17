@@ -475,54 +475,54 @@ soldiers = {
 			modifier = {
 				factor = 2
 				education_spending = 0.2
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.3
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.4
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.5
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.6
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.7
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.8
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.9
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 			modifier = {
 				factor = 2
 				education_spending = 0.99
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 			}
 		}
 		group = {
 			modifier = {
 				factor = 6
 				education_spending = 0.74
-				country = { NOT = { has_country_flag = lacking_writing_system } }
+				country = { NOT = { has_country_modifier = lacks_writing_system } }
 				country = { ai = yes }
 			}
 		}
