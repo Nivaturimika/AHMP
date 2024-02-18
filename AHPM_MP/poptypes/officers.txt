@@ -75,10 +75,10 @@ country_migration_target = {
 			}
 		}
 	}
-	modifier = { factor = 5.5 unemployment <= 0.25 }
-	modifier = { factor = 5.25 is_primary_culture = THIS }
-	modifier = { factor = 2.25 is_accepted_culture = THIS }
-	modifier = { factor = 7.5 THIS = { agree_with_ruling_party >= 0.75 } }
+	modifier = { factor = 3.5 unemployment <= 0.25 }
+	modifier = { factor = 2.25 is_primary_culture = THIS }
+	modifier = { factor = 1.25 is_accepted_culture = THIS }
+	modifier = { factor = 4.5 THIS = { agree_with_ruling_party >= 0.75 } }
 	modifier = { factor = 3.5 THIS = { agree_with_ruling_party >= 0.5 } }
 }
 migration_target = {
@@ -88,10 +88,10 @@ migration_target = {
 		is_overseas = yes
 		country = { border_policy = closed_borders }
 	}
-	modifier = { factor = 3.5 has_pop_culture = THIS }
-	modifier = { factor = 3.5 has_pop_religion = THIS }
-	modifier = { factor = 9.5 is_capital = yes }
-	modifier = { factor = 7.5 is_coastal = yes }
+	modifier = { factor = 1.5 has_pop_culture = THIS }
+	modifier = { factor = 1.5 has_pop_religion = THIS }
+	modifier = { factor = 4.5 is_capital = yes }
+	modifier = { factor = 3.5 is_coastal = yes }
 }
 
 promote_to = {
