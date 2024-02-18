@@ -4027,13 +4027,11 @@ country_event = {
 			remove_province_modifier = boxer_agitation
 		}
 
-		random_owned = {
-			limit = { owner = { tag = DAI } }
-			owner = { country_event = { days = 2 id = 199072 } }
+		DAI = {
+			country_event = { days = 2 id = 199072 }
 		}
-		random_owned = {
-			limit = { owner = { tag = CAM } }
-			owner = { country_event = { days = 2 id = 199071 } }
+		CAM = {
+			country_event = { days = 2 id = 199071 }
 		}
 
 		#Non-cores should flip to colonies

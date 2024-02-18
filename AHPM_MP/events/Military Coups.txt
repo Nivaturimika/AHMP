@@ -6,19 +6,12 @@
 
 country_event = {
 	id = 152009872
-	title = "EVTNAME152009872" #$COUNTRY_ADJ$ Coup?
+	title = "EVTNAME152009872"
 	desc = "EVTDESC152009872"
 	picture = "Military_reform"
-
 	trigger = {
 		civilized = yes
-		war = no
-		is_disarmed = no
-		total_amount_of_divisions = 1
-		OR = {
-			government = democracy
-			government = hms_government
-		}
+		total_amount_of_divisions <= 1
 		NOT = {
 			has_country_modifier = military_strife
 			has_country_modifier = coup_risk
@@ -31,7 +24,7 @@ country_event = {
 			}
 			type = officers
 			location = { is_core = THIS }
-			militancy = 7
+			militancy >= 7
 		}
 	}
 

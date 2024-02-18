@@ -125,10 +125,6 @@ political_decisions = {
 				}
 				clr_country_flag = surrender_sudan_on_lose
 			}
-			any_neighbor_country = {
-				limit = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
-				set_country_flag = existing_country
-			}
 		}
 		ai_will_do = { factor = 1 }
 	}
