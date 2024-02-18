@@ -1,7 +1,7 @@
 graphical_culture = Generic
 
 party = {
-    name = "DOM_liberal"
+    name = "default_liberal"
     start_date = 1830.1.1
     end_date = 2000.1.1
 
@@ -16,7 +16,7 @@ party = {
 }
 
 party = {
-    name = "DOM_conservative"
+    name = "default_conservative"
     start_date = 1830.1.1
     end_date = 1848.1.1
 
@@ -31,7 +31,7 @@ party = {
 }
 
 party = {
-    name = "DOM_conservative_2"
+    name = "default_conservative_2"
     start_date = 1830.1.1
     end_date = 1858.1.1
 
@@ -46,7 +46,7 @@ party = {
 }
 
 party = {
-    name = "DOM_liberal_2"
+    name = "default_liberal_2"
     start_date = 1844.1.1
     end_date = 1899.1.1
 
@@ -61,7 +61,7 @@ party = {
 }
 
 party = {
-    name = "DOM_conservative_3"
+    name = "default_conservative_3"
     start_date = 1849.1.1
     end_date = 1899.1.1
 
@@ -76,7 +76,7 @@ party = {
 }
 
 party = {
-    name = "DOM_liberal_3"
+    name = "default_liberal_3"
     start_date = 1861.1.1
     end_date = 1865.1.1
 
@@ -91,7 +91,7 @@ party = {
 }
 
 party = {
-    name = "DOM_liberal_4"
+    name = "default_liberal_4"
     start_date = 1874.1.1
     end_date = 1899.1.1
 
@@ -106,7 +106,7 @@ party = {
 }
 
 party = {
-    name = "DOM_liberal_5"
+    name = "default_liberal_5"
     start_date = 1899.1.1
     end_date = 2000.1.1
 
@@ -121,7 +121,7 @@ party = {
 }
 
 party = {
-    name = "DOM_conservative_4"
+    name = "default_conservative_4"
     start_date = 1899.1.1
     end_date = 2000.1.1
 
@@ -136,7 +136,7 @@ party = {
 }
 
 party = {
-    name = "DOM_reactionary"
+    name = "default_reactionary"
     start_date = 1820.1.1
     end_date = 2000.1.1
 
@@ -151,7 +151,7 @@ party = {
 }
 
 party = {
-    name = "DOM_anarcho_liberal"
+    name = "default_anarcho_liberal"
     start_date = 1830.1.1
     end_date = 2000.1.1
 
@@ -166,7 +166,7 @@ party = {
 }
 
 party = {
-    name = "DOM_socialist"
+    name = "default_socialist"
     start_date = 1848.1.1
     end_date = 2000.1.1
 
@@ -181,7 +181,7 @@ party = {
 }
 
 party = {
-    name = "DOM_communist"
+    name = "default_communist"
     start_date = 1848.1.1
     end_date = 2000.1.1
 
@@ -196,7 +196,7 @@ party = {
 }
 
 party = {
-    name = "DOM_fascist"
+    name = "default_fascist"
     start_date = 1900.1.1
     end_date = 2000.1.1
 

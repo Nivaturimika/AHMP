@@ -2108,7 +2108,7 @@ country_event = {
 	trigger = {
 		civilized = no
 		has_country_modifier = western_influences
-		NOT = { has_country_modifier = european_military_mission }
+		has_country_modifier != european_military_mission
 		any_owned_province = {
 			NOT = { has_province_modifier = boxer_presence }
 		}
@@ -2116,34 +2116,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 120
-		modifier = {
-			factor = 0.9
-			average_consciousness = 3
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.9
-			prestige = 30
-		}
 	}
 
 	option = {
@@ -2156,45 +2128,15 @@ country_event = {
 				value = reactionary
 			}
 		}
-		random_country = {
-			limit = {
-				capital_scope = {
-					continent = europe
-				}
-				OR = {
-					is_greater_power = yes
-					is_secondary_power = yes
-				}
-			}
-			relation = {
-				who = THIS
-				value = 20
-			}
-		}
 		ai_chance = {
-			factor = 80
+			factor = 1
 		}
 	}
 
 	option = {
 		name = "EVTOPTB13130"
-		random_country = {
-			limit = {
-				capital_scope = {
-					continent = europe
-				}
-				OR = {
-					is_greater_power = yes
-					is_secondary_power = yes
-				}
-			}
-			relation = {
-				who = THIS
-				value = -20
-			}
-		}
 		ai_chance = {
-			factor = 20
+			factor = 0
 		}
 	}
 }

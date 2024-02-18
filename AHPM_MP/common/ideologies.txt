@@ -36,11 +36,9 @@ fascist_group = {
 		}
 	}
 }
-
 conservative_group = {
 	reactionary = {
 		color = { 30 30 100 }
-
 		add_political_reform = {
 			base = 0
 		}
@@ -53,21 +51,16 @@ conservative_group = {
 		remove_social_reform = {
 			base = 1
 		}
-
 		add_military_reform = {
 			base = -1
 		}
-
 		add_economic_reform = {
 			base = -1
 		}
 	}
-
 	conservative = {
 		color = { 10 10 250 }
-
 		can_reduce_militancy = yes
-
 		add_political_reform = {
 			base = 0
 			group = {

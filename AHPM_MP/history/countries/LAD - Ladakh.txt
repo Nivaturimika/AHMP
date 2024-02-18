@@ -6,7 +6,7 @@ plurality = 0.0
 nationalvalue = nv_order
 literacy = 0.02
 
-ruling_party = DOM_conservative
+ruling_party = default_conservative
 upper_house = {
     fascist = 0
     liberal = 15

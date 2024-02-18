@@ -362,37 +362,28 @@ acquire_core_state = {
 	sprite_index = 5
 	is_triggered_only = yes
 	months = 12
-
-	construction_speed = 0.8
-
+	construction_speed = 1.8
 	badboy_factor = 0
 	prestige_factor = 0.5
 	peace_cost_factor = 0.7
 	penalty_factor = 1
 	always = yes
-
 	break_truce_prestige_factor = 5
 	break_truce_infamy_factor = 2
 	break_truce_militancy_factor = 2
 	truce_months = 48
-
 	good_relation_prestige_factor = 1
 	good_relation_infamy_factor = 1
 	good_relation_militancy_factor = 1
-
 	can_use = {
 		test = is_warable_country
 		any_owned_province = { is_core = THIS }
 	}
-
 	allowed_states = {
 		any_owned_province = { is_core = THIS }
 	}
-
 	po_demand_state = yes
-
 	war_name = WAR_TAKE_CORE_NAME
-
 	on_add = {
 		move_issue_percentage = {
 			from = jingoism
@@ -400,9 +391,8 @@ acquire_core_state = {
 			value = 0.25
 		}
 	}
-
 	on_po_accepted = {
-		country_event =    2650    # Territorial Loss event
+		country_event = 2650
 	}
 }
 
@@ -413,41 +403,27 @@ acquire_all_cores = {
 	months = 12
 	constructing_cb = no
 	crisis = no
-
 	badboy_factor = 0
 	prestige_factor = 2
 	peace_cost_factor = 0.5
 	penalty_factor = 1
-
 	break_truce_prestige_factor = 5
 	break_truce_infamy_factor = 2
 	break_truce_militancy_factor = 2
 	truce_months = 48
-
 	good_relation_prestige_factor = 1
 	good_relation_infamy_factor = 1
 	good_relation_militancy_factor = 1
-
 	can_use = {
 		test = is_warable_country
 		any_owned_province = { is_core = THIS }
-		any_owned_province = { NOT = { is_core = THIS } }
 	}
-
-	allowed_countries = {
-		FROM = { tag = THIS }
-	}
-
 	allowed_states = {
 		any_owned_province = { is_core = THIS }
-		#NOT = { any_owned_province = { is_capital = yes } }
 	}
-
 	all_allowed_states = yes
 	po_transfer_provinces = yes
-
 	war_name = WAR_ALL_CORES_NAME
-
 	on_add = {
 		move_issue_percentage = {
 			from = jingoism
@@ -455,9 +431,8 @@ acquire_all_cores = {
 			value = 0.25
 		}
 	}
-
 	on_po_accepted = {
-		country_event =    2650    # Territorial Loss event
+		country_event = 2650
 	}
 }
 

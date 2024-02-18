@@ -4690,7 +4690,7 @@ EVTNAME2650;$FROMCOUNTRY_ADJ$ Lands;;;;;;;;;;;;;
 EVTDESC2650;According to our peace treaty with $FROMCOUNTRY$, we must give up lands that rightfully belong to them -- and only the ones that belong to them.;;;;;;;;;;;;;
 EVTNAME2651;The $FROMCOUNTRY_ADJ$ Demand;;;;;;;;;;;;;
 EVTDESC2651;According to our peace treaty with $FROMCOUNTRY$, we must give up lands that rightfully belong to another nation -- but only those lands.;;;;;;;;;;;;;
-EVTNAME2660;Our Lands Returned;;;;;;;;;;;;;
+EVTNAME2660;$COUNTRY_ADJ$ Lands Returned;;;;;;;;;;;;;
 EVTDESC2660;As a result of the treaty with $FROMCOUNTRY$, some of $COUNTRY$'s lands are to be returned. We are, however, only entitled to those lands over which we have a claim. Any others should, by all rights, be returned to $FROMCOUNTRY$. \n\n�RNOTE: If you took $FROMCOUNTRY_ADJ$ core provinces which are not also your own core provinces in this war, enacting the 'return' option will give those lands back. Be careful!�W;;;;;;;;;;;;;
 EVT2600OPTA;We should begin integrating $STATENAME$.;;;;;;;;;;;;;
 EVT2600OPTB;Let $STATENAME$ remain separate, for now.;;;;;;;;;;;;;

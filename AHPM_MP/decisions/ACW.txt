@@ -4,6 +4,7 @@ political_decisions = {
 		picture = apply_for_usa_statehood
 		potential = {
 			continent = north_america
+			test = can_apply_for_statehood
 			any_country = { test = is_american_union }
 		}
 		allow = {

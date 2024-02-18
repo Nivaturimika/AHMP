@@ -31,7 +31,7 @@ border_policy = open_borders
 
 set_country_flag = protestant_country
 
-ruling_party = DOM_conservative
+ruling_party = default_conservative
 upper_house = { # inherit
     fascist = 0
     liberal = 25

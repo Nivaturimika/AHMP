@@ -83,12 +83,6 @@ is_tech_school_decision = {
 	}
 }
 
-is_free_country = {
-	main_parameter = nation
-	is_substate = no
-	is_vassal = no
-}
-
 is_warable_country = {
 	main_parameter = nation
 	this_parameter = nation
@@ -183,6 +177,7 @@ has_elections = {
 
 is_stable_goverment = {
 	main_parameter = nation
+	always = yes
 }
 
 is_minority_culture = {
@@ -212,12 +207,15 @@ can_apply_for_statehood = {
 	this_parameter = nation
 
 	war = no
-	THIS = { war = no }
-	
-	test = is_free_country
-	any_neighbor_country = { tag = THIS }
+	is_independant = yes
 	civilized = yes
 	government = democracy
+	THIS = { war = no }
+	THIS = { is_independant = yes }
+	THIS = { civilized = yes }
+	THIS = { government = democracy }
+
+	any_neighbor_country = { tag = THIS }
 	is_greater_power = no
 	is_secondary_power = no
 	THIS = { is_greater_power = yes }

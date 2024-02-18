@@ -20,8 +20,6 @@ send_pleasantries_to_great_power_title;Pay Respects to a Great Power;;;;;;;;;;;;
 send_pleasantries_to_great_power_desc;If we ever hope to safeguard our nation against foreign aggression, we must find allies in the world. Powerful allies. Great Powers. By sending an entourage with typical $COUNTRY_ADJ$ gifts, compliments and pleasantries to a great power, we will be able to curry some favour with them - and they can become a key ally in the future of $COUNTRY$.;;;;;;;;;;;;;
 centralize_the_goverment_title;Centralize the goverment
 centralize_the_goverment_desc;Centralizing our goverment will allow us to excert more force, however it may come with several drawbacks, such as increased nationalist agitation, use at your own will.
-declare_independence_title;Declare independence
-declare_independence_desc;Long has been we have been subject to humiliation by our overlords, it's time to reclaim our true $COUNTRY_ADJ$ heritage, dear $MONARCHTITLE$ lead us to freedom, will you?
 rename_the_congo_desc;The Congo Free State was confirmed as the personal property of the $COUNTRY_ADJ$ $MONARCHTITLE$, thus it is only fair and reasonable that we now explore the region, and perhaps leave a bit of a personal mark on it?;;;;;;;;;;;;;
 conscript_fishermen_title;Conscript Navy;;;;;;;;;;;;;
 conscript_fishermen_desc;$COUNTRY$ does not need a standing navy. When the time comes, we can build some ships, conscript merchant and fishing ships and fit them with guns. That time came again, and it's time for the $COUNTRY_ADJ$ people to step up and protect their country.;;;;;;;;;;;;;

@@ -166,6 +166,12 @@ claimed_africa = {
     icon = 7
 }
 
+protector_of_tribes = {
+    prestige = -0.01
+    core_pop_militancy_modifier = 0.02
+    icon = 7
+}
+
 non_interventionism_trade_policy = {
     min_tariff = 0.75
     tariff_efficiency_modifier = 0.1

@@ -449,7 +449,7 @@ political_reforms = {
 
 	border_policy = {
 		closed_borders = {
-			global_immigrant_attract = -8
+			global_immigrant_attract = -10
 			badboy = 0.01
 			literacy_con_impact = -0.1
 			administrative_multiplier = 6
