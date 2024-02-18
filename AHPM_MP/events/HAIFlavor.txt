@@ -450,13 +450,13 @@ country_event = {
 					tag = MEX
 					has_recently_lost_war = yes
 					truce_with = FRA
-					has_country_flag = pay_1st_pastry_war
+					has_country_modifier = pay_1st_pastry_war
 					check_variable = { which = owed_cash_money value = 9 }
 				}
 			}
 			owner = {
 				MEX = {
-					clr_country_flag = pay_1st_pastry_war
+					remove_country_modifier = pay_1st_pastry_war
 					change_variable = { which = owed_cash_money value = 80 }
 				}
 				FRA = { treasury = 80000 }
@@ -469,13 +469,13 @@ country_event = {
 					tag = MEX
 					has_recently_lost_war = yes
 					truce_with = FRA
-					has_country_flag = pay_1st_pastry_war
+					has_country_modifier = pay_1st_pastry_war
 					NOT = { check_variable = { which = owed_cash_money value = 9 } }
 				}
 			}
 			owner = {
 				MEX = {
-					clr_country_flag = pay_1st_pastry_war
+					remove_country_modifier = pay_1st_pastry_war
 					set_variable = { which = owed_cash_money value = 80 }
 				}
 				FRA = { treasury = 80000 }

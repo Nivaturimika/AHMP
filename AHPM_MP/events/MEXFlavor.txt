@@ -1479,7 +1479,12 @@ country_event = {
 
 	option = {
 		name = "EVT1100057OPTA"
-		MEX = { set_country_flag = pay_1st_pastry_war }
+		MEX = {
+			add_country_modifier = {
+				name = pay_1st_pastry_war
+				duration = -1
+			}
+		}
 		casus_belli = {
 			target = FROM
 			type = war_reparations

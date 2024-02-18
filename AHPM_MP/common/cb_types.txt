@@ -4165,7 +4165,7 @@ war_reparations = {
 			limit = {
 				owner = {
 					tag = MEX
-					has_country_flag = pay_1st_pastry_war
+					has_country_modifier = pay_1st_pastry_war
 				}
 			}
 			owner = {

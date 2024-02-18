@@ -2562,3 +2562,13 @@ king_cotton = {
 	rgo_output = 0.01
 	icon = 10
 }
+
+clay_and_douglas_draft_enacted = {
+	tax_efficiency = 0.001
+	icon = 10
+}
+
+pay_1st_pastry_war = {
+	tax_efficiency = -0.001
+	icon = 10
+}
