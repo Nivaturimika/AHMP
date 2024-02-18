@@ -49,12 +49,9 @@ upper_house = {
 }
 
 decision = setup_lacks_writing
-set_country_flag = delay_unciv_annexation
 
 # Technologies
-
 # Inventions
-
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0

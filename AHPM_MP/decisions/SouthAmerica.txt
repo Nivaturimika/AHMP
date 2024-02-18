@@ -456,10 +456,7 @@ political_decisions = {
 		allow = {
 			war = no
 			2401 = { owner = { NOT = { truce_with = THIS } } }
-			OR = {
-				year = 1908
-				mass_politics = 1
-			}
+			mass_politics = 1
 		}
 
 		effect = {
@@ -493,10 +490,7 @@ political_decisions = {
 					money = 100000
 				}
 			}
-			OR = {
-				year = 1903
-				mass_politics = 1
-			}
+			mass_politics = 1
 		}
 
 		effect = {
@@ -505,11 +499,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -2000000 } }
 			any_country = { limit = { is_core = 2549 } country_event = 46610101 }
 		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0 NOT = { tag = BRZ year = 1910 } }
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	spu_applies_for_statehood = {
@@ -612,7 +602,6 @@ political_decisions = {
 			OR = {
 				mass_politics = 1
 				sphere_owner = { mass_politics = 1 }
-				year = 1925
 			}
 			OR = {
 				2308 = {

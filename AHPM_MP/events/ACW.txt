@@ -361,20 +361,6 @@ country_event = {
 			factor = 1.1
 			NOT = { average_consciousness = 5 }
 		}
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
-		}
 	}
 
 	option = {
@@ -531,20 +517,6 @@ country_event = {
 		modifier = {
 			factor = 1.1
 			NOT = { average_consciousness = 5 }
-		}
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
 		}
 	}
 
@@ -1574,20 +1546,6 @@ country_event = {
 		modifier = {
 			factor = 1.1
 			NOT = { average_consciousness = 5 }
-		}
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
 		}
 	}
 

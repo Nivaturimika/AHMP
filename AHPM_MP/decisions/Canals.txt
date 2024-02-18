@@ -83,7 +83,6 @@ political_decisions = {
                     }
                 }
                 AND = {
-                    year = 1870
                     rank = 1
                     1755 = {
                         owner = {

@@ -1039,7 +1039,6 @@ political_decisions = {
 				factor = 0
 				NOT = {
 					has_global_flag = pakistan_born
-					year = 1915
 				}
 			}
 			modifier = {
@@ -1061,7 +1060,6 @@ political_decisions = {
 			NOT = {
 				is_culture_group = south_asian
 				is_culture_group = indo_iranian
-				year = 1850
 				tag = PNJ
 				tag = ENG
 			}

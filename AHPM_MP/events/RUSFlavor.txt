@@ -2515,12 +2515,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		has_country_flag = grigori_arrived
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-			}
-		NOT = { year = 1930 }
+		test = is_monarchy_goverment
 	}
 
 	fire_only_once = yes
