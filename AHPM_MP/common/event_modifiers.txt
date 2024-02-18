@@ -2556,3 +2556,9 @@ astronomy_program = {
 	research_points_modifier = 0.001
 	icon = 10
 }
+
+king_cotton = {
+	tax_efficiency = 0.05
+	rgo_output = 0.01
+	icon = 10
+}

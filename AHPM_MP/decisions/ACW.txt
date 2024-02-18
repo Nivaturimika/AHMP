@@ -29,13 +29,13 @@ political_decisions = {
 		potential = { primary_culture = dixie }
 		allow = {
 			war_with = USA
-			not = { has_country_flag = haskingcotton }
+			has_country_modifier = king_cotton
 			cotton = 500
 			is_vassal = no
 		}
 
 		effect = {
-			set_country_flag = haskingcotton
+			add_country_modifier = { name = king_cotton duration = -1 }
 			prestige = 5
 			cotton = -500
 			any_greater_power = {
