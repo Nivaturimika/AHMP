@@ -85,6 +85,9 @@ country_event = {
 				} else_if = {
 					limit = { ruling_party_ideology = fascist }
 					scaled_militancy = { ideology = fascist factor = 3 }
+				} else_if = {
+					limit = { ruling_party_ideology = tribal }
+					scaled_militancy = { ideology = tribal factor = 3 }
 				}
 			}
 		}

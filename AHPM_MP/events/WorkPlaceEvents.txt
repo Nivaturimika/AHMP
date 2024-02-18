@@ -840,11 +840,6 @@ country_event = {
 	trigger = {
 		any_owned_province = {
 			has_building = fuel_refinery
-			NOT = { unemployment_by_type = { type = labourers value = 0.05 } }
-		}
-		OR = {
-			safety_regulations = no_safety
-			safety_regulations = trinket_safety
 		}
 	}
 

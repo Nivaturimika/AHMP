@@ -170,8 +170,6 @@ local_trinket_health_care;Trinket Healthcare;;;;;;;;;;;;;
 local_low_health_care;Low Healthcare;;;;;;;;;;;;;
 local_acceptable_health_care;Acceptable Healthcare;;;;;;;;;;;;;
 local_good_health_care;Good Healthcare;;;;;;;;;;;;;
-pearl_season;Pearl Hunting Season;;;;;;;;;;;;;
-pearl_season_desc;The population in this province is engaging in the much profitable pearl hunting activity.;;;;;;;;;;;;;
 religious_minority_oppression;Oppressed Religious Minorities;;;;;;;;;;;;;
 religious_minority_oppression_desc;Religious minorities are being mistreated, resulting in ever increasing militancy and consciousness of these people.;;;;;;;;;;;;;
 armenian_diaspora;Armenian Diaspora;;;;;;;;;;;;;

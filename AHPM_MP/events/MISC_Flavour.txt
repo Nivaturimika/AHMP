@@ -200,7 +200,7 @@ country_event = {
 	option = {
 		name = "EVT110093OPTA"
 		any_country = {
-			government = tribal
+			limit = { government = tribal }
 			leave_alliance = THIS
 		}
 		ai_chance = { factor = 1 }

@@ -526,27 +526,6 @@ country_event = {
 				1 = { state_scope = { change_region_name = "Arasuka" } }
 			}
 		}
-
-		LSK = {
-			clr_country_flag = sunni_country
-			clr_country_flag = shiite_country
-			clr_country_flag = ibadi_country
-			clr_country_flag = catholic_country
-			clr_country_flag = protestant_country
-			clr_country_flag = mormon_country
-			clr_country_flag = orthodox_country
-			clr_country_flag = coptic_country
-			clr_country_flag = jewish_country
-			clr_country_flag = yazidi_country
-			clr_country_flag = mahayana_country
-			clr_country_flag = gelugpa_country
-			clr_country_flag = theravada_country
-			clr_country_flag = hindu_country
-			clr_country_flag = shinto_country
-			clr_country_flag = sikh_country
-			clr_country_flag = animist_country
-		}
-
 		random_owned = { limit = { owner = { has_country_flag = catholic_country } } LSK = { religion = catholic set_country_flag = catholic_country } }
 		random_owned = {
 			limit = { owner = { has_country_flag = protestant_country } }

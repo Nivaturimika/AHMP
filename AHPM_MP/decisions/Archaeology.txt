@@ -1,95 +1,36 @@
 political_decisions = {
-    search_for_machu_picchu = {
-        picture = search_for_machu_picchu
-        potential = {
-            NOT = { has_global_flag = machu_picchu_discovered }
-            NOT = { has_country_flag = looking_for_machu_picchu }
-            OR = {
-                AND = {
-                    capital_scope = {
-                        OR = {
-                            continent = north_america
-                            continent = south_america
-                        }
-                    }
-                    OR = {
-                        is_secondary_power = yes
-                        is_greater_power = yes
-                    }
-                }
-                2302 = { owner = { in_sphere = THIS } }
-            }
-        }
-
-        allow = {
-            2302 = { #Cusco
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        OR = {
-                            relation = { who = THIS value = 25 }
-                            in_sphere = THIS
-                            vassal_of = THIS
-                        }
-                    }
-                }
-            }
-            money = 50100
-            social_science = 1
-        }
-
-        effect = {
-            set_country_flag = looking_for_machu_picchu
-            treasury = -50000
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    search_for_aegean_civilizations = {
-        picture = priams_treasure
-        potential = {
-            NOT = { has_global_flag = troy_discovered }
-            NOT = { has_country_flag = search_for_the_aegean_civilizations }
-            OR = {
-                AND = {
-                    capital_scope = {
-                        OR = {
-                            continent = europe
-                            continent = oceania
-                        }
-                    }
-                    OR = {
-                        is_secondary_power = yes
-                        is_greater_power = yes
-                    }
-                }
-                865 = { owner = { in_sphere = THIS } }
-            }
-        }
-
-        allow = {
-            865 = { #Canakkale, where Troy is located
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        OR = {
-                            relation = { who = THIS value = 75 }
-                            in_sphere = THIS
-                            vassal_of = THIS
-                        }
-                    }
-                }
-            }
-            money = 50100
-            social_science = 1
-        }
-
-        effect = {
-            set_country_flag = search_for_the_aegean_civilizations
-            treasury = -50000
-        }
-
-        ai_will_do = { factor = 1 }
-    }
+	search_for_machu_picchu = {
+		picture = search_for_machu_picchu
+		potential = {
+			NOT = { has_global_flag = machu_picchu_discovered }
+			NOT = { has_country_flag = looking_for_machu_picchu }
+		}
+		allow = {
+			2302 = { test = is_influenced }
+			money = 50000
+			social_science = 1
+		}
+		effect = {
+			set_country_flag = looking_for_machu_picchu
+			treasury = -50000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	search_for_aegean_civilizations = {
+		picture = priams_treasure
+		potential = {
+			NOT = { has_global_flag = troy_discovered }
+			NOT = { has_country_flag = search_for_the_aegean_civilizations }
+		}
+		allow = {
+			865 = { test = is_influenced }
+			money = 50000
+			social_science = 1
+		}
+		effect = {
+			set_country_flag = search_for_the_aegean_civilizations
+			treasury = -50000
+		}
+		ai_will_do = { factor = 1 }
+	}
 }

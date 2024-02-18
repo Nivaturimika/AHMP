@@ -1,437 +1,231 @@
 political_decisions = {
 
-    become_saudi_arabia = {
-        potential = {
-            is_culture_group = arab
-            exists != ARA
-        }
-        allow = {
-            war = no
-            owns = 1157
-            is_greater_power = yes
-            any_country = {
-                is_culture_group = arab
-                all_core = { test = is_influenced }
-                war = no
-            }
-        }
-        effect = {
-            prestige = 10
-            add_accepted_culture = bedouin
-            add_accepted_culture = mashriqi
-            any_country = {
-                limit = { is_culture_group = arab }
-                any_owned = { add_core = THIS }
-            }
-            any_country = {
-                limit = { tag != THIS is_culture_group = arab test = is_influenced }
-                if = { limit = { ai = yes } annex_to = THIS }
-                else = { country_event = 11101 }
-            }
-            change_tag = ARA
-        }
-        ai_will_do = { factor = 1 }
-    }
+	become_saudi_arabia = {
+		potential = {
+			is_culture_group = arab
+			exists != ARA
+		}
+		allow = {
+			war = no
+			owns = 1157
+			is_greater_power = yes
+			any_country = {
+				is_culture_group = arab
+				all_core = { test = is_influenced }
+				war = no
+			}
+		}
+		effect = {
+			prestige = 10
+			add_accepted_culture = bedouin
+			add_accepted_culture = mashriqi
+			any_country = {
+				limit = { is_culture_group = arab }
+				any_owned = { add_core = THIS }
+			}
+			any_country = {
+				limit = { tag != THIS is_culture_group = arab test = is_influenced }
+				if = { limit = { ai = yes } annex_to = THIS }
+				else = { country_event = 11101 }
+			}
+			change_tag = ARA
+		}
+		ai_will_do = { factor = 1 }
+	}
 
-    form_saudi_arabia = {
-        picture = become_saudi_arabia
-        potential = {
-            is_culture_group != arab
-            exists != ARA
-        }
-        allow = {
-            war = no
-            any_country = {
-                is_culture_group = arab
-                all_core = { test = is_influenced }
-                war = no
-            }
-        }
+	form_saudi_arabia = {
+		picture = become_saudi_arabia
+		potential = {
+			is_culture_group != arab
+			exists != ARA
+		}
+		allow = {
+			war = no
+			any_country = {
+				is_culture_group = arab
+				all_core = { test = is_influenced }
+				war = no
+			}
+		}
 
-        effect = {
-            prestige = 10
-            any_country = {
-                any_owned = {
-                    limit = { owner = { is_culture_group = arab } }
-                    add_core = ARA
-                }
-            }
-            any_country = {
-                limit = { test = is_influenced }
-                any_owned = { limit = { is_core = ARA } secede_province = THIS }
-            }
-            release_vassal = ARA
-            ARA = {
-                tech_school = developing_tech_school
-                set_country_flag = created_externally
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
+		effect = {
+			prestige = 10
+			any_country = {
+				any_owned = {
+					limit = { owner = { is_culture_group = arab } }
+					add_core = ARA
+				}
+			}
+			any_country = {
+				limit = { test = is_influenced }
+				any_owned = { limit = { is_core = ARA } secede_province = THIS }
+			}
+			release_vassal = ARA
+			ARA = {
+				tech_school = developing_tech_school
+				set_country_flag = created_externally
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 
-    form_arab_union = {
-    picture = form_arab_union
-        potential = {
-            NOT = { has_country_flag = post_colonial_country }
-            is_culture_group = arab
-            OR = {
-                religion = sunni
-                religion = shiite
-                religion = ibadi
-            }
-            NOT = {
-                exists = ARU
-                has_global_flag = arab_call_to_union
-            }
-        }
+	form_arab_union = {
+		picture = form_arab_union
+		potential = {
+			NOT = { has_country_flag = post_colonial_country }
+			is_culture_group = arab
+			OR = {
+				religion = sunni
+				religion = shiite
+				religion = ibadi
+			}
+			NOT = {
+				exists = ARU
+				has_global_flag = arab_call_to_union
+			}
+		}
 
-        allow = {
-            civilized = yes
-            war = no
-            is_greater_power = yes
-            nationalism_n_imperialism = 1
-            all_core = { owned_by = THIS }
-            OR = {
-                any_neighbor_country = {
-                    is_culture_group = arab
-                    test = is_influenced
-                    ai = yes
-                }
-                any_owned_province = {
-                    is_culture_group = arab
-                    is_colonial = no
-                    NOT = { is_core = THIS }
-                }
-            }
-        }
+		allow = {
+			civilized = yes
+			war = no
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			all_core = { owned_by = THIS }
+			OR = {
+				any_neighbor_country = {
+					is_culture_group = arab
+					test = is_influenced
+				}
+				any_owned_province = {
+					is_culture_group = arab
+					is_colonial = no
+					NOT = { is_core = THIS }
+				}
+			}
+		}
 
-        effect = {
-            set_global_flag = arab_call_to_union
-            prestige = 20
-            add_accepted_culture = mashriqi
-            add_accepted_culture = misri
-            add_accepted_culture = bedouin
-            all_core = {
-                remove_core = THIS
-                add_core = ARU
-            }
-            TUR_894 = { remove_core = ARU }
-            EGY_843 = { remove_core = ARU }
-            change_tag = ARU
-            country_event = 98725
-        }
+		effect = {
+			set_global_flag = arab_call_to_union
+			prestige = 20
+			add_accepted_culture = mashriqi
+			add_accepted_culture = misri
+			add_accepted_culture = bedouin
+			all_core = {
+				remove_core = THIS
+				add_core = ARU
+			}
+			TUR_894 = { remove_core = ARU }
+			EGY_843 = { remove_core = ARU }
+			change_tag = ARU
+			country_event = 98725
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 
-    form_maghreb = {
-        picture = form_maghreb
-        potential = {
-            NOT = { has_country_flag = post_colonial_country }
-            primary_culture = maghrebi
-            NOT = { exists = MGH }
-            NOT = { has_global_flag = maghreb_formed }
-        }
+	form_maghreb = {
+		picture = form_maghreb
+		potential = {
+			NOT = { has_country_flag = post_colonial_country }
+			primary_culture = maghrebi
+			NOT = { exists = MGH }
+			NOT = { has_global_flag = maghreb_formed }
+		}
 
-        allow = {
-            civilized = yes
-            is_greater_power = yes
-            nationalism_n_imperialism = 1
-            war = no
-            any_country = {
-                primary_culture = maghrebi
-                test = is_influenced
-            }
-        }
+		allow = {
+			civilized = yes
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			war = no
+			any_country = {
+				primary_culture = maghrebi
+				test = is_influenced
+			}
+		}
 
-        effect = {
-            set_global_flag = maghreb_formed
-            prestige = 20
-            all_core = {
-                remove_core = THIS
-                add_core = MGH
-            }
-            ALD = { all_core = { add_core = MGH } }
-            CYR = { all_core = { add_core = MGH } }
-            LBY = { all_core = { add_core = MGH } }
-            MOR = { all_core = { add_core = MGH } }
-            TRI = { all_core = { add_core = MGH } }
-            TUN = { all_core = { add_core = MGH } }
-            add_accepted_culture = berber
-            add_accepted_culture = tuareg
-            add_accepted_culture = maures
-            change_tag = MGH
-            any_country = {
-                limit = {
-                    NOT = { primary_culture = maghrebi }
-                    test = is_influenced
-                    war = no
-                }
-                any_owned = {
-                    limit = { is_core = MGH }
-                    secede_province = THIS
-                }
-            }
-            any_country = {
-                limit = {
-                    war = no
-                    primary_culture = maghrebi
-                    test = is_influenced
-                }
-                country_event = 98650
-            }
-        }
+		effect = {
+			set_global_flag = maghreb_formed
+			prestige = 20
+			all_core = {
+				remove_core = THIS
+				add_core = MGH
+			}
+			ALD = { all_core = { add_core = MGH } }
+			CYR = { all_core = { add_core = MGH } }
+			LBY = { all_core = { add_core = MGH } }
+			MOR = { all_core = { add_core = MGH } }
+			TRI = { all_core = { add_core = MGH } }
+			TUN = { all_core = { add_core = MGH } }
+			add_accepted_culture = berber
+			add_accepted_culture = tuareg
+			add_accepted_culture = maures
+			change_tag = MGH
+			any_country = {
+				limit = {
+					NOT = { primary_culture = maghrebi }
+					test = is_influenced
+					war = no
+				}
+				any_owned = {
+					limit = { is_core = MGH }
+					secede_province = THIS
+				}
+			}
+			any_country = {
+				limit = {
+					war = no
+					primary_culture = maghrebi
+					test = is_influenced
+				}
+				country_event = 98650
+			}
+		}
 
-        ai_will_do = { factor = 1 }
-    }
+		ai_will_do = { factor = 1 }
+	}
 
-    maghrebi_claims = {
-        picture = form_maghreb
-        potential = {
-            tag = MGH
-            NOT = { has_country_flag = maghrebi_claims }
-        }
+	maghrebi_claims = {
+		picture = form_maghreb
+		potential = {
+			tag = MGH
+			NOT = { has_country_flag = maghrebi_claims }
+		}
 
-        allow = {
-            any_country = { tag != THIS any_owned = { culture = maghrebi } }
-        }
+		allow = {
+			any_country = { tag != THIS any_owned = { culture = maghrebi } }
+		}
 
-        effect = {
-            set_country_flag = maghrebi_claims
-            prestige = 10
-            badboy = 1
-            any_country = { any_owned = { limit = { culture = maghrebi } add_core = THIS } }
-        }
-        ai_will_do = { factor = 1 }
-    }
+		effect = {
+			set_country_flag = maghrebi_claims
+			prestige = 10
+			badboy = 1
+			any_country = { any_owned = { limit = { culture = maghrebi } add_core = THIS } }
+		}
+		ai_will_do = { factor = 1 }
+	}
 
-    arab_union_claims = {
-        picture = form_arab_union
-        potential = {
-            tag = ARU
-            NOT = { has_country_flag = arab_union_claims }
-        }
+	arab_union_claims = {
+		picture = form_arab_union
+		potential = {
+			tag = ARU
+			NOT = { has_country_flag = arab_union_claims }
+		}
 
-        allow = {
-            civilized = yes
-            is_greater_power = yes
-            NOT = { government = democracy }
-            nationalism_n_imperialism = 1
-        }
+		allow = {
+			civilized = yes
+			is_greater_power = yes
+			NOT = { government = democracy }
+			nationalism_n_imperialism = 1
+		}
 
-        effect = {
-            set_country_flag = arab_union_claims
-            badboy = 2
-            prestige = 10
-            any_country = { any_owned = { limit = { culture = maghrebi } add_core = THIS } }
-            add_accepted_culture = maghrebi
+		effect = {
+			set_country_flag = arab_union_claims
+			badboy = 2
+			prestige = 10
+			any_country = { any_owned = { limit = { culture = maghrebi } add_core = THIS } }
+			add_accepted_culture = maghrebi
 
-        }
-        ai_will_do = { factor = 0 }
-    }
-
-    start_pearl_hunting = {
-        picture = bahrain_trade
-        potential = {
-            ai = yes
-            NOT = { has_global_flag = pearl_hunting_season_started }
-            OR = {
-                owns = 1162
-                owns = 1165
-                owns = 1167
-                owns = 2664
-                is_culture_group = arab
-                is_culture_group = turko_semitic
-                is_culture_group = iranian_turanian
-            }
-            OR = {
-                1162 = {
-                    NOT = {
-                        trade_goods = precious_goods
-                        trade_goods = oil
-                        has_province_modifier = pearl_season
-                    }
-                }
-                1165 = {
-                    NOT = {
-                        trade_goods = precious_goods
-                        trade_goods = oil
-                        has_province_modifier = pearl_season
-                    }
-                }
-                1167 = {
-                    NOT = {
-                        trade_goods = precious_goods
-                        trade_goods = oil
-                        has_province_modifier = pearl_season
-                    }
-                }
-                2664 = {
-                    NOT = {
-                        trade_goods = precious_goods
-                        trade_goods = oil
-                        has_province_modifier = pearl_season
-                    }
-                }
-                1071 = {
-                    NOT = {
-                        trade_goods = precious_goods
-                        trade_goods = oil
-                        has_province_modifier = pearl_season
-                    }
-                }
-                1168 = {
-                    NOT = {
-                        trade_goods = precious_goods
-                        trade_goods = oil
-                        has_province_modifier = pearl_season
-                    }
-                }
-            }
-        }
-
-        allow = {
-            month = 4
-            NOT = { month = 6 }
-        }
-
-
-        effect = {
-            set_global_flag = pearl_hunting_season_started
-
-            random_country = {
-                limit = { owns = 1162 NOT = { 1162 = { trade_goods = oil } } }
-                1162 = {
-                    trade_goods = precious_goods
-                    add_province_modifier = { name = pearl_season duration = 150 }
-                }
-            }
-            random_country = {
-                limit = { owns = 1165 NOT = { 1165 = { trade_goods = oil } } }
-                1165 = {
-                    trade_goods = precious_goods
-                    add_province_modifier = { name = pearl_season duration = 150 }
-                }
-            }
-            random_country = {
-                limit = { owns = 1167 NOT = { 1167 = { trade_goods = oil } } }
-                1167 = {
-                    trade_goods = precious_goods
-                    add_province_modifier = { name = pearl_season duration = 150 }
-                }
-            }
-            random_country = {
-                limit = { owns = 2664 NOT = { 2664 = { trade_goods = oil } } }
-                2664 = {
-                    trade_goods = precious_goods
-                    add_province_modifier = { name = pearl_season duration = 150 }
-                }
-            }
-            random_country = {
-                limit = { owns = 1071 NOT = { 1071 = { trade_goods = oil } } }
-                1071 = {
-                    trade_goods = precious_goods
-                    add_province_modifier = { name = pearl_season duration = 150 }
-                }
-            }
-            random_country = {
-                limit = { owns = 1168 NOT = { 1168 = { trade_goods = oil } } }
-                1168 = {
-                    trade_goods = precious_goods
-                    add_province_modifier = { name = pearl_season duration = 150 }
-                }
-            }
-            any_country = {
-                limit = {
-                    exists = yes
-                    has_country_flag = umar_pact
-                    NOT = { has_country_modifier = jizya }
-                    any_owned_province = {
-                        any_pop = {
-                            OR = {
-                                has_pop_religion = catholic
-                                has_pop_religion = protestant
-                                has_pop_religion = mormon
-                                has_pop_religion = orthodox
-                                has_pop_religion = coptic
-                                has_pop_religion = druze
-                                has_pop_religion = jewish
-                                has_pop_religion = yazidi
-                                has_pop_religion = mahayana
-                                has_pop_religion = gelugpa
-                                has_pop_religion = theravada
-                                has_pop_religion = hindu
-                                has_pop_religion = shinto
-                                has_pop_religion = sikh
-                                has_pop_religion = animist
-                            }
-                        }
-                    }
-                }
-                add_country_modifier = { name = jizya duration = -1 }
-            }
-
-        }
-        ai_will_do = { factor = 1 }
-    }
-
-    end_pearl_hunting = {
-        picture = bahrain_trade
-        potential = {
-            OR = {
-                1162 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1165 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1167 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                2664 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1071 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1168 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-            }
-        }
-        effect = {
-            clr_global_flag = pearl_hunting_season_started
-            any_country = {
-                limit = { exists = yes owns = 1162 1162 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1162 = { trade_goods = fruit }
-            }
-            any_country = {
-                limit = { exists = yes owns = 1165 1165 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1165 = { trade_goods = fish }
-            }
-            any_country = {
-                limit = { exists = yes owns = 1167 1167 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1167 = { trade_goods = fish }
-            }
-            any_country = {
-                limit = { exists = yes owns = 2664 2664 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                2664 = { trade_goods = fish }
-            }
-            any_country = {
-                limit = { exists = yes owns = 1071 1071 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1071 = { trade_goods = fish }
-            }
-            any_country = {
-                limit = { exists = yes owns = 1168 1168 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1168 = { trade_goods = fruit }
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

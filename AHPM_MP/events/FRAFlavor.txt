@@ -1991,14 +1991,12 @@ country_event = {
 	option = {
 		name = "EVT37244OPTA"
 		leave_alliance = FROM
-		relation = { who = FROM value = -100 }
 	}
 
 	option = {
 		name = "EVT37244OPTB"
 		badboy = -1
 		prestige = -30
-
 		random_owned = {
 			limit = {
 				region = SAR_466
@@ -2024,7 +2022,6 @@ country_event = {
 			limit = { is_core = FROM }
 			secede_province = FROM
 		}
-		relation = { who = FROM value = 100 }
 	}
 }
 

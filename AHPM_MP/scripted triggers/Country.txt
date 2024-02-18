@@ -135,6 +135,10 @@ is_same_ruling_party_ideology = {
 		THIS = { ruling_party_ideology = fascist }
 		ruling_party_ideology = fascist
 	}
+	OR = {
+		THIS = { ruling_party_ideology = tribal }
+		ruling_party_ideology = tribal
+	}
 }
 
 is_same_ruling_party_ideology = {
@@ -167,6 +171,10 @@ is_same_ruling_party_ideology = {
 	OR = {
 		THIS = { ruling_party_ideology = fascist }
 		pop_majority_ideology = fascist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = tribal }
+		pop_majority_ideology = tribal
 	}
 }
 

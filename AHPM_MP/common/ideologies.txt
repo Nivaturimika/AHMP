@@ -37,6 +37,51 @@ fascist_group = {
 	}
 }
 conservative_group = {
+	tribal = {
+		color = { 150 150 255 }
+		add_political_reform = {
+			base = 0.001
+			modifier = {
+				factor = -1
+				NOT = { ruling_party_ideology = tribal }
+			}
+		}
+		remove_political_reform = {
+			base = 0.001
+			modifier = {
+				factor = -1
+				NOT = { ruling_party_ideology = tribal }
+			}
+		}
+		add_social_reform = {
+			base = 0.001
+			modifier = {
+				factor = -1
+				NOT = { ruling_party_ideology = tribal }
+			}
+		}
+		remove_social_reform = {
+			base = 0.001
+			modifier = {
+				factor = -1
+				NOT = { ruling_party_ideology = tribal }
+			}
+		}
+		add_military_reform = {
+			base = 0.001
+			modifier = {
+				factor = -1
+				NOT = { ruling_party_ideology = tribal }
+			}
+		}
+		add_economic_reform = {
+			base = 0.001
+			modifier = {
+				factor = -1
+				NOT = { ruling_party_ideology = tribal }
+			}
+		}
+	}
 	reactionary = {
 		color = { 30 30 100 }
 		add_political_reform = {
@@ -134,7 +179,6 @@ conservative_group = {
 		}
 		add_social_reform = {
 			base = 0
-
 			group = {
 				modifier = {
 					factor = 0.1

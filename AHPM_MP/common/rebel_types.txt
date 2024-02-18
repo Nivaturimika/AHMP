@@ -27,6 +27,7 @@ reactionary_rebels = {
 		hms_government = absolute_monarchy
 		democracy = presidential_dictatorship
 		theocracy = absolute_monarchy
+		tribal = tribal
 	}
 	defection = none                    # Will defect to the "best" alternative.
 	independence = none                # Does not strive for independence
@@ -44,24 +45,16 @@ reactionary_rebels = {
 	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
 	will_rise = {
 		factor = 0.5
-		modifier = {
-			war = yes
-			factor = 0.8
-		}
+		modifier = { war = yes factor = 0.8 }
 	}
-
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.02
 		modifier = {
 			factor = 0.01
-			NOT = {
-				OR = {
-					pop_majority_ideology = reactionary
-					pop_majority_ideology = conservative
-					pop_majority_ideology = fascist
-				}
-			}
+			pop_majority_ideology != reactionary
+			pop_majority_ideology != conservative
+			pop_majority_ideology != fascist
 		}
 		modifier = {
 			factor = 0
@@ -253,6 +246,7 @@ fascist_rebels = {
 		hms_government = fascist_dictatorship
 		democracy = fascist_dictatorship
 		theocracy = fascist_dictatorship
+		tribal = tribal
 	}
 
 
@@ -482,6 +476,7 @@ communist_rebels = {
 		hms_government = proletarian_dictatorship
 		democracy = proletarian_dictatorship
 		theocracy = proletarian_dictatorship
+		tribal = tribal
 	}
 
 
@@ -708,6 +703,7 @@ anarcho_liberal_rebels = {
 		hms_government = bourgeois_dictatorship
 		democracy = bourgeois_dictatorship
 		theocracy = bourgeois_dictatorship
+		tribal = tribal
 	}
 
 
@@ -960,13 +956,11 @@ nationalist_rebels = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
-
-
 	defection = none            # (Was 'culture') If the country seeks independence, defection specifies what type of provinces it wants.
 	independence = culture         # (Was 'culture')Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
 	defect_delay = 12            # Can spontaneously declare independence after X months (earliest)
-
 	allow_all_cultures = yes
 	allow_all_religions = yes
 	allow_all_ideologies = yes
@@ -1187,6 +1181,7 @@ pan_nationalist_rebels = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 	defection = none            # (It was pan_nationalist) If the country seeks independence, defection specifies what type of provinces it wants.
@@ -1520,6 +1515,7 @@ carlist_rebels = {
 		hms_government = absolute_monarchy
 		democracy = absolute_monarchy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 
@@ -1738,6 +1734,7 @@ christino_rebels = {
 		hms_government = hms_government
 		democracy = hms_government
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 
@@ -1936,6 +1933,7 @@ boxer_rebels = {
 		hms_government = absolute_monarchy
 		democracy = absolute_monarchy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 	defection = none
@@ -2149,6 +2147,7 @@ red_shirts = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = democracy
+		tribal = tribal
 	}
 
 	defection = none            # (Was pan_nationalist) If the country seeks independence, defection specifies what type of provinces it wants.
@@ -2348,6 +2347,7 @@ indian_sepoys = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 	defection = pan_nationalist        # If the country seeks independence, defection specifies what type of provinces it wants.
@@ -2512,6 +2512,7 @@ indian_nationalists = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 	defection = none        # If the country seeks independence, defection specifies what type of provinces it wants.
@@ -2698,6 +2699,7 @@ liberal_rebels = {
 		hms_government = democracy
 		democracy = democracy
 		theocracy = democracy
+		tribal = tribal
 	}
 
 
@@ -3123,6 +3125,7 @@ unciv_reactionary_rebels = {
 		hms_government = absolute_monarchy
 		democracy = absolute_monarchy
 		theocracy = absolute_monarchy
+		tribal = tribal
 	}
 
 	defection = none                    # Will defect to the "best" alternative.
@@ -3318,6 +3321,7 @@ separatist_rebels = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 
@@ -3545,6 +3549,7 @@ socialist_rebels = {
 		hms_government = democracy
 		democracy = democracy
 		theocracy = democracy
+		tribal = tribal
 	}
 
 
@@ -3978,6 +3983,7 @@ independence_rebels = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 
@@ -4106,6 +4112,7 @@ turkish_nationalist_rebels = {
 		hms_government = democracy
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 
@@ -4304,6 +4311,7 @@ native_rebels = {
 		hms_government = democracy
 		democracy = democracy
 		theocracy = democracy
+		tribal = tribal
 	}
 
 	defection = none                    # Will defect to the "best" alternative.
@@ -4446,6 +4454,7 @@ sioux_nation = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 	defection = none                    # Will defect to the "best" alternative.
@@ -4527,6 +4536,7 @@ apache = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = democracy
+		tribal = tribal
 	}
 
 	defection = none                    # Will defect to the "best" alternative.
@@ -4611,6 +4621,7 @@ slave_revolt = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = democracy
+		tribal = tribal
 	}
 
 	defection = none                    # Will defect to the "best" alternative.
@@ -4744,6 +4755,7 @@ partisan_rebels = {
 		hms_government = hms_government
 		democracy = democracy
 		theocracy = theocracy
+		tribal = tribal
 	}
 
 

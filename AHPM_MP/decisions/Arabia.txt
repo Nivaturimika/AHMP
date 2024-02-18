@@ -768,10 +768,7 @@ political_decisions = {
 		picture = dubai_city
 		potential = {
 			is_sphere_leader_of = ABU
-			ABU = {
-				ai = yes
-				is_vassal = no
-			}
+			ABU = { is_vassal = no }
 			revolution_n_counterrevolution = 1
 			NOT = { has_global_flag = vassalized_trucials }
 		}
