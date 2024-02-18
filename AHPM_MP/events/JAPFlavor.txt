@@ -309,14 +309,6 @@ province_event = {
 			factor = 0.75
 			owner = { has_global_flag = order_to_expel_barbarians }
 		}
-		modifier = {
-			factor = 0.75
-			owner = { has_country_flag = supports_imperial_edict }
-		}
-		modifier = {
-			factor = 2
-			owner = { has_country_flag = opposes_imperial_edict }
-		}
 	}
 
 	option = {
@@ -367,17 +359,10 @@ country_event = {
 	id = 97617
 	title = "EVTNAME97617" #Order to Expel the Barbarians
 	desc = "EVTDESC97617"
-	news = yes
-	news_desc_long = "EVTDESC97617_NEWS_LONG"
-	news_desc_medium = "EVTDESC97617_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97617_NEWS_SHORT"
 	picture = "sonno_joi"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT97617OPTA"
-		relation = { who = FROM value = -100 }
 		prestige = -5
 	}
 }
@@ -387,19 +372,21 @@ country_event = {
 	title = "EVTNAME97617" #Order to Expel the Barbarians - Response from Substates
 	desc = "EVTDESC97618"
 	picture = "sonno_joi"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT97618OPTA"
-		set_country_flag = supports_imperial_edict
-		relation = { who = FROM value = 50 }
+		add_country_modifier = {
+			name = supports_imperial_edict
+			duration = -1
+		}
 		ruling_party_ideology = conservative
 	}
 	option = {
 		name = "EVT97618OPTB"
-		set_country_flag = opposes_imperial_edict
-		relation = { who = FROM value = -50 }
+		add_country_modifier = {
+			name = opposes_imperial_edict
+			duration = -1
+		}
 		ruling_party_ideology = reactionary
 	}
 }
@@ -598,10 +585,10 @@ country_event = {
 			YZW = { average_militancy = 4 }
 			JAP = { average_militancy = 4 }
 		}
-		NOT = { has_country_flag = sakuradamon_incident }
-		NOT = { has_country_flag = emperor_meiji }
-		NOT = { has_global_flag = boshin_war }
-		NOT = { has_global_flag = boshin_war_has_happened }
+		has_country_flag != sakuradamon_incident
+		has_country_modifier != emperor_meiji
+		has_global_flag != boshin_war
+		has_global_flag != boshin_war_has_happened
 	}
 
 	mean_time_to_happen = {
@@ -710,15 +697,14 @@ country_event = {
 			has_country_modifier = kobu_gattai
 			has_country_flag = sakuradamon_incident
 			has_global_flag = order_to_expel_barbarians
-			JAP = { is_vassal = no }
-			KAG = { is_vassal = no }
-			YZW = { is_vassal = no }
-			SEN = { is_vassal = no }
-			CHO = { is_vassal = no }
-			TOS = { is_vassal = no }
-			SAT = { is_vassal = no }
+			any_country = {
+				primary_culture = japanese
+				test != is_japanese_imperial_leader
+				test != is_japanese_shogun_leader
+				is_independant = yes
+			}
 		}
-		has_country_flag != emperor_meiji
+		has_country_modifier != emperor_meiji
 		has_global_flag != boshin_war
 		has_global_flag != boshin_war_has_happened
 	}
@@ -728,7 +714,10 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = emperor_meiji
+		add_country_modifier = {
+			name = emperor_meiji
+			duration = -1
+		}
 		remove_country_modifier = kobu_gattai
 		any_country = {
 			limit = { substate_of = TKG }
@@ -749,7 +738,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "EVT97630OPTA"
-		set_country_flag = emperor_meiji
+		add_country_modifier = {
+			name = emperor_meiji
+			duration = -1
+		}
 		remove_country_modifier = kobu_gattai
 	}
 }
@@ -937,7 +929,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				has_country_flag = supports_imperial_edict
+				has_country_modifier = supports_imperial_edict
 			}
 			modifier = {
 				factor = 1.2
@@ -995,7 +987,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				has_country_flag = opposes_imperial_edict
+				has_country_modifier = opposes_imperial_edict
 			}
 			modifier = {
 				factor = 1.2
@@ -1129,15 +1121,11 @@ country_event = {
 	trigger = {
 		test = is_japanese_shogun_leader
 		has_global_flag = boshin_war
-		OR = {
-			any_owned_province = {
-				is_capital = yes
-				test != is_influenced
-				province_control_days = 90
-			}
-			national_provinces_occupied = 0.50
+		any_owned_province = {
+			is_capital = yes
+			test != is_influenced
+			province_control_days = 90
 		}
-		1657 = { test != is_influenced }
 	}
 	mean_time_to_happen = { days = 7 }
 	immediate = {
@@ -1273,16 +1261,9 @@ country_event = {
 		test = is_japanese_imperial_leader
 		has_global_flag = boshin_war
 		war = yes
-		OR = {
-			any_owned_province = {
-				is_capital = yes
-				controller = { test != is_influenced }
-				province_control_days = 90
-			}
-			national_provinces_occupied = 0.50
-		}
-		1657 = {
-			controller = { test != is_influenced }
+		any_owned_province = {
+			is_capital = yes
+			test != is_influenced
 			province_control_days = 90
 		}
 	}
@@ -1300,7 +1281,7 @@ country_event = {
 
 country_event = {
 	id = 97651
-	title = "EVTNAME97651" #Tokugawa Victory
+	title = "EVTNAME97651"
 	desc = "EVTDESC97651"
 	news = yes
 	news_desc_long = "EVTDESC97651_NEWS_LONG"
@@ -1361,7 +1342,7 @@ country_event = {
 
 country_event = {
 	id = 97652
-	title = "EVTNAME97651" #Tokugawa Victory - Substates
+	title = "EVTNAME97651"
 	desc = "EVTDESC97652"
 	picture = "meiji_parliament"
 	is_triggered_only = yes

@@ -556,6 +556,7 @@ tozama_daimyo;Tozama Daimyo;;;;;;;;;;;;;
 fudai_daimyo;Fudai Daimyo;;;;;;;;;;;;;
 emperor_meiji;Emperor Meiji;;;;;;;;;;;;;
 supports_imperial_edict;Supports the Imperial edict against foreigners;;;;;;;;;;;;;
+opposes_imperial_edict;Supports the Imperial edict against foreigners;;;;;;;;;;;;;
 angered_by_bakufu;Angered by the bakufu;;;;;;;;;;;;;
 rangaku;Rangaku;;;;;;;;;;;;;
 rangaku_desc;Meaning 'dutch learning',this refers to the body of knowledge developed by Japan through its contacts with the Dutch enclave of Dejima, which allowed Japan to keep abreast of Western technology and medicine in the period when the country was closed to foreigners.;;;;;;;;;;;;;

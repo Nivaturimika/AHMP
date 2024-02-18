@@ -243,11 +243,11 @@ political_decisions = {
 
 		allow = {
 			war = no
-			has_country_flag = emperor_meiji
-			NOT = { has_country_modifier = kobu_gattai }
+			has_country_modifier = emperor_meiji
+			has_country_modifier != kobu_gattai
 			OR = {
 				is_vassal = no
-				has_country_flag = supports_imperial_edict
+				has_country_modifier = supports_imperial_edict
 				has_country_flag = angered_by_bakufu
 			}
 		}
@@ -709,49 +709,33 @@ political_decisions = {
 		allow = {
 			war = no
 			OR = {
-				civilization_progress = 0.5
+				civilization_progress >= 0.5
 				civilized = yes
 			}
 			OR = {
 				has_country_flag = sonno_joi
 				civilized = yes
 			}
-			OR = {
-				ruling_party_ideology = conservative
-				ai = yes
-			}
 		}
 
 		effect = {
 			set_global_flag = order_to_expel_barbarians
 			prestige = 5
-			TKG = { country_event = 97617 }
+			random_country = {
+				limit = { test = is_japanese_shogun_leader }
+				country_event = 97617
+			}
 			any_country = {
 				limit = {
 					primary_culture = japanese
-					OR = {
-						substate_of = TKG
-						vassal_of = TKG
-					}
-					NOT = { tag = THIS }
+					tag != THIS
 				}
 				country_event = 97618
 			}
 			any_pop = { militancy = -4 }
 		}
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { year = 1855 }
-			}
-			modifier = {
-				factor = 0
-				TKG = { ai = no }
-				NOT = { has_country_flag = sonno_joi }
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	peace_with_the_emperor = {
@@ -1624,32 +1608,6 @@ political_decisions = {
 			}
 		}
 
-		ai_will_do = { factor = 1 }
-	}
-
-	occupy_kita_ezo = {
-		picture = map_yellow_sea
-		potential = {
-			primary_culture = japanese
-		}
-		allow = {
-			owns = 1642
-			war = no
-			OR = {
-				AND = {
-					tag = JAP
-					TKG = { exists = no }
-				}
-				AND = {
-					tag = TKG
-					JAP = { exists = no }
-				}
-			}
-		}
-		effect = {
-			1643 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
-			1644 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
-		}
 		ai_will_do = { factor = 1 }
 	}
 
