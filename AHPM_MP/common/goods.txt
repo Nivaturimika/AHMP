@@ -1,11 +1,33 @@
 # goods types, organized by category
 
-raw_material_goods = {
-	precious_metal = {
-		cost = 1.00
-		money = yes
-		color = { 253 199 110 }
+military_goods = {
+	ammunition = {
+		cost = 1.00 #18.00
+		color = { 208 202 127 }
 	}
+	small_arms = {
+		cost = 1.00 #37.00
+		color = { 189 118 22 }
+	}
+	artillery = {
+		cost = 1.00 #60.00
+		color = { 145 130 86 }
+	}
+	canned_food = {
+		cost = 1.00 #16.00
+		color = { 255 39 12 }
+	}
+	barrels = {
+		cost = 1.00 #98.00
+		color = { 55 41 9 }
+	}
+	aeroplanes = {
+		cost = 1.00 #110.00
+		color = { 221 213 182 }
+	}
+}
+
+raw_material_goods = {
 	cotton = {
 		cost = 1.00 #2.0
 		color = { 255 255 255 }
@@ -50,33 +72,16 @@ raw_material_goods = {
 		cost = 1.00 #12.0
 		color = { 0 0 0 }
 	}
-}
-
-military_goods = {
-	ammunition = {
-		cost = 1.00 #18.00
-		color = { 208 202 127 }
+	precious_metal = {
+		cost = 1.00 #8
+		tradeable = yes
+		money = yes
+		color = { 253 199 110 }
 	}
-	small_arms = {
-		cost = 1.00 #37.00
-		color = { 189 118 22 }
-	}
-	artillery = {
-		cost = 1.00 #60.00
-		color = { 145 130 86 }
-	}
-	canned_food = {
-		cost = 1.00 #16.00
-		color = { 255 39 12 }
-	}
-	barrels = {
-		cost = 1.00 #98.00
-		color = { 55 41 9 }
-	}
-	aeroplanes = {
-		cost = 1.00 #110.00
-		color = { 221 213 182 }
-	}
+    precious_goods = {
+        cost = 1.00
+        color = { 247 241 61 }
+    }
 }
 
 industrial_goods = {
