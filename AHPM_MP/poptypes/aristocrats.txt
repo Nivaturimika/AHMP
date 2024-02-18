@@ -326,6 +326,7 @@ promote_to =
 			}
 		}
 	}
+	artisans = { factor = 0 }
 	bureaucrats = {
 		factor = 0.01
 		modifier = {

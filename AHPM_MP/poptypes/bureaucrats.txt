@@ -178,7 +178,7 @@ promote_to =
 			}
 		}
 	}
-
+	artisans = { factor = 0 }
 	officers =
 	{
 		factor = 0.01
