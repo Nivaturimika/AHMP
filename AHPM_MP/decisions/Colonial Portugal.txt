@@ -302,13 +302,13 @@ political_decisions = {
 		potential = {
 			owns = 1999
 			civilized = yes
-			2010 = { NOT  = { trade_goods = precious_metal } }
-			2006 = { NOT  = { trade_goods = precious_metal } }
 			owns = 2010
 			owns = 2006
 		}
 
 		allow = {
+			2010 = { NOT  = { trade_goods = precious_metal } }
+			2006 = { NOT  = { trade_goods = precious_metal } }
 			POR_1999 = { owned_by = THIS }
 			POR_2003 = { owned_by = THIS }
 			POR_2006 = { owned_by = THIS }

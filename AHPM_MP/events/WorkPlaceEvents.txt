@@ -447,7 +447,6 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = { factor = 0.1 }
 	}
 
 	option = {
@@ -462,10 +461,6 @@ country_event = {
 					add_province_modifier = { name = silk_famine duration = 750 }
 				}
 			}
-		}
-		ai_chance = {
-			factor = 0.9
-			modifier = { factor = 0 NOT = { money = 1000 } }
 		}
 	}
 }
@@ -512,7 +507,6 @@ country_event = {
 				any_pop = { militancy = -1 }
 			}
 		}
-		ai_chance = { factor = 0.1 }
 	}
 
 	option = {
@@ -521,10 +515,6 @@ country_event = {
 		any_owned = {
 			limit = { has_province_modifier = silk_famine }
 			remove_province_modifier = silk_famine
-		}
-		ai_chance = {
-			factor = 0.9
-			modifier = { factor = 0 NOT = { money = 1000 } }
 		}
 	}
 }
@@ -578,37 +568,38 @@ country_event = {
 	title = "EVTNAME12130"
 	desc = "EVTDESC12130"
 	picture = "Elderly"
-
 	trigger = {
 		produces = wool
 	}
-
-	mean_time_to_happen = {
-		months = 1000
-		modifier = {
-			factor = 0.9
-			economic_policy = laissez_faire
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { economic_policy = laissez_faire }
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 5
-		}
-	}
-
+	mean_time_to_happen = { months = 1000 }
 	option = {
 		name = "EVTOPTA12130"
 		regular_clothes = 15
 		any_pop = { militancy = -0.5 }
 	}
-
 	option = {
 		name = "EVTOPTB12130"
 		luxury_clothes = 5
 		any_pop = { consciousness = -0.5 }
+	}
+	option = {
+		name = "EVTOPTC12130"
+		add_country_modifier = {
+			name = taxing_rgo_production
+			duration = 180
+		}
+		if = {
+			limit = { economic_policy = laissez_faire }
+			add_country_modifier = {
+				name = taxing_private_business_in_laissez_faire
+				duration = 180
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD12130"
+		wool = 150
+		luxury_clothes = 150
 	}
 }
 
@@ -863,19 +854,11 @@ country_event = {
 		name = "EVTOPTA12190"
 		fuel = 20
 		treasury = -5000
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0
-				NOT = { money = 5000 }
-			}
-		}
 	}
 
 	option = {
 		name = "EVTOPTB12190"
 		any_pop = { militancy = -0.5 }
-		ai_chance = { factor = 75 }
 	}
 }
 

@@ -4093,20 +4093,7 @@ install_ideology_make_puppet = {
 	}
 
 	on_po_accepted = {
-		if = {
-			limit = { ruling_party_ideology = fascist }
-			country_event = 96086
-		} else_if = {
-			limit = {
-				OR = {
-					ruling_party_ideology = communist
-					ruling_party_ideology = socialist
-				}
-			}
-			country_event = 96087
-		} else_if = {
-			country_event = 96088
-		}
+		country_event = 96085
 	}
 }
 

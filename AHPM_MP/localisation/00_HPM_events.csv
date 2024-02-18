@@ -17,13 +17,13 @@ EVTNAME6016823;The New $FROMCOUNTRY_ADJ$ Masters;;;;;;;;;;;;;
 EVTDESC6016823;With the union of our old masters in the greater country of $FROMCOUNTRY$, our new overlords started to make the arrangements for our renewed vassalage to the $FROMCOUNTRY_ADJ$ government.;;;;;;;;;;;;;
 EVT6016823OPTA;We have no choice in this matter.;;;;;;;;;;;;;
 EVTNAME971714;The Falangist Doctrine;;;;;;;;;;;;;
-EVTDESC971714;For years the Spanish people have been humiliated by foreign rule and unfair treaties. No more! The new government in $CAPITAL$ outlined an aggressive agenda to reclaim the lost lands belonging to the Spanish people, by whatever means necessary. These claims involve a massive propaganda effort to give weight to our claims and show the rights of the Spanish people over what was unjustly taken from us. The focus of these pieces will be...;;;;;;;;;;;;;
+EVTDESC971714;For years the $COUNTRY_ADJ$ people have been humiliated by foreign rule and unfair treaties. No more! The new government in $CAPITAL$ outlined an aggressive agenda to reclaim the lost lands belonging to the $COUNTRY_ADJ$ people, by whatever means necessary. These claims involve a massive propaganda effort to give weight to our claims and show the rights of the $COUNTRY_ADJ$ people over what was unjustly taken from us. The focus of these pieces will be...;;;;;;;;;;;;;
 EVT971714OPTA;Gibraltar, ours by right.;;;;;;;;;;;;;
 EVT971714OPTB;The Basques, the Catalans and Gibraltar are Spain's right.;;;;;;;;;;;;;
 EVT971714OPTC;The Iberian peninsula belongs to Spain.;;;;;;;;;;;;;
 EVT971714OPTD;All of the people of Iberia are subjects of Spain.;;;;;;;;;;;;;
 EVTNAME5000001;The Megali Idea;;;;;;;;;;;;;
-EVTDESC5000001;The Greek government has chosen to actively pursue a strategy of recovering Greek lands held by the Turks. We now have the political clout in the international stage to give a serious voice and weight to these claims. The question remains, however, in which parts should we focus on.;;;;;;;;;;;;;
+EVTDESC5000001;The $COUNTRY_ADJ$ government has chosen to actively pursue a strategy of recovering Greek lands held by the Turks. We now have the political clout in the international stage to give a serious voice and weight to these claims. The question remains, however, in which parts should we focus on.;;;;;;;;;;;;;
 EVT5000001OPTA;We are only interested in Thrace.;;;;;;;;;;;;;
 EVT5000001OPTB;Everything we can claim in the the coast of Anatolia.;;;;;;;;;;;;;
 EVT5000001OPTC;All that we have a right to.;;;;;;;;;;;;;
@@ -230,6 +230,10 @@ EVTNAME12120;Iron and Blood;;;;;;;;;;;;;
 EVTDESC12120;Not by speeches and votes of the majority, are the great questions of the time decided, but by iron and blood.'\n-Otto von Bismarck\n\nA new, rich lode of minerals has been discovered in the $PROVINCENAME$ mine. While the vein is rich, it is also located on a perilous depth that is just beyond the reach of our present mining technology. We could attempt to extract the ore, but doing so will carry with it a cost in lives and blood.;;;;;;;;;;;;;
 EVTNAME12130;Cottage Industry;;;;;;;;;;;;;
 EVTDESC12130;The wool district in one of our provinces became a hub of activity lately, as more and more little cottage weaveries are springing up across the province. While the folk in the province have always been known as a thrifty kind, the ready access to some of the world's best wool might also explain this flurry of activity.;;;;;;;;;;;;;
+EVTOPTA12130;Work harder!
+EVTOPTB12130;Work smarter!
+EVTOPTC12130;And we aren't taxing them?
+EVTOPTD12130;We must become king cotton!
 EVTNAME12140;Clipper Boom;;;;;;;;;;;;;
 EVTDESC12140;The wharfs, quays, and drydocks in one of our provinces are abuzz with the rings of hammers and the songs of saws, as the local factory struggles to keep up with new orders for clipper ships that are pouring in from all over the world. Efficient work processes and management, combined with excellent craftsmanship and seamanship, have led the province to produce more and better ships than during any year previous! Perhaps this is the time to rest on the laurels, but, then again, the future is always an uncertainty.;;;;;;;;;;;;;
 EVTNAME12150;Boiler Explodes!;;;;;;;;;;;;;
@@ -4319,33 +4323,6 @@ EVT800064OPTA;We shall see if this leads to anything.;;;;;;;;;;;;;
 EVT800065OPTA;There will be consequences!;;;;;;;;;;;;;
 EVT800065OPTB;We protest this outrage!;;;;;;;;;;;;;
 EVT800065OPTC;It's only propaganda.;;;;;;;;;;;;;
-EVTNAME800012;Intervention in $FROMCOUNTRY$?;;;;;;;;;;;;;
-EVTDESC800012;We have been secretly approached by certain members within the $FROMCOUNTRY_ADJ$ government, suggesting that $COUNTRY_ADJ$ intervention to free them from foreign control might be in both our interests. $FROMCOUNTRY$ would be free to seek its own destiny, while $COUNTRY$ would gain an ally. The catch, of course, is that the attempt could look like interference to the rest of the world... and earn us the enmity of $FROMCOUNTRY$'s rulers in particular. If we make the attempt, we should learn of the results within a week at the most.;;;;;;;;;;;;;
-EVTNAME800013;$FROMCOUNTRY$ Declares Independence;;;;;;;;;;;;;
-EVTDESC800013;A foreign power has meddled in the affairs of $FROMCOUNTRY$, taking advantage of the unrest there to engineer a coup which has freed them from our control. Our trusted servants in that nation have been either arrested or expelled, and now the world watches for our response.;;;;;;;;;;;;;
-EVTNAME800014;$FROMCOUNTRY$ Declares Independence;;;;;;;;;;;;;
-EVTDESC800014;A foreign power has meddled in the affairs of $FROMCOUNTRY$, taking advantage of the unrest there to engineer a coup which has freed them from our control. Our trusted servants in that nation have been either arrested or expelled, and now the world watches for our response.;;;;;;;;;;;;;
-EVTNAME800015;$FROMCOUNTRY$ Refuses to Intervene;;;;;;;;;;;;;
-EVTDESC800015;The answer from $FROMCOUNTRY$ is clear: they won't intervene in our internal affairs. We are on our own.;;;;;;;;;;;;;
-EVTNAME800016;Intervention Failed;;;;;;;;;;;;;
-EVTDESC800016;$FROMCOUNTRY$ attempted to intervene, but the resulting orgy of violence in $CAPITAL$ has failed to drive out the influence of our overlord. Worse, it has resulted in $FROMCOUNTRY_ADJ$ influence in $COUNTRY$ being greatly damaged, as many see them as instigators rather than would-be liberators.;;;;;;;;;;;;;
-EVTNAME800017;Free At Great Cost;;;;;;;;;;;;;
-EVTDESC800017;$FROMCOUNTRY$ has supported the could d'etat in $CAPITAL$, but with the change came an orgy of violence that has seen $FROMCOUNTRY_ADJ$ influence in $COUNTRY$ damaged along with that of our overlord. Many people in $COUNTRY$ are left with hard feelings, and see $FROMCOUNTRY$ as an instigator rather than a liberator. What will come next depends entirely on whether reprisals will come our way.;;;;;;;;;;;;;
-EVTNAME800018;Free At Last!;;;;;;;;;;;;;
-EVTDESC800018;Foreign intervention has succeeded in freeing our government from foreign rule. After an orgy of violence in $CAPITAL$, citizens are celebrating in the streets. $COUNTRY$ has a new destiny as a truly independent nation... provided no reprisals come out way, of course.;;;;;;;;;;;;;
-EVTNAME800021;Attempted Coup in $FROMCOUNTRY$;;;;;;;;;;;;;
-EVTDESC800021;A foreign power attempted to use their influence in $FROMCOUNTRY$ to take advantage of the unrest there and free them from our control. Their efforts have come to naught, and their agents have been arrested and many of the $FROMCOUNTRY_ADJ$ malcontents exposed and imprisoned. The question remains, however, as to what we will do in response to this outrage.;;;;;;;;;;;;;
-EVTNAME800022;Attempt Thwarted;;;;;;;;;;;;;
-EVTDESC800022;Our attempt to interfere in $FROMCOUNTRY$'s government was thwarted. We have lost influence there, and angered their overlord. This may lead to war, but we will have to wait and see what develops.;;;;;;;;;;;;;
-EVTNAME800023;$FROMCOUNTRY$ Freed At Great Cost;;;;;;;;;;;;;
-EVTDESC800023;Our attempt to engineer a coup in $FROMCOUNTRY$ was successful, but at the cost of a great deal of our influence there. The $FROMCOUNTRY_ADJ$ government is angry, and it's possible their overlords may attempt to retaliate either against them or against us. We will have to wait and see what develops of this.;;;;;;;;;;;;;
-EVTNAME800024;$FROMCOUNTRY$ is Free!;;;;;;;;;;;;;
-EVTDESC800024;Our attempt to engineer a coup in $FROMCOUNTRY$ was successful, and they are now an independent country as well as a useful ally. It's possible their overlords may attempt to retaliate either against them or against us. We shall have to wait and see what develops.;;;;;;;;;;;;;
-EVT800012OPTA;We shall make the attempt.;;;;;;;;;;;;;
-EVT800012OPTB;No, it is too risky.;;;;;;;;;;;;;
-EVT800013OPTA;There will be hell to pay!;;;;;;;;;;;;;
-EVT800013OPTB;Punish the meddler only.;;;;;;;;;;;;;
-EVT800013OPTC;We must salvage our relationship with $FROMCOUNTRY$.;;;;;;;;;;;;;
 EVT800015OPTA;Too bad.;;;;;;;;;;;;;
 EVT800016OPTA;We shall see.;;;;;;;;;;;;;
 EVT800018OPTA;Hurrah!;;;;;;;;;;;;;
@@ -5098,3 +5075,6 @@ EVTOPTB910203;Give a tiny grant (10,000)
 EVTOPTC910203;Give a small grant (100,000)
 EVTOPTD910203;Give a medium grant (1,000,000)
 EVTOPTE910203;Give a big grant (10,000,000)
+EVTNAME16516;The Iron York
+EVTDESC16516;$COUNTRY$, the land of iron, the land where every $COUNTRY_ADJ$ can work for their family, go to a brothel and then come back home 5 years later. Oh, $COUNTRY$, what has this done to you? We have found iron deposits in $COUNTRY$, but where are they? Of course, in New York! - We're 90% sure we didn't mistake them for glass... now every $COUNTRY_ADJ$ can get a piece of iron for no charge at all... mostly!
+EVTOPTA16516;Breath some iron!

@@ -1547,41 +1547,6 @@ political_decisions = {
 		ai_will_do = { factor = 100 }
 	}
 
-
-	the_iron_range = {
-	picture = iron_range_mountains
-		potential = {
-			owns = 232
-			NOT = { has_global_flag = iron_ranges }
-		}
-
-		allow = {
-			war = no
-			invention = advanced_ore_smelting_processes
-		}
-
-		effect = {
-			set_global_flag = iron_ranges
-			158 = { trade_goods = iron change_province_name = "Duluth" }
-			177 = { trade_goods = iron }
-			157 = { trade_goods = iron }
-			235 = { trade_goods = iron }
-			98 = { trade_goods = iron }
-			232 = { life_rating = 5 } #New York
-			163 = { life_rating = 5 } #Chicago
-			173 = { life_rating = 5 } #Detroit
-			243 = { life_rating = 4 } #Boston
-			223 = { life_rating = 5 } #Philadelphia
-			139 = { life_rating = 5 } #New Orleans
-			199 = { life_rating = 4 } #Jacksonville
-			169 = { life_rating = 4 } #Indianapolis
-			179 = { life_rating = 4 } #Columbus
-			209 = { life_rating = 3 } #Charlotte
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 	the_mormon_exodus = {
 	picture = nauvoo_temple
 		potential = {

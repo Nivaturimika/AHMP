@@ -4033,36 +4033,6 @@ country_event = {
 		CAM = {
 			country_event = { days = 2 id = 199071 }
 		}
-
-		#Non-cores should flip to colonies
-		random_owned = {
-			limit = {
-				NOT = { is_core = THIS }
-				owner = { NOT = { exists = UTI } }
-			}
-			owner = {
-				any_owned = {
-					limit = {
-						NOT = {
-							is_core = THIS
-							is_colonial = yes
-							is_accepted_culture = yes
-							is_primary_culture = yes
-							any_core = { is_cultural_union = THIS }
-							#any_neighbor_province = { is_core = THIS } #Rule excluding neighbouring states from the non-core rule
-						}
-						any_core = {
-							OR = {
-								civilized = no
-								tech_school = developing_tech_school
-							}
-						}
-					}
-					secede_province = UTI
-					UTI = { country_event =  90911 }
-				}
-			}
-		}
 	}
 }
 

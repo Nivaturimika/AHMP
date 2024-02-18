@@ -1170,12 +1170,10 @@ country_event = {
 }
 
 country_event = {
-
 	id = 23211 # The South Pole is discovered!
-	news = yes
-	news_desc_long = "EVTDESC23211_NEWS_LONG"
-	news_desc_medium = "EVTDESC23211_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC23211_NEWS_SHORT"
+	title = "EVTNAME23211"
+	desc = "EVTDESC23211"
+	picture = "SouthPole3"
 
 	trigger = {
 		or = {
@@ -1203,10 +1201,6 @@ country_event = {
 			year = 1914
 		}
 	}
-
-	title = "EVTNAME23211"
-	desc = "EVTDESC23211"
-	picture = "SouthPole3"
 
 	option = {
 		name = "EVTOPTA23203" # Success!
@@ -1259,11 +1253,6 @@ country_event = {
 country_event = {
 
 	id = 23213 # Oh dear
-	news = yes
-	news_desc_long = "EVTDESC23213_NEWS_LONG"
-	news_desc_medium = "EVTDESC23213_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC23213_NEWS_SHORT"
-
 	trigger = {
 		has_country_flag = YesGoToSouthPole
 		NOT = { has_global_flag = SouthPoleDiscovered }
@@ -1271,9 +1260,7 @@ country_event = {
 		year = 1908 # Will happen sometime after 1908
 	}
 
-	mean_time_to_happen =  {
-		months = 120
-	}
+	mean_time_to_happen =  { months = 120 }
 
 	title = "EVTNAME23213"
 	desc = "EVTDESC23213"
@@ -1283,7 +1270,6 @@ country_event = {
 		name = "EVTOPTA23213" #
 		prestige = -5
 		clr_country_flag = YesGoToSouthPole
-		#Game over effect. Sanity points -100
 	}
 
 }

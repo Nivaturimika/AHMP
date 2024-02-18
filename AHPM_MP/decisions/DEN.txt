@@ -174,8 +174,7 @@ political_decisions = {
 						is_disarmed = yes
 						has_country_modifier = in_bankrupcy
 						has_country_modifier = generalised_debt_default
-						has_country_modifier = emergency_tax_measures1
-						has_country_modifier = emergency_tax_measures2
+						has_country_modifier = emergency_tax_measures
 						NOT = { money = 10000 }
 					}
 				}

@@ -560,7 +560,6 @@ TPG = "countries/Taiping.txt"
 
 ##EIC
 EIC = "countries/East India Company.txt"
-UTI = "countries/Utility Tag.txt"
 ##
 
 ## Open V2
