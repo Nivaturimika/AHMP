@@ -54,12 +54,15 @@ luxury_needs = {
 	telephones = 0.45
 }
 
+
 country_migration_target = {
 	factor = 1
 	modifier = {
 		factor = 0
+		war = yes
 		OR = {
-			THIS = { agree_with_ruling_party <= 0.5 }
+			border_policy = closed_borders
+			THIS = { agree_with_ruling_party <= 0.125 }
 			AND = {
 				border_policy = quota_immigration
 				THIS = {  literacy <= 0.6 }
@@ -71,24 +74,23 @@ country_migration_target = {
 			}
 		}
 	}
-	modifier = { factor = 1.5 unemployment <= 0.25 }
-	modifier = { factor = 2.5 economic_policy = laissez_faire }
-	modifier = { factor = 2.5 economic_policy = state_capitalism }
-	modifier = { factor = 1.25 is_primary_culture = THIS }
-	modifier = { factor = 1.25 is_accepted_culture = THIS }
+	modifier = { factor = 5.5 unemployment <= 0.25 }
+	modifier = { factor = 5.25 is_primary_culture = THIS }
+	modifier = { factor = 2.25 is_accepted_culture = THIS }
+	modifier = { factor = 7.5 THIS = { agree_with_ruling_party >= 0.75 } }
 	modifier = { factor = 3.5 THIS = { agree_with_ruling_party >= 0.5 } }
 }
-
 migration_target = {
 	factor = 0.01
-	modifier = { factor = 0
+	modifier = {
+		factor = 0
 		is_overseas = yes
 		country = { border_policy = closed_borders }
 	}
-	modifier = { factor = 1.5 has_pop_culture = THIS }
-	modifier = { factor = 1.5 has_pop_religion = THIS }
-	modifier = { factor = 1.5 is_capital = yes }
-	modifier = { factor = 1.5 is_coastal = yes }
+	modifier = { factor = 3.5 has_pop_culture = THIS }
+	modifier = { factor = 3.5 has_pop_religion = THIS }
+	modifier = { factor = 9.5 is_capital = yes }
+	modifier = { factor = 7.5 is_coastal = yes }
 }
 
 promote_to =

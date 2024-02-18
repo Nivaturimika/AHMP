@@ -39,12 +39,15 @@ luxury_needs = {
 	telephones = 0.8
 }
 
+
 country_migration_target = {
 	factor = 1
 	modifier = {
 		factor = 0
+		war = yes
 		OR = {
-			THIS = { agree_with_ruling_party <= 0.5 }
+			border_policy = closed_borders
+			THIS = { agree_with_ruling_party <= 0.125 }
 			AND = {
 				border_policy = quota_immigration
 				THIS = {  literacy <= 0.6 }
@@ -56,24 +59,23 @@ country_migration_target = {
 			}
 		}
 	}
-	modifier = { factor = 1.5 unemployment <= 0.25 }
-	modifier = { factor = 2.5 economic_policy = laissez_faire }
-	modifier = { factor = 2.5 economic_policy = state_capitalism }
-	modifier = { factor = 1.25 is_primary_culture = THIS }
-	modifier = { factor = 1.25 is_accepted_culture = THIS }
+	modifier = { factor = 5.5 unemployment <= 0.25 }
+	modifier = { factor = 5.25 is_primary_culture = THIS }
+	modifier = { factor = 2.25 is_accepted_culture = THIS }
+	modifier = { factor = 7.5 THIS = { agree_with_ruling_party >= 0.75 } }
 	modifier = { factor = 3.5 THIS = { agree_with_ruling_party >= 0.5 } }
 }
-
 migration_target = {
 	factor = 0.01
-	modifier = { factor = 0
+	modifier = {
+		factor = 0
 		is_overseas = yes
 		country = { border_policy = closed_borders }
 	}
-	modifier = { factor = 1.5 has_pop_culture = THIS }
-	modifier = { factor = 1.5 has_pop_religion = THIS }
-	modifier = { factor = 1.5 is_capital = yes }
-	modifier = { factor = 1.5 is_coastal = yes }
+	modifier = { factor = 3.5 has_pop_culture = THIS }
+	modifier = { factor = 3.5 has_pop_religion = THIS }
+	modifier = { factor = 9.5 is_capital = yes }
+	modifier = { factor = 7.5 is_coastal = yes }
 }
 
 promote_to =
@@ -1052,162 +1054,8 @@ ideologies = {
 		}
 	}
 
-	socialist = {
-		factor = 0.75
-		modifier = {
-			factor = 1.1
-			nationalvalue = nv_equality
-			country = { NOT = { ruling_party_ideology = communist } }
-			OR = {
-				is_accepted_culture = yes
-				is_primary_culture = yes
-			}
-		}
-		modifier = {
-			factor = 0.4
-			militancy = 6
-		}
-		modifier = {
-			factor = 1.1
-			social_reform_want = 0.3
-		}
-		modifier = {
-			factor = 1.1
-			social_reform_want = 0.4
-		}
-		modifier = {
-			factor = 1.1
-			social_reform_want = 0.5
-		}
-		modifier = {
-			factor = 1.1
-			consciousness = 7
-			state_scope = {
-				not = { poor_strata_everyday_needs = 0.25 }
-			}
-		}
-		modifier = {
-			factor = 1.1
-			consciousness = 6
-			state_scope = {
-				NOT = { middle_strata_everyday_needs = 0.25 }
-			}
-		}
-		modifier = {
-			factor = 1.1
-			state_scope = {
-				OR = {
-					poor_strata_militancy = 7
-					middle_strata_militancy = 7
-				}
-			}
-		}
-		modifier = {
-			factor = 1.1
-			state_scope = {
-				OR = {
-					poor_strata_militancy = 8
-					middle_strata_militancy = 8
-				}
-			}
-		}
-		modifier = {
-			factor = 1.1
-			state_scope = {
-				OR = {
-					poor_strata_militancy = 9
-					middle_strata_militancy = 9
-				}
-			}
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 6
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 7
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 8
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 9
-		}
-		##############Two-Party System#############
-		modifier = {
-			factor = 0.5
-			###Only pops that can normally vote
-			OR = {
-				is_primary_culture = yes
-				is_accepted_culture = yes
-				country = { citizens_rights = all_voting_pops }
-			}
-			location = { NOT =  { is_colonial = yes } }
-			###Country with a two-party system
-			country = {
-				NOT = { vote_franschise = none_voting }
-				voting_system = first_past_the_post
-				OR = {
-					upper_house_composition = appointed
-					upper_house_composition = state_equal_weight
-				}
-			}
-		}
-		###########################################
-	}
-
-	communist = {
-		factor = 0.5
-
-		modifier = {
-			factor = 0.9
-			consciousness = 5
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 6
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 7
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 8
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 9
-		}
-		##############Two-Party System#############
-		modifier = {
-			factor = 0.5
-			###Only pops that can normally vote
-			OR = {
-				is_primary_culture = yes
-				is_accepted_culture = yes
-				country = { citizens_rights = all_voting_pops }
-			}
-			location = { NOT =  { is_colonial = yes } }
-			###Country with a two-party system
-			country = {
-				NOT = { vote_franschise = none_voting }
-				voting_system = first_past_the_post
-				OR = {
-					upper_house_composition = appointed
-					upper_house_composition = state_equal_weight
-				}
-			}
-		}
-		###########################################
-		modifier = {
-			factor = 0
-			country = { has_country_flag = international_zone }
-		}
-	}
+	socialist = { factor = 0 }
+	communist = { factor = 0 }
 
 	liberal = {
 		factor = 1.3
