@@ -865,7 +865,6 @@ paternalism = {
 constitutionalism = {
     limit = {
         state_n_government = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -889,7 +888,6 @@ constitutionalism = {
 atheism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -914,7 +912,6 @@ atheism = {
 egalitarianism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -942,7 +939,6 @@ egalitarianism = {
 rationalism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -964,7 +960,6 @@ rationalism = {
 authoritarianism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -988,13 +983,8 @@ authoritarianism = {
 hierarchical_order = {
     news = no
     limit = {
-        has_country_flag = existing_country
         state_n_government = 1
-        OR = {
-            government = hms_government
-            government = prussian_constitutionalism
-            government = absolute_monarchy
-        }
+        test = is_monarchy_goverment
     }
     chance = {
         base = 1
@@ -1016,7 +1006,6 @@ hierarchical_order = {
 traditionalism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1066,7 +1055,6 @@ political_religion = {
 individualism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1088,7 +1076,6 @@ individualism = {
 secularization = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1112,7 +1099,6 @@ secularization = {
 social_conscience = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1134,7 +1120,6 @@ social_conscience = {
 collectivism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1155,7 +1140,6 @@ collectivism = {
 determinism = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1181,7 +1165,6 @@ determinism = {
 social_justice = {
     limit = {
         ideological_thought = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1223,7 +1206,6 @@ populism_vs._establishment = {
 clericalism_vs._anticlericalism = {
     limit = {
         state_n_government = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1263,7 +1245,6 @@ bureaucracy_vs._nepotism = {
 meritocracy_vs._aristocracy = {
     limit = {
         state_n_government = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1285,7 +1266,6 @@ meritocracy_vs._aristocracy = {
 national_fraternity = {
     limit = {
         nationalism_n_imperialism = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1329,7 +1309,6 @@ biased_multiculturalism = {
 manifest_destiny = {
     limit = {
         nationalism_n_imperialism = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1355,7 +1334,6 @@ manifest_destiny = {
 expansionism = {
     limit = {
         nationalism_n_imperialism = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1377,7 +1355,6 @@ expansionism = {
 mission_to_civilize = {
     limit = {
         state_n_government = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
@@ -1416,7 +1393,6 @@ mission_to_civilize = {
 separatism = {
     limit = {
         nationalism_n_imperialism = 1
-        has_country_flag = existing_country
     }
     news = no
     chance = {
