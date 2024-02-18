@@ -2549,3 +2549,10 @@ emergency_tax_measures2 = {
 	global_pop_militancy_modifier = 0.10
 	icon = 10
 }
+
+### New flavour
+astronomy_program = {
+	tax_efficiency = -0.0025
+	research_points_modifier = 0.001
+	icon = 10
+}

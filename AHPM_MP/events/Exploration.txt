@@ -1217,34 +1217,42 @@ country_event = {
 	}
 }
 
-# comet sighted
 country_event = {
-
 	id = 23212
-
-	trigger = {
-		civilized = yes
-	}
-
-	mean_time_to_happen = {
-		months = 1200
-	}
-
+	trigger = { civilized = yes }
+	mean_time_to_happen = { months = 1200 }
 	title = "EVTNAME23212"
 	desc = "EVTDESC23212"
 	picture = "sight"
-
+	immediate = {
+		years_of_research = 0.01
+	}
 	option = {
 		name = "EVTOPTA23212"
-		years_of_research = 0.01
+		move_issue_percentage = {
+			from = secularized
+			to = moralism
+			value = 0.25
+		}
 	}
 	option = {
 		name = "EVTOPTB23212"
-		years_of_research = 0.01
+		years_of_research = 0.05
 	}
 	option = {
 		name = "EVTOPTC23212"
-		years_of_research = 0.01
+		move_issue_percentage = {
+			from = anti_military
+			to = jingoism
+			value = 0.25
+		}
+	}
+	option = {
+		name = "EVTOPTD23212"
+		add_country_modifier = { name = astronomy_program duration = -1 }
+	}
+	option = {
+		name = "EVTOPTE23212"
 	}
 }
 
