@@ -211,6 +211,9 @@ can_apply_for_statehood = {
 	main_parameter = nation
 	this_parameter = nation
 
+	war = no
+	THIS = { war = no }
+	
 	test = is_free_country
 	any_neighbor_country = { tag = THIS }
 	civilized = yes
