@@ -120,12 +120,12 @@ country_event = {
         FROM = { end_military_access = THIS }
         casus_belli = {
             target = FROM
-            type = conquest_any
+            type = conquest
             months = 60
         }
         war = {
             target = FROM
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = humiliate }
         }
         ai_chance = { factor = 100 }

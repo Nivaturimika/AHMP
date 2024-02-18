@@ -861,7 +861,7 @@ province_event = {
 
     trigger = {
         province_id = 2048
-        trade_goods = precious_metals
+        trade_goods = precious_metal
         OR = {
             owner = { slavery = no_slavery }
             state_scope = { is_slave = no }

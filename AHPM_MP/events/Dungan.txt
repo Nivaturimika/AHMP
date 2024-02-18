@@ -463,7 +463,7 @@ country_event = {
         war = {
             target = XBI
             attacker_goal = {
-                casus_belli = conquest_any
+                casus_belli = conquest
             }
             defender_goal = {
                 casus_belli = status_quo

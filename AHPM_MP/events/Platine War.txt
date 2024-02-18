@@ -796,7 +796,7 @@ country_event = {
 			}
 			 casus_belli = {
 				target = THIS
-				type = install_democracy
+				type = install_government
 				months = 30
 				}
 			relation = { who = THIS value = -150 }
@@ -812,7 +812,7 @@ country_event = {
 			}
 			 casus_belli ={
 				target = THIS
-				type = install_democracy
+				type = install_government
 				months = 30
 				}
 			casus_belli ={
@@ -867,7 +867,7 @@ country_event = {
 			}
 			 casus_belli = {
 				target = THIS
-				type = install_democracy
+				type = install_government
 				months = 30
 				}
 			relation = { who = THIS value = -150 }
@@ -884,7 +884,7 @@ country_event = {
 			}
 			 casus_belli ={
 				target = THIS
-				type = install_democracy
+				type = install_government
 				months = 30
 				}
 			casus_belli ={
@@ -945,7 +945,7 @@ country_event = {
 			}
 			 casus_belli = {
 				target = THIS
-				type = install_democracy
+				type = install_government
 				months = 30
 				}
 			relation = { who = THIS value = -150 }
@@ -962,7 +962,7 @@ country_event = {
 			}
 			 casus_belli ={
 				target = THIS
-				type = install_democracy
+				type = install_government
 				months = 30
 				}
 			casus_belli ={

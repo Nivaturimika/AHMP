@@ -373,7 +373,7 @@ province_event = {
         }
         NOT = {
             year = 1900
-            trade_goods = precious_metals
+            trade_goods = precious_metal
             trade_goods = coal
             trade_goods = iron
         }
@@ -390,7 +390,7 @@ province_event = {
 
     option = {
         name = "EVTOPTA1105"
-        trade_goods = precious_metals
+        trade_goods = precious_metal
         # life_rating = 5
     }
 }
@@ -409,7 +409,7 @@ province_event = {
         }
         NOT = {
             year = 1910
-            trade_goods = precious_metals
+            trade_goods = precious_metal
             trade_goods = coal
             trade_goods = iron
         }
@@ -434,7 +434,7 @@ province_event = {
 
     option = {
         name = "EVTOPTA1105"
-        trade_goods = precious_metals
+        trade_goods = precious_metal
         # life_rating = 5
     }
 }

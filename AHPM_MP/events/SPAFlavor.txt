@@ -3868,7 +3868,7 @@ country_event = {
             who = MOR
             value = -200
         }
-        casus_belli = { target = MOR type = treaty_port_casus_belli months = 40 }
+        casus_belli = { target = MOR type = war_reparations months = 40 }
         1689 = {
             add_province_modifier = { name = nationalist_agitation duration = 365 }
             any_pop = {
@@ -3963,7 +3963,7 @@ country_event = {
             }
         war = {
             target = MOR
-                attacker_goal = { casus_belli = treaty_port_casus_belli }
+                attacker_goal = { casus_belli = war_reparations }
                 defender_goal = {
                     casus_belli = acquire_core_state
                     state_province_id = 1689

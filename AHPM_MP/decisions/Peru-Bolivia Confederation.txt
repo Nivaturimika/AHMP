@@ -47,7 +47,7 @@ political_decisions = {
                     country = SPU
                 }
                 defender_goal = {
-                    casus_belli = conquest_any
+                    casus_belli = conquest
                 }
             }
         }

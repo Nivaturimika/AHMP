@@ -2275,7 +2275,7 @@ country_event = {
 			limit = { THIS = { number_of_states < 2 } }
 			war = {
 				target = THIS
-				attacker_goal = { casus_belli = conquest_any }
+				attacker_goal = { casus_belli = conquest }
 			}
 		}
 		JAP = {

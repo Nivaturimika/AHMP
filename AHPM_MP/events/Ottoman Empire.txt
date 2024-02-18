@@ -800,7 +800,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = TUR
-				type = establish_protectorate_NI_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 40
 			}
 		}
@@ -817,7 +817,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = TUR
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 40
 			}
 		}
@@ -853,7 +853,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = TUR
-				type = establish_protectorate_NI_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 40
 			}
 		}
@@ -870,7 +870,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = TUR
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 40
 			}
 		}
@@ -883,7 +883,7 @@ country_event = {
 			}
 			war = {
 				target = NYE
-				attacker_goal = { casus_belli = establish_protectorate_NI_casus_belli }
+				attacker_goal = { casus_belli = establish_protectorate_casus_belli }
 				defender_goal = { casus_belli = humiliate }
 				call_ally = no
 			}
@@ -897,7 +897,7 @@ country_event = {
 			}
 			war = {
 				target = NYE
-				attacker_goal = { casus_belli = establish_protectorate_BC_casus_belli }
+				attacker_goal = { casus_belli = establish_protectorate_casus_belli }
 				defender_goal = { casus_belli = humiliate }
 				call_ally = no
 			}
@@ -1010,7 +1010,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_NI_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 120
 			}
 		}
@@ -1025,7 +1025,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 120
 			}
 		}
@@ -1052,7 +1052,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = demand_concession_NI_casus_belli
+				type = demand_concession_casus_belli
 				months = 40
 			}
 		}
@@ -1067,7 +1067,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = demand_concession_BC_casus_belli
+				type = demand_concession_casus_belli
 				months = 40
 			}
 		}
@@ -1112,7 +1112,7 @@ country_event = {
 
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_NI_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 120
 			}
 		}
@@ -1129,7 +1129,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 120
 			}
 		}
@@ -1162,7 +1162,7 @@ country_event = {
 
 			add_casus_belli = {
 				target = THIS
-				type = demand_concession_NI_casus_belli
+				type = demand_concession_casus_belli
 				months = 40
 			}
 		}
@@ -1179,7 +1179,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = demand_concession_BC_casus_belli
+				type = demand_concession_casus_belli
 				months = 40
 			}
 		}
@@ -1243,7 +1243,7 @@ country_event = {
 
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_NI_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 120
 			}
 		}
@@ -1260,20 +1260,20 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 120
 			}
 		}
 
 		casus_belli = {
 			target = CYR
-			type = conquest_any
+			type = conquest
 			months = 60
 		}
 
 		war = {
 			target = CYR
-			attacker_goal = { casus_belli = conquest_any }
+			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = humiliate }
 		}
 		ai_chance = { factor = 100 }
@@ -1866,11 +1866,11 @@ country_event = {
 			release_vassal = THIS
 			diplomatic_influence = { who = THIS value = -400 }
 
-			casus_belli = { target = THIS type = conquest_any months = 30 }
+			casus_belli = { target = THIS type = conquest months = 30 }
 
 			war = {
 				target = THIS
-				attacker_goal = { casus_belli = conquest_any }
+				attacker_goal = { casus_belli = conquest }
 				defender_goal = { casus_belli = status_quo }
 			}
 		}
@@ -4114,7 +4114,7 @@ country_event = {
 			THIS = {
 				war = {
 					target = BHR
-					attacker_goal = { casus_belli = conquest_any }
+					attacker_goal = { casus_belli = conquest }
 					call_ally = no
 				}
 			}
@@ -4122,7 +4122,7 @@ country_event = {
 
 		war = {
 			target = QAT
-			attacker_goal = { casus_belli = conquest_any }
+			attacker_goal = { casus_belli = conquest }
 			call_ally = no
 		}
 

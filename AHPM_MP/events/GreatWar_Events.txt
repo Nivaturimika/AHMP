@@ -10325,250 +10325,36 @@ country_event = {
 #Events for the imposition of a new government
 country_event = {
 	id = 96085
-	title = "EVTNAME96085" #Democracy
+	title = "EVTNAME96085"
 	desc = "EVTDESC96085"
-	news = yes
-	news_title = "EVTNAME96085_NEWS_TITLE"
-	news_desc_long = "EVTDESC96085_NEWS_LONG"
-	news_desc_medium = "EVTDESC96085_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96085_NEWS_SHORT"
 	picture = "unite"
-
 	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTA96085" #We welcome the new regime.
-		government = democracy
-		ruling_party_ideology = liberal
-		political_reform = universal_weighted_voting
-		political_reform = population_equal_weight
-		political_reform = yes_meeting
-		political_reform = free_press
-		political_reform = non_socialist
-		political_reform = gerrymandering
-		political_reform = non_secret_ballots
-		random_country = {
-			limit = {
-				is_sphere_leader_of = THIS
-				NOT = { has_country_flag = friendly_democracy }
-			}
-			diplomatic_influence = { who = THIS value = -100 }
-		}
-		random_country = {
-			limit = {
-				has_country_flag = friendly_democracy
-				truce_with = THIS
-			}
-			relation = { who = THIS value = 400 }
-			diplomatic_influence = { who = THIS value = 100 }
-			create_alliance = THIS
-			clr_country_flag = friendly_democracy
-		}
-		capital_scope = {
-			any_pop = {
-				limit = { literacy = 0.2 }
-				ideology = { factor = 0.1 value = liberal }
-			}
-		}
-		any_pop = {
-			scaled_militancy = {
-				ideology = reactionary
-				factor = 6
-			}
-			scaled_militancy = {
-				ideology = communist
-				factor = 6
-			}
-			scaled_militancy = {
-				ideology = fascist
-				factor = 6
-			}
-			scaled_militancy = {
-				ideology = liberal
-				factor = -4
-			}
+	immediate = {
+		if = {
+			limit = { FROM = { ruling_party_ideology = liberal } }
+			ruling_party_ideology = liberal
+		} else_if = {
+			limit = { FROM = { ruling_party_ideology = socialist } }
+			ruling_party_ideology = socialist
+		} else_if = {
+			limit = { FROM = { ruling_party_ideology = communist } }
+			ruling_party_ideology = communist
+		} else_if = {
+			limit = { FROM = { ruling_party_ideology = fascist } }
+			ruling_party_ideology = fascist
+		} else_if = {
+			limit = { FROM = { ruling_party_ideology = anarcho_liberal } }
+			ruling_party_ideology = anarcho_liberal
+		} else_if = {
+			limit = { FROM = { ruling_party_ideology = conservative } }
+			ruling_party_ideology = conservative
+		} else_if = {
+			limit = { FROM = { ruling_party_ideology = reactionary } }
+			ruling_party_ideology = reactionary
 		}
 	}
-}
-
-country_event = {
-	id = 96086
-	title = "EVTNAME96085" #Fascist
-	desc = "EVTDESC96086"
-	news = yes
-	news_title = "EVTNAME96086_NEWS_TITLE"
-	news_desc_long = "EVTDESC96086_NEWS_LONG"
-	news_desc_medium = "EVTDESC96086_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96086_NEWS_SHORT"
-	picture = "unite"
-
-	is_triggered_only = yes
-
 	option = {
 		name = "EVTOPTA96085" #We welcome the new regime.
-		government = fascist_dictatorship
-		ruling_party_ideology = fascist
-		political_reform = none_voting
-		political_reform = party_appointed
-		political_reform = no_meeting
-		political_reform = state_press
-		political_reform = state_controlled
-		political_reform = underground_parties
-		social_reform = primary_culture_only
-		political_reform = mandatory_service
-		random_country = {
-			limit = {
-				is_sphere_leader_of = THIS
-				NOT = { has_country_flag = friendly_fascist }
-			}
-			diplomatic_influence = { who = THIS value = -100 }
-		}
-		random_country = {
-			limit = {
-				has_country_flag = friendly_fascist
-				truce_with = THIS
-			}
-			relation = { who = THIS value = 400 }
-			diplomatic_influence = { who = THIS value = 200 }
-			create_alliance = THIS
-			clr_country_flag = friendly_fascist
-		}
-		capital_scope = {
-			any_pop = {
-				limit = { is_primary_culture = yes }
-				ideology = { factor = 0.1 value = fascist }
-			}
-		}
-		any_owned = {
-			remove_province_modifier = black_shirts
-			remove_province_modifier = fascist_welfare
-			remove_province_modifier = free_corps
-			remove_province_modifier = beer_hall_putsch
-			remove_province_modifier = labor_union
-			remove_province_modifier = militant_trade_union
-			remove_province_modifier = worker_union
-			remove_province_modifier = strike_solution
-			remove_province_modifier = province_strike
-			remove_province_modifier = may_day
-		}
-		any_pop = {
-			scaled_militancy = {
-				ideology = reactionary
-				factor = 6
-			}
-			scaled_militancy = {
-				ideology = communist
-				factor = 8
-			}
-			scaled_militancy = {
-				ideology = socialist
-				factor = 2
-			}
-			scaled_militancy = {
-				ideology = fascist
-				factor = -8
-			}
-			scaled_militancy = {
-				ideology = liberal
-				factor = 4
-			}
-		}
-		any_country = {
-			change_variable = {
-				which = successful_fascist_rebellions
-				value = 1
-			}
-		}
-	}
-}
-
-country_event = {
-	id = 96087
-	title = "EVTNAME96085" #Communist
-	desc = "EVTDESC96087"
-	news = yes
-	news_title = "EVTNAME96087_NEWS_TITLE"
-	news_desc_long = "EVTDESC96087_NEWS_LONG"
-	news_desc_medium = "EVTDESC96087_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96087_NEWS_SHORT"
-	picture = "unite"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTA96085" #We welcome the new regime.
-		government = proletarian_dictatorship
-		ruling_party_ideology = communist
-		political_reform = none_voting
-		political_reform = party_appointed
-		political_reform = no_meeting
-		political_reform = state_press
-		political_reform = state_controlled
-		political_reform = underground_parties
-		social_reform = good_minimum_wage
-		social_reform = eight_hours
-		social_reform = good_subsidies
-		social_reform = good_pensions
-		social_reform = good_health_care
-		nationalize = yes
-		random_country = {
-			limit = {
-				is_sphere_leader_of = THIS
-				NOT = { has_country_flag = friendly_communist }
-			}
-			diplomatic_influence = { who = THIS value = -100 }
-		}
-		random_country = {
-			limit = {
-				has_country_flag = friendly_communist
-				truce_with = THIS
-			}
-			relation = { who = THIS value = 400 }
-			diplomatic_influence = { who = THIS value = 200 }
-			create_alliance = THIS
-			clr_country_flag = friendly_communist
-		}
-		capital_scope = {
-			any_pop = {
-				ideology = { factor = 0.1 value = communist }
-			}
-		}
-		any_pop = {
-			scaled_militancy = {
-				ideology = reactionary
-				factor = 6
-			}
-			scaled_militancy = {
-				ideology = communist
-				factor = -8
-			}
-			scaled_militancy = {
-				ideology = socialist
-				factor = -4
-			}
-			scaled_militancy = {
-				ideology = fascist
-				factor = 8
-			}
-			scaled_militancy = {
-				ideology = liberal
-				factor = 4
-			}
-		}
-		any_owned = {
-			remove_province_modifier = labor_union
-			remove_province_modifier = militant_trade_union
-			remove_province_modifier = worker_union
-			remove_province_modifier = strike_solution
-			remove_province_modifier = province_strike
-			remove_province_modifier = may_day
-		}
-		any_country = {
-			change_variable = {
-				which = successful_communist_rebellions
-				value = 1
-			}
-		}
 	}
 }
 
@@ -10580,11 +10366,7 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = punitive_effects
-		OR = {
-			government = hms_government
-			government = prussian_constitutionalism
-			government = absolute_monarchy
-		}
+		test = is_monarchy_goverment
 		NOT = {
 			has_country_flag = end_of_monarchy
 			num_of_revolts = 1
@@ -11254,12 +11036,12 @@ country_event = {
 		}
 		casus_belli = {
 			target = FROM
-			type = conquest_any
+			type = conquest
 			months = 12
 		}
 		war = {
 			target = FROM
-			attacker_goal = { casus_belli = conquest_any }
+			attacker_goal = { casus_belli = conquest }
 		}
 		ai_chance = {
 			factor = 80

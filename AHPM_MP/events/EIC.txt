@@ -134,24 +134,17 @@ country_event = {
 	title = "EVTNAME9990005"
 	desc = "EVTDESC9990005"
 	picture = sepoy
-
 	trigger = {
 		tag = EIC
 		war = no
+		vassal_of != ENG
 	}
-
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
+	mean_time_to_happen = { days = 1 }
 	option = {
 		name = "EVT9990010OPTA"
 		any_neighbor_country = {
-			limit = {
-				is_vassal = yes
-			}
+			limit = { is_vassal = yes }
 			country_event = 9990006
 		}
 		prestige = 50
@@ -163,19 +156,13 @@ country_event = {
 	title = "EVTNAME9990006"
 	desc = "EVTDESC9990006"
 	picture = sepoy
-
 	is_triggered_only = yes
-
+	immediate = {
+		leave_alliance = ENG
+		ENG = { release_vassal = THIS }
+	}
 	option = {
 		name = "EVT9990007OPTA"
-		leave_alliance = ENG
-		ENG = {
-			release_vassal = THIS
-			diplomatic_influence = {
-				who = THIS
-				value = -1000
-			}
-		}
 	}
 }
 
@@ -1093,7 +1080,7 @@ country_event = {
 		diplomatic_influence = { who = BUR value = -200 }
 		casus_belli = {
 			target = BUR
-			type = demand_concession_NI_casus_belli
+			type = demand_concession_casus_belli
 			months = 60
 		}
 		ai_chance = {

@@ -1065,7 +1065,7 @@ country_event = {
             release_vassal = THIS
             casus_belli = {
                 target = THIS
-                type = demand_concession_BC_casus_belli
+                type = demand_concession_casus_belli
                 months = 60
             }
             casus_belli = {

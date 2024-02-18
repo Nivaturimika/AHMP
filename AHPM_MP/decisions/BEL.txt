@@ -613,7 +613,7 @@ political_decisions = {
 			set_global_flag = upper_katanga_mining_founded
 			prestige = 3
 			1987 = { trade_goods = iron }
-			1988 = { trade_goods = precious_metals } #Diamonds in Katanga
+			1988 = { trade_goods = precious_metal } #Diamonds in Katanga
 			1989 = { trade_goods = coal }
 
 			random_owned = {

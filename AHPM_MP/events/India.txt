@@ -527,7 +527,7 @@ country_event = {
         leave_alliance = PNJ
         war = {
             target = PNJ
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             call_ally = yes
         }
 

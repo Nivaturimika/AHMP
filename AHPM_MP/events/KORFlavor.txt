@@ -1076,11 +1076,11 @@ country_event = {
                     owns = 1485
                 }
             }
-            casus_belli = { target = THIS type = treaty_port_casus_belli months = 12 }
+            casus_belli = { target = THIS type = war_reparations months = 12 }
             THIS = { casus_belli = { target = FROM type = cut_down_to_size months = 12 } }
             war = {
                 target = THIS
-                attacker_goal = { casus_belli = treaty_port_casus_belli }
+                attacker_goal = { casus_belli = war_reparations }
                 defender_goal = { casus_belli = cut_down_to_size }
             }
         }
@@ -1133,7 +1133,7 @@ country_event = {
                 war = {
                     target = FROM
                     attacker_goal = { casus_belli = cut_down_to_size }
-                    defender_goal = { casus_belli = treaty_port_casus_belli }
+                    defender_goal = { casus_belli = war_reparations }
                 }
             }
         }

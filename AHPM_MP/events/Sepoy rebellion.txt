@@ -103,7 +103,7 @@ country_event = {
 		}
 		casus_belli ={
 			target = FROM
-			type = conquest_any
+			type = conquest
 			months = 36
 			}
 		ai_chance = {
@@ -135,7 +135,7 @@ country_event = {
 		}
 		casus_belli ={
 			target = FROM
-			type = conquest_any
+			type = conquest
 			months = 36
 			}
 		ai_chance = { factor = 0 }
@@ -181,7 +181,7 @@ country_event = {
 		war = {
 			target = MUG
 			attacker_goal = {
-				casus_belli = conquest_any
+				casus_belli = conquest
 				}
 			defender_goal = {
 				casus_belli = status_quo

@@ -850,7 +850,7 @@ country_event = {
             owner = {
                 war = {
                     target = FROM
-                    attacker_goal = { casus_belli = treaty_port_casus_belli }
+                    attacker_goal = { casus_belli = war_reparations }
                 }
             }
         }
@@ -859,7 +859,7 @@ country_event = {
             owner = {
                 war = {
                     target = FROM
-                    attacker_goal = { casus_belli = treaty_port_casus_belli }
+                    attacker_goal = { casus_belli = war_reparations }
                     call_ally = yes
                 }
             }
@@ -1240,7 +1240,7 @@ country_event = {
         war = {
             target = FROM
             attacker_goal = {
-                casus_belli = treaty_port_casus_belli
+                casus_belli = war_reparations
             }
             defender_goal = {
                 casus_belli = status_quo
@@ -1582,7 +1582,7 @@ country_event = {
             relation = { who = THIS value = -50 }
             casus_belli = {
                 target = THIS
-                type = treaty_port_casus_belli
+                type = war_reparations
                 months = 60
             }
         }
@@ -1740,7 +1740,7 @@ country_event = {
             relation = { who = THIS value = -50 }
             casus_belli = {
                 target = THIS
-                type = treaty_port_casus_belli
+                type = war_reparations
                 months = 60
             }
         }
@@ -1900,7 +1900,7 @@ country_event = {
         name = "EVT131709OPTA"
         war = {
             target = FROM
-            attacker_goal = { casus_belli = treaty_port_casus_belli }
+            attacker_goal = { casus_belli = war_reparations }
             defender_goal = { casus_belli = status_quo }
             call_ally = yes
         }
@@ -2003,7 +2003,7 @@ country_event = {
         name = "EVT131711OPTB"
         add_casus_belli = {
             target = FROM
-            type = treaty_port_casus_belli
+            type = war_reparations
             months = 24
         }
         FROM = {
@@ -6237,7 +6237,7 @@ country_event = {
                 num_of_ports = 1
                 ai = yes
             }
-            casus_belli = { target = THIS type = treaty_port_casus_belli months = 80 }
+            casus_belli = { target = THIS type = war_reparations months = 80 }
             relation = { who = THIS value = -400 }
             }
         }
@@ -6354,7 +6354,7 @@ country_event = {
                 }
             }
             relation = { who = THIS value = -400 }
-            add_casus_belli = { target = THIS type = treaty_port_casus_belli months = 60 }
+            add_casus_belli = { target = THIS type = war_reparations months = 60 }
         }
     }
 }
@@ -6384,14 +6384,14 @@ country_event = {
         prestige = 5
         add_casus_belli = {
             target = FROM
-            type = treaty_port_casus_belli
+            type = war_reparations
             months = 40
         }
         random_country = {
             limit = { tag = FROM ai = yes }
             war = {
                 target = THIS
-                attacker_goal = { casus_belli = treaty_port_casus_belli }
+                attacker_goal = { casus_belli = war_reparations }
                 call_ally = yes
             }
         }
@@ -6422,12 +6422,12 @@ country_event = {
             relation = { who = THIS value = -50 }
             casus_belli = {
                 target = THIS
-                type = treaty_port_casus_belli
+                type = war_reparations
                 months = 40
             }
             war = {
                 target = THIS
-                attacker_goal = { casus_belli = treaty_port_casus_belli }
+                attacker_goal = { casus_belli = war_reparations }
                 call_ally = yes
             }
         }
@@ -6504,17 +6504,17 @@ country_event = {
         relation = { who = FROM value = -200 }
         leave_alliance = FROM
         end_military_access = FROM
-        add_casus_belli = { target = FROM type = treaty_port_casus_belli months = 30 } diplomatic_influence = { who = FROM value = -400 }
+        add_casus_belli = { target = FROM type = war_reparations months = 30 } diplomatic_influence = { who = FROM value = -400 }
         random_country = {
             limit = { alliance_with = FROM is_greater_power = yes }
-            casus_belli = { target = THIS type = treaty_port_casus_belli months = 50 }
+            casus_belli = { target = THIS type = war_reparations months = 50 }
             relation = { who = THIS value = -200 }
             diplomatic_influence = { who = THIS value = -400 }
         }
 
         random_country = {
             limit = { tag = FROM ai = yes }
-            war = { target = THIS attacker_goal = { casus_belli = treaty_port_casus_belli } call_ally = yes }
+            war = { target = THIS attacker_goal = { casus_belli = war_reparations } call_ally = yes }
         }
 
         ai_chance = {

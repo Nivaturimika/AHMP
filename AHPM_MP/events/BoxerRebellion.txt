@@ -329,7 +329,7 @@ country_event = {
         diplomatic_influence = { who = FROM value = -50 }
         casus_belli = {
             target = FROM
-            type = cut_down_to_size_boxer
+            type = cut_down_to_size
             months = 12
         }
     }
@@ -416,7 +416,7 @@ country_event = {
             set_country_flag = intervened_boxer_war
             add_casus_belli = {
                 target = THIS
-                type = cut_down_to_size_boxer
+                type = cut_down_to_size
                 months = 12
             }
         }
@@ -509,13 +509,13 @@ country_event = {
         diplomatic_influence = { who = FROM value = -200 }
         casus_belli = {
             target = FROM
-            type = cut_down_to_size_boxer
+            type = cut_down_to_size
             months = 12
         }
         war = {
             target = FROM
             attacker_goal = {
-                casus_belli = cut_down_to_size_boxer
+                casus_belli = cut_down_to_size
             }
         }
         ai_chance = {
@@ -645,7 +645,7 @@ country_event = {
         }
         casus_belli = {
             target = QNG
-            type = cut_down_to_size_boxer
+            type = cut_down_to_size
             months = 12
         }
     }
@@ -721,7 +721,7 @@ country_event = {
             }
             casus_belli = {
                 target = QNG
-                type = treaty_port_casus_belli
+                type = war_reparations
                 months = 30
             }
         }

@@ -858,7 +858,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = demand_concession_NI_casus_belli
+				type = demand_concession_casus_belli
 				months = 24
 			}
 		}
@@ -871,7 +871,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = demand_concession_BC_casus_belli
+				type = demand_concession_casus_belli
 				months = 24
 			}
 		}
@@ -896,7 +896,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_NI_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 24
 			}
 		}
@@ -909,7 +909,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 24
 			}
 		}

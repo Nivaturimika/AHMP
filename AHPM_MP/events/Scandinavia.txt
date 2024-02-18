@@ -166,7 +166,7 @@ country_event = {
         war = {
             target = FROM
             attacker_goal = {
-                casus_belli = conquest_any
+                casus_belli = conquest
             }
         }
         ai_chance = {

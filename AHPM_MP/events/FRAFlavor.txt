@@ -1548,12 +1548,12 @@ country_event = {
 
 		casus_belli ={
 			target = ALD
-			type = conquest_any
+			type = conquest
 			months = 60
 		}
 		war = {
 			target = ALD
-			attacker_goal = { casus_belli = conquest_any }
+			attacker_goal = { casus_belli = conquest }
 			call_ally = no
 		}
 
@@ -1566,7 +1566,7 @@ country_event = {
 				NOT = { civilized = yes }
 				THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
 			}
-			add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 48 }
+			add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 48 }
 		}
 
 		random_country = {
@@ -1578,7 +1578,7 @@ country_event = {
 				NOT = { civilized = yes }
 				THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
 			}
-			add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 48 }
+			add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 48 }
 		}
 
 		random_country = {
@@ -1629,7 +1629,7 @@ country_event = {
 				}
 				add_casus_belli = {
 					target = THIS
-					type = conquest_any
+					type = conquest
 					months = 12
 				}
 				relation = { who = THIS value = -400 }
@@ -1639,7 +1639,7 @@ country_event = {
 						casus_belli = acquire_core_state
 						state_province_id = 1783
 					}
-					defender_goal = { casus_belli = conquest_any }
+					defender_goal = { casus_belli = conquest }
 					call_ally = no
 				}
 			}
@@ -1749,7 +1749,7 @@ country_event = {
 			FRA = { diplomatic_influence = { who = TOO value = -400 } }
 			add_casus_belli = {
 				target = FRA
-				type = demand_concession_BC_casus_belli
+				type = demand_concession_casus_belli
 				months = 24
 			}
 		}
@@ -1770,7 +1770,7 @@ country_event = {
 			FRA = { diplomatic_influence = { who = TOO value = -400 } }
 			add_casus_belli = {
 				target = FRA
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 24
 			}
 		}
@@ -1791,7 +1791,7 @@ country_event = {
 			FRA = { diplomatic_influence = { who = WOL value = -400 } }
 			add_casus_belli = {
 				target = FRA
-				type = establish_protectorate_BC_casus_belli
+				type = establish_protectorate_casus_belli
 				months = 24
 			}
 		}

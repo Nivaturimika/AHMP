@@ -45,7 +45,7 @@ country_event = {
         name = "EVT952501OPTA"
         casus_belli = {
             target = JAV
-            type = establish_protectorate_BC_casus_belli
+            type = establish_protectorate_casus_belli
             months = 48
             }
         ai_chance = { factor = 100 }
@@ -88,7 +88,7 @@ country_event = {
         diplomatic_influence = { who = DJA value = -400 }
         casus_belli = {
             target = DJA
-            type = establish_protectorate_NI_casus_belli
+            type = establish_protectorate_casus_belli
             months = 64
         }
     }
@@ -189,7 +189,7 @@ country_event = {
         any_country = { diplomatic_influence = { who = ATJ value = -50 } }
         casus_belli = {
             target = ATJ
-            type = establish_protectorate_NI_casus_belli
+            type = establish_protectorate_casus_belli
             months = 48
         }
         ai_chance = { factor = 100 }
@@ -225,7 +225,7 @@ country_event = {
         any_country = { diplomatic_influence = { who = ATJ value = -50 } }
         casus_belli = {
             target = ATJ
-            type = establish_protectorate_NI_casus_belli
+            type = establish_protectorate_casus_belli
             months = 48
         }
         ai_chance = { factor = 0.95 }
@@ -282,7 +282,7 @@ country_event = {
         any_country = { diplomatic_influence = { who = ATJ value = -50 } }
         casus_belli = {
             target = ATJ
-            type = establish_protectorate_NI_casus_belli
+            type = establish_protectorate_casus_belli
             months = 48
         }
         ai_chance = { factor = 90 }

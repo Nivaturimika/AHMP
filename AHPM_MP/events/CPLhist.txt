@@ -80,7 +80,7 @@ country_event = {
             treasury = 10000
 
             define_general = {
-                name = "Stanislaw Brzóska"
+                name = "Stanislaw Brzï¿½ska"
                 personality = spirited
                 background = nationalist
             }
@@ -111,7 +111,7 @@ country_event = {
 
         war = {
             target = CPL
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = status_quo }
         }
 
@@ -197,7 +197,7 @@ country_event = {
             treasury = 10000
 
             define_general = {
-                name = "Stanislaw Brzóska"
+                name = "Stanislaw Brzï¿½ska"
                 personality = spirited
                 background = nationalist
             }
@@ -228,7 +228,7 @@ country_event = {
 
         war = {
             target = CPL
-            attacker_goal = { casus_belli = conquest_any }
+            attacker_goal = { casus_belli = conquest }
             defender_goal = { casus_belli = status_quo }
         }
 

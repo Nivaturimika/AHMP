@@ -587,7 +587,7 @@ political_decisions = {
                     NOT = { civilized = yes }
                     THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
                 }
-                add_casus_belli = { target = THIS type = demand_concession_NI_casus_belli months = 40 }
+                add_casus_belli = { target = THIS type = demand_concession_casus_belli months = 40 }
             }
 
             random_country = {
@@ -599,7 +599,7 @@ political_decisions = {
                     NOT = { civilized = yes }
                     THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
                 }
-                add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 40 }
+                add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 40 }
             }
 
             random_country = {
@@ -611,7 +611,7 @@ political_decisions = {
                     NOT = { civilized = yes }
                     THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
                 }
-                add_casus_belli = { target = THIS type = demand_concession_BC_casus_belli months = 40 }
+                add_casus_belli = { target = THIS type = demand_concession_casus_belli months = 40 }
             }
 
             random_country = {
@@ -623,7 +623,7 @@ political_decisions = {
                     NOT = { civilized = yes }
                     THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
                 }
-                add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 40 }
+                add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 40 }
             }
         }
     }
