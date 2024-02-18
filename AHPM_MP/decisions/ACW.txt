@@ -3,10 +3,8 @@ political_decisions = {
 	apply_for_USA_statehood = {
 		picture = apply_for_usa_statehood
 		potential = {
-			test = is_free_country
-			any_country = {
-				test = is_american_union
-			}
+			continent = north_america
+			any_country = { test = is_american_union }
 		}
 		allow = {
 			THIS = { has_country_flag != usstatehood_we_have_applied }

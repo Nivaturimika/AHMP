@@ -37,6 +37,8 @@ is_influenced = {
 }
 
 has_usca_failed = {
+	main_parameter = nation
+	this_parameter = nation
 	OR = {
 		ELS = { exists = yes test != is_influenced }
 		HON = { exists = yes test != is_influenced }
@@ -203,4 +205,17 @@ has_citizen_rights = {
 		}
 		THIS = { citizens_rights = all_voting_pops }
 	}
+}
+
+can_apply_for_statehood = {
+	main_parameter = nation
+	this_parameter = nation
+
+	test = is_free_country
+	any_neighbor_country = { tag = THIS }
+	civilized = yes
+	government = democracy
+	is_greater_power = no
+	is_secondary_power = no
+	THIS = { is_greater_power = yes }
 }
