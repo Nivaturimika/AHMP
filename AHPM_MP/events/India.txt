@@ -540,30 +540,6 @@ country_event = {
         }
     }
 }
-#country_event = {
-#
-#    id = 97117
-#    title = "EVTNAME97117"
-#    desc = "EVTDESC97117"
-#    picture = "afghan_tribes"
-#
-#    trigger = {
-#        NOT = { has_country_modifier = afghan_tribal_warfare }
-#        tag = AFG
-#        war = yes
-#        civilized = no
-#    }
-#
-#    mean_time_to_happen = { days = 1 }
-#
-#    option = {
-#        name = "EVT97117OPTA"
-#        add_country_modifier = {
-#            name = guerilla_warfare
-#            duration = 1825
-#        }
-#    }
-#}
 
 #The Last Mughal Emperor - Bahadur Shah Zafar
 country_event = {

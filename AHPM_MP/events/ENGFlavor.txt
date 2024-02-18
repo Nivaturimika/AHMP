@@ -2695,34 +2695,7 @@ country_event = {
 	}
 }
 
-#country_event = {
-#
-#    id = 3697005
-#    title = "EVTNAME3697005" #The Canadian Borders - REMOVAL
-#    desc = "EVTDESC3697005"
-#    picture = "danishgovernment"
-#
-#    fire_only_once = yes
-#
-#    trigger = {
-#        civilized = yes
-#        2599 = { NOT = { owned_by = THIS } empty = no }
-#        2630 = { NOT = { owned_by = THIS } empty = no }
-#        6 = { empty = yes }
-#        owns = 17
-#    }
-#
-#    mean_time_to_happen = { days = 30 }
-#
-#    option = {
-#        name = "EVT3697003OPTA"
-#        6 = { secede_province = THIS add_core = CAN any_pop = { literacy = -0.99 } }
-#        }
-#    }
-#
-
 country_event = {
-
 	id = 3697006
 	title = "EVTNAME3697006" #The Pioneer Column
 	desc = "EVTDESC3697006"
