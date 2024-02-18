@@ -104,7 +104,7 @@ political_decisions = {
 			war_exhaustion = -2
 			add_country_modifier = { name = female_suffrage duration = -1 }
 			any_pop = {
-				limit = { ideology = reactionary }
+				limit = { pop_majority_ideology = reactionary }
 				militancy = 10
 			}
 		}

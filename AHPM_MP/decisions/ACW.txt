@@ -1402,200 +1402,13 @@ political_decisions = {
 					NOT = { has_pop_type = slaves }
 					state_scope = { any_owned_province = { has_pop_type = slaves } }
 				}
-				USA_129 = { add_core = CSA }
-				state_scope = {
-					is_slave = yes
-				}
 			}
-			#Texas
-			random_owned = {
-				limit = {
-					province_id = 133
-					OR = {
-						NOT = { state_scope = { is_slave = yes } }
-						NOT = { is_core = CSA }
-					}
-				}
-				TEX_132 = {
-					add_core = CSA
-					add_core = TEX
-				}
-				state_scope = { is_slave = yes }
+			USA_129 = { add_core = CSA is_slave = yes }
+			TEX_132 = {
+				add_core = CSA
+				add_core = TEX
+				is_slave = yes 
 			}
-			#California
-			random_owned = {
-				limit = {
-					province_id = 89
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				MEX_85 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Wyoming
-			random_owned = {
-				limit = {
-					province_id = 112
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_111 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Michigan
-			random_owned = {
-				limit = {
-					province_id = 173
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_176 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Wisconsin
-			random_owned = {
-				limit = {
-					province_id = 159
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_162 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Iowa
-			random_owned = {
-				limit = {
-					province_id = 151
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_151 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Minnesota
-			random_owned = {
-				limit = {
-					province_id = 155
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_158 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#North Dakota
-			random_owned = {
-				limit = {
-					province_id = 117
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_118 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#South Dakota
-			random_owned = {
-				limit = {
-					province_id = 120
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_121 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Montana
-			random_owned = {
-				limit = {
-					province_id = 113
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_116 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Idaho
-			random_owned = {
-				limit = {
-					province_id = 91
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				USA_91 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#New Mexico
-			random_owned = {
-				limit = {
-					province_id = 105
-					owner = { NOT = { 135 = { state_scope = { is_slave = yes } } } }
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				MEX_103 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Arizona
-			random_owned = {
-				limit = {
-					province_id = 100
-					owner = { NOT = { 2148 = { state_scope = { is_slave = yes } } } }
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				MEX_100 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Utah
-			random_owned = {
-				limit = {
-					province_id = 97
-					owner = { NOT = { 100 = { state_scope = { is_slave = yes } } } }
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				MEX_97 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-			#Nevada
-			random_owned = {
-				limit = {
-					province_id = 94
-					owner = { NOT = { 97 = { state_scope = { is_slave = yes } } } }
-					OR = {
-						state_scope = { is_slave = yes }
-						is_core = CSA
-					}
-				}
-				MEX_94 = { remove_core = CSA }
-				state_scope = { is_slave = no }
-			}
-
-			random_owned = { limit = { province_id = 138 } remove_core = RGR }
 			set_country_flag = clay_and_douglas_draft_enacted
 		}
 	}
@@ -1603,11 +1416,7 @@ political_decisions = {
 	offer_to_buy_cuba = {
 		picture = map_caribbean
 		potential = {
-			OR = {
-				tag = USA
-				tag = CSA
-				tag = TEX
-			}
+			test = is_american_union
 			2209 = {
 				NOT = { owner = { has_country_flag = new_world_nation } }
 			}
