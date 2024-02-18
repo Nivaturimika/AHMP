@@ -4,3 +4,8 @@ add_core = CLM
 trade_goods = grain
 terrain = montane_forest
 life_rating = 34
+state_building = {
+	level = 7
+	building = machine_parts_factory
+	upgrade = yes
+}

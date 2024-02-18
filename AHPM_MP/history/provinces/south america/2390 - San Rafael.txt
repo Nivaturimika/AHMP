@@ -1,14 +1,7 @@
 owner = MPC
 controller = MPC
 add_core = MPC
-add_core = ARC
-add_core = ARG
-add_core = CHL
+add_core = PTG
 trade_goods = fruit
 terrain = dryhills
 life_rating = 15
-1861.1.1 = {
-    owner = ARG
-    controller = ARG
-    add_core = ARG
-    }

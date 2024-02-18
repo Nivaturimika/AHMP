@@ -1,6 +1,11 @@
 owner = DEN
 controller = DEN
 add_core = DEN
-trade_goods = fish
+trade_goods = coal
 life_rating = 35
 terrain = small_island
+state_building = {
+	level = 7
+	building = machine_parts_factory
+	upgrade = yes
+}

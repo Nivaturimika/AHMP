@@ -4,3 +4,8 @@ add_core = SWE
 trade_goods = timber
 terrain = boreal
 life_rating = 10
+state_building = {
+	level = 7
+	building = machine_parts_factory
+	upgrade = yes
+}
