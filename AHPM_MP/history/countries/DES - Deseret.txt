@@ -38,9 +38,9 @@ school_reforms = no_schools
 
 set_country_flag = theocratic_government
 set_country_flag = new_world_nation
-set_country_flag = mormon_country
 
-ruling_party = DES_reactionary
+
+ruling_party = default_tribal
 upper_house = {
     fascist = 0
     liberal = 15

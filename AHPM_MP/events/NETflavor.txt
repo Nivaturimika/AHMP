@@ -94,7 +94,7 @@ country_event = {
     }
 }
 
-#Anglo-Dutch Treaties of 1870–71
+#Anglo-Dutch Treaties of 1870ï¿½71
  country_event = {
     id = 952503
     title = "EVTNAME952503"
@@ -379,7 +379,7 @@ country_event = {
         civilized = yes
         owns = 1405
         ATJ = { exists = no }
-        NOT = { has_country_flag = sunni_country }
+        NOT = { religion = sunni }
         year = 1890
     }
 
@@ -415,7 +415,7 @@ province_event = {
     trigger = {
         OR = {
             owned_by = ATJ
-            owner = { has_country_flag = sunni_country }
+            owner = { religion = sunni }
         }
         is_core = ATJ
         has_global_flag = aceh_jihad

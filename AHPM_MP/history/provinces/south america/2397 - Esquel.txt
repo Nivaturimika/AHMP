@@ -2,14 +2,11 @@ owner = MPC
 controller = MPC
 add_core = MPC
 add_core = PTG
-add_core = ARC
-add_core = ARG
-add_core = CHL
 trade_goods = wool
 terrain = dryhills
 life_rating = 15
 state_building = {
-    level = 3
-    building = steel_factory
-    upgrade = yes
+	level = 3
+	building = steel_factory
+	upgrade = yes
 }

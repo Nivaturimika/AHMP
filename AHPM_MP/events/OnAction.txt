@@ -78,7 +78,6 @@ country_event = {
 	trigger = {
 		NOT = { tag = FROM }
 		NOT = { has_country_modifier = neutrality_modifier }
-		NOT = { has_country_flag = bankruptcy_events_disabled }
 	}
 
 	is_triggered_only = yes
@@ -140,7 +139,6 @@ country_event = {
 	trigger = {
 		NOT = { tag = FROM }
 		NOT = { has_country_modifier = neutrality_modifier }
-		NOT = { has_country_flag = bankruptcy_events_disabled }
 	}
 
 	is_triggered_only = yes
@@ -213,7 +211,6 @@ country_event = {
 	trigger = {
 		NOT = { tag = FROM }
 		NOT = { has_country_modifier = neutrality_modifier }
-		NOT = { has_country_flag = bankruptcy_events_disabled }
 	}
 
 	is_triggered_only = yes

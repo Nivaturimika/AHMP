@@ -39,7 +39,7 @@ border_policy = open_borders
 
 set_country_flag = animist_country
 
-ruling_party = GAZ_conservative
+ruling_party = default_tribal
 upper_house = {
     fascist = 0
     liberal = 0
@@ -50,7 +50,7 @@ upper_house = {
     communist = 0
 }
 
-set_country_flag = lacking_writing_system
+decision = setup_lacks_writing
 
 # Starting Consciousness
 consciousness = 0

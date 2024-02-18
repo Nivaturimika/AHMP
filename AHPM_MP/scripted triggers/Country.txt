@@ -36,10 +36,29 @@ is_influenced = {
 	}
 }
 
+has_usca_failed = {
+	main_parameter = nation
+	this_parameter = nation
+	OR = {
+		ELS = { exists = yes test != is_influenced }
+		HON = { exists = yes test != is_influenced }
+		NIC = { exists = yes test != is_influenced }
+		COS = { exists = yes test != is_influenced }
+	}
+}
+
 is_monarchy_goverment = {
 	main_parameter = nation
 	OR = {
 		government = absolute_monarchy
+		government = prussian_constitutionalism
+		government = hms_government
+	}
+}
+
+is_constitutional_goverment = {
+	main_parameter = nation
+	OR = {
 		government = prussian_constitutionalism
 		government = hms_government
 	}
@@ -116,12 +135,15 @@ is_same_ruling_party_ideology = {
 		THIS = { ruling_party_ideology = fascist }
 		ruling_party_ideology = fascist
 	}
+	OR = {
+		THIS = { ruling_party_ideology = tribal }
+		ruling_party_ideology = tribal
+	}
 }
 
 is_same_ruling_party_ideology = {
 	main_parameter = pop
 	this_parameter = nation
-
 	OR = {
 		THIS = { ruling_party_ideology = reactionary }
 		pop_majority_ideology = reactionary
@@ -150,23 +172,59 @@ is_same_ruling_party_ideology = {
 		THIS = { ruling_party_ideology = fascist }
 		pop_majority_ideology = fascist
 	}
+	OR = {
+		THIS = { ruling_party_ideology = tribal }
+		pop_majority_ideology = tribal
+	}
 }
 
 has_elections = {
 	main_parameter = nation
-	OR = {
-		government = prussian_constitutionalism
-		government = hms_government
-		government = democracy
-	}
-	OR = {
-		vote_franschise = wealth_voting
-		vote_franschise = universal_weighted_voting
-		vote_franschise = universal_voting
-	}
+	vote_franschise != none_voting
 }
 
 is_stable_goverment = {
 	main_parameter = nation
-	
+	always = yes
+}
+
+is_minority_culture = {
+	main_parameter = pop
+	is_primary_culture = no
+	is_accepted_culture = no
+}
+
+has_citizen_rights = {
+	main_parameter = pop
+	this_parameter = nation
+	OR = {
+		AND = {
+			THIS = { citizens_rights = primary_culture_only }
+			is_primary_culture = yes
+		}
+		AND = {
+			THIS = { citizens_rights = culture_voting_only }
+			test != is_minority_culture
+		}
+		THIS = { citizens_rights = all_voting_pops }
+	}
+}
+
+can_apply_for_statehood = {
+	main_parameter = nation
+	this_parameter = nation
+
+	war = no
+	is_independant = yes
+	civilized = yes
+	government = democracy
+	THIS = { war = no }
+	THIS = { is_independant = yes }
+	THIS = { civilized = yes }
+	THIS = { government = democracy }
+
+	any_neighbor_country = { tag = THIS }
+	is_greater_power = no
+	is_secondary_power = no
+	THIS = { is_greater_power = yes }
 }

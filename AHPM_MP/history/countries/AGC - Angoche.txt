@@ -46,9 +46,7 @@ upper_house = {
     socialist = 0
     communist = 0
 }
-
-set_country_flag = sunni_country
-set_country_flag = lacking_writing_system
+decision = setup_lacks_writing
 
 # Starting Consciousness
 consciousness = 0

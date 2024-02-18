@@ -981,8 +981,8 @@ country_event = {
         }
         random_owned = { limit = { owner = { has_country_flag = catholic_country } } CNG = { religion = catholic } }
         random_owned = { limit = { owner = { has_country_flag = protestant_country } } CNG = { religion = protestant } }
-        random_owned = { limit = { owner = { has_country_flag = orthodox_country } } CNG = { religion = orthodox } }
-        random_owned = { limit = { owner = { has_country_flag = sunni_country } } CNG = { religion = sunni } }
+        random_owned = { limit = { owner = { religion = orthodox } } CNG = { religion = orthodox } }
+        random_owned = { limit = { owner = { religion = sunni } } CNG = { religion = sunni } }
     }
 }
 

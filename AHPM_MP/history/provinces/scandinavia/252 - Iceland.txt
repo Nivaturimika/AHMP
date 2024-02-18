@@ -5,3 +5,8 @@ add_core = ICL
 trade_goods = fish
 life_rating = 32
 colonial = 2
+state_building = {
+	level = 7
+	building = machine_parts_factory
+	upgrade = yes
+}

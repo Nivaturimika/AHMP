@@ -94,50 +94,18 @@ political_decisions = {
 	enact_female_suffrage = {
 		picture = enact_female_suffrage
 		potential = {
-			NOT = { has_country_modifier = female_suffrage }
+			has_country_modifier != female_suffrage
 		}
-
 		allow = {
-			civilized = yes
-			test = is_monarchy_goverment
-			OR = {
-				vote_franschise = universal_weighted_voting
-				vote_franschise = universal_voting
-			}
+			test = has_elections
 			social_science = 1
-			revolution_n_counterrevolution = 1
-			OR = {
-				upper_house = {
-					ideology = socialist
-					value = 0.3
-				}
-				upper_house = {
-					ideology = liberal
-					value = 0.3
-				}
-				AND = {
-					upper_house = {
-						ideology = socialist
-						value = 0.15
-					}
-					upper_house = {
-						ideology = liberal
-						value = 0.15
-					}
-				}
-			}
-			OR = {
-				political_reform_want = 0.15
-				vote_franschise = universal_voting
-			}
-			average_consciousness = 4
 		}
-
 		effect = {
 			war_exhaustion = -2
-			add_country_modifier = {
-				name = female_suffrage
-				duration = -1
+			add_country_modifier = { name = female_suffrage duration = -1 }
+			any_pop = {
+				limit = { pop_majority_ideology = reactionary }
+				militancy = 10
 			}
 		}
 	}
@@ -1602,7 +1570,6 @@ political_decisions = {
 			modifier = { factor = 0 has_country_modifier = totalitarian_system }
 			modifier = { factor = 0 NOT = { year = 1850 } }
 			modifier = { factor = 0 NOT = { state_n_government = 1 } }
-			modifier = { factor = 0 has_country_flag = ghost_country }
 			modifier = {
 				factor = 0
 				OR = {

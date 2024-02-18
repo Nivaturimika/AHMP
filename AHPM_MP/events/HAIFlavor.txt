@@ -308,43 +308,26 @@ country_event = {
 		name = "EVT45106OPTA"
 		prestige = -10
 		set_country_flag = agreed_to_pay_debt
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					NOT = { money = 500000 }
-					check_variable = { which = owed_cash_money value = 9 }
-				}
+				NOT = { money = 500000 }
+				check_variable = { which = owed_cash_money value = 9 }
 			}
-			owner = { change_variable = { which = owed_cash_money value = 500 } }
-		}
-		random_owned = {
+			change_variable = { which = owed_cash_money value = 500 }
+		} else_if = {
 			limit = {
-				owner = {
-					NOT = { money = 500000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
+				NOT = { money = 500000 }
+				NOT = { check_variable = { which = owed_cash_money value = 1 } }
 			}
-			owner = { set_variable = { which = owed_cash_money value = 500 } }
+			set_variable = { which = owed_cash_money value = 500 }
 		}
-
 		FRA = { treasury = 500000 }
-
-		ai_chance = {
-			factor = 90
-		}
 	}
 
 	option = {
 		name = "EVT45106OPTB"
 		prestige = 10
 		FRA = { country_event = 45107 }
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 3
-				has_country_modifier = malevolent_ai
-			}
-		}
 	}
 }
 

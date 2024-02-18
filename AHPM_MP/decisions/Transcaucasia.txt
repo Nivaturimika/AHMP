@@ -384,14 +384,14 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			TCA = {
-				NOT = { has_country_flag = sunni_country }
+				NOT = { religion = sunni }
 				owns = 1102
 				exists = yes
 			}
 				is_our_vassal = TCA
 				OR = {
-					has_country_flag = sunni_country
-					has_country_flag = ibadi_country
+					religion = sunni
+					religion = ibadi
 				}
 			}
 
@@ -402,7 +402,7 @@ political_decisions = {
 		effect = {
 			TCA = {
 				capital = 1102
-				set_country_flag = sunni_country
+				
 				clr_country_flag = shiite_country
 				clr_country_flag = orthodox_country
 				religion = sunni
@@ -422,12 +422,12 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			TCA = {
-				NOT = { has_country_flag = shiite_country }
+				NOT = { religion = shiite }
 				owns = 1102
 				exists = yes
 			}
 			is_our_vassal = TCA
-			has_country_flag = shiite_country
+			religion = shiite
 		}
 
 		allow = {
@@ -437,7 +437,7 @@ political_decisions = {
 		effect = {
 			TCA = {
 				capital = 1102
-				set_country_flag = shiite_country
+				
 				clr_country_flag = sunni_country
 				clr_country_flag = orthodox_country
 				religion = shiite
@@ -457,7 +457,7 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			TCA = {
-				NOT = { has_country_flag = orthodox_country }
+				NOT = { religion = orthodox }
 				owns = 1090
 				exists = yes
 			}
@@ -465,9 +465,9 @@ political_decisions = {
 			OR = {
 				has_country_flag = catholic_country
 				has_country_flag = protestant_country
-				has_country_flag = mormon_country
-				has_country_flag = orthodox_country
-				has_country_flag = coptic_country
+				religion = mormon
+				religion = orthodox
+				religion = coptic
 			}
 		}
 
@@ -478,7 +478,7 @@ political_decisions = {
 		effect = {
 			TCA = {
 				capital = 1090
-				set_country_flag = orthodox_country
+				
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				religion = orthodox
@@ -498,7 +498,7 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			ABK = {
-				NOT = { has_country_flag = orthodox_country }
+				NOT = { religion = orthodox }
 				exists = yes
 			}
 			OR = {
@@ -508,9 +508,9 @@ political_decisions = {
 			OR = {
 				has_country_flag = catholic_country
 				has_country_flag = protestant_country
-				has_country_flag = mormon_country
-				has_country_flag = orthodox_country
-				has_country_flag = coptic_country
+				religion = mormon
+				religion = orthodox
+				religion = coptic
 			}
 		}
 
@@ -521,7 +521,7 @@ political_decisions = {
 		effect = {
 			ABK = {
 				clr_country_flag = sunni_country
-				set_country_flag = orthodox_country
+				
 				religion = orthodox
 				any_pop = {
 					limit = { NOT = { has_pop_religion = orthodox } }
@@ -536,14 +536,14 @@ political_decisions = {
 		picture = form_transcaucasia
 		potential = {
 			ABK = {
-				NOT = { has_country_flag = sunni_country }
+				NOT = { religion = sunni }
 				exists = yes
 			}
 			OR = {
 				is_our_vassal = TCA
 				ABK = { in_sphere = THIS }
 			}
-			has_country_flag = sunni_country
+			religion = sunni
 		}
 
 		allow = {
@@ -552,7 +552,7 @@ political_decisions = {
 
 		effect = {
 			ABK = {
-				set_country_flag = sunni_country
+				
 				clr_country_flag = orthodox_country
 				religion = sunni
 				any_pop = {

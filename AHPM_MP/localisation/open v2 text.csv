@@ -543,3 +543,11 @@ GUR_democracy;Gurani
 GUR_absolute_monarchy;Gurani
 GUR_prussian_constitutionalism;Gurani
 GUR_hms_government;Gurani
+tribal;Tribal
+default_tribal;Tribal
+default_conservative;Conservative
+default_reactionary;Reactionary
+default_socialist;Socialist
+default_communist;Communist
+default_fascist;Fascist
+default_liberal;Liberal

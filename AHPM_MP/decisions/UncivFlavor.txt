@@ -503,7 +503,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				has_country_modifier = lacks_writing_system
-				has_country_flag = lacking_writing_system
+				has_country_modifier = lacks_writing_system
 			}
 		}
 
@@ -530,7 +530,6 @@ political_decisions = {
 		effect = {
 			research_points = -2000
 			random_owned = { limit = { owner = { ai = yes } } owner = { research_points = -6000 } }
-			clr_country_flag = lacking_writing_system
 			remove_country_modifier = lacks_writing_system
 		}
 		ai_will_do = { factor = 1 }
@@ -620,14 +619,14 @@ political_decisions = {
 			NOT = { primary_culture = japanese }
 			NOT = { tag = HYD }
 			NOT = { tag = MUG }
-			NOT = { has_country_flag = sunni_country }
-			NOT = { has_country_flag = shiite_country }
-			NOT = { has_country_flag = ibadi_country }
-			NOT = { has_country_flag = jewish_country }
+			NOT = { religion = sunni }
+			NOT = { religion = shiite }
+			NOT = { religion = ibadi }
+			NOT = { religion = jewish }
 			NOT = { has_country_flag = catholic_country }
-			NOT = { has_country_flag = orthodox_country }
+			NOT = { religion = orthodox }
 			NOT = { has_country_flag = protestant_country }
-			NOT = { has_country_flag = coptic_country }
+			NOT = { religion = coptic }
 			NOT = { has_country_modifier = missionary_activity }
 			civilized = no
 			OR = {
@@ -672,7 +671,7 @@ political_decisions = {
 					owner = {
 						part_of_sphere = no
 						OR = {
-							NOT = { has_country_flag = lacking_writing_system }
+							NOT = { has_country_modifier = lacks_writing_system }
 							has_country_flag = changed_religion
 						}
 					}
@@ -756,7 +755,7 @@ political_decisions = {
 			civilized = no
 			civilization_progress = 0.2
 			NOT = {
-				has_country_flag = lacking_writing_system
+				has_country_modifier = lacks_writing_system
 				any_owned_province = { has_building = naval_base }
 			}
 			flintlock_rifles = 1

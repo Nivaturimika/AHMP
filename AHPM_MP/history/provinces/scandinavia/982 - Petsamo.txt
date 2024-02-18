@@ -4,3 +4,8 @@ add_core = RUS
 add_core = KRL
 trade_goods = iron
 life_rating = 10
+state_building = {
+	level = 4
+	building = steel_factory
+	upgrade = yes
+}

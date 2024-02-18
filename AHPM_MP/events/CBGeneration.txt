@@ -2106,8 +2106,8 @@ province_event = {
         is_core = THIS
         any_core = {
             exists = yes
-            NOT = { tag = THIS }
-            NOT = { is_cultural_union = THIS }
+            tag != THIS
+            is_cultural_union != THIS
         }
         has_province_modifier = national_assimilation
         NOT = { has_province_modifier = national_assimilation_rejection }
@@ -2115,7 +2115,6 @@ province_event = {
         owned_by = THIS
         is_colonial = no
         owner = {
-            civilized = yes
             war = no
             NOT = {
                 citizens_rights = all_voting_pops
@@ -2734,9 +2733,7 @@ country_event = {
 
     option = {
         name = "EVT2650OPTA"
-        FROM = {
-            country_event = 2660
-        }
+        FROM = { country_event = 2660 }
     }
 }
 

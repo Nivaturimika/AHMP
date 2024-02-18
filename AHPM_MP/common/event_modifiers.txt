@@ -2,30 +2,6 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
-####AI Personalities
-
-coward_ai = {
-    badboy = -0.01
-    cb_generation_speed_modifier = 0.25
-    icon = 3
-}
-
-benefactor_ai = {
-    cb_generation_speed_modifier = 0.1
-    icon = 3
-}
-
-malevolent_ai = {
-    cb_generation_speed_modifier = -0.05
-    icon = 3
-}
-
-picking_personality = {
-    icon = 3
-}
-
-####
-
 ######
 ##Rebel Modifiers
 ######
@@ -187,6 +163,12 @@ integrating_colony = {
 
 claimed_africa = {
     prestige = 0.01
+    icon = 7
+}
+
+protector_of_tribes = {
+    prestige = -0.01
+    core_pop_militancy_modifier = 0.02
     icon = 7
 }
 
@@ -1139,7 +1121,7 @@ female_suffrage = {
     middle_vote = 0.02
     rich_vote = -0.01
     core_pop_militancy_modifier = -0.02
-    global_immigrant_attract = 0.05
+    global_immigrant_attract = 0.095
     icon = 7
 }
 

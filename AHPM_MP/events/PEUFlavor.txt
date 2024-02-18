@@ -84,7 +84,6 @@ country_event = {
         set_global_flag = machu_picchu_discovered
         prestige = 25
     }
-
 }
 
 
