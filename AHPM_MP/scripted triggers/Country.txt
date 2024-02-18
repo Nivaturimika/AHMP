@@ -36,6 +36,15 @@ is_influenced = {
 	}
 }
 
+has_usca_failed = {
+	OR = {
+		ELS = { exists = yes test != is_influenced }
+		HON = { exists = yes test != is_influenced }
+		NIC = { exists = yes test != is_influenced }
+		COS = { exists = yes test != is_influenced }
+	}
+}
+
 is_monarchy_goverment = {
 	main_parameter = nation
 	OR = {
@@ -70,6 +79,12 @@ is_tech_school_decision = {
 		has_country_flag = picking_up_a_tech_school
 		ai = yes
 	}
+}
+
+is_free_country = {
+	main_parameter = nation
+	is_substate = no
+	is_vassal = no
 }
 
 is_warable_country = {

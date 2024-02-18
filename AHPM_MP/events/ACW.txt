@@ -4,15 +4,9 @@ country_event = {
 	title = "EVTNAME160000"
 	desc = "EVTDESC160000"
 	picture = "abraham_speech"
-
 	trigger = {
 		tag = USA
-		year = 1850
-		NOT = { has_global_flag = american_civil_war_has_happened }
-		OR = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
+		has_global_flag != american_civil_war_has_happened
 		has_country_flag = john_browns_raid
 		has_country_flag = dred_scott_decision
 		OR = {
@@ -27,9 +21,7 @@ country_event = {
 			}
 		}
 	}
-
 	fire_only_once = yes
-
 	mean_time_to_happen = {
 		months = 6
 		modifier = {
@@ -51,19 +43,21 @@ country_event = {
 			year = 1861
 		}
 	}
-
 	immediate = {
 		set_country_flag = civil_war_soon
-		any_pop = {
-			dominant_issue = {
-				value = yes_slavery
-				factor = 0.44
+		if = { #Forceful repulsion of slavery for USA
+			limit = { slavery = no_slavery }
+			any_pop = {
+				dominant_issue = {
+					value = yes_slavery
+					factor = 0.88
+				}
 			}
-		}
-		any_owned = {
-			limit = { pop_majority_issue = yes_slavery }
-			state_scope = {
-				add_core = CSA
+			any_owned = {
+				limit = { pop_majority_issue = yes_slavery }
+				state_scope = {
+					add_core = CSA
+				}
 			}
 		}
 		release_vassal = CSA
@@ -84,14 +78,12 @@ country_event = {
 			set_country_flag = exempt_from_vassal_contribution
 		}
 	}
-
 	option = {
 		name = "EVTOPTA160000"
 		ai_chance = {
 			factor = 100
 		}
 	}
-
 	option = {
 		name = "EVTOPTB16000"
 		set_country_flag = civil_war_soon
@@ -159,11 +151,7 @@ country_event = {
 	picture = "Slaves"
 
 	trigger = {
-		tag = USA
-		OR = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
+		primary_culture = yankee
 		NOT = { has_global_flag = american_civil_war_has_happened }
 	}
 
@@ -220,11 +208,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = USA
-		OR = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
+		primary_culture = yankee
 		NOT = { has_country_flag = john_browns_raid }
 		NOT = { has_global_flag = american_civil_war_has_happened }
 		any_state = {
@@ -284,11 +268,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = USA
-		OR = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
+		primary_culture = yankee
 		NOT = { has_country_flag = dred_scott_decision }
 		NOT = { has_global_flag = american_civil_war_has_happened }
 		any_state = {
@@ -357,11 +337,7 @@ country_event = {
 	picture = "southern_belle"
 
 	trigger = {
-		tag = USA
-		OR = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
+		primary_culture = yankee
 		any_state = {
 			is_slave = yes
 			is_colonial = no
@@ -532,11 +508,7 @@ country_event = {
 	picture = "dixie_mansion"
 
 	trigger = {
-		tag = USA
-		OR = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
+		primary_culture = yankee
 		any_state = {
 			is_slave = yes
 			is_colonial = no

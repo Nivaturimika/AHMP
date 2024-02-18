@@ -220,6 +220,17 @@ political_reforms = {
 			rules = { slavery_allowed = no }
 			global_immigrant_attract = 0.01
 			allow = { test = is_stable_goverment }
+			on_execute = {
+				effect = {
+					if = {
+						limit = {
+							primary_culture = yankee
+							has_global_flag != american_civil_war_has_happened
+						}
+						country_event = 160000
+					}
+				}
+			}
 		}
 	}
 

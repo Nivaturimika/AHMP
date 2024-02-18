@@ -1,12 +1,11 @@
 country_event = {
 	id = 800060
-	title = "EVTNAME800060" # Spread of Communism
+	title = "EVTNAME800060" # Spread of our ideology
 	desc = "EVTDESC800060"
 	picture = "propaganda"
 	trigger = {
 		war = no
 		money = 20000
-		government = proletarian_dictatorship
 		any_neighbor_country = {
 			test != is_same_ruling_party_ideology
 			alliance_with = THIS
