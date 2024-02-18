@@ -196,9 +196,7 @@ country_event = {
 			alliance_with = THIS
 		}
 	}
-	mean_time_to_happen = {
-
-	}
+	mean_time_to_happen = { months = 1 }
 	option = {
 		name = "EVT110093OPTA"
 		any_country = {
@@ -211,7 +209,7 @@ country_event = {
 		name = "EVT110093OPTB"
 		add_country_modifier = {
 			name = protector_of_tribes
-			duration = 1600
+			duration = 150
 		}
 		ai_chance = { factor = 0 }
 	}
