@@ -221,51 +221,6 @@ country_event = {
 
 }
 
-province_event = {
-    id = 97086
-    title = "EVTNAME97086" #Pacification of Patagonia
-    desc = "EVTDESC97086"
-
-    trigger = {
-        OR = {
-            region = CHL_2332
-            region = ARG_2398
-            region = ARG_2391
-            province_id = 2362
-            province_id = 2364
-            province_id = 2365
-            province_id = 2372
-            province_id = 2377
-            province_id = 2353
-            province_id = 2393
-            province_id = 2395
-            is_core = PTG
-        }
-        OR = {
-            has_country_flag = conquest_of_the_desert
-            has_country_flag = occupation_of_araucania
-            has_country_flag = conquest_of_the_chaco
-        }
-        NOT = { life_rating = 19 }
-    }
-
-    mean_time_to_happen = {
-        months = 18
-    }
-
-    option = {
-        name = "EVT97086OPTA" #Excellent!
-        life_rating = 18
-        any_pop = {
-            limit = { is_culture_group = native_american }
-            militancy = 8
-            consciousness = 3
-            reduce_pop = 0.97
-        }
-    }
-}
-
-
 country_event = {
     id = 97090
     title = "EVTNAME97090" #The Argentina-Chile Border Treaty

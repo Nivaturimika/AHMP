@@ -7,7 +7,6 @@ political_decisions = {
 				tag = ARC
 				tag = LPL
 			}
-			has_country_flag = conquest_of_the_desert
 			CHL = {
 				exists = yes
 				has_country_flag = occupation_of_araucania
@@ -21,18 +20,6 @@ political_decisions = {
 				war = no
 				NOT = { truce_with = THIS }
 			}
-			2332 = { empty = no }
-			2333 = { empty = no }
-			2334 = { empty = no }
-			2335 = { empty = no }
-			2391 = { empty = no }
-			2392 = { empty = no }
-			2394 = { empty = no }
-			2396 = { empty = no }
-			2397 = { empty = no }
-			2398 = { empty = no }
-			2399 = { empty = no }
-			2400 = { empty = no }
 		}
 
 		effect = {
