@@ -78,7 +78,7 @@ province_event = {
             province_id = 104            # San Francisco
             province_id = 3                # Kenai
             province_id = 90            # San Diego
-            province_id = 695            # Königsberg
+            province_id = 695            # Kï¿½nigsberg
             province_id = 2470            # Port Macquaire Australia
             province_id = 2471            # Bathurst Australia
             province_id = 2472            # Eden Australia
@@ -373,7 +373,7 @@ province_event = {
         }
         NOT = {
             year = 1900
-            trade_goods = precious_goods
+            trade_goods = precious_metals
             trade_goods = coal
             trade_goods = iron
         }
@@ -390,7 +390,7 @@ province_event = {
 
     option = {
         name = "EVTOPTA1105"
-        trade_goods = precious_goods
+        trade_goods = precious_metals
         # life_rating = 5
     }
 }
@@ -409,7 +409,7 @@ province_event = {
         }
         NOT = {
             year = 1910
-            trade_goods = precious_goods
+            trade_goods = precious_metals
             trade_goods = coal
             trade_goods = iron
         }
@@ -434,7 +434,7 @@ province_event = {
 
     option = {
         name = "EVTOPTA1105"
-        trade_goods = precious_goods
+        trade_goods = precious_metals
         # life_rating = 5
     }
 }

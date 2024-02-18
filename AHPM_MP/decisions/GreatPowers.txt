@@ -87,7 +87,7 @@ political_decisions = {
     copenhagen_convention = {
         picture = sound_dues
         potential = {
-            372 = { trade_goods = precious_goods NOT = { owned_by = THIS } }
+            372 = { trade_goods = precious_metals NOT = { owned_by = THIS } }
             is_greater_power = yes
             capital_scope = { continent = europe }
             NOT = {
@@ -116,7 +116,7 @@ political_decisions = {
     abolish_sound_dues = {
         picture = sound_dues
         potential = {
-            372 = { trade_goods = precious_goods NOT = { owned_by = THIS } }
+            372 = { trade_goods = precious_metals NOT = { owned_by = THIS } }
             has_global_flag = sound_dues_resisted
         }
 

@@ -4160,12 +4160,12 @@ province_event = {
 			province_id = 1498
 			AND = {
 				province_id = 1496
-				NOT = { 2632 = { trade_goods = precious_goods } }
+				NOT = { 2632 = { trade_goods = precious_metals } }
 			}
 			AND = {
 				province_id = 2632
 				NOT = { total_pops = 30000 }
-				NOT = { 1496 = { trade_goods = precious_goods } }
+				NOT = { 1496 = { trade_goods = precious_metals } }
 			}
 		}
 		port = yes
@@ -4184,7 +4184,7 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA90954"
-		trade_goods = precious_goods
+		trade_goods = precious_metals
 		any_pop = { limit = { is_culture_group = east_asian } reduce_pop = 1.2 }
 		add_province_modifier = { name = treaty_port duration = -1 }
 	}
@@ -4202,7 +4202,7 @@ province_event = {
 			owner = { is_culture_group = east_asian }
 			owner = { is_culture_group = far_east_asian }
 		}
-		trade_goods = precious_goods
+		trade_goods = precious_metals
 		OR = {
 			province_id = 1498
 			province_id = 1496

@@ -842,20 +842,13 @@ country_event = {
     title = "EVTNAME3750"
     desc = "EVTDESC3750"
     picture = "Policeaction"
-
-    trigger = {
-        civilized = yes
-        public_meetings = no_meeting
-    }
-
+    trigger = { public_meetings = no_meeting }
     mean_time_to_happen = {
         months = 500
-
         modifier = {
             factor = 0.9
             plurality = 4
         }
-
         modifier = {
             factor = 0.9
             plurality = 5
@@ -865,11 +858,7 @@ country_event = {
     option = {
         name = "EVTOPTA3750"
         random_state = {
-            limit = {
-                NOT = {
-                    is_colonial = yes
-                }
-            }
+            limit = { is_colonial = no }
             any_pop = {
                 consciousness = -1
                 militancy = 1
@@ -880,11 +869,7 @@ country_event = {
     option = {
         name = "EVTOPTB3750"
         random_state = {
-            limit = {
-                NOT = {
-                    is_colonial = yes
-                }
-            }
+            limit = { is_colonial = no }
             any_pop = {
                 consciousness = 1
                 militancy = -1

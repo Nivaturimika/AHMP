@@ -2298,7 +2298,7 @@ country_event = {
         civilized = yes
         2094 = {
             empty = yes
-            NOT = { trade_goods = precious_goods }
+            NOT = { trade_goods = precious_metals }
         }
     }
 
@@ -2334,7 +2334,7 @@ country_event = {
         2094 = {
             secede_province = THIS
             change_province_name = "Kimberley"
-            trade_goods = precious_goods
+            trade_goods = precious_metals
             add_province_modifier = { name = gold_rush duration = 5475 }
             any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
         }

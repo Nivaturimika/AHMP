@@ -1,7 +1,7 @@
 owner = DEN
 controller = DEN
 add_core = DEN
-trade_goods = precious_goods
+trade_goods = precious_metals
 life_rating = 35
 naval_base = 1
 fort = 1

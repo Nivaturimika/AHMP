@@ -868,9 +868,9 @@ precious_metal_mine = {
 	mine = yes
 }
 
-precious_goods_market = {
+precious_metals_market = {
 	template = RGO_template_mines
-	output_goods = precious_goods
+	output_goods = precious_metals
 	value = 3
 	mine = yes
 }

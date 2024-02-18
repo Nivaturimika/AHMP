@@ -75,18 +75,14 @@ country_event = {
 	}
 }
 
-# La Trinitaria
 country_event = {
 
 	id = 45102
-
 	title = "EVTNAME45102"
 	desc = "EVTDESC45102"
 	picture = "la_trinitaria"
-
 	trigger = {
 		tag = HAI
-		year = 1838
 		owns = 2214
 		owns = 2216
 		NOT = { exists = DOM }
