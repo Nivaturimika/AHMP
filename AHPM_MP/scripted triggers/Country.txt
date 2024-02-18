@@ -228,32 +228,3 @@ can_apply_for_statehood = {
 	is_secondary_power = no
 	THIS = { is_greater_power = yes }
 }
-
-is_japanese_imperial_faction = {
-	main_parameter = nation
-	primary_culture = japanese
-	OR = {
-		tag = JAP
-		substate_of = JAP
-		vassal_of = JAP
-	}
-}
-is_japanese_shogun_faction = {
-	main_parameter = nation
-	primary_culture = japanese
-	OR = {
-		tag = TKG
-		substate_of = TKG
-		vassal_of = TKG
-	}
-}
-is_japanese_imperial_leader = {
-	main_parameter = nation
-	primary_culture = japanese
-	tag = JAP
-}
-is_japanese_shogun_leader = {
-	main_parameter = nation
-	primary_culture = japanese
-	tag = TKG
-}
