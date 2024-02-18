@@ -275,13 +275,13 @@ political_decisions = {
 				if = {
 					limit = {
 						tag = JAP
-						exist = yes
+						exists = yes
 					}
 					country_event = 97642
 				} else_if = {
 					limit = {
 						tag = TKG
-						exist = yes
+						exists = yes
 					}
 					country_event = 97641
 				} else_if = {

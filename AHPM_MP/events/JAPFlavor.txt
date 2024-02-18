@@ -2273,23 +2273,20 @@ country_event = {
 
 	option = {
 		name = "EVT97679OPTA"
-		random_owned = {
-			limit = { owner = { NOT = { number_of_states = 2 } } }
+		if = {
+			limit = { number_of_states < 2 }
 			THIS = { civilized = no }
 			JAP = { inherit = THIS }
 			THIS = { civilized = yes }
-		}
-		random_owned = {
-			limit = { owner = { number_of_states = 2 } }
-			owner = {
-				prestige = -10
-				any_owned = {
-					limit = { region = CHI_1485 }
-					add_core = TAI
-					secede_province = JAP
-				}
+		} else = {
+			prestige = -10
+			any_owned = {
+				limit = { region = CHI_1485 }
+				add_core = TAI
+				secede_province = JAP
 			}
 		}
+	}
 
 	option = {
 		name = "EVT97679OPTB"

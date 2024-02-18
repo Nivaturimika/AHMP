@@ -1,5 +1,5 @@
 #Tunguska Meteor Strike
-province_id = {
+province_event = {
 	id = 21500
 	title = "EVTNAME21500"
 	desc = "EVTDESC21500"
@@ -18,7 +18,7 @@ province_id = {
 }
 
 #Krakatoa Explodes
-province_id = {
+province_event = {
 	id = 21510
 	title = "EVTNAME21510"
 	desc = "EVTDESC21510"
@@ -33,7 +33,7 @@ province_id = {
 }
 
 # San Francisco Earthquake
-province_id_event = {
+province_event = {
 	id = 21520
 	title = "EVTNAME21520"
 	desc = "EVTDESC21520"
