@@ -1899,9 +1899,9 @@ country_event = {
         name = "EVT98700OPTA"
         clr_global_flag = partial_slovakian_approval
         add_accepted_culture = slovak
-        random_owned = {
+        if = {
             limit = {
-                owner = { has_global_flag = full_hungarian_approval }
+                has_global_flag = full_hungarian_approval
             }
             SLV = {
                 all_core = { remove_core = HUN }

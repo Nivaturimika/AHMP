@@ -4877,9 +4877,9 @@ partisan_rebels = {
 	}
 
 	 # Province Scope
-	 siege_won_trigger = {
+	siege_won_trigger = {
 		NOT = { has_province_modifier = partisan_occupation }
-	 }
+	}
 
 	siege_won_effect = {
 		add_province_modifier = { name = partisan_occupation duration = 365 }

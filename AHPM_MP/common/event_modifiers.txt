@@ -2,30 +2,6 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
-####AI Personalities
-
-coward_ai = {
-    badboy = -0.01
-    cb_generation_speed_modifier = 0.25
-    icon = 3
-}
-
-benefactor_ai = {
-    cb_generation_speed_modifier = 0.1
-    icon = 3
-}
-
-malevolent_ai = {
-    cb_generation_speed_modifier = -0.05
-    icon = 3
-}
-
-picking_personality = {
-    icon = 3
-}
-
-####
-
 ######
 ##Rebel Modifiers
 ######
