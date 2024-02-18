@@ -472,6 +472,16 @@ promote_to =
 		}
 	}
 	artisans = { factor = 0 }
+	slaves = {
+		factor = 0
+		group = {
+			modifier = {
+				factor = 1
+				slavery = yes_slavery
+				government = proletarian_dictatorship
+			}
+		}
+	}
 }
 
 ideologies = {
