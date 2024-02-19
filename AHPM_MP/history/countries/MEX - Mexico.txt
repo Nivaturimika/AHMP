@@ -56,7 +56,6 @@ govt_flag = {
     flag = theocracy
 }
 
-set_country_flag = new_world_nation
 
 # Technologies
 post_napoleonic_thought = 1

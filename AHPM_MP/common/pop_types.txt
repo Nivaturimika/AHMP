@@ -1,7 +1,6 @@
 # Audax Validator "!" Ignore_1006
 #general promote mtth, same for all pops
-promotion_chance =
-{
+promotion_chance = {
 	factor = 0.25
 	group = {
 		modifier = {
@@ -45,11 +44,10 @@ promotion_chance =
 			literacy = 0.9
 		}
 	}
-		modifier = {
-			factor = -5
-			strata = rich
-		}
-
+	modifier = {
+		factor = -5
+		strata = rich
+	}
 	group = {
 		modifier = {
 			factor = -0.05
@@ -64,7 +62,6 @@ promotion_chance =
 			militancy = 9
 		}
 	}
-
 	group = {
 		modifier = {
 			factor = 0.1
@@ -733,21 +730,6 @@ assimilation_chance =
 	modifier = {
 		factor = -1
 		is_accepted_culture = yes
-	}
-	modifier = {
-		factor = -0.35
-		country = {
-			has_country_flag = new_world_nation
-			has_country_flag = native_assimilation_enacted
-		}
-	}
-
-	modifier = {
-		factor = -80
-		country = {
-			has_country_flag = new_world_nation
-			NOT = { has_country_flag = native_assimilation_enacted }
-		}
 	}
 
 	modifier = {

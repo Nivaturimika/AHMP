@@ -80,11 +80,7 @@ country_event = {
 		test = has_elections
 		has_country_modifier != female_suffrage
 	}
-
-	mean_time_to_happen = {
-		months = 900
-	}
-
+	mean_time_to_happen = { months = 900 }
 	option = {
 		name = "EVTOPTA17020"
 		any_pop = {
@@ -95,7 +91,6 @@ country_event = {
 			consciousness = 1
 		}
 	}
-
 	option = {
 		name = "EVTOPTB17020"
 		any_pop = {
@@ -119,9 +114,7 @@ country_event = {
 		has_country_modifier != female_suffrage
 	}
 
-	mean_time_to_happen = {
-		months = 70
-	}
+	mean_time_to_happen = { months = 70 }
 
 	option = {
 		name = "EVTOPTA17030"

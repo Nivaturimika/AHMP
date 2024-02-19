@@ -39,11 +39,21 @@ is_influenced = {
 has_usca_failed = {
 	main_parameter = nation
 	this_parameter = nation
-	OR = {
-		ELS = { exists = yes test != is_influenced }
-		HON = { exists = yes test != is_influenced }
-		NIC = { exists = yes test != is_influenced }
-		COS = { exists = yes test != is_influenced }
+	ELS = {
+		exists = yes
+		test != is_influenced
+	}
+	HON = {
+		exists = yes
+		test != is_influenced
+	}
+	NIC = {
+		exists = yes
+		test != is_influenced
+	}
+	COS = {
+		exists = yes
+		test != is_influenced
 	}
 }
 

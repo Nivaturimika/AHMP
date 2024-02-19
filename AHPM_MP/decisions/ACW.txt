@@ -482,15 +482,11 @@ political_decisions = {
 		}
 
 		allow = {
-			2209 = {
-				NOT = { owner = { has_country_flag = new_world_nation } }
-			}
 			NOT = {
 				has_country_flag = ostend_manifesto_published
 				has_global_flag = american_civil_war_has_happened
 				has_country_flag = trying_to_buy_cuba
 				owns = 2209
-				exists = CUB
 			}
 			OR = {
 				ruling_party_ideology = reactionary
@@ -1414,15 +1410,11 @@ political_decisions = {
 		picture = map_caribbean
 		potential = {
 			test = is_american_union
-			2209 = {
-				NOT = { owner = { has_country_flag = new_world_nation } }
-			}
 			NOT = {
 				has_country_flag = ostend_manifesto_published
 				has_country_flag = maine_incident
 				has_country_flag = trying_to_buy_cuba
 				owns = 2209
-				exists = CUB
 			}
 			has_global_flag = american_civil_war_has_happened
 		}
@@ -1685,11 +1677,9 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-
 	back_to_africa_act = {
-	picture = going_to_liberia
+		picture = going_to_liberia
 		potential = {
-			has_country_flag = new_world_nation
 			NOT = { is_culture_group = african_diaspora_cultures }
 			any_owned_province = {
 				is_core = THIS

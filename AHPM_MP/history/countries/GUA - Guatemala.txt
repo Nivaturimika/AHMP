@@ -55,7 +55,6 @@ upper_house = {
 1861.1.1 = {
 
 set_global_flag = the_usca_has_failed
-set_country_flag = new_world_nation
 
 # Technologies
     post_napoleonic_thought = 1
