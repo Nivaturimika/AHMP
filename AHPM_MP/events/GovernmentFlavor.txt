@@ -692,3 +692,104 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = 23215
+	title = "EVTNAME23215"
+	desc = "EVTDESC23215"
+	picture = "treaty"
+	trigger = {
+		ai = no
+		any_country = { substate_of = THIS }
+		has_country_flag != informed_of_substate_mechanics
+	}
+	mean_time_to_happen = { months = 1 }
+	immediate = { set_country_flag = informed_of_substate_mechanics }
+	option = { name = "EVTOPTA23215" }
+}
+
+country_event = {
+	id = 23216
+	title = "EVTNAME23216"
+	desc = "EVTDESC23216"
+	picture = "treaty"
+	allow_multiple_instances = no
+	trigger = {
+		is_substate = yes
+		war = no
+		civilized = yes
+		overlord = { neighbour = THIS }
+	}
+	mean_time_to_happen = {
+		months = 30
+		modifier = {
+			factor = 1.5
+			administration_spending > 0.5
+		}
+		modifier = {
+			factor = 1.25
+			administration_spending > 0.25
+		}
+		modifier = {
+			factor = 5
+			industrial_score > 10
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				industrial_score > 100
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTA23216"
+		overlord = { inherit = THIS }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23216"
+		overlord = { country_event = 23217 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTC23216"
+		release_vassal = THIS
+		overlord = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 23217
+	title = "EVTNAME23217"
+	desc = "EVTDESC23217"
+	picture = "treaty"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA23217"
+		prestige = 10
+		release_vassal = FROM
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23217"
+		prestige = -30
+		release_vassal = FROM
+		create_vassal = FROM
+		ai_chance = { factor = 0 }
+	}
+}

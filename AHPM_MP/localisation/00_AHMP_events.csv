@@ -5,3 +5,15 @@ EVTOPTB23212;Keep looking at the sky!
 EVTOPTC23212;A colonized comet would make a fine satellite!
 EVTOPTD23212;A magnificient opportunity to fund an astronomy program
 EVTOPTE23212;Interesting... anything else?
+EVTNAME23215;Uncontrolled vassals
+EVTDESC23215;$COUNTRY$ is, unfortunely, divided into substates, this is due to the low control we have over those areas with respect to other areas of $COUNTRY$. We are able to integrate them once we get enough $COUNTRY_ADJ$ people living there. Another option is to release those states and declare war against them to annex them, but they will prove to be a hinderance due to low literacy and low militancy, and we already have $POP$ people to take care of.
+EVTOPTA23215;Unfortunate
+EVTNAME23216;Formal integration
+EVTDESC23216;$COUNTRY$ has succeed in organizing itself, attaining self-sufficiency and autonomy. But now our overlord is asking to formally integrate us... as a state, $MONARCHTITLE$ what should we do?
+EVTOPTA23216;We will peacefuly integrate
+EVTOPTB23216;We ask for limited autonomy
+EVTOPTC23216;We will fight!
+EVTNAME23217;Vassalize $FROMCOUNTRY$?
+EVTDESC23217;$FROMCOUNTRY_ADJ$ diplomats arrived at $CAPITAL$ to come into negotiations with $COUNTRY_ADJ$ representatives of the $COUNTRY_ADJ$ government, $CAPITAL$ feelings towards giving autonomy to $FROMCOUNTRY$ are mixed, some of our most fervent nationalist advisors are strongly against it, however, if we do allow autonomous regions we will surely be seen as weak...
+EVTOPTA23217;$FROMCOUNTRY$ is our $COUNTRY_ADJ$ land
+EVTOPTB23217;$FROMCOUNTRY$ is their $FROMCOUNTRY_ADJ$ land

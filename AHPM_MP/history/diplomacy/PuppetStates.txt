@@ -483,7 +483,7 @@ vassal = {
 }
 
 ### New vassals
-vassal = {
+substate = {
 	first = TUR
 	second = BOS
 	start_date = 1836.1.1
@@ -513,7 +513,7 @@ vassal = {
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = CPL
 	start_date = 1836.1.1
@@ -537,7 +537,7 @@ vassal = {
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = ENG
 	second = IRE
 	start_date = 1836.1.1
@@ -609,49 +609,49 @@ vassal = {
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = BUR
 	second = KCH
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = BUR
 	second = SHA
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = BUR
 	second = KAR
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = SIA
 	second = WIA
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = UCA
 	second = COS
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = UCA
 	second = HON
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = UCA
 	second = NIC
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = UCA
 	second = ELS
 	start_date = 1836.1.1
@@ -663,187 +663,187 @@ vassal = {
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = MDV
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = ALA
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = SIB
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = KAM
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = ALT
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = BRY
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = KAZ
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = TRE
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = VEN
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = LOM
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = DLM
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = FIU
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = BKV
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = GLM
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = SLO
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = CRO
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = SIE
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = AUS
 	second = HUN
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = TUR
 	second = ALB
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = TUR
 	second = BUL
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = TUR
 	second = MCD
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = PRU
 	second = DZG
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = PRU
 	second = PZN
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = DEN
 	second = GRN
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = DEN
 	second = ICL
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = NET
 	second = LUX
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = MEX
 	second = RGR
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = MEX
 	second = CAL
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = MEX
 	second = CHP
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = MEX
 	second = YUC
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = BRZ
 	second = YGC
 	start_date = 1836.1.1
@@ -867,7 +867,7 @@ vassal = {
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = RUS
 	second = GEO
 	start_date = 1836.1.1
@@ -879,7 +879,7 @@ vassal = {
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
-vassal = {
+substate = {
 	first = ENG
 	second = SCO
 	start_date = 1836.1.1
