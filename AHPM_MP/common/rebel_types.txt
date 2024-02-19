@@ -2963,8 +2963,7 @@ liberal_rebels = {
 				is_greater_power = no
 				is_culture_group = germanic
 				NOT = { tag = GER }
-				NOT = { tag = AUS }
-				NOT = { tag = KUK }
+				test != is_austrian_empire
 				NOT = { has_country_flag = wants_to_unify }
 			}
 		}

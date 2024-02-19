@@ -1,15 +1,8 @@
 country_event = {
-
 	id = 31501
-
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		year = 1836
+		test = is_austrian_empire
 	}
-
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
@@ -37,27 +30,10 @@ country_event = {
 }
 
 country_event = {
-
 	id = 31502
-	news = yes
-	news_desc_long = "EVTDESC31502_NEWS_LONG"
-	news_desc_medium = "EVTDESC31502_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC31502_NEWS_SHORT"
-
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		year = 1842
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-		}
-		NOT = {
-			year = 1845
-		}
+		test = is_austrian_empire
+		test = is_monarchy_goverment
 	}
 
 	fire_only_once = yes
@@ -110,10 +86,7 @@ country_event = {
 	id = 31503
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
+		test = is_austrian_empire
 		year = 1842
 		NOT = {
 			exists = HUN
@@ -172,11 +145,7 @@ country_event = {
 	news_desc_short = "EVTDESC31504_NEWS_SHORT"
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		year = 1843
+		test = is_austrian_empire
 		OR = {
 			ruling_party_ideology = reactionary
 			ruling_party_ideology = conservative
@@ -184,7 +153,6 @@ country_event = {
 		NOT = {
 			exists = CRO
 			exists = SLO #Slovenia
-			year = 1852
 			has_country_flag = IlyaGarashinin
 		}
 	}
@@ -256,19 +224,8 @@ country_event = {
 	news_desc_short = "EVTDESC31505_NEWS_SHORT"
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		year = 1897
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-			}
-		NOT = {
-			year = 1900
-		}
+		test = is_austrian_empire
+		test = is_monarchy_goverment
 	}
 
 	fire_only_once = yes
@@ -314,15 +271,8 @@ country_event = {
 	id = 31506
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		year = 1911
+		test = is_austrian_empire
 		expressionism = 1 #has the expressionism tech
-		NOT = {
-			year = 1914
-		}
 	}
 
 	fire_only_once = yes
@@ -353,30 +303,16 @@ country_event = {
 }
 
 country_event = {
-
 	id = 31507 #see 35400 for LOM parallel event
-
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		year = 1842
-		NOT = {    exists = LOM }
+		test = is_austrian_empire
+		exists != LOM
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
 		months = 5
-		modifier = {
-			factor = 0.5 #increase likelihood to happen
-			year = 1843
-		}
-		modifier = {
-			factor = 0.5 #increase likelihood to happen
-			year = 1844
-		}
 	}
 
 	title = "EVTNAME35400"
@@ -387,9 +323,7 @@ country_event = {
 		name = "EVTOPTA35400"
 		prestige = 15
 		any_pop = {
-			limit = {
-				has_pop_culture = north_italian
-			}
+			limit = { has_pop_culture = north_italian }
 			consciousness = 3
 			militancy = 6
 		}
@@ -463,10 +397,7 @@ country_event = {
 	picture = "revolution"
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
+		test = is_austrian_empire
 		OR = {
 			has_country_flag = liberal_revolution_in_progress
 			has_country_modifier = springtime_of_nations
@@ -572,11 +503,7 @@ country_event = {
 	picture = "revolution"
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		year = 1849
+		test = is_austrian_empire
 		NOT = {
 			exists = BOH
 			exists = CZH
@@ -631,16 +558,8 @@ country_event = {
 	major = yes
 
 	trigger = {
-		year = 1914
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		OR = {
-			government = absolute_monarchy
-			government = hms_government
-			government = prussian_constitutionalism
-		}
+		test = is_austrian_empire
+		test = is_monarchy_goverment
 		war = no
 		is_disarmed = no
 		OR = {
@@ -1030,8 +949,7 @@ country_event = {
 		OR = {
 			tag = RUS
 			tag = PRU
-			tag = AUS
-			tag = KUK
+			test = is_austrian_empire
 		}
 	}
 

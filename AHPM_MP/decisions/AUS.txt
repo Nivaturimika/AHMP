@@ -210,9 +210,7 @@ political_decisions = {
 		picture = treaty_signing
 		potential = {
 			OR = {
-				tag = AUS
-				tag = KUK
-				tag = DNB
+				test = is_austrian_empire
 				AND = {
 					is_greater_power = yes
 					OR = {
@@ -310,7 +308,7 @@ political_decisions = {
 	become_danube_federation = {
 		picture = propose_danube_federation
 		potential = {
-			OR = { tag = KUK tag = AUS }
+			test = is_austrian_empire
 			has_country_flag = danube_proposal_in_progress
 			OR = {
 				has_global_flag = full_hungarian_approval
@@ -483,11 +481,7 @@ political_decisions = {
 	embrace_slovene_minority = {
 		picture = embrace_minority
 		potential = {
-			OR = {
-				tag = AUS
-				tag = KUK
-				tag = DNB
-			}
+			test = is_austrian_empire
 			NOT = {
 				accepted_culture = slovene
 				has_country_flag = embraced_slovenes
@@ -534,11 +528,7 @@ political_decisions = {
 	embrace_croat_minority = {
 		picture = embrace_minority
 		potential = {
-			OR = {
-				tag = AUS
-				tag = KUK
-				tag = DNB
-			}
+			test = is_austrian_empire
 			NOT = {
 				accepted_culture = croat
 				has_country_flag = embraced_croats
@@ -584,9 +574,7 @@ political_decisions = {
 		picture = budapest_city
 		potential = {
 			OR = {
-				tag = KUK
-				tag = AUS
-				tag = DNB
+				test = is_austrian_empire
 				tag = HUN
 			}
 			NOT = { has_global_flag = budapest_founded }

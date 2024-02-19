@@ -697,9 +697,7 @@ country_event = {
 				factor = 2
 				NOT = { money = 50000 }
 				OR = {
-					tag = AUS
-					tag = KUK
-					tag = DNB
+					test = is_austrian_empire
 					tag = TUR
 					tag = RUS
 					tag = USA

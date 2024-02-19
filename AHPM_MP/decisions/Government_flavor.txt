@@ -79,7 +79,7 @@ political_decisions = {
 		alert = no
 		potential = { test = is_goverment_decision }
 		allow = {
-				NOT = { is_greater_power = yes }
+			NOT = { is_greater_power = yes }
 			prestige = 25
 			money = 25000
 			NOT = { has_country_modifier = law_changed_by_force }

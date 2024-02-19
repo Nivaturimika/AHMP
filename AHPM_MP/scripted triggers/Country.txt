@@ -16,6 +16,15 @@ is_polish_union = {
 	OR = { is_greater_power = yes is_secondary_power = yes }
 }
 
+is_austrian_empire = {
+	main_parameter = nation
+	OR = {
+		tag = AUS
+		tag = KUK
+		tag = DNB
+	}
+}
+
 is_influenced = {
 	main_parameter = nation
 	this_parameter = nation

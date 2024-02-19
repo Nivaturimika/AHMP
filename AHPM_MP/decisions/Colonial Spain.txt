@@ -101,7 +101,7 @@ political_decisions = {
                 }
             }
             NOT = {
-                USA = {    national_provinces_occupied = .01 }
+                USA = { national_provinces_occupied = .01 }
             }
         }
 

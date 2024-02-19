@@ -442,9 +442,7 @@ country_event = {
 			tag = USA
 			tag = ENG
 			tag = FRA
-			tag = AUS
-			tag = KUK
-			tag = DNB
+			test = is_austrian_empire
 			tag = TUR
 			tag = JAP
 			tag = TKG
@@ -475,20 +473,12 @@ country_event = {
 		war_exhaustion = 40
 
 		#if over the badboy limit, reduce infamy to 24.99, otherwise reduce infamy by 10
-		random_owned = {
-			limit = {
-				owner = { NOT = { badboy = 1 } }
-			}
-			owner = {
-				badboy = -10
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = { badboy = 1 }
-			}
-			owner = { badboy = -1000 }
-			owner = { badboy = 24.99 }
+		if = {
+			limit = { badboy = 0 }
+			badboy = -10
+		} else = {
+			badboy = -1000
+			badboy = 24.99
 		}
 
 		#remove the ultimatum_refused global, if this is an Infamy war
@@ -1953,8 +1943,7 @@ country_event = {
 			tag = USA
 			tag = ENG
 			tag = FRA
-			tag = AUS
-			tag = KUK
+			test = is_austrian_empire
 			tag = TUR
 			tag = JAP
 		}
@@ -7654,11 +7643,7 @@ country_event = {
 			has_country_flag = ultimatum_accepted
 			has_country_flag = dismantling_treaty
 		}
-		OR = {
-			tag = AUS
-			tag = KUK
-			tag = DNB
-		}
+		test = is_austrian_empire
 		OR = {
 			has_country_flag = ultimatum_accepted
 			has_country_flag = dismantling_treaty
@@ -7998,8 +7983,7 @@ country_event = {
 			limit = {
 				any_core = { owned_by = THIS }
 				exists = no
-				NOT = { tag = AUS }
-				NOT = { tag = KUK }
+				test != is_austrian_empire
 				is_cultural_union = no
 				is_culture_group = germanic
 			}

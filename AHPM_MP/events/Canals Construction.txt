@@ -187,12 +187,12 @@ country_event = {
     id = 36971
     title = "EVTNAME36971"
     desc = "EVTDESC36971"
-    picture = "suez_canal_built"
+    picture = "suez_canal_building"
 
     fire_only_once = yes
 
     trigger = {
-        has_global_flag = suez_canal_built
+        has_global_flag = suez_canal_building
         has_global_flag = suez_canal_construction
         owns = 1755
         NOT = {
@@ -857,7 +857,7 @@ country_event = {
     id = 36980
     title = "EVTNAME36980"
     desc = "EVTDESC36980"
-    picture = "suez_canal_built"
+    picture = "suez_canal_building"
 
     is_triggered_only = yes
 

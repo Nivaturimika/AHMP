@@ -6197,9 +6197,7 @@ country_event = {
 		num_of_ports = 1
 		num_of_cities = 8
 		NOT = { tag = TUR }
-		NOT = { tag = AUS }
-		NOT = { tag = KUK }
-		NOT = { tag = DNB }
+		test != is_austrian_empire
 		OR = {
 			capital_scope = { continent = europe }
 			capital_scope = { continent = north_america }

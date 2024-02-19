@@ -11,11 +11,7 @@ political_decisions = {
 				exists = GER
 				tag = DNB
 				AND = {
-					tag = AUS
-					NOT = { has_country_flag = austrian_greater_germany }
-				}
-				AND = {
-					tag = KUK
+					test = is_austrian_empire
 					NOT = { has_country_flag = austrian_greater_germany }
 				}
 			}
@@ -253,9 +249,7 @@ political_decisions = {
 					in_sphere = THIS
 					NOT = {
 						tag = THIS
-						tag = KUK
-						tag = AUS
-						tag = BAN
+						test = is_austrian_empire
 					}
 					OR = {
 						is_vassal = no
@@ -537,12 +531,9 @@ political_decisions = {
 				limit = {
 					is_culture_group = germanic
 					exists = no
-					NOT = { tag = AUS }
-					NOT = { tag = KUK }
-					NOT = { tag = DNB }
-					NOT = { tag = PRU }
-					NOT = { tag = BAN }
-					NOT = { tag = UBD }
+					test != is_austrian_empire
+					tag != PRU
+					tag != UBD
 					NOT = { has_country_flag = post_colonial_country }
 					OR = {
 						all_core = { owned_by = THIS }
@@ -837,8 +828,7 @@ political_decisions = {
 					OR = {
 						has_country_flag = objects_to_italy
 						tag = FRA
-						tag = AUS
-						tag = KUK
+						test = is_austrian_empire
 						AND = {
 							neighbour = ITA
 							is_greater_power = yes
@@ -1040,9 +1030,7 @@ political_decisions = {
 				has_country_flag = post_colonial_country
 				exists = SGF
 				exists = GER
-				tag = AUS
-				tag = KUK
-				tag = DNB
+				test = is_austrian_empire
 			}
 			revolution_n_counterrevolution = 1
 		}
@@ -1101,10 +1089,8 @@ political_decisions = {
 				limit = {
 					primary_culture = south_german
 					in_sphere = THIS
-					NOT = { tag = THIS }
-					NOT = { tag = KUK }
-					NOT = { tag = DNB }
-					NOT = { tag = BAN }
+					tag != THIS
+					test != is_austrian_empire
 					NOT = { has_country_flag = post_colonial_country }
 					NOT = {
 						AND = {

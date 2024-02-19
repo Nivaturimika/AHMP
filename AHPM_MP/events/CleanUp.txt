@@ -927,9 +927,7 @@ country_event = {
 			USA = { ai = yes }
 		}
 		NOT = {
-			tag = KUK
-			tag = AUS
-			tag = DNB
+			test = is_austrian_empire
 			tag = CSA
 			tag = DES
 			tag = FSA

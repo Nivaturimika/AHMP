@@ -822,7 +822,7 @@ political_decisions = {
 				nationalism_n_imperialism = 1
 				exists = GER
 				any_country = {
-					OR = { tag = DNB tag = KUK tag = AUS }
+					test = is_austrian_empire
 					is_greater_power = no
 				}
 			}

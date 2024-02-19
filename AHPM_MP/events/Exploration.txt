@@ -32,8 +32,7 @@ country_event = {
 				OR = {
 					tag = RUS
 					tag = TUR
-					tag = AUS
-					tag = KUK
+					test = is_austrian_empire
 				}
 			}
 			modifier = {

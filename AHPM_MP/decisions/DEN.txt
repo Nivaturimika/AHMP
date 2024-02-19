@@ -2,32 +2,26 @@ political_decisions = {
 	danmarks_riges_grundlov = {
 		picture = danmarks_riges_grundlov
 		potential = {
-			tag = DEN
-			NOT = {
-				has_country_flag = danish_constitutionalism
-			}
+			primary_culture = danish
+			has_country_flag != danish_constitutionalism
 		}
-
 		allow = {
 			government = absolute_monarchy
 			state_n_government = 1
-			NOT = {
-				average_militancy = 3
-			}
+			average_militancy < 3
 		}
-
 		effect = {
+			set_country_flag = danish_constitutionalism
 			political_reform = landed_voting
 			government = prussian_constitutionalism
 			prestige = 5
-			set_country_flag = danish_constitutionalism
 		}
 	}
 
 	claim_schleswig = {
 		picture = claim_schleswig
 		potential = {
-			tag = DEN
+			primary_culture = danish
 			SWH = {
 				exists = yes
 				owns = 370

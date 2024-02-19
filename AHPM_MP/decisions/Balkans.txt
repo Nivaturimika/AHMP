@@ -502,8 +502,7 @@ political_decisions = {
 			any_country = {
 				limit = {
 					OR = {
-						tag = AUS
-						tag = KUK
+						test = is_austrian_empire
 						tag = HUN
 						tag = TUR
 					}
@@ -522,8 +521,7 @@ political_decisions = {
 				OR = {
 					tag = HUN
 					tag = TUR
-					tag = AUS
-					tag = KUK
+					test = is_austrian_empire
 				}
 			}
 		}
@@ -1373,13 +1371,13 @@ political_decisions = {
 			random_country = {
 				limit = {
 					OR = {
-						tag = AUS
+						test = is_austrian_empire
 						tag = HUN
 					}
 					exists = yes
 					neighbour = THIS
 				}
-			country_event = 60055559
+				country_event = 60055559
 			}
 		}
 		ai_will_do = { factor = 1 }

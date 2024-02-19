@@ -124,7 +124,7 @@ political_decisions = {
                     primary_culture = swedish
                 }
             }
-            has_global_flag = suez_canal_built
+            has_global_flag = suez_canal_building
             NOT = {
                 has_country_flag = the_vega_expedition_went
             }

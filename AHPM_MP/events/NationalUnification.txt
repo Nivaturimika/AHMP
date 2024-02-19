@@ -169,8 +169,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { tag = AUS }
-					NOT = { tag = KUK }
+					test != is_austrian_empire
 					NOT = { tag = MOL }
 					NOT = { tag = SIE }
 					NOT = { tag = LUX }
@@ -800,9 +799,7 @@ country_event = {
 			limit = {
 				is_culture_group = germanic
 				exists = no
-				NOT = { tag = AUS }
-				NOT = { tag = KUK }
-				NOT = { tag = DNB }
+				test != is_austrian_empire
 				NOT = { tag = PRU }
 				NOT = { tag = UBD }
 				NOT = { tag = BAN }
@@ -817,11 +814,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				OR = {
-					tag = AUS
-					tag = KUK
-					tag = DNB
-				}
+				test = is_austrian_empire
 				exists = no
 				THIS = { capital = 619 }
 			}
@@ -853,9 +846,7 @@ country_event = {
 					}
 				}
 				NOT = {
-					tag = KUK
-					tag = AUS
-					tag = DNB
+					test = is_austrian_empire
 					tag = UBD
 				}
 				NOT = { has_country_flag = post_colonial_country }

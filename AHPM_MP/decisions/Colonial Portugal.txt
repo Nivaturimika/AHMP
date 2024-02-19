@@ -323,28 +323,20 @@ political_decisions = {
 			2006 = { trade_goods = precious_metal life_rating = 3 add_province_modifier = { name = gold_rush duration = 1825 } }
 			any_owned = {
 				limit = { OR = { state_id = 1999 state_id = 2003 state_id = 2006 province_id = 2000 } }
-					add_core = ANG
-					remove_core = KON
-					remove_core = LUN
+				add_core = ANG
+				remove_core = KON
+				remove_core = LUN
 			}
-
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2003 } } 2003 = { change_province_name = "Lobito" } }
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2005 } } 2005 = { change_province_name = "New Lisbon" } }
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2008 } } 2008 = { change_province_name = "Namakunde" } }
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2009 } } 2009 = { change_province_name = "Malanje" } }
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2006 } } 2006 = { change_province_name = "Silva Porto" } }
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2011 } } 2011 = { change_province_name = "Luso" } }
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2002 } } 2002 = { change_province_name = "U�ge" } }
-			random_owned = {
-				limit = { owner = { primary_culture = portuguese owns = 2001 } }
-				2001 = { change_province_name = "S�o Salvador" }
-			}
-			random_owned = {
-				limit = { owner = { primary_culture = portuguese owns = 2010 } }
-				2010 = { change_province_name = "Henrique de Carvalho" }
-			}
-
-			random_owned = { limit = { owner = { primary_culture = portuguese owns = 2007 } } 2007 = { change_province_name = "Cuangar" } }
+			if = { limit = { primary_culture = portuguese owns = 2003 } 2003 = { change_province_name = "Lobito" } }
+			if = { limit = { primary_culture = portuguese owns = 2005 } 2005 = { change_province_name = "New Lisbon" } }
+			if = { limit = { primary_culture = portuguese owns = 2008 } 2008 = { change_province_name = "Namakunde" } }
+			if = { limit = { primary_culture = portuguese owns = 2009 } 2009 = { change_province_name = "Malanje" } }
+			if = { limit = { primary_culture = portuguese owns = 2006 } 2006 = { change_province_name = "Silva Porto" } }
+			if = { limit = { primary_culture = portuguese owns = 2011 } 2011 = { change_province_name = "Luso" } }
+			if = { limit = { primary_culture = portuguese owns = 2002 } 2002 = { change_province_name = "U�ge" } }
+			if = { limit = { primary_culture = portuguese owns = 2001 } 2001 = { change_province_name = "S�o Salvador" } }
+			if = { limit = { primary_culture = portuguese owns = 2010 } 2010 = { change_province_name = "Henrique de Carvalho" } }
+			if = { limit = { primary_culture = portuguese owns = 2007 } 2007 = { change_province_name = "Cuangar" } }
 		}
 
 		ai_will_do = { factor = 1 }

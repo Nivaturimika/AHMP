@@ -573,19 +573,16 @@ country_event = {
 	trigger = {
 		ai = yes
 		OR = {
-			tag = AUS
-			tag = KUK
-			tag = PRU
-			tag = NGF
-			tag = SGF
+			primary_culture = north_german
+			primary_culture = south_german
 		}
-		OR = {
-			war_with = FRA
-			war_with = PRU
-			war_with = NGF
-			war_with = SGF
-			war_with = AUS
-			war_with = KUK
+		any_country = {
+			OR = {
+				primary_culture = north_german
+				primary_culture = south_german
+				primary_culture = french
+			}
+			war_with = THIS
 		}
 		any_neighbor_country = {
 			alliance_with = THIS
@@ -602,7 +599,6 @@ country_event = {
 	option = {
 		name = "EVT33015OPTA"
 		set_country_flag = called_german_allies
-		# Audax Validator "." Ignore_NEXT
 		war = {
 			attacker_goal = {
 				casus_belli = call_allies_cb
@@ -649,9 +645,8 @@ country_event = {
 			any_greater_power = {
 				limit = {
 					NOT = {
+						test = is_austrian_empire
 						tag = GER
-						tag = AUS
-						tag = KUK
 						tag = RUS
 					}
 					alliance_with = THIS
@@ -664,9 +659,8 @@ country_event = {
 		any_greater_power = {
 			limit = {
 				NOT = {
+					test = is_austrian_empire
 					tag = GER
-					tag = AUS
-					tag = KUK
 					tag = RUS
 				}
 				alliance_with = THIS
@@ -676,21 +670,13 @@ country_event = {
 		any_country = {
 			limit = {
 				OR = {
-					tag = AUS
-					tag = KUK
+					test = is_austrian_empire
 					tag = RUS
 				}
 				exists = yes
 				NOT = { tag = THIS }
 			}
 			relation = { who = THIS value = 100 }
-		}
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 2
-				tag = KUK
-			}
 		}
 	}
 
@@ -699,29 +685,6 @@ country_event = {
 		GER = {
 			prestige = -20
 			relation = { who = THIS value = -50 }
-		}
-		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0.5
-				tag = KUK
-			}
-			modifier = {
-				factor = 0.8
-				government = absolute_monarchy
-			}
-			modifier = {
-				factor = 1.1
-				government = hms_government
-			}
-			modifier = {
-				factor = 0.5
-				relation = { who = GER value = 50 }
-			}
-			modifier = {
-				factor = 0
-				alliance_with = GER
-			}
 		}
 	}
 }
@@ -1240,35 +1203,35 @@ country_event = {
 			limit = {
 				exists = yes
 				is_greater_power = no
-			OR = {
-				primary_culture = north_german
-				primary_culture = south_german
-			}
-
-			NOT = {
 				OR = {
-					tag = AUS
-					tag = KUK
-					tag = DNB
-					tag = UBD
-					tag = PRU
-					tag = NGF
-					tag = LUX
-					capital_scope = { NOT = { is_core = GER } }
-					is_vassal = yes
+					primary_culture = north_german
+					primary_culture = south_german
+				}
+				NOT = {
+					OR = {
+						test = is_austrian_empire
+						tag = UBD
+						tag = PRU
+						tag = NGF
+						tag = LUX
+						capital_scope = {
+							NOT = { is_core = GER }
+						}
+						is_vassal = yes
 					}
 				}
 			}
 			country_event = 33038
 		}
-		any_country = { limit = {
-			exists = yes
-			is_greater_power = no
-			OR = {
-				primary_culture = north_german
-				primary_culture = south_german
+		any_country = {
+			limit = {
+				exists = yes
+				is_greater_power = no
+				OR = {
+					primary_culture = north_german
+					primary_culture = south_german
 				}
-			vassal_of = THIS
+				vassal_of = THIS
 			}
 			country_event = 33038
 		}
@@ -1370,11 +1333,8 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = GER
-			tag = NGF
-			tag = SGF
-			tag = AUS
-			tag = KUK
+			primary_culture = north_german
+			primary_culture = south_german
 		}
 		owns = 549
 		total_pops = 13000000
@@ -1886,31 +1846,7 @@ country_event = {
 				months = 60
 			}
 		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0
-				badboy = 0.2
-				NOT = { government = fascist_dictatorship }
-				NOT = { government = proletarian_dictatorship }
-			}
-			modifier = {
-				factor = 0.5
-				tag = KUK
-			}
-			modifier = {
-				factor = 0.5
-				government = absolute_monarchy
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = democracy
-					government = hms_government
-				}
-			}
-		}
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -2000,20 +1936,7 @@ country_event = {
 				factor = -4
 			}
 		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				tag = KUK
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = proletarian_dictatorship
-					government = fascist_dictatorship
-				}
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -2041,10 +1964,6 @@ country_event = {
 			diplomatic_influence = {
 				who = THIS
 				value = 200
-			}
-			relation = {
-				who = THIS
-				value = 100
 			}
 		}
 		any_country = {
@@ -2128,12 +2047,6 @@ country_event = {
 	}
 }
 
-#Austria Joining Germany
-
-#This fires if Austria or Austria-Hungary is in Germany's sphere
-#but still own non-Austrian/German core provinces
-#this is also triggered if they're in sphere at the time of Germany's formation
-
 country_event = {
 	id = 31515
 	title = "EVTNAME31515" #The Greater Germany Question
@@ -2141,13 +2054,9 @@ country_event = {
 	major = yes
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
+		test = is_austrian_empire
 		is_greater_power = no
 		war = no
-		ai = yes
 		GER = {
 			war = no
 			exists = yes
@@ -2186,61 +2095,6 @@ country_event = {
 			consciousness = 6
 			militancy = 6
 		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.5
-				is_secondary_power = yes
-			}
-			modifier = {
-				factor = 0
-				tag = KUK
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = democracy
-					government = hms_government
-				}
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-				}
-				GER = {
-					NOT = {
-						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 3
-				government = proletarian_dictatorship
-				GER = { government = proletarian_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				government = proletarian_dictatorship
-				GER = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 3
-				government = fascist_dictatorship
-				GER = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				government = fascist_dictatorship
-				GER = { government = proletarian_dictatorship }
-			}
-		}
 	}
 
 	option = {
@@ -2266,73 +2120,6 @@ country_event = {
 			militancy = 5
 		}
 		GER = { country_event = 31519 }
-		ai_chance = {
-			factor = 30
-			modifier = {
-				factor = 0.5
-				is_secondary_power = yes
-			}
-			modifier = {
-				factor = 0.5
-				tag = KUK
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-				}
-				GER = {
-					NOT = {
-						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					government = democracy
-					government = hms_government
-				}
-				GER = {
-					NOT = {
-						OR = {
-							government = democracy
-							government = hms_government
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = proletarian_dictatorship
-					government = fascist_dictatorship
-				}
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					government = presidential_dictatorship
-					government = bourgeois_dictatorship
-				}
-			}
-			modifier = {
-				factor = 0
-				government = proletarian_dictatorship
-				GER = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				government = fascist_dictatorship
-				GER = { government = proletarian_dictatorship }
-			}
-		}
 	}
 
 	option = {
@@ -2616,10 +2403,7 @@ country_event = {
 		name = "EVT31511OPTA"
 		random_country = {
 			limit = {
-				OR = {
-					tag = AUS
-					tag = KUK
-				}
+				test = is_austrian_empire
 				exists = yes
 			}
 			any_owned = {
@@ -2985,17 +2769,13 @@ country_event = {
 
 	option = {
 		name = "EVT31511OPTA"
-		random_owned = {
-			limit = {
-				owner = { tag = KUK }
+		if = {
+			limit = { tag = KUK }
+			all_core = {
+				limit = { NOT = { is_core = HUN } }
+				add_core = AUS
 			}
-			owner = {
-				all_core = {
-					limit = { NOT = { is_core = HUN } }
-					add_core = AUS
-				}
-				all_core = { remove_core = KUK }
-			}
+			all_core = { remove_core = KUK }
 		}
 		any_country = {
 			limit = {
@@ -3137,11 +2917,7 @@ country_event = {
 	picture = "unite"
 
 	trigger = {
-		OR = {
-			tag = AUS
-			tag = KUK
-		}
-		ai = yes
+		test = is_austrian_empire
 		NOT = {
 			has_country_flag = austria_dissolved
 			owns = 619
@@ -3169,15 +2945,11 @@ country_event = {
 			}
 			remove_core = THIS
 		}
-		random_owned = {
-			limit = {
-				owner = { tag = KUK }
-			}
-			owner = {
-				all_core = {
-					add_core = AUS
-					remove_core = KUK
-				}
+		if = {
+			limit = { tag = KUK }
+			all_core = {
+				add_core = AUS
+				remove_core = KUK
 			}
 		}
 		any_country = {
