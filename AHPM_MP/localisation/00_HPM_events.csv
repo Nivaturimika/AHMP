@@ -4166,115 +4166,30 @@ EVT95511OPTA;We must act at once!;;;;;;;;;;;;;
 EVTNAME95514;The $FROMCOUNTRY$ Imperialists;;;;;;;;;;;;;
 EVTDESC95514;They are coming!;;;;;;;;;;;;;
 EVT95514OPTA;Oh no!;;;;;;;;;;;;;
-EVTNAME98655;Hungarians Agree to Federation;;;;;;;;;;;;;
-EVTDESC98655;After much discussion and deliberation, the Hungarians have agreed to expand the Austro-Hungarian union into a federation with the other Danubian cultures even if it means giving up some of their traditional claims to those lands. We may now proceed to propose the union to other local governments with full confidence that both our governments are behind it.;;;;;;;;;;;;;
-EVT98655OPTA;Excellent news!;;;;;;;;;;;;;
-EVTNAME98656;The Hungarian Counter-Proposal;;;;;;;;;;;;;
-EVTDESC98656;After much discussion and deliberation, the Hungarians have agreed to expand the Austro-Hungarian union into a federation with the other Danubian cultures... on one condition: that they be elevated to a fully autonomous state tied to the federation only in matters of foreign relations. We can ignore their proposal, but not without causing a great deal of discontent among the Hungarian people. Sadly, this appears to be as far as their government will go on the matter.;;;;;;;;;;;;;
-EVT98656OPTA;Then we end it here. This is not an option.;;;;;;;;;;;;;
-EVT98656OPTB;We agree. Hungary will be a vassal state of the new federation.;;;;;;;;;;;;;
-EVT98656OPTC;We will ignore their counter-proposal. The federation shall proceed.;;;;;;;;;;;;;
-EVTNAME98657;The Hungarians Refuse Federation;;;;;;;;;;;;;
-EVTDESC98657;After much discussion and deliberation, the Hungarians have outright refused the proposed federation. They do not wish to lose their equal standing with the Austrian government, and see no benefit in surrendering claims to their traditional territories. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Hungarian people greatly.;;;;;;;;;;;;;
-EVT98657OPTA;Then we end it here. The federation will not come to be.;;;;;;;;;;;;;
-EVT98657OPTB;No matter. The federation shall proceed regardless.;;;;;;;;;;;;;
-EVT98666OPTA;We agree. Transylvania will be a vassal state of the new federation.;;;;;;;;;;;;;
-EVT98671OPTA;We agree. Croatia will be a vassal state of the new federation.;;;;;;;;;;;;;
-EVT98676OPTA;We agree. Slovenia will be a vassal state of the new federation.;;;;;;;;;;;;;
-EVT98681OPTA;We agree. Slovakia will be a vassal state of the new federation.;;;;;;;;;;;;;
-EVT98686OPTA;We agree. Galicia-Lodomeria will be a vassal state of the new federation.;;;;;;;;;;;;;
-EVTNAME98660;Czechs Agree to Federation;;;;;;;;;;;;;
-EVTDESC98660;After much discussion and deliberation, the Czechs have agreed to the proposed Danubian Federation without reservation.;;;;;;;;;;;;;
-EVTNAME98661;The Czech Counter-Proposal;;;;;;;;;;;;;
-EVTDESC98661;After much discussion and deliberation, the Czechs have agreed to the proposed Danubian Federation... on one condition: that they be elevated to a fully autonomous state tied to the federation only in matters of foreign relations. We can ignore their proposal, but not without causing a great deal of discontent among the Czech people. Sadly, this appears to be as far as they will go on the matter.;;;;;;;;;;;;;
-EVTNAME98662;The Czechs Refuse Federation;;;;;;;;;;;;;
-EVTDESC98662;After much discussion and deliberation, the Czechs have outright refused the proposed federation. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Czech people greatly.;;;;;;;;;;;;;
-EVTNAME98665;Romanians Agree to Federation;;;;;;;;;;;;;
-EVTDESC98665;After much discussion and deliberation, the Romanians have agreed to the proposed Danubian Federation without reservation.;;;;;;;;;;;;;
-EVTNAME98666;The Romanian Counter-Proposal;;;;;;;;;;;;;
-EVTDESC98666;After much discussion and deliberation, the Romanians have agreed to the proposed Danubian Federation... on one condition: that they be elevated to a fully autonomous state tied to the federation only in matters of foreign relations. We can ignore their proposal, but not without causing a great deal of discontent among the Romanian people. Sadly, this appears to be as far as they will go on the matter.;;;;;;;;;;;;;
-EVTNAME98667;The Romanians Refuse Federation;;;;;;;;;;;;;
-EVTDESC98667;After much discussion and deliberation, the Romanians have outright refused the proposed federation. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Romanian people greatly.;;;;;;;;;;;;;
-EVTNAME98670;Croatians Agree to Federation;;;;;;;;;;;;;
-EVTDESC98670;After much discussion and deliberation, the Croatians have agreed to the proposed Danubian Federation without reservation.;;;;;;;;;;;;;
-EVTNAME98671;The Croatian Counter-Proposal;;;;;;;;;;;;;
-EVTDESC98671;After much discussion and deliberation, the Croatians have agreed to the proposed Danubian Federation... on one condition: that they be elevated to a fully autonomous state tied to the federation only in matters of foreign relations. We can ignore their proposal, but not without causing a great deal of discontent among the Croatian people. Sadly, this appears to be as far as they will go on the matter.;;;;;;;;;;;;;
-EVTNAME98672;The Croatians Refuse Federation;;;;;;;;;;;;;
-EVTDESC98672;After much discussion and deliberation, the Croatians have outright refused the proposed federation. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Croatian people greatly.;;;;;;;;;;;;;
-EVTNAME98675;Slovenes Agree to Federation;;;;;;;;;;;;;
-EVTDESC98675;After much discussion and deliberation, the Slovenes have agreed to the proposed Danubian Federation without reservation.;;;;;;;;;;;;;
-EVTNAME98676;The Slovene Counter-Proposal;;;;;;;;;;;;;
-EVTDESC98676;After much discussion and deliberation, the Slovenes have agreed to the proposed Danubian Federation... on one condition: that they be elevated to a fully autonomous state tied to the federation only in matters of foreign relations. We can ignore their proposal, but not without causing a great deal of discontent among the Slovene people. Sadly, this appears to be as far as they will go on the matter.;;;;;;;;;;;;;
-EVTNAME98677;The Slovenes Refuse Federation;;;;;;;;;;;;;
-EVTDESC98677;After much discussion and deliberation, the Slovenes have outright refused the proposed federation. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Slovene people greatly.;;;;;;;;;;;;;
-EVTNAME98680;Slovakians Agree to Federation;;;;;;;;;;;;;
-EVTDESC98680;After much discussion and deliberation, the Slovakians have agreed to the proposed Danubian Federation without reservation.;;;;;;;;;;;;;
-EVTNAME98681;The Slovakian Counter-Proposal;;;;;;;;;;;;;
-EVTDESC98681;After much discussion and deliberation, the Slovakians have agreed to the proposed Danubian Federation... on one condition: that they be elevated to a fully autonomous state tied to the federation only in matters of foreign relations. We can ignore their proposal, but not without causing a great deal of discontent among the Slovakian people. Sadly, this appears to be as far as they will go on the matter.;;;;;;;;;;;;;
-EVTNAME98682;The Slovakians Refuse Federation;;;;;;;;;;;;;
-EVTDESC98682;After much discussion and deliberation, the Slovakians have outright refused the proposed federation. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Slovakian people greatly.;;;;;;;;;;;;;
-EVTNAME98685;Polish Agree to Federation;;;;;;;;;;;;;
-EVTDESC98685;After much discussion and deliberation, the Polish have agreed to the proposed Danubian Federation without reservation.;;;;;;;;;;;;;
-EVTNAME98686;The Polish Counter-Proposal;;;;;;;;;;;;;
-EVTDESC98686;After much discussion and deliberation, the Polish have agreed to the proposed Danubian Federation... on one condition: that they be elevated to a fully autonomous state tied to the federation only in matters of foreign relations. We can ignore their proposal, but not without causing a great deal of discontent among the Polish people. Sadly, this appears to be as far as they will go on the matter.;;;;;;;;;;;;;
-EVTNAME98687;The Polish Refuse Federation;;;;;;;;;;;;;
-EVTDESC98687;After much discussion and deliberation, the Polish have outright refused the proposed federation. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Polish people greatly.;;;;;;;;;;;;;
-EVTNAME98690;Czechs Celebrate the New Federation!;;;;;;;;;;;;;
-EVTDESC98690;Czech citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it.;;;;;;;;;;;;;
-EVT98690OPTA;We welcome our Czech brothers.;;;;;;;;;;;;;
-EVTNAME98691;Romanians Celebrate the New Federation!;;;;;;;;;;;;;
-EVTDESC98691;Romanian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it.;;;;;;;;;;;;;
-EVT98691OPTA;We welcome our Romanian brothers.;;;;;;;;;;;;;
-EVTNAME98692;Croatians Celebrate the New Federation!;;;;;;;;;;;;;
-EVTDESC98692;Croatian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it.;;;;;;;;;;;;;
-EVT98692OPTA;We welcome our Croatian brothers.;;;;;;;;;;;;;
-EVTNAME98693;Slovenes Celebrate the New Federation!;;;;;;;;;;;;;
-EVTDESC98693;Slovene citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it.;;;;;;;;;;;;;
-EVT98693OPTA;We welcome our Slovene brothers.;;;;;;;;;;;;;
-EVTNAME98694;Slovakians Celebrate the New Federation!;;;;;;;;;;;;;
-EVTDESC98694;Slovakian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it.;;;;;;;;;;;;;
-EVT98694OPTA;We welcome our Slovakian brothers.;;;;;;;;;;;;;
-EVTNAME98695;Poles Celebrate the New Federation!;;;;;;;;;;;;;
-EVTDESC98695;Polish citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it.;;;;;;;;;;;;;
-EVT98695OPTA;We welcome our Polish brothers.;;;;;;;;;;;;;
-EVTNAME98700;The New Hungarian State;;;;;;;;;;;;;
-EVTDESC98700;Citizens gathered in the Hungarian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
-EVT98700OPTA;We shall march into the future together.;;;;;;;;;;;;;
-EVTNAME98701;The New Bohemian State;;;;;;;;;;;;;
-EVTDESC98701;Citizens gathered in the Bohemian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
-EVTNAME98702;The New Transylvanian State;;;;;;;;;;;;;
-EVTDESC98702;Citizens gathered in the Transylvanian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
-EVTNAME98703;The New Croatian State;;;;;;;;;;;;;
-EVTDESC98703;Citizens gathered in the Croatian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
-EVTNAME98704;The New Slovene State;;;;;;;;;;;;;
-EVTDESC98704;Citizens gathered in the Slovene capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
-EVTNAME98705;The New Slovakian State;;;;;;;;;;;;;
-EVTDESC98705;Citizens gathered in the Slovakian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
-EVTNAME98706;The New Polish State;;;;;;;;;;;;;
-EVTDESC98706;Citizens gathered in the Galician-Lodomerian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
-EVTNAME98710;The Hungarian Rebellion;;;;;;;;;;;;;
-EVTDESC98710;Resentment has been brewing among Hungarians ever since the federation's formation. Their leaders have been loudly proclaiming that they gave no approval for this violation of their constitutional rights, and that German officials proceeded regardless of Hungarian concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
-EVT98710OPTA;This must be kept under control.;;;;;;;;;;;;;
-EVTNAME98711;The Czech Rebellion;;;;;;;;;;;;;
-EVTDESC98711;Resentment has been brewing among the Czechs ever since the federation's formation. Their leaders have been loudly proclaiming that German officials proceeded regardless of Czech concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
-EVTNAME98712;The Romanian Rebellion;;;;;;;;;;;;;
-EVTDESC98712;Resentment has been brewing among the Romanians ever since the federation's formation. Their leaders have been loudly proclaiming that German officials proceeded regardless of Romanian concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
-EVTNAME98713;The Croatian Rebellion;;;;;;;;;;;;;
-EVTDESC98713;Resentment has been brewing among the Croatians ever since the federation's formation. Their leaders have been loudly proclaiming that German officials proceeded regardless of Croatian concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
-EVTNAME98714;The Slovene Rebellion;;;;;;;;;;;;;
-EVTDESC98714;Resentment has been brewing among the Slovenes ever since the federation's formation. Their leaders have been loudly proclaiming that German officials proceeded regardless of Slovene concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
-EVTNAME98715;The Slovakian Rebellion;;;;;;;;;;;;;
-EVTDESC98715;Resentment has been brewing among the Slovakians ever since the federation's formation. Their leaders have been loudly proclaiming that German officials proceeded regardless of Slovakian concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
-EVTNAME98716;The Polish Rebellion;;;;;;;;;;;;;
-EVTDESC98716;Resentment has been brewing among the Polish ever since the federation's formation. Their leaders have been loudly proclaiming that German officials proceeded regardless of Polish concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
-EVTNAME98720;End of the Federation;;;;;;;;;;;;;
-EVTDESC98720;With the loss of Hungary, the entire basis for the Danubian Federation has begun to crumble. The other ethnic groups are questioning the dominance that the German majority will exert without the Hungarians to counter-balance them, and increasingly there are demands for the federation to be undone. Some Germans are fine with this, preferring to return to the Austria that was, but many of them say that these other groups should not be permitted to break away. They say the Austrian Empire should be restored -- by force, if need be.;;;;;;;;;;;;;
-EVT98720OPTA;We shall become Austria once more.;;;;;;;;;;;;;
-EVT98720OPTB;Never! The Federation lives on!;;;;;;;;;;;;;
-EVTDESC98721;With the Danubian government having become a totalitarian regime, resentment among the various ethnic groups has reached a boiling point. They are demanding their independence, something which would see an end to the federation as it currently exists. The German majority is fine with this, though some are also suggesting the temerity of these rebels is beyond the pale and the federation should be maintained -- by force, if need be.;;;;;;;;;;;;;
-EVTNAME98722;Independence!;;;;;;;;;;;;;
-EVTDESC98722;With the breakup of the Danubian Federation, we have gained our independence at last -- but we must fight to keep it.;;;;;;;;;;;;;
-EVT98722OPTA;Let the war begin!;;;;;;;;;;;;;
+EVTNAME98655;The conference of $CAPITAL$;;;;;;;;;;;;;
+EVTDESC98655;After much discussion and deliberation, the $COUNTRY_ADJ$ people are now eager to form a confederation with the rest of the cultures in our empires, ceasing nationalist agitations by covering everyone under the same umbrella!
+EVT98655OPTA;For the shared mutual interests!;;;;;;;;;;;;;
+EVTNAME98656;$FROMCOUNTRY_ADJ$ Confederation project;;;;;;;;;;;;;
+EVTDESC98656;$FROMCOUNTRY_ADJ$ diplomats arrived at $CAPITAL$ with a zany proposal: A united confederation for all of the danubian region. This is honestly baffling, however, given our weak positions as disnuted nations, uniting all of us under the same banner will prove to be extremely useful.
+EVT98656OPTA;We agree;;;;;;;;;;;;;
+EVT98656OPTB;We'll keep an eye out;;;;;;;;;;;;;
+EVT98656OPTC;$FROMCOUNTRY_ADJ$ scum!;;;;;;;;;;;;;
+EVTNAME98657;$FROMCOUNTRY$ agrees
+EVTDESC98657;We have secured the vote of $FROMCOUNTRY_ADJ$, they've talked with our diplomats about the causes and effects of our proposal, evaluated the ramifications and implications of uniting all of us into a single federation, and ultimately, decided that $COUNTRY$ requires a response, and here it be!
+EVT98657OPTA;Splendid
+EVTNAME98658;$FROMCOUNTRY$ abstains
+EVTDESC98658;We have secured the vote of $FROMCOUNTRY_ADJ$, they've talked with our diplomats about the causes and effects of our proposal, evaluated the ramifications and implications of uniting all of us into a single federation, and ultimately, decided that $COUNTRY$ requires a response, and here it be!
+EVT98658OPTA;We'll see
+EVTNAME98659;$FROMCOUNTRY$ refuses
+EVTDESC98659;We have secured the vote of $FROMCOUNTRY_ADJ$, they've talked with our diplomats about the causes and effects of our proposal, evaluated the ramifications and implications of uniting all of us into a single federation, and ultimately, decided that $COUNTRY$ requires a response, and here it be!
+EVT98659OPTA;$FROMCOUNTRY_ADJ$ scum!
+EVTNAME98660;Successful conference of $CAPITAL$ 
+EVTDESC98660;Success! After several talks with various diplomats, a majority vote determined that we should form the confederation! This is a grand moment for all of the $COUNTRY_ADJ$ people, $YEAR$ will be known as the year of the $CAPITAL$ conference!
+EVT98660OPTA;Let there be peace!
+EVTNAME98661;Failed conference of $CAPITAL$ 
+EVTDESC98661;Many tough talks with diplomats around $COUNTRY$ and yet we struck no deals, no concessions or negotiations that favored them, we were in a terrible position, and we didn't only look like a baffoon, we also inspired heavy nationalistic sentiments across our nation, we should be careful of what type of proposals we do next time...
+EVT98661OPTA;Oh dear
+EVT98661OPTB;They better join our new federation
 EVTDESC98723;With the breakup of $FROMCOUNTRY$, we have gained our independence at last.;;;;;;;;;;;;;
 EVT98723OPTA;It's about time!;;;;;;;;;;;;;
 EVTNAME98724;The Danubian Civil War;;;;;;;;;;;;;
