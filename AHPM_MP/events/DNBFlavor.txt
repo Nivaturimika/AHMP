@@ -14,6 +14,7 @@ country_event = {
 			which = danubian_federation_total_votes
 			value = 0
 		}
+		set_global_flag = danubian_federation_in_progress
 		any_country = {
 			limit = {
 				tag != THIS
@@ -121,13 +122,16 @@ country_event = {
 	desc = "EVTDESC98660"
 	picture = "deliberation"
 	trigger = {
-		any_country != {
-			has_country_flag = voting_in_danubian_federation
-			has_country_flag = pending_vote_in_danubian_federation
+		test = is_austrian_empire
+		has_global_flag = danubian_federation_in_progress
+		NOT = {
+			any_country = {
+				has_country_flag = pending_vote_in_danubian_federation
+			}
 		}
 		check_variable = {
-			which = voting_in_danubian_federation
-			value > 0
+			which = danubian_federation_voting
+			value >= 0
 		}
 	}
 	immediate = {
@@ -147,12 +151,15 @@ country_event = {
 	desc = "EVTDESC98661"
 	picture = "deliberation"
 	trigger = {
-		any_country = {
-			has_country_flag = voting_in_danubian_federation
-			has_country_flag = pending_vote_in_danubian_federation
+		test = is_austrian_empire
+		has_global_flag = danubian_federation_in_progress
+		NOT = {
+			any_country = {
+				has_country_flag = pending_vote_in_danubian_federation
+			}
 		}
 		check_variable = {
-			which = voting_in_danubian_federation
+			which = danubian_federation_voting
 			value <= 0
 		}
 	}

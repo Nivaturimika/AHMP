@@ -23,36 +23,29 @@ country_event = {
 				duration = 3650
 			}
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVTOPTB20000" # decline
 		prestige_factor = -0.2
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
 province_event = {
 	id = 20100
-	title = "EVTNAME20100" #Flashpoint event for GPs
+	title = "EVTNAME20100"
 	desc = "EVTDESC20100"
 	picture = "crisis"
 	trigger = {
-		owner = { is_greater_power = yes }
 		state_scope = {
 			has_flashpoint = yes
 			flashpoint_tension = 5
 			NOT = { flashpoint_tension = 90 }
 		}
 	}
-
 	mean_time_to_happen =  {
 		months = 250
-
 		modifier = {
 			factor = 0.5
 			war_policy = jingoism
@@ -70,64 +63,15 @@ province_event = {
 			war_policy = pacifism
 		}
 	}
-
 	option = {
 		name = "EVTOPTA20100"
-		state_scope = {
-			flashpoint_tension = 10
-		}
+		state_scope = { flashpoint_tension = 10 }
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVTOPTB20100"
 		owner = { prestige_factor = -0.15 }
-	}
-}
-
-province_event = {
-	id = 20101
-	title = "EVTNAME20101" #Flashpoint event for others
-	desc = "EVTDESC20101"
-	picture = "crisis"
-
-	trigger = {
-		owner = { is_greater_power = no }
-		state_scope = {
-			has_flashpoint = yes
-			flashpoint_tension = 5
-			NOT = { flashpoint_tension = 90 }
-		}
-	}
-
-	mean_time_to_happen =  {
-		months = 250
-
-		modifier = {
-			factor = 0.5
-			war_policy = jingoism
-		}
-		modifier = {
-			factor = 0.75
-			war_policy = pro_military
-		}
-		modifier = {
-			factor = 1.25
-			war_policy = anti_military
-		}
-		modifier = {
-			factor = 1.5
-			war_policy = pacifism
-		}
-	}
-
-	option = {
-		name = "EVTOPTA20101"
-		state_scope = {
-			flashpoint_tension = 10
-		}
-	}
-	option = {
-		name = "EVTOPTB20101"
-		owner = { prestige_factor = -0.1 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -142,10 +86,8 @@ country_event = {
 		is_greater_power = yes
 		is_claim_crisis = yes
 	}
-
 	mean_time_to_happen =  {
 		months = 24
-
 		modifier = {
 			factor = 0.5
 			war_policy = jingoism
@@ -165,19 +107,14 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20102" #
-		ai_chance = {
-			factor = 95
-		}
-			add_crisis_temperature = 10
+		name = "EVTOPTA20102"
+		add_crisis_temperature = 10
+		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPTB20102" #
-		ai_chance = {
-			factor = 5
-		}
-
+		name = "EVTOPTB20102"
 		prestige_factor = -0.15
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -195,7 +132,6 @@ country_event = {
 
 	mean_time_to_happen =  {
 		months = 24
-
 		modifier = {
 			factor = 0.5
 			war_policy = jingoism
@@ -215,19 +151,14 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20103" #
-		ai_chance = {
-			factor = 95
-		}
-			add_crisis_temperature = 10
+		name = "EVTOPTA20103"
+		add_crisis_temperature = 10
+		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPTB20103" #
-		ai_chance = {
-			factor = 5
-		}
-
+		name = "EVTOPTB20103"
 		prestige_factor = -0.15
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -266,18 +197,12 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA20104" #
-		ai_chance = {
-			factor = 70
-		}
-			add_crisis_temperature = 5
+		add_crisis_temperature = 5
+		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPTB20104" # decline
-		ai_chance = {
-			factor = 30
-		}
-
-		#
+		name = "EVTOPTB20104"
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -317,33 +242,19 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA20105" #
-		ai_chance = {
-			factor = 70
-		}
-			add_crisis_temperature = 5
+		add_crisis_temperature = 5
+		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPTB20105" # decline
-		ai_chance = {
-			factor = 30
-		}
-
-		#
+		name = "EVTOPTB20105"
+		ai_chance = { factor = 0 }
 	}
 }
 
-#############################################################
-#                                                            #
-#                      New Crisis Events                        #
-#                                                            #
-#############################################################
-
-#Crisis prevention for Native states
 province_event = {
 	id = 20110
 	title = "EVTNAME20110" #Natives in $STATENAME$
 	desc = "EVTDESC20110"
-
 	trigger = {
 		owner = {
 			crisis_exist = no
@@ -386,13 +297,7 @@ province_event = {
 				consciousness = -4
 			}
 		}
-		ai_chance = {
-			factor = 75
-			modifier = {
-				factor = 0
-				owner = { badboy = 0.92 }
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -413,37 +318,7 @@ province_event = {
 				consciousness = -2
 			}
 		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0.1
-				owner = {
-					OR = {
-						government = presidential_dictatorship
-						government = bourgeois_dictatorship
-						government = proletarian_dictatorship
-						government = fascist_dictatorship
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				owner = {
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				owner = { citizenship_policy = residency }
-			}
-			modifier = {
-				factor = 2
-				owner = { citizenship_policy = full_citizenship }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

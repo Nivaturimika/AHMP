@@ -17,3 +17,27 @@ EVTNAME23217;Vassalize $FROMCOUNTRY$?
 EVTDESC23217;$FROMCOUNTRY_ADJ$ diplomats arrived at $CAPITAL$ to come into negotiations with $COUNTRY_ADJ$ representatives of the $COUNTRY_ADJ$ government, $CAPITAL$ feelings towards giving autonomy to $FROMCOUNTRY$ are mixed, some of our most fervent nationalist advisors are strongly against it, however, if we do allow autonomous regions we will surely be seen as weak...
 EVTOPTA23217;$FROMCOUNTRY$ is our $COUNTRY_ADJ$ land
 EVTOPTB23217;$FROMCOUNTRY$ is their $FROMCOUNTRY_ADJ$ land
+EVTNAME98655;The conference of $CAPITAL$;;;;;;;;;;;;;
+EVTDESC98655;After much discussion and deliberation, the $COUNTRY_ADJ$ people are now eager to form a confederation with the rest of the cultures in our empires, ceasing nationalist agitations by covering everyone under the same umbrella!
+EVT98655OPTA;For the shared mutual interests!;;;;;;;;;;;;;
+EVTNAME98656;$FROMCOUNTRY_ADJ$ Confederation project;;;;;;;;;;;;;
+EVTDESC98656;$FROMCOUNTRY_ADJ$ diplomats arrived at $CAPITAL$ with a zany proposal: A united confederation for all of the danubian region. This is honestly baffling, however, given our weak positions as disnuted nations, uniting all of us under the same banner will prove to be extremely useful.
+EVT98656OPTA;We agree;;;;;;;;;;;;;
+EVT98656OPTB;We'll keep an eye out;;;;;;;;;;;;;
+EVT98656OPTC;$FROMCOUNTRY_ADJ$ scum!;;;;;;;;;;;;;
+EVTNAME98657;$FROMCOUNTRY$ agrees
+EVTDESC98657;We have secured the vote of $FROMCOUNTRY_ADJ$, they've talked with our diplomats about the causes and effects of our proposal, evaluated the ramifications and implications of uniting all of us into a single federation, and ultimately, decided that $COUNTRY$ requires a response, and here it be!
+EVT98657OPTA;Splendid
+EVTNAME98658;$FROMCOUNTRY$ abstains
+EVTDESC98658;We have secured the vote of $FROMCOUNTRY_ADJ$, they've talked with our diplomats about the causes and effects of our proposal, evaluated the ramifications and implications of uniting all of us into a single federation, and ultimately, decided that $COUNTRY$ requires a response, and here it be!
+EVT98658OPTA;We'll see
+EVTNAME98659;$FROMCOUNTRY$ refuses
+EVTDESC98659;We have secured the vote of $FROMCOUNTRY_ADJ$, they've talked with our diplomats about the causes and effects of our proposal, evaluated the ramifications and implications of uniting all of us into a single federation, and ultimately, decided that $COUNTRY$ requires a response, and here it be!
+EVT98659OPTA;$FROMCOUNTRY_ADJ$ scum!
+EVTNAME98660;Successful conference of $CAPITAL$ 
+EVTDESC98660;Success! After several talks with various diplomats, a majority vote determined that we should form the confederation! This is a grand moment for all of the $COUNTRY_ADJ$ people, $YEAR$ will be known as the year of the $CAPITAL$ conference!
+EVT98660OPTA;Let there be peace!
+EVTNAME98661;Failed conference of $CAPITAL$ 
+EVTDESC98661;Many tough talks with diplomats around $COUNTRY$ and yet we struck no deals, no concessions or negotiations that favored them, we were in a terrible position, and we didn't only look like a baffoon, we also inspired heavy nationalistic sentiments across our nation, we should be careful of what type of proposals we do next time...
+EVT98661OPTA;Oh dear
+EVT98661OPTB;They better join our new federation
