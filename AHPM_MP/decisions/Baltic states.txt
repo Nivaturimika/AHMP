@@ -124,17 +124,14 @@ political_decisions = {
 		effect = {
 			prestige = 20
 
-			random_owned = {
-				limit = { owner = { NOT = { is_culture_group = germanic } } }
+			if = {
+				limit = { is_culture_group != germanic }
 				UBD = {
 					primary_culture = latvian
 					add_accepted_culture = estonian
 				}
-			}
-
-			random_owned = {
-				limit = { owner = { is_culture_group = germanic } }
-				owner = { badboy = 2 }
+			} else = {
+				badboy = 2
 				UBD = {
 					primary_culture = north_german
 					add_accepted_culture = estonian

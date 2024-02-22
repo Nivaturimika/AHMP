@@ -94,41 +94,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
-	missing_government_flags = {
-		potential = {
-			has_country_flag = surrender_sudan_on_lose
-		}
-
-		allow = {
-			part_of_sphere = no
-			war = no
-		}
-
-		effect = {
-			random_owned = {
-				limit = {
-					owner = {
-						ai = yes
-						has_country_flag = surrender_sudan_on_lose
-						part_of_sphere = no
-						war = no
-					}
-				}
-				owner = { clr_country_flag = surrender_sudan_on_lose }
-			}
-			any_neighbor_country = {
-				limit = {
-					ai = no
-					has_country_flag = surrender_sudan_on_lose
-					part_of_sphere = no
-					war = no
-				}
-				clr_country_flag = surrender_sudan_on_lose
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-
 	native_assimilation_act_ended = {
 		picture = native_assimilation_act
 		potential = {

@@ -35,12 +35,9 @@ political_decisions = {
 	}
 
 	our_brothers_the_gauchos = {
-	picture = our_brothers_the_gauchos
+		picture = our_brothers_the_gauchos
 		potential = {
-			OR = {
-				tag = ARG
-				tag = LPL
-			}
+			test = is_argentina
 			NOT = { has_country_flag = rio_grande_del_sur_is_ours }
 			has_country_flag = banda_oriental_is_ours
 		}

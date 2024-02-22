@@ -241,7 +241,7 @@ political_decisions = {
 		picture = peru_bolivia
 		potential = {
 			tag = PBC
-			NOT = { has_country_flag = the_confederation_is_legitime }
+			has_country_flag != the_confederation_is_legitime
 			NOT = { has_country_flag = pbc_reunited }
 		}
 

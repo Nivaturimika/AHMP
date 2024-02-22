@@ -2228,13 +2228,10 @@ country_event = {
 
 # Iraqi Independence?
 country_event = {
-
 	id = 90032
-
 	title = "EVTNAME90032"
 	desc = "EVTDESC90033"
 	picture = "Ottoman"
-
 	trigger = {
 		war = no
 		NOT = {

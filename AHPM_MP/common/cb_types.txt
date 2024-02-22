@@ -543,25 +543,6 @@ add_to_sphere = {
 	}
 
 	on_po_accepted = {
-		random_owned = {
-			limit = {
-				owner = {
-					has_country_flag = surrender_sudan_on_lose
-				}
-			}
-			owner = {
-				clr_country_flag = surrender_sudan_on_lose
-				any_owned = {
-					limit = {
-						OR = {
-							is_core = SUD
-							is_core = ETH
-						}
-					}
-					secede_province = THIS
-				}
-			}
-		}
 	}
 }
 

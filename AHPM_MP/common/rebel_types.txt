@@ -214,8 +214,14 @@ reactionary_rebels = {
 		political_reform = state_press
 		political_reform = underground_parties
 		political_reform = mandatory_service
-		random_owned = { limit = { owner = { NOT = { trade_unions = no_trade_unions } } } owner = { political_reform = state_controlled } }
-		random_owned = { limit = { owner = { NOT = { citizens_rights = primary_culture_only } } } owner = { social_reform = culture_voting_only } }
+		if = {
+			limit = { trade_unions != no_trade_unions }
+			political_reform = state_controlled
+		}
+		if = {
+			limit = { citizens_rights != primary_culture_only }
+			social_reform = culture_voting_only
+		}
 		add_country_modifier = {
 			name = national_confusion
 			duration = 365

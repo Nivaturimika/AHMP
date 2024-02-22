@@ -2,11 +2,7 @@ political_decisions = {
 	argentina_chile_border_treaty = {
 		picture = argentina_chile_border_treaty
 		potential = {
-			OR = {
-				tag = ARG
-				tag = ARC
-				tag = LPL
-			}
+			test = is_argentina
 			CHL = {
 				exists = yes
 				has_country_flag = occupation_of_araucania
@@ -156,29 +152,22 @@ political_decisions = {
 			is_greater_power = yes
 			NOT = {
 				primary_culture = platinean
-				OR = {
-					tag = ARC
-					tag = ARG
-					tag = LPL
-				}
+				test = is_argentina
 			}
 			OR = {
 				ENT = {
 					exists = yes
 					is_vassal = no
-					ai = yes
 					in_sphere = THIS
 				}
 				CRT = {
 					exists = yes
 					is_vassal = no
-					ai = yes
 					in_sphere = THIS
 				}
 				SBA = {
 					exists = yes
 					is_vassal = no
-					ai = yes
 					in_sphere = THIS
 				}
 			}
@@ -215,21 +204,15 @@ political_decisions = {
 				}
 				annex_to = THIS
 			}
-
 			random_country = {
 				limit = {
 					exists = yes
-					OR = {
-						tag = ARC
-						tag = ARG
-						tag = LPL
-					}
+					test = is_argentina
 					ai = yes
 					in_sphere = THIS
 				}
 				country_event = 97091
 			}
-
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -237,11 +220,7 @@ political_decisions = {
 	claim_argentina_chaco = {
 		picture = conquest_of_the_chaco
 		potential = {
-			OR = {
-				tag = ARC
-				tag = ARG
-				tag = LPL
-			}
+			test = is_argentina
 			NOT = { has_country_flag = claimed_argentinian_chaco }
 			2362 = { empty = no }
 			2377 = { empty = no }
@@ -267,7 +246,7 @@ political_decisions = {
 			2367 = { add_core = THIS }
 			2554 = { add_core = THIS }
 			any_country = {
-				limit = { vassal_of = THIS }
+				limit = { test = is_influenced }
 				any_owned = {
 					limit = {
 						OR = {

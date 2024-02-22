@@ -25,6 +25,15 @@ is_austrian_empire = {
 	}
 }
 
+is_argentina = {
+	main_parameter = nation
+	OR = {
+		tag = ARC
+		tag = ARG
+		tag = LPL
+	}
+}
+
 is_influenced = {
 	main_parameter = nation
 	this_parameter = nation
