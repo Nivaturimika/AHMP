@@ -1391,15 +1391,15 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA16453" #Sell everything they want
-		FROM = { country_event = 16454 }
-		ai_chance = { factor = 0 }
+		name = "EVTOPTA16453" #Sell only historical borders
+		FROM = { country_event = 16455 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
-		name = "EVTOPTB16453" #Sell only historical borders
-		FROM = { country_event = 16455 }
-		ai_chance = { factor = 1 }
+		name = "EVTOPTB16453" #Sell everything they want
+		FROM = { country_event = 16454 }
+		ai_chance = { factor = 0 }
 	}
 
 	option = {

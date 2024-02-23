@@ -1240,12 +1240,14 @@ political_decisions = {
 		}
 
 		allow = {
-			90 = { owned_by = THIS }
-			100 = { owned_by = THIS }
-			104 = { owned_by = THIS }
-			105 = { owned_by = THIS }
-			102 = { owned_by = THIS }
-			2662 = { owned_by = THIS }
+			102 = {
+				owned_by != THIS
+				any_neighbor_province = { owned_by = THIS }
+			}
+			2662 = {
+				owned_by != THIS
+				any_neighbor_province = { owned_by = THIS }
+			}
 			war = no
 			money = 50000
 			nationalism_n_imperialism = 1

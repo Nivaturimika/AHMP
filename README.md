@@ -11,6 +11,7 @@ AHMP is a fork of HPM catered for Multiplayer & Project Alice.
 
 ## Changes
 
+- New substate mechanics! At the start of the game various nations will be split in substates, fear not, once they develop enough and have high enough administration, they will be integrated peacefully!
 - War exhaustion has been reduced considerably, but it can start to add up if you are at war for a long period of time (+3 years)
 - Casualties now are extremely devastating for your POPs, so you should take care of your armies
 - Technologies are all researchable day 1

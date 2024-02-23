@@ -2199,7 +2199,7 @@ province_event = {
 		remove_province_modifier = foreign_smugglers
 		if = {
 			limit = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } }
-			remove_country_modifier = western_presence_research
+			owner = { remove_country_modifier = western_presence_research }
 		}
 	}
 	option = {
