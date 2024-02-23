@@ -1050,43 +1050,26 @@ political_decisions = {
 			tag = ENG
 			NOT = { has_global_flag = webster_ashburton_signed }
 		}
-
 		allow = {
-			owns = 250
-			OR = {
-				USA = { any_owned_province = { region = USA_247 } }
-				NEN = { any_owned_province = { region = USA_247 } }
-			}
-			OR = {
-				AND = {
-					USA = { owns = 249 }
-					NOT = { war_with = USA }
-				}
-				AND = {
-					NEN = { owns = 249 }
-					NOT = { war_with = NEN }
-				}
+			250 = { test = is_influenced }
+			any_country = {
+				test = is_american_union
+				any_owned_province = { region = USA_247 }
+				owns = 249
+				war_with != THIS
 			}
 		}
-
 		effect = {
 			249 = { remove_core = CAN }
 			250 = { remove_core = CAN }
 			250 = { remove_core = ENG }
 			250 = { remove_core = MRU }
-			badboy = -2
+			badboy = -3
 			prestige = 10
 			249 = { owner = { country_event = 44122 } }
 			set_global_flag = webster_ashburton_signed
 		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { badboy = 0.08 }
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 	rio_grande_treaty = {
 		picture = rio_grande_treaty

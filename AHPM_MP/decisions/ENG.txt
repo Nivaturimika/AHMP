@@ -978,10 +978,6 @@ political_decisions = {
 		picture = canadian_dominion
 		alert = no
 		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
 			CAN = { exists = yes vassal_of = THIS }
 			any_owned_province = {
 				continent = north_america
