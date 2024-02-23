@@ -18,7 +18,6 @@ country_event = {
     is_triggered_only = yes
     #trigger = { country = { has_country_modifier = will_influence_elections } }
 
-
     option = {
         name = "EVTOPTA14000"
         any_pop = {

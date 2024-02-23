@@ -1578,7 +1578,7 @@ EVTNAME90953;The Algerian Claims;;;;;;;;;;;;;
 EVTDESC90953;One of the regions of the Sahara we own was historically claimed by Algeria. Even if not now, they plan to put enforce these claims.;;;;;;;;;;;;;
 EVTOPTA90953;Irrelevant.;;;;;;;;;;;;;
 EVTNAME325106;The Caucasian Rebellion;;;;;;;;;;;;;
-EVTDESC325106;Imam Shamil eluded our forces and retreated to the mountains, raiding villages and forts under our control. For the last month, however, he amassed a massive force and marched from the mountains, taking several forts by surprise, overrunning them and shattering our control over the land.;;;;;;;;;;;;;
+EVTDESC325106;Imam Shamil eluded our forces and retreated to the mountains, raiding villages and forts under $COUNTRY_ADJ$ control. For the last month, however, he amassed a massive force and marched from the mountains, taking several forts by surprise, overrunning them and shattering our control over the land.;;;;;;;;;;;;;
 EVT325106OPTA;Damn these rebels.;;;;;;;;;;;;;
 EVT325106OPTB;They are too troublesome to keep fighting. Let them be free.;;;;;;;;;;;;;
 EVTNAME90101;Broken Promises;;;;;;;;;;;;;
@@ -1605,8 +1605,8 @@ EVTDESC325105;The Circassians have rose up again, seizing several cities and dec
 EVT325105OPTA;Put down this rebellion.;;;;;;;;;;;;;
 EVT325105OPTB;We recognize the Circassian Independence.;;;;;;;;;;;;;
 EVTNAME325104;The Circassian Diaspora;;;;;;;;;;;;;
-EVTDESC325104;From 1763 to $YEAR$, the Circassians fought against the Russian Empire in the Russian-Circassian War, finally succumbing to a scorched-earth campaign initiated in the last two years under General Nicholai Yevdokimov. Afterwards, large numbers of Circassians were exiled and deported to the Ottoman Empire and other nearby regions. Total population estimates differ: according to some sources, some two million live in Anatolia, Transjordan, Syria, and Iraq. The Circassians that stayed behind, before and after the exodus and war, were subject to pre-planned mass killings by Imperial Russia, accompanied by deliberate famine and epidemics, severely reducing the population.;;;;;;;;;;;;;
-EVT325104OPTA;Finally, Russia is at peace.;;;;;;;;;;;;;
+EVTDESC325104;From 1763 to $YEAR$, the Circassians fought against $COUNTRY$ in the $COUNTRY_ADJ$-Circassian War, finally succumbing to a scorched-earth campaign initiated in the last two years under General Nicholai Yevdokimov. Afterwards, large numbers of Circassians were exiled and deported to the Ottoman Empire and other nearby regions. Total population estimates differ: according to some sources, some two million live in Anatolia, Transjordan, Syria, and Iraq. The Circassians that stayed behind, before and after the exodus and war, were subject to pre-planned mass killings by $COUNTRY$, accompanied by deliberate famine and epidemics, severely reducing the population.;;;;;;;;;;;;;
+EVT325104OPTA;Finally, $COUNTRY$ is at peace.;;;;;;;;;;;;;
 EVT325104OPTB;Try to stop the collateral damage. We recognize their struggle.;;;;;;;;;;;;;
 EVTNAME32535;The $YEAR$ Rebellion in $PROVINCENAME$;;;;;;;;;;;;;
 EVTDESC32535;In $YEAR$, without regard to local conditions, the $COUNTRY_ADJ$ government ordered $PROVINCENAME$ peasants to cultivate potatoes and to pay their taxes in $COUNTRY_ADJ$ cash. $PROVINCENAME$ still maintained a primarily natural economy based on corn and millet. Rumors began to spread among the peasants that money payments would soon be required and that peasants would be drafted into the army. When the tax collections began, the peasants of the community resisted and took to arms. The disturbances spread through all $PROVINCENAME$ and soon the rebels had almost 7,200 men in their ranks. They took control of most fortified points in the province and blocked roads leading to the key cities.;;;;;;;;;;;;;
@@ -2883,7 +2883,7 @@ EVTDESC32512;The Hungarian revolution in Austria sets a dangerous precedent. The
 EVT32512OPTA;The Hungarians must be crushed!;;;;;;;;;;;;;
 EVT32512OPTB;Let the Austrians deal with them.;;;;;;;;;;;;;
 EVTNAME32513;The Caucasian War;;;;;;;;;;;;;
-EVTDESC32513;The Russian annexation of the Caucasus has met with increasing bitterness and anger among the local populace, tribal groups that are angry with the Russian administration and have declared that their homelands shall be freed from our rule. This has become a problem as rebels take to the highlands, and rooting them out may take a very long time indeed. Imam Shamil and the Chechen Muslims are leading raids from the highlands and forests, this frontier region promises brew problems in the near future. \n\nTo consolidate our hold in one of the provinces of the region, the fort of Yekaterinodar will not be the capital of the province anymore and the recently founded port city of Novorossiysk will be the new regional capital.;;;;;;;;;;;;;
+EVTDESC32513;The $COUNTRY_ADJ$ annexation of the Caucasus has met with increasing bitterness and anger among the local populace, tribal groups that are angry with the $COUNTRY_ADJ$ administration and have declared that their homelands shall be freed from our rule. This has become a problem as rebels take to the highlands, and rooting them out may take a very long time indeed. Imam Shamil and the Chechen Muslims are leading raids from the highlands and forests, this frontier region promises brew problems in the near future. To consolidate our hold in one of the provinces of the region, the fort of Yekaterinodar will not be the capital of the province anymore and the recently founded port city of Novorossiysk will be the new regional capital.;;;;;;;;;;;;;
 EVTOPTB90101;Go back on our promise.;;;;;;;;;;;;;
 EVT32513OPTA;Order shall be restored.;;;;;;;;;;;;;
 EVTNAME32514;$FROMCOUNTRY$ Refuses;;;;;;;;;;;;;
