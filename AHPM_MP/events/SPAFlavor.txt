@@ -3000,7 +3000,7 @@ country_event = {
 	picture = "senate_debate"
 
 	trigger = {
-		tag = USA
+		test = is_american_union
 		OR = {
 			truce_with = SPA
 			truce_with = SPC
@@ -3083,7 +3083,7 @@ country_event = {
 						province_id = 2222
 					}
 				}
-				add_core = USA
+				add_core = THIS
 			}
 		}
 		random_country = {

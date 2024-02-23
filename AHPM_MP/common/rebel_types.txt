@@ -3021,8 +3021,6 @@ liberal_rebels = {
 					}
 					NOT = {
 						voting_system = proportional_representation
-						tag = USA
-						tag = ENG
 					}
 				}
 			}

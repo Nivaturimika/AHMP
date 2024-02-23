@@ -16,7 +16,6 @@ country_event = {
 			}
 			AND = {
 				ruling_party_ideology = liberal
-				year = 1860
 				average_consciousness = 8
 			}
 		}
@@ -1347,7 +1346,7 @@ country_event = {
 	picture = "prisonworkers"
 
 	trigger = {
-		tag = USA
+		test = is_american_union
 		OR = {
 			slavery = yes_slavery
 			slavery = freedom_of_womb

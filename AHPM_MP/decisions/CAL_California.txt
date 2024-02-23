@@ -30,11 +30,11 @@ greater_california = {
 
 	effect = {
 		set_country_flag = greater_california
-		MEX_85 = { add_core = CAL } #California
-		MEX_94 = { add_core = CAL } #Nevada
-		MEX_97 = { add_core = CAL } #Utah
-		MEX_100 = { add_core = CAL } #Arizona
-		MEX_2138 = { add_core = CAL } #Sonora
+		MEX_85 = { add_core = THIS } #California
+		MEX_94 = { add_core = THIS } #Nevada
+		MEX_97 = { add_core = THIS} #Utah
+		MEX_100 = { add_core = THIS } #Arizona
+		MEX_2138 = { add_core = THIS } #Sonora
 		any_pop = {
 			dominant_issue = {
 				factor = 0.05
@@ -77,7 +77,6 @@ rancho = {
 	effect = {
 		set_global_flag = rancho
 		treasury = -5000
-
 		any_owned = {
 			limit = {
 				OR = {
@@ -90,7 +89,7 @@ rancho = {
 					province_id = 90
 				}
 			}
-		add_province_modifier = {  name = rancho  duration = 1825 }
+			add_province_modifier = {  name = rancho  duration = 1825 }
 		}
 	}
 
@@ -101,7 +100,7 @@ rancho = {
 annex_california = {
 	picture = USA_annex_california
 	potential = {
-		tag = USA
+		test = is_american_union
 		is_greater_power = yes
 		has_recently_lost_war = no
 		CAL = { exists = yes }
@@ -119,11 +118,11 @@ annex_california = {
 			war = no
 			OR = {
 				is_vassal = no
-				vassal_of = USA
+				vassal_of = THIS
 			}
 			OR = {
 				part_of_sphere = no
-				in_sphere = USA
+				in_sphere = THIS
 			}
 		}
 	}

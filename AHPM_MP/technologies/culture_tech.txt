@@ -165,36 +165,6 @@ malthusian_thought = {
 
 	colonial_migration = 0.05
 	education_efficiency = 0.1
-
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.75 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.50 }
-		}
-		modifier = {
-			factor = 2 #4
-			not = { literacy = 0.25 }
-		}
-		modifier = {
-			factor = 20
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			not = { literacy = 0.30 }
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-	}
 }
 positivism = {
 	area = social_thought
@@ -202,49 +172,6 @@ positivism = {
 	cost = 7200
 	colonial_migration = 0.05
 	education_efficiency = 0.1
-	ai_chance = {
-		factor = 1.8
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.75 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.50 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.25 }
-		}
-		modifier = {
-			factor = 5
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			OR = {
-				not = { literacy = 0.40 }
-				tag = ENG
-			}
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 3
-			OR = {
-				tag = PRU
-				tag = NGF
-				tag = GER
-				tag = ENG
-				tag = USA
-			}
-		}
-	}
-
 }
 functionalism = {
 	area = social_thought
@@ -253,49 +180,6 @@ functionalism = {
 
 	colonial_migration = 0.05
 	education_efficiency = 0.1
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.75 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.50 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.25 }
-		}
-		modifier = {
-			factor = 5
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			OR = {
-				not = { literacy = 0.50 }
-				tag = ENG
-			}
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 3
-			OR = {
-				tag = PRU
-				tag = NGF
-				tag = GER
-				tag = ENG
-				tag = USA
-			}
-		}
-	}
-
 }
 biologism = {
 	area = social_thought
@@ -304,50 +188,6 @@ biologism = {
 
 	colonial_migration = 0.05
 	education_efficiency = 0.1
-	ai_chance = {
-		factor = 2
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.75 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.50 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.25 }
-		}
-		modifier = {
-			factor = 10
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			OR = {
-				not = { literacy = 0.7 }
-				year = 1830
-				tag = ENG
-			}
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		modifier = {
-			factor = 5
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 5
-			OR = {
-				tag = PRU
-				tag = NGF
-				tag = GER
-				tag = ENG
-				tag = USA
-			}
-		}
-	}
-
 }
 social_science = {
 	area = social_thought
@@ -356,42 +196,6 @@ social_science = {
 
 	colonial_migration = 0.05
 	education_efficiency = 0.2
-
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.75 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.50 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.25 }
-		}
-		modifier = {
-			factor = 10
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			OR = {
-				not = { literacy = 0.75 }
-				year = 1830
-				tag = ENG
-			}
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-	}
-
 }
 social_alienation = {
 	area = social_thought
@@ -512,55 +316,7 @@ state_n_government = {
 	area = political_thought
 	year = 1830
 	cost = 10800
-
 	max_national_focus = 1
-	ai_chance = {
-		factor = 15
-		modifier = {
-			factor = 3.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				total_pops = 4000000
-				AND = {
-					is_secondary_power = yes
-					any_owned_province = { port = yes }
-				}
-				AND = {
-					capital_scope = { continent = europe }
-					colonial_nation = yes
-				}
-			}
-		}
-		modifier = {
-			factor = 20
-			culture_has_union_tag = yes
-		}
-
-		modifier = {
-			factor = 30
-			rank = 16
-			year = 1830
-			any_owned_province = { port = yes }
-			total_pops = 3000000
-		}
-		modifier = {
-			factor = 30
-			OR = {
-				year = 1830
-				tag = SAR
-				tag = PRU
-				tag = USA
-				colonial_nation = yes
-			}
-		}
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-	}
 }
 nationalism_n_imperialism = {
 	area = political_thought

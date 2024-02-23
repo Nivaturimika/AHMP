@@ -300,7 +300,7 @@ country_event = {
 			truce_with = RUS
 		}
 		OR = {
-			tag = USA
+			test = is_american_union
 			tag = CAN
 			relation = { who = RUS value = 0 }
 			alliance_with = RUS
@@ -313,10 +313,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 6
-		modifier = {
-			factor = 0.5
-			tag = USA
-		}
 		modifier = {
 			factor = 0.8
 			alliance_with = RUS
@@ -356,7 +352,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					tag = USA
+					test = is_american_union
 					tag = CAN
 				}
 			}

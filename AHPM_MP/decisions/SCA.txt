@@ -114,31 +114,7 @@ political_decisions = {
 
 		ai_will_do = { factor = 1     }
 	}
-
-	move_capital_to_gothenburg = {
-		picture = declare_republic_of_neuchatel
-		alert = no
-		potential = {
-			tag = SCA
-			owns = 329 # Gothenburg
-			NOT = { capital = 329 }
-			capital = 322
-		}
-
-		allow = {
-			NOT = { capital = 329 }
-		}
-
-		effect = {
-			capital = 329
-			prestige = 5
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
+	
 	form_scandinavia = {
 		news = yes
 		news_desc_long = "form_scandinavia_NEWS_LONG"

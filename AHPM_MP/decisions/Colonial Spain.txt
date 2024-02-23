@@ -47,7 +47,7 @@ political_decisions = {
 	treaty_of_paris_1898 = {
 		picture = treaty_signing
 		potential = {
-			tag = USA
+			test = is_american_union
 			OR = {
 				war_with = SPA
 				war_with = SPC
@@ -72,23 +72,18 @@ political_decisions = {
 
 		allow = {
 			money = 500000
-			2209 = { controlled_by = USA }
-			2210 = { controlled_by = USA }
-			2211 = { controlled_by = USA }
-			2212 = { controlled_by = USA }
+			2209 = { controlled_by = THIS }
+			2210 = { controlled_by = THIS }
+			2211 = { controlled_by = THIS }
+			2212 = { controlled_by = THIS }
 			OR = {
-				2222 = { controlled_by = USA }
-				1455 = { controlled_by = USA }
-				SPA = {
+				2222 = { controlled_by = THIS }
+				1455 = { controlled_by = THIS }
+				any_country = {
+					test = is_spanish_empire
 					any_owned_province = {
 						is_core = SPA
-						controlled_by = USA
-					}
-				}
-				SPC = {
-					any_owned_province = {
-						is_core = SPC
-						controlled_by = USA
+						controlled_by = THIS
 					}
 				}
 			}
@@ -101,10 +96,7 @@ political_decisions = {
 			set_country_flag = treaty_of_paris_1898
 			badboy = 5
 			random_country = {
-				limit = {
-					test = is_spanish_empire
-					exists = yes
-				}
+				limit = { test = is_spanish_empire }
 				country_event = 37740
 			}
 		}

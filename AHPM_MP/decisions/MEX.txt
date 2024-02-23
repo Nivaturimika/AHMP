@@ -48,34 +48,24 @@ political_decisions = {
 	treaty_of_guadalupe_hidalgo = {
 		picture = treaty_of_guadalupe_hidalgo
 		potential = {
-			tag = USA
+			test = is_american_union
 			has_country_flag = hasmanifestdestiny
 			NOT = { has_country_flag = treaty_of_guadalupe_hidalgo }
 			MEX = { is_greater_power = no NOT = { has_country_flag = manifest_destiny_refuted } }
 		}
 
 		allow = {
-			OR = {
-				money = 100000
-				ai = yes
-			}
+			money = 100000
 			OR = {
 				2172 = { controlled_by = USA }
 				MEX = {
 					all_core = {
 						OR = {
-							owned_by = USA
-							controlled_by = USA
-							NOT = { is_core = USA }
+							owned_by = THIS
+							controlled_by = THIS
+							NOT = { is_core = THIS }
 						}
 					}
-				}
-				AND = {
-					MEX = { ai = yes }
-					ai = yes
-					is_sphere_leader_of = MEX
-					war = no
-					truce_with = MEX
 				}
 			}
 			NOT = {

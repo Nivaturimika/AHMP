@@ -1349,19 +1349,18 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-	tag = USA
-	has_country_modifier = the_statue_of_liberty
-	OR = {
-		NOT = { government = democracy }
-		AND = {
-			has_global_flag = disunited_states
-			has_global_flag = second_american_civil_war
+		test = is_american_union
+		has_country_modifier = the_statue_of_liberty
+		OR = {
+			NOT = { government = democracy }
+			AND = {
+				has_global_flag = disunited_states
+				has_global_flag = second_american_civil_war
 			}
 		}
 	}
 
 	mean_time_to_happen = { months = 1 }
-
 
 	option = {
 		name = "EVTOPTA19301"

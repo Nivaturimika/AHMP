@@ -424,7 +424,7 @@ political_decisions = {
 	fsa_enact_radical_reconstruction = {
 		picture = enact_radical_reconstruction
 		potential = {
-			tag = USA
+			test = is_american_union
 			war = no
 			has_global_flag = alt_american_civil_war_has_happened
 			owns = 232
@@ -541,145 +541,26 @@ political_decisions = {
 		}
 	}
 
-	restore_washington_capital = {
-		potential = {
-			tag = USA
-			owns = 2146
-			NOT = {
-				capital = 2146
-				has_global_flag = alt_american_civil_war_has_happened
-			}
-		}
-
-		allow = {
-			controls = 2146
-			NOT = { capital = 2146 }
-		}
-
-		effect = {
-			capital = 2146
-			prestige = 5
-		}
-	}
-
-	move_capital_to_philadelphia = {
-		picture = restore_washington_capital
-		potential = {
-			OR = {
-				tag = USA
-				tag = FSA
-			}
-			owns = 223
-			OR = {
-				tag = FSA
-				AND = {
-					tag = USA
-					NOT = { owns = 2146 }
-				}
-			}
-			NOT = { capital = 223 }
-		}
-
-		allow = {
-			controls = 223
-			NOT = { capital = 223 }
-		}
-
-		effect = {
-			capital = 223
-		}
-	}
-
-	move_capital_to_boston = {
-		picture = restore_washington_capital
-		potential = {
-			OR = {
-				tag = USA
-				tag = FSA
-			}
-			owns = 243
-			OR = {
-				AND = {
-					tag = FSA
-					NOT = { owns = 223 }
-				}
-				AND = {
-					tag = USA
-					NOT = { owns = 2146 }
-					NOT = { owns = 223 }
-				}
-			}
-			NOT = { capital = 243 }
-		}
-
-		allow = {
-			controls = 243
-			NOT = { capital = 243 }
-		}
-
-		effect = {
-			capital = 243
-		}
-	}
-
-	restore_richmond_capital = {
-		potential = {
-			tag = CSA
-			owns = 60
-			NOT = { capital = 60 }
-		}
-
-		allow = {
-			controls = 60
-			NOT = { capital = 60 }
-		}
-
-		effect = {
-			capital = 60
-			prestige = 5
-		}
-	}
-
-	move_capital_to_atlanta = {
-		picture = restore_richmond_capital
-		potential = {
-			tag = CSA
-			owns = 201
-			NOT = {
-				owns = 60
-				capital = 201
-			}
-		}
-
-		allow = {
-			controls = 201
-			NOT = { capital = 201 }
-		}
-
-		effect = {
-			capital = 201
-		}
-		ai_will_do = { factor = 0 }
-	}
-
 	recognize_puerto_rico = {
 		picture = gtfo
 		potential = {
-			tag = USA
+			test = is_american_union
 			PRI = {
 				exists = yes
 				is_vassal = no
 				part_of_sphere = no
 			}
 			NOT = {
-				war_policy = jingoism
 				has_country_flag = recognized_puerto_rico
-				war_with = PRI
 				any_owned_province = { is_core = PRI }
 			}
 		}
 
 		allow = {
+			NOT = {
+				war_policy = jingoism
+				war_with = PRI
+			}
 			is_greater_power = yes
 		}
 
@@ -709,7 +590,7 @@ political_decisions = {
 	recognize_cuba = {
 		picture = gtfo
 		potential = {
-			tag = USA
+			test = is_american_union
 			CUB = {
 				exists = yes
 				is_vassal = no

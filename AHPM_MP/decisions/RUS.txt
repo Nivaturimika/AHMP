@@ -535,47 +535,7 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-
-	move_capital_to_moscow = {
-		potential = {
-			tag = RUS
-			NOT = { capital = 1008 }
-		}
-
-		allow = {
-			owns = 1008 # Moscow
-			OR = {
-				AND = {
-					NOT = { owns = 339 } # Viipuri
-					NOT = { is_our_vassal = FIN }
-				}
-				AND = {
-					NOT = { owns = 350 } # Narva
-					OR = {
-						UBD = { exists = yes owns = 350 NOT = { vassal_of = THIS } }
-						EST = { exists = yes owns = 350 NOT = { vassal_of = THIS } }
-					}
-				}
-				AND = {
-					NOT = { owns = 355 } # Valmiera
-					OR = {
-						UBD = { exists = yes owns = 355 NOT = { vassal_of = THIS } }
-						LAT = { exists = yes owns = 355 NOT = { vassal_of = THIS } }
-					}
-				}
-				NOT = { owns = 946 } # Polotsk
-			}
-		}
-
-		effect = {
-			capital = 1008
-			prestige = 5
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
+	
 	treaty_of_tartu = {
 		picture = treaty_signing
 		potential = {
