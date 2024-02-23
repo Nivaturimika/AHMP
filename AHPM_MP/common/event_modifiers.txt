@@ -796,12 +796,12 @@ bigben_construction = {
 }
 
 small_immigration_boom = {
-	global_immigrant_attract = 1
+	global_immigrant_attract = 0.1
 	icon = 17
 }
 
 land_of_opportunity = {
-	global_immigrant_attract = 4.5
+	global_immigrant_attract = 0.15
 	icon = 13
 }
 
@@ -1386,7 +1386,7 @@ anaconda_plan = {
 }
 
 the_homestead_act = {
-	global_immigrant_attract = 0.5    #50%
+	global_immigrant_attract = 0.15    #50%
 	global_assimilation_rate = 0.5
 	core_pop_militancy_modifier = -0.05
 	icon = 9
@@ -1508,7 +1508,7 @@ international_negotiations = {
 
 the_statue_of_liberty = {
 	prestige = 0.01
-	global_immigrant_attract = 0.5    #100%
+	global_immigrant_attract = 0.15    #100%
 	global_assimilation_rate = 0.5
 	icon = 15
 }
@@ -1570,7 +1570,7 @@ prussian_general_staff = {
 
 ##### Boer War #####
 trek_boers = {
-	global_immigrant_attract = 4.1        #410%
+	global_immigrant_attract = 0.1        #410%
 	global_assimilation_rate = 0.1
 	icon = 17
 }
@@ -1588,7 +1588,7 @@ boer_exodus = {
 }
 
 gold_rush_country = {
-	global_immigrant_attract = 0.5
+	global_immigrant_attract = 0.15
 	icon = 9
 }
 
@@ -2342,14 +2342,14 @@ great_war = {
 	mobilisation_size = 0.03
 	core_pop_militancy_modifier = -0.2
 	global_population_growth = -0.001
-	global_immigrant_attract = -0.5
+	global_immigrant_attract = -1.0
 	icon = 17
 }
 
 great_war2 = {
 	war_exhaustion = -2.0
 	global_population_growth = -0.002
-	global_immigrant_attract = -0.75
+	global_immigrant_attract = -2.0
 	icon = 17
 }
 
@@ -2357,7 +2357,7 @@ great_war3 = {
 	war_exhaustion = -1.0
 	non_accepted_pop_militancy_modifier = 0.2
 	global_population_growth = -0.004
-	global_immigrant_attract = -1.0
+	global_immigrant_attract = -3.0
 	icon = 17
 }
 

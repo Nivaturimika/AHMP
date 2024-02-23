@@ -53,10 +53,6 @@ country_event = {
 		tag = UCA
 		war = no
 		2201 = { test = is_influenced }
-		NOT = {
-			has_country_flag = costa_rica_independence
-			exists = COS
-		}
 		OR = {
 			exists = NIC
 			2201 = {
@@ -73,7 +69,6 @@ country_event = {
 
 	option = {
 		name = "EVT975521OPTA"
-		set_country_flag = costa_rica_independence
 		prestige = -5
 		any_owned = {
 			limit = { is_core = COS }
@@ -81,7 +76,7 @@ country_event = {
 		}
 		COS = {
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 30
 			}
@@ -377,26 +372,10 @@ country_event = {
 
 	trigger = {
 		tag = UCA
-		exists = yes
 		war = no
-		2201 = {
-			NOT = { is_core = UCA }
-			owned_by = THIS
-			controlled_by = THIS
-			NOT = { average_militancy = 2 }
-		}
-		2202 = {
-			NOT = { is_core = UCA }
-			owned_by = THIS
-			controlled_by = THIS
-			NOT = { average_militancy = 2 }
-		}
-		2203 = {
-			NOT = { is_core = UCA }
-			owned_by = THIS
-			controlled_by = THIS
-			NOT = { average_militancy = 2 }
-		}
+		2201 = { test = is_influenced }
+		2202 = { test = is_influenced }
+		2203 = { test = is_influenced }
 	}
 
 	mean_time_to_happen = {
@@ -406,295 +385,36 @@ country_event = {
 	option = {
 		name = "EVT97556OPTA"
 		prestige = 2
-		2201 = { add_core = UCA }
-		2202 = { add_core = UCA }
-		2203 = { add_core = UCA }
+		2201 = { add_core = THIS }
+		2202 = { add_core = THIS }
+		2203 = { add_core = THIS }
 	}
 }
 
 country_event = {
-	id = 97557
-	title = "EVTNAME97557"
-	desc = "EVTDESC97557"
-	picture = "frc_salvador"
-
+	id = 975657
+	title = "EVTNAME975657"
+	desc = "EVTDESC975657"
+	picture = "frc_costa_rica"
 	fire_only_once = yes
-
 	trigger = {
-		tag = UCA
-		exists = yes
-		exists = ELS
-		any_owned_province = {
-			OR = {
-				is_core = HON
-				is_core = NIC
-				is_core = COS
-			}
+		OR = {
+			tag = COS
+			tag = ELS
+			tag = NIC
+			tag = HON
 		}
-		NOT = { has_global_flag = the_usca_has_failed }
+		is_independant = yes
+		in_sphere != UCA
 	}
-
 	mean_time_to_happen = {
 		days = 10
 	}
-
+	immediate = {
+		UCA = { country_event = 975610 }
+	}
 	option = {
-		name = "EVT975610OPTA"
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				location = {
-					OR = {
-						is_core = HON
-						is_core = NIC
-						is_core = COS
-					}
-				}
-			}
-			militancy = 9
-		}
-		prestige = 2
-		relation = { who = ELS value = -50 }
-		ELS = {
-			all_core = { add_core = UCA }
-			casus_belli = {
-				target = UCA
-				type = free_peoples
-				months = 30
-			}
-		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.8
-				exists = HON
-			}
-			modifier = {
-				factor = 0.8
-				exists = NIC
-			}
-			modifier = {
-				factor = 0.8
-				exists = COS
-			}
-			modifier = {
-				factor = 0.5
-				num_of_revolts = 5
-			}
-		}
-	}
-
-	option = {
-		name = "EVT975610OPTB"
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				location = {
-					OR = {
-						is_core = HON
-						is_core = NIC
-						is_core = COS
-					}
-				}
-			}
-			militancy = 9
-		}
-		prestige = -2
-		relation = { who = ELS value = 25 }
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {
-	id = 97558
-	title = "EVTNAME97558"
-	desc = "EVTDESC97558"
-	picture = "frc_honduras"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = UCA
-		exists = yes
-		exists = HON
-		any_owned_province = {
-			OR = {
-				is_core = ELS
-				is_core = NIC
-				is_core = COS
-			}
-		}
-		NOT = { has_global_flag = the_usca_has_failed }
-	}
-
-	mean_time_to_happen = {
-		days = 10
-	}
-
-	option = {
-		name = "EVT975610OPTA"
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				location = {
-					OR = {
-						is_core = ELS
-						is_core = NIC
-						is_core = COS
-					}
-				}
-			}
-			militancy = 9
-		}
-		prestige = 2
-		relation = { who = HON value = -50 }
-		HON = {
-			all_core = { add_core = UCA }
-			casus_belli = {
-				target = UCA
-				type = free_peoples
-				months = 30
-			}
-		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.8
-				exists = ELS
-			}
-			modifier = {
-				factor = 0.8
-				exists = NIC
-			}
-			modifier = {
-				factor = 0.8
-				exists = COS
-			}
-			modifier = {
-				factor = 0.5
-				num_of_revolts = 5
-			}
-		}
-	}
-
-	option = {
-		name = "EVT975610OPTB"
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				location = {
-					OR = {
-						is_core = ELS
-						is_core = NIC
-						is_core = COS
-					}
-				}
-			}
-			militancy = 9
-		}
-		prestige = -2
-		relation = { who = HON value = 25 }
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-country_event = {
-	id = 97559
-	title = "EVTNAME97559"
-	desc = "EVTDESC97559"
-	picture = "frc_nicaragua"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = UCA
-		exists = yes
-		NOT = { has_country_flag = nicaragua_independence }
-		exists = NIC
-		any_owned_province = {
-			OR = {
-				is_core = ELS
-				is_core = HON
-				is_core = COS
-			}
-		}
-		NOT = { has_global_flag = the_usca_has_failed }
-	}
-
-	mean_time_to_happen = {
-		days = 10
-	}
-
-	option = {
-		name = "EVT975610OPTA"
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				location = {
-					OR = {
-						is_core = ELS
-						is_core = HON
-						is_core = COS
-					}
-				}
-			}
-			militancy = 9
-		}
-		prestige = 2
-		relation = { who = NIC value = -50 }
-		NIC = {
-			all_core = { add_core = UCA }
-			casus_belli = {
-				target = UCA
-				type = free_peoples
-				months = 30
-			}
-		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.8
-				exists = ELS
-			}
-			modifier = {
-				factor = 0.8
-				exists = HON
-			}
-			modifier = {
-				factor = 0.8
-				exists = COS
-			}
-			modifier = {
-				factor = 0.5
-				num_of_revolts = 5
-			}
-		}
-	}
-
-	option = {
-		name = "EVT975610OPTB"
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				location = {
-					OR = {
-						is_core = ELS
-						is_core = HON
-						is_core = COS
-					}
-				}
-			}
-			militancy = 9
-		}
-		prestige = -2
-		relation = { who = NIC value = 25 }
-		ai_chance = {
-			factor = 10
-		}
+		name = "EVT975657OPTA"
 	}
 }
 
@@ -703,94 +423,36 @@ country_event = {
 	title = "EVTNAME975610"
 	desc = "EVTDESC975610"
 	picture = "frc_costa_rica"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = UCA
-		exists = yes
-		NOT = { has_country_flag = costa_rica_independence }
-		exists = COS
-		any_owned_province = {
-			OR = {
-				is_core = ELS
-				is_core = HON
-				is_core = NIC
-			}
-		}
-		NOT = { has_global_flag = the_usca_has_failed }
-	}
-
-	mean_time_to_happen = {
-		days = 10
-	}
-
-	option = {
-		name = "EVT975610OPTA"
+	is_triggered_only = yes
+	immediate = {
 		any_pop = {
 			limit = {
 				is_primary_culture = yes
 				location = {
-					OR = {
-						is_core = ELS
-						is_core = HON
-						is_core = NIC
-					}
+					test = is_influenced
+					is_core != THIS
 				}
 			}
 			militancy = 9
 		}
+	}
+	option = {
+		name = "EVT975610OPTA"
 		prestige = 2
-		relation = { who = COS value = -50 }
-		COS = {
-			all_core = { add_core = UCA }
+		FROM = {
+			all_core = { add_core = THIS }
 			casus_belli = {
-				target = UCA
+				target = THIS
 				type = free_peoples
 				months = 30
 			}
 		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.8
-				exists = ELS
-			}
-			modifier = {
-				factor = 0.8
-				exists = HON
-			}
-			modifier = {
-				factor = 0.8
-				exists = NIC
-			}
-			modifier = {
-				factor = 0.5
-				num_of_revolts = 5
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT975610OPTB"
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				location = {
-					OR = {
-						is_core = ELS
-						is_core = HON
-						is_core = NIC
-					}
-				}
-			}
-			militancy = 9
-		}
 		prestige = -2
-		relation = { who = COS value = 25 }
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -816,7 +478,6 @@ country_event = {
 	}
 
 	immediate = {
-		set_global_flag = the_usca_has_failed
 		add_country_modifier = {
 			name = small_country_draft
 			duration = 30
