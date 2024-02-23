@@ -49,9 +49,9 @@ political_decisions = {
 		picture = treaty_of_guadalupe_hidalgo
 		potential = {
 			test = is_american_union
-			has_country_flag = hasmanifestdestiny
+			has_country_modifier = manifest_destiny
 			NOT = { has_country_flag = treaty_of_guadalupe_hidalgo }
-			MEX = { is_greater_power = no NOT = { has_country_flag = manifest_destiny_refuted } }
+			MEX = { is_greater_power = no NOT = { has_country_modifier = manifest_destiny_refuted } }
 		}
 
 		allow = {
@@ -96,10 +96,10 @@ political_decisions = {
 				tag = DES
 				tag = CAL
 			}
-			USA = { has_country_flag = hasmanifestdestiny }
+			USA = { has_country_modifier = manifest_destiny }
 			NOT = {
 				has_country_flag = treaty_of_guadalupe_hidalgo
-				has_country_flag = manifest_destiny_refuted
+				has_country_modifier = manifest_destiny_refuted
 			}
 		}
 
@@ -120,7 +120,7 @@ political_decisions = {
 		}
 
 		effect = {
-			set_country_flag = manifest_destiny_refuted
+			add_country_modifier = manifest_destiny_refuted
 			prestige = 10
 			USA = {
 				prestige = -10

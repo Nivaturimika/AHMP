@@ -43,20 +43,6 @@ political_decisions = {
 		}
 	}
 
-	pick_up_a_tech_school = {
-		picture = switch_to_order
-		alert = no
-		potential = { ai = no }
-		effect = {
-			if = {
-				limit = { has_country_flag = picking_up_a_tech_school }
-				clr_country_flag = picking_up_a_tech_school
-			} else = {
-				set_country_flag = picking_up_a_tech_school
-			}
-		}
-	}
-
 	increase_conscription = {
 		picture = marching_soldiers
 		alert = no

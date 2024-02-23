@@ -803,11 +803,6 @@ country_event = {
 	id = 44826
 	title = "EVTNAME44826" #Mexico Agrees
 	desc = "EVTDESC44826"
-	news = yes
-	news_title = "EVTNAME44825"
-	news_desc_long = "EVTDESC44826_NEWS_LONG"
-	news_desc_medium = "EVTDESC44826_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC44826_NEWS_SHORT"
 	picture = "treaty"
 
 	is_triggered_only = yes
@@ -815,36 +810,11 @@ country_event = {
 	option = {
 		name = "EVT44826OPTA"
 		prestige = 20
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 100000 }
-					check_variable = { which = owed_cash_money value = 9 }
-				}
-			}
-			owner = { change_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = { owner = { money = 100000 } }
-			owner = { treasury = -100000 }
-		}
+		treasury = -100000
 		any_owned = { limit = { is_core = MEX } secede_province = MEX }
 		diplomatic_influence = {
 			who = FROM
 			value = -50
-		}
-		relation = {
-			who = FROM
-			value = 300
 		}
 	}
 }

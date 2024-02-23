@@ -2611,7 +2611,7 @@ EVTDESC44822;Eventually, the Mexican government will come after our country and 
 EVT44822OPTA;Join them.;;;;;;;;;;;;;
 EVT44822OPTB;We shall remain independent.;;;;;;;;;;;;;
 EVTNAME44825;The Treaty of Guadalupe Hidalgo;;;;;;;;;;;;;
-EVTDESC44825;With $CAPITAL$ under American control, it seems we have little choice but to negotiate. The Americans have offered us a deal: the normalization of relations, the forgiveness of our debt and the payment of a great deal of money... all in exchange for a cession of all the northern territories currently claimed by their country. If we refuse, it may mean many years more of war for us until these Americans get what they want.;;;;;;;;;;;;;
+EVTDESC44825;With $CAPITAL$ under $FROMCOUNTRY_ADJ$ control, it seems we have little choice but to negotiate. The $FROMCOUNTRY$ have offered us a deal: the normalization of relations, the forgiveness of our debt and the payment of a great deal of money... all in exchange for a cession of all the northern territories currently claimed by their country. If we refuse, it may mean many years more of war for us until the $FROMCOUNTRY$ gets what they want.;;;;;;;;;;;;;
 EVT44825OPTA;We agree to their proposal.;;;;;;;;;;;;;
 EVT44825OPTB;We refuse!;;;;;;;;;;;;;
 EVTNAME44826;$FROMCOUNTRY$ Has Agreed;;;;;;;;;;;;;

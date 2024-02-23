@@ -282,7 +282,7 @@ political_decisions = {
 			test = is_american_union
 		}
 		allow = {
-			NOT = { has_country_flag = hasmanifestdestiny }
+			NOT = { has_country_modifier = manifest_destiny }
 			war = no
 			idealism = 1
 			state_n_government = 1
@@ -297,7 +297,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = hasmanifestdestiny
+			add_country_modifier = manifest_destiny
 			random_list = {
 				25 = { badboy = 2 }
 				25 = { badboy = 4 }
@@ -1114,10 +1114,10 @@ political_decisions = {
 			tag = CSA
 			is_vassal = no
 			NOT = { has_country_flag = 36_or_fight }
-			any_neighbor_country = { has_country_flag = hasmanifestdestiny }
+			any_neighbor_country = { has_country_modifier = manifest_destiny }
 			MEX = {
 			OR = {
-				NOT = { has_country_flag = manifest_destiny_refuted }
+				NOT = { has_country_modifier = manifest_destiny_refuted }
 				NOT = { is_greater_power = yes }
 				}
 			}

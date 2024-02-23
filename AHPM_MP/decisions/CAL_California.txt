@@ -106,7 +106,7 @@ annex_california = {
 		CAL = { exists = yes }
 		has_global_flag = bear_flag_revolt
 		has_global_flag = mexican_american_war
-		has_country_flag = hasmanifestdestiny
+		has_country_modifier = manifest_destiny
 		NOT = { has_country_flag = second_velasco }
 		NOT = { has_country_flag = annex_california }
 	}

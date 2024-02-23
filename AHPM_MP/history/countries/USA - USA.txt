@@ -112,7 +112,7 @@ decision = trail_of_tears
 }
 
 1845.1.1 = {
-set_country_flag = hasmanifestdestiny
+add_country_modifier = manifest_destiny
 }
 
 1850.6.3 = {

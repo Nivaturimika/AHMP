@@ -1,29 +1,33 @@
 political_decisions = {
+	pick_up_a_tech_school = {
+		picture = switch_to_order
+		alert = no
+		potential = {
+			ai = no
+			OR = {
+				test = can_switch_to_army_tech
+				test = can_switch_to_navy_tech
+				test = can_switch_to_culture_tech
+				test = can_switch_to_industry_tech
+				test = can_switch_to_trade_tech
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_country_flag = picking_up_a_tech_school }
+				clr_country_flag = picking_up_a_tech_school
+			} else = {
+				set_country_flag = picking_up_a_tech_school
+			}
+		}
+	}
+
 	switch_to_army_tech = {
 		potential = {
 			test = is_tech_school_decision
 		}
 		allow = {
-			NOT = { has_country_modifier = academic_confusion }
-			OR = {
-				AND = {
-					war_policy = jingoism
-					NOT = { economic_policy = laissez_faire }
-				}
-				AND = {
-					war_policy = pro_military
-					OR = {
-						economic_policy = state_capitalism
-						economic_policy = planned_economy
-					}
-				}
-			}
-			OR = {
-				jingoism = 3
-				pro_military = 3
-			}
-			military_score = 100
-			prestige = 45
+			test = can_switch_to_army_tech
 		}
 		effect = {
 			clr_country_flag = picking_up_a_tech_school
@@ -41,28 +45,7 @@ political_decisions = {
 			test = is_tech_school_decision
 		}
 		allow = {
-			NOT = { has_country_modifier = academic_confusion }
-			any_owned_province = { is_colonial = yes }
-			OR = {
-				AND = {
-					war_policy = pro_military
-					NOT = {
-						economic_policy = state_capitalism
-						economic_policy = planned_economy
-					}
-				}
-				AND = {
-					economic_policy = laissez_faire
-					NOT = { war_policy = pacifism }
-				}
-			}
-			OR = {
-				pro_military = 3
-				laissez_faire = 3
-			}
-			prestige = 45
-			military_score = 100
-			total_amount_of_ships = 30
+			test = can_switch_to_navy_tech
 		}
 		effect = {
 			clr_country_flag = picking_up_a_tech_school
@@ -87,14 +70,7 @@ political_decisions = {
 			test = is_tech_school_decision
 		}
 		allow = {
-			NOT = { has_country_modifier = academic_confusion }
-			OR = {
-				pacifism = 3
-				secularized = 3
-			}
-			prestige = 100
-			literacy = 0.7
-			average_consciousness = 7
+			test = can_switch_to_culture_tech
 		}
 		effect = {
 			clr_country_flag = picking_up_a_tech_school
@@ -119,27 +95,7 @@ political_decisions = {
 			test = is_tech_school_decision
 		}
 		allow = {
-			NOT = { has_country_modifier = academic_confusion }
-			NOT = { economic_policy = planned_economy }
-			OR = {
-				AND = {
-					trade_policy = free_trade
-					OR = {
-						economic_policy = laissez_faire
-						economic_policy = interventionism
-					}
-				}
-				AND = {
-					economic_policy = laissez_faire
-					trade_policy = protectionism
-				}
-			}
-			OR = {
-				laissez_faire = 3
-				free_trade = 3
-			}
-			prestige = 45
-			industrial_score = 100
+			test = can_switch_to_trade_tech
 		}
 		effect = {
 			clr_country_flag = picking_up_a_tech_school
@@ -157,26 +113,7 @@ political_decisions = {
 			test = is_tech_school_decision
 		}
 		allow = {
-			NOT = { has_country_modifier = academic_confusion }
-			OR = {
-				AND = {
-					trade_policy = protectionism
-					OR = {
-						economic_policy = interventionism
-						economic_policy = state_capitalism
-					}
-				}
-				AND = {
-					economic_policy = interventionism
-					trade_policy = free_trade
-				}
-			}
-			OR = {
-				interventionism = 3
-				protectionism = 3
-			}
-			prestige = 45
-			industrial_score = 100
+			test = can_switch_to_industry_tech
 		}
 		effect = {
 			clr_country_flag = picking_up_a_tech_school
@@ -194,7 +131,6 @@ political_decisions = {
 		potential = {
 			test = is_goverment_decision
 			NOT = { tech_school = traditional_academic }
-			NOT = { has_country_modifier = interment_camps }
 			OR = {
 				ai = no
 				tech_school = developing_tech_school
@@ -203,6 +139,7 @@ political_decisions = {
 		}
 
 		allow = {
+			NOT = { has_country_modifier = interment_camps }
 			OR = {
 				AND = {
 					NOT = {
