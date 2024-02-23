@@ -1020,39 +1020,24 @@ political_decisions = {
 	sell_alaska = {
 		picture = map_alaska
 		potential = {
+			test = is_alaskan_seller
 			NOT = { has_country_flag = alaska_purchase_started }
 			NOT = { has_global_flag = alaska_purchase_completed }
-			has_global_flag = american_civil_war_has_happened
-			tag = RUS
 		}
 
 		allow = {
 			war = no
-			USA = { NOT = { war_with = CSA } }
-			any_owned_province = { region = USA_1 }
+			any_country = {
+				test = eligible_for_alaskan_purchase
+			}
 		}
 
 		effect = {
 			set_country_flag = alaska_purchase_started
 			prestige = 5
 			any_country = {
-				limit = {
-					NOT = { tag = RUS }
-					OR = {
-						is_greater_power = yes
-						is_secondary_power = yes
-					}
-					any_owned_province = {
-						OR = {
-							region = MEX_85
-							region = USA_78
-							region = USA_81
-							region = CAN_13
-							region = JAP_1088
-						}
-					}
-				}
-				set_country_flag = alaska_purchase_interest
+				limit = { test = eligible_for_alaskan_purchase }
+				country_event = 32509
 			}
 		}
 		ai_will_do = {

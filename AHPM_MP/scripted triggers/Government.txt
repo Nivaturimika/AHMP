@@ -1,0 +1,114 @@
+is_monarchy_goverment = {
+	main_parameter = nation
+	OR = {
+		government = absolute_monarchy
+		government = prussian_constitutionalism
+		government = hms_government
+	}
+}
+
+is_constitutional_goverment = {
+	main_parameter = nation
+	OR = {
+		government = prussian_constitutionalism
+		government = hms_government
+	}
+}
+
+is_goverment_decision = {
+	main_parameter = nation
+	OR = {
+		has_country_flag = government_decisions
+		ai = yes
+	}
+}
+
+is_tech_school_decision = {
+	main_parameter = nation
+	civilized = yes
+	tech_school = traditional_academic
+	has_country_modifier != interment_camps
+	OR = {
+		has_country_flag = picking_up_a_tech_school
+		ai = yes
+	}
+}
+
+is_same_ruling_party_ideology = {
+	main_parameter = nation
+	this_parameter = nation
+	OR = {
+		THIS = { ruling_party_ideology = reactionary }
+		ruling_party_ideology = reactionary
+	}
+	OR = {
+		THIS = { ruling_party_ideology = conservative }
+		ruling_party_ideology = conservative
+	}
+	OR = {
+		THIS = { ruling_party_ideology = liberal }
+		ruling_party_ideology = liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = socialist }
+		ruling_party_ideology = socialist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = communist }
+		ruling_party_ideology = communist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = anarcho_liberal }
+		ruling_party_ideology = anarcho_liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = fascist }
+		ruling_party_ideology = fascist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = tribal }
+		ruling_party_ideology = tribal
+	}
+}
+
+is_same_ruling_party_ideology = {
+	main_parameter = pop
+	this_parameter = nation
+	OR = {
+		THIS = { ruling_party_ideology = reactionary }
+		pop_majority_ideology = reactionary
+	}
+	OR = {
+		THIS = { ruling_party_ideology = conservative }
+		pop_majority_ideology = conservative
+	}
+	OR = {
+		THIS = { ruling_party_ideology = liberal }
+		pop_majority_ideology = liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = socialist }
+		pop_majority_ideology = socialist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = communist }
+		pop_majority_ideology = communist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = anarcho_liberal }
+		pop_majority_ideology = anarcho_liberal
+	}
+	OR = {
+		THIS = { ruling_party_ideology = fascist }
+		pop_majority_ideology = fascist
+	}
+	OR = {
+		THIS = { ruling_party_ideology = tribal }
+		pop_majority_ideology = tribal
+	}
+}
+
+is_stable_goverment = {
+	main_parameter = nation
+	always = yes
+}

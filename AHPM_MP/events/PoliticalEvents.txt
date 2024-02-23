@@ -4661,20 +4661,18 @@ country_event = {
 	title = "EVTNAME443039"
 	desc = "EVTDESC443039"
 	picture = "crisis_revolution_enabled"
-
 	allow_multiple_instances  = yes
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT443039OPTA"
-		random_country = { limit = { tag = FROM primary_culture = ukrainian }
+		if = {
+			limit = { tag = FROM primary_culture = ukrainian }
 			THIS = { remove_accepted_culture = ukrainian }
-		}
-		random_country = { limit = { tag = FROM primary_culture = byelorussian }
+		} else_if = {
+			limit = { tag = FROM primary_culture = byelorussian }
 			THIS = { remove_accepted_culture = byelorussian }
-		}
-		random_country = { limit = { tag = FROM primary_culture = alaskan }
+		} else_if = {
+			limit = { tag = FROM primary_culture = alaskan }
 			THIS = { remove_accepted_culture = alaskan }
 		}
 	}

@@ -1,0 +1,121 @@
+# Alaska Purchase 1/3
+country_event = {
+	id = 32509
+	title = "EVTNAME32509_NEW" #the Alaskan Purchase
+	desc = "EVTDESC32509_NEW"
+	picture = "alaska"
+	is_triggered_only = yes
+	option = {
+		name = "EVT32509OPTA"
+		any_country = {
+			limit = { test = is_alaskan_seller }
+			country_event = 32510
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVT32509OPTB"
+		set_country_flag = refused_alaska
+		ai_chance = { factor = 0 }
+	}
+}
+
+#the Alaskan Purchase
+country_event = {
+	id = 32510
+	title = "EVTNAME32510_NEW"
+	desc = "EVTDESC32510_NEW"
+	picture = "alaska"
+	is_triggered_only = yes
+	option = {
+		name = "EVT32510OPTA"
+		set_global_flag = alaska_purchase_completed
+		prestige = 10
+		treasury = 100000
+		USA_1 = { remove_core = THIS }
+		FROM = { country_event = 32511 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVT32510OPTB"
+		FROM = {
+			country_event = 32514
+		}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "EVT32510OPTC"
+		prestige = -10
+		USA_1 = { add_core = THIS }
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 32511
+	title = "EVTNAME32511"
+	desc = "EVTDESC32511"
+	picture = "alaska"
+
+	is_triggered_only = yes
+
+	immediate = {
+		prestige = 10
+		USA_1 = { add_core = THIS }
+		FROM = {
+			remove_accepted_culture = alaskan
+			LSK = {
+				all_core = {
+					limit = {
+						OR = {
+							owner = {
+								OR = {
+									in_sphere = FROM
+									vassal_of = FROM
+									substate_of = FROM
+								}
+							}
+							owned_by = FROM
+						}
+					}
+					secede_province = THIS
+				}
+			}
+		}
+		if = {
+			limit = { primary_culture = japanese }
+			1 = { change_province_name = "Shitoka" }
+			2 = { change_province_name = "Juno" }
+			3 = { change_province_name = "Ankarejji" }
+			4 = { change_province_name = "Yakutato" }
+			5 = { change_province_name = "Yunirasuka" }
+			2631 = { change_province_name = "Beseru" }
+			2599 = { change_province_name = "Feabankusu" }
+			2630 = { change_province_name = "Howaitohosu" }
+			1 = { state_scope = { change_region_name = "Arasuka" } }
+		} else = {
+			1 = { change_province_name = "Sitka" }
+			2 = { change_province_name = "Juneau" }
+			3 = { change_province_name = "Kenai" }
+			4 = { change_province_name = "Kodiak" }
+			2599 = { change_province_name = "Fairbanks" }
+			2630 = { change_province_name = "Tok" }
+		}
+	}
+
+	option = { name = "EVT32511OPTA" }
+}
+
+country_event = {
+	id = 32514
+	title = "EVTNAME32514"
+	desc = "EVTDESC32514"
+	picture = "alaska"
+	is_triggered_only = yes
+	immediate = {
+		prestige = -5
+		treasury = 250000
+	}
+	option = { name = "EVT32514OPTA" }
+}
