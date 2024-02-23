@@ -41,3 +41,21 @@ EVTNAME98661;Failed conference of $CAPITAL$
 EVTDESC98661;Many tough talks with diplomats around $COUNTRY$ and yet we struck no deals, no concessions or negotiations that favored them, we were in a terrible position, and we didn't only look like a baffoon, we also inspired heavy nationalistic sentiments across our nation, we should be careful of what type of proposals we do next time...
 EVT98661OPTA;Oh dear
 EVT98661OPTB;They better join our new federation
+EVTNAME31504;Natshertanye;
+EVTDESC31504;The Serb Ilya Garashanin demanded in his writing 'Natshertanye' the unity of all southern Slavs in the struggle against their $COUNTRY_ADJ$ oppressors. His writings became the programme for the southern Slav nationalist movement.
+EVTOPTA31504;He has a point;
+EVTOPTB31504;Slavs are $COUNTRY_ADJ$;
+EVTNAME31505;$FROMCOUNTRY_ADJ$ Empress Sisi;
+EVTDESC31505;$FROMCOUNTRY_ADJ$ Princess Elisabeth, called Sisi, married the $COUNTRY_ADJ$ $MONARCHTITLE$ Franz Joseph I in $YEAR$. Her unconventional ways, often in total disregard for etiquette, endeared her to her people.
+EVTOPTA31505;Vivat!
+EVTOPTB31505;$FROMCOUNTRY_ADJ$ scum
+EVTOPTC31505;She's a threat
+EVTNAME31542;$COUNTRY_ADJ$ Princess Sisi marriage?
+EVTDESC31542;Franz Joseph I is offering marriage to our princess Sisi, this could strenghten their relations with $COUNTRY$, but it will subject us to foreign rule.
+EVTOPTA31542;Yay
+EVTOPTB31542;Nay
+EVTNAME31506;Toward a New Theatre;
+EVTDESC31506;After the brilliant $COUNTRY_ADJ$ designer Joseph Urban began working at the Boston Opera Company, design in the American theatre took on a decidedly continental approach, becoming a more dynamic, colorful, and exciting experience.;
+EVTOPTA31506;An artistic genius
+EVTOPTB31506;A menace to $COUNTRY_ADJ$ society
+EVTOPTC31506;Theatre? Ugh... spare me of boredom!

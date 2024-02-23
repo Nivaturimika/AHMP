@@ -242,7 +242,7 @@ country_event = {
 				secede_province = CHL
 			}
 		}
-		ai_chance = { factor 1 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -260,7 +260,7 @@ country_event = {
 			who = FROM
 			value = -50
 		}
-		ai_chance = { factor 0 }
+		ai_chance = { factor = 0 }
 	}
 }
 

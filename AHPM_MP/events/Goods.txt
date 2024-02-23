@@ -110,7 +110,7 @@ province_event = {
 	option = {
 		name = "EVTOPTA1100"
 		trade_goods = precious_metal
-		# life_rating = 5
+		life_rating = 5
 		add_province_modifier = { name = gold_rush duration = 730 }
 		owner = { random_owned = { limit = { province_id = 695 } remove_province_modifier = gold_rush } }
 		owner = {
@@ -172,20 +172,18 @@ province_event = {
 		owner = { random_owned = { limit = { province_id = 2488 NOT = { trade_goods = precious_metal } } change_province_name = "Cairns" } }
 		trade_goods = precious_metal
 		add_province_modifier = { name = gold_rush duration = 730 }
-		# life_rating = 5
+		life_rating = 5
 		owner = {
-			random_owned = {
+			if = {
 				limit = {
-					owner = {
-						NOT = { has_country_modifier = gold_rush_country }
-						OR = {
-							capital_scope = { continent = north_america }
-							capital_scope = { continent = south_america }
-							primary_culture = australian
-						}
+					NOT = { has_country_modifier = gold_rush_country }
+					OR = {
+						capital_scope = { continent = north_america }
+						capital_scope = { continent = south_america }
+						primary_culture = australian
 					}
 				}
-				owner = { add_country_modifier = { name = gold_rush_country duration = 730 } }
+				add_country_modifier = { name = gold_rush_country duration = 730 }
 			}
 		}
 	}
@@ -318,7 +316,7 @@ province_event = {
 		owner = {
 			if = {
 				limit = { owns = 2495 2495 = { life_rating >= 15 } }
-				2495 = { change_province_name = "Oodnadatta" life_rating = -5}
+				2495 = { change_province_name = "Oodnadatta" life_rating = -5 }
 			}
 			if = {
 				limit = { owns = 2496 2496 = { life_rating >= 20 } }
@@ -403,11 +401,11 @@ province_event = {
 	title = "EVTNAME1105"
 	desc = "EVTDESC1105"
 
-	option = {
-		name = "EVTOPTA1105"
+	immediate = {
 		trade_goods = precious_metal
-		# life_rating = 5
+		life_rating = 5
 	}
+	option = { name = "EVTOPTA1105" }
 }
 
 ###############################
@@ -499,10 +497,13 @@ province_event = {
 	desc = "EVTDESC1107"
 	picture = ""
 
+	immediate = {
+		trade_goods = rubber
+		life_rating = 5
+	}
+
 	option = {
 		name = "EVTOPTA1107"
-		trade_goods = rubber
-		# life_rating = 5
 	}
 }
 
@@ -510,60 +511,13 @@ province_event = {
 #        OIL EVENTS        #
 ############################
 province_event = {
-
 	id = 1109
-
+	title = "EVTNAME1109"
+	desc = "EVTDESC1109"
 	trigger = {
 		NOT = { has_province_modifier = switched_production }
 		NOT = { has_province_modifier = pearl_season }
-		OR = {
-			terrain = desert
-			province_id = 1102        # Baku
-			province_id = 1205        # Kizil Arvat
-			province_id = 1104        # Sheki 1871
-			province_id = 1186        # Alma Ata 1872
-			province_id = 1202        # Kokand 1873
-			province_id = 1107        # Lankaran 1874
-			province_id = 667        # Tirgoviste 1876
-			province_id = 672        # Bacau 1877
-			province_id = 1168        # Dubai 1879
-			province_id = 1399        # Palembang 1883
-			province_id = 112        # Cheyenne
-			province_id = 1055        # Grozny 1883
-			province_id = 126        # Topeka 1883
-			province_id = 1393        # Brunei 1885
-			province_id = 1401        # Siak 1885
-			province_id = 1425        # Tarakan 1885
-			province_id = 1432        # Mamuju 1885
-			province_id = 1335        # Kyaukse 1886
-			province_id = 43        # Dallas 1886
-			province_id = 705        # Przemysl 1886
-			province_id = 1260        # Dibrugarh 1889
-			province_id = 1086        # Pogobi
-			province_id = 131        # Oklahoma City 1893
-			province_id = 1680        # Fez 1893
-			province_id = 2173        # Queretaro 1894
-			province_id = 87        # Monterey 1896
-			province_id = 2162        # Veracruz 1896
-			province_id = 2163        # Tampico 1896
-			province_id = 702        # Lvov 1896
-			province_id = 2237        # Trinidad
-			province_id = 2396        # Rawson 1907
-			province_id = 1131        # Ahvaz 1907
-			province_id = 1732        # Ghayran 1910
-			province_id = 1720        # Timimoun 1910
-			province_id = 1167        # Abu Dhabi 1910
-			province_id = 1163        # Qatif 1910
-			province_id = 2270        # Maracaibo 1910
-			province_id = 1170        # Nizwa  1910
-			province_id = 1132        # Abadan
-			province_id = 26        # Calgary 1913
-			province_id = 2291        # Piura 1915
-			province_id = 849        # Tirana 1917
-			province_id = 2237        # Trinidad 1917
-			province_id = 928        # Mendeli 1923
-			province_id = 923        # Mosul 1927
-		}
+		terrain = desert
 		trade_goods != oil
 		owner = {
 			war = no
@@ -593,24 +547,17 @@ province_event = {
 	mean_time_to_happen = {
 		months = 36
 	}
-
-	title = "EVTNAME1109"
-	desc = "EVTDESC1109"
-
 	immediate = {
 		trade_goods = oil
-		life_rate = 5
+		life_rating = 5
 	}
-
-	option = {
-		name = "EVTOPTA1109"
-	}
+	option = { name = "EVTOPTA1109" }
 }
 
 province_event = {
-
 	id = 1114
-
+	title = "EVTNAME1109"
+	desc = "EVTDESC1109"
 	trigger = {
 		OR = {
 			province_id = 132        # Houston
@@ -649,9 +596,6 @@ province_event = {
 	mean_time_to_happen = {
 		months = 8
 	}
-
-	title = "EVTNAME1109"
-	desc = "EVTDESC1109"
 
 	immediate = {
 		trade_goods = oil

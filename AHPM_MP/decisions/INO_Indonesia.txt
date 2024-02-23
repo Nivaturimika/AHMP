@@ -86,7 +86,7 @@ indonesia_raya = {
 melayu_raya = {
     picture = map_east_indies
     potential = {
-        NOT = {    has_country_flag = melayu_raya    }
+        NOT = { has_country_flag = melayu_raya }
         tag = MLY
         OR = {
             is_greater_power = yes

@@ -1,10 +1,12 @@
 country_event = {
 	id = 31501
+	title = "EVTNAME31501"
+	desc = "EVTDESC31501"
+	picture = "smoking"
 	trigger = {
 		test = is_austrian_empire
 	}
 	fire_only_once = yes
-
 	mean_time_to_happen =  {
 		months = 6
 		modifier = {
@@ -16,28 +18,22 @@ country_event = {
 			year = 1838
 		}
 	}
-
-	title = "EVTNAME31501"
-	desc = "EVTDESC31501"
-	picture = "smoking"
-
-	option = {
-		name = "EVTOPTA31501"
-		rich_strata = {
-			consciousness = 1
-		}
+	immediate = {
+		rich_strata = { consciousness = 1 }
 	}
+	option = { name = "EVTOPTA31501" }
 }
 
 country_event = {
 	id = 31502
+	title = "EVTNAME31502"
+	desc = "EVTDESC31502"
+	picture = "Ferdinand"
 	trigger = {
 		test = is_austrian_empire
 		test = is_monarchy_goverment
 	}
-
 	fire_only_once = yes
-
 	mean_time_to_happen =  {
 		months = 1
 		modifier = {
@@ -49,11 +45,6 @@ country_event = {
 			year = 1844
 		}
 	}
-
-	title = "EVTNAME31502"
-	desc = "EVTDESC31502"
-	picture = "Ferdinand"
-
 	option = {
 		name = "EVTOPTA31502"
 		ruling_party_ideology = conservative
@@ -82,38 +73,19 @@ country_event = {
 
 
 country_event = {
-
 	id = 31503
-
-	trigger = {
-		test = is_austrian_empire
-		year = 1842
-		NOT = {
-			exists = HUN
-			year = 1848
-			has_country_flag = HungarianLanguage
-		}
-	}
-
-	mean_time_to_happen =  {
-		months = 6
-		modifier = {
-			factor = 0.85 #increase likelihood to happen
-			year = 1843
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1844
-		}
-	}
-
 	title = "EVTNAME31503"
 	desc = "EVTDESC31503"
 	picture = "Budapest"
-
-	option = {
-		name = "EVTOPTA31503"
-		set_country_flag = HungarianLanguage
+	fire_only_once = yes
+	trigger = {
+		test = is_austrian_empire
+		exists != HUN
+	}
+	mean_time_to_happen =  {
+		months = 6
+	}
+	immediate = {
 		any_pop = {
 			limit = {
 				location = { is_core = HUN }
@@ -134,121 +106,89 @@ country_event = {
 			consciousness = 1
 		}
 	}
+	option = { name = "EVTOPTA31503" }
 }
 
 country_event = {
-
 	id = 31504
-	news = yes
-	news_desc_long = "EVTDESC31504_NEWS_LONG"
-	news_desc_medium = "EVTDESC31504_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC31504_NEWS_SHORT"
-
-	trigger = {
-		test = is_austrian_empire
-		OR = {
-			ruling_party_ideology = reactionary
-			ruling_party_ideology = conservative
-		}
-		NOT = {
-			exists = CRO
-			exists = SLO #Slovenia
-			has_country_flag = IlyaGarashinin
-		}
-	}
-
-	mean_time_to_happen =  {
-		months = 6
-		modifier = {
-			factor = 0.5 #increase likelihood to happen
-			year = 1844
-		}
-		modifier = {
-			factor = 0.5 #increase likelihood to happen
-			year = 1845
-		}
-	}
-
 	title = "EVTNAME31504"
 	desc = "EVTDESC31504"
 	picture = "Ilija"
-
-	option = {
-		name = "EVTOPTA31504"
-		set_country_flag = IlyaGarashinin
-		any_pop = {
-			limit = {
-				has_pop_culture = serb
-			}
-			militancy = 4
-			consciousness = 2
+	fire_only_once = yes
+	trigger = {
+		any_country = {
+			is_culture_group = south_slavic
+			all_core = { owned_by = THIS }
 		}
+	}
+	mean_time_to_happen =  {
+		months = 6
+	}
+	immediate = {
 		any_owned = {
-			limit = { culture = serb }
+			limit = {
+				culture_group = south_slavic
+			}
 			add_province_modifier = {
 				name = nationalist_agitation
 				duration = 365
 			}
 		}
-		any_pop = {
-			limit = {
-				OR = {
-					has_pop_culture = croat
-					has_pop_culture = slovene
-				}
-			}
-			militancy = 2
-			consciousness = 1
+	}
+	option = { name = "EVTOPTA31504" }
+	option = { name = "EVTOPTB31504" }
+}
+
+country_event = {
+	id = 31542
+	title = "EVTNAME31542"
+	desc = "EVTDESC31542"
+	picture = "Sisi"
+	trigger = {
+		primary_culture = south_german
+		test = is_monarchy_goverment
+		any_country = {
+			test = is_austrian_empire
+			test = is_monarchy_goverment
 		}
-		any_owned = {
+	}
+	fire_only_once = yes
+	mean_time_to_happen =  { months = 6 }
+	option = {
+		name = "EVTOPTA31542"
+		any_country = {
 			limit = {
-				OR = {
-					culture = croat
-					culture = slovene
-				}
+				test = is_austrian_empire
+				test = is_monarchy_goverment
 			}
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 180
+			country_event = 31505
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB31542"
+		any_country = {
+			limit = {
+				test = is_austrian_empire
+				test = is_monarchy_goverment
+			}
+			add_casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 32
 			}
 		}
+		ai_chance = { factor = 0 }
 	}
 }
 
 country_event = {
-
 	id = 31505
-	news = yes
-	news_desc_long = "EVTDESC31505_NEWS_LONG"
-	news_desc_medium = "EVTDESC31505_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC31505_NEWS_SHORT"
-
-	trigger = {
-		test = is_austrian_empire
-		test = is_monarchy_goverment
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 6
-
-		modifier = {
-			factor = 0.5 #increase likelihood to happen
-			year = 1898
-		}
-
-
-		modifier = {
-			factor = 0.5 #increase likelihood to happen
-			year = 1899
-		}
-	}
-
 	title = "EVTNAME31505"
 	desc = "EVTDESC31505"
 	picture = "Sisi"
-
+	fire_only_once = yes
+	is_triggered_only = yes
 	option = {
 		name = "EVTOPTA31502"
 		any_pop = {
@@ -263,42 +203,79 @@ country_event = {
 			}
 			militancy = -3
 		}
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTB31505"
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_consciousness = {
+				factor = -4
+				ideology = liberal
+			}
+			scaled_consciousness = {
+				factor = -4
+				ideology = anarcho_liberal
+			}
+			militancy = -5
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTC31505"
+		add_casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 32
+		}
+		ai_chance = { factor = 1 }
 	}
 }
 
 country_event = {
-
 	id = 31506
-
+	title = "EVTNAME31506"
+	desc = "EVTDESC31506"
+	picture = "theatre"
 	trigger = {
 		test = is_austrian_empire
 		expressionism = 1 #has the expressionism tech
 	}
-
 	fire_only_once = yes
-
 	mean_time_to_happen =  {
 		months = 6
-
-		modifier = {
-			factor = 0.85 #increase likelihood to happen
-			year = 1912
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1913
+	}
+	option = {
+		name = "EVTOPTA31506"
+		prestige = 3
+	}
+	option = {
+		name = "EVTOPTB31506"
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_militancy = {
+				factor = -1
+				ideology = conservative
+			}
+			scaled_militancy = {
+				factor = -2
+				ideology = reactionary
+			}
 		}
 	}
-
-	title = "EVTNAME31506"
-	desc = "EVTDESC31506"
-	picture = "theatre"
-
 	option = {
-		name = "EVTOPTA31502"
-		prestige = 3
+		name = "EVTOPTC31506"
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			scaled_militancy = {
+				factor = 2
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = -5
+				ideology = reactionary
+			}
+		}
 	}
 }
 
