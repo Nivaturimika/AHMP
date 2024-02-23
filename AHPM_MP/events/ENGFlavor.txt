@@ -11,29 +11,15 @@ country_event = {
 
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		year = 1837
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-		}
-		NOT = { year = 1860 }
+		test = is_british_empire
+		test = is_monarchy_goverment
 	}
 
 	major = yes
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 5
-		modifier = {
-			factor = 0.1
-			month = 5
-			NOT = { month = 7 }
-		}
+		months = 64
 	}
 
 	option = {
@@ -258,15 +244,8 @@ country_event = {
 	id = 36904
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		year = 1840
+		test = is_british_empire
 		press_rights = free_press
-		NOT = {
-			year = 1845
-		}
 	}
 
 	fire_only_once = yes
@@ -312,10 +291,7 @@ country_event = {
 	id = 36905
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
+		test = is_british_empire
 		year = 1843
 		public_meetings = yes_meeting
 		NOT = {
@@ -360,15 +336,8 @@ country_event = {
 	id = 36907
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		year = 1846
+		test = is_british_empire
 		press_rights = free_press
-		NOT = {
-			year = 1850
-		}
 	}
 
 	fire_only_once = yes
@@ -502,16 +471,9 @@ country_event = {
 	id = 36910
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		year = 1884
+		test = is_british_empire
 		press_rights = free_press
 		realism = 1
-		NOT = {
-			year = 1888
-		}
 	}
 
 	fire_only_once = yes
@@ -596,16 +558,9 @@ country_event = {
 	news_desc_short = "EVTDESC36912_NEWS_SHORT"
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		year = 1917
+		test = is_british_empire
 		press_rights = free_press
 		expressionism = 1
-		NOT = {
-			year = 1925
-		}
 	}
 
 	fire_only_once = yes
@@ -1503,17 +1458,10 @@ country_event = {
 	id = 36935 #parallel to AST43800, ENG more often than not will own AST directly at this point, so needs own event.
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		year = 1844
+		test = is_british_empire
 		owns = 2468 #Sydney
 		owns = 2476 #Melbourne
 		owns = 2491 #Adelaide
-		NOT = {
-			year = 1849
-		}
 	}
 
 	fire_only_once = yes
@@ -1605,26 +1553,19 @@ country_event = {
 	id = 36937 #sets up COB35000
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
+		test = is_british_empire
+		any_country = {
+			OR = {
+				primary_culture = north_german
+				primary_culture = south_german
+			}
+			war_with = THIS
 		}
-		year = 1836
-		exists = COB
-		OR = {
-			war_with = GER
-			war_with = PRU
-			}
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-			}
+		test = is_monarchy_goverment
 		NOT = {
-			year = 1936
 			has_global_flag = ENGRoyalHouseAnglified
-			}
 		}
+	}
 
 	mean_time_to_happen =  {
 		months = 12
@@ -1665,22 +1606,12 @@ province_event = {
 
 	trigger = {
 		province_id = 1251 #Calcutta
-		year = 1864
-		NOT = { year = 1867 }
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1865
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1866
-		}
+		months = 64
 	}
 
 	title = "EVTNAME36938"
@@ -1708,10 +1639,7 @@ country_event = {
 	news_desc_short = "EVTDESC36939_NEWS_SHORT"
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
+		test = is_british_empire
 		owns = 1251 #Calcutta
 		MUG = {
 			OR = {
@@ -1765,10 +1693,10 @@ country_event = {
 		name = "EVTOPTB36939"
 		officers = {
 			consciousness = 1
-			}
+		}
 		capitalists = {
 			consciousness = 1
-			}
+		}
 		any_pop = {
 			limit = {
 				has_pop_religion = hindu
@@ -1782,7 +1710,6 @@ country_event = {
 			militancy = -1
 		}
 	}
-
 }
 
 #Treaty of Waitangi
@@ -1791,10 +1718,6 @@ country_event = {
 	id = 36940
 	title = "EVTNAME36940"
 	desc = "EVTDESC36940"
-	news = yes
-	news_desc_long = "EVTDESC36940_NEWS_LONG"
-	news_desc_medium = "EVTDESC36940_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC36940_NEWS_SHORT"
 	picture = "Waitangi"
 
 	trigger = {
@@ -3484,10 +3407,7 @@ country_event = {
 	picture = "ENG_from_hell"
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
+		test = is_british_empire
 		300 = {
 			has_province_modifier = serial_killer
 		}
@@ -3497,11 +3417,7 @@ country_event = {
 		has_country_flag = from_hell
 		has_country_flag = elementary_my_dear_watson #Scotland Yard
 		has_country_modifier = the_yard
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-		}
+		test = is_monarchy_goverment
 	}
 
 	mean_time_to_happen = {

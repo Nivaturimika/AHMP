@@ -3754,10 +3754,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
+		test = is_british_empire
 		NOT = { vote_franschise = universal_voting }
 		OR = {
 			has_country_flag = liberal_revolution_in_progress

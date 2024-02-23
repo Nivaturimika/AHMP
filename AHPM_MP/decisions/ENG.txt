@@ -1,10 +1,7 @@
 political_decisions = {
 	repeal_the_corn_laws = {
 		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
+			test = is_british_empire
 			has_country_flag = great_irish_famine
 			NOT = {
 				has_country_flag = corn_laws_repealed_flag
@@ -66,10 +63,7 @@ political_decisions = {
 	found_the_bbc = {
 		picture = found_the_bbc
 		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
+			test = is_british_empire
 			NOT = {
 				has_country_flag = we_are_live_from_london
 			}

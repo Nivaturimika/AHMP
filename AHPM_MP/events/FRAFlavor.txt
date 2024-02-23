@@ -4,28 +4,16 @@ country_event = {
 
 	trigger = {
 		tag = FRA
-		year = 1837
 		NOT = {
-			year = 1840
 			war_with = SWI
 			has_global_flag = LouisNapoleonExtradite
 		}
-
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1838
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1840
-		}
+		months = 64
 	}
 
 	title = "EVTNAME37200"
@@ -34,13 +22,11 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA37200"
-		relation = { who = SWI value = -50 }
 		set_global_flag = LouisNapoleonExtradite
 	}
 
 	option = {
 		name = "EVTOPTB37200"
-		relation = { who = SWI value = 50 }
 		any_pop = {
 			limit = { has_pop_culture = french }
 			consciousness = 1
@@ -51,19 +37,10 @@ country_event = {
 country_event = {
 
 	id = 37201
-	news = yes
-	news_desc_long = "EVTDESC37201_NEWS_LONG"
-	news_desc_medium = "EVTDESC37201_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC37201_NEWS_SHORT"
 
 	trigger = {
 		tag = FRA
-		year = 1836
 		war = no
-		NOT = {
-			year = 1840
-		}
-
 	}
 
 	fire_only_once = yes
@@ -105,11 +82,7 @@ country_event = {
 
 	trigger = {
 		tag = FRA
-		year = 1840
 		war = no
-		NOT = {
-			year = 1843
-		}
 	}
 
 	fire_only_once = yes
@@ -146,14 +119,11 @@ country_event = {
 
 	trigger = {
 		tag = FRA
-		year = 1840
 		war = no
 		government = hms_government
 		NOT = {
 			ruling_party_ideology = liberal
-			year = 1843
 		}
-
 	}
 
 	fire_only_once = yes
@@ -341,19 +311,7 @@ country_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1847
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1848
-		}
-
+		months = 64
 	}
 
 	title = "EVTNAME37207"
@@ -439,16 +397,7 @@ country_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1852
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1853
-		}
+		months = 64
 	}
 
 	title = "EVTNAME37210"

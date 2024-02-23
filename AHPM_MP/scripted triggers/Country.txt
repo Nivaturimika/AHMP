@@ -16,6 +16,14 @@ is_polish_union = {
 	OR = { is_greater_power = yes is_secondary_power = yes }
 }
 
+is_british_empire = {
+	main_parameter = nation
+	OR = {
+		tag = ENG
+		tag = ENL
+	}
+}
+
 is_austrian_empire = {
 	main_parameter = nation
 	OR = {

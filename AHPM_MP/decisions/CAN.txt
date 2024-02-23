@@ -77,10 +77,7 @@ political_decisions = {
 	organize_british_columbia = {
 		picture = organize_british_columbia
 		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
+			test = is_british_empire
 			NOT = { has_country_flag = british_columbia_organized }
 		}
 		allow = {

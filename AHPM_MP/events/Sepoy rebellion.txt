@@ -11,10 +11,7 @@ country_event = {
 	picture = "sepoy"
 
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
+		test = is_british_empire
 		OR = {
 			owns = 1236 #Delhi
 			owns = 1251 #Calcutta

@@ -32,10 +32,7 @@ political_decisions = {
 		picture = pink_map
 		potential = {
 			NOT = { has_country_flag = ultimatum_to_portugal_sent }
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
+			test = is_british_empire
 			any_owned_province = { is_colonial = yes }
 			NOT = { war_policy = pacifism }
 			NOT = { has_country_modifier = no_more_war }

@@ -71,3 +71,6 @@ EVTOPTB13150;Round up the usual suspects
 EVTNAME13151;$COUNTRY_ADJ$ harrassed in uncivilized land
 EVTDESC13151;The $COUNTRY_ADJ$ tourists want to see some uncivilized existing in their natural habitat, however they went at $COUNTRY$ to protect them from harrassment by locals
 EVTOPTA13151;Uncivilized barbarians!
+EVTNAME36937;The Name of the Royal House
+EVTDESC36937;The German origins of our royal house have become an issue for some of our subjects in this time of war with the Germans. Some have even questioned the royal family's loyalty to $COUNTRY$. It has been suggested we domesticate the name of the royal family to show the crown's total devotion to $COUNTRY$.
+EVTOPTA36937;The House of Windsor, long may it reign

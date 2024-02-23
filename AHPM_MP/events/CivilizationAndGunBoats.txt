@@ -4418,13 +4418,9 @@ country_event = {
 		random_country = {
 			limit = {
 				exists = yes
-				OR = {
-					AND = {
-						is_greater_power = yes
-						has_country_flag = protestant_country
-					}
-					tag = ENG
-					tag = ENL
+				AND = {
+					is_greater_power = yes
+					has_country_flag = protestant_country
 				}
 			}
 			country_event = 90961
