@@ -2222,6 +2222,11 @@ country_event = {
 	title = "EVTNAME13151"
 	desc = "EVTDESC13151"
 	trigger = {
+		civilized = yes
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
 	}
 	mean_time_to_happen = {
 		months = 120
@@ -2260,10 +2265,8 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTA13151"
-		any_country = {
-			limit = {
-				civilized = no
-			}
+		random_country = {
+			limit = { civilized = no }
 			any_owned = {
 				limit = {
 					OR = {

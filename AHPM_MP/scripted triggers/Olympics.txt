@@ -1,0 +1,5 @@
+has_olympics_host = {
+	any_country = {
+		has_country_flag = host_olympiad
+	}
+}

@@ -5,6 +5,7 @@
 
 # Guaranteed to happen one of the following events, at least once in specified time range.
 on_yearly_pulse = {
+	100 = 23401
 }
 
 on_quarterly_pulse = {
