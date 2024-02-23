@@ -3705,15 +3705,25 @@ country_event = {
 	title = "EVTNAME13350"
 	desc = "EVTDESC13350"
 	picture = "elephant"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVTOPTA13350"
-		relation = {
-			who = FROM
-			value = 30
-		}
+		years_of_research = 0.2
+		FROM = { prestige = 5 }
+		prestige = 3
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB13350"
+		FROM = { prestige = 2 }
+		prestige = 1
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTC13350"
+		FROM = { prestige = -4 }
+		prestige = 3
+		ai_chance = { factor = 0 }
 	}
 }
 
