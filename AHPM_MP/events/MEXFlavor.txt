@@ -724,15 +724,13 @@ country_event = {
 		set_country_flag = treaty_of_guadalupe_hidalgo
 		prestige_factor = -0.5
 		treasury = 100000
-		random_owned = {
-			limit = {
-				owner = { war_with = USA }
-			}
-			owner = { end_war = USA }
+		if = {
+			limit = { war_with = FROM }
+			end_war = FROM
 			any_country = {
 				limit = {
 					war_with = THIS
-					alliance_with = USA
+					alliance_with = FROM
 				}
 				end_war = THIS
 			}
@@ -757,44 +755,20 @@ country_event = {
 				}
 			}
 			remove_core = MEX
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					is_core = USA
-					region = TEX_132
-					region = MEX_94
-					region = MEX_97
-					region = MEX_85
-					region = USA_106
-					region = USA_111
-					region = USA_126
-					region = USA_129
-					province_id = 100
-					province_id = 101
-					province_id = 103
-					province_id = 104
-					province_id = 105
-					province_id = 2148
-				}
+			if = {
+				limit = { is_core = FROM }
+				secede_province = FROM
 			}
-			secede_province = USA
 		}
-
-		USA = { country_event = 44826 }
-
-		ai_chance = {
-			factor = 90
-		}
+		FROM = { country_event = 44826 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT44825OPTB"
 		war_exhaustion = 20
-		USA = { country_event = 44827 }
-		ai_chance = {
-			factor = 10
-		}
+		FROM = { country_event = 44827 }
+		ai_chance = { factor = 0 }
 	}
 }
 

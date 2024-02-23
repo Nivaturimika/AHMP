@@ -23,17 +23,6 @@ is_goverment_decision = {
 	}
 }
 
-is_tech_school_decision = {
-	main_parameter = nation
-	civilized = yes
-	tech_school = traditional_academic
-	has_country_modifier != interment_camps
-	OR = {
-		has_country_flag = picking_up_a_tech_school
-		ai = yes
-	}
-}
-
 is_same_ruling_party_ideology = {
 	main_parameter = nation
 	this_parameter = nation

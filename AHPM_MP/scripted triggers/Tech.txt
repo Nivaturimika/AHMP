@@ -1,3 +1,13 @@
+is_tech_school_decision = {
+	main_parameter = nation
+	civilized = yes
+	has_country_modifier != interment_camps
+	OR = {
+		has_country_flag = picking_up_a_tech_school
+		ai = yes
+	}
+}
+
 can_switch_to_army_tech = {
 	main_parameter = nation
 	NOT = { tech_school = army_tech_school }

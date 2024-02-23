@@ -2583,3 +2583,9 @@ manifest_destiny = {
 	global_pop_militancy_modifier = -0.025
 	icon = 10
 }
+
+manifest_destiny_refuted = {
+	tax_efficiency = 0.01
+	global_pop_militancy_modifier = -0.025
+	icon = 10
+}

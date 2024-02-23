@@ -578,42 +578,21 @@ country_event = {
 }
 
 country_event = {
-
 	id = 44113
-	news = yes
-	news_desc_long = "EVTDESC44113_NEWS_LONG"
-	news_desc_medium = "EVTDESC44113_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC44113_NEWS_SHORT"
+	title = "EVTNAME44113"
+	desc = "EVTDESC44113"
+	picture = "chicagofire"
 
 	trigger = {
-		tag = USA
-		year = 1871
-		owns = 163 #Chicago
-		NOT = {
-			year = 1874
-		}
+		test = is_american_union
+		owns = 163
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
 		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1872
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1873
-		}
 	}
-
-	title = "EVTNAME44113"
-	desc = "EVTDESC44113"
-	picture = "chicagofire"
 
 	option = {
 		name = "EVTOPTA44113"
@@ -622,42 +601,21 @@ country_event = {
 }
 
 country_event = {
-
 	id = 44114
-	news = yes
-	news_desc_long = "EVTDESC44114_NEWS_LONG"
-	news_desc_medium = "EVTDESC44114_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC44114_NEWS_SHORT"
+	title = "EVTNAME44114"
+	desc = "EVTDESC44114"
+	picture = "WyattEarp"
 
 	trigger = {
-		tag = USA
-		year = 1881
+		test = is_american_union
 		owns = 102 #S Arizona
-		NOT = {
-			year = 1884
-		}
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
 		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1882
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1883
-		}
 	}
-
-	title = "EVTNAME44114"
-	desc = "EVTDESC44114"
-	picture = "WyattEarp"
 
 	option = {
 		name = "EVTOPTA44114"
@@ -1404,11 +1362,8 @@ country_event = {
 			remove_core = CAN
 			secede_province = USA
 		}
-		relation = { who = USA value = 20 }
 		prestige = -20
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -1422,9 +1377,7 @@ country_event = {
 			}
 		}
 		prestige = 15
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1440,43 +1393,19 @@ country_event = {
 	option = {
 		name = "EVTOPTA16453" #Sell everything they want
 		FROM = { country_event = 16454 }
-		ai_chance = {
-			factor = 5
-				modifier = {
-					factor = 1.1
-					relation = { who = FROM value = 180 }
-				}
-				modifier = {
-					factor = 0
-					is_greater_power = yes
-				}
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "EVTOPTB16453" #Sell only historical borders
 		FROM = { country_event = 16455 }
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVTOPTC16453" #We will not sell anything
 		FROM = { country_event = 16456 }
-		ai_chance = {
-			factor = 5
-				modifier = {
-					factor = 1.2
-					NOT = { relation = { who = FROM value = -50 } }
-				}
-				modifier = {
-					factor = 1.8
-					is_greater_power = yes
-				}
-				modifier = {
-					factor = 8.0
-					USA = { any_owned_province = { is_core = MEX } ai = no }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1644,29 +1573,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA16455" #Done
 		FROM = { treasury = 50000 any_pop = { militancy = 1 consciousness = 1 } }
-
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 50000 }
-					check_variable = { which = owed_cash_money value = 9 }
-				}
-			}
-			owner = { change_variable = { which = owed_cash_money value = 50 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
-		}
-		random_owned = {
-			limit = { owner = { money = 50000 } }
-			owner = { treasury = -50000 }
-		}
+		treasury = -50000
 		102 = { add_core = THIS secede_province = THIS remove_core = MEX }
 		2662 = { add_core = THIS secede_province = THIS remove_core = MEX }
 
@@ -1677,7 +1584,6 @@ country_event = {
 			}
 			102 = { add_core = CSA }
 		}
-
 		random_owned = {
 			limit = {
 				province_id = 2148
