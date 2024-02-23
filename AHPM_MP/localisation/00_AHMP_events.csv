@@ -64,3 +64,10 @@ EVTDESC13350;On this account we desire to procure and send elephants to be let l
 EVTOPTA13350;Such a generous gift we can't reject!
 EVTOPTB13350;But it was very kind of him to offer!
 EVTOPTC13350;A what now? Oh bloody hell!
+EVTNAME13150;$FROMCOUNTRY_ADJ$ foreigners harassed
+EVTDESC13150;The high militancy among certain parts of the population in $PROVINCENAME$ has lead to an outbreak of violence directed at local $FROMCOUNTRY_ADJ$ expatriate foreigners. The embassies of $FROMCOUNTRY$ have all lodged formal diplomatic complaints with $COUNTRY$, and seem to expect some sort of action on our part. What should the $COUNTRY_ADJ$ people do?;
+EVTOPTA13150;Ignore them
+EVTOPTB13150;Round up the usual suspects
+EVTNAME13151;$COUNTRY_ADJ$ harrassed in uncivilized land
+EVTDESC13151;The $COUNTRY_ADJ$ tourists want to see some uncivilized existing in their natural habitat, however they went at $COUNTRY$ to protect them from harrassment by locals
+EVTOPTA13151;Uncivilized barbarians!

@@ -2187,21 +2187,42 @@ country_event = {
 	}
 }
 
-#Europeans Harrassed
 province_event = {
 	id = 13150
 	title = "EVTNAME13150"
 	desc = "EVTDESC13150"
-
-	trigger = {
-		OR = {
-			has_province_modifier = western_presence
-			has_province_modifier = foreign_trading_post
-			has_province_modifier = foreign_smugglers
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA13150"
+		remove_province_modifier = western_presence
+		remove_province_modifier = foreign_trading_post
+		remove_province_modifier = foreign_smugglers
+		if = {
+			limit = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } }
+			remove_country_modifier = western_presence_research
 		}
-		average_militancy = 3
 	}
-
+	option = {
+		name = "EVTOPTB13150"
+		any_pop = {
+			limit = { militancy = 3 }
+			militancy = -2
+			reduce_pop = 0.95
+		}
+		any_pop = {
+			ideology = {
+				factor = 0.05
+				value = reactionary
+			}
+		}
+	}
+}
+country_event = {
+	id = 13151
+	title = "EVTNAME13151"
+	desc = "EVTDESC13151"
+	trigger = {
+	}
 	mean_time_to_happen = {
 		months = 120
 		modifier = {
@@ -2237,40 +2258,22 @@ province_event = {
 			}
 		}
 	}
-
 	option = {
-		name = "EVTOPTA13150"
-		remove_province_modifier = western_presence
-		remove_province_modifier = foreign_trading_post
-		remove_province_modifier = foreign_smugglers
-		owner = {
-			random_owned = {
-				limit = { owner = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } } }
-				owner = { remove_country_modifier = western_presence_research }
-			}
-		}
+		name = "EVTOPTA13151"
 		any_country = {
 			limit = {
-				is_greater_power = yes
+				civilized = no
 			}
-			relation = {
-				who = THIS
-				value = -20
-			}
-		}
-	}
-
-	option = {
-		name = "EVTOPTB13150"
-		any_pop = {
-			limit = { militancy = 3 }
-			militancy = -2
-			reduce_pop = 0.95
-		}
-		any_pop = {
-			ideology = {
-				factor = 0.05
-				value = reactionary
+			any_owned = {
+				limit = {
+					OR = {
+						has_province_modifier = western_presence
+						has_province_modifier = foreign_trading_post
+						has_province_modifier = foreign_smugglers
+					}
+					average_militancy = 3
+				}
+				province_event = 13150
 			}
 		}
 	}
