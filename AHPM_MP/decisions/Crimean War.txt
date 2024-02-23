@@ -380,7 +380,7 @@ political_decisions = {
 					THIS = { has_country_flag = crimean_surrender }
 				}
 				country_event = 97512
-				RUS = { treasury = 250000 }
+				THIS = { treasury = 250000 }
 			}
 			relation = { who = ROM value = 200 }
 			diplomatic_influence = { who = ROM value = 200 }

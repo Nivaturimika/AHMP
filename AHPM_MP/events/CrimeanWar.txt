@@ -21,19 +21,7 @@ country_event = {
 		}
 		FRA = { country_event = 97501 }
 		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 0
-				in_sphere = FRA
-			}
-			modifier = {
-				factor = 0.5
-				truce_with = RUS
-			}
-			modifier = {
-				factor = 0.5
-				is_secondary_power = no
-			}
+			factor = 1
 		}
 	}
 
@@ -44,21 +32,7 @@ country_event = {
 		FRA = { country_event = 97504 }
 		RUS = { country_event = 97503 }
 		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0
-				in_sphere = RUS
-			}
-			modifier = {
-				factor = 0.5
-				part_of_sphere = yes
-				NOT = { in_sphere = RUS }
-				NOT = { in_sphere = FRA }
-			}
-			modifier = {
-				factor = 2
-				is_secondary_power = no
-			}
+			factor = 0
 		}
 	}
 }
@@ -73,8 +47,7 @@ country_event = {
 
 	option = {
 		name = "EVT97501OPTA"
-		TUR = { country_event = 97502 }
-		relation = { who = RUS value = -100 }
+		FROM = { country_event = 97502 }
 		leave_alliance = RUS
 		ai_chance = {
 			factor = 95
@@ -84,7 +57,6 @@ country_event = {
 	option = {
 		name = "EVT97501OPTB"
 		prestige = -50
-		relation = { who = TUR value = -50 }
 		ai_chance = {
 			factor = 5
 		}
@@ -103,15 +75,11 @@ country_event = {
 		name = "EVT97502OPTA"
 		set_global_flag = france_protector_of_eastern_christians
 		prestige = -20
-		create_alliance = FRA
-		FRA = { country_event = 97504 }
+		create_alliance = FROM
+		FROM = { country_event = 97504 }
 		RUS = { country_event = 97503 }
 		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.5
-				in_sphere = RUS
-			}
+			factor = 1
 		}
 	}
 
@@ -120,30 +88,17 @@ country_event = {
 		set_country_flag = refused_french_claim
 		prestige = 5
 		relation = { who = RUS value = 50 }
-		FRA = {
-			diplomatic_influence = { who = TUR value = -100 }
-			relation = { who = TUR value = -200 }
-			leave_alliance = TUR
+		FROM = {
+			diplomatic_influence = { who = THIS value = -100 }
+			leave_alliance = THIS
 			casus_belli = {
-				target = TUR
+				target = THIS
 				type = cut_down_to_size
 				months = 24
 			}
 		}
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				in_sphere = RUS
-			}
-			modifier = {
-				factor = 0
-				part_of_sphere = no
-			}
-			modifier = {
-				factor = 0.5
-				is_secondary_power = no
-			}
+			factor = 0
 		}
 	}
 }
@@ -162,8 +117,7 @@ country_event = {
 
 	option = {
 		name = "EVT97503OPTA"
-		diplomatic_influence = { who = TUR value = -400 }
-		relation = { who = TUR value = -400 }
+		diplomatic_influence = { who = FROM value = -400 }
 	}
 }
 
@@ -180,16 +134,14 @@ country_event = {
 		prestige = 20
 		random_country = {
 			limit = {
-				is_sphere_leader_of = TUR
+				is_sphere_leader_of = FROM
 				NOT = { tag = FRA }
 				NOT = { tag = RUS }
 			}
-			diplomatic_influence = { who = TUR value = -100 }
-			relation = { who = FRA value = -25 }
+			diplomatic_influence = { who = FROM value = -100 }
 		}
-		diplomatic_influence = { who = TUR value = 100 }
-		relation = { who = TUR value = 300 }
-		create_alliance = TUR
+		diplomatic_influence = { who = FROM value = 100 }
+		create_alliance = FROM
 	}
 }
 
@@ -206,10 +158,7 @@ country_event = {
 		war = no
 		owns = 917
 		OR = {
-			AND = {
-				in_sphere = FRA
-				ai = yes
-			}
+			in_sphere = FRA
 			AND = {
 				truce_with = FRA
 				is_disarmed = yes
@@ -366,16 +315,16 @@ country_event = {
 	option = {
 		name = "EVT97508OPTA"
 		set_country_flag = crimean_surrender
-		TUR = { country_event = 97509 }
-		end_war = TUR
+		FROM = { country_event = 97509 }
+		end_war = FROM
 		any_country = {
 			limit = {
 				war_with = THIS
-				vassal_of = TUR
+				vassal_of = FROM
 			}
 			country_event = 97511
 		}
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -428,10 +377,6 @@ country_event = {
 	id = 97512
 	title = "EVTNAME97510" #The Treaty of Paris (Russian Version)
 	desc = "EVTDESC97512"
-	news = yes
-	news_desc_long = "EVTDESC97512_NEWS_LONG"
-	news_desc_medium = "EVTDESC97512_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97512_NEWS_SHORT"
 	picture = "treaty_of_paris_1856"
 
 	is_triggered_only = yes
@@ -439,28 +384,7 @@ country_event = {
 	option = {
 		name = "EVT97512OPTA"
 		prestige_factor = -0.1
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 250000 }
-					check_variable = { which = owed_cash_money value = 9 }
-				}
-			}
-			owner = { change_variable = { which = owed_cash_money value = 250 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 250000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 250 } }
-		}
-		random_owned = {
-			limit = { owner = { money = 250000 } }
-			owner = { treasury = -250000 }
-		}
+		treasury = -250000
 		any_owned = {
 			limit = {
 				OR = {
@@ -473,19 +397,18 @@ country_event = {
 		}
 		any_owned = {
 			limit = { region = TUR_885 }
-			secede_province = RUS
+			secede_province = FROM
 		}
 		FRA = {
 			prestige = -20
-			relation = { who = RUS value = -100 }
-			leave_alliance = RUS
+			leave_alliance = FROM
 			casus_belli = {
-				target = RUS
+				target = FROM
 				type = take_from_sphere
 				months = 60
 			}
 			casus_belli = {
-				target = TUR
+				target = THIS
 				type = add_to_sphere
 				months = 60
 			}
@@ -496,23 +419,21 @@ country_event = {
 				has_country_flag = england_protecting_interests
 			}
 			prestige = -20
-			relation = { who = RUS value = -100 }
-			leave_alliance = RUS
+			leave_alliance = FROM
 			casus_belli = {
-				target = RUS
+				target = FROM
 				type = take_from_sphere
 				months = 60
 			}
 			casus_belli = {
-				target = TUR
+				target = THIS
 				type = add_to_sphere
 				months = 60
 			}
 		}
-		RUS = {
-			military_access = TUR
-			diplomatic_influence = { who = TUR value = 100 }
-			relation = { who = TUR value = 200 }
+		FROM = {
+			military_access = THIS
+			diplomatic_influence = { who = THIS value = 100 }
 		}
 		soldiers = {
 			limit = { is_primary_culture = yes }
@@ -543,10 +464,6 @@ country_event = {
 	id = 97510
 	title = "EVTNAME97510" #The Treaty of Paris (French Version)
 	desc = "EVTDESC97510"
-	news = yes
-	news_desc_long = "EVTDESC97510_NEWS_LONG"
-	news_desc_medium = "EVTDESC97510_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97510_NEWS_SHORT"
 	picture = "treaty_of_paris_1856"
 
 	is_triggered_only = yes

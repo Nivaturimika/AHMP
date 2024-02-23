@@ -115,17 +115,18 @@ country_event = {
 		months = 12
 	}
 
-	immediate = { set_global_flag = war_of_the_pacific }
+	immediate = {
+		set_global_flag = war_of_the_pacific
+		2308 = { trade_goods = sulphur add_core = THIS }
+		2309 = { add_core = THIS }
+		2307 = { add_core = THIS }
+		2305 = { trade_goods = sulphur add_core = THIS }
+		2578 = { add_core = THIS }
+	}
 
 	option = {
 		name = "EVT97082OPTA"
 		badboy = 2
-		2308 = { trade_goods = sulphur add_core = CHL }
-		2309 = { add_core = CHL }
-		2307 = { add_core = CHL }
-		2305 = { trade_goods = sulphur add_core = CHL }
-		2578 = { add_core = CHL }
-
 		any_country = {
 			limit = {
 				any_owned_province = {
@@ -139,8 +140,6 @@ country_event = {
 					vassal_of = THIS
 				}
 			}
-
-			relation = { who = THIS value = -400 }
 			any_owned = {
 				limit = {
 					OR = {
@@ -165,26 +164,18 @@ country_event = {
 					vassal_of = THIS
 				}
 			}
-			relation = { who = THIS value = -400 }
 			leave_alliance = THIS
 			end_military_access = THIS
 			country_event = 97083
 		}
 		add_country_modifier = { name = small_country_draft duration = 180 }
 
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT97082OPTB"
 		badboy = 2
-		2308 = { trade_goods = sulphur add_core = CHL }
-		2309 = { add_core = CHL }
-		2307 = { add_core = CHL }
-		2305 = { trade_goods = sulphur add_core = CHL }
-		2578 = { add_core = CHL }
-		relation = { who = BOL value = -400 }
-		relation = { who = PEU value = -400 }
 		ai_chance = { factor = 0 }
 	}
 
@@ -229,7 +220,7 @@ country_event = {
 			}
 			call_ally = no
 		}
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -247,8 +238,7 @@ country_event = {
 			secede_province = CHL
 		}
 		ai_chance = {
-			factor = 10
-			modifier = { factor = 3 war = yes }
+			factor = 0
 		}
 	}
 }
@@ -264,47 +254,21 @@ country_event = {
 
 	option = {
 		name = "EVT97084OPTA" #We will not intervene
-		random_owned = {
-			limit = {
-				owner = { war_with = FROM }
-			}
-			owner = { end_war = FROM }
-		}
-		random_owned = {
-			limit = {
-				owner = { alliance_with = FROM }
-			}
-			owner = { leave_alliance = FROM }
-		}
-		random_owned = {
-			limit = {
-				owner = { war_with = CHL }
-			}
-			owner = { end_war = CHL }
-		}
-		random_owned = {
-			limit = {
-				owner = { alliance_with = CHL }
-			}
-			owner = { leave_alliance = CHL }
-		}
+		end_war = FROM
+		leave_alliance = FROM
+		end_war = CHL
+		leave_alliance = CHL
 		diplomatic_influence = { who = CHL value = -200 }
 		diplomatic_influence = { who = FROM value = -200 }
 		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.25
-				is_sphere_leader_of = CHL
-				relation = { who = FROM value = 150 }
-			}
+			factor = 1
 		}
 	}
 
 	option = {
 		name = "EVT97084OPTB"
 		ai_chance = {
-			factor = 10
-			modifier = { factor = 0 war = yes }
+			factor = 0
 		}
 	}
 }

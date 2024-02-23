@@ -113,7 +113,7 @@ political_decisions = {
 	treaty_of_paris_1898_victory = {
 		picture = treaty_signing
 		potential = {
-			tag = USA
+			test = is_american_union
 			OR = {
 				truce_with = SPA
 				truce_with = SPC
@@ -146,14 +146,8 @@ political_decisions = {
 		effect = {
 			set_country_flag = treaty_of_paris_1898
 			badboy = 5
-			random_country = {
-				limit = {
-					OR = {
-						tag = SPA
-						tag = SPC
-					}
-					exists = yes
-				}
+			any_country = {
+				limit = { test = is_spanish_empire }
 				country_event = 37750
 			}
 		}

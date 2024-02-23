@@ -14,11 +14,7 @@ country_event = {
 		tag = BRZ
 		owns = 2463
 		NOT = { year = 1845 }
-		OR = {
-			government = hms_government
-			government = prussian_constitutionalism
-			government = absolute_monarchy
-		}
+		test = is_monarchy_goverment
 	}
 
 	fire_only_once = yes
@@ -150,7 +146,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			factor = 1
 		}
 	}
 
@@ -173,11 +169,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.25
-				tag = CHL
-			}
+			factor = 0
 		}
 	}
 }
@@ -187,11 +179,6 @@ country_event = {
 	id = 97055
 	title = "EVTNAME97055"
 	desc = "EVTDESC97055"
-	news = yes
-	news_title = "EVTNAME97055_NEWS_TITLE"
-	news_desc_long = "EVTDESC97055_NEWS_LONG"
-	news_desc_medium = "EVTDESC97055_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97055_NEWS_SHORT"
 	picture = "demonstration"
 	major = yes
 
@@ -387,11 +374,6 @@ country_event = {
 	id = 97070
 	title = "EVTNAME97070" #La Carta de la Esclavitud
 	desc = "EVTDESC97070"
-	news = yes
-	news_title = "EVTNAME97070_NEWS_TITLE"
-	news_desc_long = "EVTDESC97070_NEWS_LONG"
-	news_desc_medium = "EVTDESC97070_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97070_NEWS_SHORT"
 	picture = "carta_esclavitud_ecu"
 
 	fire_only_once = yes
@@ -616,15 +598,17 @@ country_event = {
 		is_vassal = no
 		year = 1838
 		owns = 2313
-		}
+	}
 
 	mean_time_to_happen = { days = 5 }
 
-	option = {
-		name = "EVT970501PTA"
+	immediate = {
 		2313 = { change_province_name = "Sucre" }
-		}
+		capital = 2313
 	}
+
+	option = { name = "EVT970501PTA" }
+}
 
 country_event = {
 	id = 4661006
@@ -662,14 +646,14 @@ country_event = {
 	option = {
 		name = "EVTOPT4661006A"
 		2315 = { owner = { country_event = 4661007 } }
-		ai_chance = { factor = 100 }
-		}
+		ai_chance = { factor = 1 }
+	}
 
 	option = {
 		name = "EVTOPT4661006B"
 		ai_chance = { factor = 0 }
-		}
 	}
+}
 
 country_event = {
 	id = 4661007
@@ -684,7 +668,7 @@ country_event = {
 		badboy = -2
 		war_exhaustion = -10
 		any_owned = {
-			limit = { OR = { is_core = BOL is_core = PBC } }
+			limit = { is_core = FROM}
 			remove_province_modifier = integration_refusal
 			remove_province_modifier = core_integration
 			remove_province_modifier = national_assimilation
@@ -692,29 +676,23 @@ country_event = {
 			remove_province_modifier = national_assimilation_acceptance
 			remove_province_modifier = national_assimilation_complete
 		}
-		2369 = { remove_core = BOL remove_core = PBC }
-		2370 = { remove_core = BOL remove_core = PBC }
-		2371 = { remove_core = BOL remove_core = PBC }
-		1714 = { remove_core = BOL remove_core = PBC }
-		2315 = { remove_core = ARC remove_core = ARG remove_core = THIS }
+		2369 = { remove_core = FROM }
+		2370 = { remove_core = FROM }
+		2371 = { remove_core = FROM }
+		1714 = { remove_core = FROM }
+		2315 = { remove_core = THIS }
 		FROM = { country_event = 4661008 }
-		relation = { who = BOL value = 25 }
 		FROM = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
-
-		ai_chance = { factor = 0.98 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVTOPT4661007B"
 		badboy = 5
-		2315 = { add_core = ARC }
-		relation = {
-			who = FROM
-			value = -300
-			}
-		ai_chance = { factor = 0.02 }
-		}
+		2315 = { add_core = THIS }
+		ai_chance = { factor = 0 }
 	}
+}
 
 country_event = {
 	id = 4661008
@@ -736,8 +714,8 @@ country_event = {
 			remove_province_modifier = national_assimilation_complete
 		}
 		FROM = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
-		}
 	}
+}
 
 #PBC picks a Capital
 country_event = {
@@ -960,31 +938,16 @@ country_event = {
 
 		any_owned = { limit = { NOT = { is_core = THIS } } secede_province = FROM }
 		FROM = { any_owned = { limit = { NOT = { is_core = FROM } } secede_province = THIS } }
-		relation = { who = FROM value = 200 }
-
 		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.8
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { brigades_compare = 2 }
-			}
-			modifier = {
-				factor = 1.25
-				any_owned_province = { is_core = FROM }
-			}
+			factor = 1
 		}
 	}
 
 	option = {
 		name = "EVT46610102OPTB" #No
 		badboy = 1
-		relation = { who = FROM value = -200 }
 		ai_chance = {
-			factor = 10
+			factor = 0
 		}
 	}
 }
@@ -998,43 +961,28 @@ country_event = {
 
 	is_triggered_only = yes
 
-	immediate = { CHL = { random_owned = { limit = { province_id = 2578 } secede_province = THIS } } }
+	immediate = {
+		2578 = {
+			limit = { owned_by = FROM }
+			secede_province = THIS
+		}
+	}
 
 	option = {
 		name = "EVT46610103OPTA" #The territory is Peru's
 		prestige = 2
-		2578 = { secede_province = PEU remove_core = CHL }
-		relation = { who = CHL value = -25 }
-		relation = { who = PEU value = 50 }
+		2578 = { secede_province = THIS remove_core = FROM }
 		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 0.5
-				relation = { who = CHL value = 150 }
-			}
-			modifier = {
-				factor = 0.5
-				PEU = { NOT = { in_sphere = THIS } }
-			}
+			factor = 1
 		}
 	}
 
 	option = {
 		name = "EVT46610103OPTB" #The territory is Chile's
 		prestige = 2
-		2578 = { secede_province = CHL remove_core = PEU }
-		relation = { who = PEU value = -25 }
-		relation = { who = CHL value = 50 }
+		2578 = { secede_province = FROM remove_core = THIS }
 		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0.5
-				relation = { who = PEU value = 150 }
-			}
-			modifier = {
-				factor = 0.5
-				PEU = { NOT = { in_sphere = THIS } }
-			}
+			factor = 0
 		}
 	}
 }

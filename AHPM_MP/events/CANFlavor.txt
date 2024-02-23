@@ -311,14 +311,11 @@ country_event = {
 	trigger = {
 		test = is_british_empire
 		war = no
-		year = 1867
-		any_owned_province = { is_core = CAN }
-		NOT = { exists = CAN }
-		is_possible_vassal = CAN
+		is_our_vassal = CAN
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 50
 		modifier = {
 			factor = 15
 			has_country_flag = CAN_independence_refused
@@ -360,7 +357,6 @@ country_event = {
 		release_vassal = CAN
 		CAN = {
 			prestige = -100
-			relation = { who = USA value = 200 }
 		}
 		relation = {
 			who = CAN
@@ -374,48 +370,7 @@ country_event = {
 			consciousness = 1
 		}
 		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 0
-				OR = {
-					government = bourgeois_dictatorship
-					government = fascist_dictatorship
-					government = presidential_dictatorship
-				}
-			}
-			modifier = {
-				factor = 0.25
-				government = absolute_monarchy
-			}
-			modifier = {
-				factor = 1.5
-				government = democracy
-			}
-			modifier = {
-				factor = 5
-				has_global_flag = berlin_conference
-			}
-			modifier = {
-				factor = 0.75
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.25
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 1.5
-				war_policy = pacifism
-			}
-			modifier = {
-				factor = 1.2
-				militancy = 3
-			}
-			modifier = {
-				factor = 1.2
-				militancy = 5
-			}
-
+			factor = 1
 		}
 	}
 	option = {
@@ -435,39 +390,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 1.75
-				government = absolute_monarchy
-			}
-			modifier = {
-				factor = 0.5
-				government = democracy
-			}
-			modifier = {
-				factor = 1.5
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.25
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 0.75
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = pacifism
-			}
-			modifier = {
-				factor = 0.8
-				militancy = 3
-			}
-			modifier = {
-				factor = 0.8
-				militancy = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -748,9 +671,7 @@ country_event = {
 				year = 1880
 			}
 		}
-		any_owned_province = { is_core = MRU }
-		NOT = { exists = MRU }
-		is_possible_vassal = MRU
+		is_our_vassal = MRU
 	}
 
 	mean_time_to_happen = {

@@ -121,7 +121,6 @@ country_event = {
     picture = "missionaries"
 
     trigger = {
-        year = 1836
         owns = 913
     }
 

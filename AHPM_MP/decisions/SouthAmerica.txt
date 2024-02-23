@@ -670,7 +670,7 @@ political_decisions = {
 					}
 				}
 				random_country = {
-					limit = { is_greater_power = yes NOT = { tag = THIS } }
+					limit = { is_greater_power = yes tag != THIS }
 					country_event = 46610103
 				}
 			}

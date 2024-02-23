@@ -3200,34 +3200,13 @@ country_event = {
 		war = no
 		is_disarmed = no
 		is_vassal = no
-		year = 1863
 		NOT = { has_global_flag = talambo_incident_happened }
-		SPA = {
-			OR = {
-				exists = no
-				AND = {
-					war = no
-					is_greater_power = yes
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-					}
-				}
-			}
-		}
-		SPC = {
-			OR = {
-				exists = no
-				AND = {
-					war = no
-					is_greater_power = yes
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-					}
-				}
+		any_country = {
+			test = is_spanish_empire
+			AND = {
+				war = no
+				is_greater_power = yes
+				test = is_monarchy_goverment
 			}
 		}
 	}
@@ -3243,10 +3222,7 @@ country_event = {
 	option = {
 		name = "EVT97150OPTA"
 		random_country = {
-			limit = {
-				test = is_spanish_empire
-				exists = yes
-			}
+			limit = { test = is_spanish_empire }
 			country_event = 97151
 		}
 		any_pop = {
@@ -3285,10 +3261,6 @@ country_event = {
 	id = 97151
 	title = "EVTNAME97150" #The Talamb� Incident - Peru Apologizes
 	desc = "EVTDESC97151"
-	news = yes
-	news_desc_long = "EVTDESC97151_NEWS_LONG"
-	news_desc_medium = "EVTDESC97151_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97151_NEWS_SHORT"
 	picture = "arrested"
 
 	is_triggered_only = yes
