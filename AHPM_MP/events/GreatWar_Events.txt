@@ -5547,7 +5547,6 @@ country_event = {
 		remove_country_modifier = great_war
 		remove_country_modifier = great_war2
 		remove_country_modifier = great_war3
-		set_global_flag = british_dismantled
 		war_exhaustion = 40
 
 		#if over the badboy limit, reduce infamy to 24.99, otherwise reduce infamy by 10

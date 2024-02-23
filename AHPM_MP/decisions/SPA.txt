@@ -97,10 +97,7 @@ political_decisions = {
 	falangist_doctrine = {
 	picture = falangist_doctrine
 		potential = {
-			OR = {
-				tag = SPA
-				tag = SPC
-			}
+			test = is_spanish_empire
 			government = fascist_dictatorship
 			NOT = { has_country_flag = falangist_doctrine }
 		}
@@ -183,15 +180,8 @@ political_decisions = {
 	the_moroccan_question = {
 	picture = moroccan_partition
 		potential = {
-			OR = {
-				tag = SPA
-				tag = SPC
-			}
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test = is_spanish_empire
+			test = is_monarchy_goverment
 			owns = 1689
 			NOT = { has_country_flag = moroccan_question }
 			MOR = {
@@ -224,10 +214,7 @@ political_decisions = {
 	abolish_los_fueros = {
 	picture = fueros
 		potential = {
-			OR = {
-				tag = SPA
-				tag = SPC
-			}
+			test = is_spanish_empire
 			OR = {
 				government = absolute_monarchy
 				government = prussian_constitutionalism

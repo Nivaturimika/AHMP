@@ -1791,13 +1791,6 @@ christino_rebels = {
 			factor = 0
 			type = slaves
 		}
-
-		modifier = {
-			factor = 0
-			country = {
-				NOT = { tag = SPC }
-			}
-		}
 		modifier = {
 			factor = 2
 			location = {
@@ -1807,13 +1800,7 @@ christino_rebels = {
 		modifier = {
 			factor = 0
 			country = {
-				NOT = {
-					OR = {
-						government = hms_government
-						government = prussian_constitutionalism
-						government = absolute_monarchy
-					}
-				}
+				test != is_monarchy_goverment
 			}
 		}
 		modifier = {
@@ -2942,25 +2929,13 @@ liberal_rebels = {
 			NOT = {
 				location = {
 					any_core = {
-						#OR = {
+						OR = {
 							is_primary_culture = THIS
-							#is_accepted_culture = THIS
-						#}
+							is_accepted_culture = THIS
+						}
 					}
 				}
 			}
-		}
-		modifier = {
-			factor = 0.1
-			country = {
-				tag = SPC
-				OR = {
-					government = hms_government
-					government = prussian_constitutionalism
-					government = absolute_monarchy
-				}
-			}
-			pop_majority_ideology = liberal
 		}
 		modifier = {
 			factor = 0.25
@@ -4180,11 +4155,7 @@ turkish_nationalist_rebels = {
 			factor = 0
 			country = {
 				NOT = {
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-					}
+					test = is_monarchy_goverment
 				}
 			}
 		}

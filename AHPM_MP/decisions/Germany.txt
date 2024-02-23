@@ -787,10 +787,7 @@ political_decisions = {
 			set_global_flag = tried_to_buy_spanish_pacific
 			random_country = {
 				limit = {
-					OR = {
-						tag = SPA
-						tag = SPC
-					}
+					test = is_spanish_empire
 					exists = yes
 					any_owned_province = {
 						OR = {

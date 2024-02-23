@@ -253,10 +253,7 @@ colonial_reconquest_cb = {
 		OR = {
 			AND = {
 				THIS = {
-					OR = {
-						tag = SPA
-						tag = SPC
-					}
+					test = is_spanish_empire
 					NOT = { has_global_flag = spanish_american_war }
 				}
 				OR = {

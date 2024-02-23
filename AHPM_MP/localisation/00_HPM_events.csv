@@ -3484,10 +3484,10 @@ EVTDESC97526;The Romanians have foolishly declared them independence. We must ta
 EVT97526OPTA;They want war? We'll give them war.;;;;;;;;;;;;;
 EVTNAME95610;The Great Game;;;;;;;;;;;;;
 EVTDESC95610;Advisers to the $COUNTRY_ADJ$ government are warning that the Russians will continue their southward expansion. If we do not press north from India, we will soon find the Russians on our doorstep... And, at that point, it will be a quick step for them to invade the British Raj directly. Steps must be taken to set up puppet governments between us and them.;;;;;;;;;;;;;
-EVT95610OPTA;It remains a possibility.;;;;;;;;;;;;;
-EVT95610OPTB;This is not in our interests.;;;;;;;;;;;;;
-EVT95610OPTC;Never bring this up again.;;;;;;;;;;;;;
-EVTDESC95611;Advisers to the $COUNTRY_ADJ$ government are warning that the British will continue their northward expansion. If we do not press south, Russia will soon have its southern borders exposed to European invasion. It does us no good to allow the British complete hegemony over Central Asia. Something must be done!;;;;;;;;;;;;;
+EVT95610OPTA;It remains a possibility;;;;;;;;;;;;;
+EVT95610OPTB;This is not in $COUNTRY_ADJ$ interests;;;;;;;;;;;;;
+EVT95610OPTC;Never bring this up again;;;;;;;;;;;;;
+EVTDESC95611;Advisers to the $COUNTRY_ADJ$ government are warning that the British will continue their northward expansion. If we do not press south, $COUNTRY$ will soon have its southern borders exposed to European invasion. It does us no good to allow the British complete hegemony over Central Asia. Something must be done!;;;;;;;;;;;;;
 EVTNAME95612;The Great Game Comes To $COUNTRY$;;;;;;;;;;;;;
 EVTDESC95612;The Great Game between the British Empire and Russia has one pushing ever northward and the other pushing ever southward, with $COUNTRY$ caught in-between. Recently, $COUNTRY_ADJ$ soldiers got into a skirmish with one of our neighbors... and the resulting incident has brought the infernal gaze of one of these powers upon us, perhaps meaning war.;;;;;;;;;;;;;
 EVT95612OPTA;This is not good.;;;;;;;;;;;;;

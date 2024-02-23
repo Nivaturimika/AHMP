@@ -61,11 +61,7 @@ political_decisions = {
 		allow = {
 			war = no
 			owns = 1616
-			NOT = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test != is_monarchy_goverment
 			NOT = { has_country_flag = mandate }
 			TPG = { exists = no }
 		}
