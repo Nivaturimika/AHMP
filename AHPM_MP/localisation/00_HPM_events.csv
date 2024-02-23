@@ -1162,7 +1162,7 @@ EVTDESC110020;On $YEAR$, the Shah granted foreigners a concession over the produ
 EVT110020OPTA;Let's build the Persia of tomorrow together. Make a deal with the Ulama.;;;;;;;;;;;;;
 EVT110020OPTB;The state must be independent.;;;;;;;;;;;;;
 EVTNAME110021;The Ulama Agree;;;;;;;;;;;;;
-EVTDESC110021;The ulama have debated and, after heated arguments, have come to the conclusion that working with the state is both in the interest of the country and in accordance with the Shia doctrine. Although they have one condition: repealing the tobacco monopoly and ending foreign influence in the country. With popular support in their favor, refusing would be a dangerous move. On the other hand, accepting it means angering the Great Powers and the need to pay reparations for the Imperial Tobacco Company.;;;;;;;;;;;;;
+EVTDESC110021;The ulama have debated and, after heated arguments, have come to the conclusion that working with the state is both in the interest of the country and in accordance with the $RELIGION$ doctrine. Although they have one condition: repealing the tobacco monopoly and ending foreign influence in the country. With popular support in their favor, refusing would be a dangerous move. On the other hand, accepting it means angering the Great Powers and the need to pay reparations for the Imperial Tobacco Company.;;;;;;;;;;;;;
 EVT110021OPTA;In the name of the Prophet, we agree.;;;;;;;;;;;;;
 EVT110021OPTB;We do not abide to their pressure!;;;;;;;;;;;;;
 EVTNAME110022;The Ulama Propose a Compromise;;;;;;;;;;;;;
@@ -1175,8 +1175,8 @@ EVTDESC110028;Bazaari is the name given to the merchants and workers of bazaars,
 EVT110028OPTA;We cannot take it...;;;;;;;;;;;;;
 EVT110028OPTB;We can take it!;;;;;;;;;;;;;
 EVT110028OPTC;Put. This. Down.;;;;;;;;;;;;;
-EVTNAME110011;The founding of the APOC;;;;;;;;;;;;;
-EVTDESC110011;The English Anglo-Persian Oil Company was the first company to extract petroleum from $COUNTRY$. In 1901 William Knox D'Arcy negotiated an oil concession with Mozaffar al-Din: he would assume exclusive rights to prospect for 60 years in a vast tract of territory and in exchange the Shah received 20,000�, an equal amount in shares, and a promise of future profits. In early May 1908 D'Arcy, having sunk more than 500,000� into his Persian venture and found no oil, sent a telegram saying that they had run out of money and ordering to "cease work, dismiss the staff, dismantle anything worth the cost and come home." The geologist Geroge Bernard Reynolds delayed following these orders and in a stroke of luck, struck oil shortly after on May 26, 1908. Should we accept the deal?;;;;;;;;;;;;;
+EVTNAME110011;The founding of the $FROMCOUNTRY_ADJ$-$COUNTRY_ADJ$ Oil Company;;;;;;;;;;;;;
+EVTDESC110011;The $FROMCOUNTRY_ADJ$-$COUNTRY_ADJ$ Oil Company was the first company to extract petroleum from $COUNTRY$. In $YEAR$ William Knox D'Arcy negotiated an oil concession with Mozaffar al-Din: he would assume exclusive rights to prospect for 60 years in a vast tract of territory and in exchange the Shah received 20,000�, an equal amount in shares, and a promise of future profits. In early May 1908 D'Arcy, having sunk more than 500,000� into his $COUNTRY_ADJ$ venture and found no oil, sent a telegram saying that they had run out of money and ordering to "cease work, dismiss the staff, dismantle anything worth the cost and come home." The geologist Geroge Bernard Reynolds delayed following these orders and in a stroke of luck, struck oil shortly after on May 26, 1908. Should we accept the deal?;;;;;;;;;;;;;
 EVT110011OPTA;Yes, this will be beneficial to both of us.;;;;;;;;;;;;;
 EVT110011OPTB;No! Foreigners out!;;;;;;;;;;;;;
 EVTNAME100018;Kaveh;;;;;;;;;;;;;
@@ -1184,8 +1184,8 @@ EVTDESC100018;A nationalist diplomat going by the name of Hassan Taqizadeh has o
 EVT100018OPTA;They'll write what we tell them to write.;;;;;;;;;;;;;
 EVT100018OPTB;Just keep an eye on it.;;;;;;;;;;;;;
 EVT100018OPTC;Freedom is the heart of a great country.;;;;;;;;;;;;;
-EVTNAME36224;The Danish India;;;;;;;;;;;;;
-EVTDESC36224;During the Napoleonic Wars, the British attacked Danish shipping, and devastated the Danish East India Company's India trade. In May 1801 � August 1802 and 1808 � 20 September 1815 the British even occupied Dansborg and Frederiksnagore. The Danish colonies went into decline and now the Danish are looking for a new owner for them.;;;;;;;;;;;;;
+EVTNAME36224;The $FROMCOUNTRY_ADJ$ India;;;;;;;;;;;;;
+EVTDESC36224;During the Napoleonic Wars, the British attacked $FROMCOUNTRY_ADJ$ shipping, and devastated the $FROMCOUNTRY_ADJ$ East India Company's India trade. In May 1801 � August 1802 and 1808 � 20 September 1815 the British even occupied Dansborg and Frederiksnagore. The $FROMCOUNTRY_ADJ$ colonies went into decline and now the $FROMCOUNTRY_ADJ$ are looking for a new owner for them.;;;;;;;;;;;;;
 EVTOPTA36224;We will buy it. �R(Pay or owe 20,000�)�W;;;;;;;;;;;;;
 EVTOPTB36224;We are not interested.;;;;;;;;;;;;;
 EVTNAME16457;$FROMCOUNTRY_ADJ$ Government Breaks Down the Negotiations;;;;;;;;;;;;;
@@ -3644,7 +3644,7 @@ EVTDESC95255;The call has been sent out for the peoples of the East Indies to un
 EVT95255OPTA;We will answer the call!;;;;;;;;;;;;;
 EVT95255OPTB;We will remain independent;;;;;;;;;;;;;
 EVTNAME97125;Flores Purchase;;;;;;;;;;;;;
-EVTDESC97125;Portugal has offered to sell the Flores islands to our current colonial administration in Timor. It seems like a reasonable deal.;;;;;;;;;;;;;
+EVTDESC97125;$FROMCOUNTRY$ has offered to sell the Flores islands to our current colonial administration in Timor. It seems like a reasonable deal.;;;;;;;;;;;;;
 EVT97125OPTA;Accept the offer. �R(Pay or owe 100,000�)�W;;;;;;;;;;;;;
 EVT97125OPTB;Reject the offer.;;;;;;;;;;;;;
 EVTNAME98800;$STATENAME$ Colonial Incorporation;;;;;;;;;;;;;

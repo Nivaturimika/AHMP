@@ -774,9 +774,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = flores_sale
 			1445 = {
-				owner = {
-					country_event = 97125
-				}
+				owner = { country_event = 97125 }
 			}
 		}
 		ai_will_do = {

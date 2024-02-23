@@ -1074,11 +1074,10 @@ country_event = {
 			limit = { owner = { money = 20000 } }
 			owner = { treasury = -20000 }
 		}
-		DEN = { treasury = 20000 }
-		relation = { who = DEN value = 50 }
+		FROM = { treasury = 20000 }
 		2591 = { secede_province = THIS }
 		ai_chance = {
-			factor = 100
+			factor = 1
 		}
 	}
 
@@ -1097,7 +1096,7 @@ country_event = {
 				NOT = { tag = RUS }
 				NOT = { tag = TUR }
 			}
-		country_event = 36224
+			country_event = 36224
 		}
 		ai_chance = {
 			factor = 0
@@ -1150,14 +1149,12 @@ country_event = {
 		name = "EVTOPTA36225"
 		FROM = { treasury = -200000 }
 		treasury = 200000
-		relation = { who = FROM value = 50 }
 		2223 = { remove_core = THIS secede_province = FROM }
 		ai_chance = { factor = 0.95 }
 	}
 
 	option = {
 		name = "EVTOPTB36225"
-		relation = { who = FROM value = -50 }
 		FROM = { diplomatic_influence = { who = THIS value = -50 } }
 		ai_chance = { factor = 0.05 }
 	}

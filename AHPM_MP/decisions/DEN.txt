@@ -79,9 +79,8 @@ political_decisions = {
 
 	selling_danish_india = {
 	picture = map_india
-	alert = no
+		alert = no
 		potential = {
-			tag = DEN
 			owns = 2591
 			NOT = { has_country_flag = selling_dane_india }
 		}

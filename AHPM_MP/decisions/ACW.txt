@@ -280,9 +280,9 @@ political_decisions = {
 	manifest_destiny = {
 		potential = {
 			test = is_american_union
+			NOT = { has_country_modifier = manifest_destiny }
 		}
 		allow = {
-			NOT = { has_country_modifier = manifest_destiny }
 			war = no
 			idealism = 1
 			state_n_government = 1
