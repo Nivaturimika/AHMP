@@ -8,7 +8,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = DEN
+			primary_culture = danish
 			AND = {
 				tag = SCA
 				owns = 368
@@ -33,15 +33,8 @@ country_event = {
 	option = {
 		name = "EVT90050OPTA"
 		set_country_flag = annex_schleswig_holstein
-		370 = { add_core = DEN }
-		371 = { add_core = DEN }
-		random_owned = {
-			limit = { owner = { tag = SCA } }
-			owner = {
-				370 = { add_core = SCA }
-				371 = { add_core = SCA }
-			}
-		}
+		370 = { add_core = THIS }
+		371 = { add_core = THIS }
 		SWH = { country_event = 90051 }
 		any_pop = {
 			limit = { has_pop_culture = danish }
@@ -139,7 +132,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = DEN
+			primary_culture = danish
 			AND = {
 				tag = SCA
 				owns = 368
@@ -165,14 +158,8 @@ country_event = {
 		badboy = -3
 		release_vassal = SWH
 		create_alliance = SWH
-		any_country = {
-			limit = {
-				capital_scope = { continent = europe }
-			}
-			relation = { who = SWH value = 50 }
-		}
 		ai_chance = {
-			factor = 85
+			factor = 1
 		}
 	}
 	option = {
@@ -182,16 +169,6 @@ country_event = {
 		SCH = { all_core = { remove_core = SCH } }
 		371 = { remove_core = GER }
 		release = HOL
-		any_country = {
-			limit = {
-				is_greater_power = yes
-				capital_scope = { continent = europe }
-			}
-			relation = {
-				who = THIS
-				value = -20
-			}
-		}
 		any_country = {
 			limit = {
 				primary_culture = north_german
@@ -204,7 +181,7 @@ country_event = {
 			relation = { who = HOL value = 50 }
 		}
 		ai_chance = {
-			factor = 10
+			factor = 0
 		}
 	}
 	option = {
@@ -238,7 +215,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 5
+			factor = 0
 		}
 	}
 }
@@ -258,7 +235,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = DEN
+			primary_culture = danish
 			AND = {
 				tag = SCA
 				owns = 368
@@ -305,18 +282,8 @@ country_event = {
 			}
 			diplomatic_influence = { who = HOL value = 100 }
 		}
-		any_country = {
-			limit = { capital_scope = { continent = europe } }
-			relation = { who = HOL value = 50 }
-		}
-		any_country = {
-			limit = {
-				capital_scope = { continent = europe }
-			}
-			relation = { who = HOL value = 50 }
-		}
 		ai_chance = {
-			factor = 75
+			factor = 1
 		}
 	}
 	option = {
@@ -327,7 +294,7 @@ country_event = {
 			consciousness = 3
 		}
 		ai_chance = {
-			factor = 25
+			factor = 0
 		}
 	}
 }
@@ -647,7 +614,7 @@ country_event = {
 	picture = "danishgovernment"
 
 	trigger = {
-		tag = SWE
+		primary_culture = swedish
 		exists = yes
 		DEN = {
 			war_with = SWH

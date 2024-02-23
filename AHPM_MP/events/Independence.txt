@@ -2699,13 +2699,12 @@ country_event = {
 
 	trigger = {
 		war = no
-		tag = SWE
+		primary_culture = swedish
 		any_state = {
 			any_owned_province = { is_core = NOR }
 			average_militancy = 2
 		}
 		average_consciousness = 6
-		year = 1880
 		revolution_n_counterrevolution = 1
 		is_possible_vassal = NOR
 		NOT = {
@@ -2805,7 +2804,7 @@ country_event = {
 
 	trigger = {
 		war = no
-		tag = SWE
+		primary_culture = swedish
 		any_state = {
 			any_owned_province = { is_core = NOR }
 			average_militancy = 3
