@@ -27,7 +27,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = ioc_member
-		random_country = { tag != THIS has_country_flag = ioc_member } #There must be another country too!
+		any_country = { tag != THIS has_country_flag = ioc_member } #There must be another country too!
 		has_country_flag != attend_olympiad
 		has_country_flag != host_olympiad
 		has_country_flag != nohost_olympiad
