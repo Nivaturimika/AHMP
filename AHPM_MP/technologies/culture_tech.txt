@@ -2,37 +2,37 @@
 classicism_n_early_romanticism = {
 	area = aesthetics
 	year = 1836
-	cost = 3600
+	cost = 7200
 	increase_research = 0.10
 }
 romanticism = {
 	area = aesthetics
 	year = 1836
-	cost = 7200
+	cost = 14400
 	increase_research = 0.10
 }
 realism = {
 	area = aesthetics
 	year = 1836
-	cost = 10800
+	cost = 21600
 	increase_research = 0.10
 }
 impressionism = {
 	area = aesthetics
 	year = 1830
-	cost = 14400
+	cost = 28800
 	increase_research = 0.10
 }
 expressionism = {
 	area = aesthetics
 	year = 1830
-	cost = 18000
+	cost = 36000
 	increase_research = 0.10
 }
 mass_culture_n_the_avant_garde = {
 	area = aesthetics
 	year = 1830
-	cost = 21600
+	cost = 43200
 	increase_research = 0.10
 }
 
@@ -40,122 +40,39 @@ mass_culture_n_the_avant_garde = {
 late_enlightenment_philosophy = {
 	area = philosophy
 	year = 1836
-	cost = 3600
+	cost = 7200
 	increase_research = 0.10
 }
 idealism = {
 	area = philosophy
 	year = 1830
-	cost = 7200
+	cost = 14400
 	increase_research = 0.10
 }
-
 empiricism = {
 	area = philosophy
 	year = 1830
-	cost = 10800
+	cost = 21600
 	increase_research = 0.10
 }
 analytic_philosophy = {
 	area = philosophy
 	year = 1830
-	cost = 14400
-
-	increase_research = 1.0
-	ai_chance = {
-		factor = 90
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 20
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		modifier = {
-			factor = 10
-			civilized = yes
-		}
-		modifier = {
-			factor = 1.1
-			year = 1835
-		}
-		modifier = {
-			factor = 2
-			year = 1835
-		}
-	}
+	cost = 28800
+	increase_research = 0.10
 }
 phenomenology_n_hermeneutic = {
 	area = philosophy
 	year = 1830
-	cost = 18000
-
-	increase_research = 1.0
-	ai_chance = {
-		factor = 90
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 20
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		modifier = {
-			factor = 10
-			civilized = yes
-		}
-		modifier = {
-			factor = 1.1
-			year = 1835
-		}
-		modifier = {
-			factor = 2
-			year = 1830
-		}
-	}
+	cost = 36000
+	increase_research = 0.10
 }
 anti__rationalism = {
 	area = philosophy
 	year = 1830
-	cost = 21600
-
-	increase_research = 1.0
-	ai_chance = {
-		factor = 100
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 20
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		modifier = {
-			factor = 10
-			civilized = yes
-		}
-		modifier = {
-			factor = 1.1
-			year = 1835
-		}
-		modifier = {
-			factor = 2
-			year = 1830
-		}
-	}
+	cost = 43200
+	increase_research = 0.10
 }
-
 
 #social_thought
 malthusian_thought = {
