@@ -192,54 +192,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 30
-		modifier = {
-			factor = 1.5
-			NOT = { national_provinces_occupied = .05 }
-			any_greater_power = {
-				has_country_modifier = great_war
-				war_with = THIS
-				national_provinces_occupied = .05
-			}
-		}
-		modifier = {
-			factor = 0.5
-			national_provinces_occupied = .25
-			NOT = { national_provinces_occupied = .50 }
-		}
-		modifier = {
-			factor = 0.25
-			national_provinces_occupied = .50
-		}
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 20
-		}
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 40
-		}
-		modifier = {
-			factor = 0.8
-			blockade = 0.25
-			NOT = { blockade = 0.50 }
-		}
-		modifier = {
-			factor = 0.8
-			blockade = 0.50
-			NOT = { blockade = 1 }
-		}
-		modifier = {
-			factor = 0.5
-			blockade = 1
-		}
-		modifier = {
-			factor = 0.8
-			revolt_percentage = 0.25
-		}
-		modifier = {
-			factor = 0.8
-			NOT = { total_amount_of_divisions = 1 }
-		}
 	}
 
 	option = {
@@ -272,54 +224,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 30
-		modifier = {
-			factor = 1.5
-			NOT = { national_provinces_occupied = .05 }
-			any_greater_power = {
-				has_country_modifier = great_war
-				war_with = THIS
-				national_provinces_occupied = .05
-			}
-		}
-		modifier = {
-			factor = 0.5
-			national_provinces_occupied = .25
-			NOT = { national_provinces_occupied = .50 }
-		}
-		modifier = {
-			factor = 0.25
-			national_provinces_occupied = .50
-		}
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 20
-		}
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 40
-		}
-		modifier = {
-			factor = 0.8
-			blockade = 0.25
-			NOT = { blockade = 0.50 }
-		}
-		modifier = {
-			factor = 0.8
-			blockade = 0.50
-			NOT = { blockade = 1 }
-		}
-		modifier = {
-			factor = 0.5
-			blockade = 1
-		}
-		modifier = {
-			factor = 0.8
-			revolt_percentage = 0.25
-		}
-		modifier = {
-			factor = 0.8
-			NOT = { total_amount_of_divisions = 1 }
-		}
 	}
 
 	option = {
@@ -411,10 +315,6 @@ country_event = {
 	id = 96010
 	title = "EVTNAME96010" #The Treaty of $CAPITAL$
 	desc = "EVTDESC96010"
-	news = yes
-	news_desc_long = "EVTDESC96010_NEWS_LONG"
-	news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96010_NEWS_SHORT"
 	picture = "greatpowers"
 	major = yes
 
@@ -2178,16 +2078,12 @@ country_event = {
 	option = {
 		name = "EVTOPTA96030" #We will ally with $FROMCOUNTRY$
 		create_alliance = FROM
-		random_country = {
-			limit = {
-				tag = FROM
-				ai = no
-			}
+		FROM = {
+			limit = { ai = no }
 			country_event = 96031
 		}
-		random_country = {
+		FROM = {
 			limit = {
-				tag = FROM
 				is_greater_power = yes
 				THIS = {
 					is_greater_power = no
@@ -2199,264 +2095,25 @@ country_event = {
 				value = 200
 			}
 		}
-		random_owned = {
+		if = {
 			limit = {
-				owner = { is_greater_power = yes }
+				is_greater_power = yes
 				FROM = {
 					is_greater_power = no
 					part_of_sphere = no
 				}
 			}
-			owner = {
-				diplomatic_influence = {
-					who = FROM
-					value = 200
-				}
+			diplomatic_influence = {
+				who = FROM
+				value = 200
 			}
 		}
-		relation = {
-			who = FROM
-			value = 200
-		}
-		any_country = {
-			limit = { war_with = FROM }
-			relation = {
-				who = THIS
-				value = -100
-			}
-		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 3
-				OR = {
-					any_neighbor_country = {
-						war_with = FROM
-						any_owned_province = { is_core = THIS }
-					}
-					any_greater_power = {
-						war_with = FROM
-						any_owned_province = { is_core = THIS }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				NOT = {
-					FROM = { neighbour = THIS }
-				}
-				NOT = {
-					any_neighbor_country = { war_with = FROM }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { neighbour = THIS }
-				NOT = {
-					any_neighbor_country = { war_with = FROM }
-				}
-			}
-			modifier = {
-				factor = 0.1
-				FROM = {
-					any_owned_province = { is_core = THIS }
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					relation = {
-						who = FROM
-						value = -100
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				NOT = {
-					relation = {
-						who = FROM
-						value = 0
-					}
-				}
-			}
-			modifier = {
-				factor = 0.25
-				war_policy = pacifism
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 1.5
-				num_of_revolts = 10
-			}
-			modifier = {
-				factor = 1.5
-				is_greater_power = yes
-			}
-			modifier = {
-				factor = 0.5
-				is_greater_power = no
-				is_secondary_power = no
-			}
-			modifier = {
-				factor = 0.5
-				is_disarmed = yes
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					government = democracy
-					government = hms_government
-				}
-				FROM = {
-					OR = {
-						government = democracy
-						government = hms_government
-					}
-				}
-				any_greater_power = {
-					war_with = FROM
-					OR = {
-						government = proletarian_dictatorship
-						government = fascist_dictatorship
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				government = proletarian_dictatorship
-				FROM = { government = proletarian_dictatorship}
-			}
-			modifier = {
-				factor = 1.5
-				government = proletarian_dictatorship
-				any_greater_power = {
-					war_with = FROM
-					government = fascist_dictatorship
-				}
-			}
-			modifier = {
-				factor = 2
-				government = fascist_dictatorship
-				FROM = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 1.5
-				government = fascist_dictatorship
-				any_greater_power = {
-					war_with = FROM
-					government = proletarian_dictatorship
-				}
-			}
-			modifier = {
-				factor = 2
-				government = bourgeois_dictatorship
-				FROM = { government = bourgeois_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				government = proletarian_dictatorship
-				FROM = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				government = fascist_dictatorship
-				FROM = { government = proletarian_dictatorship }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "EVTOPTB96030" #We refuse
-		FROM = {
-			relation = {
-				who = THIS
-				value = -20
-			}
-		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0.5
-				relation = {
-					who = FROM
-					value = 50
-				}
-			}
-			modifier = {
-				factor = 0.1
-				OR = {
-					vassal_of = FROM
-					in_sphere = FROM
-				}
-			}
-			modifier = {
-				factor = 0.5
-				relation = {
-					who = FROM
-					value = 100
-				}
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 0.25
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					government = democracy
-					government = hms_government
-				}
-				NOT = { ruling_party_ideology = communist }
-				FROM = { government = proletarian_dictatorship }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					government = democracy
-					government = hms_government
-				}
-				NOT = { ruling_party_ideology = fascist }
-				FROM = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 1.5
-				government = proletarian_dictatorship
-				FROM = {
-					OR = {
-						government = democracy
-						government = hms_government
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				government = proletarian_dictatorship
-				FROM = { government = bourgeois_dictatorship }
-			}
-			modifier = {
-				factor = 1.5
-				government = bourgeois_dictatorship
-				FROM = { government = proletarian_dictatorship }
-			}
-			modifier = {
-				factor = 2
-				government = fascist_dictatorship
-				FROM = {
-					OR = {
-						government = democracy
-						government = hms_government
-					}
-				}
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -2489,10 +2146,6 @@ country_event = {
 	id = 96035
 	title = "EVTNAME96010" #The Treaty of $CAPITAL$
 	desc = "EVTDESC96010"
-	news = yes
-	news_desc_long = "EVTDESC96010_NEWS_LONG"
-	news_desc_medium = "EVTDESC96010_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96010_NEWS_SHORT"
 	picture = "treaty_of_versailles"
 	major = yes
 

@@ -493,17 +493,8 @@ political_decisions = {
 	south_tirol_compromise = {
 		picture = south_tirol_propaganda
 		potential = {
-			NOT = { has_global_flag = south_tirol_compromise_attempted }
-		}
-
-		allow = {
 			owns = 734 #Trentin
 			owns = 735 #Bozen
-			OR = {
-				734 = { is_core = THIS }
-				735 = { is_core = THIS }
-			}
-			war = no
 			any_neighbor_country = {
 				NOT = { truce_with = THIS }
 				war = no
@@ -546,6 +537,15 @@ political_decisions = {
 					}
 				}
 			}
+			OR = {
+				734 = { is_core = THIS }
+				735 = { is_core = THIS }
+			}
+			NOT = { has_global_flag = south_tirol_compromise_attempted }
+		}
+
+		allow = {
+			war = no
 		}
 
 		effect = {

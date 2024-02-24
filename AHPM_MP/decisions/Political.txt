@@ -86,9 +86,9 @@ political_decisions = {
 		picture = enact_female_suffrage
 		potential = {
 			has_country_modifier != female_suffrage
+			test = has_elections
 		}
 		allow = {
-			test = has_elections
 			social_science = 1
 		}
 		effect = {

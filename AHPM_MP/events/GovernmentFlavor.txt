@@ -13,69 +13,32 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 1000
-
-		modifier = {
-			factor = 4
-			tag = ENG
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { average_militancy = 2 }
-		}
-		modifier = {
-			factor = 0.75
-			civilized = yes
-			capital_scope = { average_militancy = 9 }
-		}
-		modifier = {
-			factor = 0.75
-			civilized = yes
-			capital_scope = { average_militancy = 8 }
-		}
-		modifier = {
-			factor = 0.9
-			civilized = yes
-			capital_scope = { average_militancy = 7 }
-		}
-	}
-
+	mean_time_to_happen = { months = 1000 }
 	option = {
 		name = "EVTOPTA11000"
-		random_owned = {
-			limit = { owner = { government = absolute_monarchy } }
-			owner = {
-				random_list = {
-					25 = { add_country_modifier = { name = regency_government duration = 3650 } } #10
-					25 = { add_country_modifier = { name = regency_government duration = 3285 } } #9
-					25 = { add_country_modifier = { name = regency_government duration = 2920 } } #8
-					25 = { add_country_modifier = { name = regency_government duration = 2555 } } #7
-				}
+		if = {
+			limit = { government = absolute_monarchy }
+			random_list = {
+				25 = { add_country_modifier = { name = regency_government duration = 3650 } } #10
+				25 = { add_country_modifier = { name = regency_government duration = 3285 } } #9
+				25 = { add_country_modifier = { name = regency_government duration = 2920 } } #8
+				25 = { add_country_modifier = { name = regency_government duration = 2555 } } #7
 			}
-		}
-
-		random_owned = {
-			limit = { owner = { government = prussian_constitutionalism } }
-			owner = {
-				random_list = {
-					25 = { add_country_modifier = { name = regency_government duration = 2190 } } #6
-					25 = { add_country_modifier = { name = regency_government duration = 1825 } } #5
-					25 = { add_country_modifier = { name = regency_government duration = 1460 } } #4
-					25 = { add_country_modifier = { name = regency_government duration = 1095 } } #3
-				}
+		} else_if = {
+			limit = { government = prussian_constitutionalism }
+			random_list = {
+				25 = { add_country_modifier = { name = regency_government duration = 2190 } } #6
+				25 = { add_country_modifier = { name = regency_government duration = 1825 } } #5
+				25 = { add_country_modifier = { name = regency_government duration = 1460 } } #4
+				25 = { add_country_modifier = { name = regency_government duration = 1095 } } #3
 			}
-		}
-
-		random_owned = {
-			limit = { owner = { government = hms_government } }
-			owner = {
-				random_list = {
-					25 = { add_country_modifier = { name = regency_government duration = 1095 } } #3
-					25 = { add_country_modifier = { name = regency_government duration = 730 } } #2
-					25 = { add_country_modifier = { name = regency_government duration = 365 } } #1
-					25 = { }
-				}
+		} else_if = {
+			limit = { government = hms_government }
+			random_list = {
+				25 = { add_country_modifier = { name = regency_government duration = 1095 } } #3
+				25 = { add_country_modifier = { name = regency_government duration = 730 } } #2
+				25 = { add_country_modifier = { name = regency_government duration = 365 } } #1
+				25 = { }
 			}
 		}
 	}
@@ -87,124 +50,102 @@ country_event = {
 	title = "EVTNAME11001"
 	desc = "EVTDESC11001"
 	picture = "finnish_diet"
-
 	is_triggered_only = yes
-
-
+	immediate = {
+		if = {
+			limit = { has_country_flag = dissolving_parliament }
+			clr_country_flag = dissolving_parliament
+		}
+	}
 	option = {
 		name = "EVTOPTA11001" #Liberal
-		random_owned = {
-			limit = {
-				owner = { has_country_flag = dissolving_parliament }
-			}
-			owner = {
-				upper_house = { ideology = liberal value = 0.9 }
-				any_pop = {
-					scaled_militancy = {
-						ideology = reactionary
-						factor = 2
-					}
-
-					scaled_consciousness = {
-						ideology = reactionary
-						factor = 4
-					}
-
-					scaled_militancy = {
-						ideology = liberal
-						factor = -1
-					}
+		if = {
+			limit = { has_country_flag = dissolving_parliament }
+			upper_house = { ideology = liberal value = 0.9 }
+			any_pop = {
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 2
 				}
-				clr_country_flag = dissolving_parliament
+				scaled_consciousness = {
+					ideology = reactionary
+					factor = 4
+				}
+				scaled_militancy = {
+					ideology = liberal
+					factor = -1
+				}
 			}
 		}
 	}
 
 	option = {
 		name = "EVTOPTB11001" #Reactionary
-		random_owned = {
-			limit = {
-				owner = { has_country_flag = dissolving_parliament }
+		if = {
+			limit = { has_country_flag = dissolving_parliament }
+			upper_house = { ideology = reactionary value = 0.9 }
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = 2
+				}
+				scaled_consciousness = {
+					ideology = liberal
+					factor = 4
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = -1
+				}
 			}
-			owner = {
-				upper_house = { ideology = reactionary value = 0.9 }
+			if = {
+				limit = { is_ideology_enabled = socialist }
 				any_pop = {
 					scaled_militancy = {
-						ideology = liberal
+						ideology = socialist
 						factor = 2
 					}
-
 					scaled_consciousness = {
-						ideology = liberal
+						ideology = socialist
 						factor = 4
 					}
-
-					scaled_militancy = {
-						ideology = reactionary
-						factor = -1
-					}
 				}
-				random_owned = {
-					limit = { owner = { is_ideology_enabled = socialist } }
-					owner = {
-						any_pop = {
-							scaled_militancy = {
-								ideology = socialist
-								factor = 2
-							}
-							scaled_consciousness = {
-								ideology = socialist
-								factor = 4
-							}
-						}
-					}
-				}
-				clr_country_flag = dissolving_parliament
 			}
 		}
 	}
 
 	option = {
 		name = "EVTOPTC11001" #Socialists
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					is_ideology_enabled = socialist
-					has_country_flag = dissolving_parliament
-				}
+				is_ideology_enabled = socialist
+				has_country_flag = dissolving_parliament
 			}
-			owner = {
-				upper_house = {
+			upper_house = {
+				ideology = socialist
+				value = 0.9
+			}
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = 2
+				}
+				scaled_consciousness = {
+					ideology = liberal
+					factor = 4
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 2
+				}
+				scaled_consciousness = {
+					ideology = reactionary
+					factor = 4
+				}
+				scaled_militancy = {
 					ideology = socialist
-					value = 0.9
+					factor = -1
 				}
-				any_pop = {
-					scaled_militancy = {
-						ideology = liberal
-						factor = 2
-					}
-
-					scaled_consciousness = {
-						ideology = liberal
-						factor = 4
-					}
-
-					scaled_militancy = {
-						ideology = reactionary
-						factor = 2
-					}
-
-					scaled_consciousness = {
-						ideology = reactionary
-						factor = 4
-					}
-
-					scaled_militancy = {
-						ideology = socialist
-						factor = -1
-					}
-				}
-				clr_country_flag = dissolving_parliament
 			}
 		}
 	}
@@ -657,35 +598,23 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB910203"
-		if = {
-			limit = { money >= 10000 }
-			FROM = { money = 10000 }
-			money = -10000
-		}
+		FROM = { money = 10000 }
+		money = -10000
 	}
 	option = {
 		name = "EVTOPTC910203"
-		if = {
-			limit = { money >= 100000 }
-			FROM = { money = 100000 }
-			money = -100000
-		}
+		FROM = { money = 100000 }
+		money = -100000
 	}
 	option = {
 		name = "EVTOPTD910203"
-		if = {
-			limit = { money >= 1000000 }
-			FROM = { money = 1000000 }
-			money = -1000000
-		}
+		FROM = { money = 1000000 }
+		money = -1000000
 	}
 	option = {
 		name = "EVTOPTE910203"
-		if = {
-			limit = { money >= 10000000 }
-			FROM = { money = 10000000 }
-			money = -10000000
-		}
+		FROM = { money = 10000000 }
+		money = -10000000
 	}
 }
 
@@ -717,29 +646,7 @@ country_event = {
 		civilized = yes
 		overlord = { neighbour = THIS }
 	}
-	mean_time_to_happen = {
-		months = 30
-		modifier = {
-			factor = 1.5
-			administration_spending > 0.5
-		}
-		modifier = {
-			factor = 1.25
-			administration_spending > 0.25
-		}
-		modifier = {
-			factor = 5
-			industrial_score > 10
-		}
-		modifier = {
-			factor = 10
-			OR = {
-				industrial_score > 100
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-	}
+	mean_time_to_happen = { months = 30 }
 	option = {
 		name = "EVTOPTA23216"
 		overlord = { inherit = THIS }

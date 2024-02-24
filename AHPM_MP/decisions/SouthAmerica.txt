@@ -364,15 +364,15 @@ political_decisions = {
 	commodity_boom_colombia = {
 		picture = coffee_in_colombia
 		potential = {
-			NOT = { has_global_flag = rgo_change_sa }
-		}
-
-		allow = {
 			OR = {
 				owns = 2247
 				owns = 2279
 				owns = 2295
 			}
+			NOT = { has_global_flag = rgo_change_sa }
+		}
+
+		allow = {
 			war = no
 			modern_central_bank_system = 1
 		}
@@ -407,17 +407,17 @@ political_decisions = {
 	commodity_boom_central_america = {
 		picture = coffee_in_colombia
 		potential = {
-			NOT = { has_global_flag = rgo_change_central_america }
-		}
-
-		allow = {
-			war = no
 			OR = {
 				owns = 2201
 				owns = 2193
 				owns = 2186
 				owns = 2172
 			}
+			NOT = { has_global_flag = rgo_change_central_america }
+		}
+
+		allow = {
+			war = no
 			modern_central_bank_system = 1
 		}
 

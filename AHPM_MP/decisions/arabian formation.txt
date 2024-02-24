@@ -38,6 +38,7 @@ political_decisions = {
 		potential = {
 			is_culture_group != arab
 			exists != ARA
+			nationalism_n_imperialism = 1
 		}
 		allow = {
 			war = no

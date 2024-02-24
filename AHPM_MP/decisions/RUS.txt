@@ -1146,17 +1146,17 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = marshes_ready }
 			OR = {
-			941 = {
-				owned_by = THIS
-				NOT = { life_rating = 35 }
+				941 = {
+					owned_by = THIS
+					NOT = { life_rating = 35 }
 				}
-			942 = {
-				owned_by = THIS
-				NOT = { life_rating = 35 }
+				942 = {
+					owned_by = THIS
+					NOT = { life_rating = 35 }
 				}
-			959 = {
-				owned_by = THIS
-				NOT = { life_rating = 35 }
+				959 = {
+					owned_by = THIS
+					NOT = { life_rating = 35 }
 				}
 			}
 		}
@@ -1192,12 +1192,12 @@ political_decisions = {
 		picture = uriankhai_colony
 		potential = {
 			tag = RUS
+			owns = 1063
 			NOT = { has_country_flag = colonize_uriankhai }
 		}
 
 		allow = {
 			nationalism_n_imperialism = 1
-			owns = 1063
 			is_greater_power = yes
 			war = no
 		}

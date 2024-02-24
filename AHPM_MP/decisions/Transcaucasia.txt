@@ -571,6 +571,7 @@ political_decisions = {
 			NOT = {
 				has_country_flag = recognize_circassia
 				tag = CIR
+				tag = RUS
 				CIR = { part_of_sphere = yes civilized = no }
 			}
 		}
@@ -585,13 +586,7 @@ political_decisions = {
 			if = { limit = { tag = RUS } prestige = 15 create_vassal = CIR }
 			else = { RUS = { prestige = -5 } }
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				tag = RUS
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	recognize_chechenya = {

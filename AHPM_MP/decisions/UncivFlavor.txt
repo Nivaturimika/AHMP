@@ -2,11 +2,11 @@ political_decisions = {
 	founding_yadanabon  = {
 		picture = founding_yadanabon
 		potential = {
+			owns = 1334
 			NOT = { has_country_flag = mandalay_built }
 		}
 
 		allow = {
-			owns = 1334
 			money = 1100
 		}
 
