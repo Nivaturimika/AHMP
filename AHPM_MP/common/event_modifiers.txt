@@ -1846,7 +1846,7 @@ trade_unions_promised = {
 #}
 
 dar_al_funun = {
-	research_points_modifier = 0.2
+	research_points_modifier = 0.02
 	icon = 5
 }
 

@@ -84,7 +84,8 @@ EVTOPTB23400;The idea is interesting, but not at this time.
 EVTNAME23401;Shall $COUNTRY$ host the Olympic Games?
 EVTDESC23401;The International Olympic Committee has invited our government to organize the Olympic Games. Should we accept the offer?
 EVTOPTA23401;Yes, it is an excellent opportunity to show $COUNTRY_ADJ$ progress
-EVTOPTB23401;No, we have better uses of our nation's limited resources
+EVTOPTB23401;Yes, it is an excellent opportunity to host the Olympiads, but we won't participate ourselves
+EVTOPTC23401;No, we have better uses of our nation's limited resources
 EVTDESC23402;The International Olympic Committee has decided to offer $COUNTRY$ the responsibility to organize the olympic games of this year. Should we accept the offer?
 EVTNAME23403;Attend The Olympic Games in $FROMCOUNTRY$?
 EVTDESC23403;With the announcement of $FROMCOUNTR$ as the host nation, the International Olympic Committee has sent invitations to its members to attend the games, including $COUNTRY$. Shall we attend?

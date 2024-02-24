@@ -219,7 +219,7 @@ chinese_substate = {
 		}
 		civilized = no
 		exists = yes
-		QNG = {    government = absolute_monarchy }
+		QNG = { government = absolute_monarchy }
 		is_culture_group = east_asian
 	}
 	icon = 10
