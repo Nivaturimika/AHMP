@@ -134,15 +134,23 @@ country_event = {
 			value >= 0
 		}
 	}
-	immediate = {
+	option = {
+		name = "EVT98660OPTA"
 		any_country = {
 			limit = { has_country_flag = voting_in_danubian_federation }
+			all_core = { add_core = DNB }
 			annex_to = THIS
 		}
 		change_tag = DNB
 		badboy = 10
+		ai_chance = { factor = 1 }
 	}
-	option = { name = "EVT98660OPTA" }
+	option = {
+		name = "EVT98660OPTB"
+		prestige = -10
+		badboy = -1
+		ai_chance = { factor = 0 }
+	}
 }
 
 country_event = {

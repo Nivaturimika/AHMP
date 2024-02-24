@@ -37,6 +37,7 @@ EVT98659OPTA;$FROMCOUNTRY_ADJ$ scum!
 EVTNAME98660;Successful conference of $CAPITAL$ 
 EVTDESC98660;Success! After several talks with various diplomats, a majority vote determined that we should form the confederation! This is a grand moment for all of the $COUNTRY_ADJ$ people, $YEAR$ will be known as the year of the $CAPITAL$ conference!
 EVT98660OPTA;Let there be peace!
+EVT98660OPTB;We've changed our minds
 EVTNAME98661;Failed conference of $CAPITAL$ 
 EVTDESC98661;Many tough talks with diplomats around $COUNTRY$ and yet we struck no deals, no concessions or negotiations that favored them, we were in a terrible position, and we didn't only look like a baffoon, we also inspired heavy nationalistic sentiments across our nation, we should be careful of what type of proposals we do next time...
 EVT98661OPTA;Oh dear
