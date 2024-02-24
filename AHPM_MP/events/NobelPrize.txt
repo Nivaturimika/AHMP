@@ -152,7 +152,7 @@ country_event = {
 country_event = {
 
 	id = 23452
-	title = "EVTNAME23452"
+	title = "EVTNAME23451"
 	desc = "EVTDESC23452"
 	picture = "zeeman_effect"
 
@@ -259,7 +259,7 @@ country_event = {
 country_event = {
 
 	id = 23453
-	title = "EVTNAME23453"
+	title = "EVTNAME23451"
 	desc = "EVTDESC23453"
 	picture = "radioactivity"
 
@@ -368,7 +368,7 @@ country_event = {
 country_event = {
 
 	id = 23454
-	title = "EVTNAME23454"
+	title = "EVTNAME23451"
 	desc = "EVTDESC23454"
 	picture = "argon_discovery"
 
@@ -475,7 +475,7 @@ country_event = {
 country_event = {
 
 	id = 23455
-	title = "EVTNAME23455"
+	title = "EVTNAME23451"
 	desc = "EVTDESC23455"
 	picture = "cathode_rays"
 
