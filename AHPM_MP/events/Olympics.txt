@@ -15,14 +15,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTA23400" # Join the IOC
+		name = "EVTOPTA23400"
 		treasury = -50000
-		prestige = 15
+		prestige = 5
 		set_country_flag = ioc_member
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPTB23400" # Reject invite
+		name = "EVTOPTB23400"
 		ai_chance = { factor = 0 }
 	}
 }
@@ -33,9 +33,12 @@ country_event = {
 	desc = "EVTDESC23401"
 	picture = "Olympics"
 	trigger = {
-		month = 10
 		has_country_flag = ioc_member
+		has_country_flag != attend_olympiad
+		has_country_flag != host_olympiad
+		has_country_flag != nohost_olympiad
 	}
+	mean_time_to_happen = { months = 48 }
 	option = {
 		name = "EVTOPTA23401"
 		prestige = 10
@@ -52,7 +55,7 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTB23401"
-		prestige = -25
+		prestige = -5
 		set_country_flag = nohost_olympiad
 		random_country = { #Find another host
 			limit = {
@@ -66,9 +69,8 @@ country_event = {
 	}
 }
 
-# 1st Olympiad - Send Delegation or No
 country_event = {
-	id = 23403 # Attend 1896 Olympics
+	id = 23403
 	title = "EVTNAME23403"
 	desc = "EVTDESC23403"
 	picture = "Olympics"
@@ -76,7 +78,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA23403"
 		set_country_flag = attend_olympiad
-		prestige = 10
+		prestige = 5
 		if = {
 			limit = {
 				NOT = {
@@ -97,7 +99,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB23403"
 		set_country_flag = noattend_olympiad
-		prestige = -10
+		prestige = -5
 		ai_chance = { factor = 0 }
 	}
 }
@@ -110,7 +112,7 @@ country_event = {
 	major = yes
 	is_triggered_only = yes
 	immediate = {
-		prestige = 20
+		prestige = 10
 		plurality = 1
 		random_country = {
 			limit = { has_country_flag = attend_olympiad }
@@ -123,6 +125,12 @@ country_event = {
 				5 = { country_event = 23406 }
 			}
 		}
+
+		any_country = {
+			clr_country_flag = attend_olympiad
+			clr_country_flag = nohost_olympiad
+			clr_country_flag = host_olympiad
+		}
 	}
 	option = { name = "EVTOPTA23404" }
 }
@@ -132,15 +140,33 @@ country_event = {
 	desc = "EVTDESC23405"
 	picture = "Olympics"
 	is_triggered_only = yes
-	immediate = {
-		prestige = 5
+	option = {
+		name = "EVTOPTA23405"
+		prestige = 3
+		plurality = 0.5
 	}
-	option = { name = "EVTOPTA23405" }
-	option = { name = "EVTOPTB23405" }
-	option = { name = "EVTOPTC23405" }
-	option = { name = "EVTOPTD23405" }
-	option = { name = "EVTOPTE23405" }
+	option = {
+		name = "EVTOPTB23405"
+		prestige = 3.5
+		plurality = 0.45
+	}
+	option = {
+		name = "EVTOPTC23405"
+		prestige = 4
+		plurality = 0.4
+	}
+	option = {
+		name = "EVTOPTD23405"
+		prestige = 4.5
+		plurality = 0.35
+	}
+	option = {
+		name = "EVTOPTE23405"
+		prestige = 5
+		plurality = 0.3
+	}
 }
+
 country_event = {
 	id = 23406
 	title = "EVTNAME23406"
