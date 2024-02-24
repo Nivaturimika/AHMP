@@ -23,6 +23,7 @@ country_event = {
 		}
 		ai_chance = { factor = 0 }
 	}
+}
 
 country_event = {
 	id = 700000
@@ -238,7 +239,7 @@ country_event = {
 		PRG = {
 			country_event = {
 				id = 700008
-				duration = 60
+				days = 60
 			}
 		}
 		ai_chance = { factor = 1 }
@@ -248,7 +249,7 @@ country_event = {
 		PRG = {
 			country_event = {
 				id = 700008
-				duration = 60
+				days = 60
 			}
 		}
 		prestige = -15
@@ -266,7 +267,7 @@ country_event = {
 		PRG = {
 			country_event = {
 				id = 700008
-				duration = 60
+				days = 60
 			}
 		}
 		ai_chance = { factor = 1 }
@@ -276,12 +277,13 @@ country_event = {
 		PRG = {
 			country_event = {
 				id = 700008
-				duration = 60
+				days = 60
 			}
 		}
 		prestige = -15
 		ai_chance = { factor = 0 }
 	}
+}
 
 country_event = {
 	id = 700008

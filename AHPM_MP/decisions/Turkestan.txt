@@ -13,7 +13,7 @@ political_decisions = {
 			war = no
 			civilized = yes
 			state_n_government = 1
-			OR {
+			OR = {
 				AND = {
 					tag = KHI
 					exists != BUK

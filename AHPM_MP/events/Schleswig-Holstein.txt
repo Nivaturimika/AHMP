@@ -32,7 +32,7 @@ country_event = {
 		371 = { add_core = THIS }
 		SWH = { country_event = 90051 }
 		any_pop = {
-			limit = { has_pop_culture = THIS }
+			limit = { is_accepted_culture = yes }
 			militancy = -2
 			dominant_issue = {
 				factor = 0.05
