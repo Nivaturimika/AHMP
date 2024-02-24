@@ -48,6 +48,7 @@ country_migration_target = {
 			}
 		}
 	}
+	modifier = { factor = 0.05 war = yes }
 	modifier = { factor = 0.05 unemployment <= 0.25 }
 	modifier = { factor = 0.025 is_primary_culture = THIS }
 	modifier = { factor = 0.025 is_accepted_culture = THIS }
