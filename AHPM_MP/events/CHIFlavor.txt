@@ -5848,22 +5848,9 @@ country_event = {
 		remove_country_modifier = uncivilized_isolationism
 		remove_country_modifier = trade_restrictions
 		remove_country_modifier = sayings_of_the_dutch
-		clr_country_flag = using_foreign_weapons
-		clr_country_flag = using_foreign_artillery
-		clr_country_flag = using_foreign_ships
-		clr_country_flag = using_foreign_shipyards
-		random_owned = {
-			limit = { owner = { has_country_modifier = western_presence_research } }
-			owner = { remove_country_modifier = western_presence_research }
-		}
-		random_owned = {
-			limit = { owner = { has_country_modifier = european_military_mission } }
-			owner = { remove_country_modifier = european_military_mission }
-		}
-		random_owned = {
-			limit = { owner = { has_country_modifier = legation_quarter } }
-			owner = { remove_country_modifier = legation_quarter }
-		}
+		remove_country_modifier = european_military_mission
+		remove_country_modifier = western_presence_research
+		remove_country_modifier = legation_quarter
 		any_owned = {
 			remove_province_modifier = western_presence
 			remove_province_modifier = foreign_smugglers
@@ -6042,22 +6029,9 @@ country_event = {
 		remove_country_modifier = uncivilized_isolationism
 		remove_country_modifier = trade_restrictions
 		remove_country_modifier = sayings_of_the_dutch
-		clr_country_flag = using_foreign_weapons
-		clr_country_flag = using_foreign_artillery
-		clr_country_flag = using_foreign_ships
-		clr_country_flag = using_foreign_shipyards
-		random_owned = {
-			limit = { owner = { has_country_modifier = western_presence_research } }
-			owner = { remove_country_modifier = western_presence_research }
-		}
-		random_owned = {
-			limit = { owner = { has_country_modifier = european_military_mission } }
-			owner = { remove_country_modifier = european_military_mission }
-		}
-		random_owned = {
-			limit = { owner = { has_country_modifier = legation_quarter } }
-			owner = { remove_country_modifier = legation_quarter }
-		}
+		remove_country_modifier = european_military_mission
+		remove_country_modifier = western_presence_research
+		remove_country_modifier = legation_quarter
 		any_owned = {
 			remove_province_modifier = western_presence
 			remove_province_modifier = foreign_smugglers

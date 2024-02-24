@@ -1651,47 +1651,7 @@ political_decisions = {
 				}
 				add_country_modifier = { name = jizya duration = -1 }
 			}
-
-			any_country = {
-				limit = {
-					exists = yes
-					civilized = no
-					foreign_weapons = yes_foreign_weapons
-					NOT = { has_country_flag = using_foreign_weapons }
-				}
-				set_country_flag = using_foreign_weapons
-			}
-
-			any_country = {
-				limit = {
-					exists = yes
-					civilized = no
-					foreign_artillery = yes_foreign_artillery
-					NOT = { has_country_flag = using_foreign_artillery }
-				}
-				set_country_flag = using_foreign_artillery
-			}
-
-			any_country = {
-				limit = {
-					exists = yes
-					civilized = no
-					foreign_navies = yes_foreign_navies
-					NOT = { has_country_flag = using_foreign_ships }
-				}
-				set_country_flag = using_foreign_ships
-			}
-
-			any_country = {
-				limit = {
-					exists = yes
-					civilized = no
-					western_shipyards = yes_western_shipyards
-					NOT = { has_country_flag = using_foreign_shipyards }
-				}
-				set_country_flag = using_foreign_shipyards
-			}
-
+			
 			#################Government Flags Setup######################
 			ENT = { add_country_modifier = { name = caudillo_leaders duration = 7300 } }
 			CRT = { add_country_modifier = { name = caudillo_leaders duration = 1825 } }
