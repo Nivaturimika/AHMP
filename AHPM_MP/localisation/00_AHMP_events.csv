@@ -104,3 +104,7 @@ EVTDESC23406;After a tough encounter between $FROMCOUNTRY_ADJ$ radicals, the $CO
 EVTOPTA23406;Not worth our time
 EVTOPTB23406;$FROMCOUNTRY$ broke their compromise to keep our team safe
 EVTOPTC23406;How dare they!? We should teach them a lesson
+EVTNAME35000;The $FROMCOUNTRY_ADJ$ Monarchy Splits From the House of $COUNTRY$
+EVTDESC35000;With the current war pitting $FROMCOUNTRY$ against a $COUNTRY_ADJ$ state, our $FROMCOUNTRY_ADJ$ cousins decided to repudiate us to save their own reputation! They are now known as the House of Windsor, and all family ties with our Duke and his family have now been severed.
+EVTOPTA35000;Blood is not thicker than water
+EVTOPTB35000;They're fearful of us

@@ -4,8 +4,19 @@ country_event = {
 	desc = "EVTDESC35000"
 	picture = "SaxeCoburgGotha"
 	is_triggered_only = yes
-	immediate = {
+	option = {
+		name = "EVTOPTA35000"
 		prestige = -10
 	}
-	option = { name = "EVTOPTA35000" }
+	option = {
+		name = "EVTOPTB35000"
+		prestige = 10
+		FROM = {
+			add_casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 18
+			}
+		}
+	}
 }
