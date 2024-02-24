@@ -213,13 +213,17 @@ political_reforms = {
 			allow = {
 				has_country_flag != slave_revolution
 				test = is_stable_goverment
+				social_science = 1
 			}
 		}
 
 		no_slavery = {
 			rules = { slavery_allowed = no }
 			global_immigrant_attract = 0.01
-			allow = { test = is_stable_goverment }
+			allow = {
+				test = is_stable_goverment
+				social_science = 1
+			}
 			on_execute = {
 				effect = {
 					if = {
