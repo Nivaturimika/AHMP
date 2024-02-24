@@ -189,7 +189,7 @@ country_event = {
 		has_country_modifier != protector_of_tribes
 	}
 	option = {
-		name = "EVT110093OPTA"
+		name = "EVTOPTA110093"
 		any_country = {
 			limit = { government = tribal }
 			leave_alliance = THIS
@@ -197,7 +197,7 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVT110093OPTB"
+		name = "EVTOPTB110093"
 		add_country_modifier = {
 			name = protector_of_tribes
 			duration = 365
