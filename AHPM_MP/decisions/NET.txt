@@ -134,11 +134,11 @@ political_decisions = {
                 exists = yes
                 part_of_sphere = yes
                 civilized = no
-                NOT = { in_sphere = NET }
+                NOT = { in_sphere = THIS }
             }
             NOT = { has_global_flag = gold_coast_treaty }
             NOT = { has_country_flag = made_aceh_proposal }
-            ATJ = { neighbour = NET }
+            ATJ = { neighbour = THIS }
         }
 
         allow = {
@@ -248,7 +248,7 @@ political_decisions = {
                 limit = { owner = { NOT = { tag = NET } } }
                 owner = {
                     clr_global_flag = dutch_wallonia_renamed
-                    395 = { change_province_name = "Liège" }
+                    395 = { change_province_name = "Liï¿½ge" }
                     392 = { change_province_name = "Namur" }
                     398 = { change_province_name = "Arlon" }
                     393 = { change_province_name = "Tournai" }

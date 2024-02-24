@@ -28,11 +28,10 @@ political_decisions = {
 				name = caudillo_leaders
 				duration = 545
 			}
-			PBC = { release_vassal = PEU }
+			PBC = { release_vassal = THIS }
 			any_country = {
 				limit = { war_with = PBC }
-				end_war = PEU
-				relation = { who = PEU value = 100 }
+				end_war = THIS
 			}
 			any_pop = {
 				dominant_issue = {

@@ -4,12 +4,7 @@ country_event = {
 	title = "EVTNAME70000"
 	desc = "EVTDESC70000"
 	trigger = {
-		country = {
-			OR = {
-				slavery = yes_slavery
-				slavery = freedom_of_womb
-			}
-		}
+		country = { slavery != no_slavery }
 	}
 	is_triggered_only = yes
 	allow_multiple_instances = yes
@@ -49,11 +44,11 @@ country_event = {
 	id = 70001
 	title = "EVTNAME70001"
 	desc = "EVTDESC70001"
-	#picture = "Western"
+	picture = "Western"
 	trigger = {
 		country = {
 			slavery = no_slavery
-			capital_scope = { NOT = { continent = europe }}
+			capital_scope = { NOT = { continent = europe } }
 		}
 	}
 	is_triggered_only = yes
@@ -74,40 +69,21 @@ country_event = {
 	title = "EVTNAME70002"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
-
 	trigger = {
-		NOT = { tag = FROM }
-		NOT = { has_country_modifier = neutrality_modifier }
+		tag != FROM
+		has_country_modifier != neutrality_modifier
 	}
 
 	is_triggered_only = yes
 
 	immediate = {
 		FROM = {
-			random_owned = {
-				limit = { owner = { has_country_modifier = mercantilism } }
-				owner = { remove_country_modifier = mercantilism }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = economic_nationalism } }
-				owner = { remove_country_modifier = economic_nationalism }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = french_liberal_school } }
-				owner = { remove_country_modifier = french_liberal_school }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = non_interventionism_trade_policy } }
-				owner = { remove_country_modifier = non_interventionism_trade_policy }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = smithian_school } }
-				owner = { remove_country_modifier = smithian_school }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = no_trade_policy_set } }
-				owner = { remove_country_modifier = no_trade_policy_set }
-			}
+			remove_country_modifier = mercantilism
+			remove_country_modifier = economic_nationalism
+			remove_country_modifier = french_liberal_school
+			remove_country_modifier = non_interventionism_trade_policy
+			remove_country_modifier = smithian_school
+			remove_country_modifier = no_trade_policy_set
 		}
 	}
 
@@ -115,18 +91,15 @@ country_event = {
 		name = "EVTOPTA70002"
 		casus_belli = { target = FROM type = gunboat months = 12 }
 		casus_belli = { target = FROM type = add_to_sphere months = 12 }
-		ai_chance = { factor = 95 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVTOPTC70004"
-		relation = { who = FROM value = 50 }
 		diplomatic_influence = { who = FROM value = 5 }
 		any_pop = { limit = { strata = rich } militancy = 2 consciousness = 4 }
 		prestige_factor = -0.01
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -145,30 +118,12 @@ country_event = {
 
 	immediate = {
 		FROM = {
-			random_owned = {
-				limit = { owner = { has_country_modifier = mercantilism } }
-				owner = { remove_country_modifier = mercantilism }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = economic_nationalism } }
-				owner = { remove_country_modifier = economic_nationalism }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = french_liberal_school } }
-				owner = { remove_country_modifier = french_liberal_school }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = non_interventionism_trade_policy } }
-				owner = { remove_country_modifier = non_interventionism_trade_policy }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = smithian_school } }
-				owner = { remove_country_modifier = smithian_school }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = no_trade_policy_set } }
-				owner = { remove_country_modifier = no_trade_policy_set }
-			}
+			remove_country_modifier = mercantilism
+			remove_country_modifier = economic_nationalism
+			remove_country_modifier = french_liberal_school
+			remove_country_modifier = non_interventionism_trade_policy
+			remove_country_modifier = smithian_school
+			remove_country_modifier = no_trade_policy_set
 		}
 	}
 
@@ -217,38 +172,19 @@ country_event = {
 
 	immediate = {
 		FROM = {
-			random_owned = {
-				limit = { owner = { has_country_modifier = mercantilism } }
-				owner = { remove_country_modifier = mercantilism }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = economic_nationalism } }
-				owner = { remove_country_modifier = economic_nationalism }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = french_liberal_school } }
-				owner = { remove_country_modifier = french_liberal_school }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = non_interventionism_trade_policy } }
-				owner = { remove_country_modifier = non_interventionism_trade_policy }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = smithian_school } }
-				owner = { remove_country_modifier = smithian_school }
-			}
-			random_owned = {
-				limit = { owner = { has_country_modifier = no_trade_policy_set } }
-				owner = { remove_country_modifier = no_trade_policy_set }
-			}
+			remove_country_modifier = mercantilism
+			remove_country_modifier = economic_nationalism
+			remove_country_modifier = french_liberal_school
+			remove_country_modifier = non_interventionism_trade_policy
+			remove_country_modifier = smithian_school
+			remove_country_modifier = no_trade_policy_set
 		}
 	}
 
 	option = {
 		name = "EVTOPTA70004"
-		relation = { who = FROM value = -50 }
 		diplomatic_influence = { who = FROM value = -5 }
-		ai_chance = { factor = 0.85 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -261,31 +197,13 @@ country_event = {
 			33 = { }
 		}
 		casus_belli = { target = FROM type = gunboat months = 12 }
-		ai_chance = {
-			factor = 0.05
-			modifier = { factor = 0 is_sphere_leader_of = FROM }
-			modifier = { factor = 0 war = yes }
-			modifier = { factor = 0 badboy = 0.5 }
-			modifier = { factor = 0 is_disarmed = yes }
-			modifier = { factor = 0 has_recently_lost_war = yes }
-			modifier = { factor = 0 truce_with = FROM }
-			modifier = { factor = 0 relation = { who = FROM value = -100 } }
-			modifier = { factor = 5 NOT = { money = 100000 } }
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "EVTOPTC70004"
-		relation = { who = FROM value = 50 }
 		any_pop = { limit = { strata = rich } militancy = 2 consciousness = 4 }
-		ai_chance = {
-			factor = 0.1
-			modifier = { factor = 10 is_sphere_leader_of = FROM }
-			modifier = { factor = 2 war = yes relation = { who = FROM value = 100 } }
-			modifier = { factor = 3 relation = { who = FROM value = 199 } }
-			modifier = { factor = 0 NOT = { relation = { who = THIS value = 100 } } }
-			modifier = { factor = 0 NOT = { money = 100000 } }
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

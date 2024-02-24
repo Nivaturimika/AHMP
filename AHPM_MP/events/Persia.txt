@@ -38,11 +38,7 @@ country_event = {
 		PER = {
 			is_vassal = no
 			average_militancy = 6
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test = is_monarchy_goverment
 		}
 	}
 

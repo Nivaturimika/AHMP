@@ -44,7 +44,7 @@ political_decisions = {
 			war = no
 			civilized = yes
 			is_our_vassal = CHK
-			CHK = { exists = yes vassal_of = SIA }
+			CHK = { exists = yes vassal_of = THIS }
 			CHK = { OR = { NOT = { part_of_sphere = yes } in_sphere = THIS } }
 		}
 
@@ -74,14 +74,15 @@ political_decisions = {
 			treasury = 5000
 			military_reform = yes_foreign_training
 			economic_reform = finance_reform_two
-			add_country_modifier = {
-				name = muhammad_alis_reforms
-				duration = -1
+			add_country_modifier = muhammad_alis_reforms
+			any_owned = {
+				limit = {
+					continent = africa
+					is_core = THIS
+					NOT = { terrain = desert terrain = semidesert }
+				}
+				add_province_modifier = { name = baby_boom duration = 5475 }
 			}
-
-			any_owned = { limit = { continent = africa is_core = EGY NOT = { terrain = desert terrain = semidesert } }
-			add_province_modifier = { name = baby_boom duration = 5475 } }
-
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				consciousness = 4
@@ -212,12 +213,9 @@ political_decisions = {
 		picture = conquest_of_the_south
 		potential = {
 			OR = {
-				tag = ETH
-				OR = {
-					primary_culture = amhara
-					primary_culture = tigray
-					primary_culture = oromo
-				}
+				primary_culture = amhara
+				primary_culture = tigray
+				primary_culture = oromo
 			}
 			NOT = { has_country_flag = conquest_of_the_south }
 		}
@@ -232,9 +230,9 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = conquest_of_the_south
-			1864 = { add_core = ETH }
-			1866 = { add_core = ETH }
-			1867 = { add_core = ETH }
+			1864 = { add_core = THIS }
+			1866 = { add_core = THIS }
+			1867 = { add_core = THIS }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -278,14 +276,12 @@ political_decisions = {
 	eth_mission_to_cairo = {
 		potential = {
 			tag = ETH
-			ai = yes
 			EGY = {
-				ai = yes
 				exists = yes
-				neighbour = ETH
+				neighbour = THIS
 				NOT = {
-					any_owned_province = { is_core = ETH }
-					casus_belli = ETH
+					any_owned_province = { is_core = THIS }
+					casus_belli = THIS
 				}
 			}
 			NOT = {
@@ -303,7 +299,6 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = mission_to_cairo
-			relation = { who = EGY value = 200 }
 		}
 
 		ai_will_do = {
@@ -483,10 +478,9 @@ political_decisions = {
 			random_country = {
 				limit = { primary_culture = korean is_vassal = yes }
 				overlord = {
-					release_vassal = KOR
-					casus_belli ={ target = KOR type = make_puppet months = 30 }
-					relation = { who = KOR value = -200 }
-					diplomatic_influence = { who = KOR value = -200 }
+					release_vassal = THIS
+					casus_belli ={ target = THIS type = make_puppet months = 30 }
+					diplomatic_influence = { who = THIS value = -200 }
 				}
 			}
 			years_of_research = 2

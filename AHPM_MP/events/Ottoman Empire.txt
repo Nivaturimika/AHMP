@@ -521,11 +521,7 @@ country_event = {
 		is_greater_power = no
 		has_global_flag = great_wars_enabled
 		NOT = { has_country_flag = turkish_nationalism_activated }
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-		}
+		test = is_monarchy_goverment
 		OR = {
 			lost_national = 0.3
 			capital = 876
@@ -631,9 +627,7 @@ country_event = {
 		tag = TUR
 		war = no
 		NOT = { has_country_flag = ottomans_to_turks }
-		NOT = { government = absolute_monarchy }
-		NOT = { government = prussian_constitutionalism }
-		NOT = { government = hms_government }
+		test != is_monarchy_goverment
 	}
 
 	mean_time_to_happen = {
@@ -652,21 +646,17 @@ country_event = {
 		remove_accepted_culture = bosniak
 		remove_accepted_culture = misri
 		remove_accepted_culture = azerbaijani
-		random_country = {
+		EGY = {
 			limit = {
-				exists = yes
-				tag = EGY
 				vassal_of = THIS
 			}
-		THIS = { release_vassal = EGY }
+			THIS = { release_vassal = EGY }
 		}
-		random_country = {
+		TUN = {
 			limit = {
-				exists = yes
-				tag = TUN
-				vassal_of = TUN
+				vassal_of = THIS
 			}
-		THIS = { release_vassal = TUN }
+			THIS = { release_vassal = TUN }
 		}
 		any_country = {
 			limit = {
@@ -786,7 +776,6 @@ country_event = {
 	option = {
 		name = "EVT98641OPTA"
 		diplomatic_influence = { who = NYE value = -400 }
-		relation = { who = NYE value = -400 }
 		leave_alliance = NYE
 		random_country = {
 			limit = {
@@ -799,7 +788,7 @@ country_event = {
 				NOT = { in_sphere = THIS }
 			}
 			add_casus_belli = {
-				target = TUR
+				target = THIS
 				type = establish_protectorate_casus_belli
 				months = 40
 			}
@@ -816,7 +805,7 @@ country_event = {
 				NOT = { in_sphere = THIS }
 			}
 			add_casus_belli = {
-				target = TUR
+				target = THIS
 				type = establish_protectorate_casus_belli
 				months = 40
 			}
@@ -852,7 +841,7 @@ country_event = {
 				NOT = { in_sphere = THIS }
 			}
 			add_casus_belli = {
-				target = TUR
+				target = THIS
 				type = establish_protectorate_casus_belli
 				months = 40
 			}
@@ -869,15 +858,14 @@ country_event = {
 				NOT = { in_sphere = THIS }
 			}
 			add_casus_belli = {
-				target = TUR
+				target = THIS
 				type = establish_protectorate_casus_belli
 				months = 40
 			}
 		}
 
-		random_country = {
+		THIS = {
 			limit = {
-				tag = TUR
 				nationalism_n_imperialism = 1
 				NOT = { has_global_flag = berlin_conference }
 			}
@@ -889,9 +877,8 @@ country_event = {
 			}
 		}
 
-		random_country = {
+		THIS = {
 			limit = {
-				tag = TUR
 				nationalism_n_imperialism = 1
 				has_global_flag = berlin_conference
 			}
@@ -1661,7 +1648,6 @@ country_event = {
 		1842 = { empty = yes }
 		1739 = { empty = yes }
 		1839 = { empty = yes }
-		year = 1874
 	}
 
 	mean_time_to_happen = {

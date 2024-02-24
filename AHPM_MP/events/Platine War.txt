@@ -14,12 +14,9 @@ country_event = {
 		NOT = { has_country_flag = urquiza_statement }
 		tag = ENT
 		exists = yes
-		OR = {
-			year = 1850
-			AND = {
-				ARC = { has_recently_lost_war = yes }
-				average_consciousness = 3
-			}
+		AND = {
+			ARC = { has_recently_lost_war = yes }
+			average_consciousness = 3
 		}
 		vassal_of = ARC
 	}
@@ -33,7 +30,7 @@ country_event = {
 			country_event = { id = 46610 days = 32 }
 			any_owned = {
 				limit = { is_core = CRT }
-				secede_province = ENT
+				secede_province = THIS
 				remove_core = CRT
 			}
 		}
@@ -42,9 +39,9 @@ country_event = {
 		relation = { who = URU value = 100 }
 		relation = { who = BRZ value = 100 }
 		random_country = {
-			limit = { exists = yes tag = CRT vassal_of = ARC ai = yes }
-			annex_to = ENT
-			CRT = { all_core = { remove_core = CRT add_core = ENT } }
+			limit = { tag = CRT vassal_of = ARC }
+			annex_to = THIS
+			CRT = { all_core = { remove_core = CRT add_core = THIS } }
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -56,7 +53,7 @@ country_event = {
 			country_event = { id = 46610 days = 32 }
 			any_owned = {
 				limit = { is_core = CRT }
-				secede_province = ENT
+				secede_province = THIS
 				remove_core = CRT
 			}
 		}
@@ -64,9 +61,9 @@ country_event = {
 		relation = { who = URU value = 100 }
 		relation = { who = BRZ value = 100 }
 		random_country = {
-			limit = { exists = yes tag = CRT vassal_of = ARC ai = yes }
-			annex_to = ENT
-			CRT = { all_core = { remove_core = CRT add_core = ENT } }
+			limit = { tag = CRT vassal_of = ARC }
+			annex_to = THIS
+			CRT = { all_core = { remove_core = CRT add_core = THIS } }
 		}
 		any_country = {
 			limit = { war_with = THIS }

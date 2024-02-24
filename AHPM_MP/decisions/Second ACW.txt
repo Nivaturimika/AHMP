@@ -28,10 +28,7 @@ political_decisions = {
 				government = democracy
 				NOT = { truce_with = THIS }
 			}
-			OR = {
-				in_sphere = CSA
-				relation = { who = CSA value = 50 }
-			}
+			in_sphere = CSA
 		}
 
 		effect = {
@@ -54,7 +51,6 @@ political_decisions = {
 				tag = UNB
 				tag = DAK
 			}
-			ai = yes
 			is_vassal = no
 			NOT = { has_country_flag = asked_to_join_fsa }
 			neighbour = FSA
@@ -75,10 +71,7 @@ political_decisions = {
 				government = democracy
 				NOT = { truce_with = THIS }
 			}
-			OR = {
-				in_sphere = FSA
-				relation = { who = FSA value = 100 }
-			}
+			in_sphere = FSA
 		}
 
 		effect = {
@@ -100,7 +93,6 @@ political_decisions = {
 				tag = UOR
 				tag = DAK
 			}
-			ai = yes
 			is_vassal = no
 			NOT = { has_country_flag = asked_to_join_california }
 			neighbour = CAL
@@ -122,10 +114,7 @@ political_decisions = {
 				government = democracy
 				NOT = { truce_with = THIS }
 			}
-			OR = {
-				in_sphere = CAL
-				relation = { who = CAL value = 100 }
-			}
+			in_sphere = CAL
 		}
 
 		effect = {
@@ -145,7 +134,6 @@ political_decisions = {
 				tag = UNB
 				tag = DAK
 			}
-			ai = yes
 			is_vassal = no
 			NOT = { has_country_flag = asked_to_join_new_america }
 			neighbour = UIL
@@ -166,10 +154,7 @@ political_decisions = {
 				government = democracy
 				NOT = { truce_with = THIS }
 			}
-			OR = {
-				in_sphere = UIL
-				relation = { who = UIL value = 100 }
-			}
+			in_sphere = UIL
 		}
 
 		effect = {

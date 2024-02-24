@@ -9,10 +9,6 @@ country_event = {
 	id = 95500
 	title = "EVTNAME95500" #The Berlin Conference
 	desc = "EVTDESC95500"
-	news = yes
-	news_desc_long = "EVTDESC95500_NEWS_LONG"
-	news_desc_medium = "EVTDESC95500_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC95500_NEWS_SHORT"
 	picture = "scramble_for_africa"
 	major = yes
 
@@ -25,8 +21,6 @@ country_event = {
 			}
 		}
 		capital_scope = { continent = europe }
-		NOT = { tag = TUR }
-		NOT = { tag = RUS }
 		invention = prophylaxis_against_malaria
 		invention = mission_to_civilize
 		invention = colonial_negotiations

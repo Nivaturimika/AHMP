@@ -35,7 +35,6 @@ country_event = {
 		name = "EVT97605OPTB"
 		set_country_flag = rejected_commodore_perry
 		leave_alliance = USA
-		relation = { who = USA value = -200 }
 		add_casus_belli = {
 			target = USA
 			type = add_to_sphere
@@ -684,12 +683,7 @@ country_event = {
 	id = 97630
 	title = "EVTNAME97630" #The Death of Emperor Komei
 	desc = "EVTDESC97630"
-	news = yes
-	news_desc_long = "EVTDESC97630_NEWS_LONG"
-	news_desc_medium = "EVTDESC97630_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97630_NEWS_SHORT"
 	picture = "emperor_funeral"
-
 	trigger = {
 		tag = TKG
 		test = is_monarchy_goverment

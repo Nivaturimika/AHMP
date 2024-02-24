@@ -33,14 +33,14 @@ country_event = {
 		political_reform = harassment
 		ruling_party_ideology = conservative
 		any_pop = { limit = { is_culture_group = polish_culture_group } militancy = -4 consciousness = -4 }
-		AUS = { release_vassal = KRA }
+		AUS = { release_vassal = THIS }
 		any_pop = {
 			limit = { has_pop_culture = polish }
 			militancy = 3
 			consciousness = 5
 		}
 		neutrality = yes
-		ai_chance = { factor = 0.99 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -48,6 +48,6 @@ country_event = {
 		prestige = -50
 		any_pop = { limit = { is_primary_culture = yes } militancy = 7 consciousness = 8 }
 		random_owned = { limit = { owner = { ai = yes } } owner = { KRA = { all_core = { add_core = AUS } } } }
-		ai_chance = { factor = 0.01 }
+		ai_chance = { factor = 0 }
 	}
 }

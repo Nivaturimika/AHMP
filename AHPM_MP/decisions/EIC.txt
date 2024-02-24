@@ -44,7 +44,7 @@ political_decisions = {
 			}
 			leave_alliance = ENG
 			ENG = {
-				release_vassal = MUG
+				release_vassal = THIS
 				country_event = 9990012
 			}
 		}

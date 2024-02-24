@@ -49,12 +49,12 @@ country_event = {
         any_country = {
             limit = {
                 war_with = TUR
-                war_with = EGY
+                war_with = THIS
             }
-            end_war = EGY
+            end_war = THIS
         }
         TUR = {
-            release_vassal = EGY
+            release_vassal = THIS
             country_event = 90076
         }
         any_country = {

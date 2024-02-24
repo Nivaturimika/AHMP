@@ -17,13 +17,8 @@ country_event = {
 		}
 		test = is_monarchy_goverment
 		war = no
-		exists = SWH
 		NOT = { has_country_flag = annex_schleswig_holstein }
-		SWH = {
-			owns = 370
-			owns = 371
-			vassal_of = THIS
-		}
+		SWH = { vassal_of = THIS }
 	}
 
 	mean_time_to_happen = {
@@ -37,7 +32,7 @@ country_event = {
 		371 = { add_core = THIS }
 		SWH = { country_event = 90051 }
 		any_pop = {
-			limit = { has_pop_culture = danish }
+			limit = { has_pop_culture = THIS }
 			militancy = -2
 			dominant_issue = {
 				factor = 0.05
@@ -85,7 +80,6 @@ country_event = {
 				NOT = { war_with = SWH }
 			}
 			leave_alliance = THIS
-			relation = { who = THIS value = -50 }
 		}
 	}
 }
@@ -123,9 +117,7 @@ country_event = {
 }
 
 country_event = {
-
 	id = 90052 # Schleswig-Holstein Under Our Control
-
 	title = "EVTNAME90052"
 	desc = "EVTDESC90052"
 	picture = "tropper_1849"
@@ -158,9 +150,7 @@ country_event = {
 		badboy = -3
 		release_vassal = SWH
 		create_alliance = SWH
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVT90052OPTB"
@@ -176,10 +166,6 @@ country_event = {
 			}
 			diplomatic_influence = { who = HOL value = 100 }
 		}
-		any_country = {
-			limit = { capital_scope = { continent = europe } }
-			relation = { who = HOL value = 50 }
-		}
 		ai_chance = {
 			factor = 0
 		}
@@ -191,16 +177,6 @@ country_event = {
 		any_pop = {
 			limit = { has_pop_culture = north_german }
 			militancy = 3
-		}
-		any_country = {
-			limit = {
-				is_greater_power = yes
-				capital_scope = { continent = europe }
-			}
-			relation = {
-				who = THIS
-				value = -40
-			}
 		}
 		any_country = {
 			limit = {
@@ -270,10 +246,6 @@ country_event = {
 		any_country = {
 			limit = { primary_culture = north_german }
 			leave_alliance = THIS
-			relation = {
-				who = THIS
-				value = -50
-			}
 		}
 		any_country = {
 			limit = {
@@ -282,9 +254,7 @@ country_event = {
 			}
 			diplomatic_influence = { who = HOL value = 100 }
 		}
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVT90053OPTB"
@@ -293,9 +263,7 @@ country_event = {
 			militancy = 6
 			consciousness = 3
 		}
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -327,10 +295,6 @@ country_event = {
 		any_country = {
 			limit = { primary_culture = north_german }
 			leave_alliance = THIS
-			relation = {
-				who = THIS
-				value = -50
-			}
 		}
 		war = {
 			target = SWH
@@ -343,7 +307,7 @@ country_event = {
 			call_ally = no
 		}
 		ai_chance = {
-			factor = 95
+			factor = 1
 		}
 	}
 	option = {
@@ -355,7 +319,7 @@ country_event = {
 			consciousness = 2
 		}
 		ai_chance = {
-			factor = 5
+			factor = 0
 		}
 	}
 }
@@ -411,7 +375,6 @@ country_event = {
 	mean_time_to_happen = {
 		months = 1
 	}
-
 
 	option = {
 		name = "EVT90055OPTA"

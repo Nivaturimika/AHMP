@@ -46,10 +46,6 @@ country_event = {
 
 province_event = {
 	id = 33004 #will set up DAN36206
-	news = yes
-	news_desc_long = "EVTDESC33004_NEWS_LONG"
-	news_desc_medium = "EVTDESC33004_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC33004_NEWS_SHORT"
 	trigger = {
 		owned_by = GER
 		year = 1896
@@ -104,10 +100,6 @@ country_event = {
 	title = "EVTNAME33000"
 	desc = "EVTDESC33000"
 	picture = "theatre"
-	news = yes
-	news_desc_long = "EVTDESC33000_NEWS_LONG"
-	news_desc_medium = "EVTDESC33000_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC33000_NEWS_SHORT"
 	trigger = {
 		tag = GER
 		year = 1916
@@ -133,17 +125,9 @@ country_event = {
 country_event = {
 
 	id = 33001
-	news = yes
-	news_desc_long = "EVTDESC33001_NEWS_LONG"
-	news_desc_medium = "EVTDESC33001_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC33001_NEWS_SHORT"
 
 	trigger = {
 		tag = GER
-		year = 1874
-		NOT = {
-			year = 1877
-			}
 	}
 
 	fire_only_once = yes
@@ -175,19 +159,9 @@ country_event = {
 }
 
 country_event = {
-
 	id = 33002
-	news = yes
-	news_desc_long = "EVTDESC33002_NEWS_LONG"
-	news_desc_medium = "EVTDESC33002_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC33002_NEWS_SHORT"
-
 	trigger = {
 		tag = GER
-		year = 1880
-		NOT = {
-			year = 1883
-		}
 	}
 
 	fire_only_once = yes
@@ -228,17 +202,12 @@ country_event = {
 
 	trigger = {
 		tag = GER
-		year = 1903
 		is_greater_power = yes
 		TUR = {
 			war = no
 			owns = 926 #Baghdad
 			is_vassal = no
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test = is_monarchy_goverment
 			NOT = {
 				alliance_with = ENG
 				alliance_with = FRA
@@ -246,11 +215,9 @@ country_event = {
 			}
 		}
 		NOT = {
-			year = 1910
 			alliance_with = TUR
 			has_global_flag = BerlinBaghdadRail
 		}
-
 	}
 
 	fire_only_once = yes
@@ -278,22 +245,16 @@ country_event = {
 		name = "EVTOPTA33005"
 		prestige = 10
 		set_global_flag = BerlinBaghdadRail
-		relation = { who = TUR value = 100 }
-		relation = { who = ENG value = -75 }
-		relation = { who = RUS value = -75 }
 	}
 
 	option = {
 		name = "EVTOPTB33005"
-		relation = { who = TUR value = -50 }
-		relation = { who = ENG value = 75 }
-		relation = { who = RUS value = 75 }
 		officers = {
 			consciousness = 2
-			}
+		}
 		capitalists = {
 			consciousness = 2
-			}
+		}
 	}
 
 }
@@ -310,62 +271,27 @@ country_event = {
 	option = {
 		name = "EVT33006OPTA"
 		set_country_flag = germany_gave_colonies
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { owns = 2029 }
-					NOT = { money = 100000 }
-					check_variable = { which = owed_cash_money value = 9 }
-				}
-			}
-			owner = { change_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { owns = 2029 }
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { owns = 2029 }
-					money = 100000
-				}
-			}
-			owner = { treasury = -100000 }
-		}
-
-		random_owned = {
-			limit = { owner = { owns = 2029 } }
-			owner = {
-				any_owned = {
-					limit = {
-						OR = {
-							region = ENG_2024
-							region = ENG_2026
-						}
+		treasury = -100000
+		if = {
+			limit = { owns = 2029 }
+			any_owned = {
+				limit = {
+					OR = {
+						region = ENG_2024
+						region = ENG_2026
 					}
-					secede_province = ENG
 				}
+				secede_province = FROM
 			}
 		}
-
-		ENG = { country_event = 33007 }
-
-		ai_chance = { factor = 100 }
+		FROM = { country_event = 33007 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT33006OPTB"
-		ENG = { country_event = 33008 }
-		ai_chance = {
-			factor = 0
-		}
+		FROM = { country_event = 33008 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -495,7 +421,7 @@ country_event = {
 			call_ally = yes
 		}
 		ai_chance = {
-			factor = 90
+			factor = 1
 		}
 	}
 
@@ -512,7 +438,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			factor = 0
 		}
 	}
 }
@@ -549,9 +475,7 @@ country_event = {
 				value = jingoism
 			}
 		}
-		ai_chance = {
-			factor = 30
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -559,9 +483,7 @@ country_event = {
 		set_country_flag = lost_alsace_lorraine
 		FRA_412 = { remove_core = GER }
 		prestige = -50
-		ai_chance = {
-			factor = 70
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

@@ -82,7 +82,7 @@ political_decisions = {
 						tag = URU
 					}
 				}
-			country_event = 700013
+				country_event = 700013
 			}
 		}
 		ai_will_do = {
