@@ -3,14 +3,8 @@ country_event = {
 	id = 23300
 	title = "EVTNAME23300"
 	desc = "EVTDESC23300"
-	news = yes
-	news_desc_long = "EVTDESC23300_NEWS_LONG"
-	news_desc_medium = "EVTDESC23300_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC23300_NEWS_SHORT"
-
 	major = yes
 	fire_only_once = yes
-
 	trigger = {
 		has_global_flag = american_civil_war_has_happened
 		has_global_flag = motala_verkstad_expanded
@@ -23,7 +17,6 @@ country_event = {
 		steamer_convoy = 1
 		clipper_convoy = 1
 	}
-
 	mean_time_to_happen = {
 		months = 20000
 	}

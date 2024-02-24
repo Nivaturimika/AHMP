@@ -88,8 +88,17 @@ EVTDESC23403;With the announcement of $FROMCOUNTR$ as the host nation, the Inter
 EVTOPTA23403;Yes we will attend
 EVTOPTB23403;We unfortunately can not attend
 EVTNAME23404;The Olympic Games
-EVTDESC23404;Athletes from around the world have gathered in $CAPITAL$ to compete in the Olympic Games. This is a great moment for $COUNTRY$ to shine on the world stage.
-EVTOPTA23404;We declare the Olympic Games as open!
+EVTDESC23404;Athletes from around the world have travelled from various places in the world to arrive in $CONTINENTNAME$, many tourists and visitors also came for the inauguration of the Olympic Games in $CAPITAL$; the teams came with the objective to compete as fiercely as they always do, may $COUNTRY$ be known as the host of the Olympic Games of $YEAR$. This is a great moment for $COUNTRY$ to shine on the world stage, let it be known that $CAPITAL$ has been the place where the most talented athletes came and demostrated their skills to the world to see.
+EVTOPTA23404;Splendid display! May the next games be as wonderful!
 EVTNAME23405;$COUNTRY_ADJ$ athletes are victorious!
 EVTDESC23405;The $COUNTRY_ADJ$ athletes who competed at the recent Olympic Games have been victorious and returned to $COUNTRY$ with medals of gold, silver and bronze
-EVTOPTA23405;Glory to $COUNTRY_ADJ$ youth of $COUNTRY$!
+EVTOPTA23405;Glory to the $COUNTRY_ADJ$ youth of $COUNTRY$!
+EVTOPTB23405;As always, $COUNTRY$ is victorious
+EVTOPTC23405;We've proven that $COUNTRY_ADJ$ are inherently superior
+EVTOPTD23405;$COUNTRY_ADJ$ pride!
+EVTOPTE23405;Splendid... got anything else?
+EVTNAME23406;Harrassment of the $COUNTRY_ADJ$ team
+EVTDESC23406;After a tough encounter between $FROMCOUNTRY_ADJ$ radicals, the $COUNTRY_ADJ$ team was insulted and mocked within their stay in $FROMCOUNTRY$... our domestic politicians demand an apology from the organizers..
+EVTOPTA23406;Not worth our time
+EVTOPTB23406;$FROMCOUNTRY$ broke their compromise to keep our team safe
+EVTOPTC23406;How dare they!? We should teach them a lesson

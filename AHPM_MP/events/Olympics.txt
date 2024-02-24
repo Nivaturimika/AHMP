@@ -74,7 +74,7 @@ country_event = {
 	picture = "Olympics"
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPTA23403" # Send a delegation to the games
+		name = "EVTOPTA23403"
 		set_country_flag = attend_olympiad
 		prestige = 10
 		if = {
@@ -95,37 +95,39 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPTB23403" # We're NOT going this year
+		name = "EVTOPTB23403"
 		set_country_flag = noattend_olympiad
 		prestige = -10
 		ai_chance = { factor = 0 }
 	}
 }
 
-# 1st Olympiad - Host nation holds games
 country_event = {
-	id = 23404 # 1st games are held
+	id = 23404
 	title = "EVTNAME23404"
 	desc = "EVTDESC23404"
 	picture = "Olympics"
 	major = yes
 	is_triggered_only = yes
 	immediate = {
-		prestige = 50
+		prestige = 20
 		plurality = 1
 		random_country = {
 			limit = { has_country_flag = attend_olympiad }
 			country_event = 23405
 		}
+		random_country = {
+			limit = { has_country_flag = attend_olympiad }
+			random = {
+				95 = {  }
+				5 = { country_event = 23406 }
+			}
+		}
 	}
-	option = {
-		name = "EVTOPTA23404"
-	}
+	option = { name = "EVTOPTA23404" }
 }
-
-# 1st Olympiad - Our nation won medals at the games
 country_event = {
-	id = 23405 # Win medal at 1896 Olympics
+	id = 23405
 	title = "EVTNAME23405"
 	desc = "EVTDESC23405"
 	picture = "Olympics"
@@ -133,7 +135,38 @@ country_event = {
 	immediate = {
 		prestige = 5
 	}
+	option = { name = "EVTOPTA23405" }
+	option = { name = "EVTOPTB23405" }
+	option = { name = "EVTOPTC23405" }
+	option = { name = "EVTOPTD23405" }
+	option = { name = "EVTOPTE23405" }
+}
+country_event = {
+	id = 23406
+	title = "EVTNAME23406"
+	desc = "EVTDESC23406"
+	picture = "Olympics"
+	is_triggered_only = yes
 	option = {
-		name = "EVTOPTA23405" # Our team won medals!
+		name = "EVTOPTA23406"
+		prestige = -2
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23406"
+		prestige = -10
+		FROM = { prestige = -5 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTC23406"
+		badboy = 2
+		prestige = 5
+		add_casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 18
+		}
+		ai_chance = { factor = 0 }
 	}
 }
