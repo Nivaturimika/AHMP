@@ -1523,7 +1523,6 @@ political_decisions = {
 			wool = 10
 			timber = 25
 			small_arms = 10
-			leadership = 20
 			define_general = {
 				name = "Saigo Takamori"
 				personality = skilled

@@ -325,7 +325,7 @@ war_economy_ships = {
 }
 
 preparing_for_war = {
-	leadership_modifier = 0.5
+	leadership_modifier = 0.125
 	min_military_spending = 0.5
 	land_unit_start_experience = 5
 	min_tariff = 0.5
@@ -854,7 +854,6 @@ bazaari_strike = {
 }
 
 submarine_warfare = {
-	leadership_modifier = 0.1
 	naval_organisation = 0.15
 	navy_tech_research_bonus = 0.1
 	icon = 17
@@ -862,7 +861,6 @@ submarine_warfare = {
 
 exemplary_troops = {
 	org_regain = 0.05
-	leadership_modifier = 0.05
 	land_organisation = 0.05
 	icon = 15
 }
@@ -1033,7 +1031,6 @@ silk_famine = {
 
 naval_school = {
 	navy_tech_research_bonus = 0.05
-	leadership_modifier = 0.01
 	icon = 17
 }
 
@@ -1238,7 +1235,6 @@ extraterritoriality_granted = {
 }
 
 military_reform = {
-	leadership_modifier = 0.2
 	global_pop_militancy_modifier = 0.02
 	icon = 18
 }
@@ -1398,7 +1394,6 @@ the_slavery_debate = {
 }
 
 the_bonnie_blue_flag = {
-	leadership = 1
 	land_organisation = 0.2
 	land_unit_start_experience = 5
 	mobilisation_economy_impact = -0.3
@@ -2144,7 +2139,6 @@ fukoku_kyohei = {
 
 line_of_advantage = {
 	org_regain = 0.25
-	leadership_modifier = 0.2
 	land_organisation = 0.1
 	naval_organisation = 0.1
 	cb_generation_speed_modifier = 0.2

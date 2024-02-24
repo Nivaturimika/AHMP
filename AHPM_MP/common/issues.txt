@@ -1356,7 +1356,6 @@ military_reforms = {
 				core_pop_militancy_modifier = -0.005
 		}
 		yes_foreign_officers = {
-			leadership_modifier = 0.1
 			technology_cost = 22000
 			civilization_progress_modifier = 0.1
 			research_points_on_conquer = 0.25

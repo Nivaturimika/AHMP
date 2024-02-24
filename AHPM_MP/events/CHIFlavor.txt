@@ -3661,7 +3661,6 @@ country_event = {
 			name = drive_to_reunify
 			duration = 730
 		}
-		leadership = 40
 		random_owned = {
 			limit = {
 				owner = { civilized = no }
