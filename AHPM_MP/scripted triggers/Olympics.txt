@@ -3,3 +3,31 @@ has_olympics_host = {
 		has_country_flag = host_olympiad
 	}
 }
+
+can_attend_olympiads = {
+	main_parameter = nation
+	has_country_flag = ioc_member
+	has_country_flag != attend_olympiad
+	has_country_flag != noattend_olympiad
+}
+
+pending_olympiad_delegations = {
+	any_country = { test = can_attend_olympiads }
+}
+
+can_signup_as_ioc_member = {
+	main_parameter = nation
+	has_country_flag != ioc_member #Not already a member
+	mass_culture_n_the_avant_garde = 1
+	OR = {
+		is_greater_power = yes
+		is_secondary_power = yes
+		primary_culture = greek
+	}
+}
+
+can_host_olympiads = {
+	main_parameter = nation
+	has_country_flag = ioc_member
+	has_country_flag != nohost_olympiad
+}

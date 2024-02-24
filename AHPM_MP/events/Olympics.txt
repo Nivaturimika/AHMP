@@ -4,16 +4,8 @@ country_event = {
 	title = "EVTNAME23400"
 	desc = "EVTDESC23400"
 	picture = "Olympics"
-	trigger = {
-		month = 10
-		has_country_flag != ioc_member
-		mass_culture_n_the_avant_garde = 1
-		OR = {
-			is_greater_power = yes
-			is_secondary_power = yes
-			primary_culture = greek
-		}
-	}
+	trigger = { test = can_signup_as_ioc_member }
+	mean_time_to_happen = { months = 36 }
 	option = {
 		name = "EVTOPTA23400"
 		treasury = -50000
@@ -35,6 +27,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = ioc_member
+		random_country = { tag != THIS has_country_flag = ioc_member } #There must be another country too!
 		has_country_flag != attend_olympiad
 		has_country_flag != host_olympiad
 		has_country_flag != nohost_olympiad
@@ -45,24 +38,29 @@ country_event = {
 		set_country_flag = host_olympiad
 		set_country_flag = attend_olympiad
 		any_country = { #Send invites to other IOC members
-			limit = {
-				has_country_flag = ioc_member
-				has_country_flag != attend_olympiad
-			}
+			limit = { test = can_attend_olympiads }
 			country_event = 23403
 		}
 		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVTOPTB23401"
+		prestige = 5
+		set_country_flag = host_olympiad
+		set_country_flag = noattend_olympiad
+		any_country = { #Send invites to other IOC members
+			limit = { test = can_attend_olympiads }
+			country_event = 23403
+		}
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTC23401"
 		prestige = -5
+		set_country_flag = noattend_olympiad
 		set_country_flag = nohost_olympiad
 		random_country = { #Find another host
-			limit = {
-				has_country_flag = ioc_member
-				has_country_flag != nohost_olympiad
-				war = no
-			}
+			limit = { test = can_host_olympiads }
 			country_event = 23401
 		}
 		ai_chance = { factor = 0 }
@@ -78,17 +76,9 @@ country_event = {
 	option = {
 		name = "EVTOPTA23403"
 		set_country_flag = attend_olympiad
-		prestige = 5
+		prestige = 3
 		if = {
-			limit = {
-				NOT = {
-					any_country = {
-						has_country_flag = ioc_member
-						has_country_flag != attend_olympiad
-						has_country_flag != noattend_olympiad
-					}
-				}
-			}
+			limit = { test != pending_olympiad_delegations }
 			random_country = {
 				limit = { has_country_flag = host_olympiad }
 				country_event = 23404
@@ -99,7 +89,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB23403"
 		set_country_flag = noattend_olympiad
-		prestige = -5
+		prestige = -1
 		ai_chance = { factor = 0 }
 	}
 }
@@ -112,7 +102,7 @@ country_event = {
 	major = yes
 	is_triggered_only = yes
 	immediate = {
-		prestige = 10
+		prestige = 15
 		plurality = 1
 		random_country = {
 			limit = { has_country_flag = attend_olympiad }
@@ -125,7 +115,6 @@ country_event = {
 				5 = { country_event = 23406 }
 			}
 		}
-
 		any_country = {
 			clr_country_flag = attend_olympiad
 			clr_country_flag = nohost_olympiad
