@@ -574,16 +574,7 @@ country_event = {
 	trigger = {
 		tag = TKG
 		has_country_modifier = ansei_purge
-		OR = {
-			average_militancy = 2
-			CHO = { average_militancy = 4 }
-			SAT = { average_militancy = 4 }
-			TOS = { average_militancy = 4 }
-			KAG = { average_militancy = 4 }
-			SEN = { average_militancy = 4 }
-			YZW = { average_militancy = 4 }
-			JAP = { average_militancy = 4 }
-		}
+		average_militancy = 2
 		has_country_flag != sakuradamon_incident
 		has_country_modifier != emperor_meiji
 		has_global_flag != boshin_war
@@ -621,7 +612,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				NOT = { tag = TKG }
+				NOT = { tag = THIS }
 				has_country_modifier = ansei_purge
 			}
 			country_event = 97626
@@ -636,7 +627,7 @@ country_event = {
 		set_country_flag = sakuradamon_incident
 		any_country = {
 			limit = {
-				NOT = { tag = TKG }
+				NOT = { tag = THIS }
 				has_country_modifier = ansei_purge
 			}
 			country_event = 97627
@@ -1140,7 +1131,6 @@ country_event = {
 	id = 97646
 	title = "EVTNAME97646" #The Meiji Restoration
 	desc = "EVTDESC97646"
-	is_triggered_only = yes
 	major = yes
 	picture = "boshin_war"
 	trigger = {
@@ -1177,9 +1167,7 @@ country_event = {
 			country_event = { id = 97647 days = 1 }
 		}
 	}
-	option = {
-		name = "EVT97646OPTA"
-	}
+	option = { name = "EVT97646OPTA" }
 }
 
 country_event = {
