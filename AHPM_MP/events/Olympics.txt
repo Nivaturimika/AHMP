@@ -7,7 +7,7 @@ country_event = {
 	trigger = {
 		month = 10
 		has_country_flag != ioc_member
-		expressionism = 1
+		mass_culture_n_the_avant_garde = 1
 		OR = {
 			is_greater_power = yes
 			is_secondary_power = yes
@@ -32,13 +32,13 @@ country_event = {
 	title = "EVTNAME23401"
 	desc = "EVTDESC23401"
 	picture = "Olympics"
+	is_triggered_only = yes
 	trigger = {
 		has_country_flag = ioc_member
 		has_country_flag != attend_olympiad
 		has_country_flag != host_olympiad
 		has_country_flag != nohost_olympiad
 	}
-	mean_time_to_happen = { months = 48 }
 	option = {
 		name = "EVTOPTA23401"
 		prestige = 10

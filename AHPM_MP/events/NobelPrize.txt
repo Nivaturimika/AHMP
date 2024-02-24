@@ -4,12 +4,10 @@
 
 # Establishment of the Nobel Prizes
 country_event = {
-
 	id = 23450
-	news = yes
-	news_desc_long = "EVTDESC23450_NEWS_LONG"
-	news_desc_medium = "EVTDESC23450_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC23450_NEWS_SHORT"
+	title = "EVTNAME23450"
+	desc = "EVTDESC23450"
+	picture = "Nobel_Physics"
 
 	trigger = {
 		owns = 322
@@ -32,10 +30,6 @@ country_event = {
 			year = 1900
 		}
 	}
-
-	title = "EVTNAME23450"
-	desc = "EVTDESC23450"
-	picture = "Nobel_Physics"
 
 	option = {
 		name = "EVTOPTA23401"
