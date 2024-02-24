@@ -234,6 +234,7 @@ political_decisions = {
 			test = is_monarchy_goverment
 			NOT = {
 				test = is_boshin_war
+				has_global_flag = overthrow_the_bakufu
 				has_global_flag = boshin_war_has_happened
 				TKG = { has_country_flag = made_peace_with_emperor }
 				has_country_flag = made_peace_with_emperor
@@ -253,7 +254,7 @@ political_decisions = {
 		}
 
 		effect = {
-			set_global_flag = boshin_war
+			set_global_flag = overthrow_the_bakufu
 			remove_country_modifier = sakoku
 			remove_country_modifier = rangaku
 			remove_country_modifier = ansei_purge

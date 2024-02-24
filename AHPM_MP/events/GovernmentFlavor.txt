@@ -646,7 +646,7 @@ country_event = {
 		civilized = yes
 		overlord = { neighbour = THIS }
 	}
-	mean_time_to_happen = { months = 30 }
+	mean_time_to_happen = { months = 24 }
 	option = {
 		name = "EVTOPTA23216"
 		overlord = { inherit = THIS }
