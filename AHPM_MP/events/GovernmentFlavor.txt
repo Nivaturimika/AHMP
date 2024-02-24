@@ -6,11 +6,7 @@ country_event = {
 	picture = "regency"
 
 	trigger = {
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-		}
+		test = is_monarchy_government
 		NOT = {
 			has_country_modifier = regency_government
 			#has_country_modifier = regency_cooldown

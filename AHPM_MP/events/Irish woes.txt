@@ -4,10 +4,6 @@ country_event = {
     id = 1010011
     title = "EVTNAME1010011" #The Great Irish Famine
     desc = "EVTDESC1010011"
-    news = yes
-    news_desc_long = "EVTDESC1010011_NEWS_LONG"
-    news_desc_medium = "EVTDESC1010011_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC1010011_NEWS_SHORT"
     picture = "famine"
     major = yes
 
@@ -62,7 +58,7 @@ country_event = {
         any_pop = {
             limit = {
                 is_primary_culture = yes
-                location = { is_core = ENG }
+                location = { is_core = THIS }
             }
             scaled_consciousness = {
                 issue = laissez_faire

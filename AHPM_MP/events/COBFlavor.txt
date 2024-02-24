@@ -1,44 +1,11 @@
 country_event = {
-
 	id = 35000
 	title = "EVTNAME35000"
 	desc = "EVTDESC35000"
 	picture = "SaxeCoburgGotha"
-	
-	trigger = {
-		tag = COB
-		has_global_flag = ENGRoyalHouseAnglified
-		NOT = {
-			has_country_flag = ENGRoyalHouseSplits
-		}
-	}
-
-	mean_time_to_happen =  {
-		months = 12
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1860
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1880
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1900
-		}
-	}
-
+	is_triggered_only = yes
 	immediate = {
-		set_country_flag = ENGRoyalHouseSplits
 		prestige = -10
 	}
-
-	option = {
-		name = "EVTOPTA35000"
-	}
+	option = { name = "EVTOPTA35000" }
 }

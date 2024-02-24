@@ -74,6 +74,8 @@ EVTOPTA13151;Uncivilized barbarians!
 EVTNAME36937;The Name of the Royal House
 EVTDESC36937;The German origins of our royal house have become an issue for some of our subjects in this time of war with the Germans. Some have even questioned the royal family's loyalty to $COUNTRY$. It has been suggested we domesticate the name of the royal family to show the crown's total devotion to $COUNTRY$.
 EVTOPTA36937;The House of Windsor, long may it reign
+EVTOPTB36937;We must keep our royalty intact
+EVTOPTC36937;That would violate the constitution
 EVTNAME23400;Membership in the International Olympic Committee
 EVTDESC23400;The combination of renewed interest in Ancient Greek civilization and the idea of sport as an important part of social development has led a French aristocrat, Baron Pierre de Coubertin, to propose reviving the Olympic Games as a way to promote international peace through friendly athletic competition between nations. Should $COUNTRY$ join his International Olympic Committee to organize the future olympic games?
 EVTOPTA23400;An excellent idea! We accept.

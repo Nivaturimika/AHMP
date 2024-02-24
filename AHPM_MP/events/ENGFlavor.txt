@@ -1549,11 +1549,14 @@ country_event = {
 
 
 country_event = {
-
 	id = 36937 #sets up COB35000
-
+	title = "EVTNAME36937"
+	desc = "EVTDESC36937"
+	picture = "windsor"
+	fire_only_once = yes
 	trigger = {
 		test = is_british_empire
+		test = is_monarchy_goverment
 		any_country = {
 			OR = {
 				primary_culture = north_german
@@ -1561,48 +1564,43 @@ country_event = {
 			}
 			war_with = THIS
 		}
-		test = is_monarchy_goverment
-		NOT = {
-			has_global_flag = ENGRoyalHouseAnglified
-		}
 	}
-
 	mean_time_to_happen =  {
 		months = 12
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1860
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1880
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1900
-		}
 	}
-
-	title = "EVTNAME36937"
-	desc = "EVTDESC36937"
-	picture = "windsor"
-
 	option = {
 		name = "EVTOPTA36937"
-		set_global_flag = ENGRoyalHouseAnglified
+		COB = { country_event = 35000 }
 		any_pop = {
+			if = {
+				limit = { is_accepted_culture = yes }
+				militancy = -1
+			} else = {
+				consciousness = 1
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB36937"
+		any_pop = {
+			limit = { is_accepted_culture = yes }
+			militancy = 1
+		}
+	}
+	option = {
+		name = "EVTOPTC36937"
+		any_pop = {
+			limit = { is_accepted_culture = yes }
 			consciousness = 1
 		}
 	}
 }
 
 province_event = {
-
 	id = 36938
+	title = "EVTNAME36938"
+	desc = "EVTDESC36938"
+	picture = "BengaliNovel"
 
 	trigger = {
 		province_id = 1251 #Calcutta
@@ -1613,10 +1611,6 @@ province_event = {
 	mean_time_to_happen =  {
 		months = 64
 	}
-
-	title = "EVTNAME36938"
-	desc = "EVTDESC36938"
-	picture = "BengaliNovel"
 
 	option = {
 		name = "EVTOPTA36938"
@@ -1631,23 +1625,17 @@ province_event = {
 }
 
 country_event = {
-
 	id = 36939
-	news = yes
-	news_desc_long = "EVTDESC36939_NEWS_LONG"
-	news_desc_medium = "EVTDESC36939_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC36939_NEWS_SHORT"
-
+	title = "EVTNAME36939"
+	desc = "EVTDESC36939"
+	picture = "LordDalhousie"
 	trigger = {
 		test = is_british_empire
 		owns = 1251 #Calcutta
 		MUG = {
 			OR = {
 				exists = no
-				AND = {
-					exists = yes
-					vassal_of = THIS
-				}
+				test = is_influenced
 			}
 		}
 	}
@@ -1655,36 +1643,17 @@ country_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1855
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1856
-		}
+		months = 64
 	}
-
-	title = "EVTNAME36939"
-	desc = "EVTDESC36939"
-	picture = "LordDalhousie"
 
 	option = {
 		name = "EVTOPTA36939"
 		any_pop = {
-			limit = {
-				has_pop_religion = hindu
-			}
+			limit = { has_pop_religion = hindu }
 			militancy = 3
 		}
 		any_pop = {
-			limit = {
-				has_pop_religion = sunni
-			}
+			limit = { has_pop_religion = sunni }
 			militancy = 2
 		}
 	}
@@ -1698,15 +1667,11 @@ country_event = {
 			consciousness = 1
 		}
 		any_pop = {
-			limit = {
-				has_pop_religion = hindu
-			}
+			limit = { has_pop_religion = hindu }
 			militancy = -1
 		}
 		any_pop = {
-			limit = {
-				has_pop_religion = sunni
-			}
+			limit = { has_pop_religion = sunni }
 			militancy = -1
 		}
 	}

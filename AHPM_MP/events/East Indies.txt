@@ -9,10 +9,6 @@ country_event = {
 	id = 95250
 	title = "EVTNAME95250" #The White Rajah
 	desc = "EVTDESC95250"
-	news = yes
-	news_desc_long = "EVTDESC95250_NEWS_LONG"
-	news_desc_medium = "EVTDESC95250_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC95250_NEWS_SHORT"
 	picture = "white_rajah"
 
 	trigger = {
