@@ -338,7 +338,7 @@ promote_to =
 
 	officers =
 	{
-		factor = 0.01
+		factor = 0.001
 		modifier = {
 			factor = -1
 			NOT = { literacy = 0.30 }

@@ -144,10 +144,10 @@ military = {
     POP_MIN_SIZE_FOR_REGIMENT_PROTECTORATE_MULTIPLIER = 6,
     POP_MIN_SIZE_FOR_REGIMENT_COLONY_MULTIPLIER = 4,
     POP_MIN_SIZE_FOR_REGIMENT_NONCORE_MULTIPLIER = 3, -- VALUE * POP_MIN_SIZE_FOR_REGIMENT is min for noncores
-    GAS_ATTACK_MODIFIER = 5,
-    COMBATLOSS_WAR_EXHAUSTION = 0.05, -- base war exhaustion in combat
-    LEADER_MAX_RANDOM_PRESTIGE = 0.0001, -- max percent of prestige, when randomizing stats for leaders.
-    LEADER_AGE_DEATH_FACTOR = 4, -- higher value means leaders live longer
+    GAS_ATTACK_MODIFIER = 8,
+    COMBATLOSS_WAR_EXHAUSTION = 0.075, -- base war exhaustion in combat
+    LEADER_MAX_RANDOM_PRESTIGE = 0.001, -- max percent of prestige, when randomizing stats for leaders.
+    LEADER_AGE_DEATH_FACTOR = 1, -- higher value means leaders live longer
     LEADER_PRESTIGE_TO_MORALE_FACTOR = 0.009, -- f.ex. 100% of prestige = +10% morale
     LEADER_PRESTIGE_TO_MAX_ORG_FACTOR = 0.007, -- f.ex. 100% of prestige = +10 max org
     LEADER_TRANSFER_PENALTY_ON_COUNTRY_PRESTIGE = 0.001, -- country prestige penalty on unassign leader (f.ex if leader has 100% prestige, the country loose 4% of its prestige)
