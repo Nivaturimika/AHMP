@@ -22,7 +22,7 @@ political_decisions = {
 			}
 			NOT = {
 				has_country_flag = commodore_perry_expedition
-				has_global_flag = boshin_war
+				test = is_boshin_war
 				has_global_flag = boshin_war_has_happened
 			}
 		}
@@ -180,7 +180,7 @@ political_decisions = {
 				has_global_flag = yoshinobu_shogun
 			}
 			NOT = { has_country_flag = ansei_purge }
-			NOT = { has_global_flag = boshin_war }
+			NOT = { test = is_boshin_war }
 			NOT = { has_global_flag = boshin_war_has_happened }
 			exists = JAP
 		}
@@ -230,12 +230,12 @@ political_decisions = {
 		picture = the_meiji_restoration
 		potential = {
 			primary_culture = japanese
+			test != is_japanese_shogun_leader
 			test = is_monarchy_goverment
 			NOT = {
-				has_global_flag = boshin_war
+				test = is_boshin_war
 				has_global_flag = boshin_war_has_happened
 				TKG = { has_country_flag = made_peace_with_emperor }
-				tag = TKG
 				has_country_flag = made_peace_with_emperor
 				has_country_flag = peaceful_transition_to_japan
 			}
@@ -273,22 +273,13 @@ political_decisions = {
 			}
 			any_country = {
 				if = {
-					limit = {
-						tag = JAP
-						exists = yes
-					}
+					limit = { test = is_japanese_imperial_leader }
 					country_event = 97642
 				} else_if = {
-					limit = {
-						tag = TKG
-						exists = yes
-					}
+					limit = { test = is_japanese_shogun_leader }
 					country_event = 97641
 				} else_if = {
-					limit = {
-						primary_culture = japanese
-						tag != THIS
-					}
+					limit = { primary_culture = japanese }
 					country_event = 97640
 				}
 			}
@@ -702,7 +693,7 @@ political_decisions = {
 				vassal_of = TKG
 			}
 			NOT = { has_global_flag = order_to_expel_barbarians }
-			NOT = { has_global_flag = boshin_war }
+			NOT = { test = is_boshin_war }
 			NOT = { has_global_flag = boshin_war_has_happened }
 		}
 
@@ -750,7 +741,7 @@ political_decisions = {
 				}
 				owns = 1657
 			}
-			NOT = { has_global_flag = boshin_war }
+			NOT = { test = is_boshin_war }
 			NOT = { has_country_flag = made_peace_with_emperor }
 		}
 

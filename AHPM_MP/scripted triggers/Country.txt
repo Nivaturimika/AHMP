@@ -214,3 +214,30 @@ eligible_for_alaskan_purchase = {
 		}
 	}
 }
+
+is_capital_occupied = {
+	main_parameter = nation
+	capital_scope = {
+		controlled_by != owner
+		province_control_days = 90
+	}
+}
+
+abides_by_geneva_convention = {
+	main_parameter = nation
+	OR = {
+		civilized = yes
+		has_country_modifier != interment_camps
+		OR = {
+			ruling_party_ideology = reactionary
+			ruling_party_ideology = fascist
+			ruling_party_ideology = communist
+		}
+		OR = {
+			government = absolute_monarchy
+			government = fascist_dictatorship
+			government = presidential_dictatorship
+			government = proletarian_dictatorship
+		}
+	}
+}

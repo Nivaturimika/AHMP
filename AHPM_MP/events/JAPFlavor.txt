@@ -235,7 +235,7 @@ country_event = {
 			}
 		}
 		NOT = { has_country_flag = sonno_joi }
-		NOT = { has_global_flag = boshin_war }
+		NOT = { test = is_boshin_war }
 		NOT = { has_global_flag = boshin_war_has_happened }
 	}
 
@@ -295,8 +295,6 @@ province_event = {
 			owner = { civilized = yes }
 		}
 		NOT = {
-			owner = { has_global_flag = boshin_war }
-			owner = { has_global_flag = boshin_war_has_happened }
 			has_province_modifier = peasant_revolt
 			average_militancy = 6
 		}
@@ -304,20 +302,13 @@ province_event = {
 
 	mean_time_to_happen = {
 		months = 250
-		modifier = {
-			factor = 0.75
-			owner = { has_global_flag = order_to_expel_barbarians }
-		}
 	}
 
 	option = {
 		name = "EVT97616OPTA"
 		owner = {
 			prestige = -2
-			random_owned = {
-				limit = { owner = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } } }
-				owner = { remove_country_modifier = western_presence_research }
-			}
+			remove_country_modifier = western_presence_research
 		}
 		any_pop = {
 			ideology = {
@@ -333,18 +324,11 @@ province_event = {
 			name = peasant_revolt
 			duration = 365
 		}
-		random_country = {
-			limit = { is_greater_power = yes }
-			relation = { who = TKG value = -20 }
-		}
-		owner = {
-			random_owned = {
-				limit = {
-					is_capital = yes
-					has_province_modifier = peasant_revolt
-				}
-				owner = { remove_country_modifier = legation_quarter }
+		if = {
+			limit = {
+				capital_scope = { has_province_modifier = peasant_revolt }
 			}
+			owner = { remove_country_modifier = legation_quarter }
 		}
 		remove_province_modifier = western_presence
 		remove_province_modifier = foreign_smugglers
@@ -398,11 +382,11 @@ country_event = {
 	picture = "emperor_funeral"
 
 	trigger = {
-		tag = TKG
+		test = is_japanese_shogun_leader
 		test = is_monarchy_goverment
 		NOT = { has_global_flag = yoshinobu_shogun }
 		NOT = { has_global_flag = iemochi_shogun }
-		NOT = { has_global_flag = boshin_war }
+		NOT = { test = is_boshin_war }
 		NOT = { has_global_flag = boshin_war_has_happened }
 	}
 
@@ -424,9 +408,7 @@ country_event = {
 			}
 		}
 		any_country = {
-			limit = {
-				substate_of = TKG
-			}
+			limit = { substate_of = THIS }
 			if = {
 				limit = { has_country_flag = tozama_daimyo }
 				country_event = 97621
@@ -436,20 +418,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				has_country_flag = consulted_tozama
-			}
-			modifier = {
-				factor = 0.2
-				has_country_flag = consulted_fudai
-			}
-			modifier = {
-				factor = 0.1
-				NOT = { has_country_flag = consulted_tozama }
-				NOT = { has_country_flag = consulted_fudai }
-			}
+			factor = 1
 		}
 	}
 
@@ -468,28 +437,20 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				substate_of = TKG
+				substate_of = THIS
 				has_country_flag = tozama_daimyo
 			}
 			country_event = 97623
 		}
 		any_country = {
 			limit = {
-				substate_of = TKG
+				substate_of = THIS
 				has_country_flag = fudai_daimyo
 			}
 			country_event = 97624
 		}
 		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0.2
-				has_country_flag = consulted_tozama
-			}
-			modifier = {
-				factor = 2
-				has_country_flag = consulted_fudai
-			}
+			factor = 0
 		}
 	}
 }
@@ -572,38 +533,25 @@ country_event = {
 	desc = "EVTDESC97625"
 	picture = "sakuradamon"
 	trigger = {
-		tag = TKG
+		test = is_japanese_shogun_leader
 		has_country_modifier = ansei_purge
 		average_militancy = 2
 		has_country_flag != sakuradamon_incident
 		has_country_modifier != emperor_meiji
-		has_global_flag != boshin_war
+		test != is_boshin_war
 		has_global_flag != boshin_war_has_happened
 	}
 
 	mean_time_to_happen = {
 		months = 12
-		modifier = {
-			factor = 0.8
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 6
-		}
+	}
+
+	immediate = {
+		set_country_flag = sakuradamon_incident
 	}
 
 	option = {
 		name = "EVT97625OPTA"
-		set_country_flag = sakuradamon_incident
 		prestige = -10
 		remove_country_modifier = ansei_purge
 		add_country_modifier = {
@@ -617,14 +565,11 @@ country_event = {
 			}
 			country_event = 97626
 		}
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT97625OPTB"
-		set_country_flag = sakuradamon_incident
 		any_country = {
 			limit = {
 				NOT = { tag = THIS }
@@ -632,9 +577,7 @@ country_event = {
 			}
 			country_event = 97627
 		}
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -676,7 +619,7 @@ country_event = {
 	desc = "EVTDESC97630"
 	picture = "emperor_funeral"
 	trigger = {
-		tag = TKG
+		test = is_japanese_shogun_leader
 		test = is_monarchy_goverment
 		OR = {
 			has_country_modifier = kobu_gattai
@@ -705,7 +648,7 @@ country_event = {
 		}
 		remove_country_modifier = kobu_gattai
 		any_country = {
-			limit = { substate_of = TKG }
+			limit = { substate_of = THIS }
 			country_event = 97631
 		}
 	}
@@ -738,7 +681,7 @@ country_event = {
 	desc = "EVTDESC97635"
 	picture = "meiji_parliament"
 	trigger = {
-		tag = TKG
+		test = is_japanese_shogun_leader
 		test = is_monarchy_goverment
 		OR = {
 			has_country_flag = caved_to_commodore_perry
@@ -759,7 +702,7 @@ country_event = {
 		}
 		NOT = { has_country_flag = consulted_fudai }
 		NOT = { has_country_flag = consulted_tozama }
-		NOT = { has_global_flag = boshin_war }
+		NOT = { test = is_boshin_war }
 		NOT = { has_global_flag = boshin_war_has_happened }
 	}
 
@@ -772,22 +715,12 @@ country_event = {
 		set_country_flag = consulted_tozama
 		any_country = {
 			limit = {
-				substate_of = TKG
+				substate_of = THIS
 				has_country_flag = fudai_daimyo
 			}
 			country_event = 97636
 		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				has_global_flag = yoshinobu_shogun
-			}
-			modifier = {
-				factor = 0.2
-				has_global_flag = iemochi_shogun
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -797,27 +730,12 @@ country_event = {
 		1644 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
 		any_country = {
 			limit = {
-				substate_of = TKG
+				substate_of = THIS
 				has_country_flag = tozama_daimyo
 			}
 			country_event = 97637
 		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0.2
-				has_global_flag = yoshinobu_shogun
-			}
-			modifier = {
-				factor = 2
-				has_global_flag = iemochi_shogun
-			}
-			modifier = {
-				factor = 0.1
-				NOT = { has_global_flag = yoshinobu_shogun }
-				NOT = { has_global_flag = iemochi_shogun }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -863,9 +781,7 @@ country_event = {
 	title = "EVTNAME97640" #The Meiji Rebellion - Other Substates
 	desc = "EVTDESC97640"
 	picture = "boshin_war"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT97640OPTA"
 		set_country_flag = supports_emperor
@@ -882,55 +798,7 @@ country_event = {
 			remove_province_modifier = peasant_revolt
 			any_pop = { militancy = -6 }
 		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 1.5
-				has_country_flag = angered_by_bakufu
-			}
-			modifier = {
-				factor = 0.5
-				has_country_flag = tozama_daimyo
-				TKG = { has_country_flag = consulted_tozama }
-			}
-			modifier = {
-				factor = 0.5
-				has_country_flag = fudai_daimyo
-				TKG = { has_country_flag = consulted_fudai }
-			}
-			modifier = {
-				factor = 1.25
-				has_country_modifier = ansei_purge
-			}
-			modifier = {
-				factor = 0.5
-				has_global_flag = iemochi_shogun
-				has_country_flag = fudai_daimyo
-			}
-			modifier = {
-				factor = 0.5
-				has_global_flag = yoshinobu_shogun
-				has_country_flag = tozama_daimyo
-			}
-			modifier = {
-				factor = 1.5
-				has_country_modifier = supports_imperial_edict
-			}
-			modifier = {
-				factor = 1.2
-				TKG = { has_country_flag = caved_to_commodore_perry }
-			}
-			modifier = {
-				factor = 0.8
-				has_country_flag = fudai_daimyo
-			}
-			modifier = {
-				factor = 1.2
-				has_country_flag = tozama_daimyo
-			}
-		}
 	}
-
 	option = {
 		name = "EVT97640OPTB"
 		set_country_flag = supports_shogun
@@ -939,53 +807,9 @@ country_event = {
 		remove_country_modifier = ansei_purge
 		leave_alliance = FROM
 		create_alliance = TKG
-		relation = { who = TKG value = 100 }
 		any_owned = {
 			remove_province_modifier = peasant_revolt
 			any_pop = { militancy = -6 }
-		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0.5
-				has_country_flag = angered_by_bakufu
-			}
-			modifier = {
-				factor = 1.5
-				has_country_flag = tozama_daimyo
-				TKG = { has_country_flag = consulted_tozama }
-			}
-			modifier = {
-				factor = 1.5
-				has_country_flag = fudai_daimyo
-				TKG = { has_country_flag = consulted_fudai }
-			}
-			modifier = {
-				factor = 1.5
-				has_global_flag = iemochi_shogun
-				has_country_flag = fudai_daimyo
-			}
-			modifier = {
-				factor = 1.5
-				has_global_flag = yoshinobu_shogun
-				has_country_flag = tozama_daimyo
-			}
-			modifier = {
-				factor = 1.5
-				has_country_modifier = opposes_imperial_edict
-			}
-			modifier = {
-				factor = 1.2
-				TKG = { has_country_flag = rejected_commodore_perry }
-			}
-			modifier = {
-				factor = 1.2
-				has_country_flag = fudai_daimyo
-			}
-			modifier = {
-				factor = 0.8
-				has_country_flag = tozama_daimyo
-			}
 		}
 	}
 }
@@ -1031,28 +855,23 @@ country_event = {
 		remove_country_modifier = sakoku
 		remove_country_modifier = rangaku
 		remove_country_modifier = ansei_purge
-		random_owned = {
+		if = {
 			limit = {
-				owner = { civilized = no }
+				civilized = no
 				TKG = { civilized = yes }
 			}
-			owner = {
-				add_country_modifier = {
-					name = daimyo_draft
-					duration = 90
-				}
+			add_country_modifier = {
+				name = daimyo_draft
+				duration = 90
 			}
-		}
-		random_owned = {
+		} else_if = {
 			limit = {
-				owner = { civilized = no }
+				civilized = no
 				TKG = { civilized = no }
 			}
-			owner = {
-				add_country_modifier = {
-					name = taiping_draft
-					duration = 90
-				}
+			add_country_modifier = {
+				name = taiping_draft
+				duration = 90
 			}
 		}
 		leave_alliance = TKG
@@ -1105,20 +924,13 @@ country_event = {
 	picture = "boshin_war"
 	trigger = {
 		test = is_japanese_shogun_leader
-		has_global_flag = boshin_war
-		any_owned_province = {
-			is_capital = yes
-			test != is_influenced
-			province_control_days = 90
-		}
+		test = is_boshin_war
+		test = is_capital_occupied
 	}
 	mean_time_to_happen = { days = 7 }
 	immediate = {
 		random_country = {
-			limit = {
-				test = is_japanese_imperial_leader
-				war_with = THIS
-			}
+			limit = { test = is_japanese_imperial_leader }
 			country_event = 97646
 		}
 	}
@@ -1135,7 +947,7 @@ country_event = {
 	picture = "boshin_war"
 	trigger = {
 		test = is_japanese_imperial_leader
-		has_global_flag = boshin_war
+		test = is_boshin_war
 		1657 = { test = is_influenced }
 		war = no
 		OR = {
@@ -1241,13 +1053,8 @@ country_event = {
 	picture = "boshin_war"
 	trigger = {
 		test = is_japanese_imperial_leader
-		has_global_flag = boshin_war
-		war = yes
-		any_owned_province = {
-			is_capital = yes
-			test != is_influenced
-			province_control_days = 90
-		}
+		test = is_boshin_war
+		test = is_capital_occupied
 	}
 	mean_time_to_happen = { days = 7 }
 	immediate = {
@@ -1265,17 +1072,13 @@ country_event = {
 	id = 97651
 	title = "EVTNAME97651"
 	desc = "EVTDESC97651"
-	news = yes
-	news_desc_long = "EVTDESC97651_NEWS_LONG"
-	news_desc_medium = "EVTDESC97651_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97651_NEWS_SHORT"
 	picture = "boshin_war"
 	major = yes
 
 	trigger = {
 		tag = TKG
 		war = no
-		has_global_flag = boshin_war
+		test = is_boshin_war
 		any_owned_province = {
 			any_core = {
 				test = is_japanese_imperial_leader

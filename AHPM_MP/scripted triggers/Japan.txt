@@ -26,3 +26,24 @@ is_japanese_shogun_leader = {
 	primary_culture = japanese
 	tag = TKG
 }
+
+is_boshin_war = {
+	main_parameter = nation
+	this_parameter = nation
+	OR = {
+		AND = {
+			THIS = { test = is_japanese_imperial_leader }
+			any_country = {
+				test = is_japanese_shogun_leader
+				war_with = THIS
+			}
+		}
+		AND = {
+			THIS = { test = is_japanese_shogun_leader }
+			any_country = {
+				test = is_japanese_imperial_leader
+				war_with = THIS
+			}
+		}
+	}
+}
