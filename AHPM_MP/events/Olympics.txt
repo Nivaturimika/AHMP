@@ -5,7 +5,7 @@ country_event = {
 	desc = "EVTDESC23400"
 	picture = "Olympics"
 	trigger = { test = can_signup_as_ioc_member }
-	mean_time_to_happen = { months = 36 }
+	mean_time_to_happen = { months = 6 }
 	option = {
 		name = "EVTOPTA23400"
 		treasury = -50000
@@ -31,31 +31,52 @@ country_event = {
 		has_country_flag != attend_olympiad
 		has_country_flag != host_olympiad
 		has_country_flag != nohost_olympiad
+		NOT = { any_country = { has_country_flag = host_olympiad } }
 	}
 	option = {
-		name = "EVTOPTA23401"
+		name = "EVTOPTB23401"
+		prestige = 5
+		set_country_flag = nohost_olympiad
+		set_country_flag = attend_olympiad
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTB23401"
+		prestige = -1
+		set_country_flag = nohost_olympiad
+		set_country_flag = noattend_olympiad
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTC23401"
 		prestige = 10
 		set_country_flag = host_olympiad
 		set_country_flag = attend_olympiad
 		any_country = { #Send invites to other IOC members
 			limit = { test = can_attend_olympiads }
-			country_event = 23403
+			country_event = {
+				id = 23403
+				days = 60
+			}
 		}
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPTB23401"
+		name = "EVTOPTD23401"
 		prestige = 5
 		set_country_flag = host_olympiad
 		set_country_flag = noattend_olympiad
 		any_country = { #Send invites to other IOC members
 			limit = { test = can_attend_olympiads }
-			country_event = 23403
+			country_event = {
+				id = 23403
+				days = 60
+			}
 		}
 		ai_chance = { factor = 0 }
 	}
 	option = {
-		name = "EVTOPTC23401"
+		name = "EVTOPTE23401"
 		prestige = -5
 		set_country_flag = noattend_olympiad
 		set_country_flag = nohost_olympiad

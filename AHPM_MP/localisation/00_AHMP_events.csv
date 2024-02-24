@@ -83,12 +83,14 @@ EVTOPTA23400;An excellent idea! We accept.
 EVTOPTB23400;The idea is interesting, but not at this time.
 EVTNAME23401;Shall $COUNTRY$ host the Olympic Games?
 EVTDESC23401;The International Olympic Committee has invited our government to organize the Olympic Games. Should we accept the offer?
-EVTOPTA23401;Yes, it is an excellent opportunity to show $COUNTRY_ADJ$ progress
-EVTOPTB23401;Yes, it is an excellent opportunity to host the Olympiads, but we won't participate ourselves
-EVTOPTC23401;No, we have better uses of our nation's limited resources
+EVTOPTA23401;We'll only attend
+EVTOPTB23401;We'll not host nor attend
+EVTOPTC23401;Yes, it is an excellent opportunity to show $COUNTRY_ADJ$ progress
+EVTOPTD23401;Yes, we'll only host the games however, and not attend
+EVTOPTE23401;No, we have better uses of our nation's limited resources
 EVTDESC23402;The International Olympic Committee has decided to offer $COUNTRY$ the responsibility to organize the olympic games of this year. Should we accept the offer?
 EVTNAME23403;Attend The Olympic Games in $FROMCOUNTRY$?
-EVTDESC23403;With the announcement of $FROMCOUNTR$ as the host nation, the International Olympic Committee has sent invitations to its members to attend the games, including $COUNTRY$. Shall we attend?
+EVTDESC23403;With the announcement of $FROMCOUNTRY$ as the host nation, the International Olympic Committee has sent invitations to its members to attend the games, including $COUNTRY$. Shall we attend?
 EVTOPTA23403;Yes we will attend
 EVTOPTB23403;We unfortunately can not attend
 EVTNAME23404;The Olympic Games
