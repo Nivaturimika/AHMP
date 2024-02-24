@@ -3,37 +3,37 @@ classicism_n_early_romanticism = {
 	area = aesthetics
 	year = 1836
 	cost = 7200
-	increase_research = 0.05
+	increase_research = 0.15
 }
 romanticism = {
 	area = aesthetics
 	year = 1836
 	cost = 14400
-	increase_research = 0.05
+	increase_research = 0.15
 }
 realism = {
 	area = aesthetics
 	year = 1836
 	cost = 21600
-	increase_research = 0.05
+	increase_research = 0.15
 }
 impressionism = {
 	area = aesthetics
 	year = 1830
 	cost = 28800
-	increase_research = 0.05
+	increase_research = 0.15
 }
 expressionism = {
 	area = aesthetics
 	year = 1830
 	cost = 36000
-	increase_research = 0.05
+	increase_research = 0.15
 }
 mass_culture_n_the_avant_garde = {
 	area = aesthetics
 	year = 1830
 	cost = 43200
-	increase_research = 0.05
+	increase_research = 0.15
 }
 
 #philosophy
@@ -41,37 +41,37 @@ late_enlightenment_philosophy = {
 	area = philosophy
 	year = 1836
 	cost = 7200
-	increase_research = 0.05
+	increase_research = 0.15
 }
 idealism = {
 	area = philosophy
 	year = 1830
 	cost = 14400
-	increase_research = 0.05
+	increase_research = 0.15
 }
 empiricism = {
 	area = philosophy
 	year = 1830
 	cost = 21600
-	increase_research = 0.05
+	increase_research = 0.15
 }
 analytic_philosophy = {
 	area = philosophy
 	year = 1830
 	cost = 28800
-	increase_research = 0.05
+	increase_research = 0.15
 }
 phenomenology_n_hermeneutic = {
 	area = philosophy
 	year = 1830
 	cost = 36000
-	increase_research = 0.05
+	increase_research = 0.15
 }
 anti__rationalism = {
 	area = philosophy
 	year = 1830
 	cost = 43200
-	increase_research = 0.05
+	increase_research = 0.15
 }
 
 #social_thought
