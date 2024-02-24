@@ -852,12 +852,8 @@ political_decisions = {
 	unite_the_daimyos = {
 		picture = abolish_the_han_system
 		potential = {
-			tag = TKG
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test = is_japanese_shogun_leader
+			test = is_monarchy_goverment
 			OR = {
 				SEN = { exists = yes }
 				YZW = { exists = yes }
@@ -875,8 +871,6 @@ political_decisions = {
 
 		allow = {
 			war = no
-			is_mobilised = no
-			is_disarmed = no
 			SEN = {
 				OR = {
 					exists = no
