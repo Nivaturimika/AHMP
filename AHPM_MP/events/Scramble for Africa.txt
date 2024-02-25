@@ -47,22 +47,136 @@ country_event = {
 		any_country = {
 			limit = {
 				capital_scope = { continent = africa }
-				civilized = no
+				OR = {
+					is_independant = yes
+					overlord = { capital_scope = { continent != africa } }
+				}
 			}
-			add_casus_belli = {
-				target = THIS
-				type = annex_africa
-				months = 1200
-			}
-			country_event = 95502
+			country_event = 95522
 		}
 	}
 }
 
 country_event = {
-	id = 95502
-	title = "EVTNAME95502" #The Age of Colonialism
-	desc = "EVTDESC95502"
+	id = 95521
+	title = "EVTNAME95521"
+	desc = "EVTDESC95521"
+	picture = "scramble_for_africa"
+	is_triggered_only = yes
+	option = {
+		name = "EVT95521OPTA"
+		badboy = 0.5
+		prestige = -0.25
+		FROM = {
+			add_casus_belli = {
+				target = THIS
+				type = annex_africa
+				months = 1200
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					THIS = {
+						OR = {
+							tag = GER
+							tag = SGF
+							tag = NGF
+						}
+						FROM = {
+							OR = {
+								#Namibia
+								tag = YFL
+								tag = YFM
+								tag = YFP
+								tag = YFN
+								tag = YFO
+								tag = YFQ
+								tag = YFR
+								tag = YCK
+								#Cameroon
+								tag = YAF
+								tag = YAA
+								tag = YAC
+								tag = YAD
+								tag = YZX
+							}
+						}
+					}
+					THIS = {
+						tag = POR
+						FROM = {
+							OR = {
+								#Angola
+								tag = YBZ
+								tag = YBX
+								tag = YCA
+								tag = YBT
+								tag = YBV
+								tag = YBY
+								tag = YBW
+								tag = YBU
+								tag = KON
+								#Mozambique
+								tag = GAZ
+							}
+						}
+					}
+					THIS = {
+						tag = ITA
+						FROM = {
+							OR = {
+								#Somalia
+								tag = MAJ
+								tag = GEL
+								tag = WRL
+								tag = YDN
+								tag = AWS
+								#Italian libya
+								tag = TRI
+								tag = CYR
+							}
+						}
+					}
+					THIS = {
+						tag = BEL
+						FROM = {
+							OR = {
+								#Kongo
+								tag = KON
+								tag = YBJ
+								tag = YBP
+								tag = YBH
+								tag = YBQ
+								tag = YBR
+								tag = YBK
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT95522OPTA"
+		prestige = 0.125
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVT95523OPTA"
+		prestige = 10
+		badboy = -2
+		set_country_flag = finished_berlin_conference
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 95522
+	title = "EVTNAME95522"
+	desc = "EVTDESC95522"
 	picture = "scramble_for_africa"
 	is_triggered_only = yes
 	immediate = {
@@ -77,9 +191,38 @@ country_event = {
 				capital_scope = { continent = europe }
 			}
 			leave_alliance = THIS
+			country_event = 95521
 		}
 	}
-	option = { name = "EVT95502OPTA" }
+	option = {
+		name = "EVT95522OPTA"
+	}
+	option = {
+		name = "EVT95522OPTB"
+		any_owned = {
+			any_pop = {
+				scaled_militancy = { factor = 8 ideology = tribal }
+				scaled_militancy = { factor = 5 ideology = reactionary }
+				scaled_militancy = { factor = 2 ideology = conservative }
+				scaled_militancy = { factor = 0 ideology = liberal }
+			}
+		}
+	}
+	option = {
+		name = "EVT95522OPTC"
+		if = {
+			limit = { civilized = yes }
+			war_policy = jingoism
+		} else = {
+			foreign_weapons = yes_foreign_weapons
+			foreign_officers = yes_foreign_officers
+			foreign_artillery = yes_foreign_artillery
+			military_constructions = yes_military_constructions
+		}
+	}
+	option = {
+		name = "EVT95522OPTD"
+	}
 }
 
 #Canditate for Removal
@@ -767,7 +910,6 @@ country_event = {
 					continent = africa
 				}
 				NOT = {
-					relation = { who = THIS value = -50 }
 					truce_with = THIS
 					in_sphere = THIS
 					alliance_with = THIS
@@ -793,7 +935,6 @@ country_event = {
 	option = {
 		name = "EVT95514OPTA"
 		FROM = {
-			relation = { who = THIS value = -200 }
 			war = {
 				target = THIS
 				attacker_goal = {
@@ -833,17 +974,13 @@ country_event = {
 			}
 		}
 	}
-
 	fire_only_once = yes
-
 	mean_time_to_happen = { months = 8 }
-
 	option = {
 		name = "EVT955177OPTA"
 		EGY = { country_event = 955178 }
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT955177OPTB"
 		prestige = -5
@@ -863,7 +1000,7 @@ country_event = {
 		name = "EVT955178OPTA"
 		prestige = -5
 		FROM = { country_event = 955179 }
-		ai_chance = { factor = 0.75 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -871,13 +1008,7 @@ country_event = {
 		prestige = 5
 		FROM = { country_event = 955180 }
 		set_country_flag = surrender_sudan_on_lose
-		ai_chance = {
-			factor = 0.25
-			modifier = {
-				factor = 0
-				is_vassal = yes
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 #Egypt Accepts
@@ -902,32 +1033,8 @@ country_event = {
 				}
 			}
 		}
-
 		1834 = { add_core = EGY }
-
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 50000 }
-					check_variable = { which = owed_cash_money value = 9 }
-				}
-			}
-			owner = { change_variable = { which = owed_cash_money value = 50 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
-		}
-		random_owned = {
-			limit = { owner = { money = 50000 } }
-			owner = { treasury = -50000 }
-		}
-
+		treasury = -50000
 		FROM = {
 			money = 50000
 			any_owned = {
@@ -940,7 +1047,6 @@ country_event = {
 				secede_province = THIS
 			}
 		}
-		relation = { who = EGY value = 100 }
 	}
 }
 
@@ -955,7 +1061,6 @@ country_event = {
 
 	option = {
 		name = "EVT955180OPTA"
-		relation = { who = FROM value = -400 }
 		diplomatic_influence = { who = FROM value = -400 }
 		SUD = {
 			civilized = no
@@ -1000,33 +1105,22 @@ country_event = {
 
 	option = {
 		name = "EVT955181OPTA"
-		relation = { who = FROM value = 50 }
 		random_owned = {
 			limit = { province_id = 1792 }
 			secede_province = FROM
 		}
-		random_country = {
-			limit = {
-				tag = FROM
-				owns = 1878
-			}
+		FROM = {
+			limit = { owns = 1878 }
 			random_owned = {
 				limit = { province_id = 1878 }
 				secede_province = THIS
 			}
 		}
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 0.5
-				is_greater_power = yes
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT955181OPTB"
-		relation = { who = FROM value = -150 }
 		casus_belli = {
 			target = FROM
 			type = place_in_the_sun
@@ -1037,13 +1131,7 @@ country_event = {
 			type = place_in_the_sun
 			months = 30
 		}
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 4
-				NOT = { relation = { who = FROM value = 0 } }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1053,7 +1141,6 @@ country_event = {
 	title = "EVTNAME955200"
 	desc = "EVTDESC955200"
 	picture = "mfecane"
-
 	trigger = {
 		tag = ENG
 		owns = 2076
@@ -1061,11 +1148,8 @@ country_event = {
 		2081 = { empty = yes }
 		invention = the_dark_continent
 	}
-
 	fire_only_once = yes
-
 	mean_time_to_happen = { months = 2 }
-
 	option = {
 		name = "EVT955200OPTA"
 		2081 = { secede_province = THIS any_pop = { literacy = -0.99 } }
@@ -1078,62 +1162,17 @@ country_event = {
 	title = "EVTNAME955201"
 	desc = "EVTDESC955201"
 	picture = "scramble_for_africa"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT955201OPTA"
 		treasury = 100000
-		random_country = {
-			limit = { tag = FROM }
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 100000 }
-						check_variable = { which = owed_cash_money value = 9 }
-					}
-				}
-				owner = { change_variable = { which = owed_cash_money value = 100 } }
-			}
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 100000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					}
-				}
-				owner = { set_variable = { which = owed_cash_money value = 100 } }
-			}
-
-			random_owned = {
-				limit = { owner = { money = 100000 } }
-				owner = { treasury = -100000 }
-			}
-		}
-		relation = { who = FROM value = 25 }
+		FROM = { treasury = -100000 }
 		2081 = { secede_province = FROM add_core = NMB }
-		ai_chance = {
-			factor = 0.5
-			modifier = { factor = 1.1 relation = { who = FROM value = 50 } }
-			modifier = { factor = 1.1 relation = { who = FROM value = 100 } }
-			modifier = { factor = 1.1 relation = { who = FROM value = 150 } }
-			modifier = { factor = 1.2 relation = { who = FROM value = 199 } }
-			modifier = { factor = 10 in_sphere = THIS }
-		}
+		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT955201OPTB"
-		relation = { who = FROM value = -50 }
-		ai_chance = {
-			factor = 0.5
-			modifier = { factor = 1.1 NOT = { relation = { who = FROM value = 0 } } }
-			modifier = { factor = 1.2 NOT = { relation = { who = FROM value = -50 } } }
-			modifier = { factor = 1.2 NOT = { relation = { who = FROM value = -100 } } }
-			modifier = { factor = 1.2 NOT = { relation = { who = FROM value = -199 } } }
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1143,58 +1182,20 @@ country_event = {
 	title = "EVTNAME955181"
 	desc = "EVTDESC955202"
 	picture = "scramble_for_africa"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT955181OPTA"
-		relation = { who = FROM value = 50 }
 		treasury = 200000
 		random_owned = {
 			limit = { province_id = 1792 }
 			secede_province = FROM
 		}
-
-		random_country = {
-			limit = {
-				tag = FROM
-				has_country_flag = paying_for_senegal
-			}
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						check_variable = { which = owed_cash_money value = 9 }
-					}
-				}
-				owner = { change_variable = { which = owed_cash_money value = 200 } }
-			}
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					}
-				}
-				owner = { set_variable = { which = owed_cash_money value = 200 } }
-			}
-
-			random_owned = {
-				limit = { owner = { money = 200000 } }
-				owner = { treasury = -200000 }
-			}
+		FROM = {
+			limit = { has_country_flag = paying_for_senegal }
+			treasury = -200000
 			clr_country_flag = paying_for_senegal
 		}
-
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 0.5
-				is_greater_power = yes
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -1211,13 +1212,7 @@ country_event = {
 			type = place_in_the_sun
 			months = 30
 		}
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 4
-				NOT = { relation = { who = FROM value = 0 } }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1242,6 +1237,8 @@ country_event = {
 		}
 	}
 	option = { name = "EVT955203OPTA" }
+	option = { name = "EVT955203OPTB" }
+	option = { name = "EVT955203OPTC" }
 }
 
 #Buying Gabu
@@ -1250,59 +1247,24 @@ country_event = {
 	title = "EVTNAME955204"
 	desc = "EVTDESC955204"
 	picture = "scramble_for_africa"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT955181OPTA"
-		relation = { who = FROM value = 50 }
 		treasury = 200000
 		random_owned = {
 			limit = { province_id = 1878 }
 			secede_province = FROM
 		}
-
-		random_country = {
-			limit = {
-				tag = FROM
-				has_country_flag = paying_for_senegal
-			}
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						check_variable = { which = owed_cash_money value = 9 }
-					}
-				}
-				owner = { change_variable = { which = owed_cash_money value = 200 } }
-			}
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					}
-				}
-				owner = { set_variable = { which = owed_cash_money value = 200 } }
-			}
-
-			random_owned = {
-				limit = { owner = { money = 200000 } }
-				owner = { treasury = -200000 }
-			}
+		FROM = {
+			limit = { has_country_flag = paying_for_senegal }
+			treasury = -200000
 			clr_country_flag = paying_for_senegal
 		}
-
-		ai_chance = {
-			factor = 95
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT955181OPTB"
-		relation = { who = FROM value = -150 }
 		badboy = 1
 		casus_belli = {
 			target = FROM
@@ -1314,13 +1276,7 @@ country_event = {
 			type = place_in_the_sun
 			months = 30
 		}
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 4
-				NOT = { relation = { who = FROM value = 0 } }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

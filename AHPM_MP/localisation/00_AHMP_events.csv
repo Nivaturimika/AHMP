@@ -112,3 +112,19 @@ EVTNAME35000;The $FROMCOUNTRY_ADJ$ Monarchy Splits From the House of $COUNTRY$
 EVTDESC35000;With the current war pitting $FROMCOUNTRY$ against a $COUNTRY_ADJ$ state, our $FROMCOUNTRY_ADJ$ cousins decided to repudiate us to save their own reputation! They are now known as the House of Windsor, and all family ties with our Duke and his family have now been severed.
 EVTOPTA35000;Blood is not thicker than water
 EVTOPTB35000;They're fearful of us
+EVTNAME95521;Colonial agenda of $YEAR$ - $FROMCOUNTRY$
+EVTDESC95521;We're deciding with the other Great Powers how to partition $FROMCONTINENT$ -- one of the areas of interest is the area controlled by $FROMCOUNTRY$. Of course, $COUNTRY_ADJ$ colonialist factions will be pleased taking anything we can, however we need to remember to keep the balance of power in $FROMCONTINENT$. We should also be wary of being the greedy part of the teatry -- or we might face repercussions.
+EVT95521OPTA;We have claims there
+EVT95521OPTB;We don't have any claims there
+EVT95521OPTC;We're done
+EVTNAME95522;We're being partitioned by $FROMCONTINENT$ powers
+EVTDESC95522;A whisteblower has given us information that the Great Powers of $FROMCONTINENT$ have gathered to "divide" our lands, and take our independent lands from our own hands... and they didn't even dare to invite a $COUNTRY_ADJ$ representative on their little-willy conference! What authority do they have to do this to the great nation of $COUNTRY$? We have $POP$ people to take care of, we're made up by $CULTURE$ people, we're our own country. Maybe not totally free from foreign influences. But we don't deserve this savage treatment.
+EVT95522OPTA;We can't do anything
+EVT95522OPTB;We need to modernize NOW!
+EVT95522OPTC;It's time to prepare the troops
+EVT95522OPTD;The answer is diplomacy... maybe they will understand?
+EVTNAME955203;The Scramble for Africa;;;;;;;;;;;;;
+EVTDESC955203;The Great Powers have gathered in $FROMCAPITAL$ to establish several protocols and rules for the occupation of Africa and the abolition of slavery in the dark continent. We have claims on African regions and if we don't act on them, based on the principle of effective occupation, these same Great Powers might try to occupy our rightful lands.;;;;;;;;;;;;;
+EVT955203OPTA;And act we shall
+EVT955203OPTB;Goodness gracious... we better act now
+EVT955203OPTC;We must enlighten the dark continent
