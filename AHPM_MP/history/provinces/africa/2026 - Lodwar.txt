@@ -1,5 +1,7 @@
 owner = YCY
 controller = YCY
 add_core = YCY
+add_core = OMA
+add_core = ZAN
 trade_goods = tea
 life_rating = 15

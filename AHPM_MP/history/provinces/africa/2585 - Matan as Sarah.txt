@@ -1,5 +1,6 @@
 owner = YFG
 controller = YFG
 add_core = YFG
+add_core = TRI
 trade_goods = wool
 life_rating = 10

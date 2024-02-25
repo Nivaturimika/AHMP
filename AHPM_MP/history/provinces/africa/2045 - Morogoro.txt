@@ -1,5 +1,7 @@
 owner = YDC
 controller = YDC
 add_core = YDC
+add_core = OMA
+add_core = ZAN
 trade_goods = fruit
 life_rating = 15

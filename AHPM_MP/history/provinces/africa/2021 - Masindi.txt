@@ -1,5 +1,6 @@
 owner = YAY
 controller = YAY
 add_core = YAY
+add_core = BUG
 trade_goods = coffee
 life_rating = 15

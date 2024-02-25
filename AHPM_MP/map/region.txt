@@ -866,235 +866,112 @@ JAP_1675 = { 1646 1645 1675 1647 1648 1676 1677 12 } #Chubu
 
 
 ### North Africa
-
 MOR_1696 = { 1696 1773 1774 } #Western Sahara
-
 MOR_1693 = { 1690 1693 1691 2563 1692 } #Morocco
-
 MOR_1686 = { 1685 1681 1682 1680 } #Fez
-
 MOR_1688 = { 1686 1688 1689 1687 2590 } #al Rif
-
 MOR_1683 = { 1683 1684 1697 } #Taza
-
 MOR_1694 = { 1694 1699 1698 1695 } #Agadir
-
 FRA_1700 = { 1700 1701 1709 } #Algiers
-
 ALD_1704 = { 1704 1705 1706 1707 1703 } #Oran
-
 ALD_1708 = { 1708 1710 1702 } #Constantine
-
 ALD_1713 = { 1713 1715 1711 1712 } #North Central Sahara
-
-#ALD_1714 = { 1714 1716 1717 1720 } #West Sahara / Saoura
-
 ALD_1718 = { 1720 1718 1719 1721 1722 1716 1717 } #Sahara
-
 TUN_1726 = { 1725 1726 1727 1728 1729 1730 } #Tunisia
-
 TRI_1731 = { 1731 1733 1734 1732 1744 1740 1741 1742 } #Tripolitania
-
 TRI_1735 = { 1735 1736 1737 1738 2585 } #Cyrenaica
-
-#TRI_1740 = { 1740 1741 1742 1743 } #Fezzan
-
 EGY_1745 = { 1745 1747 1750 1748 1749 1751 1746 } #Cairo
-
-#EGY_1751 = { 1751 1746 1752 1753 } #Alexandria
-
 EGY_1755 = { 1755 1756 1757 } #Sinai
-
 EGY_1758 = { 1752 1753  1759 1758 1761 1760 1754 } #Western Desert
-
 EGY_1762 = { 1765 1763 1762 2559 1764 1772 } #Middle Egypt
-
 EGY_1771 = { 1769 1771 1768 1770 1767 1766 } #Upper Egypt
-
 FRA_1808 = { 1808 1809 1810 1811 1815 1816 } #Outer Hausaland - South Niger
-
 FRA_1813 = { 1812 1814 1817 } #Niger
-
 ENG_1818 = { 1818 1819 1820 1822 1823 } #Waddai
-
 ENG_1825 = { 1821 1824 1825 1826 } #Chad
-
 EGY_1827 = { 1827 1829 1828 1830 1831 } #Sudan
-
 EGY_1834 = { 1834 1836 1833 1835 1837 2564 1806 } #Dongola
-
 EGY_1838 = { 1839 1838 1840 1739 1842 1841 } #Kordofan
-
-#EGY_1842 = { 1842 1841 1843 } #Darfur
-
 ENG_1844 = { 1844 1845 1846 1847 1832 1843 } #Sudd
 
-
 ### East Africa
-
 ETH_1852 = { 1852 1854 1855 } #Begemder
-
 ETH_1853 = { 1853 1856 1857 1858 } #Tigray
-
 ETH_1859 = { 1859 1860 1861 1862 1863 1865 } #Shewa
-
-#ETH_1862 = {  } #Gibe
-
 ETH_1865 = { 1866 1867 1864 } #Hararghe
-
 ENG_1848 = { 1848 1849 1850 1851 } #Eritrea
-
 SOM_1868 = { 1868 1869 1870 1871 1872 } #South Somaliland
-
 SOM_1872 = { 1873 1874 1875 } #North Somaliland
-
 ENG_2024 = { 2024 2030 2032 2027 2029 2033 } #Kenya
-
 ENG_2026 = { 2026 2025 2028 2031 } #Rift Valley
-
 ENG_2036 = { 2036 2048 2045 2037 2047 } #Zanzibar
-
 ENG_2039 = { 2039 2040 2041 2038 } #Lindi
-
 ENG_2044 = { 2044 2043 2046 2042 } #Tanganyika
 
-
 ### West Africa
-
 FRA_1775 = { 1775 1776 1777 1778 1779 1781 1782 } #Mauritania
-
-#FRA_1780 = { 1780 1781 1782 } #Inner Mauritania
-
 FRA_1783 = { 1783 1784 1786 1787 1789 1790 2573 } #Senegal
-
 FRA_1788 = { 1785 1788 1791 1792 1793 } #Gambia - South Senegal
-
 FRA_1798 = { 1794 1799 1800 1802 1804 } #Eastern Mali
-
 FRA_1801 = { 1798 1795 1796 1797 1801 } #Western Mali
-
 FRA_1803 = { 1803 1805 1807 2609 } #Timbuktu
-
 FRA_1883 = { 1879 1880 1881 1882 1883 } #Upper Guinea - Now just Guinea
-
 FRA_1884 = { 1884 1885 1886 } #Sierra Leone
-
 FRA_1878 = { 1876 1877 1878 } #Lower Guinea - Now Guinea-Bissau
-
 ENG_1887 = { 1887 1888 1889 1890 1891 } #Liberia
-
 FRA_1892 = { 1892 1894 1897 1898 1899 } #Ivory Coast - East Ivory Coast
-
 FRA_1893 = { 1893 1895 1896 1900 } #Windward Coast - West Ivory Coast
-
 FRA_1901 = { 1901 1902 1903 1904 1905 1906 } #Houet
-
 ASH_1909 = { 1907 1908 1909 1910 } #Gold Coast - South Ghana
-
 FRA_1907 = { 1912 1911 1913 } #Ghana - North Ghana
-
 ASH_1910 = { 1915 1916 } #Volta
-
 FRA_1914 = { 1914 1917 1918 } #Togo
-
 FRA_1919 = { 1919 1920 1921 1922 } #Dahomey
-
 FRA_1923 = { 1923 1924 1925 1926 1927 } #Yoruba States - West Nigeria Coast
-
 FRA_1927 = { 1938 1939 1940 1941 1946 1948 } #Hausaland - West Central Nigeria
-
 FRA_1930 = { 1928 1929 1930 1931 1932 } #Benin - Central Nigeria Coast
-
 SOK_1934 = { 1933 1934 1935 1936 } #Biafra - East Nigeria Coast
-
 SOK_1945 = { 1945 1947 1949 1952 1951 1953 } #Kano - North Nigeria
-
 SOK_1937 = { 1937 1942 1943 1944 1950 } #Tukari - West Central Nigeria
 
-
 ### Central Africa
-
 SPA_1955 = { 1955 1954 1973 } #Equatorial Guinea
-
 ENG_1956 = { 1956 1957 1958 1959 1962 } #Cameroon
-
 SOK_1963 = { 1963 1964 1960 1961 } #Adamawa
-
 FRA_1965 = { 1965 1966 1967 1968 1970 1971 1969 } #Ubangi-Shari
-
-#FRA_1970 = { } #Bangassou
-
 FRA_1972 = { 1972 1974 1975 1976 } #Gabon
-
 BEL_1977 = { 1982 1983 1985 2000 } #Bas-Congo/Lower Congo
-
 FRA_1978 = { 1977 1978 1980 2624 } #Congo
-
 BEL_1984 = { 1984 1986 1994 1992 1993 1995 } #Kasai
-
 BEL_1987 = { 1987 1988 1989 } #Katanga
-
-#BEL_1992 = { 1992 1993 1995 } #Equateur
-
-#BEL_1996 = { 1996 1997 1998 } #Congo Orientale
-
 BEL_1990 = { 1990 1991 1996 1997 1998 } #Kivu
-
 ENG_2014 = { 790 2012 2013 2014 2015 } #Zambia
-
 ENG_2016 = { 2016 2017 2018 } #Kazembe
-
 ENG_2019 = { 2019 2020 2021 2022 2023 } #Uganda
-
 BEL_2034 = { 2034 2035 } #Ruanda-Urundi
 
-
 ### Southern Africa
-
 POR_1999 = { 1999 2001 2002 2009 } #North Angola
-
 POR_2003 = { 2003 2004 2005 2008 } #South Angola
-
 POR_2006 = { 2006 2007 2010 2011 } #East Angola
-
 POR_2049 = { 2049 2050 2051 } #Lourenço Marques - Gaza - South Mozambique
-
 POR_2053 = { 2059  2065 2054 2056 } #Zambezia - Noth Central Mozambique
-
 POR_2054 = { 2057 2052 2058 2053 2055 } #Tete - Now Sofala - South Central Mozambique
-
 POR_2060 = { 2060 2061 2063 2064 2581 } #Moçambique
-
 ENG_2067 = { 2067 2066 } #Nyasaland
-
 ENG_2068 = { 2068 2070 2635 } #Mashonaland
-
 ENG_2071 = { 2071 2072 2069 2073 } #Matabeleland - Rozwi until matabele moves there
-
 ENG_2074 = { 2074 2075 2076 2077 2574 } #Bechuanaland
-
 ENG_2078 = { 2078 2079 2080 2081 2082 } #Hereroland
-
 ENG_2083 = { 2083 2084 2085 2086 } #Namaqualand
-
 ENG_2087 = { 2087 2090 2089 2091 2092 } #Cape Colony
-
 ENG_2092 = { 2558 2093 2088 2094 2095 } #Northern Cape
-
-#ENG_2094 = { 2094 2095 } #Kimberley - originally Griqualand
-
 ENG_2096 = { 2096 2097 2098 2099 2100 } #Eastern Cape
-
 ORA_2103 = { 2101 2103 2102 2104 } #Vrystaat - originally Basutoland
-
 TRN_2108 = { 2105 2108 2110 2109 2107 2106 2114 } #Transvaal - originally Tky-Gariep
-
 ZUL_2113 = { 2113 2112 2111 } #Zululand - Natal
-
 MAD_2117 = { 2117 2122 2116 2118 } #South Madagascar
-
 MAD_2121 = { 2121 2115 2120 2119 } #North Madagascar
-
 
 ### Mexico
 

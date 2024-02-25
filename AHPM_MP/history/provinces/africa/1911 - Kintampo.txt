@@ -1,5 +1,6 @@
 owner = YYD
 controller = YYD
 add_core = YYD
+add_core = ASH
 trade_goods = cattle
 life_rating = 15

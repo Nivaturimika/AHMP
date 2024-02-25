@@ -1,5 +1,7 @@
 owner = YDA
 controller = YDA
 add_core = YDA
+add_core = OMA
+add_core = ZAN
 trade_goods = grain
 life_rating = 15

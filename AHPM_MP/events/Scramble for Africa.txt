@@ -27,32 +27,39 @@ country_event = {
 		NOT = { has_global_flag = berlin_conference }
 	}
 
-	allow_multiple_instances = no
-
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 
 	option = {
 		name = "EVT95500OPTA"
 		set_global_flag = berlin_conference
 		prestige = 25
 		any_country = {
-			limit = {
-				capital_scope = { continent != africa }
-				any_owned = { continent = africa }
-			}
+			limit = { test = is_african_colonizer }
 			country_event = 955203
 		}
 		any_country = {
-			limit = {
-				capital_scope = { continent = africa }
-				OR = {
-					is_independant = yes
-					overlord = { capital_scope = { continent != africa } }
-				}
-			}
+			limit = { test = is_relevant_colonizable_african_nation }
 			country_event = 95522
+		}
+	}
+}
+
+country_event = {
+	id = 95523
+	title = "EVTNAME95523"
+	desc = "EVTDESC95523"
+	picture = "scramble_for_africa"
+	trigger = {
+		has_global_flag = berlin_conference
+		test = is_relevant_colonizable_african_nation
+		any_country = { test = is_african_colonizer }
+	}
+	mean_time_to_happen = { months = 12 }
+	option = {
+		name = "EVT95523OPTA"
+		any_country = {
+			limit = { test = is_african_colonizer }
+			country_event = 95521
 		}
 	}
 }
@@ -72,6 +79,13 @@ country_event = {
 				target = THIS
 				type = annex_africa
 				months = 1200
+			}
+		}
+		THIS = {
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = annex_africa }
+				call_ally = yes
 			}
 		}
 		ai_chance = {
@@ -160,12 +174,12 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVT95522OPTA"
+		name = "EVT95521OPTB"
 		prestige = 0.125
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVT95523OPTA"
+		name = "EVT95521OPTC"
 		prestige = 10
 		badboy = -2
 		set_country_flag = finished_berlin_conference
@@ -190,8 +204,10 @@ country_event = {
 				}
 				capital_scope = { continent = europe }
 			}
-			leave_alliance = THIS
-			country_event = 95521
+			if = {
+				limit = { has_country_modifier = western_influences }
+				diplomatic_influence = { who = THIS value = 100 }
+			}
 		}
 	}
 	option = {

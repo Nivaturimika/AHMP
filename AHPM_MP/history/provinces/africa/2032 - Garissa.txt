@@ -1,5 +1,7 @@
 owner = YDJ
 controller = YDJ
 add_core = YDJ
+add_core = OMA
+add_core = ZAN
 trade_goods = coffee
 life_rating = 15

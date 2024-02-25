@@ -1,5 +1,6 @@
 owner = YBS
 controller = YBS
 add_core = YBS
+add_core = KON
 trade_goods = grain
 life_rating = 15

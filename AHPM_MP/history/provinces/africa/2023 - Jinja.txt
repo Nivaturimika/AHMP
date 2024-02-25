@@ -1,5 +1,6 @@
 owner = YBE
 controller = YBE
 add_core = YBE
+add_core = BUG
 trade_goods = cotton
 life_rating = 15

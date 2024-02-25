@@ -1,5 +1,6 @@
 owner = YZX
 controller = YZX
 add_core = YZX
+add_core = SOK
 trade_goods = grain
 life_rating = 15

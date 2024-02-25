@@ -1,5 +1,6 @@
 owner = YBH
 controller = YBH
 add_core = YBH
+add_core = KON
 trade_goods = fruit
 life_rating = 15

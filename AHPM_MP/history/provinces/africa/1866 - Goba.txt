@@ -1,5 +1,6 @@
 owner = YFA
 controller = YFA
 add_core = YFA
+add_core = ETH
 trade_goods = cattle
 life_rating = 30

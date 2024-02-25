@@ -1,5 +1,6 @@
 owner = YCB
 controller = YCB
 add_core = YCB
+add_core = KON
 trade_goods = cattle
 life_rating = 15

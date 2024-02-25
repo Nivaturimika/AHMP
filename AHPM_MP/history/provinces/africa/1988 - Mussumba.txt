@@ -1,5 +1,6 @@
 owner = YBR
 controller = YBR
 add_core = YBR
+add_core = KON
 trade_goods = tropical_wood
 life_rating = 15
