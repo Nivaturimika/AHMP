@@ -1067,10 +1067,10 @@ country_event = {
 	picture = "Unite"
 	is_triggered_only = yes
 	mean_time_to_happen = { months = 1 }
-	option = {
-		name = "EVTOPTA60150"
-		war_exhaustion = 5
-	}
+	immediate = { war_exhaustion = 5 }
+	option = { name = "EVTOPTA60150" }
+	option = { name = "EVTOPTB60150" }
+	option = { name = "EVTOPTC60150" }
 }
 
 #Warship commission is ready

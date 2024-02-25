@@ -749,6 +749,7 @@ graphics =
 alice =
 {
     ALICE_FULL_REINFORCE = 0.0,
+    ALICE_MILITARY_SCORE_LEADERSHIP_FACTOR = 0.001,
 }
 
 }
