@@ -1500,10 +1500,6 @@ country_event = {
 	id = 160025
 	title = "EVTNAME160025" #The Death of Hong Xiuquan
 	desc = "EVTDESC160025"
-	news = yes
-	news_desc_long = "EVTDESC160025_NEWS_LONG"
-	news_desc_medium = "EVTDESC160025_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC160025_NEWS_SHORT"
 	picture = "hong_xiuquan"
 	major = yes
 

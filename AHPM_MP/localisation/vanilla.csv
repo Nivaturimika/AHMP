@@ -1784,7 +1784,7 @@ CAL_reactionary;Ursine Imperialist
 CAL_socialist;Radical
 CALC_PATHS;Calculating paths...\nThis may take several minutes.
 CALCULATED_WARSCORE;Peaceoffer value: $VAL$
-call_geneva_convention_desc;Having seen the brutality and horror of the aftermath of the battle of Solferino, Jean Henri Dunant, in 1862, published a witness account of the battle called 'Un Souvenir de Solferino' (A Memory of Solferino), printed at his own expense. Drawing on his experiences, Dunant began formulating ideas about setting up an international organization dedicated to the treating of war wounded, and also toured Switzerland extensively to lecture. Against the backdrop of such ideas, the Swiss parliament, in 1864, called an international convention at Geneva to establish international laws for the conduct of war.
+call_geneva_convention_desc;Having seen the brutality and horror of the aftermath of the battle of Solferino, $CULTURE_FIRST_NAME$ $CULTURE_LAST_NAME$, in $YEAR$, published a witness account of the battle called 'Un Souvenir de Solferino' (A Memory of Solferino), printed at his own expense. Drawing on his experiences, Dunant began formulating ideas about setting up an international organization dedicated to the treating of war wounded, and also toured Switzerland extensively to lecture. Against the backdrop of such ideas, the $COUNTRY_ADJ$ parliament, in $YEAR$, called an international convention at Geneva to establish international laws for the conduct of war.
 call_geneva_convention_title;The Geneva Convention
 CALL_MUST_BE_ALLIES;We must be allied with country to call them into a war.
 CALL_MUST_BE_AT_WAR;We must be at war to call our allies.
@@ -7643,9 +7643,6 @@ forest;Forest
 form_arabia_desc;Brothers, freedom is here, we have won the battle for our destiny. Now the Arab people are on the way to resurrection!
 form_arabia_title;Form Arabia
 form_germany_desc;By controlling, directly or indirectly, the manifold principalities, duchies and free cities that make up the German Nation, we can unite our people into one singular nation state. Three Hurrahs for the German Empire!
-form_germany_NEWS_LONG;The lands and peoples of Germany have once again been united. At a ceremony in Berlin on Monday, the unification of the nation was proclaimed to wild hooting and resounding huzzahs. German nationalism had been on the rise since Napoleonic times, and many statesmen saw this event as inevitable. However, fears have been expressed among diplomats that the new leviathan could upset the continental balance of power and its demographic and industrial might could cause war on an unprecedented scale in Europe should the new Germany challenge the present security system.
-form_germany_NEWS_MEDIUM;The peoples of Germany are united. At a ceremony in Berlin on Monday, the unification of the nation was proclaimed to wild hooting and resounding huzzahs. Fears have been expressed that the new leviathan could upset the balance of power and cause war on an unprecedented scale.
-form_germany_NEWS_SHORT;The peoples and lands of Germany are finally united. At a lavish ceremony in Berlin at the weekend, the unification of the nation was proclaimed to wild hooting and resounding huzzahs.
 form_germany_title;Three Hurrahs For Germany!
 FORM_GOVERMENT_IN_EXILE;Form a Government in Exile.\n
 form_gran_colombia_desc;Gran Colombia was a political federation established in South America in the wake of Simon Bolivar's successful liberation of the territories of Colombia, Venezuela, and Ecuador from Spanish rule. The federation broke apart in 1831. We are in a position to re-unite the North Andean peoples once more if we proclaim a new Gran Colombia.
