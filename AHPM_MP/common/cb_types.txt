@@ -332,7 +332,6 @@ unification_casus_belli = {
 		THIS = {
 			culture_has_union_tag = yes
 			nationalism_n_imperialism = 1
-			is_cultural_union = no
 		}
 		any_state = {
 			any_owned_province = {
@@ -2188,7 +2187,12 @@ make_puppet = {
 
 	can_use = {
 		test = is_warable_country
-		is_greater_power = no
+		THIS = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
 	}
 
 	po_make_puppet = yes
@@ -2233,6 +2237,12 @@ become_independent = {
 
 	can_use = {
 		test = is_warable_country
+		THIS = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
 	}
 
 	allowed_countries = {
