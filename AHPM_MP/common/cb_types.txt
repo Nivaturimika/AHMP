@@ -2260,7 +2260,15 @@ become_independent = {
 			to = pro_military
 			value = 0.25
 		}
-		add_war_goal = { casus_belli = make_puppet }
+		if = {
+			limit = {
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+			}
+			add_war_goal = { casus_belli = make_puppet }
+		}
 		release_vassal = THIS
 	}
 }

@@ -3,11 +3,8 @@ political_decisions = {
 		picture = argentina_chile_border_treaty
 		potential = {
 			test = is_argentina
-			CHL = {
-				exists = yes
-				has_country_flag = occupation_of_araucania
-			}
 			NOT = { has_country_flag = argentina_chile_border_treaty }
+			empiricism = 1
 		}
 
 		allow = {
@@ -22,6 +19,12 @@ political_decisions = {
 			set_country_flag = argentina_chile_border_treaty
 			ARG_2391 = { add_core = THIS }
 			ARG_2398 = { add_core = THIS }
+			MPC = {
+				all_core = {
+					limit = { is_core != CHL }
+					add_core = THIS
+				}
+			}
 			CHL = { country_event = 97090 }
 		}
 
@@ -222,13 +225,7 @@ political_decisions = {
 		potential = {
 			test = is_argentina
 			NOT = { has_country_flag = claimed_argentinian_chaco }
-			2362 = { empty = no }
-			2377 = { empty = no }
-			2364 = { empty = no }
-			2365 = { empty = no }
-			2372 = { empty = no }
-			2366 = { empty = no }
-			2367 = { empty = no }
+			empiricism = 1
 		}
 
 		allow = {

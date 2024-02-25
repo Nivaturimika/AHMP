@@ -205,10 +205,6 @@ country_event = {
 	option = {
 		name = "EVT97090OPTA" #Sign the treaty.
 		CHL_2332 = { add_core = CHL }
-		relation = {
-			who = FROM
-			value = 200
-		}
 		any_owned = {
 			limit = {
 				FROM = {
@@ -255,10 +251,6 @@ country_event = {
 			2335 = { add_core = THIS }
 			2334 = { add_core = THIS }
 			2333 = { add_core = THIS }
-		}
-		relation = {
-			who = FROM
-			value = -50
 		}
 		ai_chance = { factor = 0 }
 	}
