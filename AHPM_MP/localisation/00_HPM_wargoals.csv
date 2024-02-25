@@ -1,8 +1,3 @@
-Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
-steal_puppet;Take Puppet;;;;;;;;;;;;;
-steal_puppet_short;Puppet $THIRD$;;;;;;;;;;;;;
-steal_puppet_desc;Take a �Ypuppet�W from a third country and make it our puppet.;;;;;;;;;;;;;
-steal_puppet_setup;Take $THIRD$ from $RECIPIENT$.;;;;;;;;;;;;;
 cut_down_to_size;Cut Down to Size;;;;;;;;;;;;;
 place_in_the_sun;Place in the Sun;;;;;;;;;;;;;
 acquire_state;Acquire State;;;;;;;;;;;;;

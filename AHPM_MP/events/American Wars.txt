@@ -95,16 +95,14 @@ country_event = {
 		name = "EVT44127OPTA"
 		set_global_flag = mexican_american_war
 		war_exhaustion = -20
-		relation = { who = MEX value = -200 }
-		diplomatic_influence = { who = MEX value = -400 }
-		leave_alliance = MEX
-		set_country_flag = exclusive_acquire_all_cores_CB
-		MEX = { add_country_modifier = { name = war_focus duration = -1 } }
+		diplomatic_influence = { who = FROM value = -400 }
+		leave_alliance = FROM
+		FROM = { add_country_modifier = { name = war_focus duration = -1 } }
 		war = {
-			target = MEX
+			target = FROM
 			attacker_goal = {
 				casus_belli = acquire_all_cores
-				country = USA
+				country = THIS
 			}
 		}
 		any_pop = {

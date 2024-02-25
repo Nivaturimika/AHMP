@@ -92,15 +92,7 @@ is_warable_country = {
 	has_country_modifier != neutrality_modifier
 	THIS = { has_country_modifier != neutrality_modifier }
 	THIS = { has_country_modifier != no_more_war }
-	OR = {
-		has_country_modifier != war_focus
-		THIS = {
-			has_country_flag != exclusive_acquire_all_cores_CB
-			has_country_flag != exclusive_humiliate_CB
-			has_country_flag != exclusive_liberate_country_CB
-			has_country_flag != exclusive_make_puppet_CB
-		}
-	}
+	has_country_modifier != war_focus
 }
 
 has_elections = {

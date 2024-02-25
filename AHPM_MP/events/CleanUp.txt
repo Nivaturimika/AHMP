@@ -140,11 +140,6 @@ country_event = {
 	id = 60020
 	title = "EVTNAME60020"
 	desc = "EVTDESC60020"
-	news = yes
-	news_title = "EVTNAME60020_NEWS_TITLE"
-	news_desc_long = "EVTDESC60020_NEWS_LONG"
-	news_desc_medium = "EVTDESC60020_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60020_NEWS_SHORT"
 	picture = "election"
 
 	trigger = {
@@ -156,11 +151,7 @@ country_event = {
 		OR = {
 			has_country_modifier = regency_government
 			average_militancy = 8
-			NOT = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test != is_monarchy_goverment
 		}
 		OR = {
 			num_of_revolts = 1
@@ -193,14 +184,8 @@ country_event = {
 	major = yes
 	option = {
 		name = "EVTOPTA60020"
-		random_owned = {
-			limit = { owner = { has_country_modifier = regency_government } }
-			owner = { remove_country_modifier = regency_government }
-		}
-		random_owned = {
-			limit = { owner = { has_country_modifier = santa_ana_rule } }
-			owner = { remove_country_modifier = santa_ana_rule }
-		}
+		remove_country_modifier = regency_government
+		remove_country_modifier = santa_ana_rule
 		government = bourgeois_dictatorship
 		political_reform = none_voting
 		political_reform = party_appointed
@@ -214,40 +199,6 @@ country_event = {
 		social_reform = no_subsidies
 		social_reform = no_pensions
 		social_reform = no_health_care
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
 		prestige_factor = -0.1
 		country_event = 800050
 	}
