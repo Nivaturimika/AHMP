@@ -672,12 +672,12 @@ communist_rebels = {
 		political_reform = no_slavery
 		political_reform = mandatory_service
 		random_owned = { limit = { owner = { NOT = { trade_unions = no_trade_unions } } } owner = { political_reform = state_controlled } }
-		social_reform = good_minimum_wage
+		social_reform = dynamic_minimum_wage
 		social_reform = eight_hours
-		social_reform = good_subsidies
-		social_reform = good_pensions
-		social_reform = good_health_care
-		social_reform = good_schools
+		social_reform = state_subsidies
+		social_reform = state_pensions
+		social_reform = public_health_care
+		social_reform = public_schools
 		nationalize = yes
 		add_country_modifier = {
 			name = national_confusion
@@ -3638,24 +3638,24 @@ socialist_rebels = {
 					upper_house_composition = population_equal_weight
 				}
 				OR = {
-					wage_reform = acceptable_minimum_wage
-					wage_reform = good_minimum_wage
+					wage_reform = fixed_minimum_wage
+					wage_reform = dynamic_minimum_wage
 				}
 				OR = {
 					work_hours = ten_hours
 					work_hours = eight_hours
 				}
 				OR = {
-					safety_regulations = acceptable_safety
-					safety_regulations = good_safety
+					safety_regulations = standarized_safety_regulations
+					safety_regulations = standarized_safety_regulations
 				}
 				OR = {
-					unemployment_subsidies = acceptable_subsidies
-					unemployment_subsidies = good_subsidies
+					unemployment_subsidies = state_subsidies
+					unemployment_subsidies = state_subsidies
 				}
 				OR = {
-					pensions = acceptable_pensions
-					pensions = good_pensions
+					pensions = state_pensions
+					pensions = state_pensions
 				}
 				trade_unions = all_trade_unions
 				child_labor = child_labor_illegal
@@ -3688,24 +3688,24 @@ socialist_rebels = {
 					vote_franschise = universal_voting
 				}
 				OR = {
-					wage_reform = acceptable_minimum_wage
-					wage_reform = good_minimum_wage
+					wage_reform = fixed_minimum_wage
+					wage_reform = dynamic_minimum_wage
 				}
 				OR = {
 					work_hours = ten_hours
 					work_hours = eight_hours
 				}
 				OR = {
-					safety_regulations = acceptable_safety
-					safety_regulations = good_safety
+					safety_regulations = standarized_safety_regulations
+					safety_regulations = standarized_safety_regulations
 				}
 				OR = {
-					unemployment_subsidies = acceptable_subsidies
-					unemployment_subsidies = good_subsidies
+					unemployment_subsidies = state_subsidies
+					unemployment_subsidies = state_subsidies
 				}
 				OR = {
-					pensions = acceptable_pensions
-					pensions = good_pensions
+					pensions = state_pensions
+					pensions = state_pensions
 				}
 				trade_unions = all_trade_unions
 				child_labor = child_labor_illegal
@@ -3838,20 +3838,20 @@ socialist_rebels = {
 
 		#Minimum Wage
 			random_owned = {
-				limit = { owner = { wage_reform = acceptable_minimum_wage } }
-				owner = { social_reform = good_minimum_wage }
+				limit = { owner = { wage_reform = fixed_minimum_wage } }
+				owner = { social_reform = dynamic_minimum_wage }
 			}
 			random_owned = {
-				limit = { owner = { wage_reform = low_minimum_wage } }
-				owner = { social_reform = acceptable_minimum_wage }
+				limit = { owner = { wage_reform = state_concerted_minimum_wage } }
+				owner = { social_reform = fixed_minimum_wage }
 			}
 			random_owned = {
-				limit = { owner = { wage_reform = trinket_wage } }
-				owner = { social_reform = low_minimum_wage }
+				limit = { owner = { wage_reform = state_concerted_minimum_wage } }
+				owner = { social_reform = state_concerted_minimum_wage }
 			}
 			random_owned = {
 				limit = { owner = { wage_reform = no_minimum_wage } }
-				owner = { social_reform = trinket_wage }
+				owner = { social_reform = state_concerted_minimum_wage }
 			}
 		#Work Hours
 			random_owned = {
@@ -3872,54 +3872,54 @@ socialist_rebels = {
 			}
 		#Safety Regulations
 			random_owned = {
-				limit = { owner = { safety_regulations = acceptable_safety } }
-				owner = { social_reform = good_safety }
+				limit = { owner = { safety_regulations = standarized_safety_regulations } }
+				owner = { social_reform = standarized_safety_regulations }
 			}
 			random_owned = {
-				limit = { owner = { safety_regulations = low_safety } }
-				owner = { social_reform = acceptable_safety }
+				limit = { owner = { safety_regulations = state_concerted_safety_regulations } }
+				owner = { social_reform = standarized_safety_regulations }
 			}
 			random_owned = {
-				limit = { owner = { safety_regulations = trinket_safety } }
-				owner = { social_reform = low_safety }
+				limit = { owner = { safety_regulations = self_regulating_safety_regulations } }
+				owner = { social_reform = state_concerted_safety_regulations }
 			}
 			random_owned = {
 				limit = { owner = { safety_regulations = no_safety } }
-				owner = { social_reform = trinket_safety }
+				owner = { social_reform = self_regulating_safety_regulations }
 			}
 		#Unemployment Subsides
 			random_owned = {
-				limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
-				owner = { social_reform = good_subsidies }
+				limit = { owner = { unemployment_subsidies = state_subsidies } }
+				owner = { social_reform = state_subsidies }
 			}
 			random_owned = {
-				limit = { owner = { unemployment_subsidies = low_subsidies } }
-				owner = { social_reform = acceptable_subsidies }
+				limit = { owner = { unemployment_subsidies = state_subsidies } }
+				owner = { social_reform = state_subsidies }
 			}
 			random_owned = {
-				limit = { owner = { unemployment_subsidies = trinket_subsidies } }
-				owner = { social_reform = low_subsidies }
+				limit = { owner = { unemployment_subsidies = limited_subsidies } }
+				owner = { social_reform = state_subsidies }
 			}
 			random_owned = {
 				limit = { owner = { unemployment_subsidies = no_subsidies } }
-				owner = { social_reform = trinket_subsidies }
+				owner = { social_reform = limited_subsidies }
 			}
 		#Pensions
 			random_owned = {
-				limit = { owner = { pensions = acceptable_pensions } }
-				owner = { social_reform = good_pensions }
+				limit = { owner = { pensions = state_pensions } }
+				owner = { social_reform = state_pensions }
 			}
 			random_owned = {
-				limit = { owner = { pensions = low_pensions } }
-				owner = { social_reform = acceptable_pensions }
+				limit = { owner = { pensions = state_pensions } }
+				owner = { social_reform = state_pensions }
 			}
 			random_owned = {
-				limit = { owner = { pensions = trinket_pensions } }
-				owner = { social_reform = low_pensions }
+				limit = { owner = { pensions = limited_pensions } }
+				owner = { social_reform = state_pensions }
 			}
 			random_owned = {
 				limit = { owner = { pensions = no_pensions } }
-				owner = { social_reform = trinket_pensions }
+				owner = { social_reform = limited_pensions }
 			}
 		#Child Labor
 			random_owned = {

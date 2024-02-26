@@ -21,19 +21,19 @@ country_event = {
 
 		modifier = {
 			factor = 0.9
-			safety_regulations = trinket_safety
+			safety_regulations = self_regulating_safety_regulations
 		}
 		modifier = {
 			factor = 2
-			safety_regulations = low_safety
+			safety_regulations = state_concerted_safety_regulations
 		}
 		modifier = {
 			factor = 6
-			safety_regulations = acceptable_safety
+			safety_regulations = standarized_safety_regulations
 		}
 		modifier = {
 			factor = 8
-			safety_regulations = good_safety
+			safety_regulations = standarized_safety_regulations
 		}
 	}
 
@@ -80,7 +80,7 @@ country_event = {
 		}
 		child_labor = child_labor_legal
 		OR = {
-			safety_regulations = trinket_safety
+			safety_regulations = self_regulating_safety_regulations
 			safety_regulations = no_safety
 		}
 	}
@@ -104,7 +104,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA12010"
 		add_country_modifier = { name = conservative_reaction duration = 1825 }
-		social_reform = low_safety
+		social_reform = state_concerted_safety_regulations
 	}
 
 	option = {
@@ -663,11 +663,11 @@ country_event = {
 		months = 1000
 		modifier = {
 			factor = 1.3
-			safety_regulations = acceptable_safety
+			safety_regulations = standarized_safety_regulations
 		}
 		modifier = {
 			factor = 1.5
-			safety_regulations = good_safety
+			safety_regulations = standarized_safety_regulations
 		}
 		modifier = {
 			factor = 0.9
@@ -741,8 +741,8 @@ country_event = {
 		any_state = { has_building = dye_factory }
 		dye = 15
 		NOT = {
-			safety_regulations = acceptable_safety
-			safety_regulations = good_safety
+			safety_regulations = standarized_safety_regulations
+			safety_regulations = standarized_safety_regulations
 		}
 	}
 
@@ -753,7 +753,7 @@ country_event = {
 			NOT = {
 				OR = {
 					safety_regulations = no_safety
-					safety_regulations = trinket_safety
+					safety_regulations = self_regulating_safety_regulations
 				}
 			}
 		}
@@ -797,11 +797,11 @@ country_event = {
 		months = 800
 		modifier = {
 			factor = 1.5
-			safety_regulations = good_safety
+			safety_regulations = standarized_safety_regulations
 		}
 		modifier = {
 			factor = 1.3
-			safety_regulations = acceptable_safety
+			safety_regulations = standarized_safety_regulations
 		}
 		modifier = {
 			factor = 0.9
@@ -872,8 +872,8 @@ country_event = {
 	trigger = {
 		produces = iron
 		has_pop_type = capitalists
-		NOT = { safety_regulations = acceptable_safety }
-		NOT = { safety_regulations = good_safety }
+		NOT = { safety_regulations = standarized_safety_regulations }
+		NOT = { safety_regulations = standarized_safety_regulations }
 	}
 
 	mean_time_to_happen = {
@@ -1110,8 +1110,8 @@ province_event = {
 		is_capital = no
 		owner = {
 			NOT = {
-				safety_regulations = acceptable_safety
-				safety_regulations = good_safety
+				safety_regulations = standarized_safety_regulations
+				safety_regulations = standarized_safety_regulations
 			}
 		}
 	}
@@ -1128,7 +1128,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.3
-			owner = { safety_regulations = trinket_safety }
+			owner = { safety_regulations = self_regulating_safety_regulations }
 		}
 	}
 

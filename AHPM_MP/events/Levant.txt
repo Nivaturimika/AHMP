@@ -32,23 +32,23 @@ country_event = {
                     OR = { has_pop_religion = catholic has_pop_religion = orthodox }
                     country = { school_reforms = no_schools }
                 }
-                dominant_issue = { factor = 0.3 value = low_schools }
+                dominant_issue = { factor = 0.3 value = private_schools }
             }
 
             any_pop = {
                 limit = {
                     OR = { has_pop_religion = catholic has_pop_religion = orthodox }
-                    country = { school_reforms = low_schools }
+                    country = { school_reforms = private_schools }
                 }
-                dominant_issue = { factor = 0.3 value = acceptable_schools }
+                dominant_issue = { factor = 0.3 value = mixed_schools }
             }
 
             any_pop = {
                 limit = {
                     OR = { has_pop_religion = catholic has_pop_religion = orthodox }
-                    country = { school_reforms = acceptable_schools }
+                    country = { school_reforms = mixed_schools }
                 }
-                dominant_issue = { factor = 0.3 value = good_schools }
+                dominant_issue = { factor = 0.3 value = public_schools }
             }
 
             any_pop = {

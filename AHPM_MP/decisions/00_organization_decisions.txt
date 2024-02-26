@@ -55,17 +55,17 @@ political_decisions = {
 					NOT = { has_country_flag = in_great_war }
 				}
 				AND = {
-					conscription = one_year_draft
+					conscription = voluntary_draft
 					NOT = { has_country_flag = in_great_war }
 				}
 				AND = {
-					conscription = two_year_draft
+					conscription = voluntary_draft
 					NOT = { has_country_flag = in_great_war }
 				}
 				AND = {
 					NOT = { conscription = mandatory_service }
 					OR = {
-						conscription = four_year_draft
+						conscription = voluntary_draft
 						government = fascist_dictatorship
 						government = proletarian_dictatorship
 						has_country_flag = in_great_war
@@ -85,12 +85,12 @@ political_decisions = {
 				AND = {
 					NOT = { OR = { war_policy = pacifism war_policy = anti_military } }
 					OR = {
-						conscription = one_year_draft
-						conscription = two_year_draft
+						conscription = voluntary_draft
+						conscription = voluntary_draft
 					}
 				}
 				AND = {
-					conscription = four_year_draft
+					conscription = voluntary_draft
 					OR = {
 						war_policy = jingoism
 						government = fascist_dictatorship
@@ -116,17 +116,17 @@ political_decisions = {
 				}
 				political_reform = mandatory_service
 			} else_if = {
-				limit = { conscription = four_year_draft }
+				limit = { conscription = voluntary_draft }
 				political_reform = mandatory_service
 			} else_if = {
-				limit = { conscription = two_year_draft }
-				political_reform = four_year_draft
+				limit = { conscription = voluntary_draft }
+				political_reform = voluntary_draft
 			} else_if = {
-				limit = { conscription = one_year_draft }
-				political_reform = two_year_draft
+				limit = { conscription = voluntary_draft }
+				political_reform = voluntary_draft
 			} else_if = {
 				limit = { conscription = no_draft }
-				political_reform = one_year_draft
+				political_reform = voluntary_draft
 			}
 		}
 		ai_will_do = { factor = 0 }

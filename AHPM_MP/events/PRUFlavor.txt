@@ -360,7 +360,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA34607"
-		social_reform = trinket_safety
+		social_reform = self_regulating_safety_regulations
 		capitalists = {
 			consciousness = 2
 		}
@@ -730,7 +730,7 @@ country_event = {
 		political_reform = yes_meeting
 		political_reform = no_trade_unions
 		political_reform = mandatory_service
-		social_reform = trinket_health_care
+		social_reform = private_health_care
 		any_pop = { militancy = -4 }
 		any_pop = {
 			scaled_militancy = {

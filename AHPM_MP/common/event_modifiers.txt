@@ -274,7 +274,7 @@ native_removal_act_policy = {
 	icon = 18
 }
 
-#local_trinket_health_care = {
+#local_private_health_care = {
 #    #population_growth = 0.002
 #    icon = 19
 #}

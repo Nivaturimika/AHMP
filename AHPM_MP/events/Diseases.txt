@@ -33,12 +33,12 @@ country_event = {
 
 		modifier = {
 			factor = 1.2
-			health_care = acceptable_health_care
+			health_care = public_health_care
 		}
 
 		modifier = {
 			factor = 1.5
-			health_care = good_health_care
+			health_care = public_health_care
 		}
 	}
 
@@ -138,12 +138,12 @@ country_event = {
 
 		modifier = {
 			factor = 1.2
-			health_care = acceptable_health_care
+			health_care = public_health_care
 		}
 
 		modifier = {
 			factor = 1.5
-			health_care = good_health_care
+			health_care = public_health_care
 		}
 
 		modifier = {
@@ -223,12 +223,12 @@ country_event = {
 
 		modifier = {
 			factor = 1.2
-			health_care = acceptable_health_care
+			health_care = public_health_care
 		}
 
 		modifier = {
 			factor = 1.5
-			health_care = good_health_care
+			health_care = public_health_care
 		}
 
 		modifier = {
@@ -377,12 +377,12 @@ country_event = {
 
 		modifier = {
 			factor = 2
-			health_care = acceptable_health_care
+			health_care = public_health_care
 		}
 
 		modifier = {
 			factor = 2
-			health_care = good_health_care
+			health_care = public_health_care
 		}
 	}
 
@@ -528,11 +528,11 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.2
-			health_care = acceptable_health_care
+			health_care = public_health_care
 		}
 		modifier = {
 			factor = 1.5
-			health_care = good_health_care
+			health_care = public_health_care
 		}
 	}
 

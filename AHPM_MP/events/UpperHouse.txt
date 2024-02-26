@@ -347,7 +347,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		social_reform_want = 0.2
-		NOT = { wage_reform = good_minimum_wage }
+		NOT = { wage_reform = dynamic_minimum_wage }
 		upper_house = {
 			ideology = socialist
 			value = 0.2
@@ -442,7 +442,7 @@ country_event = {
 		name = "EVTOPTA18100"
 		any_pop = {
 			dominant_issue = {
-				value = trinket_health_care
+				value = private_health_care
 				factor = 0.2
 			}
 			militancy = 1
@@ -452,7 +452,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB18100"
-		social_reform = trinket_health_care
+		social_reform = private_health_care
 		scaled_militancy = {
 			ideology = conservative
 			factor = 4
@@ -488,7 +488,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA18110"
-		social_reform = trinket_subsidies
+		social_reform = limited_subsidies
 		any_pop = {
 			militancy = -1
 		}
@@ -501,7 +501,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB18110"
 		scaled_militancy = {
-			issue = trinket_subsidies
+			issue = limited_subsidies
 			factor = 8
 		}
 	}

@@ -26,14 +26,14 @@ political_parties = non_secret_ballots
 # Social Reforms
 wage_reform = no_minimum_wage
 work_hours = no_work_hour_limit
-safety_regulations = trinket_safety
+safety_regulations = self_regulating_safety_regulations
 health_care = no_health_care
-unemployment_subsidies = trinket_subsidies
+unemployment_subsidies = limited_subsidies
 pensions = no_pensions
-school_reforms = low_schools
+school_reforms = private_schools
 
 #New Reforms
-conscription = one_year_draft
+conscription = voluntary_draft
 debt_law = debtors_prisons
 penal_system = colonial_transportation
 child_labor = child_labor_restricted

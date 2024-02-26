@@ -24,8 +24,8 @@ political_parties = non_secret_ballots
 # Social Reforms
 wage_reform = no_minimum_wage
 work_hours = fourteen_hours
-safety_regulations = trinket_safety
-health_care = trinket_health_care
+safety_regulations = self_regulating_safety_regulations
+health_care = private_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools

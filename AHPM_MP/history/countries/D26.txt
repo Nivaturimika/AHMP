@@ -42,7 +42,7 @@ upper_house = { # inherit
     communist = 0
 }
 #New Reforms
-conscription = two_year_draft
+conscription = voluntary_draft
 debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal

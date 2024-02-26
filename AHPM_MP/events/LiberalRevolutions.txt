@@ -4013,34 +4013,34 @@ country_event = {
 
 		##Health Care
 		random_owned = {
-			limit = { owner = { health_care = trinket_health_care } }
-			HUN = { social_reform = trinket_health_care }
+			limit = { owner = { health_care = private_health_care } }
+			HUN = { social_reform = private_health_care }
 		}
 		random_owned = {
-			limit = { owner = { health_care = low_health_care } }
-			HUN = { social_reform = low_health_care }
+			limit = { owner = { health_care = mixed_health_care } }
+			HUN = { social_reform = mixed_health_care }
 		}
 		random_owned = {
-			limit = { owner = { health_care = acceptable_health_care } }
-			HUN = { social_reform = acceptable_health_care }
+			limit = { owner = { health_care = public_health_care } }
+			HUN = { social_reform = public_health_care }
 		}
 		random_owned = {
-			limit = { owner = { health_care = good_health_care } }
-			HUN = { social_reform = good_health_care }
+			limit = { owner = { health_care = public_health_care } }
+			HUN = { social_reform = public_health_care }
 		}
 
 		##Schools
 		random_owned = {
-			limit = { owner = { school_reforms = low_schools } }
-			HUN = { social_reform = low_schools }
+			limit = { owner = { school_reforms = private_schools } }
+			HUN = { social_reform = private_schools }
 		}
 		random_owned = {
-			limit = { owner = { school_reforms = acceptable_schools } }
-			HUN = { social_reform = acceptable_schools }
+			limit = { owner = { school_reforms = mixed_schools } }
+			HUN = { social_reform = mixed_schools }
 		}
 		random_owned = {
-			limit = { owner = { school_reforms = good_schools } }
-			HUN = { social_reform = good_schools }
+			limit = { owner = { school_reforms = public_schools } }
+			HUN = { social_reform = public_schools }
 		}
 
 		##Penal System
@@ -4060,20 +4060,20 @@ country_event = {
 
 		##Min Wage
 		random_owned = {
-			limit = { owner = { wage_reform = trinket_wage } }
-			HUN = { social_reform = trinket_wage }
+			limit = { owner = { wage_reform = state_concerted_minimum_wage } }
+			HUN = { social_reform = state_concerted_minimum_wage }
 		}
 		random_owned = {
-			limit = { owner = { wage_reform = low_minimum_wage } }
-			HUN = { social_reform = low_minimum_wage }
+			limit = { owner = { wage_reform = state_concerted_minimum_wage } }
+			HUN = { social_reform = state_concerted_minimum_wage }
 		}
 		random_owned = {
-			limit = { owner = { wage_reform = acceptable_minimum_wage } }
-			HUN = { social_reform = acceptable_minimum_wage }
+			limit = { owner = { wage_reform = fixed_minimum_wage } }
+			HUN = { social_reform = fixed_minimum_wage }
 		}
 		random_owned = {
-			limit = { owner = { wage_reform = good_minimum_wage } }
-			HUN = { social_reform = good_minimum_wage }
+			limit = { owner = { wage_reform = dynamic_minimum_wage } }
+			HUN = { social_reform = dynamic_minimum_wage }
 		}
 
 		##Work Hours
@@ -4096,56 +4096,56 @@ country_event = {
 
 		##Safety Regulations
 		random_owned = {
-			limit = { owner = { safety_regulations = trinket_safety } }
-			HUN = { social_reform = trinket_safety }
+			limit = { owner = { safety_regulations = self_regulating_safety_regulations } }
+			HUN = { social_reform = self_regulating_safety_regulations }
 		}
 		random_owned = {
-			limit = { owner = { safety_regulations = low_safety } }
-			HUN = { social_reform = low_safety }
+			limit = { owner = { safety_regulations = state_concerted_safety_regulations } }
+			HUN = { social_reform = state_concerted_safety_regulations }
 		}
 		random_owned = {
-			limit = { owner = { safety_regulations = acceptable_safety } }
-			HUN = { social_reform = acceptable_safety }
+			limit = { owner = { safety_regulations = standarized_safety_regulations } }
+			HUN = { social_reform = standarized_safety_regulations }
 		}
 		random_owned = {
-			limit = { owner = { safety_regulations = good_safety } }
-			HUN = { social_reform = good_safety }
+			limit = { owner = { safety_regulations = standarized_safety_regulations } }
+			HUN = { social_reform = standarized_safety_regulations }
 		}
 
 		##unemployment_subsidies
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = trinket_subsidies } }
-			HUN = { social_reform = trinket_subsidies }
+			limit = { owner = { unemployment_subsidies = limited_subsidies } }
+			HUN = { social_reform = limited_subsidies }
 		}
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = low_subsidies } }
-			HUN = { social_reform = low_subsidies }
+			limit = { owner = { unemployment_subsidies = state_subsidies } }
+			HUN = { social_reform = state_subsidies }
 		}
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
-			HUN = { social_reform = acceptable_subsidies }
+			limit = { owner = { unemployment_subsidies = state_subsidies } }
+			HUN = { social_reform = state_subsidies }
 		}
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = good_subsidies } }
-			HUN = { social_reform = good_subsidies }
+			limit = { owner = { unemployment_subsidies = state_subsidies } }
+			HUN = { social_reform = state_subsidies }
 		}
 
 		##pensions
 		random_owned = {
-			limit = { owner = { pensions = trinket_pensions } }
-			HUN = { social_reform = trinket_pensions }
+			limit = { owner = { pensions = limited_pensions } }
+			HUN = { social_reform = limited_pensions }
 		}
 		random_owned = {
-			limit = { owner = { pensions = low_pensions } }
-			HUN = { social_reform = low_pensions }
+			limit = { owner = { pensions = state_pensions } }
+			HUN = { social_reform = state_pensions }
 		}
 		random_owned = {
-			limit = { owner = { pensions = acceptable_pensions } }
-			HUN = { social_reform = acceptable_pensions }
+			limit = { owner = { pensions = state_pensions } }
+			HUN = { social_reform = state_pensions }
 		}
 		random_owned = {
-			limit = { owner = { pensions = good_pensions } }
-			HUN = { social_reform = good_pensions }
+			limit = { owner = { pensions = state_pensions } }
+			HUN = { social_reform = state_pensions }
 		}
 		ai_chance = {
 			factor = 95
@@ -4339,34 +4339,34 @@ country_event = {
 
 		##Health Care
 		random_owned = {
-			limit = { owner = { health_care = trinket_health_care } }
-			HUN = { social_reform = trinket_health_care }
+			limit = { owner = { health_care = private_health_care } }
+			HUN = { social_reform = private_health_care }
 		}
 		random_owned = {
-			limit = { owner = { health_care = low_health_care } }
-			HUN = { social_reform = low_health_care }
+			limit = { owner = { health_care = mixed_health_care } }
+			HUN = { social_reform = mixed_health_care }
 		}
 		random_owned = {
-			limit = { owner = { health_care = acceptable_health_care } }
-			HUN = { social_reform = acceptable_health_care }
+			limit = { owner = { health_care = public_health_care } }
+			HUN = { social_reform = public_health_care }
 		}
 		random_owned = {
-			limit = { owner = { health_care = good_health_care } }
-			HUN = { social_reform = good_health_care }
+			limit = { owner = { health_care = public_health_care } }
+			HUN = { social_reform = public_health_care }
 		}
 
 		##Schools
 		random_owned = {
-			limit = { owner = { school_reforms = low_schools } }
-			HUN = { social_reform = low_schools }
+			limit = { owner = { school_reforms = private_schools } }
+			HUN = { social_reform = private_schools }
 		}
 		random_owned = {
-			limit = { owner = { school_reforms = acceptable_schools } }
-			HUN = { social_reform = acceptable_schools }
+			limit = { owner = { school_reforms = mixed_schools } }
+			HUN = { social_reform = mixed_schools }
 		}
 		random_owned = {
-			limit = { owner = { school_reforms = good_schools } }
-			HUN = { social_reform = good_schools }
+			limit = { owner = { school_reforms = public_schools } }
+			HUN = { social_reform = public_schools }
 		}
 
 		##Penal System
@@ -4386,20 +4386,20 @@ country_event = {
 
 		##Min Wage
 		random_owned = {
-			limit = { owner = { wage_reform = trinket_wage } }
-			HUN = { social_reform = trinket_wage }
+			limit = { owner = { wage_reform = state_concerted_minimum_wage } }
+			HUN = { social_reform = state_concerted_minimum_wage }
 		}
 		random_owned = {
-			limit = { owner = { wage_reform = low_minimum_wage } }
-			HUN = { social_reform = low_minimum_wage }
+			limit = { owner = { wage_reform = state_concerted_minimum_wage } }
+			HUN = { social_reform = state_concerted_minimum_wage }
 		}
 		random_owned = {
-			limit = { owner = { wage_reform = acceptable_minimum_wage } }
-			HUN = { social_reform = acceptable_minimum_wage }
+			limit = { owner = { wage_reform = fixed_minimum_wage } }
+			HUN = { social_reform = fixed_minimum_wage }
 		}
 		random_owned = {
-			limit = { owner = { wage_reform = good_minimum_wage } }
-			HUN = { social_reform = good_minimum_wage }
+			limit = { owner = { wage_reform = dynamic_minimum_wage } }
+			HUN = { social_reform = dynamic_minimum_wage }
 		}
 
 		##Work Hours
@@ -4422,56 +4422,56 @@ country_event = {
 
 		##Safety Regulations
 		random_owned = {
-			limit = { owner = { safety_regulations = trinket_safety } }
-			HUN = { social_reform = trinket_safety }
+			limit = { owner = { safety_regulations = self_regulating_safety_regulations } }
+			HUN = { social_reform = self_regulating_safety_regulations }
 		}
 		random_owned = {
-			limit = { owner = { safety_regulations = low_safety } }
-			HUN = { social_reform = low_safety }
+			limit = { owner = { safety_regulations = state_concerted_safety_regulations } }
+			HUN = { social_reform = state_concerted_safety_regulations }
 		}
 		random_owned = {
-			limit = { owner = { safety_regulations = acceptable_safety } }
-			HUN = { social_reform = acceptable_safety }
+			limit = { owner = { safety_regulations = standarized_safety_regulations } }
+			HUN = { social_reform = standarized_safety_regulations }
 		}
 		random_owned = {
-			limit = { owner = { safety_regulations = good_safety } }
-			HUN = { social_reform = good_safety }
+			limit = { owner = { safety_regulations = standarized_safety_regulations } }
+			HUN = { social_reform = standarized_safety_regulations }
 		}
 
 		##unemployment_subsidies
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = trinket_subsidies } }
-			HUN = { social_reform = trinket_subsidies }
+			limit = { owner = { unemployment_subsidies = limited_subsidies } }
+			HUN = { social_reform = limited_subsidies }
 		}
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = low_subsidies } }
-			HUN = { social_reform = low_subsidies }
+			limit = { owner = { unemployment_subsidies = state_subsidies } }
+			HUN = { social_reform = state_subsidies }
 		}
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
-			HUN = { social_reform = acceptable_subsidies }
+			limit = { owner = { unemployment_subsidies = state_subsidies } }
+			HUN = { social_reform = state_subsidies }
 		}
 		random_owned = {
-			limit = { owner = { unemployment_subsidies = good_subsidies } }
-			HUN = { social_reform = good_subsidies }
+			limit = { owner = { unemployment_subsidies = state_subsidies } }
+			HUN = { social_reform = state_subsidies }
 		}
 
 		##pensions
 		random_owned = {
-			limit = { owner = { pensions = trinket_pensions } }
-			HUN = { social_reform = trinket_pensions }
+			limit = { owner = { pensions = limited_pensions } }
+			HUN = { social_reform = limited_pensions }
 		}
 		random_owned = {
-			limit = { owner = { pensions = low_pensions } }
-			HUN = { social_reform = low_pensions }
+			limit = { owner = { pensions = state_pensions } }
+			HUN = { social_reform = state_pensions }
 		}
 		random_owned = {
-			limit = { owner = { pensions = acceptable_pensions } }
-			HUN = { social_reform = acceptable_pensions }
+			limit = { owner = { pensions = state_pensions } }
+			HUN = { social_reform = state_pensions }
 		}
 		random_owned = {
-			limit = { owner = { pensions = good_pensions } }
-			HUN = { social_reform = good_pensions }
+			limit = { owner = { pensions = state_pensions } }
+			HUN = { social_reform = state_pensions }
 		}
 
 		change_tag_no_core_switch = HUN

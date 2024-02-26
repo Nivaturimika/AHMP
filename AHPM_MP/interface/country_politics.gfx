@@ -416,4 +416,13 @@ spriteTypes = {
 		loadType = "INGAME"
 		norefcount = yes
 	}
+
+	spriteType = {
+		name = "GFX_politics_issue_header"
+		texturefile = "gfx\\interface\\politics_issue_header.dds"
+	}
+	spriteType = {
+		name = "GFX_politics_issue_bg"
+		texturefile = "gfx\\interface\\politics_issue_bg.dds"
+	}
 }

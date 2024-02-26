@@ -1130,7 +1130,7 @@ country_event = {
 		civilized = yes
 		OR = {
 			unemployment_subsidies = no_subsidies
-			unemployment_subsidies = trinket_subsidies
+			unemployment_subsidies = limited_subsidies
 		}
 		public_meetings = yes_meeting
 		unemployment = 0.1
@@ -4091,10 +4091,10 @@ country_event = {
 		political_reform = underground_parties
 		political_reform = no_slavery
 		political_reform = debtors_prisons
-		social_reform = good_minimum_wage
+		social_reform = dynamic_minimum_wage
 		social_reform = eight_hours
-		social_reform = good_subsidies
-		social_reform = good_pensions
+		social_reform = state_subsidies
+		social_reform = state_pensions
 		create_alliance = FROM
 		relation = { who = FROM value = 200 }
 		FROM = { diplomatic_influence = { who = THIS value = 100 } }

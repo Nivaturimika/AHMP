@@ -183,7 +183,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB44104"
-		social_reform = low_schools
+		social_reform = private_schools
 		ai_chance = { factor = 0.9 }
 	}
 

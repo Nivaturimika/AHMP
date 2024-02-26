@@ -67,7 +67,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA36601"
 		prestige = 1
-		social_reform = low_schools
+		social_reform = private_schools
 	}
 }
 

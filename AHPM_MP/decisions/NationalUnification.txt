@@ -1317,8 +1317,8 @@ political_decisions = {
 			literacy = 0.5
 			NOT = { has_country_modifier = national_confusion }
 			OR = {
-				school_reforms = acceptable_schools
-				school_reforms = good_schools
+				school_reforms = mixed_schools
+				school_reforms = public_schools
 			}
 			OR = {
 				average_consciousness = 6

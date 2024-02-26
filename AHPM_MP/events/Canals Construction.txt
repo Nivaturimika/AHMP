@@ -217,17 +217,17 @@ country_event = {
 			random_list = {
 					34 = {
 						reduce_pop = 0.99
-						dominant_issue = { value = trinket_safety factor = 0.2 }
+						dominant_issue = { value = self_regulating_safety_regulations factor = 0.2 }
 						militancy = 0.5
 					}
 					33 = {
 						reduce_pop = 0.98
-						dominant_issue = { value = trinket_safety factor = 0.3 }
+						dominant_issue = { value = self_regulating_safety_regulations factor = 0.3 }
 						militancy = 1
 					}
 					33 = {
 						reduce_pop = 0.97
-						dominant_issue = { value = trinket_safety factor = 0.3 }
+						dominant_issue = { value = self_regulating_safety_regulations factor = 0.3 }
 						militancy = 1.5
 					}
 				}
@@ -824,27 +824,27 @@ country_event = {
 					20 = {
 						reduce_pop = 0.98
 						militancy = 1
-						dominant_issue = { value = low_safety factor = 0.3 }
+						dominant_issue = { value = state_concerted_safety_regulations factor = 0.3 }
 					}
 					20 = {
 						reduce_pop = 0.97
 						militancy = 1.5
-						dominant_issue = { value = low_safety factor = 0.35 }
+						dominant_issue = { value = state_concerted_safety_regulations factor = 0.35 }
 					}
 					20 = {
 						reduce_pop = 0.96
 						militancy = 2
-						dominant_issue = { value = low_safety factor = 0.4 }
+						dominant_issue = { value = state_concerted_safety_regulations factor = 0.4 }
 					}
 					20 = {
 						reduce_pop = 0.95
 						militancy = 2.5
-						dominant_issue = { value = low_safety factor = 0.45 }
+						dominant_issue = { value = state_concerted_safety_regulations factor = 0.45 }
 					}
 					20 = {
 						reduce_pop = 0.94
 						militancy = 3
-						dominant_issue = { value = low_safety factor = 0.5 }
+						dominant_issue = { value = state_concerted_safety_regulations factor = 0.5 }
 					}
 				}
 			}

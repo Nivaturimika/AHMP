@@ -1420,8 +1420,8 @@ political_decisions = {
 				}
 			}
 			OR = {
-				school_reforms = acceptable_schools
-				school_reforms = good_schools
+				school_reforms = mixed_schools
+				school_reforms = public_schools
 			}
 		}
 

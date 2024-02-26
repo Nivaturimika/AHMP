@@ -380,7 +380,7 @@ political_decisions = {
 				limit = {
 					owner = { school_reforms = no_schools }
 					}
-				owner = { social_reform = low_schools }
+				owner = { social_reform = private_schools }
 			}
 		}
 
@@ -1617,23 +1617,23 @@ political_decisions = {
 			any_pop = { limit = { has_pop_culture = japanese } militancy = -1 consciousness = -2 }
 			random_owned = {
 				limit = {
-					owner = { school_reforms = acceptable_schools }
+					owner = { school_reforms = mixed_schools }
 					}
-				owner = { social_reform = good_schools }
+				owner = { social_reform = public_schools }
 			}
 
 			random_owned = {
 				limit = {
-					owner = { school_reforms = low_schools }
+					owner = { school_reforms = private_schools }
 					}
-				owner = { social_reform = acceptable_schools }
+				owner = { social_reform = mixed_schools }
 			}
 
 			random_owned = {
 				limit = {
 					owner = { school_reforms = no_schools }
 					}
-				owner = { social_reform = low_schools }
+				owner = { social_reform = private_schools }
 			}
 		}
 

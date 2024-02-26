@@ -2137,8 +2137,8 @@ country_event = {
 			factor = 0.9
 			NOT = {
 				OR = {
-					health_care = good_health_care
-					health_care = acceptable_health_care
+					health_care = public_health_care
+					health_care = public_health_care
 				}
 			}
 		}
@@ -2174,7 +2174,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 2
-			health_care = good_health_care
+			health_care = public_health_care
 		}
 		modifier = {
 			factor = 2

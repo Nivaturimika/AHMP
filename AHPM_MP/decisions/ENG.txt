@@ -1175,7 +1175,7 @@ political_decisions = {
 
 		potential = {
 			tag = ENG
-			NOT = { school_reforms = good_schools}
+			NOT = { school_reforms = public_schools}
 			NOT = { has_country_flag = foster_act_enacted }
 			year = 1865
 		}
@@ -1190,18 +1190,18 @@ political_decisions = {
 			set_country_flag = foster_act_enacted
 
 			random_owned = {
-				limit = { owner = { school_reforms = acceptable_schools } }
-				owner = { social_reform = good_schools }
+				limit = { owner = { school_reforms = mixed_schools } }
+				owner = { social_reform = public_schools }
 			}
 
 			random_owned = {
-				limit = { owner = { school_reforms = low_schools } }
-				owner = { social_reform = acceptable_schools }
+				limit = { owner = { school_reforms = private_schools } }
+				owner = { social_reform = mixed_schools }
 			}
 
 			random_owned = {
 				limit = { owner = { school_reforms = no_schools } }
-				owner = { social_reform = low_schools }
+				owner = { social_reform = private_schools }
 			}
 		}
 

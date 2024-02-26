@@ -425,22 +425,9 @@ political_reforms = {
 			education_efficiency_modifier = -0.01
 			allow = { test = is_stable_goverment }
 		}
-		four_year_draft = {
-			mobilisation_size = 0.04
-			mobilisation_economy_impact = 0.1
-			land_unit_start_experience = 5
-			global_immigrant_attract = -0.05
-			allow = { test = is_stable_goverment }
-		}
-		two_year_draft = {
+		voluntary_draft = {
 			mobilisation_size = 0.02
 			mobilisation_economy_impact = 0.05
-			allow = { test = is_stable_goverment }
-		}
-		one_year_draft = {
-			mobilisation_size = 0.01
-			global_immigrant_attract = 0.01
-			land_unit_start_experience = -2
 			allow = { test = is_stable_goverment }
 		}
 		no_draft = {
@@ -514,35 +501,28 @@ political_reforms = {
 # Social reforms.
 ##########################################
 social_reforms = {
-
 	wage_reform = {
 		administrative = yes
 		next_step_only = yes
 		no_minimum_wage = {
 			allow = { test = is_stable_goverment }
 		}
-		trinket_wage = {
+		state_concerted_minimum_wage = {
 			minimum_wage = 0.20
 			administrative_multiplier = 1
 			global_immigrant_attract = 0.01
 			allow = { test = is_stable_goverment }
 		}
-		low_minimum_wage = {
+		fixed_minimum_wage = {
 			minimum_wage = 0.40
 			administrative_multiplier = 2
 			global_immigrant_attract = 0.02
 			allow = { test = is_stable_goverment }
 		}
-		acceptable_minimum_wage = {
+		dynamic_minimum_wage = {
 			minimum_wage = 0.60
 			administrative_multiplier = 3
 			global_immigrant_attract = 0.03
-			allow = { test = is_stable_goverment }
-		}
-		good_minimum_wage = {
-			minimum_wage = 0.80
-			administrative_multiplier = 4
-			global_immigrant_attract = 0.04
 			allow = { test = is_stable_goverment }
 		}
 	}
@@ -595,14 +575,7 @@ social_reforms = {
 		no_safety = {
 			allow = { test = is_stable_goverment }
 		}
-		trinket_safety = {
-			factory_cost = 0.20
-			factory_maintenance = 0.1
-			administrative_multiplier = 1
-			global_immigrant_attract = 0.01
-			allow = { test = is_stable_goverment }
-		}
-		low_safety = {
+		self_regulating_safety_regulations = {
 			pension_level = 0.20
 			factory_cost = 0.40
 			factory_maintenance = 0.15
@@ -612,7 +585,7 @@ social_reforms = {
 			global_immigrant_attract = 0.02
 			allow = { test = is_stable_goverment }
 		}
-		acceptable_safety = {
+		state_concerted_safety_regulations = {
 			pension_level = 0.50
 			factory_cost = 0.60
 			factory_maintenance = 0.20
@@ -622,7 +595,7 @@ social_reforms = {
 			global_immigrant_attract = 0.03
 			allow = { test = is_stable_goverment }
 		}
-		good_safety = {
+		standarized_safety_regulations = {
 			pension_level = 1.0
 			factory_cost = 0.80
 			factory_maintenance = 0.25
@@ -633,30 +606,19 @@ social_reforms = {
 			allow = { test = is_stable_goverment }
 		}
 	}
-
 	unemployment_subsidies = {
 		next_step_only = yes
 		no_subsidies = {
 			allow = { test = is_stable_goverment }
 		}
-		trinket_subsidies = {
+		limited_subsidies = {
 			unemployment_benefit = 0.50
 			global_immigrant_attract = 0.01
 			allow = { test = is_stable_goverment }
 		}
-		low_subsidies = {
+		state_subsidies = {
 			unemployment_benefit = 1.0
 			global_immigrant_attract = 0.02
-			allow = { test = is_stable_goverment }
-		}
-		acceptable_subsidies = {
-			unemployment_benefit = 1.5
-			global_immigrant_attract = 0.03
-			allow = { test = is_stable_goverment }
-		}
-		good_subsidies = {
-			unemployment_benefit = 2.0
-			global_immigrant_attract = 0.04
 			allow = { test = is_stable_goverment }
 		}
 	}
@@ -665,25 +627,14 @@ social_reforms = {
 		no_pensions = {
 			allow = { test = is_stable_goverment }
 		}
-		trinket_pensions = {
-			pension_level    = 0.50
+		limited_pensions = {
+			pension_level = 0.50
 			global_immigrant_attract = 0.01
 			allow = { test = is_stable_goverment }
 		}
-		low_pensions = {
-			pension_level    = 1.0
+		state_pensions = {
+			pension_level = 1.0
 			global_immigrant_attract = 0.02
-			allow = { test = is_stable_goverment }
-		}
-		acceptable_pensions = {
-			pension_level    = 1.5
-			global_immigrant_attract = 0.03
-			allow = { test = is_stable_goverment }
-		}
-		good_pensions = {
-			pension_level    = 2.0
-			global_population_growth = 0.001
-			global_immigrant_attract = 0.04
 			allow = { test = is_stable_goverment }
 		}
 	}
@@ -693,7 +644,7 @@ social_reforms = {
 		no_health_care = {
 			allow = { test = is_stable_goverment }
 		}
-		trinket_health_care = {
+		private_health_care = {
 			global_population_growth = 0.001
 			administrative_multiplier = 1
 			global_immigrant_attract = 0.01
@@ -702,7 +653,7 @@ social_reforms = {
 				test = is_stable_goverment
 			}
 		}
-		low_health_care = {
+		mixed_health_care = {
 			global_population_growth = 0.002
 			administrative_multiplier = 2
 			global_immigrant_attract = 0.02
@@ -711,21 +662,12 @@ social_reforms = {
 				test = is_stable_goverment
 			}
 		}
-		acceptable_health_care = {
+		public_health_care = {
 			global_population_growth = 0.003
 			administrative_multiplier = 3
 			global_immigrant_attract = 0.03
 			allow = {
 				organic_chemistry = 1
-				test = is_stable_goverment
-			}
-		}
-		good_health_care = {
-			global_population_growth = 0.004
-			administrative_multiplier = 4
-			global_immigrant_attract = 0.04
-			allow = {
-				electricity = 1
 				test = is_stable_goverment
 			}
 		}
@@ -738,21 +680,21 @@ social_reforms = {
 			global_assimilation_rate = -0.002
 			allow = { test = is_stable_goverment }
 		}
-		low_schools = {
+		private_schools = {
 			education_efficiency_modifier = 0.05
 			global_assimilation_rate = 0.002
 			global_immigrant_attract = 0.02
 			administrative_multiplier = 1
 			allow = { test = is_stable_goverment }
 		}
-		acceptable_schools = {
+		mixed_schools = {
 			education_efficiency_modifier = 0.075
 			global_assimilation_rate = 0.005
 			global_immigrant_attract = 0.03
 			administrative_multiplier = 2
 			allow = { test = is_stable_goverment }
 		}
-		good_schools = {
+		public_schools = {
 			education_efficiency_modifier = 0.1
 			global_assimilation_rate = 0.01
 			global_immigrant_attract = 0.04
@@ -769,17 +711,14 @@ social_reforms = {
 			suppression_points_modifier = 0.25
 			allow = { test = is_stable_goverment }
 		}
-
 		colonial_transportation = {
 			administrative_multiplier = 1
 			allow = { test = is_stable_goverment }
 		}
-
 		incarceration = {
 			administrative_multiplier = 1
 			allow = { test = is_stable_goverment }
 		}
-
 		rehabilitation = {
 			global_immigrant_attract = 0.02
 			global_assimilation_rate = 0.02
@@ -800,7 +739,6 @@ social_reforms = {
 			RGO_throughput = 0.25
 			allow = { test = is_stable_goverment }
 		}
-
 		child_labor_restricted = {
 			education_efficiency_modifier = -0.03
 			poor_savings_modifier = 0.05
@@ -808,7 +746,6 @@ social_reforms = {
 			artisan_throughput = 0.05
 			allow = { test = is_stable_goverment }
 		}
-
 		child_labor_illegal = {
 			education_efficiency_modifier = 0.02
 			global_immigrant_attract = 0.05
