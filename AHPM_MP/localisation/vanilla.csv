@@ -62,31 +62,31 @@ ADD_ACCEPTED_CULTURE;§Y$CULTURE$§W added as accepted culture.\n
 ADD_BUILDING;Gain §Y$NAME$§W in §Y$WHERE$§W.\n
 ADD_BUILDING_EFFECT;Gain a §Y$BUILDING$§W with level §Y$VALUE$§W in §Y$PROVINCE$§W.\n
 ADD_CRIME;Gain §Y$NAME$§W.\n
-ADD_CRUDE_OIL_EFFECT;Gain eG$VALUE$§W crude oil§W.\n
+ADD_CRUDE_OIL_EFFECT;Gain §G$VALUE$§W crude oil§W.\n
 ADD_DISSENT_EFFECT;Gain §R$VALUE$§W in dissent§W.\n
-ADD_ENERGY_EFFECT;Gain eG$VALUE$§W energy§W.\n
-ADD_METAL_EFFECT;Gain eG$VALUE$§W metal§W.\n
-ADD_MONEY_EFFECT;Gain eG$VALUE$§We§W.\n
+ADD_ENERGY_EFFECT;Gain §G$VALUE$§W energy§W.\n
+ADD_METAL_EFFECT;Gain §G$VALUE$§W metal§W.\n
+ADD_MONEY_EFFECT;Gain §G$VALUE$§We§W.\n
 ADD_NEUTRALITY_EFFECT;§Y$COUNTRY$§W gains §R$VALUE$§W in neutrality§W.\n
-ADD_ORGANISATION_POPULARITY_EFFECT;§Y$IDEOLOGY$§W gains eG$ORGANISATION$§W in organisation and eG$POPULARITY$§W in popularity§W.\n
-ADD_PROVINCE_CRUDE_OIL_EFFECT;Gain eG$VALUE$§W crude oil in §Y$PROVINCE$§W.\n
-ADD_PROVINCE_ENERGY_EFFECT;Gain eG$VALUE$§W energy in §Y$PROVINCE$§W.\n
-ADD_PROVINCE_METAL_EFFECT;Gain eG$VALUE$§W metal in §Y$PROVINCE$§W.\n
-ADD_PROVINCE_MONEY_EFFECT;Gain eG$VALUE$§W e in §Y$PROVINCE$§W.\n
-ADD_PROVINCE_RARE_MATERIALS_EFFECT;Gain eG$VALUE$§W rare materials in §Y$PROVINCE$§W.\n
-ADD_PROVINCE_SUPPLIES_EFFECT;Gain eG$VALUE$§W supplies in §Y$PROVINCE$§W.\n
-ADD_RARE_MATERIALS_EFFECT;Gain eG$VALUE$§W rare materials§W.\n
+ADD_ORGANISATION_POPULARITY_EFFECT;§Y$IDEOLOGY$§W gains §G$ORGANISATION$§W in organisation and §G$POPULARITY$§W in popularity§W.\n
+ADD_PROVINCE_CRUDE_OIL_EFFECT;Gain §G$VALUE$§W crude oil in §Y$PROVINCE$§W.\n
+ADD_PROVINCE_ENERGY_EFFECT;Gain §G$VALUE$§W energy in §Y$PROVINCE$§W.\n
+ADD_PROVINCE_METAL_EFFECT;Gain §G$VALUE$§W metal in §Y$PROVINCE$§W.\n
+ADD_PROVINCE_MONEY_EFFECT;Gain §G$VALUE$§W e in §Y$PROVINCE$§W.\n
+ADD_PROVINCE_RARE_MATERIALS_EFFECT;Gain §G$VALUE$§W rare materials in §Y$PROVINCE$§W.\n
+ADD_PROVINCE_SUPPLIES_EFFECT;Gain §G$VALUE$§W supplies in §Y$PROVINCE$§W.\n
+ADD_RARE_MATERIALS_EFFECT;Gain §G$VALUE$§W rare materials§W.\n
 ADD_RELATIVE_INCOME_EFFECT;Treasury: $VALUE$e
 ADD_RULING_PARTY_ORG_EFFECT;$NAME$ gains §Y$VALUE$§W organisation.
 ADD_RULING_PARTY_POP_EFFECT;$NAME$ gains §Y$VALUE$§W popularity.\n
 ADD_SUB_UNIT_EFFECT;Get $UNIT$ in §Y$WHERE$§W.
-ADD_SUPPLIES_EFFECT;Gain eG$VALUE$§W supplies§W.\n
+ADD_SUPPLIES_EFFECT;Gain §G$VALUE$§W supplies§W.\n
 ADD_THREAT_EFFECT;§Y$COUNTRY$§W gains §R$VALUE$§W threat on §Y$TARGET_COUNTRY$§W.\n
 add_to_sphere;Add to Sphere
 add_to_sphere_desc;Add country to our §YSphere of Influence§W
 add_to_sphere_setup;Add $RECIPIENT$ to Sphere of Influence
 add_to_sphere_short;Add $RECIPIENT$ to Sphere of Influence
-ADD_UNITY_EFFECT;Gain eG$VALUE$§W unity§W.\n
+ADD_UNITY_EFFECT;Gain §G$VALUE$§W unity§W.\n
 ADD_WARGOAL_DESC;Require $COST$ war score to demand
 ADD_WARGOAL_EFFECT;When we add this war goal, we will gain:
 ADD_WARGOAL_FAILURE;If we fail to achive this war goal, we will gain:
@@ -685,7 +685,7 @@ army_schools;Army Training
 army_schools_l;Army Training
 army_societal_status;Societal Status
 army_societal_status_desc;At this time the professionalization of the officer corps and the fact that the majority of it consisted of middle class men rather than gentry increased its societal status.
-ARMY_SPLIT_AND_LOAD_DESC_1;§Y$UNIT$e! will be split between eG$NUM$e! ship(s):
+ARMY_SPLIT_AND_LOAD_DESC_1;§Y$UNIT$e! will be split between §G$NUM$e! ship(s):
 ARMY_SPLIT_AND_LOAD_DESC_2; - §Y$NAVY$e! ($NUM$ weight)
 ARMY_SPLIT_AND_LOAD_DESC_3;§RThe remaining army of total weight ($NUM$) will not be loaded.e!
 army_tech;Army
@@ -716,7 +716,7 @@ asia;Asia
 asian_minor;Asian Minor
 ASKBUYLICENCEREQDESC;§Y$ACTOR$§W is requesting our permission and technical expertise in producing §Y$NUM$§W units of $TYPE$§W\nFor this they are willing to pay us§Y$CASH$§W.
 ASKDEBTREQDESC;§Y$ACTOR$§W is requesting to be allowed to run a debt when trading with us.\nThis means that when they trade with us during wartime, we do not get paid in cash but instead they will owe us. The debt will be paid over time after the war.\nShould we allow them this?
-ASKEXPEDITIONREQDESC;§Y$ACTOR$§W is offering us eG$UNIT$§W as an expeditionary force. \n eG$UNIT$§W contains $NUM$ $TYPE$s that may use as we please until they are recalled.\n$UNIT$ is currently located in $PROV$.
+ASKEXPEDITIONREQDESC;§Y$ACTOR$§W is offering us §G$UNIT$§W as an expeditionary force. \n §G$UNIT$§W contains $NUM$ $TYPE$s that may use as we please until they are recalled.\n$UNIT$ is currently located in $PROV$.
 ASKMILITARYACCESS_BUTTON;Military Access
 ASKMILITARYACCESS_DESC;Allows our troops to move through their country.
 ASKMILITARYACCESS_DI;Request for Military Access
@@ -1444,7 +1444,7 @@ BP_TOOLTIP_NEW_PLAN;Create new plan.
 BP_TOOLTIP_REMOVE_PLAN;Delete currently selected plan.
 BP_TOOLTIP_RENAME_PLAN;Rename currently selected plan.
 BP_TOOLTIP_SAVE_PLAN;Save currently selected plan to file.
-BP_TOOLTIP_SHARE_PLAN;Toggle §Ysharinge! currently selected plan with your eGally memberse!.
+BP_TOOLTIP_SHARE_PLAN;Toggle §Ysharinge! currently selected plan with your §Gally memberse!.
 BP_TOOLTIP_TAB_CURRENT;List of current battle plans.
 BP_TOOLTIP_TAB_HISTORICAL;List of historical battle plans.\nClick §YImporte! to add the selected one to your current plans.
 BP_TOOLTIP_TAB_SAVED;List of your saved battle plans.\nClick §YImporte! to add the selected one to your current plans.
@@ -2515,11 +2515,11 @@ colonial_negotiations_desc;Whatever happens, we have got \nThe Maxim gun, and th
 COLONIAL_POINTS;Colonial Power
 COLONIAL_POINTS_TECH;Colonial power points
 COLONIAL_PRESTIGE_MODIFIER_TECH;Colonial prestige
-COLONIAL_RANGE;Colonial Range: eG+$VAL$§W
+COLONIAL_RANGE;Colonial Range: §G+$VAL$§W
 colonial_recruitment;Land! Liberty! Labour!
 colonial_recruitment_desc;A government campaign is attracting immigrants to this province with promises of land and opportunities.
 colonize;Colonize 
-COLONIZE_CLOSEST_BASE_SPEC;Closest naval base is in §Y$PROV$§W.\n(Naval range: eG$NEED$§W/§Y$CURR$§W needed)
+COLONIZE_CLOSEST_BASE_SPEC;Closest naval base is in §Y$PROV$§W.\n(Naval range: §G$NEED$§W/§Y$CURR$§W needed)
 COLONIZE_CLOSEST_BASE_TO_FAR;No naval base close enough
 COLONIZE_CLOSEST_BASE_TO_FAR_SPEC;Closest naval base in §Y$PROV$§W is not close enough.\n(Naval range: §R$NEED$§W/§Y$CURR$§W needed)
 COLONIZE_LAST_INVESTMENT;We have just invested in this area. Next investment can be done after §Y$DATE$e!
@@ -2733,12 +2733,12 @@ COUNTRYALERT_CanDoReforms;We can enact the following reforms:
 COUNTRYALERT_CanIncreaseOpinion;We can §YIncrease Opinion§W of our nation or add nations to our §YSphere of Influence§W:
 COUNTRYALERT_CanRemoveFromSphere;We can remove nations from our §YSphere of Influencee!:
 COUNTRYALERT_ColonialBad_colonizationtimer;§RWe need to create a protectorate in e!§Y$REGION$e!§R before §Y$DATE$e!§R or lose it.e!
-COUNTRYALERT_ColonialBad_influence;§RWe are losing the race in e!§Y$REGION$e!
-COUNTRYALERT_ColonialGood_colony;eGWe can create a colony in e!§Y$REGION$e!
-COUNTRYALERT_ColonialGood_invest;eGWe can invest in our a colony in e!§Y$REGION$e!
-COUNTRYALERT_ColonialGood_protectorate;eGWe can create a protectorate in e!§Y$REGION$e!
-COUNTRYALERT_ColonialGood_state;eGWe can create a state in e!§Y$REGION$e!
-COUNTRYALERT_Crisis;Current crisis is at a temperature of §Y$TEMPERATURE$e!
+COUNTRYALERT_ColonialBad_influence;We are losing the race in §Y$REGION$
+COUNTRYALERT_ColonialGood_colony;We can create a colony in §Y$REGION$
+COUNTRYALERT_ColonialGood_invest;We can invest in our a colony in §Y$REGION$
+COUNTRYALERT_ColonialGood_protectorate;We can create a protectorate in §Y$REGION$
+COUNTRYALERT_ColonialGood_state;We can create a state in §Y$REGION$
+COUNTRYALERT_Crisis;Current crisis is at a temperature of §Y$TEMPERATURE$
 COUNTRYALERT_HasClosedFactories;There are bankrupt factories in the following states:
 COUNTRYALERT_HasUnemployedWorkers;The following states have unemployed factory workers:
 COUNTRYALERT_HaveOrganizingRebels;Rebel Factions are organizing in our country!
@@ -3535,7 +3535,7 @@ DIFF_NORMAL;Normal
 DIFF_VERY_EASY;Very Easy
 DIFF_VERY_HARD;Very Hard
 DIG_IN_TOOLTIP_1;Current dig-in level: $LEV$/$MAX$.
-DIG_IN_TOOLTIP_2;It takes §Y$DAYS$e! days to increase dig-in level by eG+$VAL$e!.
+DIG_IN_TOOLTIP_2;It takes §Y$DAYS$e! days to increase dig-in level by §G+$VAL$e!.
 digin;Dig-In
 DIGIN_FROM_TECH;Dig-In Cap
 dinka;Dinka
@@ -4040,7 +4040,7 @@ emancipation_proclamation_desc;The Emancipation Proclamation is the collective n
 emancipation_proclamation_title;Emancipation Proclamation
 EMBASSY_IS_BANNED;We cannot influence this country because our ambassadors are banned. We suspect §Y$COUNTRY$§W is behind this. Our new ambassadors will arrive at §Y$DATE$§W.
 EMIGRANTS_TO;§R$VAL$§W emigrated to $NAME$.
-EMIGRATION_AT_PROVINCE_TOOLTIP;(§R$TOTALEMI$e!) §YEmigrations to:e!\n$EMILIST$\n(eG$TOTALIMM$e!) §YImmigrations from:e!\n$IMMLIST$
+EMIGRATION_AT_PROVINCE_TOOLTIP;(§R$TOTALEMI$e!) §YEmigrations to:e!\n$EMILIST$\n(§G$TOTALIMM$e!) §YImmigrations from:e!\n$IMMLIST$
 EMIGRATION_ENTRY_TOOLTIP;§R$NUM$e! to §Y$PROV$e!
 empirical_combat_efficiency_matrix;Empirical Combat Efficiency Matrix
 empirical_combat_efficiency_matrix_desc;By checking certain attributes as morale, how well feed the soldiers were, illnesses and wounds, it was possible to check in advance how efficient the unit would fight in the upcoming combat.
@@ -7601,7 +7601,7 @@ FOCUS_NO_POINTS;Not enough free national focus points.
 FOCUS_NOT_YOUR_PROVINCE;This action cannot be taken in a province you do not own.
 FOCUS_OWNED_BY;You can not place national focus in someone elses province unless it is a potential flashpoint for your cores.
 FOCUS_OWNED_COLONY;You cannot colonize a non empty province.
-FOCUS_PROMOTE_VAL;National focus: eG$VAL$§W%
+FOCUS_PROMOTE_VAL;National focus: §G$VAL$§W%
 folkis_educates;Folkskolan
 folkis_educates_desc;An efficient and modern compulsory school system is educating our youth in several basic subjects.
 FOLLOWING_HAVE_CLAIMS;The following countries have claims here.
@@ -8014,7 +8014,7 @@ great_depression;Great Depression
 great_depression;A stock market crash in one of the Great Powers has caused a great depression, the effects of which are being felt all around the civilized world.
 great_power;Great Power
 GREAT_WAR_CB_CONSTRUCTION_SPEED_DESC;At Great War with §Y$TARGET$e!
-GREAT_WAR_CB_JUSTIFY_COST_DESC;Infamy cost deducted to eG$PERC$%e! of original cost due to §YGreat Ware! status.
+GREAT_WAR_CB_JUSTIFY_COST_DESC;Infamy cost deducted to §G$PERC$%e! of original cost due to §YGreat Ware! status.
 great_war_experience;Great War Experience
 great_war_experience_desc;Great War Experience
 GREAT_WAR_NAME;The $ORDER$Great War
@@ -8113,8 +8113,8 @@ GW_DISCOVERED_BTN3;Go to
 GW_DISCOVERED_HEADER;Great Wars discovered!
 GW_DISCOVERED_LOG;Great Wars discovered
 GW_DISCOVERED_SETUP;When the Great Wars are discovered.
-GW_INTERVENE_MAX_EXHAUSTION;Our war exhaustion cannot be greater than eG$MAX$e!. Currently it is §Y$VAL$e!.
-GW_INTERVENE_MIN_RELATIONS;Our relations with §Y$TARGET$e! must be at least eG$MIN$e!. Currently it is §Y$VAL$e!.
+GW_INTERVENE_MAX_EXHAUSTION;Our war exhaustion cannot be greater than §G$MAX$e!. Currently it is §Y$VAL$e!.
+GW_INTERVENE_MIN_RELATIONS;Our relations with §Y$TARGET$e! must be at least §G$MIN$e!. Currently it is §Y$VAL$e!.
 GWA;Gwalior
 GWA_ADJ;Gwaliori
 GWA_anarcho_liberal;The Radical Faction
@@ -8521,12 +8521,12 @@ IDEOLOGY_ENABLED;Enable §Y$NAME$§W in the world.\n
 IDEOLOGY_IS_EQUAL_TO_TRIGGER;Ruling party is §Y$NAME$§W.\n
 IDEOLOGY_IS_NOT_TRIGGER;Ruling Party is NOT §Y$NAME$§W.\n
 IDEOLOGY_LABEL;Ideology
-IGNORE_DECISION_OFF;This decision is set to notify the player when it is available to be taken.\n\neGClick to change notification status.e!
-IGNORE_DECISION_ON;This decision is set to NOT notify the player when it is available to be taken.\n\neGClick to change notification status.e!
+IGNORE_DECISION_OFF;This decision is set to notify the player when it is available to be taken.\n\n§GClick to change notification status.e!
+IGNORE_DECISION_ON;This decision is set to NOT notify the player when it is available to be taken.\n\n§GClick to change notification status.e!
 IMMEDIATEEFFECT;Immediate Effect: \n
-IMMIGRANTS_FROM;There were eG$VAL$§W immigrants from $NAME$.
+IMMIGRANTS_FROM;There were §G$VAL$§W immigrants from $NAME$.
 immigration;Attract Immigrants 
-IMMIGRATION_ENTRY_TOOLTIP;eG$NUM$e! from §Y$PROV$e!
+IMMIGRATION_ENTRY_TOOLTIP;§G$NUM$e! from §Y$PROV$e!
 immigration_focus;Immigration
 immigration_focus_desc;Migrants §Y$VAL$§W% more likely to choose region.
 immoral;Immoral
@@ -8625,7 +8625,7 @@ INCREASERELATION_OTHER_ACCEPT_SETUP;When a nation increases their relations with
 INCREASERELATION_THEY_ACCEPT_1;§Y$RECIPIENT$§W
 INCREASERELATION_THEY_ACCEPT_2;$MONARCHTITLE$, we have successfully
 INCREASERELATION_THEY_ACCEPT_3;raised the relations between us and §Y$RECIPIENT$§W
-INCREASERELATION_THEY_ACCEPT_4;Our relation increased by eG$CHANGE$§W to §Y$RELATION$§W.
+INCREASERELATION_THEY_ACCEPT_4;Our relation increased by §G$CHANGE$§W to §Y$RELATION$§W.
 INCREASERELATION_THEY_ACCEPT_5;*
 INCREASERELATION_THEY_ACCEPT_6;*
 INCREASERELATION_THEY_ACCEPT_BTN1;OK
@@ -8638,7 +8638,7 @@ INCREASERELATION_THEY_ACCEPT_SETUP;When we increase our relations with a nation
 INCREASERELATION_WE_ACCEPT_1;§Y$ACTOR$§W
 INCREASERELATION_WE_ACCEPT_2;$MONARCHTITLE$, we have had a pleasant
 INCREASERELATION_WE_ACCEPT_3;conversation with the diplomat sent from §Y$ACTOR$§W.
-INCREASERELATION_WE_ACCEPT_4;Our relation increased by eG$CHANGE$§W to §Y$RELATION$§W.
+INCREASERELATION_WE_ACCEPT_4;Our relation increased by §G$CHANGE$§W to §Y$RELATION$§W.
 INCREASERELATION_WE_ACCEPT_5;*
 INCREASERELATION_WE_ACCEPT_6;*
 INCREASERELATION_WE_ACCEPT_BTN1;OK
@@ -9329,7 +9329,7 @@ LEADERDIED_LOG;$TYPE$ $NAME$ has died.
 LEADERDIED_MAP;*
 LEADERDIED_SETUP;When one of our leaders died
 LEADERSHIP;Leadership
-LEADERSHIP_EFFECT;Leadership: eG$VALUE$§W.\n
+LEADERSHIP_EFFECT;Leadership: §G$VALUE$§W.\n
 LEADUNIONS;Lead Personal Union with $LIST$.
 LEADVASSAL;Has the following puppets: $LIST$.
 LEAVE_ALLIANCE_EFFECT;§Y$COUNTRY$§W will end its alliance with §Y$TARGET_COUNTRY$§W.\n
@@ -9778,9 +9778,9 @@ MAPMODE_6;Infrastructure Mapmode
 MAPMODE_7;Colonial Mapmode
 MAPMODE_8;Administrative Mapmode
 MAPMODE_9;Recruitment Mapmode
-MAPMODE_NAVAL_TOOLTIP_CAP;This province §Ynaval supply throughpute! is eG$CAP$e! of total eG$TOT$e!.
+MAPMODE_NAVAL_TOOLTIP_CAP;This province §Ynaval supply throughpute! is §G$CAP$e! of total §G$TOT$e!.
 MAPMODE_NAVAL_TOOLTIP_IN_OTHER;A naval base already exists in this state, in §Y$PROV$e!.
-MAPMODE_NAVAL_TOOLTIP_LEVEL;Naval base level eG$LVL$e!
+MAPMODE_NAVAL_TOOLTIP_LEVEL;Naval base level §G$LVL$e!
 MAPMODE_NAVAL_TOOLTIP_NO_BASE;There is not any naval base in this state.
 MAPMODE_NAVAL_TOOLTIP_UNDER_CON;A naval base is already under construction here.
 marathi;Marathi
@@ -9811,7 +9811,7 @@ massproduced_rail;Massproduced Rail
 massproduced_rail_desc;As an applied combination of fordism and smelting technique rail could be mass-produced and thus the railroad net could be expanded at a much lower price.
 maures;Maures
 MAX_ATTRITION;Maximum Attrition
-MAX_REINF_UNITVIEW;Reinforcing at eG100%§W speed.
+MAX_REINF_UNITVIEW;Reinforcing at §G100%§W speed.
 MAX_STRENGTH;Max Strength
 MAX_WAR_EXHAUSTION;Maximum War Exhaustion
 MAX_WORKFORCE_TECH;Max. Workforce
@@ -10166,9 +10166,9 @@ mission_to_civilize;Mission to Civilize
 mission_to_civilize_desc;This was the idea that what was defined as the uncivilized world needed to be civilized and that its inhabitants were like children who needed to be enlightened by a fair but harsh hand. This was the ideology that led and justified the colonialization and occupation done by the Great Powers.
 mixed_economy;Mixed Economy
 mixed_economy_desc;As the twentieth century developed and the influence of alternative models of economic development outside the capitalist framework began to be implemented in certain societies, some politicians began to consider the possibility that merging what were considered the best elements from both capitalism and command economies could produce benefits for their society as a whole. As a result in some nations moves were made by the State to introduce elements of state direction into certain areas of economic activity while preserving the basic capitalist elements at the root of the economic system. While many more ideologically-driven critics of such policies argued the policies either went too far or not far enough in their transformations of the economy, the results of creating a mixed economic system in terms of both restoring economic production and reducing social tensions were often quite impressive.
-MOB_ECO_IMPACT;Our development reduces it by eG-$VALUE$§W.
+MOB_ECO_IMPACT;Our development reduces it by §G-$VALUE$§W.
 MOB_ECO_PENALTY;Currently our development increases impact by §R$VALUE$§W.
-MOB_FROM_TECH;From technology: eG+$VALUE$§W
+MOB_FROM_TECH;From technology: §G+$VALUE$§W
 MOB_IMPACT_LABEL;Production Impact.
 MOB_IMPACT_TECH;Mobilisation Impact
 MOB_IS_REINFORCE;Mobilized units reinforce at §Y50%§W speed.
@@ -10461,7 +10461,7 @@ MOVEMENT_RADICALISM_BASE;Base: §R$VAL$e%e!
 MOVEMENT_RADICALISM_CULTURE;$CULTURE$: $VAL$
 MOVEMENT_RADICALISM_DESC;This describes how much the people of the movement trust the political process in your country to get them what they want. A movement with a high value (§Y100e!) will convert to a rebel uprising if not suppressed
 MOVEMENT_RADICALISM_FROM_SIZE;Population support: $VAL$ 
-MOVEMENT_RADICALISM_GRANTED_REFORMS;Granted reforms: eG$VAL$e%e!
+MOVEMENT_RADICALISM_GRANTED_REFORMS;Granted reforms: §G$VAL$e%e!
 MOVEMENT_REFORM_SUPPORT;There is a popular movement of size $VAL$ lobbying for the enactment of this reform.
 movement_secret_ballots;Voters Rights Movement
 movement_state_controlled;Campaign for State Controlled Unions
@@ -10559,7 +10559,7 @@ MUG_reactionary;The Nationalist Faction
 MUG_socialist;The Socialist Faction
 muhammad_alis_reforms;Muhammad Ali's Reforms
 MUL_WITH_TECHNOLOGY;Multiplied by Technology
-MULTI_SEL_DESC;eGSHIFT+LMBe! to pick multiple units from current selection.
+MULTI_SEL_DESC;§GSHIFT+LMBe! to pick multiple units from current selection.
 multitude_of_financial_instruments;Multitude of Financial Instruments
 multitude_of_financial_instruments_desc;The introduction of a multitude of financial instruments meant not only a smoother flow of capital, but also that the middle class got better return on their private investments.
 MUST_BE_CRISIS_SIDE_LEADER;Must be leader of a side in the crisis
@@ -10675,27 +10675,27 @@ NAVAL_ATTRITION_TECH;Navy Attrition
 naval_base;Naval Base
 NAVAL_BASE_OVERSEAS_LIMIT;§RCapital ships cannot be built in overseas provinces.e!
 NAVAL_COMBAT;Naval Combat
-NAVAL_COMBAT_DAMAGE_DESC_BASE;§Y$UNIT$e! base attack: eG$VAL$e!
+NAVAL_COMBAT_DAMAGE_DESC_BASE;§Y$UNIT$e! base attack: §G$VAL$e!
 NAVAL_COMBAT_DAMAGE_DESC_EXP;Reduced by opponent experience (§R$EXP$%e!): §R$VAL$%e!
 NAVAL_COMBAT_DAMAGE_DESC_HULL;Reduced by opponent hull (§R$HULL$e!): §R$VAL$%e!
 NAVAL_COMBAT_DAMAGE_DESC_LUCK;Luck and decisions: §Y$VAL$%e!
 NAVAL_COMBAT_DAMAGE_DESC_NOORG;Opponent has no organization: §Y$VAL$%e!
 NAVAL_COMBAT_DAMAGE_DESC_STR;Reduced by our strength: §R$VAL$%e!
-NAVAL_COMBAT_DAMAGE_DESC_TITLE;The estimated fire power is eG$POWER$e!:
-NAVAL_COMBAT_DAMAGE_DESC_TORP;Torpedo attack: eG$VAL$e!
+NAVAL_COMBAT_DAMAGE_DESC_TITLE;The estimated fire power is §G$POWER$e!:
+NAVAL_COMBAT_DAMAGE_DESC_TORP;Torpedo attack: §G$VAL$e!
 NAVAL_COMBAT_DETAILS_APPROACH;Approaching §Y$WHO$e!. Current distance: §Y$DIST$e!.
 NAVAL_COMBAT_DETAILS_DESTROYED;§RDestroyede! by §Y$WHO$e!
 NAVAL_COMBAT_DETAILS_DISENGAGED;This unit has managed to disengage, and is no longer a part of the battle.
-NAVAL_COMBAT_DETAILS_FILTERING;Click with eGLMBe! to show all ships that are targetting this ship.
+NAVAL_COMBAT_DETAILS_FILTERING;Click with §GLMBe! to show all ships that are targetting this ship.
 NAVAL_COMBAT_DETAILS_RETREAT;This unit is retreating.
 NAVAL_COMBAT_DETAILS_SEEKING;Searching for best target.
-NAVAL_COMBAT_DETAILS_SHOOTING;Firing at §Y$WHO$e!.\n- Damage to Organisation eG$ORG$e!\n- Damage to Strength §Y$STR$e!
+NAVAL_COMBAT_DETAILS_SHOOTING;Firing at §Y$WHO$e!.\n- Damage to Organisation §G$ORG$e!\n- Damage to Strength §Y$STR$e!
 NAVAL_COMBAT_HIT_CHANCE_DESC;Hitting chance: §Y$VAL$%e!
 NAVAL_COMBAT_HIT_CHANCE_DESC_EVA;(reduced by opponent evasion §R$VAL$%e!)
 NAVAL_COMBAT_STACK_PENALTY_DESC;§YCoordination penalty §R$PEN$%§Y caused by poor communication in the fleet, it makes it more difficult for our ships to find targets. Affected by amount of our ships and potential targets.e!
 NAVAL_COMBAT_STATUS_APPROACH;Approaching
 NAVAL_COMBAT_STATUS_DISENGAGED;Disengaged
-NAVAL_COMBAT_STATUS_FIRING;Damage eG$ORG$e!/§R$STR$e!
+NAVAL_COMBAT_STATUS_FIRING;Damage §G$ORG$e!/§R$STR$e!
 NAVAL_COMBAT_STATUS_RETREAT;Retreating
 NAVAL_COMBAT_STATUS_SEEKING;Seeking target
 NAVAL_COUNT;§Y$CAPITAL$§W Capital Ships, §Y$ESCORTS$§W Screens & §Y$OTHER$§W others.
@@ -10874,9 +10874,9 @@ NEW_socialist;Fisherman's Protective Union
 NEW_UNIT;Create New Unit
 NEW_UNIT_DRO;Creating a new unit will create an empty unit and allow you to assign parts from the current unit to it.
 NEWS_TOOLTIP_NO_NEW;There are no unread newspapers.
-NEWS_TOOLTIP_UNREAD;You have eG$NUM$e! unread newspapers out of eG$MAX$e! printed.
+NEWS_TOOLTIP_UNREAD;You have §G$NUM$e! unread newspapers out of §G$MAX$e! printed.
 NEXT_ELECTION;Next election is due
-NF_OVERWRITE_ENTRY;§Y$NF$e!\nin eG$STATE$e!
+NF_OVERWRITE_ENTRY;§Y$NF$e!\nin §G$STATE$e!
 NF_OVERWRITE_HEADER;To set the new national focus §Y$NF$e! you must remove another one.
 NGF;North German Federation
 NGF_ADJ;North German
@@ -11278,7 +11278,7 @@ OL_VIEW_COMBAT;Toggles §YCombat§W view.
 OL_VIEW_FACTORIES;Toggles §YFactory Construction§W view.
 OL_VIEW_HOSTILE_SIEGES;Toggles §YHostile Occupation§W view.
 OL_VIEW_MERGE_OFF;§Y(Merge OFF)e!
-OL_VIEW_MERGE_ON;eG(Merge ON)e!
+OL_VIEW_MERGE_ON;§G(Merge ON)e!
 OL_VIEW_NATFOCUS;Toggles §YNational Focus§W view
 OL_VIEW_NATFOCUS_HEADER;National Focus
 OL_VIEW_NATFOCUS_TOOLTIP;National Focus (§Y$FOCUS$e!) in §Y$STATE$e!
@@ -11671,7 +11671,7 @@ PEACE_WILL_NOT_ACCEPT;They would not accept this offer.
 PEACEDEMANDDESC;$COUNTRY$ is demanding a peace on the following terms:
 PEACENEWALLY;They are negotiating for their allies.
 PEACENEWDESC;Do you wish to request peace with $COUNTRY$. $SELF$?\nIf they accept, the war will end. $RESULT$
-PEACENEWPROVTHEM;§Y$NATION$§W will cede eG
+PEACENEWPROVTHEM;§Y$NATION$§W will cede §G
 PEACENEWPROVUS;§Y$NATION$§W will cede §R
 PEACENEWWITHE;All territory will revert to its prewar owner.
 PEACENONE;no provinces
@@ -12180,7 +12180,7 @@ PRODUCTION_BROWSE_INVEST;Other
 PRODUCTION_BUILD_FACTORY_TOOLTIP;Build $FACTORY$\n
 PRODUCTION_BUILD_NEW;Build
 PRODUCTION_BUILD_NEW_FACTORY_TOOLTIP;Build new factory
-PRODUCTION_BUILDING_FACTORY_PROGRESS_TOOLTIP;eG$PERC$%§W done, §Y$DAYS$§W days left
+PRODUCTION_BUILDING_FACTORY_PROGRESS_TOOLTIP;§G$PERC$%§W done, §Y$DAYS$§W days left
 PRODUCTION_BUILDING_FACTORY_TOOLTIP;Building §Y$TYPE$§W
 PRODUCTION_CANCEL_SUBSIDIES;Cancel subsidies
 PRODUCTION_CANNOT_BUILD_MISSING_GOODS_TOOLTIP;You do not have enough goods to build this factory\n
@@ -12207,7 +12207,7 @@ PRODUCTION_DESTROY_FACTORY_BECAUSE_TOOLTIP;We are allowed to destroy this factor
 PRODUCTION_EFFICIENCY_TOOLTIP;
 PRODUCTION_EXPAND_FACTORY_BECAUSE_TOOLTIP;We are allowed to expand this factory because:\n
 PRODUCTION_EXPAND_FACTORY_DESC_TOOLTIP;If we expand this factory, we will increase the number of workers it can hire
-PRODUCTION_EXPAND_FACTORY_SHORTCUT_TOOLTIP;eGCtrl+Clicke! upgrades all factories of this type which are near their employee limit (§Y$NUMSPECIALFACTORIES$e!).\neGShift+Clicke! upgrades all factories which are near their employee limit (§Y$NUMFACTORIES$e!).
+PRODUCTION_EXPAND_FACTORY_SHORTCUT_TOOLTIP;§GCtrl+Clicke! upgrades all factories of this type which are near their employee limit (§Y$NUMSPECIALFACTORIES$e!).\n§GShift+Clicke! upgrades all factories which are near their employee limit (§Y$NUMFACTORIES$e!).
 PRODUCTION_EXPAND_FACTORY_TOOLTIP;§YExpand factory§W
 PRODUCTION_EXPANDING_FACTORY_TOOLTIP;Expanding §Y$TYPE$§W
 PRODUCTION_FACTOR_FROM;From
@@ -15709,7 +15709,7 @@ PV_CLERGY_LIT_DESC2;Optimal is $OPT$.
 PV_CLERGY_LIT_DESC3;Monthly change base value: $VAL$
 PV_COLONIAL_EMIGRATION;Colonial Emigration: 
 PV_COLONY_PROG;Colony progress: §Y$VAL$§W%. Estimated completion: §Y$TIME$§W
-PV_COLONY_TROOP;Troops presence bonus: eG+$VAL$§W%
+PV_COLONY_TROOP;Troops presence bonus: §G+$VAL$§W%
 PV_CONTROLLER;Controller:
 PV_CONVERSION;Religious Conversion: 
 PV_CRIMEFIGHT_MAX;(Max: §Y$PERC$%§W)
@@ -15955,7 +15955,7 @@ REMOVE_DIPLOMACY_CANNOT_JOIN_WAR_INVALID_ENEMY;We are at war with §Y$COUNTRY$§W,
 REMOVE_DIPLOMACY_GREATNATION_STATUS;Great Nation
 REMOVE_DIPLOMACY_SET_PRIO_DESC;Write influence desc
 REMOVE_DISBAND_UNIT_DRO;Disbanding an army will reduce the amount of supplies and fuel your nation is spending on maintenance. If the unit is under-strength, it will free manpower to reinforce units in more important areas.
-REMOVE_DISSENT_EFFECT;Lose eG$VALUE$§W in dissent§W.\n
+REMOVE_DISSENT_EFFECT;Lose §G$VALUE$§W in dissent§W.\n
 REMOVE_EDU_DESC;The educational budget goes to pay the clergy as well as producing research points
 REMOVE_ENERGY_EFFECT;Lose §R$VALUE$§W energy§W.\n
 REMOVE_ENG_203;North Caribbean Islands
@@ -16058,7 +16058,7 @@ REMOVE_MINISTER_EFFECT;§Y$NAME$§W Will be removed§W.\n
 REMOVE_MONEY_EFFECT;Lose §R$VALUE$§We§W.\n
 REMOVE_NAVALATTACKTHEM_HEADER;$chief_of_navy$ reports
 REMOVE_NAVALATTACKUS_HEADER;$chief_of_navy$ reports
-REMOVE_NEUTRALITY_EFFECT;§Y$COUNTRY$§W loses eG$VALUE$§W in neutrality§W.\n
+REMOVE_NEUTRALITY_EFFECT;§Y$COUNTRY$§W loses §G$VALUE$§W in neutrality§W.\n
 REMOVE_NO_CB_EFFECT;We lack proper justification for this: §R+$INFAMY$ infamy§W
 REMOVE_NO_DEMOTION;No Pops will be demoted today.
 REMOVE_NO_DEMOTION;No Pops will be promoted today.
@@ -16107,7 +16107,7 @@ REMOVE_small_arms_production_desc;TODO
 REMOVE_SUPPLIES_EFFECT;Lose §R$VALUE$§W supplies§W.\n
 REMOVE_TECHNOLOGYVIEW_RESEARCH_TOOLTIP;Currently researching §Y$TECH$§W.\n With current spending, research is finished §Y$DATE$§W.
 REMOVE_THEY_NO_LONGER_GREAT_POWER_3;and lost its position as a great nation to
-REMOVE_THREAT_EFFECT;§Y$COUNTRY$§W loses eG$VALUE$§W threat on §Y$TARGET_COUNTRY$§W.\n
+REMOVE_THREAT_EFFECT;§Y$COUNTRY$§W loses §G$VALUE$§W threat on §Y$TARGET_COUNTRY$§W.\n
 REMOVE_TOPBAR_DEC_SPEED;Increase Speed
 REMOVE_TOPBAR_POPULATION;Our current population is $CURR$. Our population has changed by $CHANGE$ since yesterday.
 REMOVE_TUR_806;West Macedonia
@@ -16188,7 +16188,7 @@ REPLACE_MINISTER_EFFECT;§Y$NAME$§W will become §Y$POSITION$§W.\n
 replenishment_transport_organisation;Replenishment Transport Organisation
 replenishment_transport_organisation_desc;Depots were focus points for the wartime supply system, but a replenishment transport organization was needed to get bullets and toilet paper out to the men.
 REQ;You cannot build this without first building
-RESEARCH_POINTS_EFFECT;Gain eG$VALUE$§W Research Points.\n
+RESEARCH_POINTS_EFFECT;Gain §G$VALUE$§W Research Points.\n
 RESEARCH_POINTS_LABEL;Research Points:
 RESENDEXPEDDESC;Send an expeditionary force back to its owner.
 RESENDEXPEDTITLE;Return Expeditionary Force
@@ -16468,7 +16468,7 @@ SATELLITE_OF;§YSatellite§W of
 SATELLITE_OF_NOCOLOR;Satellite of
 Saturday;Saturday
 SAVE;Save
-SAVE_DONE;eGDone§W
+SAVE_DONE;§GDone§W
 SAVE_LOADED;Save Game Loaded...
 SAVE_PROG;Save progress: $VALUE$ %
 SAVE_TRANSFER_DONE;Savegame transfer done.
@@ -16660,7 +16660,7 @@ shiite;Shiite
 shinto;Shinto
 SHIP_BUILD_LIMIT_MAX;§Y(Limit: $LIM$)e!
 SHIP_BUILD_LIMIT_PER_BASE;Limited to §Y$LIM$e! units per each port that supports this ship.
-SHIP_BUILD_LIMIT_PER_BASE_HINT;§RConsider building more naval bases of level at least eG$LVL$§R.e!
+SHIP_BUILD_LIMIT_PER_BASE_HINT;§RConsider building more naval bases of level at least §G$LVL$§R.e!
 SHIP_BUILD_MIN_BASE_LEVEL;Requires naval port with level §Y$LVL$e! or greater.
 SHIP_BUILD_MIN_BASE_LEVEL_WARNING;§RCannot be built in this naval port. Requires level §Y$LVL$§R or greater.e!
 ship_construction;Ship Construction
@@ -17223,7 +17223,7 @@ SUPPRESSION_LABEL_DESC;Suppression points measure your governments power to supp
 SUPPRESSION_POINTS;Suppression points
 SUPPRESSION_TECH;Suppression efficiency
 SUPPRESSION_TECH_DESC;Suppression efficiency: $VAL$
-SUPRESSION_MONTHLY_GAIN;Monthly gain: eG$VAL$e!
+SUPRESSION_MONTHLY_GAIN;Monthly gain: §G$VAL$e!
 surrealism;Surrealism
 surrealism_desc;Evolving from the iconoclasm of the Dada movement, Surrealism sought via its works to engage the public into a voyage of discovery of the inner workings of the mind, where they felt true reality lay in a world increasingly corrupted by incessant materialism and the horrors of modern warfare. Though the term was coined by Andre Breton, its most famous proponent within the world of painting would be the flamboyant Salvador Dali
 svenska_pansarbats_foreningen_desc;The Swedish Armed Cruiser Association was formed in 1912 in order to raise money for the purchase of a modern coastal defense cruiser for the Swedish Navy. The project met with a great deal of popular success, and the Association was, within a mere hundred days, able to present His Majesty Gustav V with the sum of some 15 million kronor, which would eventually be used to commission the 'HMS Sverige', launched in 1915.
@@ -17372,11 +17372,11 @@ TCP_SERVER_LOST;Server lost while transfering save!
 tea;Tea
 tea_RGO_SIZE;Tea plantation size
 TECH_DAILY_LEADERSHIP_BASE_TOOLTIP;Monthly base leadership: §Y$VALUE$§W
-TECH_DAILY_LEADERSHIP_TOOLTIP;$POPTYPE$ provide eG$VALUE$§W leadership.\n (§Y$FRACTION$%§W of the population, $OPTIMAL$% is optimal.)
-TECH_DAILY_LEADERSHIP_TOTAL_TOOLTIP;Monthly leadership: eG+$VALUE$§W
+TECH_DAILY_LEADERSHIP_TOOLTIP;$POPTYPE$ provide §G$VALUE$§W leadership.\n (§Y$FRACTION$%§W of the population, $OPTIMAL$% is optimal.)
+TECH_DAILY_LEADERSHIP_TOTAL_TOOLTIP;Monthly leadership: §G+$VALUE$§W
 TECH_DAILY_RESEARCHPOINTS_BASE_TOOLTIP;Daily base research points: §Y$VALUE$§W
-TECH_DAILY_RESEARCHPOINTS_TOOLTIP;$POPTYPE$ provide eG$VALUE$§W research points.\n (§Y$FRACTION$%§W of the population, $OPTIMAL$% is optimal.)
-TECH_DAILY_RESEARCHPOINTS_TOTAL_TOOLTIP;Daily research points: eG+$VALUE$§W
+TECH_DAILY_RESEARCHPOINTS_TOOLTIP;$POPTYPE$ provide §G$VALUE$§W research points.\n (§Y$FRACTION$%§W of the population, $OPTIMAL$% is optimal.)
+TECH_DAILY_RESEARCHPOINTS_TOTAL_TOOLTIP;Daily research points: §G+$VALUE$§W
 TECH_DIPLOMATIC_INFLUENCE;Diplomatic Points Gain
 TECH_FACTORY;Factory Cost
 TECH_FARM_OUTPUT;Farming output
@@ -17392,7 +17392,7 @@ TECH_MINE_OUTPUT;Mining output
 TECH_MINE_SIZE;Mine Size
 TECH_MONTHLY_RESEARCHPOINTS_BASE_TOOLTIP;Monthly base research points: §Y$VALUE$§W
 TECH_MONTHLY_RESEARCHPOINTS_TOOLTIP;$LITERACY$ literate §Y$POPTYPE$§W gives us §Y$VALUE$ research points§W
-TECH_MONTHLY_RESEARCHPOINTS_TOTAL_TOOLTIP;Monthly research points: eG+$VALUE$§W
+TECH_MONTHLY_RESEARCHPOINTS_TOTAL_TOOLTIP;Monthly research points: §G+$VALUE$§W
 TECH_MONTHLY_RESEARCHPOINTS_UNCIVILIZED;Uncivilized: 
 TECH_ONCE_1;$TYPE$
 TECH_ONCE_2;$TITLE$, we have finished the research of $TYPE$ which will give us the following benefits.
@@ -17622,14 +17622,14 @@ TIB_socialist;The Socialist Faction
 tibetan;Tibetan
 TICKING_WARSCORE_DESC_CURR;Currently $VAL$.
 TICKING_WARSCORE_DESC_GRACE;$VAL$ (§Y$DAY$e! days left).
-TICKING_WARSCORE_DESC_GRACE_EXPLAIN;Territorial war goals that are at least eG$MIN$%e! fulfilled will gradually add war score to the claimant.\nIf a war goal is not fulfilled after §Ygrace period of $DAYS$ dayse! it will instead add war score to the owner. A goal occupied by the claimant and retaken by the owner will gradually revert to §Y0e! score to either side.
+TICKING_WARSCORE_DESC_GRACE_EXPLAIN;Territorial war goals that are at least §G$MIN$%e! fulfilled will gradually add war score to the claimant.\nIf a war goal is not fulfilled after §Ygrace period of $DAYS$ dayse! it will instead add war score to the owner. A goal occupied by the claimant and retaken by the owner will gradually revert to §Y0e! score to either side.
 TICKING_WARSCORE_DESC_SCORE;Currently $VAL$ (daily change $CHANGE$).
 TICKING_WARSCORE_DESC_SCORE_MAX;Currently $VAL$ (Max).
 TICKING_WARSCORE_DESC_SCORE_MAX_SHORT;$VAL$ (Max).
 TICKING_WARSCORE_DESC_SCORE_SHORT;$VAL$ (daily $CHANGE$).
-TICKING_WARSCORE_FULFILL_BATTLE;eGFulfilled when we have a greater war score from battles, once at least eG$BAT$e! have been fought.e!
-TICKING_WARSCORE_FULFILL_TERRITORY_ANY;eGFulfilled when occupying at least $MIN$% provinces belonging to the targeted nation.e!
-TICKING_WARSCORE_FULFILL_TERRITORY_WG;eGFulfilled when occupying at least $MIN$% provinces of the targeted state(s) of this war goal.e!
+TICKING_WARSCORE_FULFILL_BATTLE;§GFulfilled when we have a greater war score from battles, once at least §G$BAT$e! have been fought.e!
+TICKING_WARSCORE_FULFILL_TERRITORY_ANY;§GFulfilled when occupying at least $MIN$% provinces belonging to the targeted nation.e!
+TICKING_WARSCORE_FULFILL_TERRITORY_WG;§GFulfilled when occupying at least $MIN$% provinces of the targeted state(s) of this war goal.e!
 TICKING_WARSCORE_HEAD;§YScore over timee! bonus §Y$VAL$e!:
 tigray;Tigray
 timber;Timber
@@ -17834,7 +17834,7 @@ TRAIT_SPEED;Speed
 TRAITS;Traits
 TRANSERING_SAVE;Savegame transfer started...
 TRANSFER_SUB;Transfer
-TRANSFER_SUB_ALL;eGShift + LMBe! to transfer all of the same type.
+TRANSFER_SUB_ALL;§GShift + LMBe! to transfer all of the same type.
 TRANSFER_SUB_DRO;Clicking here will transfer the subunit from the current unit to the other one.
 TRANSFEREDSUBUNIT_1;$SUB$ reassigned!
 TRANSFEREDSUBUNIT_2;$MONARCHTITLE$, we have reassigned $SUB$ from $OLD$ to
@@ -18351,7 +18351,7 @@ UNIT_PRICE;Unit price: §Y$VAL$§We
 UNIT_REBEL_HUNT_IS_BUSY;§RArmy is currently busy, and will not hunt any rebels right now.e!
 UNIT_REBEL_HUNT_LOW_MORALE;§RArmy has too low morale, and will not hunt any rebels right now.e!
 UNIT_REBEL_HUNT_NO_VALID;§REnemy rebels has been detected, but our army will not attack them, because they are too strong for us, or couldn't find a safe path to get there.e!
-UNIT_REBEL_HUNT_WILL_HUNT;eGArmy is ready for rebel hunting.e!
+UNIT_REBEL_HUNT_WILL_HUNT;§GArmy is ready for rebel hunting.e!
 UNITARRIVED_1;$TYPE$ Arrived!
 UNITARRIVED_2;our $TYPE$ of
 UNITARRIVED_3;$NAME$
@@ -18733,7 +18733,7 @@ WARGOAL_WE_ACCEPT_LOG;$ACTOR$ expanded their war with us to include $WARGOAL$.
 WARGOAL_WE_ACCEPT_SETUP;When a nation adds a wargoal against us..
 WARGOALTITLE;Add War Goal
 WARINDEMNITIES_EXPENSE;War indemnities: §R$VAL$§W
-WARINDEMNITIES_INCOME;War indemnities: eG$VAL$§W
+WARINDEMNITIES_INCOME;War indemnities: §G$VAL$§W
 warmonger;Warmonger
 WARREQDESC;Do you wish to declare war against $COUNTRY$?
 WARSUB_MUST_BE_AT_WAR;Country must be at war in order to receive war subsidies.
@@ -18741,7 +18741,7 @@ WARSUBSIDIES_BUTTON;War Subsidies
 WARSUBSIDIES_DESC;Offer §Y$MONEY$§We each day to help this nation
 WARSUBSIDIES_DI;Offer of Warsubsidies
 WARSUBSIDIES_EXPENSE;War subsidies: §R$VAL$§W
-WARSUBSIDIES_INCOME;War subsidies: eG$VAL$§W
+WARSUBSIDIES_INCOME;War subsidies: §G$VAL$§W
 WARSUBSIDIES_OTHER_ACCEPT_1;§Y$RECIPIENT$§W
 WARSUBSIDIES_OTHER_ACCEPT_2;$MONARCHTITLE$, we have received
 WARSUBSIDIES_OTHER_ACCEPT_3;news that §Y$ACTOR$§W will sponsor the war fought by
@@ -19011,7 +19011,7 @@ womanizer;Womanizer
 womens_suffrage_movement;Womens Sufferage Movement
 womens_suffrage_movement;Women's Suffrage Movement
 womens_suffrage_movement_desc;This protest movement had as its aim to raise the subjugated position of women as well as giving them voting rights. They used passive resistance, protests and marches. The violence used against them was abhorred in many circles and eventually women won the day. Still there will be many more fights that have to be won...
-WON;eGWon
+WON;§GWon
 WONT_NEGOTIATE;They will not negotiate unless the following is true:
 wood_focus;Encourage Wood Industry 
 wood_focus_short;Wood Industry
@@ -19149,7 +19149,7 @@ YNN_reactionary;Cai E's Faction
 YNN_socialist;Socialist Party
 yoruba;Yoruba
 YOU_LOST;§RYou Lost
-YOU_WON;eGYou Won
+YOU_WON;§GYou Won
 YOUKICKED;You were kicked by the host for your evil deeds!
 yue;Yue
 YUG;Yugoslavia
