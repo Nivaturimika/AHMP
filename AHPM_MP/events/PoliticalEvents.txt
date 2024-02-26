@@ -4707,3 +4707,548 @@ country_event = {
 		}
 	}
 }
+
+#############################################
+# Scandal Events For The APD Mod            #
+# By GAGA Extrem                            #
+# August 2012                                #
+#############################################
+
+# 880130 - Party Scandal - Reactionary
+country_event = {
+	id = 880130
+	title = "EVTNAME880130"
+	desc = "EVTDESC880130"
+	picture = "news"
+	trigger = {
+		press_rights != state_press
+		political_parties != underground_parties
+		has_country_modifier != ruling_party_scandal
+		has_country_modifier != party_scandal_evidence
+		ruling_party_ideology = reactionary
+	}
+	mean_time_to_happen = { months = 400 }
+	immediate = {
+		prestige = -5
+		plurality = -1
+		add_country_modifier = {
+			name = ruling_party_scandal
+			duration = 730
+		}
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { ideology = { value = reactionary factor = -0.1 } }
+			scaled_consciousness = { ideology = reactionary factor = 5 }
+			party_loyalty = { ideology = reactionary loyalty_value = -0.2 }
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = { ideology = reactionary loyalty_value = -1 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT880130OPTA"
+	}
+}
+
+# 880140 - Party Scandal - Conservative
+country_event = {
+	id = 880140
+	title = "EVTNAME880130"
+	desc = "EVTDESC880140"
+	picture = "news"
+	trigger = {
+		civilized = yes
+		press_rights != state_press
+		political_parties != underground_parties
+		has_country_modifier != ruling_party_scandal
+		has_country_modifier != party_scandal_evidence
+		ruling_party_ideology = conservative
+	}
+	mean_time_to_happen = { months = 400 }
+	immediate = {
+		prestige = -5
+		plurality = -1
+		add_country_modifier = { name = ruling_party_scandal duration = 730 }
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { ideology = { value = conservative factor = -0.1 } }
+			scaled_consciousness = { ideology = conservative factor = 5 }
+			party_loyalty = { ideology = conservative loyalty_value = -0.2 }
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = { ideology = conservative loyalty_value = -1 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT880130OPTA"
+	}
+}
+
+# 880150 - Party Scandal - Liberal
+country_event = {
+	id = 880150
+	title = "EVTNAME880130"
+	desc = "EVTDESC880150"
+	picture = "news"
+	trigger = {
+		press_rights != state_press
+		political_parties != underground_parties
+		has_country_modifier != ruling_party_scandal
+		has_country_modifier != party_scandal_evidence
+		ruling_party_ideology = liberal
+	}
+	mean_time_to_happen = { months = 400 }
+	immediate = {
+		prestige = -5
+		plurality = -1
+		add_country_modifier = {
+			name = ruling_party_scandal
+			duration = 730
+		}
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { ideology = { value = liberal factor = -0.1 } }
+			scaled_consciousness = { ideology = liberal factor = 5 }
+			party_loyalty = { ideology = liberal loyalty_value = -0.2 }
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = { ideology = liberal loyalty_value = -1 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT880130OPTA"
+	}
+}
+
+# 880160 - Party Scandal - Anarcho-Liberal
+country_event = {
+	id = 880160
+	title = "EVTNAME880160"
+	desc = "EVTDESC880160"
+	picture = "news"
+	trigger = {
+		press_rights != state_press
+		political_parties != underground_parties
+		has_country_modifier != ruling_party_scandal
+		has_country_modifier != party_scandal_evidence
+		ruling_party_ideology = anarcho_liberal
+	}
+	mean_time_to_happen = { months = 400 }
+	immediate = {
+		prestige = -5
+		plurality = -1
+		add_country_modifier = {
+			name = ruling_party_scandal
+			duration = 730
+		}
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { ideology = { value = anarcho_liberal factor = -0.1 } }
+			scaled_consciousness = { ideology = anarcho_liberal factor = 5 }
+			party_loyalty = { ideology = anarcho_liberal loyalty_value = -0.2 }
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = { ideology = anarcho_liberal loyalty_value = -1 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT880130OPTA"
+	}
+}
+
+# 880170 - Party Scandal - Socialist
+country_event = {
+	id = 880170
+	title = "EVTNAME880170"
+	desc = "EVTDESC880170"
+	picture = "news"
+	trigger = {
+		press_rights != state_press
+		political_parties != underground_parties
+		has_country_modifier != ruling_party_scandal
+		has_country_modifier != party_scandal_evidence
+		ruling_party_ideology = socialist
+	}
+	mean_time_to_happen = { months = 400 }
+	immediate = {
+		prestige = -5
+		plurality = -1
+		add_country_modifier = {
+			name = ruling_party_scandal
+			duration = 730
+		}
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { ideology = { value = socialist factor = -0.1 } }
+			scaled_consciousness = { ideology = socialist factor = 5 }
+			party_loyalty = { ideology = socialist loyalty_value = -0.2 }
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = { ideology = socialist loyalty_value = -1 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT880130OPTA"
+	}
+}
+
+# 880180 - Party Scandal - Communist
+country_event = {
+	id = 880180
+	title = "EVTNAME880180"
+	desc = "EVTDESC880180"
+	picture = "news"
+
+	trigger = {
+		press_rights != state_press
+		political_parties != underground_parties
+		has_country_modifier != ruling_party_scandal
+		has_country_modifier != party_scandal_evidence
+		ruling_party_ideology = communist
+	}
+	mean_time_to_happen = { months = 400 }
+	immediate = {
+		prestige = -5
+		plurality = -1
+		add_country_modifier = {
+			name = ruling_party_scandal
+			duration = 730
+		}
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { ideology = { value = communist factor = -0.1 } }
+			scaled_consciousness = { ideology = communist factor = 5 }
+			party_loyalty = { ideology = communist loyalty_value = -0.2 }
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = { ideology = communist loyalty_value = -1 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT880130OPTA"
+	}
+}
+
+# 880190 - Party Scandal - Fascist
+country_event = {
+	id = 880190
+	title = "EVTNAME880190"
+	desc = "EVTDESC880190"
+	picture = "news"
+	trigger = {
+		press_rights != state_press
+		political_parties != underground_parties
+		has_country_modifier != ruling_party_scandal
+		has_country_modifier != party_scandal_evidence
+		ruling_party_ideology = fascist
+	}
+	mean_time_to_happen = { months = 400 }
+	immediate = {
+		prestige = -5
+		plurality = -1
+		add_country_modifier = {
+			name = ruling_party_scandal
+			duration = 730
+		}
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { ideology = { value = fascist factor = -0.1 } }
+			scaled_consciousness = { ideology = fascist factor = 5 }
+			party_loyalty = { ideology = fascist loyalty_value = -0.2 }
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = { ideology = fascist loyalty_value = -1 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT880130OPTA"
+	}
+}
+
+# 880200 - Party Scandal Grave Consequences
+country_event = {
+	id = 880200
+	title = "EVTNAME880200"
+	desc = "EVTDESC880200"
+	picture = "stortinget"
+
+	trigger = {
+		OR = {
+			has_country_modifier = ruling_party_scandal
+			has_country_modifier = party_scandal_evidence
+		}
+		NOT = {
+			vote_franschise = none_voting
+			press_rights = state_press
+			election = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 40
+		modifier = {
+			factor = 0.5
+			has_country_modifier = party_scandal_evidence
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { average_consciousness = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { average_consciousness = 4 }
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 6
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 9
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 2
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.5
+			press_rights = censored_press
+		}
+	}
+
+	option = {
+		name = "EVT880200OPTA"
+		remove_country_modifier = ruling_party_scandal
+		remove_country_modifier = party_scandal_evidence
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = reactionary } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = reactionary
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = conservative } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = conservative
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = liberal } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = liberal
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = anarcho_liberal } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = anarcho_liberal
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = socialist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = socialist
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = communist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = communist
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = fascist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = fascist
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						is_greater_power = yes
+						is_secondary_power = yes
+					}
+				}
+			}
+			owner = { prestige = -10 }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+			owner = { prestige = -5 }
+		}
+		plurality = 1
+		election = yes
+	}
+}
+
+# 880210 - Party Scandal New Evidence Found
+country_event = {
+	id = 880210
+	title = "EVTNAME880210"
+	desc = "EVTDESC880210"
+	picture = "news"
+
+	trigger = {
+		has_country_modifier = ruling_party_scandal
+		NOT = { has_country_modifier = party_scandal_evidence }
+		NOT = {
+			vote_franschise = none_voting
+			press_rights = state_press
+		}
+	}
+
+	mean_time_to_happen = { months = 40 }
+
+	option = {
+		name = "EVT880210OPTA"
+		remove_country_modifier = ruling_party_scandal
+		add_country_modifier = {
+			name = party_scandal_evidence
+			duration = 365
+		}
+		any_pop = {
+			limit = { location = { is_colonial = no } }
+			militancy = 1
+			dominant_issue = { factor = 0.1 value = free_press }
+		}
+		if = {
+			limit = { ruling_party_ideology = reactionary }
+			any_owned = {
+				limit = { is_colonial = no }
+				party_loyalty = { ideology = reactionary loyalty_value = -0.3 }
+			}
+		} else_if = {
+			limit = { ruling_party_ideology = conservative }
+			any_owned = {
+				limit = { is_colonial = no }
+				party_loyalty = { ideology = conservative loyalty_value = -0.3 }
+			}
+		} else_if = {
+			limit = { ruling_party_ideology = liberal }
+			any_owned = {
+				limit = { is_colonial = no }
+				party_loyalty = { ideology = liberal loyalty_value = -0.3 }
+			}
+		} else_if = {
+			limit = { ruling_party_ideology = anarcho_liberal }
+			any_owned = {
+				limit = { is_colonial = no }
+				party_loyalty = { ideology = anarcho_liberal loyalty_value = -0.3 }
+			}
+		} else_if = {
+			limit = { ruling_party_ideology = socialist }
+			any_owned = {
+				limit = { is_colonial = no }
+				party_loyalty = { ideology = socialist loyalty_value = -0.3 }
+			}
+		} else_if = {
+			limit = { ruling_party_ideology = communist }
+			any_owned = {
+				limit = { is_colonial = no }
+				party_loyalty = { ideology = communist loyalty_value = -0.3 }
+			}
+		} else_if = {
+			limit = { ruling_party_ideology = fascist }
+			any_owned = {
+				limit = { is_colonial = no }
+				party_loyalty = { ideology = fascist loyalty_value = -0.3 }
+			}
+		}
+	}
+}
