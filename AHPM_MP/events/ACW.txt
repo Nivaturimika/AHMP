@@ -1518,7 +1518,6 @@ country_event = {
 	desc = "EVTDESC16090"
 	picture = "knights_golden_circle"
 
-
 	trigger = {
 		tag = USA
 		OR = {
@@ -1534,19 +1533,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 20
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 6
-		}
-		modifier = {
-			factor = 1.1
-			NOT = { average_consciousness = 5 }
-		}
+		months = 100
 	}
 
 	option = {
@@ -2426,11 +2413,8 @@ country_event = {
 	picture = "fugitive_slave"
 
 	trigger = {
-		tag = USA
-		OR = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
+		test = is_american_union
+		slavery != no_slavery
 		any_state = {
 			is_colonial = no
 			is_slave = no
@@ -2443,33 +2427,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 20 #600
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 6
-		}
-		modifier = {
-			factor = 0.5
-			NOT = {average_consciousness = 5 }
-		}
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
-		}
+		months = 600
 	}
 
 	option = {
@@ -2700,33 +2658,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 20 #800
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 6
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { average_consciousness = 5 }
-		}
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
-		}
+		months = 800
 	}
 
 	option = {
