@@ -130,3 +130,7 @@ EVT955203OPTB;Goodness gracious... we better act now
 EVT955203OPTC;We must enlighten the dark continent
 EVTNAME955400;Western Sahara
 EVTDESC955400;
+EVTNAME44100;The Adventures of Huckleberry Finn
+EVTDESC44100;In $YEAR$ $CULTURE_FIRST_NAME$ $CULTURE_LAST_NAME$ published 'The Adventures of Huckleberry Finn' and completely revolutionized $COUNTRY_ADJ$ fiction. Up until its publication, $COUNTRY_ADJ$ fiction had tended to utilize the form and language of its European predecessors -- $CULTURE_LAST_NAME$ fired a shot in the name of linguistic independence by beautifully depicting the speech of the $COUNTRY_ADJ$ illiterate and disenfranchised. The book was clearly an attempt to show how peoples of all kinds are worthy of respect due to their actions and not their status. At the time, it caused an uproar because of its unconventional form and its theme was mostly ignored. Even today people seem to miss the point.
+EVTOPTA44100;Well then I'll go to Hell!
+EVTOPTB44100;Boring

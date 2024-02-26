@@ -26,7 +26,7 @@ political_decisions = {
 			NOT = { has_country_flag = sent_an_elephant_to_america }
 		}
 		allow = {
-
+			romanticism = 1
 		}
 		effect = {
 			USA = { country_event = { id = 13350 days = 0 } }

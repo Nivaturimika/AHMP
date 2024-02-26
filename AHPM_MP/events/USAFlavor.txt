@@ -4,30 +4,20 @@ country_event = {
 	title = "EVTNAME44100"
 	desc = "EVTDESC44100"
 	picture = "HuckleberryFinn"
-	news = yes
-	news_desc_long = "EVTDESC44100_NEWS_LONG"
-	news_desc_medium = "EVTDESC44100_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC44100_NEWS_SHORT"
 	trigger = {
 		test = is_american_union
+		romanticism = 1
 	}
 	fire_only_once = yes
-	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1886
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1887
-		}
-	}
-
+	mean_time_to_happen =  { months = 5 }
 	option = {
 		name = "EVTOPTA44100"
-		prestige = 5
+		prestige = 2
+	}
+	option = {
+		name = "EVTOPTB44100"
+		prestige = 8
+		serfs = { militancy = 0.1 }
 	}
 }
 
@@ -37,30 +27,16 @@ country_event = {
 	title = "EVTNAME44101"
 	desc = "EVTDESC44101"
 	picture = "speedrecord"
-	news = yes
-	news_desc_long = "EVTDESC44101_NEWS_LONG"
-	news_desc_medium = "EVTDESC44101_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC44101_NEWS_SHORT"
 
 	trigger = {
 		test = is_american_union
+		iron_railroad = 1
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1886
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1887
-		}
+		months = 16
 	}
 
 	option = {
