@@ -80,120 +80,17 @@ country_event = {
 	}
 }
 
-#AI Countries involved in a Great War will call in their allies
-country_event = {
-	id = 96001
-	title = "EVTNAME96001"
-	desc = "EVTDESC96001"
-
-	trigger = {
-		ai = yes
-		war = yes
-		NOT = { has_country_flag = calling_all_allies }
-		OR = {
-			is_greater_power = yes
-			is_secondary_power = yes
-			has_country_flag = dismantle_declared
-		}
-		OR = {
-			AND = {
-				has_country_flag = dismantle_declared
-				has_country_modifier = great_war
-			}
-			AND = {
-				is_greater_power = yes
-				has_country_modifier = great_war
-			}
-			AND = {
-				any_greater_power = {
-					has_country_modifier = great_war
-					alliance_with = THIS
-				}
-				any_greater_power = {
-					has_country_modifier = great_war
-					war_with = THIS
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 7
-	}
-
-	option = {
-		name = "EVT96001OPTA"
-		random_owned = {
-			limit = { owner = { ai = yes } }
-			owner = { set_country_flag = calling_all_allies }
-		}
-		random_country = {
-			limit = {
-				NOT = { has_country_modifier = neutrality_modifier }
-				alliance_with = THIS
-				war = no
-			}
-			THIS = {
-				# Audax Validator "." Ignore_NEXT
-				war = {
-					attacker_goal = {
-						casus_belli = call_allies_cb
-					}
-					call_ally = yes
-				}
-			}
-		}
-	}
-}
-#Candidate for "on_action"
-country_event = {
-	id = 96003
-	title = "EVTNAME96003"
-	desc = "EVTDESC96003"
-
-	trigger = {
-		ai = yes
-		war = yes
-		has_country_flag = calling_all_allies
-	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	option = {
-		name = "EVT96003OPTA"
-		clr_country_flag = calling_all_allies
-		clr_country_flag = enemy_of_my_enemy
-		random_country = {
-			limit = {
-				ai = yes
-				THIS = { is_greater_power = yes }
-				is_greater_power = yes
-				war_with = THIS
-				NOT = { has_country_flag = enemy_of_my_enemy }
-			}
-			country_event = 96025
-		}
-	}
-}
-
 country_event = {
 	id = 96004
 	title = "EVTNAME96004" #The Demands of War
 	desc = "EVTDESC96004"
 	picture = "food_shortage"
-
 	trigger = {
 		war = yes
 		has_country_modifier = great_war
 		NOT = { has_country_modifier = great_war2 }
 	}
-
-	mean_time_to_happen = {
-		months = 30
-	}
-
+	mean_time_to_happen = { months = 30 }
 	option = {
 		name = "EVTOPTA96004" #We will win this war!
 		remove_country_modifier = great_war
@@ -858,84 +755,6 @@ country_event = {
 			}
 			country_event = 96095
 		}
-
-		# #give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# exists = yes
-					# has_recently_lost_war = no
-					# is_vassal = no
-					# any_owned_province = { has_building = naval_base }
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# exists = yes
-					# has_recently_lost_war = no
-					# is_vassal = no
-					# any_owned_province = { has_building = naval_base }
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# exists = yes
-					# has_recently_lost_war = no
-					# is_vassal = no
-					# any_owned_province = { has_building = naval_base }
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
 
 		#add fascism and punitive effects
 		random_owned = {
@@ -3008,73 +2827,6 @@ country_event = {
 			country_event = 96095
 		}
 
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
-
 		#add fascism and punitive effects
 		random_owned = {
 			limit = {
@@ -4316,72 +4068,6 @@ country_event = {
 			country_event = 96095
 		}
 
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
 		#add fascism and punitive effects
 		random_owned = {
 			limit = {
@@ -5037,73 +4723,6 @@ country_event = {
 			country_event = 96095
 		}
 
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
-
 		#add fascism and punitive effects
 		random_owned = {
 			limit = {
@@ -5746,73 +5365,6 @@ country_event = {
 			country_event = 96095
 		}
 
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
-
 		#add fascism and punitive effects
 		random_owned = {
 			limit = {
@@ -6383,73 +5935,6 @@ country_event = {
 			}
 			country_event = 96095
 		}
-
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
 
 		#add fascism and punitive effects
 		random_owned = {
@@ -7153,73 +6638,6 @@ country_event = {
 			}
 			country_event = 96095
 		}
-
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
 
 		#add fascism and punitive effects
 		random_owned = {
@@ -7938,73 +7356,6 @@ country_event = {
 			}
 			country_event = 96095
 		}
-
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
 
 		#add fascism and punitive effects
 		random_owned = {
@@ -8888,73 +8239,6 @@ country_event = {
 			}
 			country_event = 96095
 		}
-
-		#give colonies without cores to truce GP's
-		# random_owned = {
-			# limit = {
-				# OR = {
-					# is_overseas = yes
-					# is_colonial = yes
-					# NOT = { is_core = THIS }
-				# }
-			# }
-			# any_country = {
-				# limit = {
-					# ai = no
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = 96011
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# ai = yes
-					# is_greater_power = yes
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96016 days = 2 }
-			# }
-			# any_country = {
-				# limit = {
-					# NOT = {
-						# any_greater_power = {
-							# ai = no
-							# truce_with = THIS
-						# }
-					# }
-					# is_greater_power = no
-					# is_secondary_power = yes
-					# is_vassal = no
-					# OR = {
-						# truce_with = THIS
-						# AND = {
-							# THIS = { has_country_modifier = international_pariah }
-							# has_country_flag = coalition_member
-						# }
-					# }
-				# }
-				# country_event = { id = 96017 days = 2 }
-			# }
-		# }
-		###################################################
 
 		#add fascism and punitive effects
 		random_owned = {

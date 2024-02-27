@@ -3139,7 +3139,7 @@ province_event = {
 
 	trigger = {
 		owner = {
-			tag = USA
+			test = is_american_union
 			slavery = yes_slavery
 		}
 		OR = {
@@ -3157,29 +3157,7 @@ province_event = {
 	}
 
 	allow_multiple_instances = no
-
-	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
-		}
-		modifier = {
-			factor = 0.25
-			region = USA_126
-		}
-	}
-
+	mean_time_to_happen = { months = 12 }
 	option = {
 		name = "EVTOPTA16200"
 		state_scope = {
@@ -3193,9 +3171,7 @@ province_event = {
 			set_country_flag = bleeding_kansas
 			any_pop = { consciousness = 0.5 }
 		}
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVTOPTB16200"
@@ -3210,9 +3186,7 @@ province_event = {
 			set_country_flag = bleeding_kansas
 			any_pop = { consciousness = 0.5 }
 		}
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -3224,35 +3198,15 @@ province_event = {
 
 	trigger = {
 		owner = {
-			tag = USA
+			test = is_american_union
 			slavery = yes_slavery
 		}
 		has_province_modifier = bleeding_state
 		NOT = { has_global_flag = american_civil_war_has_happened }
 	}
-
 	fire_only_once = yes
-
 	allow_multiple_instances = no
-
-	mean_time_to_happen = {
-		months = 15
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
-		}
-	}
-
+	mean_time_to_happen = { months = 15 }
 	option = {
 		name = "EVTOPTA14210"
 		any_pop = { reduce_pop = 0.98 }
@@ -3264,7 +3218,6 @@ province_event = {
 	id = 16220
 	title = "EVTNAME16220"
 	desc = "EVTDESC16220"
-
 	trigger = {
 		owner = {
 			tag = USA
@@ -3277,33 +3230,9 @@ province_event = {
 		}
 		NOT = { has_global_flag = american_civil_war_has_happened }
 	}
-
 	fire_only_once = yes
-
 	allow_multiple_instances = no
-
-	mean_time_to_happen = {
-		months = 80
-		modifier = {
-			factor = 0.1
-			owner = { has_country_flag = bleeding_kansas }
-		}
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
-		}
-	}
-
+	mean_time_to_happen = { months = 80 }
 	option = {
 		name = "EVTOPTA16220"
 		owner = { set_country_flag = emigrant_aid_company }
@@ -3322,7 +3251,6 @@ province_event = {
 	id = 16230
 	title = "EVTNAME16230"
 	desc = "EVTDESC16230"
-
 	trigger = {
 		owner = {
 			tag = USA
@@ -3331,42 +3259,9 @@ province_event = {
 		has_province_modifier = bleeding_state
 		NOT = { has_global_flag = american_civil_war_has_happened }
 	}
-
 	fire_only_once = yes
-
 	allow_multiple_instances = no
-
-	mean_time_to_happen = {
-		months = 100 #400
-
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 1.2
-			NOT = { average_consciousness = 4 }
-		}
-		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1855 }
-		}
-		modifier = {
-			factor = 5
-			year = 1855
-			NOT = { year = 1860 }
-		}
-	}
-
+	mean_time_to_happen = { months = 400 }
 	option = {
 		name = "EVTOPTA16230"
 		any_pop = { reduce_pop = 0.98 }

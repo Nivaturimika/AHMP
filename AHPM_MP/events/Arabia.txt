@@ -413,7 +413,6 @@ province_event = {
 				is_culture_group = iranian_turanian
 			}
 		}
-
 		controlled_by = THIS
 		NOT = { has_province_modifier = nationalist_agitation }
 		any_core = {
@@ -425,47 +424,7 @@ province_event = {
 		}
 		is_culture_group = arab
 	}
-
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 1.5
-			NOT = { average_militancy = 1 }
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.5
-			any_neighbor_province = { has_province_modifier = nationalist_agitation }
-		}
-		modifier = {
-			factor = 2
-			NOT = { culture = mashriqi }
-		}
-		modifier = {
-			factor = 0.75
-			owner = { citizenship_policy = residency }
-		}
-		modifier = {
-			factor = 1.25
-			owner = { citizenship_policy = full_citizenship }
-		}
-		modifier = {
-			factor = 1.25
-			owner = { invention = secret_police }
-		}
-	}
-
+	mean_time_to_happen = { months = 120 }
 	option = {
 		name = "EVT96106OPTA"
 		owner = { prestige = -3 }
@@ -478,7 +437,6 @@ province_event = {
 			militancy = 6
 		}
 	}
-
 	option = {
 		name = "EVT96106OPTB"
 		state_scope = {
@@ -506,14 +464,9 @@ province_event = {
 }
 
 country_event = {
-
 	id = 96110
 	title = "EVTNAME96110" #The House of Saud Returns
 	desc = "EVTDESC96110"
-	news = yes
-	news_desc_long = "EVTDESC96110_NEWS_LONG"
-	news_desc_medium = "EVTDESC96110_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96110_NEWS_SHORT"
 	picture = "arab_revolt"
 	fire_only_once = yes
 	trigger = {

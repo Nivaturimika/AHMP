@@ -2228,41 +2228,7 @@ country_event = {
 			is_secondary_power = yes
 		}
 	}
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 3
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				average_consciousness = 3
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				average_militancy = 3
-			}
-		}
-	}
+	mean_time_to_happen = { months = 120 }
 	option = {
 		name = "EVTOPTA13151"
 		random_country = {

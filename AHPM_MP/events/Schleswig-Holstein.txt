@@ -569,16 +569,12 @@ country_event = {
 
 # Sweden Replies to Schleswig-Holstein War
 country_event = {
-
 	id = 90058
-
 	title = "EVTNAME90058"
 	desc = "EVTDESC90058"
 	picture = "danishgovernment"
-
 	trigger = {
 		primary_culture = swedish
-		exists = yes
 		DEN = {
 			war_with = SWH
 			war_countries = {
@@ -588,36 +584,17 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = { months = 1 }
-
 	fire_only_once = yes
-
 	option = {
 		name = "EVT90058OPTA"
 		create_alliance = DEN
 		prestige = 5
-		relation = { who = DEN value = 50 }
-		DEN = { country_event = 96001 }
-		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0
-				NOT = { relation = { who = DEN value = 0 } }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT90058OPTB"
 		prestige = -10
-		relation = { who = DEN value = -100 }
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 0.2
-				relation = { who = DEN value = 180 }
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 }
