@@ -16,17 +16,7 @@ country_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1838
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1839
-		}
+		months = 59
 	}
 
 	option = {
@@ -43,16 +33,7 @@ country_event = {
 	}
 	fire_only_once = yes
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1850
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1851
-		}
+		months = 59
 	}
 
 	title = "EVTNAME32502"
@@ -80,26 +61,12 @@ country_event = {
 
 	trigger = {
 		tag = RUS
-		year = 1852
-		NOT = {
-			year = 1855
-		}
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1853
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1854
-		}
+		months = 59
 	}
 
 	title = "EVTNAME32503"
@@ -118,26 +85,12 @@ country_event = {
 
 	trigger = {
 		tag = RUS
-		year = 1874
-		NOT = {
-			year = 1877
-			}
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1875
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1876
-		}
+		months = 59
 	}
 
 	title = "EVTNAME32504"
@@ -164,26 +117,12 @@ country_event = {
 
 	trigger = {
 		tag = RUS
-		year = 1880
-		NOT = {
-			year = 1883
-			}
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1881
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1882
-		}
+		months = 59
 	}
 
 	title = "EVTNAME32505"
@@ -205,31 +144,16 @@ country_event = {
 	id = 32506
 	trigger = {
 		tag = RUS
-		year = 1837
 		experimental_railroad = 1
 		994 = {
 			has_building = railroad
 		}
-		NOT = {
-			year = 1850
-		}
-
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1839
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1842
-		}
+		months = 59
 	}
 
 	title = "EVTNAME32506"
@@ -248,26 +172,12 @@ country_event = {
 
 	trigger = {
 		tag = RUS
-		year = 1899
-		NOT = {
-			year = 1902
-		}
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1900
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1901
-		}
+		months = 59
 	}
 
 	title = "EVTNAME32508"
@@ -293,7 +203,6 @@ country_event = {
 	option = {
 		name = "EVT80101OPTA"
 		prestige = 10
-		relation = { who = FROM value = 50 }
 	}
 }
 
@@ -308,7 +217,6 @@ country_event = {
 	option = {
 		name = "EVT80102OPTA"
 		prestige = -10
-		relation = { who = FROM value = -100 }
 		diplomatic_influence = { who = FROM value = -100 }
 		casus_belli = {
 			target = FROM
@@ -335,7 +243,6 @@ country_event = {
 			secede_province = RUS
 		}
 		1613 = { add_core = MCK }
-		#random_owned = { limit = { owner = { ai = yes } } owner = { annex_to = FROM } }
 		any_owned = { limit = { is_core = MCK } add_province_modifier = { name = nationalist_agitation duration = 365 } }
 		any_owned = {
 			limit = {
@@ -414,35 +321,28 @@ country_event = {
 
 	option = {
 		name = "EVT80110OPTA"
-		RUS = { country_event = 80101 }
+		FROM = { country_event = 80101 }
 		any_country = {
 			limit = {
 				OR = {
 					vassal_of = THIS
 					substate_of = THIS
 				}
-				any_owned_province = { is_core = RUS }
+				any_owned_province = { is_core = FROM }
 			}
 			country_event = 80103
 		}
 		any_owned = {
-			limit = { is_core = RUS }
-			secede_province = RUS
+			limit = { is_core = FROM }
+			secede_province = FROM
 		}
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 0.75
-				NOT = { relation = { who = RUS value = -50 } }
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT80110OPTB"
 		prestige = 10
-		RUS = { country_event = 80102 }
-		relation = { who = FROM value = -300 }
+		FROM = { country_event = 80102 }
 		random_country = {
 			limit = {
 				substate_of = THIS
@@ -456,26 +356,7 @@ country_event = {
 		any_owned = { limit = { is_core = MCK } add_province_modifier = { name = nationalist_agitation duration = 365 } }
 		any_owned = { limit = { is_core = MCK } add_core = QNG }
 
-		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 1.1
-				NOT = { war_exhaustion = 25 }
-				1082 = { owner = { part_of_sphere = no } }
-			}
-			modifier = {
-				factor = 0.5
-				any_greater_power = { war_with = THIS }
-			}
-			modifier = {
-				factor = 0
-				national_provinces_occupied = 0.25
-			}
-			modifier = {
-				factor = 0.5
-				war_exhaustion = 25
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

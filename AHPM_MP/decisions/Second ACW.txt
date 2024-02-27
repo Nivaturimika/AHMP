@@ -273,36 +273,17 @@ political_decisions = {
 		picture = annex_hawaii
 		potential = {
 			civilized = yes
-			658 = {
-				NOT = { owned_by = THIS }
-				is_core = THIS
-				owner = {
-					civilized = yes
-					NOT = { tag = HAW }
-				}
-			}
-			NOT = { has_country_flag = hawaiian_purchase }
+			658 = { test = is_influenced }
 		}
-
 		allow = {
 			war = no
 			money = 50000
-			658 = {
-				owner = {
-					war = no
-					relation = { who = THIS value = 50 }
-				}
-			}
+			658 = { owner = { war = no } }
 		}
-
 		effect = {
-			set_country_flag = hawaiian_purchase
 			658 = { owner = { country_event = 44145 } }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	fsa_enact_anaconda_plan = {

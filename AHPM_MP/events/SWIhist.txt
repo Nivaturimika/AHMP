@@ -22,7 +22,6 @@ country_event = {
 		add_country_modifier = { name = bad_badboy duration = 7300 }
 		any_greater_power = {
 			leave_alliance = THIS
-			relation = { who = THIS value = -400 }
 			casus_belli = { target = THIS type = cut_down_to_size months = 36 }
 			casus_belli = { target = THIS type = dismantle_cb months = 36 }
 		}
@@ -35,7 +34,6 @@ country_event = {
 					}
 				}
 			}
-			relation = { who = THIS value = -100 }
 			casus_belli = { target = THIS type = cut_down_to_size months = 24 }
 		}
 	}

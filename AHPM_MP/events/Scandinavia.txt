@@ -11,37 +11,7 @@ country_event = {
 			name = kalmar_union
 			duration = -1
 		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0
-				has_country_flag = greater_finland
-			}
-			modifier = {
-				factor = 0.5
-				NOT = {
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-						government = democracy
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					NOT = {
-						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-							government = democracy
-						}
-					}
-				}
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -49,27 +19,13 @@ country_event = {
 		set_country_flag = refused_kalmar_union
 
 		FROM = {
-			relation = {
-				who = THIS
-				value = -50
-			}
 			diplomatic_influence = {
 				who = THIS
 				value = -50
 			}
 			country_event = 49502
 		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.5
-				in_sphere = FROM
-			}
-			modifier = {
-				factor = 0
-				vassal_of = FROM
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -93,16 +49,9 @@ country_event = {
 			}
 			leave_alliance = THIS
 			end_military_access = THIS
-			relation = { who = THIS value = -50 }
 			set_country_flag = failed_unification_remove_from_sphere
 		}
-		ai_chance = {
-			factor = 30
-			modifier = {
-				factor = 0.5
-				war_policy = jingoism
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
@@ -139,21 +88,7 @@ country_event = {
 				casus_belli = conquest
 			}
 		}
-		ai_chance = {
-			factor = 70
-			modifier = {
-				factor = 0
-				badboy = 0.84
-			}
-			modifier = {
-				factor = 0
-				war_policy = pacifism
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = anti_military
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -177,10 +112,6 @@ country_event = {
 			}
 		}
 		FROM = {
-			relation = {
-				who = THIS
-				value = 100
-			}
 			diplomatic_influence = {
 				who = THIS
 				value = 50
@@ -190,37 +121,7 @@ country_event = {
 			name = customs_union
 			duration = -1
 		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0
-				has_country_flag = greater_finland
-			}
-			modifier = {
-				factor = 0.5
-				NOT = {
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-						government = democracy
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					NOT = {
-						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-							government = democracy
-						}
-					}
-				}
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -239,23 +140,7 @@ country_event = {
 			}
 			country_event = 49502
 		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.5
-				in_sphere = FROM
-			}
-			modifier = {
-				factor = 0
-				vassal_of = FROM
-			}
-			modifier = {
-				factor = 3
-				NOT = {
-					relation = { who = FROM value = 100 }
-				}
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -294,61 +179,21 @@ country_event = {
 				vassal_of = THIS
 			}
 		}
-		random_owned = {
-			limit = {
-				owner = {
+		if = {
+			limit = { is_culture_group = scandinavian }
+			any_owned = {
+				limit = {
 					OR = {
-						tag = DEN
-						tag = NOR
-						tag = SWE
+						is_colonial = no
+						continent = europe
 					}
+					is_core = THIS
+					NOT = { region = DEN_251 }
 				}
-			}
-			owner = {
-				any_owned = {
-					limit = {
-						OR = {
-							is_colonial = no
-							continent = europe
-						}
-						is_core = THIS
-						NOT = { region = DEN_251 }
-					}
-					add_core = SCA
-				}
+				add_core = SCA
 			}
 		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0
-				has_country_flag = greater_finland
-			}
-			modifier = {
-				factor = 0.5
-				NOT = {
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-						government = democracy
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					NOT = {
-						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-							government = democracy
-						}
-					}
-				}
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -357,37 +202,13 @@ country_event = {
 		remove_country_modifier = kalmar_union
 		remove_country_modifier = customs_union
 		FROM = {
-			relation = {
-				who = THIS
-				value = -100
-			}
 			diplomatic_influence = {
 				who = THIS
 				value = -200
 			}
 			country_event = 49502
 		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.5
-				in_sphere = FROM
-			}
-			modifier = {
-				factor = 0
-				vassal_of = FROM
-			}
-			modifier = {
-				factor = 0
-				overlord = { has_country_modifier = kalmar_union }
-			}
-			modifier = {
-				factor = 3
-				NOT = {
-					relation = { who = FROM value = 100 }
-				}
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -403,10 +224,6 @@ country_event = {
 	option = {
 		name = "EVT49509OPTA"
 		FROM = {
-			relation = {
-				who = THIS
-				value = 100
-			}
 			diplomatic_influence = {
 				who = THIS
 				value = 100

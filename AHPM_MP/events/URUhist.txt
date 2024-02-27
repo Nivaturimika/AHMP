@@ -8,78 +8,48 @@ country_event = {
 
 	option = {
 		name = "EVTOPT600057A"
-			set_country_flag = colorado_victory
-			political_reform = wealth_weighted_voting
-			political_reform = population_equal_weight
-			ruling_party_ideology = liberal
-			ARC = { country_event = 600058 }
-			2344 = {
-				remove_province_modifier = colorado_sympathies
-				add_province_modifier = { name = rivera_reforms duration = 365 }
-				any_pop = {
-					militancy = -9
-					consciousness = -9
-					ideology = { factor = 0.4 value = liberal }
-					ideology = { factor = -0.4 value = reactionary }
-				}
+		set_country_flag = colorado_victory
+		political_reform = wealth_weighted_voting
+		political_reform = population_equal_weight
+		ruling_party_ideology = liberal
+		ARC = { country_event = 600058 }
+		2344 = {
+			remove_province_modifier = colorado_sympathies
+			add_province_modifier = { name = rivera_reforms duration = 365 }
+			any_pop = {
+				militancy = -9
+				consciousness = -9
+				ideology = { factor = 0.4 value = liberal }
+				ideology = { factor = -0.4 value = reactionary }
 			}
-
-			any_owned = {
-				limit = { NOT = { province_id = 2344 } }
-				any_pop = {
-					ideology = { factor = 0.6 value = liberal }
-					ideology = { factor = -0.2 value = reactionary }
-				}
-			}
-
-			relation = {
-				who = BRZ
-				value = 150
-			}
-
-			relation = {
-				who = ARC
-				value = -150
-			}
-
-			relation = {
-				who = FRA
-				value = 100
-			}
-
-			relation = {
-				who = ENG
-				value = 100
-			}
-			relation = {
-				who = PRG
-				value = -200
-			}
-			treasury = 1500
-			small_arms = 20
-			ammunition = 20
-			canned_food = 20
-			election = yes
-			neutrality = yes
 		}
+		any_owned = {
+			limit = { NOT = { province_id = 2344 } }
+			any_pop = {
+				ideology = { factor = 0.6 value = liberal }
+				ideology = { factor = -0.2 value = reactionary }
+			}
+		}
+		treasury = 1500
+		small_arms = 20
+		ammunition = 20
+		canned_food = 20
+		election = yes
+		neutrality = yes
 	}
+}
 
 country_event = {
 	id = 600058
 	title = "EVTNAME600058" #Rosas Answer
 	desc = "EVTDESC600058"
 	picture = "33orientals"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVTOPT600058A" #Rivera is a usurper
 		URU = { set_country_flag = oribe_is_true_president }
-			ai_chance = {
-				factor = 100
-			}
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVTOPT600058B" #Rivera is the legitimate president
 		URU = { set_country_flag = rivera_is_true_president }
@@ -87,16 +57,14 @@ country_event = {
 			scaled_consciousness = {
 				factor = 6
 				ideology = liberal
-					}
+			}
 			scaled_militancy = {
 				factor = 4
 				ideology = liberal
-				}
-			}
-		ai_chance = {
-			factor = 0
 			}
 		}
+		ai_chance = { factor = 0 }
+	}
 }
 
 country_event = {
@@ -106,18 +74,16 @@ country_event = {
 	picture = "33orientals"
 
 	trigger = {
-		NOT = { year = 1860 }
 		tag = URU
-		year = 1835
-			OR = {
-				ruling_party_ideology = conservative
-				ruling_party_ideology = reactionary
-			}
-			OR = {
-				upper_house_composition = party_appointed
-				upper_house_composition = appointed
-				voting_system = first_past_the_post
-			}
+		OR = {
+			ruling_party_ideology = conservative
+			ruling_party_ideology = reactionary
+		}
+		OR = {
+			upper_house_composition = party_appointed
+			upper_house_composition = appointed
+			voting_system = first_past_the_post
+		}
 		NOT = {
 			OR = {
 				any_owned_province = { has_province_modifier = colorado_sympathies }
@@ -126,14 +92,12 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = { days = 15 }
-
 	option = {
 		name = "EVTOPT600059A"
-			2344 = { add_province_modifier = { name = colorado_sympathies duration = 1000 } }
-		}
+		2344 = { add_province_modifier = { name = colorado_sympathies duration = 1000 } }
 	}
+}
 
 country_event = {
 	id = 600060
@@ -360,11 +324,7 @@ country_event = {
 				exists = yes
 				tag = CRT
 			}
-			create_alliance = URU
-			relation = {
-				who = URU
-				value = 400
-			}
+			create_alliance = THIS
 		}
 		set_country_flag = war_on_rosas
 		clr_country_flag = corrientes_is_ready_for_war

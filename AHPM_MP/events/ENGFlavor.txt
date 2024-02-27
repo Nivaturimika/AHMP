@@ -3274,30 +3274,24 @@ country_event = {
 	fire_only_once = yes
 	mean_time_to_happen = {
 		months = 36 #Three years
-		modifier = {
-			factor = 1.50
-			relation = { who = USA value = 100 }
-		}
 	}
 
 	option = {
 		name = "EVT110081OPTA" #Support Paulet!
 		badboy = 5
-		inherit = HAW
-		relation = { who = USA value = -200 }
+		create_vassal = HAW
 		USA = {
 			casus_belli = {
-				target = ENG
+				target = THIS
 				type = free_peoples
 				months = 30
 			}
 			casus_belli = {
-				target = ENG
+				target = THIS
 				type = humiliate
 				months = 30
 			}
 		}
-
 		ai_chance = { factor = 2 }
 	}
 
@@ -3306,10 +3300,7 @@ country_event = {
 		badboy = 1
 		treasury = 2500
 		HAW = { treasury = -2500 }
-		relation = { who = USA value = -100 }
-		relation = { who = HAW value = -200 }
 		diplomatic_influence = { who = HAW value = 400 }
-
 		ai_chance = { factor = 18 }
 	}
 
@@ -3318,8 +3309,6 @@ country_event = {
 		badboy = -1
 		prestige = -5
 		relation = { who = HAW value = 50 }
-		relation = { who = USA value = 50 }
-
 		ai_chance = { factor = 80 }
 	}
 }
@@ -3330,26 +3319,13 @@ country_event = {
 	title = "EVTNAME110078"
 	desc = "EVTDESC110078"
 	picture = "ENG_from_hell"
-	news = yes
-	news_title = "EVTNAME110078_NEWS_TITLE"
-	news_desc_long = "EVTDESC110078_NEWS_LONG"
-	news_desc_medium = "EVTDESC110078_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC110078_NEWS_SHORT"
-
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		owns = 300 #London
-		year = 1888
-		NOT = { year = 1890 }
+		test = is_british_empire
+		owns = 300
 		NOT = { crime_fighting = 0.75 }
 	}
-
 	mean_time_to_happen = { months = 12 }
 	fire_only_once = yes
-
 	option = {
 		name = "EVT110078OPTA" #So what? Crimes happen everyday.
 		set_country_flag = from_hell
@@ -3373,9 +3349,7 @@ country_event = {
 
 	trigger = {
 		test = is_british_empire
-		300 = {
-			has_province_modifier = serial_killer
-		}
+		300 = { has_province_modifier = serial_killer }
 		owns = 300 #London
 		crime_fighting = 0.95
 		NOT = { year = 1890 }

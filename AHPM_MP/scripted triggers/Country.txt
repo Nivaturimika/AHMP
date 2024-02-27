@@ -146,22 +146,14 @@ is_great_game_buffer = {
 	this_parameter = nation
 	
 	exists = yes
-	civilized = no
 	is_vassal = no
-	neighbour = RUS
-	neighbour = THIS
-	AND = {
-		tag = PNJ
-		has_country_flag = ranjit_singh_dead
-	}
-	NOT = {
-		has_country_modifier = border_incident
-		in_sphere = THIS
-		truce_with = THIS
+	OR = {
+		neighbour = RUS
+		any_neighbor_country = { vassal_of = RUS }
 	}
 	OR = {
-		neighbour = THIS
-		any_neighbor_country = { vassal_of = THIS }
+		neighbour = ENG
+		any_neighbor_country = { vassal_of = ENG }
 	}
 }
 

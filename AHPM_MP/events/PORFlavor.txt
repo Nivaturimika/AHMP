@@ -50,7 +50,7 @@ country_event = {
             limit = {
                 is_colonial = no
                 is_capital = no
-                is_core = POR
+                is_core = THIS
                 is_overseas = no
                 has_pop_type = farmers
             }
@@ -281,7 +281,7 @@ country_event = {
                 }
             }
             owner = { prestige = 2 }
-            2007 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2007 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
         random_owned = {
             limit = {
@@ -295,7 +295,7 @@ country_event = {
                 2010 = { owned_by = THIS }
             }
             owner = { prestige = 2 }
-            2011 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2011 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
         random_owned = {
             limit = {
@@ -308,7 +308,7 @@ country_event = {
                 2009 = { owned_by = THIS }
             }
             owner = { prestige = 2 }
-            2010 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2010 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
         random_owned = {
             limit = {
@@ -320,7 +320,7 @@ country_event = {
                 2005 = { owned_by = THIS }
             }
             owner = { prestige = 2 }
-            2008 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2008 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
         random_owned = {
             limit = {
@@ -334,7 +334,7 @@ country_event = {
                 }
             }
             owner = { prestige = 2 }
-            2006 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2006 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
         random_owned = {
             limit = {
@@ -344,7 +344,7 @@ country_event = {
                 2002 = { owned_by = THIS }
             }
             owner = { prestige = 2 }
-            2009 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2009 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
         random_owned = {
             limit = {
@@ -356,7 +356,7 @@ country_event = {
                 }
             }
             owner = { prestige = 2 }
-            2005 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2005 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
         random_owned = {
             limit = {
@@ -367,7 +367,7 @@ country_event = {
                 }
             }
             owner = { prestige = 2 }
-            2002 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+            2002 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
         }
     }
 }
@@ -425,7 +425,7 @@ country_event = {
                 2055 = { owned_by = THIS }
             }
             owner = { prestige = 2 }
-            2056 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            2056 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -437,7 +437,7 @@ country_event = {
                 2054 = { owned_by = THIS }
             }
             owner = { prestige = 2 }
-            2055 = { secede_province = POR }
+            2055 = { secede_province = THIS }
         }
         random_owned = {
             limit = {
@@ -448,7 +448,7 @@ country_event = {
                 2058 = { owned_by = THIS }
             }
             owner = { prestige = 2 }
-            2054 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            2054 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -461,7 +461,7 @@ country_event = {
                 }
             }
             owner = { prestige = 2 }
-            2058 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            2058 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -473,7 +473,7 @@ country_event = {
                 }
             }
             owner = { prestige = 2 }
-            2052 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+            2052 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
         }
         random_owned = {
             limit = {
@@ -484,7 +484,7 @@ country_event = {
                 }
             }
             owner = { prestige = 2 }
-            2581 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 20 }
+            2581 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 20 }
         }
     }
 }
@@ -709,15 +709,9 @@ country_event = {
 
     trigger = {
         tag = POR
-        year = 1905
-        OR = {
-            government = hms_government
-            government = prussian_constitutionalism
-            government = absolute_monarchy
-        }
+        test = is_monarchy_goverment
         NOT = {
             has_country_flag = regicide_king_carlos
-            year = 1915
         }
     }
 
@@ -793,7 +787,6 @@ country_event = {
     trigger = {
         tag = POR
         has_country_flag = regicide_king_carlos
-        NOT = { year = 1915 }
     }
 
     mean_time_to_happen = {
@@ -972,7 +965,6 @@ country_event = {
         owns = 2053
         GAZ = {
             exists = yes
-            ai = yes
             NOT = { has_leader = "Soshangane" }
         }
     }

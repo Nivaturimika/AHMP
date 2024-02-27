@@ -7,7 +7,6 @@ country_event = {
 	title = "EVTNAME95610" #The Great Game - UK
 	desc = "EVTDESC95610"
 	picture = "greatpowers"
-
 	trigger = {
 		tag = ENG
 		is_disarmed = no
@@ -22,23 +21,7 @@ country_event = {
 			war_policy = pacifism
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 40
-		modifier = {
-			factor = 0.75
-			ideological_thought = 1
-		}
-		modifier = {
-			factor = 0.75
-			state_n_government = 1
-		}
-		modifier = {
-			factor = 0.5
-			nationalism_n_imperialism = 1
-		}
-	}
-
+	mean_time_to_happen = { months = 40 }
 	option = {
 		name = "EVT95610OPTA"
 		badboy = 1
@@ -53,14 +36,12 @@ country_event = {
 		}
 		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT95610OPTB"
 		badboy = -3
 		prestige = -5
 		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT95610OPTC"
 		badboy = -5
@@ -90,9 +71,7 @@ country_event = {
 			war_policy = pacifism
 		}
 	}
-
 	mean_time_to_happen = { months = 28 }
-
 	option = {
 		name = "EVT95610OPTA"
 		badboy = 1
@@ -107,14 +86,12 @@ country_event = {
 		}
 		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT95610OPTB"
 		badboy = -3
 		prestige = -5
 		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT95610OPTC"
 		badboy = -5
@@ -125,177 +102,30 @@ country_event = {
 }
 
 # Border Incident for countries targeted by the Great Game
-
 country_event = {
 	id = 95612
 	title = "EVTNAME95612" #The Great Game Comes to $COUNTRY$
 	desc = "EVTDESC95612"
 	picture = "rebellion"
-
 	trigger = {
-		OR = {
-			tag = SIN
-			tag = KAL
-			tag = MAK
-			tag = AFG
-			tag = KAS
-			tag = KOK
-			tag = KHI
-			tag = BUK
-			tag = CRL
-			tag = KAZ
-			tag = BDK
-			AND = {
-				tag = PNJ
-				has_country_flag = ranjit_singh_dead
-			}
-		}
-		war = no
-		civilized = no
-		is_vassal = no
-
+		test = is_great_game_buffer
 		ENG = { is_greater_power = yes }
 		RUS = { is_greater_power = yes }
-		NOT = {
-			has_country_modifier = border_incident
-		}
-		OR = {
-			neighbour = ENG
-			neighbour = RUS
-			any_neighbor_country = { vassal_of = ENG }
-			any_neighbor_country = { vassal_of = RUS }
-		}
-		OR = {
-			RUS = {
-				is_disarmed = no
-				casus_belli = THIS
-				test = is_monarchy_goverment
-				NOT = {
-					relation = { who = THIS value = 100 }
-					is_sphere_leader_of = THIS
-					alliance_with = THIS
-					truce_with = THIS
-					has_country_flag = no_more_great_game
-					has_country_modifier = punitive_effects
-					war_policy = pacifism
-				}
-			}
-			ENG = {
-				is_disarmed = no
-				casus_belli = THIS
-				test = is_monarchy_goverment
-				NOT = {
-					relation = { who = THIS value = 100 }
-					is_sphere_leader_of = THIS
-					truce_with = THIS
-					alliance_with = THIS
-					has_country_flag = no_more_great_game
-					has_country_modifier = punitive_effects
-					war_policy = pacifism
-				}
-			}
-		}
 	}
-
-	mean_time_to_happen = {
-		months = 50
-		modifier = {
-			factor = 0.8
-			civilization_progress = 0.5
-		}
-		modifier = {
-			factor = 0.8
-			civilization_progress = 0.75
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 6
-		}
-		modifier = {
-			factor = 1.5
-			part_of_sphere = yes
-		}
-		modifier = {
-			factor = 1.2
-			any_greater_power = { alliance_with = THIS }
-		}
-		modifier = {
-			factor = 1.2
-			NOT = { neighbour = RUS }
-		}
-		modifier = {
-			factor = 0.8
-			neighbour = RUS
-			neighbour = ENG
-		}
-		modifier = {
-			factor = 4
-			tag = AFG
-		}
-		modifier = {
-			factor = 0.75
-			OR = {
-				tag = SIN
-				tag = MAK
-				tag = KAL
-			}
-		}
-	}
-
+	mean_time_to_happen = { months = 50 }
 	option = {
 		name = "EVT95612OPTA"
-		random_country = {
-			limit = {
-				OR = {
-					tag = ENG
-					tag = RUS
-				}
-				is_disarmed = no
-				casus_belli = THIS
-				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-				}
-				NOT = {
-					relation = { who = THIS value = 50 }
-					is_sphere_leader_of = THIS
-					alliance_with = THIS
-					truce_with = THIS
-					has_country_flag = no_more_great_game
-					has_country_modifier = punitive_effects
-					war_policy = pacifism
-				}
-			}
-			country_event = 95613
-		}
-		add_country_modifier = {
-			name = "border_incident"
-			duration = 1825
-		}
+		ENG = { country_event = 95613 }
+		RUS = { country_event = 95613 }
+		add_country_modifier = { name = border_incident duration = 1825 }
 	}
 }
-
 country_event = {
 	id = 95613
 	title = "EVTNAME95613" #Border Incident
 	desc = "EVTDESC95613"
-	news = yes
-	news_desc_long = "EVTDESC95613_NEWS_LONG"
-	news_desc_medium = "EVTDESC95613_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC95613_NEWS_SHORT"
 	picture = "rebellion"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT95613OPTA"
 		casus_belli = {
@@ -309,191 +139,24 @@ country_event = {
 				casus_belli = make_puppet
 			}
 		}
-		ai_chance = {
-			factor = 75
-			modifier = {
-				factor = 0.5
-				any_greater_power = { war_with = THIS }
-			}
-			modifier = {
-				factor = 1.5
-				neighbour = FROM
-			}
-			modifier = {
-				factor = 1.25
-				war = no
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT95613OPTB"
 		prestige = -10
 		FROM = { country_event = 95614 }
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0
-				FROM = { any_owned_province = { is_core = HND } }
-				tag = ENG
-			}
-			modifier = {
-				factor = 2
-				any_greater_power = { war_with = THIS }
-			}
-			modifier = {
-				factor = 2
-				num_of_revolts = 1
-			}
-			modifier = {
-				factor = 2
-				NOT = { neighbour = FROM }
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = jingoism
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
-
 country_event = {
 	id = 95614
 	title = "EVTNAME95614" #Peace With $FROMCOUNTRY$
 	desc = "EVTDESC95614"
 	picture = "india"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT95614OPTA"
 		prestige = 2
 		relation = { who = FROM value = 50 }
-	}
-}
-
-# Russian absorption of vassals (to match Doctrine of Lapse)
-
-country_event = {
-	id = 95615
-	title = "EVTNAME95615"
-	desc = "EVTDESC95615"
-	picture = "Rebellion"
-
-	trigger = {
-		vassal_of = RUS
-		ai = yes
-		civilized = no
-		OR = {
-			primary_culture = uzbek
-			primary_culture = kirgiz
-			primary_culture = turkmen
-			primary_culture = tajik
-			primary_culture = kazak
-		}
-		NOT = { has_country_flag = no_russian_doctrine }
-		overlord = {
-			is_disarmed = no
-			has_recently_lost_war = no
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 400
-		modifier = {
-			factor = 2
-			NOT = { average_militancy = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { average_militancy = 2 }
-		}
-		modifier = {
-			factor = 1.1
-			NOT = { average_militancy = 3 }
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.7
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.6
-			average_militancy = 6
-		}
-		modifier = {
-			factor = 0.5
-			num_of_revolts = 1
-		}
-		modifier = {
-			factor = 0.5
-			revolt_percentage = 0.25
-		}
-		modifier = {
-			factor = 0.1
-			NOT = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-		}
-		modifier = {
-			factor = 0.5
-			overlord = { revolution_n_counterrevolution = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			has_country_modifier = regency_government
-		}
-	}
-
-	option = {
-		name = "EVT95615OPTA"
-		tech_school = developing_tech_school
-		set_country_flag = no_russian_doctrine
-		any_pop = {
-			limit = {
-				OR = {
-					is_accepted_culture = yes
-					is_primary_culture = yes
-				}
-			}
-			militancy = 4
-			consciousness = 1
-		}
-		RUS = { country_event = 95616 }
-	}
-}
-
-country_event = {
-	id = 95616
-	title = "EVTNAME95616" #The $FROMCOUNTRY_ADJ$ Doctrine
-	desc = "EVTDESC95616"
-	news = yes
-	news_desc_long = "EVTDESC95616_NEWS_LONG"
-	news_desc_medium = "EVTDESC95616_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC95616_NEWS_SHORT"
-	picture = "Rebellion"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT95616OPTA"
-		prestige = 5
-		inherit = FROM
-		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = "EVT95616OPTB"
-		prestige = -2
-		FROM = {
-			#set_country_flag = no_russian_doctrine
-			any_pop = { militancy = -2 }
-		}
-		ai_chance = { factor = 0 }
 	}
 }

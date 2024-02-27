@@ -12,8 +12,6 @@ country_event = {
 
 	trigger = {
 		tag = BRZ
-		owns = 2463
-		NOT = { year = 1845 }
 		test = is_monarchy_goverment
 	}
 
@@ -245,8 +243,8 @@ country_event = {
 			}
 			owner = { release = SPU }
 		}
-		PBC = {
-			all_core = { remove_core = PBC }
+		THIS = {
+			all_core = { remove_core = THIS }
 		}
 		random_owned = {
 			limit = { province_id = 2313 }
@@ -280,7 +278,7 @@ country_event = {
 		badboy = 2
 		all_core = {
 			limit = { is_core = PEU }
-			remove_core = PBC
+			remove_core = THIS
 		}
 		any_owned = {
 			limit = { is_core = PEU }
@@ -293,7 +291,7 @@ country_event = {
 		random_country = {
 			limit = {
 				tag = PEU
-				vassal_of = PBC
+				vassal_of = THIS
 			}
 			THIS = {
 				release_vassal = PEU
@@ -310,7 +308,7 @@ country_event = {
 		random_country = {
 			limit = {
 				tag = SPU
-				vassal_of = PBC
+				vassal_of = THIS
 			}
 			THIS = {
 				release_vassal = SPU
