@@ -2188,7 +2188,7 @@ make_puppet = {
 			}
 		}
 		THIS = {
-			is_great_game_buffer = no
+			is_greater_power = no
 			is_secondary_power = no
 		}
 	}
@@ -2242,7 +2242,7 @@ become_independent = {
 			}
 		}
 		THIS = {
-			is_great_game_buffer = no
+			is_greater_power = no
 			is_secondary_power = no
 		}
 	}
