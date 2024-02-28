@@ -348,15 +348,12 @@ country_event = {
 			target = FROM
 			attacker_goal = { casus_belli = war_reparations }
 		}
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT45107OPTB"
 		badboy = 8
-		relation = { who = USA value = -200 }
 		add_casus_belli = {
 			target = USA
 			type = cut_down_to_size
@@ -376,14 +373,11 @@ country_event = {
 			target = FROM
 			attacker_goal = { casus_belli = war_reparations }
 		}
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 0 }
 	}
 	option = {
 		name = "EVT45107OPTC"
 		badboy = 10
-		relation = { who = USA value = -300 }
 		add_casus_belli = {
 			target = USA
 			type = cut_down_to_size
@@ -398,18 +392,13 @@ country_event = {
 			target = FROM
 			attacker_goal = { casus_belli = conquest }
 		}
-		ai_chance = {
-			factor = 4
-		}
+		ai_chance = { factor = 0 }
 	}
 	option = {
 		name = "EVT45107OPTD"
 		badboy = -2
 		prestige = -20
-		relation = { who = HAI value = 200 }
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
