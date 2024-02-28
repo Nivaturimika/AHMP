@@ -277,40 +277,6 @@ country_event = {
 		political_reform = state_controlled
 		political_reform = underground_parties
 		social_reform = culture_voting_only
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
 		prestige_factor = -0.1
 		country_event = 800050
 	}
@@ -359,40 +325,6 @@ country_event = {
 		election = yes
 		prestige_factor = -0.05
 		random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
 	}
 }
 
@@ -418,40 +350,6 @@ country_event = {
 	option = {
 		name = "EVTOPTA60040"
 		government = absolute_monarchy
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
 	}
 }
 
@@ -480,40 +378,6 @@ country_event = {
 		name = "EVTNAME60060"
 		government = prussian_constitutionalism
 		random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
 	}
 }
 
@@ -549,40 +413,6 @@ country_event = {
 		name = "EVTOPTA60070"
 		government = hms_government
 		random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
 	}
 }
 
@@ -616,40 +446,6 @@ country_event = {
 	option = {
 		name = "EVT60080OPTA"
 		government = presidential_dictatorship
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
 	}
 }
 
@@ -657,185 +453,30 @@ country_event = {
 	id = 60090
 	title = "EVTNAME60110"
 	desc = "EVTDESC60080"
-	news = yes
-	news_title = "EVTNAME60080_NEWS_TITLE"
-	news_desc_long = "EVTDESC60080_NEWS_LONG"
-	news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60080_NEWS_SHORT"
 	picture = "communist_crowd"
-
 	trigger = {
 		government = democracy
 		vote_franschise = none_voting
-		ruling_party_ideology = anarcho_liberal
+		OR = {
+			ruling_party_ideology = anarcho_liberal
+			ruling_party_ideology = communist
+			ruling_party_ideology = fascist
+		}
 		civilized = yes
 	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 	major = yes
 	option = {
 		name = "EVT60090OPTA"
-		government = bourgeois_dictatorship
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
-	}
-}
-
-country_event = {
-	id = 60100
-	title = "EVTNAME60110"
-	desc = "EVTDESC60080"
-	news = yes
-	news_title = "EVTNAME60080_NEWS_TITLE"
-	news_desc_long = "EVTDESC60080_NEWS_LONG"
-	news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60080_NEWS_SHORT"
-	picture = "communist_crowd"
-
-	trigger = {
-		government = democracy
-		vote_franschise = none_voting
-		ruling_party_ideology = communist
-		civilized = yes
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-	major = yes
-	option = {
-		name = "EVT60100OPTA"
-		government = proletarian_dictatorship
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
-		}
-	}
-}
-
-country_event = {
-	id = 60110
-	title = "EVTNAME60110"
-	desc = "EVTDESC60080"
-	news = yes
-	news_title = "EVTNAME60080_NEWS_TITLE"
-	news_desc_long = "EVTDESC60080_NEWS_LONG"
-	news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60080_NEWS_SHORT"
-	picture = "communist_crowd"
-
-	trigger = {
-		government = democracy
-		vote_franschise = none_voting
-		ruling_party_ideology = fascist
-		civilized = yes
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
-	major = yes
-	option = {
-		name = "EVT60110OPTA"
-		government = fascist_dictatorship
-		#Genocide Cleanup
-		##Set Up Timer based on time the thing ran
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
-			owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
-		}
-		##Clean Variables
-		set_variable = { which = evidence_count value = 0 }
-		set_variable = { which = slowdown_point value = 0 }
-		#Delete Modifiers
-		random_owned = {
-			limit = { owner = { has_country_modifier = interment_camps } }
-			owner = { remove_country_modifier = interment_camps }
+		if = {
+			limit = { ruling_party_ideology = anarcho_liberal }
+			government = bourgeois_dictatorship
+		} else_if = {
+			limit = { ruling_party_ideology = communist }
+			government = proletarian_dictatorship
+		} else_if = {
+			limit = { ruling_party_ideology = fascist }
+			government = fascist_dictatorship
 		}
 	}
 }
@@ -846,9 +487,7 @@ country_event = {
 	title = "EVTNAME60120"
 	desc = "EVTDESC60120"
 	picture = "greatpowers"
-
 	trigger = {
-		ai = yes
 		war = no
 		part_of_sphere = yes
 		sphere_owner = {
@@ -856,43 +495,14 @@ country_event = {
 			is_culture_group = THIS
 			is_cultural_union = yes
 			war = no
+			state_n_government = 1
 		}
 		OR = {
-			is_vassal = no
-			AND = {
-				is_vassal = yes
-				sphere_owner = { is_our_vassal = THIS }
-			}
+			is_independant = yes
+			is_our_vassal = THIS
 		}
-		OR = {
-			sphere_owner = { state_n_government = 1 }
-			NOT = { is_culture_group = american_cultures }
-		}
-		OR = {
-			NOT = { tag = BAN }
-			sphere_owner = { neighbour = THIS }
-		}
-		OR = {
-			NOT = { tag = NEN }
-			has_country_flag = usstatehood_we_have_applied
-			USA = { ai = yes }
-		}
-		NOT = {
-			test = is_austrian_empire
-			tag = CSA
-			tag = DES
-			tag = FSA
-			tag = UIL
-			tag = UNB
-			tag = UBD
-			tag = INO
-			tag = IRE
-		}
-		NOT = { has_country_flag = post_colonial_country }
 	}
-
 	mean_time_to_happen = { months = 12 }
-
 	option = {
 		name = "EVTOPTA60120"
 		sphere_owner = { country_event = 60130 }
@@ -920,17 +530,13 @@ country_event = {
 			civilized = yes
 		}
 		inherit = FROM
-		ai_chance = {
-			factor = 95
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVTOPTB60130"
 		clr_country_flag = crown_from_the_gutter
-		any_pop = {
-			militancy = 0.1
-		}
+		any_pop = { militancy = 0.1 }
 		FROM = {
 			set_country_flag = does_not_want_to_unify
 			any_pop = {
@@ -941,9 +547,7 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

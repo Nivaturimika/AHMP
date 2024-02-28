@@ -1,5 +1,8 @@
 country_event = {
 	id = 36201
+	title = "EVTNAME36201"
+	desc = "EVTDESC36201"
+	picture = "Danishgovernment"
 	trigger = {
 		primary_culture = danish
 		NOT = {
@@ -8,27 +11,7 @@ country_event = {
 			trade_unions = all_trade_unions
 		}
 	}
-
-	mean_time_to_happen =  {
-		months = 8
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1871
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1872
-		}
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1874
-		}
-	}
-
-	title = "EVTNAME36201"
-	desc = "EVTDESC36201"
-	picture = "Danishgovernment"
-
+	mean_time_to_happen =  { months = 80 }
 	option = {
 		name = "EVTOPTA36201"
 		set_country_flag = LouisPioFirst
@@ -115,6 +98,34 @@ country_event = {
 		}
 		farmers = {
 			militancy = -1
+		}
+	}
+
+	option = {
+		name = "EVTOPTC36202"
+		set_country_flag = LouisPioSecond
+		ruling_party_ideology = socialist
+		political_reform = all_trade_unions
+		clerks = {
+			militancy = 5
+		}
+		artisans = {
+			militancy = 5
+		}
+		aristocrats = {
+			militancy = 5
+		}
+		capitalists = {
+			militancy = 5
+		}
+		labourers = {
+			militancy = -3
+		}
+		craftsmen = {
+			militancy = -3
+		}
+		farmers = {
+			militancy = -3
 		}
 	}
 }

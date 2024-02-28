@@ -17,25 +17,7 @@ country_event = {
 		civilized = yes
 	}
 
-	mean_time_to_happen = {
-		months = 400
-		modifier = {
-			factor = 0.9
-			average_consciousness = 3
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 7
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { plurality = 40 }
-		}
-		modifier = {
-			factor = 2
-			compound_steam_engines = 1
-		}
-	}
+	mean_time_to_happen = { months = 400 }
 
 	option = {
 		name = "EVTOPTA14500"

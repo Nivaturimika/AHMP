@@ -625,14 +625,19 @@ country_event = {
 	title = "EVTNAME23216"
 	desc = "EVTDESC23216"
 	picture = "treaty"
-	allow_multiple_instances = no
 	trigger = {
 		is_substate = yes
 		war = no
 		civilized = yes
 		overlord = { neighbour = THIS }
 	}
-	mean_time_to_happen = { months = 24 }
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.1
+			nationalism_n_imperialism = 1
+		}
+	}
 	option = {
 		name = "EVTOPTA23216"
 		overlord = { inherit = THIS }
