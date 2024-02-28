@@ -381,17 +381,15 @@ political_decisions = {
 				any_owned_province = { is_core = WLL }
 			}
 		}
-
 		allow = {
 			war = no
 			owns = 387
 		}
-
 		effect = {
-			BEL = {
+			THIS = {
 				all_core = {
 					add_core = FLA
-					remove_core = BEL
+					remove_core = THIS
 				}
 			}
 			change_tag = FLA
@@ -406,14 +404,11 @@ political_decisions = {
 				militancy = 6
 			}
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	become_wallonia = {
-	picture = become_wallonia
+		picture = become_wallonia
 		potential = {
 			tag = BEL
 			exists = BEL
@@ -422,17 +417,15 @@ political_decisions = {
 				any_owned_province = { is_core = FLA }
 			}
 		}
-
 		allow = {
 			war = no
 			owns = 392
 		}
-
 		effect = {
-			BEL = {
+			THIS = {
 				all_core = {
 					add_core = WLL
-					remove_core = BEL
+					remove_core = THIS
 				}
 			}
 			change_tag = WLL
@@ -447,10 +440,7 @@ political_decisions = {
 				militancy = 6
 			}
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	become_belgium_FLA = {
@@ -481,11 +471,11 @@ political_decisions = {
 			prestige = 10
 			BEL_387 = {
 				remove_core = WLL
-				add_core = FLA
+				add_core = THIS
 				add_core = BEL
 			}
 			BEL_394 = {
-				remove_core = FLA
+				remove_core = THIS
 				add_core = WLL
 				add_core = BEL
 			}
@@ -498,17 +488,7 @@ political_decisions = {
 			add_accepted_culture = picard
 			capital = 387
 			random_country = {
-				limit = {
-					tag = WLL
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = WLL }
-			}
-			random_country = {
-				limit = {
-					tag = WLL
-				}
+				limit = { tag = WLL }
 				country_event = 11101
 			}
 			any_pop = { militancy = -3 }
@@ -534,7 +514,6 @@ political_decisions = {
 				FLA = {
 					war = no
 					exists = yes
-					relation = { who = THIS value = 100 }
 					OR = {
 						part_of_sphere = no
 						sphere_owner = { is_sphere_leader_of = THIS }
@@ -546,100 +525,28 @@ political_decisions = {
 		effect = {
 			prestige = 10
 			BEL_387 = {
-				remove_core = WLL
+				remove_core = THIS
 				add_core = FLA
 				add_core = BEL
 			}
 			BEL_394 = {
 				remove_core = FLA
-				add_core = WLL
+				add_core = THIS
 				add_core = BEL
 			}
 			397 = {
-				remove_core = WLL
+				remove_core = THIS
 				remove_core = BEL
 			}
 			change_tag = BEL
 			add_accepted_culture = flemish
 			capital = 392
 			random_country = {
-				limit = {
-					tag = FLA
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = FLA }
-			}
-			random_country = {
-				limit = {
-					tag = FLA
-					exists = yes
-					ai = no
-				}
+				limit = { tag = FLA }
 				country_event = 11101
 			}
 			any_pop = { militancy = -3 }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-
-	congo_mining_company = {
-		picture = mining_union_upper_katanga
-		potential = {
-			exists = yes
-			civilized = yes
-			any_owned_province = {
-				OR = {
-					province_id = 1987
-					province_id = 1988
-					province_id = 1989
-				}
-			}
-			NOT = { has_global_flag = upper_katanga_mining_founded }
-		}
-
-		allow = {
-			owns = 1987
-			owns = 1988
-			owns = 1989
-			electric_furnace = 1
-		}
-
-		effect = {
-			set_global_flag = upper_katanga_mining_founded
-			prestige = 3
-			1987 = { trade_goods = iron }
-			1988 = { trade_goods = precious_metal } #Diamonds in Katanga
-			1989 = { trade_goods = coal }
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 100000 }
-						check_variable = { which = owed_cash_money value = 9 }
-					}
-				}
-				owner = { change_variable = { which = owed_cash_money value = 100 } }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 100000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					}
-				}
-				owner = { set_variable = { which = owed_cash_money value = 100 } }
-			}
-			random_owned = {
-				limit = { owner = { money = 100000 } }
-				owner = { treasury = -100000 }
-			}
-		}
-
 		ai_will_do = { factor = 1 }
 	}
 }

@@ -5,7 +5,7 @@ country_event = { #Mzilikazi of Matabele flees to Matabeland
 	picture = "mzilikazi_flees"
 	is_triggered_only = yes
 	immediate = {
-		add_country_modifier = { name = assegai duration = -1 }
+		add_country_modifier = assegai
 		2072 = { #Hwange
 			add_core = MAT
 			secede_province = MAT
@@ -102,10 +102,10 @@ country_event = {
 		add_accepted_culture = songhai
 		add_accepted_culture = tuareg
 		all_core = { add_core = TOU }
-		SEG = { all_core = { add_core = TOU } }
+		THIS = { all_core = { add_core = TOU } }
 		DND = { all_core = { add_core = TOU } }
 		MAS = { all_core = { add_core = TOU } }
-		SEG = { all_core = { remove_core = SEG } }
+		THIS = { all_core = { remove_core = THIS } }
 		change_tag = TOU
 		capital = 1800
 		define_general = {

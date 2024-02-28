@@ -2065,7 +2065,6 @@ province_event = {
 	id = 2615
 	title = "EVTNAME2615" #Flags Burned in $PROVINCENAME$
 	desc = "EVTDESC2615"
-
 	trigger = {
 		is_core = THIS
 		any_core = {
@@ -2086,79 +2085,7 @@ province_event = {
 			}
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 180
-		modifier = {
-			factor = 0.75
-			is_primary_culture = no
-			is_accepted_culture = no
-		}
-		modifier = {
-			factor = 2
-			is_primary_culture = yes
-		}
-		modifier = {
-			factor = 2
-			NOT = {
-				any_pop = {
-					is_accepted_culture = no
-					is_primary_culture = no
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_province_modifier = nationalist_agitation
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { has_province_modifier = nationalist_agitation }
-			any_neighbor_province = { has_province_modifier = nationalist_agitation }
-		}
-		modifier = {
-			factor = 0.75
-			any_neighbor_province = { has_province_modifier = national_assimilation_rejection }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { has_province_modifier = national_assimilation_acceptance }
-			any_neighbor_province = { has_province_modifier = national_assimilation_acceptance }
-		}
-		modifier = {
-			factor = 2
-			has_province_modifier = national_assimilation_acceptance
-		}
-		modifier = {
-			factor = 0.9
-			owner = { invention = national_fraternity }
-		}
-		modifier = {
-			factor = 0.9
-			owner = { invention = separatism }
-		}
-		modifier = {
-			factor = 0.8
-			owner = { invention = terrorism }
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 2
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 5
-		}
-	}
-
+	mean_time_to_happen = { months = 180 }
 	option = {
 		name = "EVT2615OPTA"
 		remove_province_modifier = national_assimilation_acceptance
@@ -2185,22 +2112,7 @@ province_event = {
 			}
 			relation = { who = THIS value = -25 }
 		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.5
-				owner = { war_policy = pacifism }
-			}
-			modifier = {
-				factor = 0.75
-				owner = { citizenship_policy = limited_citizenship }
-			}
-
-			modifier = {
-				factor = 0.5
-				owner = { citizenship_policy = full_citizenship }
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -2236,34 +2148,7 @@ province_event = {
 				}
 			}
 		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.5
-				owner = { citizenship_policy = residency }
-			}
-			modifier = {
-				factor = 0
-				owner = { war_policy = jingoism }
-			}
-			modifier = {
-				factor = 0.5
-				owner = { war_policy = pro_military }
-			}
-			modifier = {
-				factor = 0
-				is_primary_culture = yes
-			}
-			modifier = {
-				factor = 2
-				is_accepted_culture = yes
-			}
-			modifier = {
-				factor = 4
-				is_primary_culture = no
-				is_accepted_culture = no
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -2285,56 +2170,7 @@ province_event = {
 			}
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 60
-		modifier = {
-			factor = 1.5
-			country_units_in_province = THIS
-		}
-		modifier = {
-			factor = 2
-			is_primary_culture = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_primary_culture = no
-			is_accepted_culture = yes
-		}
-		modifier = {
-			factor = 0.9
-			owner = { invention = national_fraternity }
-		}
-		modifier = {
-			factor = 0.9
-			owner = { invention = separatism }
-		}
-		modifier = {
-			factor = 0.8
-			owner = { invention = terrorism }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { average_consciousness = 5 }
-		}
-		modifier = {
-			factor = 1.2
-			NOT = { average_militancy = 3 }
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 5
-		}
-	}
-
+	mean_time_to_happen = { months = 60 }
 	option = {
 		name = "EVT2616OPTA"
 		add_province_modifier = {
@@ -2357,7 +2193,6 @@ province_event = {
 					has_province_modifier = nationalist_agitation
 				}
 			}
-			relation = { who = THIS value = -50 }
 			leave_alliance = THIS
 			add_casus_belli = {
 				target = THIS
@@ -2397,57 +2232,7 @@ province_event = {
 			}
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 180
-		modifier = {
-			factor = 1.5
-			is_primary_culture = no
-			is_accepted_culture = no
-		}
-		modifier = {
-			factor = 0.5
-			is_primary_culture = yes
-		}
-		modifier = {
-			factor = 0.75
-			is_accepted_culture = yes
-		}
-		modifier = {
-			factor = 1.5
-			any_neighbor_province = { has_province_modifier = nationalist_agitation }
-		}
-		modifier = {
-			factor = 1.5
-			has_province_modifier = national_assimilation_rejection
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { has_province_modifier = national_assimilation_rejection }
-			any_neighbor_province = { has_province_modifier = national_assimilation_rejection }
-		}
-		modifier = {
-			factor = 0.75
-			any_neighbor_province = { has_province_modifier = national_assimilation_acceptance }
-		}
-		modifier = {
-			factor = 1.2
-			average_militancy = 2
-		}
-		modifier = {
-			factor = 1.2
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 1.2
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 1.2
-			average_militancy = 5
-		}
-	}
-
+	mean_time_to_happen = { months = 180 }
 	option = {
 		name = "EVT2620OPTA"
 		remove_province_modifier = national_assimilation_rejection
@@ -2502,47 +2287,7 @@ province_event = {
 			}
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 300
-		modifier = {
-			factor = 1.2
-			owner = {
-				is_greater_power = no
-				is_secondary_power = no
-			}
-		}
-		modifier = {
-			factor = 1.5
-			is_primary_culture = no
-			is_accepted_culture = yes
-		}
-		modifier = {
-			factor = 0.75
-			owner = { nationalism_n_imperialism = 1 }
-		}
-		modifier = {
-			factor = 0.75
-			owner = { revolution_n_counterrevolution = 1 }
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 2
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 1.1
-			average_militancy = 5
-		}
-	}
-
+	mean_time_to_happen = { months = 300 }
 	option = {
 		name = "EVT2605OPTA"
 		owner = {

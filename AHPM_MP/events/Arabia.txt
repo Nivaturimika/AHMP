@@ -483,15 +483,7 @@ country_event = {
 		has_global_flag = house_of_saud_exiled
 		has_global_flag = arab_revolt_has_begun
 	}
-
-	mean_time_to_happen = {
-		months = 50
-		modifier = {
-			factor = 0.25
-			war = yes
-		}
-	}
-
+	mean_time_to_happen = { months = 50 }
 	option = {
 		name = "EVT96110OPTA"
 		clr_global_flag = house_of_saud_exiled
@@ -509,12 +501,6 @@ country_event = {
 				OR = {
 					war_with = THIS
 					truce_with = THIS
-					NOT = {
-						relation = {
-							who = THIS
-							value = -100
-						}
-					}
 				}
 			}
 			diplomatic_influence = {
@@ -546,90 +532,32 @@ country_event = {
 	option = {
 		name = "EVT96115OPTA"
 		leave_alliance = EGY
-		EGY = {
-			relation = {
-				who = THIS
-				value = -50
-			}
-			country_event = 800055
-		}
-		TUR = {
-			relation = {
-				who = THIS
-				value = 50
-			}
-			create_vassal = THIS
-		}
-		ai_chance = {
-			factor = 30
-			modifier = {
-				factor = 0
-				910 = { NOT = { is_core = TUR } }
-			}
-			modifier = {
-				factor = 1.5
-				any_owned_province = {
-					any_neighbor_province = {
-						NOT = { province_id = 1155 }
-						controlled_by = TUR
-					}
-				}
-			}
-		}
+		EGY = { country_event = 800055 }
+		TUR = { create_vassal = THIS }
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "EVT96115OPTB"
 		leave_alliance = TUR
 		TUR = {
-			diplomatic_influence = {
-				who = THIS
-				value = -200
-			}
-			relation = {
-				who = THIS
-				value = -50
-			}
+			diplomatic_influence = { who = THIS value = -200 }
 		}
 		any_owned = { add_core = TUR }
-		EGY = {
-			relation = {
-				who = THIS
-				value = 50
-			}
-		}
-		ai_chance = {
-			factor = 70
-			modifier = {
-				factor = 0.5
-				any_owned_province = {
-					any_neighbor_province = {
-						NOT = { province_id = 1155 }
-						controlled_by = TUR
-					}
-				}
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 
 country_event = {
-
 	id = 96120
 	title = "EVTNAME96120" #The House of Rashid
 	desc = "EVTDESC96120"
-	news = yes
-	news_title = "EVTNAME96120_NEWS_TITLE"
-	news_desc_long = "EVTDESC96120_NEWS_LONG"
-	news_desc_medium = "EVTDESC96120_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96120_NEWS_SHORT"
 	picture = "arab_revolt"
-
 	trigger = {
 		war = no
 		is_vassal = no
 		tag = NEJ
-		any_owned_province = { country_units_in_province = NEJ }
+		any_owned_province = { country_units_in_province = THIS }
 		HAL = {
 			exists = yes
 			is_vassal = no
@@ -641,30 +569,9 @@ country_event = {
 		OR = {
 			post_napoleonic_thought = 1
 			civilization_progress = 0.5
-			year = 1850
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 40
-		modifier = {
-			factor = 0.1
-			HAL = { war = yes }
-		}
-		modifier = {
-			factor = 0.5
-			year = 1860
-		}
-		modifier = {
-			factor = 1.5
-			has_recently_lost_war = yes
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { total_amount_of_divisions = 4 }
-		}
-	}
-
+	mean_time_to_happen = { months = 40 }
 	option = {
 		name = "EVT96120OPTA"
 		HAL = {
@@ -685,22 +592,15 @@ country_event = {
 }
 
 country_event = {
-
 	id = 96121
 	title = "EVTNAME96121" #The House of Saud
 	desc = "EVTDESC96121"
-	news = yes
-	news_title = "EVTNAME96120_NEWS_TITLE"
-	news_desc_long = "EVTDESC96121_NEWS_LONG"
-	news_desc_medium = "EVTDESC96121_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC96121_NEWS_SHORT"
 	picture = "arab_revolt"
-
 	trigger = {
 		war = no
 		tag = HAL
 		is_vassal = no
-		any_owned_province = { country_units_in_province = HAL }
+		any_owned_province = { country_units_in_province = THIS }
 		NEJ = {
 			exists = yes
 			is_vassal = no
@@ -721,22 +621,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 40
-		modifier = {
-			factor = 0.1
-			NEJ = { war = yes }
-		}
-		modifier = {
-			factor = 0.5
-			year = 1860
-		}
-		modifier = {
-			factor = 1.5
-			has_recently_lost_war = yes
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { total_amount_of_divisions = 4 }
-		}
 	}
 
 	option = {
@@ -764,9 +648,7 @@ country_event = {
 	title = "EVTNAME98725" #The Call for Arab Unity
 	desc = "EVTDESC98725"
 	picture = "arab_revolt"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT98725OPTA"
 		any_country = {
@@ -849,7 +731,6 @@ country_event = {
 		war = no
 		tag = KWT
 		exists = yes
-		year = 1880
 		has_global_flag = berlin_conference
 		OR = {
 			overlord = {
@@ -858,7 +739,6 @@ country_event = {
 					tag = EGY
 				}
 				OR = {
-					relation = { who = RUS value = 25 }
 					alliance_with = RUS
 					in_sphere = RUS
 					RUS = { owns = 1096 }
@@ -873,7 +753,6 @@ country_event = {
 					tag = EGY
 				}
 				OR = {
-					relation = { who = RUS value = 25 }
 					alliance_with = RUS
 					in_sphere = RUS
 					RUS = { owns = 1096 }
@@ -882,79 +761,26 @@ country_event = {
 			}
 		}
 		any_greater_power = {
-			NOT = { tag = RUS }
 			owns = 1251
 		}
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 40
-		modifier = {
-			factor = 0.1
-			any_neighbor_country = {
-				OR = {
-					tag = TUR
-					tag = EGY
-				}
-				in_sphere = RUS
-			}
-		}
-		modifier = {
-			factor = 0.5
-			any_neighbor_country = {
-				OR = {
-					tag = TUR
-					tag = EGY
-				}
-				relation = { who = RUS value = 100 }
-			}
-		}
-		modifier = {
-			factor = 0.5
-			any_neighbor_country = {
-				OR = {
-					tag = TUR
-					tag = EGY
-				}
-				alliance_with = RUS
-			}
-		}
-		modifier = {
-			factor = 0.5
-			year = 1885
-		}
-		modifier = {
-			factor = 4
-			1163 = { owner = { civilized = no } }
-		}
-		modifier = {
-			factor = 0.25
-			year = 1888
-		}
-	}
-
+	mean_time_to_happen = { months = 40 }
 	option = {
 		name = "EVT96122OPTA" #Ask the british/GPs to protect us
 		random_country = {
 			limit = {
-				NOT = { tag = RUS }
 				is_greater_power = yes
 				owns = 1251
 			}
 			country_event = 96123
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT96122OPTB" #We don't need protection.
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -970,18 +796,15 @@ country_event = {
 
 	option = {
 		name = "EVT961223PTA" #Integrate Kuwait
-		random_country = {
+		KWT = {
 			limit = {
-				tag = KWT
 				exists = yes
 				is_vassal = yes
 			}
 			overlord = { release_vassal = KWT }
 		}
-
 		random_country = {
 			limit = {
-				exists = yes
 				OR = {
 					tag = TUR
 					tag = EGY
@@ -990,32 +813,14 @@ country_event = {
 			}
 			country_event = 96124
 		}
-
 		inherit = KWT
-
-		ai_chance = {
-			factor = 95
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT96123OPTB" #We don't wish to get involved
 		prestige = -10
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 0
-				NOT = { relation = { who = TUR value = 0 } }
-			}
-			modifier = {
-				factor = 2
-				relation = { who = TUR value = 150 }
-			}
-			modifier = {
-				factor = 2
-				alliance_with = TUR
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1031,7 +836,6 @@ country_event = {
 
 	option = {
 		name = "EVT961224PTA"
-		relation = { who = FROM value = -50 }
 		random_owned = {
 			limit = {
 				province_id = 932

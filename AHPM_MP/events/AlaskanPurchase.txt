@@ -38,9 +38,7 @@ country_event = {
 	}
 	option = {
 		name = "EVT32510OPTB"
-		FROM = {
-			country_event = 32514
-		}
+		FROM = { country_event = 32514 }
 		ai_chance = { factor = 0 }
 	}
 

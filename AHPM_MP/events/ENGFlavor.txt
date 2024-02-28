@@ -2277,13 +2277,6 @@ country_event = {
 		set_country_flag = lagos_slave_trade
 		1923 = { owner = { country_event = 36966 } }
 		1923 = { secede_province = THIS }
-		1923 = { trade_goods = tropical_wood } #Lagos
-		relation = { who = SOK value = -400 }
-		relation = { who = OYO value = -400 }
-		relation = { who = ARO value = -400 }
-		relation = { who = WRI value = -400 }
-		relation = { who = BEN value = -400 }
-		relation = { who = CLA value = -400 }
 		ai_chance = { factor = 100 }
 	}
 
@@ -3096,10 +3089,9 @@ country_event = {
 		2507 = { life_rating = -5 change_province_name = "Alice Springs" }
 		2603 = { life_rating = -5 change_province_name = "Tanami" }
 		2495 = { change_province_name = "Angle Pole" }
-		2476 = { trade_goods = precious_metal add_province_modifier = { name = gold_rush duration = 730 } life_rating = 5 }
-		2478 = { trade_goods = precious_metal add_province_modifier = { name = gold_rush duration = 730 } }
-		2468 = { #Sydney
-			trade_goods = coal
+		2476 = { add_province_modifier = { name = gold_rush duration = 730 } life_rating = 5 }
+		2478 = { add_province_modifier = { name = gold_rush duration = 730 } }
+		2468 = {
 			remove_province_modifier = local_tractors
 			life_rating = 5
 			add_province_modifier = { name = gateway_to_harbor duration = 1825 }

@@ -76,11 +76,7 @@ political_decisions = {
 			set_country_flag = bh_built
 			treasury = -500000
 			2442 = { change_province_name = "Belo Horizonte" }
-			2442 = {
-				life_rating = 4
-				trade_goods = iron
-				add_province_modifier = { name = recently_built_city duration = 365 }
-			}
+			2442 = { life_rating = 4 add_province_modifier = { name = recently_built_city duration = 365 } }
 		}
 	}
 
@@ -242,19 +238,15 @@ political_decisions = {
 			owns = 2410
 			owns = 2402
 			state_n_government = 1
-			2550 = { trade_goods = rubber }
 		}
-
 		effect = {
 			set_country_flag = brazilian_rubber_boom
 			2410 = { add_province_modifier = { name = colonial_recruitment duration = 365 } }
 			2402 = { add_province_modifier = { name = colonial_recruitment duration = 365 } }
-			2419 = { change_province_name = "Campo Grande" trade_goods = cattle }
+			2419 = { change_province_name = "Campo Grande" add_province_modifier = { name = recently_built_city duration = 150 } }
 			2550 = { change_province_name = "Porto Velho" add_province_modifier = { name = recently_built_city duration = 150 } }
 			2532 = { change_province_name = "Boa Vista" add_province_modifier = { name = recently_built_city duration = 150 } }
-			random_owned = { limit = { province_id = 2549 }
-				change_province_name = "Rio Branco" add_province_modifier = { name = recently_built_city duration = 100 }
-			}
+			2549 = { change_province_name = "Rio Branco" add_province_modifier = { name = recently_built_city duration = 100 } }
 		}
 	}
 	remove_central_american_cores = {
@@ -359,85 +351,6 @@ political_decisions = {
 
 		ai_will_do = { factor = 1 }
 	}
-
-
-	commodity_boom_colombia = {
-		picture = coffee_in_colombia
-		potential = {
-			OR = {
-				owns = 2247
-				owns = 2279
-				owns = 2295
-			}
-			NOT = { has_global_flag = rgo_change_sa }
-		}
-
-		allow = {
-			war = no
-			modern_central_bank_system = 1
-		}
-
-		effect = {
-			set_global_flag = rgo_change_sa
-			#Colombia
-			2253 = { trade_goods = coffee }
-			2254 = { trade_goods = coffee }
-			2256 = { trade_goods = coffee }
-			2248 = { trade_goods = coffee }
-			2250 = { trade_goods = coffee }
-			2247 = { trade_goods = coffee }
-			2260 = { trade_goods = cattle }
-			2261 = { trade_goods = cattle }
-			2257 = { trade_goods = tobacco }
-			2258 = { trade_goods = tobacco }
-			2255 = { trade_goods = tobacco }
-			#Peru
-			2302 = { trade_goods = coffee }
-			2292 = { trade_goods = coffee }
-			2297 = { trade_goods = coffee }
-			#Ecuador
-			2279 = { trade_goods = coffee }
-			2280 = { trade_goods = coffee }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
-
-	commodity_boom_central_america = {
-		picture = coffee_in_colombia
-		potential = {
-			OR = {
-				owns = 2201
-				owns = 2193
-				owns = 2186
-				owns = 2172
-			}
-			NOT = { has_global_flag = rgo_change_central_america }
-		}
-
-		allow = {
-			war = no
-			modern_central_bank_system = 1
-		}
-
-		effect = {
-			set_global_flag = rgo_change_central_america
-			#FRCA
-			2201 = { trade_goods = coffee }
-			2193 = { trade_goods = coffee }
-			2194 = { trade_goods = coffee }
-			2188 = { trade_goods = coffee }
-			#Mexico
-			2172 = { trade_goods = coffee }
-			2180 = { trade_goods = coffee }
-			2168 = { trade_goods = coffee }
-			2169 = { trade_goods = coffee }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
 
 	treaty_of_bogota = {
 		picture = map_colombia

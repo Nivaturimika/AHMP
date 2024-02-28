@@ -32,48 +32,6 @@ country_event = {
 	}
 }
 
-#The End of the Chilean silver rush
-	country_event = {
-		id = 97081
-		title = "EVTNAME97081"
-		desc = "EVTDESC97081"
-		picture = "chilean_silver_rush"
-
-		trigger = {
-			2323 = { owned_by = THIS trade_goods = precious_metal }
-			year = 1880
-		}
-
-		fire_only_once = yes
-
-		mean_time_to_happen = {
-			months = 48
-			modifier = {
-				factor = 0.8
-				year = 1885
-			}
-			modifier = {
-				factor = 0.5
-				year = 1886
-			}
-			modifier = {
-				factor = 0.5
-				year = 1887
-			}
-			modifier = {
-				factor = 0.5
-				year = 1888
-			}
-		}
-
-		option = {
-			name = "EVT97081OPTA"
-			#2322 = { trade_goods = iron remove_province_modifier = silver_mine }
-			2323 = { trade_goods = iron remove_province_modifier = silver_mine }
-			2329 = { trade_goods = coal }
-		}
-}
-
 #The War of the Pacific - 1/2
 country_event = {
 	id = 97082

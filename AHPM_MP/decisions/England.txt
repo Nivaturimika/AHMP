@@ -3,7 +3,6 @@ political_decisions = {
     end_of_the_UK = {
         potential = {
             tag = ENG
-            NOT = { has_global_flag = united_kingdom_no_more }
             NOT = { has_country_flag = dismantling_treaty }
             SCO = {
                 exists = yes
@@ -28,7 +27,6 @@ political_decisions = {
         }
 
         effect = {
-            set_global_flag = united_kingdom_no_more
             remove_accepted_culture = australian
             remove_accepted_culture = anglo_canadian
             ENG_300 = { add_core = ENL }
@@ -38,14 +36,10 @@ political_decisions = {
             ENG_291 = { add_core = ENL }
             ENG_296 = { add_core = ENL }
             517 = { add_core = ENL }
-            ENG = {
-                all_core = { remove_core = ENG }
-            }
+            ENG = { all_core = { remove_core = ENG } }
             change_tag = ENL
         }
-        ai_will_do = {
-            factor = 1
-        }
+        ai_will_do = { factor = 1 }
     }
 
     reclaim_the_UK = {

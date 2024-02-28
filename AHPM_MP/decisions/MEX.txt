@@ -33,10 +33,6 @@ political_decisions = {
 				}
 			}
 			FRA = {
-				relation = {
-					who = THIS
-					value = 100
-				}
 				diplomatic_influence = {
 					who = THIS
 					value = 100

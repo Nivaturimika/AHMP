@@ -68,11 +68,7 @@ political_decisions = {
 		picture = kanun_i_esasi
 		potential = {
 			tag = TUR
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test = is_monarchy_goverment
 			has_country_flag = tanzimat_reforms_enacted
 			NOT = {
 				has_country_flag = ottoman_constitution_refused
@@ -128,10 +124,7 @@ political_decisions = {
 				}
 				owner = { add_accepted_culture = mashriqi }
 			}
-			add_country_modifier = {
-				name = ottomanism_reform
-				duration = -1
-			}
+			add_country_modifier = ottomanism_reform
 			any_pop = {
 				scaled_militancy = {
 					ideology = liberal
@@ -139,10 +132,7 @@ political_decisions = {
 				}
 			}
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	republican_reforms = {
@@ -155,7 +145,6 @@ political_decisions = {
 		allow = {
 			election = no
 			ruling_party_ideology = liberal
-			year = 1919
 		}
 
 		effect = {
@@ -238,41 +227,21 @@ political_decisions = {
 		effect = {
 			badboy = 5
 			set_country_flag = montenegro_claims
-			relation = {
-				who = MON
-				value = -400
-			}
 			diplomatic_influence = {
 				who = MON
 				value = -400
 			}
-
 			casus_belli = {
 				target = MON
 				type = conquest
 				months = 120
 			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					has_country_flag = wallachia_annexed
-					has_country_flag = moldavia_annexed
-				}
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	christian_question_armenia = {
 		picture = christian_question_armenia
-		news = yes
-		news_title = "ARMENIAN_GENOCIDE_NEWS_TITLE"
-		news_desc_long = "ARMENIAN_GENOCIDE_NEWS_LONG"
-		news_desc_medium = "ARMENIAN_GENOCIDE_NEWS_MEDIUM"
-		news_desc_short = "ARMENIAN_GENOCIDE_NEWS_SHORT"
-
 		potential = {
 			OR = {
 				AND = {
@@ -285,11 +254,7 @@ political_decisions = {
 				}
 			}
 			NOT = { has_country_flag = armenian_genocide }
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test = is_monarchy_goverment
 			tag = TUR
 		}
 
@@ -904,36 +869,6 @@ political_decisions = {
 				change_province_name = "Istanbul"
 				any_pop = { limit = { has_pop_culture = turkish } militancy = -4 }
 			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
-	turkish_tea = {
-		picture = turkish_coffee_house
-		potential = {
-			tag = TUR
-			NOT = { has_country_flag = turkish_tea_in_turkey }
-		}
-
-		allow = {
-			war = no
-			owns = 884
-			owns = 882
-			owns = 879
-			owns = 877
-			owns = 878
-			OR = {
-				year = 1915
-				organizational_development = 1
-			}
-		}
-
-		effect = {
-			set_country_flag = turkish_tea_in_turkey
-			884 = { trade_goods = tea }
-			882 = { trade_goods = tea }
-			relation = { who = ENG value = -50 }
 		}
 
 		ai_will_do = { factor = 1 }

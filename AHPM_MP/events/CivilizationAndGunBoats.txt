@@ -4093,18 +4093,15 @@ province_event = {
 	id = 90954
 	title = "EVTNAME90954"
 	desc = "EVTDESC90954"
-
 	trigger = {
 		OR = {
 			province_id = 1498
 			AND = {
 				province_id = 1496
-				NOT = { 2632 = { trade_goods = precious_metal } }
 			}
 			AND = {
 				province_id = 2632
 				NOT = { total_pops = 30000 }
-				NOT = { 1496 = { trade_goods = precious_metal } }
 			}
 		}
 		port = yes
@@ -4118,12 +4115,9 @@ province_event = {
 		NOT = { any_neighbor_province = { owned_by = THIS } }
 		any_neighbor_province = { owner = { capital_scope = {continent = asia } } }
 	}
-
 	mean_time_to_happen = { months = 8 }
-
 	option = {
 		name = "EVTOPTA90954"
-		trade_goods = precious_metal
 		any_pop = { limit = { is_culture_group = east_asian } reduce_pop = 1.2 }
 		add_province_modifier = { name = treaty_port duration = -1 }
 	}
@@ -4141,7 +4135,6 @@ province_event = {
 			owner = { is_culture_group = east_asian }
 			owner = { is_culture_group = far_east_asian }
 		}
-		trade_goods = precious_metal
 		OR = {
 			province_id = 1498
 			province_id = 1496
@@ -4157,12 +4150,6 @@ province_event = {
 	option = {
 		name = "EVTOPTA90955"
 		add_province_modifier = { name = treaty_port duration = -1 }
-		random_list = {
-			25 = { trade_goods = fish }
-			25 = { trade_goods = silk }
-			25 = { trade_goods = tea }
-			25 = { trade_goods = opium }
-		}
 	}
 }
 

@@ -16,25 +16,7 @@ country_event = {
 		government = democracy
 	}
 
-	mean_time_to_happen =  {
-		months = 8
-
-		modifier = {
-			factor = 0.5 #increase likelihood to happen
-			year = 1852
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1853
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1854
-		}
-	}
+	mean_time_to_happen =  { months = 8 }
 
 	title = "EVTNAME46600"
 	desc = "EVTDESC46600"

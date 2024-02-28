@@ -455,11 +455,6 @@ country_event = {
 		}
 		any_owned_province = {
 			total_pops = 30000
-			OR = {
-				trade_goods = grain
-				trade_goods = fruit
-				trade_goods = cattle
-			}
 			NOT = { terrain = desert }
 			NOT = { terrain = semidesert }
 			NOT = { terrain = arctic }
@@ -509,11 +504,6 @@ country_event = {
 		random_owned = {
 			limit = {
 				total_pops = 30000
-				OR = {
-					trade_goods = grain
-					trade_goods = fruit
-					trade_goods = cattle
-				}
 				NOT = { terrain = desert }
 				NOT = { terrain = semidesert }
 				NOT = { terrain = arctic }

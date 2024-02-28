@@ -4644,24 +4644,19 @@ country_event = {
 		invention = advanced_ore_smelting_processes
 		owns = 232
 	}
+	fire_only_once = yes
 	immediate = {
-		158 = { trade_goods = iron change_province_name = "Duluth" }
-		177 = { trade_goods = iron }
-		157 = { trade_goods = iron }
-		235 = { trade_goods = iron }
-		98 = { trade_goods = iron }
-		232 = { life_rating = 5 } #New York
-		163 = { life_rating = 5 } #Chicago
-		173 = { life_rating = 5 } #Detroit
-		243 = { life_rating = 4 } #Boston
-		223 = { life_rating = 5 } #Philadelphia
-		139 = { life_rating = 5 } #New Orleans
-		199 = { life_rating = 4 } #Jacksonville
-		169 = { life_rating = 4 } #Indianapolis
-		179 = { life_rating = 4 } #Columbus
-		209 = { life_rating = 3 } #Charlotte
+		158 = { change_province_name = "Duluth" }
+		232 = { life_rating = 5 }
+		163 = { life_rating = 5 }
+		173 = { life_rating = 5 }
+		243 = { life_rating = 4 }
+		223 = { life_rating = 5 }
+		139 = { life_rating = 5 }
+		199 = { life_rating = 4 }
+		169 = { life_rating = 4 }
+		179 = { life_rating = 4 }
+		209 = { life_rating = 3 }
 	}
-	option = {
-		name = "EVT16516OPTA"
-	}
+	option = { name = "EVT16516OPTA" }
 }

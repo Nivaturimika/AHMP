@@ -124,28 +124,9 @@ country_event = {
 		press_rights = free_press
 		child_labor = child_labor_legal
 		civilized = yes
-		any_owned_province = {
-			trade_goods = coal
-			is_colonial = no
-		}
+		any_owned_province = { is_colonial = no }
 	}
-
-	mean_time_to_happen = {
-		months = 800
-		modifier = {
-			factor = 0.9
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 1.2
-			NOT = { average_consciousness = 4 }
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 5
-		}
-	}
-
+	mean_time_to_happen = { months = 800 }
 	option = {
 		name = "EVTOPTA12020"
 		add_country_modifier = { name = national_tragedy duration = 365 }
@@ -271,7 +252,6 @@ country_event = {
 	option = {
 		name = "EVTOPTB12050"
 		random_province = {
-			limit = { trade_goods = tea }
 			state_scope = { farmers = { militancy = 1.5 } }
 		}
 	}
@@ -279,7 +259,6 @@ country_event = {
 	option = {
 		name = "EVTOPTC12050"
 		random_province = {
-			limit = { trade_goods = tea }
 			state_scope = { bureaucrats = { militancy = 3 } }
 		}
 	}
@@ -438,10 +417,8 @@ country_event = {
 	option = {
 		name = "EVTOPTA12090"
 		random_owned = {
-			limit = { trade_goods = silk }
 			state_scope = {
 				any_owned = {
-					limit = { trade_goods = silk }
 					any_pop = { militancy = 1 }
 					add_province_modifier = { name = silk_famine duration = 1500 }
 				}
@@ -910,34 +887,14 @@ country_event = {
 	title = "EVTNAME12210"
 	desc = "EVTDESC12210"
 	picture = "Thermopylae"
-
 	trigger = {
 		num_of_ports = 10
-		any_owned_province = {
-			trade_goods = fish
-			NOT = { unemployment_by_type = { type = farmers value = 0.05 } }
-		}
+		any_owned_province = { NOT = { unemployment_by_type = { type = farmers value = 0.05 } } }
 	}
-
-	mean_time_to_happen = {
-		months = 1000
-		modifier = {
-			factor = 0.9
-			NOT = { poor_strata_life_needs = 0.9}
-		}
-		modifier = {
-			factor = 1.5
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 1.5
-			average_consciousness = 5
-		}
-	}
-
+	mean_time_to_happen = { months = 1000 }
 	option = {
 		name = "EVTOPTA12210"
-		fish = 40
+		middle_strata = { militancy = -0.5 }
 	}
 	option = {
 		name = "EVTOPTB12210"
