@@ -478,14 +478,9 @@ country_event = {
 }
 
 country_event = {
-
 	id = 97116
 	title = "EVTNAME97115"
 	desc = "EVTDESC97116"
-	news = yes
-	news_desc_long = "EVTDESC97116_NEWS_LONG"
-	news_desc_medium = "EVTDESC97116_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97116_NEWS_SHORT"
 	picture = "ranjit_singh_death"
 
 	is_triggered_only = yes
@@ -493,7 +488,6 @@ country_event = {
 	option = {
 		name = "EVT97116OPTA"
 		badboy = 2
-		relation = { who = PNJ value = -100 }
 		leave_alliance = PNJ
 		casus_belli = {
 			target = PNJ

@@ -1297,10 +1297,6 @@ country_event = {
 	id = 98231
 	title = "EVTNAME98231" #Orange River Convention
 	desc = "EVTDESC98230"
-	news = yes
-	news_desc_long = "EVTDESC98230_NEWS_LONG"
-	news_desc_medium = "EVTDESC98230_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC98230_NEWS_SHORT"
 	picture = "boer_war"
 
 	is_triggered_only = yes
@@ -1321,7 +1317,6 @@ country_event = {
 	option = {
 		name = "EVT98230OPTB"
 		prestige = 10
-		relation = { who = FROM value = -100 }
 		leave_alliance = FROM
 		add_casus_belli = {
 			target = FROM

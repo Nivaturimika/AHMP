@@ -2262,15 +2262,6 @@ become_independent = {
 			to = pro_military
 			value = 0.25
 		}
-		if = {
-			limit = {
-				OR = {
-					is_greater_power = yes
-					is_secondary_power = yes
-				}
-			}
-			add_war_goal = { casus_belli = make_puppet }
-		}
 		release_vassal = THIS
 	}
 }
@@ -2522,6 +2513,16 @@ install_ideology_make_puppet = {
 
 	can_use = {
 		test = is_warable_country
+		FROM = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		THIS = {
+			is_greater_power = no
+			is_secondary_power = no
+		}
 	}
 
 	po_make_puppet = yes
