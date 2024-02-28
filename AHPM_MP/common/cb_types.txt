@@ -2181,11 +2181,15 @@ make_puppet = {
 
 	can_use = {
 		test = is_warable_country
-		THIS = {
+		FROM = {
 			OR = {
 				is_greater_power = yes
 				is_secondary_power = yes
 			}
+		}
+		THIS = {
+			is_great_game_buffer = no
+			is_secondary_power = no
 		}
 	}
 
@@ -2231,11 +2235,15 @@ become_independent = {
 
 	can_use = {
 		test = is_warable_country
-		THIS = {
+		FROM = {
 			OR = {
 				is_greater_power = yes
 				is_secondary_power = yes
 			}
+		}
+		THIS = {
+			is_great_game_buffer = no
+			is_secondary_power = no
 		}
 	}
 
@@ -2286,7 +2294,7 @@ install_government = {
 	good_relation_militancy_factor = 1
 	can_use = {
 		test = is_warable_country
-		THIS = {
+		FROM = {
 			is_greater_power = yes
 			government = proletarian_dictatorship
 		}
