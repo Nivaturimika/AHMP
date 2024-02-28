@@ -1,7 +1,7 @@
 owner = HAL
 controller = HAL
 add_core = IRQ
-trade_goods = fruit
+trade_goods = oil
 life_rating = 10
 1861.1.1 = {
     controller = TUR
