@@ -635,7 +635,7 @@ country_event = {
 		months = 24
 		modifier = {
 			factor = 0.1
-			nationalism_n_imperialism = 1
+			overlord = { nationalism_n_imperialism = 1 }
 		}
 	}
 	option = {
