@@ -147,6 +147,9 @@ is_great_game_buffer = {
 	
 	exists = yes
 	is_vassal = no
+	is_greater_power = no
+	is_secondary_power = no
+	capital_scope = { continent = asia }
 	OR = {
 		neighbour = RUS
 		any_neighbor_country = { vassal_of = RUS }

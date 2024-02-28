@@ -1,47 +1,24 @@
 country_event = {
-
 	id = 34600
-	news = yes
-	news_desc_long = "EVTDESC34600_NEWS_LONG"
-	news_desc_medium = "EVTDESC34600_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC34600_NEWS_SHORT"
-
-	trigger = {
-		OR = {
-			tag = PRU
-			capital = 549
-		}
-		year = 1836
-		war = no
-		NOT = {
-			year = 1839
-		}
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1837
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1838
-		}
-	}
-
 	title = "EVTNAME34600"
 	desc = "EVTDESC34600"
 	picture = "Diesterweg"
-
+	trigger = {
+		OR  {
+			primary_culture = north_german
+			primary_culture = south_german
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen =  { months = 500 }
 	option = {
 		name = "EVTOPTA34600"
-		prestige = 3
 		years_of_research = 0.05
+	}
+	option = {
+		name = "EVTOPTB34600"
+		prestige = -5
+		years_of_research = 0.075
 	}
 }
 

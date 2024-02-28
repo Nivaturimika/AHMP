@@ -4779,11 +4779,11 @@ EVTDESC3401;We want jobs! We need jobs!'\n\nPrevailing economic theory holds tha
 EVTDESC3402;And with this years budget, our payments to the unemployment programs will, again, exceed budget by several percentages. And this is what this is really all about, gentlemen, percentages. Those critical percentages that stand between us and bankruptcy.'\n\nOur unemployment programs are starting to run at a heavier loss than expected, and some taxpayers are becoming extremely concerned with these runaway strains on the budget. A committee acting out of one of our states has formed a coalition for the revocation of unemployment benefits, and are making national headlines with their efforts.
 EVTDESC3403;The workers have occupied the factory! The doors are barricaded! No one can get in!'\n\nWorkers in one of our states have occupied a factory, and are staging a sit-down strike. Their demands include a higher minimum wage, and better unemployment subsidies. We can offer tacit support to one of the causes, or choose to ignore the issue completely.
 EVTDESC3404;An unorganized wildcat strike has broken out in one of our states. The workers have barricaded a local workshop and refuse to let anyone in until, as they put it, 'their demands are met'. The problem is that they seem to have fairly limited conceptions of what it is they actually want, except 'more'. A local union boss has offered to mediate the issue, but the best option might be to just ignore them.
-EVTDESC34100;In 1838, 42 choral societies from the Rhineland, Baden, Hessen, and Franconia met in Frankfurt to celebrate a three-day festival of Mozart's music. The event turned into a demonstration for the political unification of Germany, however.
+EVTDESC34100;In $YEAR$, 42 choral societies from the Rhineland, Baden, Hessen, and Franconia met in $ANYPROVINCE$ to celebrate a three-day festival of Mozart's music. The event turned into a demonstration for the political unification of Germany, however.
 EVTDESC34500;When Oldenburg was elevated from a Duchy to a Grand Duchy on June 9th 1815, His Highness Peter II became the first monarch to use officially the title of Grand Duke on his formal accession.
-EVTDESC34600;Adolph Diesterweg, a German educator, laid down principles for the teaching of children that aimed at making them conscious, thinking, responsible citizens. His ideas get him suspended in 1847.
-EVTDESC34601;In August 1841, Hoffmann von Fallersleben wrote his poem Deutschlandlied on Helgoland. Combined with the melody of the Austrian Joseph Haydn's Gott erhalte Franz den Kaiser, it would one day become the German national anthem.
-EVTDESC34602;On June 7th 1840, King Friedrich Wilhelm III died, almost 70 years old. His son, a romantic, succeeded him on the throne.
+EVTDESC34600;$CULTURE_FIRST_NAME$ $CULTURE_LAST_NAME$, a $COUNTRY_ADJ$ educator, laid down principles for the teaching of children that aimed at making them conscious, thinking, responsible citizens. His ideas get him suspended in $YEAR$.
+EVTDESC34601;In $YEAR$, $CULTURE_FIRST_NAME$ $CULTURE_LAST_NAME$ wrote his poem Deutschlandlied on Helgoland. Combined with the melody of the Austrian Joseph Haydn's Gott erhalte Franz den Kaiser, it would one day become the German national anthem.
+EVTDESC34602;On $YEAR$, $MONARCHTITLE$ Friedrich Wilhelm III died, almost 70 years old. His son, a romantic, succeeded him on the throne.
 EVTDESC34603;Berlin saw the opening of Germany's first zoological garden in August $YEAR$. Other such gardens already existed in London and Antwerp.
 EVTDESC34604;A Prussian law of October 1845 ordered Jews to take fixed family names. They were now also obliged to serve in the military.
 EVTDESC34605;The Prussian astronomer Johann Gottfried Galle discovered the planet Neptune. Until 1930, this would be the last planet to be discovered in our solar system.
@@ -6469,6 +6469,7 @@ EVTOPTA3404;Allow the union boss to mediate
 EVTOPTA34100;They shall sing, not debate!
 EVTOPTA34500;God save the Grand Duke!
 EVTOPTA34600;Interesting ideas, nevertheless!
+EVTOPTB34600;Intervene to get him back
 EVTOPTA34601;A Dreamer!
 EVTOPTA34602;Long live the King! 
 EVTOPTA34603;Exotic animals! 

@@ -2187,9 +2187,16 @@ make_puppet = {
 				is_secondary_power = yes
 			}
 		}
-		THIS = {
+		is_greater_power = no
+		is_secondary_power = no
+		is_vassal = no
+	}
+
+	allowed_countries = {
+		FROM = {
 			is_greater_power = no
 			is_secondary_power = no
+			is_vassal = no
 		}
 	}
 
@@ -2241,10 +2248,9 @@ become_independent = {
 				is_secondary_power = yes
 			}
 		}
-		THIS = {
-			is_greater_power = no
-			is_secondary_power = no
-		}
+		is_greater_power = no
+		is_secondary_power = no
+		is_vassal = no
 	}
 
 	allowed_countries = {
