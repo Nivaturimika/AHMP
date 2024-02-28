@@ -421,10 +421,8 @@ political_decisions = {
 		allow = {
 			war = no
 			any_country = {
-				limit = {
-					tag != THIS
-					is_culture_group = american_cultures
-				}
+				tag != THIS
+				is_culture_group = american_cultures
 				all_core = {
 					OR = {
 						owned_by = THIS

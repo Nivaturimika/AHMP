@@ -3139,7 +3139,7 @@ province_event = {
 
 	trigger = {
 		owner = {
-			test = is_american_union
+			tag = USA
 			slavery = yes_slavery
 		}
 		OR = {
@@ -3198,7 +3198,7 @@ province_event = {
 
 	trigger = {
 		owner = {
-			test = is_american_union
+			tag = USA
 			slavery = yes_slavery
 		}
 		has_province_modifier = bleeding_state
