@@ -14,7 +14,10 @@ is_relevant_colonizable_african_nation = {
 
 is_african_colonizer = {
 	main_parameter = nation
+	OR = {
+		is_greater_power = yes
+		is_secondary_power = yes
+	}
 	capital_scope = { continent != africa }
-	any_owned = { continent = africa }
-	war = no
+	#any_owned = { continent = africa }
 }
