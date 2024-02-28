@@ -58,7 +58,10 @@ country_event = {
 	option = {
 		name = "EVT95523OPTA"
 		any_country = {
-			limit = { test = is_african_colonizer }
+			limit = {
+				test = is_african_colonizer
+				NOT = { war_with = THIS }
+			}
 			country_event = 95521
 		}
 	}
@@ -81,13 +84,13 @@ country_event = {
 				months = 1200
 			}
 		}
-		THIS = {
-			war = {
-				target = FROM
-				attacker_goal = { casus_belli = annex_africa }
-				call_ally = yes
-			}
-		}
+		#THIS = {
+		#	war = {
+		#		target = FROM
+		#		attacker_goal = { casus_belli = annex_africa }
+		#		call_ally = yes
+		#	}
+		#}
 		ai_chance = {
 			factor = 1
 			modifier = {

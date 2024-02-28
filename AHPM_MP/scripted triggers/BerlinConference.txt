@@ -1,11 +1,16 @@
-is_relevant_colonizable_african_nation = {
+is_colonizable_african_nation = {
 	main_parameter = nation
-	this_parameter = nation
 	capital_scope = { continent = africa }
 	OR = {
 		is_independant = yes
 		overlord = { capital_scope = { continent = africa } }
 	}
+}
+
+is_relevant_colonizable_african_nation = {
+	main_parameter = nation
+	this_parameter = nation
+	test = is_colonizable_african_nation
 	OR = {
 		any_owned_province = { any_neighbor_province = { owned_by = THIS } }
 		any_owned_province = { port = yes }
@@ -18,6 +23,6 @@ is_african_colonizer = {
 		is_greater_power = yes
 		is_secondary_power = yes
 	}
+	war_countries = { test != is_colonizable_african_nation }
 	capital_scope = { continent != africa }
-	#any_owned = { continent = africa }
 }
