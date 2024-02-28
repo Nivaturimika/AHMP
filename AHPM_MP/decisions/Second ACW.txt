@@ -272,8 +272,8 @@ political_decisions = {
 	hawaiian_purchase = {
 		picture = annex_hawaii
 		potential = {
-			civilized = yes
-			658 = { test = is_influenced }
+			is_greater_power = yes
+			658 = { test != is_influenced }
 		}
 		allow = {
 			war = no
@@ -298,9 +298,7 @@ political_decisions = {
 		}
 
 		allow = {
-			FSA = {
-				blockade = 0.8
-			}
+			FSA = { blockade = 0.8 }
 		}
 
 		effect = {
@@ -353,17 +351,9 @@ political_decisions = {
 	raise_the_flag_of_freedom = {
 		picture = switch_to_liberty
 		potential = {
-			OR = {
-				tag = FSA
-				tag = NEN
-				tag = UIL
-				tag = UOR
-				tag = DAK
-				tag = DES
-				tag = CAL
-				tag = UNM
-				tag = UNB
-			}
+			is_primary_culture = yankee
+			slavery = no_slavery
+			capital_scope = { continent = north_america }
 			NOT = { has_country_flag = flag_of_freedom }
 		}
 
@@ -403,16 +393,12 @@ political_decisions = {
 		}
 
 		allow = {
-			NOT = {
-				average_militancy = 4
-			}
+			NOT = { average_militancy = 4 }
 		}
 		effect = {
 			war_exhaustion = -3
 			any_pop = {
-				limit = {
-					has_pop_culture = yankee
-				}
+				limit = { has_pop_culture = yankee }
 				consciousness = -5
 				militancy = -5
 			}
@@ -434,43 +420,15 @@ political_decisions = {
 
 		allow = {
 			war = no
-			USA = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							NOT = { is_culture_group = american_cultures }
-						}
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-						empty = yes
-						region = USA_1
-						region = HAW_658
-					}
+			any_country = {
+				limit = {
+					tag != THIS
+					is_culture_group = american_cultures
 				}
-			}
-			FSA = {
 				all_core = {
 					OR = {
 						owned_by = THIS
-						owner = {
-							NOT = { is_culture_group = american_cultures }
-						}
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-						empty = yes
-						region = USA_1
-						region = HAW_658
-					}
-				}
-			}
-			CSA = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							NOT = { is_culture_group = american_cultures }
-						}
+						owner = { NOT = { is_culture_group = american_cultures } }
 						owner = { in_sphere = THIS }
 						owner = { vassal_of = THIS }
 						empty = yes
@@ -513,7 +471,7 @@ political_decisions = {
 			test = is_american_union
 			PRI = {
 				exists = yes
-				is_vassal = no
+				is_independant = yes
 				part_of_sphere = no
 			}
 			NOT = {
@@ -533,21 +491,14 @@ political_decisions = {
 		effect = {
 			set_country_flag = recognized_puerto_rico
 			prestige = 5
-			relation = { who = PRI value = 100 }
 			diplomatic_influence = { who = PRI value = 100 }
 			any_country = {
-				limit = {
-					any_owned_province = {
-						is_core = PRI
-						is_core = USA
-					}
-				}
 				any_owned = {
 					limit = {
 						is_core = PRI
-						is_core = USA
+						is_core = THIS
 					}
-					remove_core = USA
+					remove_core = THIS
 				}
 			}
 		}
@@ -559,7 +510,7 @@ political_decisions = {
 			test = is_american_union
 			CUB = {
 				exists = yes
-				is_vassal = no
+				is_independant = yes
 				part_of_sphere = no
 			}
 			NOT = {
@@ -577,21 +528,14 @@ political_decisions = {
 		effect = {
 			set_country_flag = recognized_cuba
 			prestige = 5
-			relation = { who = CUB value = 100 }
 			diplomatic_influence = { who = CUB value = 100 }
 			any_country = {
-				limit = {
-					any_owned_province = {
-						is_core = CUB
-						is_core = USA
-					}
-				}
 				any_owned = {
 					limit = {
 						is_core = CUB
-						is_core = USA
+						is_core = THIS
 					}
-					remove_core = USA
+					remove_core = THIS
 				}
 			}
 		}
@@ -600,11 +544,11 @@ political_decisions = {
 	recognize_phillipines = {
 		picture = gtfo
 		potential = {
-			tag = USA
+			test = is_american_union
 			revolution_n_counterrevolution = 1
 			PHL = {
 				exists = yes
-				is_vassal = no
+				is_independant = yes
 				part_of_sphere = no
 			}
 			NOT = {
@@ -622,21 +566,14 @@ political_decisions = {
 		effect = {
 			set_country_flag = recognized_phillipines
 			prestige = 5
-			relation = { who = PHL value = 100 }
 			diplomatic_influence = { who = PHL value = 100 }
 			any_country = {
-				limit = {
-					any_owned_province = {
-						is_core = PHL
-						is_core = USA
-					}
-				}
 				any_owned = {
 					limit = {
 						is_core = PHL
-						is_core = USA
+						is_core = THIS
 					}
-					remove_core = USA
+					remove_core = THIS
 				}
 			}
 		}
@@ -682,30 +619,9 @@ political_decisions = {
 			set_country_flag = recognize_the_csa
 			CSA = { prestige = 5 }
 			USA = { prestige = -5 }
-			relation = {
-				who = CSA
-				value = 100
-			}
-			diplomatic_influence = {
-				who = CSA
-				value = 25
-			}
-			relation = {
-				who = USA
-				value = -100
-			}
+			diplomatic_influence = { who = CSA value = 25 }
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				alliance_with = USA
-			}
-			modifier = {
-				factor = 0
-				relation = { who = USA value = 100 }
-			}
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	right_to_secede = {
@@ -715,9 +631,7 @@ political_decisions = {
 			tag = USA
 			has_global_flag = american_civil_war_has_happened
 			capital_scope = { is_core = CSA }
-			NOT = {
-				has_global_flag = right_to_secede
-			}
+			NOT = { has_global_flag = right_to_secede }
 		}
 		allow = {
 			war = no
@@ -737,29 +651,13 @@ political_decisions = {
 				any_owned = {
 					limit = {
 						is_core = CSA
-						is_core = USA
+						is_core = THIS
 					}
-					remove_core = USA
-				}
-			}
-			relation = {
-				who = CSA
-				value = 200
-			}
-			any_country = {
-				limit = {
-					is_greater_power = yes
-					NOT = { tag = CSA }
-				}
-				relation = {
-					who = THIS
-					value = 50
+					remove_core = THIS
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	second_declaration_of_independence = {
@@ -778,27 +676,13 @@ political_decisions = {
 			prestige = 30
 			set_global_flag = declaration2
 			any_pop = {
-				limit = {
-					has_pop_culture = dixie
-				}
+				limit = { has_pop_culture = dixie }
 				militancy = -10
 			}
 			war_exhaustion = -10
-			any_country = {
-				limit = {
-					is_greater_power = yes
-					NOT = { tag = USA }
-				}
-				relation = {
-					who = THIS
-					value = 50
-				}
-			}
 			USA = { prestige = -30 remove_accepted_culture = dixie }
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	recognize_the_fsa = {
@@ -818,17 +702,7 @@ political_decisions = {
 		allow = {
 			nationalism_n_imperialism = 1
 			OR = {
-				AND = {
-					NOT = {
-						FSA = { national_provinces_occupied = 0.30 }
-					}
-					NOT = {
-						 relation = {
-							who = USA
-							value = 50
-						}
-					}
-				}
+				NOT = { FSA = { national_provinces_occupied = 0.30 } }
 				AND = {
 					has_global_flag = declaration3
 					NOT = { has_global_flag = fsa_right_to_secede }
@@ -840,30 +714,12 @@ political_decisions = {
 			set_country_flag = recognize_the_fsa
 			FSA = { prestige = 5 }
 			USA = { prestige = -5 }
-			relation = {
-				who = FSA
-				value = 100
-			}
 			diplomatic_influence = {
 				who = FSA
 				value = 25
 			}
-			relation = {
-				who = USA
-				value = -100
-			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				alliance_with = USA
-			}
-			modifier = {
-				factor = 0
-				relation = { who = USA value = 100 }
-			}
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	FSA_right_to_secede = {
@@ -894,29 +750,13 @@ political_decisions = {
 				any_owned = {
 					limit = {
 						is_core = FSA
-						is_core = USA
+						is_core = THIS
 					}
-					remove_core = USA
-				}
-			}
-			relation = {
-				who = FSA
-				value = 200
-			}
-			any_country = {
-				limit = {
-					is_greater_power = yes
-					NOT = { tag = FSA }
-				}
-				relation = {
-					who = THIS
-					value = 50
+					remove_core = THIS
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	FSA_second_declaration_of_independence = {
@@ -935,27 +775,13 @@ political_decisions = {
 			prestige = 30
 			set_global_flag = declaration3
 			any_pop = {
-				limit = {
-					has_pop_culture = yankee
-				}
+				limit = { has_pop_culture = yankee }
 				militancy = -10
 			}
 			war_exhaustion = -10
-			any_country = {
-				limit = {
-					is_greater_power = yes
-					NOT = { tag = USA }
-				}
-				relation = {
-					who = THIS
-					value = 50
-				}
-			}
 			USA = { prestige = -30 }
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 }

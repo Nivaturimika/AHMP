@@ -542,7 +542,7 @@ political_decisions = {
 					province_id = 1151
 					NOT = { has_province_modifier = holy_city }
 				}
-				add_province_modifier = { name = holy_city duration = -1 }
+				add_province_modifier = holy_city
 			}
 		}
 		ai_will_do = {

@@ -3262,11 +3262,10 @@ country_event = {
 
 	trigger = {
 		tag = ENG
-		year = 1843
 		nationalism_n_imperialism = 1
 		HAW = {
 			exists = yes
-			is_vassal = no
+			is_independant = yes
 			part_of_sphere = no
 		}
 	}
@@ -3350,20 +3349,14 @@ country_event = {
 	trigger = {
 		test = is_british_empire
 		300 = { has_province_modifier = serial_killer }
-		owns = 300 #London
+		owns = 300
 		crime_fighting = 0.95
-		NOT = { year = 1890 }
 		has_country_flag = from_hell
-		has_country_flag = elementary_my_dear_watson #Scotland Yard
 		has_country_modifier = the_yard
 		test = is_monarchy_goverment
 	}
-
-	mean_time_to_happen = {
-		months = 200
-	}
+	mean_time_to_happen = { months = 200 }
 	fire_only_once = yes
-
 	option = {
 		name = "EVT110079OPTA" #My congratulations to Scotland Yard!
 		clr_country_flag = from_hell

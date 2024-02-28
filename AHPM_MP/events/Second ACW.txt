@@ -2560,7 +2560,7 @@ country_event = {
 		NOT = { owns = 81 }
 		NOT = { owns = 84 }
 		NOT = {
-			HAW = { exists = yes }
+			exists = HAW
 			has_country_flag = HAW_created
 		}
 	}
@@ -2590,12 +2590,7 @@ country_event = {
 			political_reform = secret_ballots
 			capital = 658
 			leadership = 40
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = -8
-				}
-			}
+			any_pop = { scaled_militancy = { ideology = liberal factor = -8 } }
 		}
 		diplomatic_influence = { who = HAW value = -200 }
 		any_pop = {

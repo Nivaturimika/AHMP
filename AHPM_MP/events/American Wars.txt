@@ -196,17 +196,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "EVT44146OPTA"
-		relation = {
-			who = FROM
-			value = -50
-		}
 		leave_alliance = FROM
-		any_pop = {
-			dominant_issue = {
-				factor = 0.02
-				value = jingoism
-			}
-		}
+		any_pop = { dominant_issue = { factor = 0.02 value = jingoism } }
 	}
 }
 
@@ -225,10 +216,6 @@ country_event = {
 				secede_province = THIS
 			}
 		}
-		relation = {
-			who = FROM
-			value = 50
-		}
 	}
 }
 
@@ -246,22 +233,12 @@ country_event = {
 		FROM = { country_event = 44147 }
 		money = 50000
 		prestige = 5
-		ai_chance = {
-			factor = 75
-			modifier = {
-				factor = 0.1
-				any_core = { owned_by = FROM }
-			}
-			modifier = {
-				factor = 0.5
-				truce_with = FROM
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVT44145OPTB"
 		FROM = { country_event = 44146 }
-		ai_chance = { factor = 25 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -276,16 +253,9 @@ country_event = {
 
 	option = {
 		name = "EVT44146OPTA"
-		relation = {
-			who = FROM
-			value = -50
-		}
 		leave_alliance = FROM
 		any_pop = {
-			dominant_issue = {
-				factor = 0.02
-				value = jingoism
-			}
+			dominant_issue = { factor = 0.02 value = jingoism }
 		}
 	}
 }
@@ -798,18 +768,11 @@ country_event = { #Hawaii turns democratic, loses people to disease, change prod
 	trigger = {
 		tag = HAW
 		owns = 658
-		exists = yes
 		literacy = 0.3
-		year = 1855
 		civilized = no
-		NOT = { year = 1900 }
 	}
 
-	mean_time_to_happen = {
-		months = 24
-	}
-
-
+	mean_time_to_happen = { months = 24 }
 	option = {
 		name = "EVT44157OPTA"
 		prestige = 5
@@ -834,7 +797,6 @@ country_event = { #Hawaii turns democratic, loses people to disease, change prod
 				25 = { reduce_pop = 0.35 }
 			}
 		}
-
 		any_pop = {
 			limit = {
 				is_primary_culture = yes
@@ -847,7 +809,6 @@ country_event = { #Hawaii turns democratic, loses people to disease, change prod
 				25 = { reduce_pop = 0.8 }
 			}
 		}
-
 		any_pop = {
 			limit = { has_pop_culture = yankee }
 			random_list = {
@@ -857,7 +818,6 @@ country_event = { #Hawaii turns democratic, loses people to disease, change prod
 				25 = { reduce_pop = 1.05 }
 			}
 		}
-
 		add_country_modifier = { name = philantropic_work duration = 3650 }
 	}
 

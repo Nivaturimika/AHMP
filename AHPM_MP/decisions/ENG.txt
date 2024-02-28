@@ -88,26 +88,10 @@ political_decisions = {
 		}
 	}
 	the_scotland_yard = {
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			NOT = {
-				has_country_flag = elementary_my_dear_watson # I know, he never says it in the books, yadiyadi.
-			}
-		}
-
-		allow = {
-			realism = 1
-		}
-
+		potential = { test = is_british_empire }
+		allow = { realism = 1 }
 		effect = {
-			add_country_modifier = {
-				name = the_yard
-				duration = -1
-			}
-			set_country_flag = elementary_my_dear_watson
+			add_country_modifier = the_yard
 		}
 	}
 
@@ -606,36 +590,6 @@ political_decisions = {
 			}
 		}
 	}
-
-	#irish_integration = {
-	#    picture = embrace_minority
-	#    potential = {
-	#        tag = ENG
-	#        accepted_culture = irish
-	#        any_owned_province = {
-	#            is_core = IRE
-	#            NOT = { has_province_modifier = irish_integration }
-	#        }
-	#    }
-	#
-	#    allow = {
-	#        money = 50000
-	#        social_science = 1
-	#        psychoanalysis = 1
-	#    }
-	#
-	#    effect = {
-	#        prestige = 20
-	#        treasury = -50000
-	#        any_owned = {
-	#            limit = { is_core = IRE }
-	#            add_province_modifier = {
-	#                name = irish_integration
-	#                duration = -1
-	#            }
-	#        }
-	#    }
-	#}
 
 	the_great_game_makran = {
 		picture = gtfo

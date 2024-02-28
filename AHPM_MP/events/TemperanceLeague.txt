@@ -18,70 +18,16 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 500
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_life_needs = 0.9
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_everyday_needs = 0.7
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_everyday_needs = 0.6
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_everyday_needs = 0.5
-			}
-		}
-		modifier = {
-			factor = 0.9
-			liquor = 50
-		}
-		modifier = {
-			factor = 0.5
-			is_culture_group = american_cultures
-		}
-		modifier = {
-			factor = 0.9
-			moralism = 10
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				average_consciousness = 5
-			}
-		}
-		modifier = {
-			factor = 1.1
-			average_consciousness = 5
-		}
-	}
+	mean_time_to_happen = { months = 500 }
 
 	option = {
 		name = "EVTOPTA100"
-		add_country_modifier = {
-			name = libertine_culture
-			duration = -1
-		}
+		add_country_modifier = libertine_culture
 	}
 
 	option = {
 		name = "EVTOPTB100"
-		add_country_modifier = {
-			name = temperance_league
-			duration = -1
-		}
+		add_country_modifier = temperance_league
 	}
 }
 

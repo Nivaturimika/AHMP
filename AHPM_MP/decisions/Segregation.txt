@@ -48,11 +48,9 @@ political_decisions = {
 		potential = {
 			has_country_flag = native_integration_status_on
 		}
-
 		effect = {
 			clr_country_flag = native_integration_status_on
 		}
-
 		ai_will_do = { factor = 0 }
 	}
 
@@ -221,9 +219,7 @@ political_decisions = {
 				owner = { add_accepted_culture = micronesian }
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	native_assimilation_act = {

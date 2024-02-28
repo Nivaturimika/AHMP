@@ -109,18 +109,8 @@ political_decisions = {
 				consciousness = 6
 				militancy = -2
 			}
-			130 = {
-				add_province_modifier = {
-					name = indian_territory
-					duration = -1
-				}
-			}
-			131 = {
-				add_province_modifier = {
-					name = indian_territory
-					duration = -1
-				}
-			}
+			130 = { add_province_modifier = indian_territory }
+			131 = { add_province_modifier = indian_territory }
 		}
 	}
 
@@ -187,12 +177,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			CSA = {
-				add_country_modifier = {
-					name = anaconda_plan
-					duration = -1
-				}
-			}
+			CSA = { add_country_modifier = anaconda_plan }
 			set_global_flag = anaconda_plan_active
 		}
 	}

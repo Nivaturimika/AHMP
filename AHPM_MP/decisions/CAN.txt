@@ -165,7 +165,7 @@ political_decisions = {
 		}
 		effect = {
 			22 = { life_rating = 2 }
-			add_country_modifier = { name = rcmp duration = -1 }
+			add_country_modifier = rcmp
 		}
 		ai_will_do = {
 			factor = 1
