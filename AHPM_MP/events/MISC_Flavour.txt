@@ -36,14 +36,17 @@ country_event = {
 		name = "EVT110089OPTA" #There will be no compromise
 		badboy = 1
 		FROM = { country_event = 110090 }
+		ai_chance = { factor = 0 }
 	}
 	option = {
 		name = "EVT110089OPTB" #We should split it equally
 		FROM = { country_event = 110091 }
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVT110089OPTC" #Let's exchange populations
 		FROM = { country_event = 110092 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -92,12 +95,14 @@ country_event = {
 			secede_province = FROM
 			change_province_name = "Trentino"
 		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT110091OPTB" #We refuse
 		badboy = 1
 		FROM = { country_event = 110090 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -164,13 +169,13 @@ country_event = {
 			remove_core = ITA
 			remove_core = VEN
 		}
-		relation = { who = FROM value = 100 }
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVT110091OPTB" #We refuse
 		badboy = 1
-		relation = { who = FROM value = -50 }
 		FROM = { country_event = 110090 }
+		ai_chance = { factor = 0 }
 	}
 }
 

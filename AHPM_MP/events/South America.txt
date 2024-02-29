@@ -613,9 +613,7 @@ country_event = {
 	title = "EVTNAME4661006" #Bolivia - Argentina border Agreement
 	desc = "EVTDESC4661006"
 	picture = "pbc_argentina_border_treaty"
-
 	fire_only_once = yes
-
 	trigger = {
 		war = no
 		OR = {
@@ -625,28 +623,22 @@ country_event = {
 		OR = {
 			ARC = {
 				war = no
-				owns = 2370        #Cochinoca
-				owns = 2315            #Tarija
+				owns = 2370 #Cochinoca
+				owns = 2315 #Tarija
 			}
 			ARG = {
 				war = no
-				owns = 2370        #Cochinoca
-				owns = 2315            #Tarija
+				owns = 2370 #Cochinoca
+				owns = 2315 #Tarija
 			}
 		}
-		owns = 2318
-		owns = 2313
 	}
-
-	mean_time_to_happen = { days = 15 }
-
-
+	mean_time_to_happen = { days = 1 }
 	option = {
 		name = "EVTOPT4661006A"
 		2315 = { owner = { country_event = 4661007 } }
 		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVTOPT4661006B"
 		ai_chance = { factor = 0 }
@@ -666,7 +658,7 @@ country_event = {
 		badboy = -2
 		war_exhaustion = -10
 		any_owned = {
-			limit = { is_core = FROM}
+			limit = { is_core = FROM }
 			remove_province_modifier = integration_refusal
 			remove_province_modifier = core_integration
 			remove_province_modifier = national_assimilation
@@ -697,9 +689,7 @@ country_event = {
 	title = "EVTNAME4661008" #Argentina Agrees
 	desc = "EVTDESC4661008"
 	picture = "pbc_argentina_border_treaty"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVTOPT4661008A"
 		any_owned = {
@@ -742,36 +732,32 @@ country_event = {
 		capital_scope = { any_pop = { consciousness = 2 } }
 		2295 = { any_pop = { militancy = -1 } }
 		capital = 2295
-		ai_chance = { factor = 2 }
+		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT4661009OPTB" #Cusco
 		capital_scope = { any_pop = { consciousness = 2 } }
 		2302 = { any_pop = { militancy = -1 } }
 		capital = 2302
-		ai_chance = { factor = 2 }
+		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT4661009OPTC" #Tacna
 		capital_scope = { any_pop = { consciousness = 2 } }
 		2578 = { any_pop = { militancy = -1 } change_province_name = "New Tacna" }
 		capital = 2578
-		ai_chance = { factor = 2 }
+		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT4661009OPTD" #Sucre
 		capital_scope = { any_pop = { consciousness = 2 } }
 		2313 = { any_pop = { militancy = -1 } }
 		capital = 2313
-		ai_chance = { factor = 2 }
+		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVT33042OPTE" #Don't change
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 1 }
 	}
 }
 

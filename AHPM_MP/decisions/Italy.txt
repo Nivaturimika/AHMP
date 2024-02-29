@@ -642,12 +642,11 @@ political_decisions = {
 	}
 
 	conquest_of_the_adriatic = {
-	picture = conquest_adriatic
+		picture = conquest_adriatic
 		potential = {
 			tag = ITA
 			NOT = { has_country_flag = conquest_adriatic_happened }
 		}
-
 		allow = {
 			mass_politics = 1
 			war_policy = jingoism
@@ -656,18 +655,13 @@ political_decisions = {
 				government = fascist_dictatorship
 			}
 		}
-
 		effect = {
 			badboy = 2
 			set_country_flag = conquest_adriatic_happened
 			AUS_780 = { add_core = ITA }
 			2582 = { add_core = ITA }
-			#774 = { add_core = ITA }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 	war_italian_independence = {
