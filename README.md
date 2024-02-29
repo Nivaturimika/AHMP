@@ -14,6 +14,7 @@ AHMP is a fork of HPM catered for Multiplayer & Project Alice.
 Since the game is heavily rebalanced, forget what you learnt from vanilla - it's going to be harmful:
 
 ### Do's and don't's!
+
 - **DO NOT** tax 100% or tariff 100%, you will face the consequences if you have a weak economy (rebels mainly)
 - **DO NOT** max spend on education and admin, unless you can afford to
 - **DO NOT** declare war without checking alliance blocs first
