@@ -1636,6 +1636,8 @@ conquest = {
 			civilized = yes
 		}
 		NOT = { any_state = { is_colonial = yes } }
+		num_of_vassals = 0
+		number_of_states <= 3
 	}
 
 	badboy_factor = 1.2
