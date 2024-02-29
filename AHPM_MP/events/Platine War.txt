@@ -294,14 +294,12 @@ country_event = {
 			}
 		}
 		define_general = {
-			name = "Justo Jos� de Urquiza"
+			name = "Justo Jose de Urquiza"
 			background = school_of_the_bayonet
 			personality = implacable
 		}
 		add_country_modifier = { name = national_confusion duration = 365 }
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 0 }
 	}
 	option = {
 		name = "EVTOPT46610B"
@@ -311,9 +309,7 @@ country_event = {
 			set_country_flag = rosas_refused_to_step_down
 			country_event = { id = 4661001 days = 7 }
 		}
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -325,7 +321,7 @@ country_event = {
 			clr_global_flag = entre_rios_rebellion
 		}
 		define_general = {
-			name = "Justo Jos� de Urquiza"
+			name = "Justo Jose de Urquiza"
 			background = school_of_the_bayonet
 			personality = implacable
 		}

@@ -1544,16 +1544,13 @@ country_event = {
 	}
 }
 
-#Battle of Logand�me
+#Battle of Logandme
 country_event = {
-
 	id = 37241
 	title = "EVTNAME37241"
 	desc = "EVTDESC37241"
 	picture = "fouta_tooro"
-
 	fire_only_once = yes
-
 	trigger = {
 		has_country_flag = faidherbe_ambitions
 		1788 = { owner = { civilized = no ai = yes } }
@@ -1562,64 +1559,40 @@ country_event = {
 		owns = 1784
 		war = no
 	}
-
 	mean_time_to_happen = { months = 6 }
-
 	option = {
 		name = "EVT37241OPTA"
 		badboy = 3
 		diplomatic_influence = { who = WOL value = -400 }
-
-			random_country = {
-				limit = {
-					exists = yes
-					neighbour = THIS
+		any_country = {
+			limit = {
+				OR = {
+					tag = TRZ
 					tag = WOL
 				}
-				add_casus_belli = {
-					target = THIS
-					type = conquest
-					months = 12
-				}
-				relation = { who = THIS value = -400 }
-				war = {
-					target = THIS
-					attacker_goal = {
-						casus_belli = acquire_core_state
-						state_province_id = 1783
-					}
-					defender_goal = { casus_belli = conquest }
-					call_ally = no
-				}
+				exists = yes
+				neighbour = THIS
 			}
-
-			random_country = {
-				limit = {
-					exists = yes
-					neighbour = THIS
-					tag = TRZ
-				}
-				add_casus_belli = {
-					target = THIS
-					type = add_to_sphere
-					months = 12
-				}
-				relation = { who = THIS value = -400 }
-				casus_belli = {
-					target = THIS
-					type = acquire_state
-					months = 12
-				}
-				war = {
-					target = THIS
-					attacker_goal = {
-						casus_belli = acquire_state
-						state_province_id = 1783
-					}
-					defender_goal = { casus_belli = add_to_sphere }
-					call_ally = no
-				}
+			add_casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
 			}
+			casus_belli = {
+				target = THIS
+				type = acquire_state
+				months = 12
+			}
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = acquire_state
+					state_province_id = 1783
+				}
+				defender_goal = { casus_belli = add_to_sphere }
+				call_ally = no
+			}
+		}
 
 		1788 = {
 			any_pop = { limit = { NOT = { has_pop_religion = catholic } } reduce_pop = 0.7 }

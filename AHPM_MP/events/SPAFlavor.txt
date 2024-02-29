@@ -593,7 +593,7 @@ country_event = {
 			}
 		}
 		define_general = {
-			name = "Tom�s de Zumalac�rregui"
+			name = "Tomas de Zumalacarregui"
 			personality = deeply_religious
 			background = innovative_tactician
 		}

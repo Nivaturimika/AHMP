@@ -255,7 +255,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA50000"
 		clr_country_flag = coronation_of_pedro
-		2461 = { change_province_name = "Florian�polis" }
+		2461 = { change_province_name = "Florianipolis" }
 		government = democracy
 		add_country_modifier = { name = small_immigration_boom duration = 1095 }
 		random_owned = {
@@ -365,12 +365,7 @@ country_event = {
 	trigger = {
 		tag = BRZ
 		has_country_flag = coronation_of_pedro
-		year = 1889
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-		}
+		test = is_monarchy_goverment
 	}
 
 	mean_time_to_happen = { months = 30 }
@@ -386,7 +381,7 @@ country_event = {
 		name = "EVT110075OPTB" #Time for Democracy
 		clr_country_flag = coronation_of_pedro
 		prestige = -10
-		2461 = { change_province_name = "Florian�polis" }
+		2461 = { change_province_name = "Florianipolis" }
 		government = democracy
 		add_country_modifier = { name = small_immigration_boom duration = 1095 }
 		political_reform = population_equal_weight

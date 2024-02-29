@@ -308,7 +308,7 @@ political_decisions = {
 					}
 				}
 				owner = {
-					1481 = { change_province_name = "L�shun" }
+					1481 = { change_province_name = "Lishun" }
 					set_global_flag = lushun
 					clr_global_flag = renamed_port_arthur
 					clr_global_flag = renamed_ryojun

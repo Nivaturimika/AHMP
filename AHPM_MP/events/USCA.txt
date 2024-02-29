@@ -537,9 +537,7 @@ country_event = {
 	option = {
 		name = "EVT16401OPTA"
 		prestige = 5
-		FROM = {
-			all_core = { add_core = UCA }
-		}
+		FROM = { all_core = { add_core = THIS } }
 		if = {
 			limit = { FROM = { tag = YUC } }
 			add_accepted_culture = mayan

@@ -471,7 +471,7 @@ country_event = {
 	}
 }
 
-#The B�b
+#The Bab
 country_event = {
 	id = 900022
 	title = "EVTNAME900022"
@@ -494,7 +494,7 @@ country_event = {
 	}
 }
 
-# The B�b's Execution
+# The Bab's Execution
 country_event = {
 	id = 900023
 	title = "EVTNAME900023"

@@ -32,7 +32,7 @@ factory_template = {
 
 cheap_factory_template = {
 	efficiency = {
-		cement = 0.25 #if no cement, work at 75% efficiency #cost = �4/level
+		cement = 0.25
 	}
 
 	owner = {

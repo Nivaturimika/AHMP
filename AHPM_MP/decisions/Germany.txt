@@ -857,9 +857,9 @@ luderitz_expedition = {
 		prestige = 2
 		treasury = -100000
 		set_country_flag = founding_german_namibia
-		2084 = { secede_province = THIS change_province_name = "L�deritzbucht" any_pop = { literacy = -0.99 } life_rating = 21 }
+		2084 = { secede_province = THIS change_province_name = "Lideritzbucht" any_pop = { literacy = -0.99 } life_rating = 21 }
 		2086 = { secede_province = THIS change_province_name = "Keetmanshoop" any_pop = { literacy = -0.99 } life_rating = 25 }
-		2085 = { secede_province = THIS change_province_name = "Maltah�he" any_pop = { literacy = -0.99 } life_rating = 25 }
+		2085 = { secede_province = THIS change_province_name = "Maltahsshe" any_pop = { literacy = -0.99 } life_rating = 25 }
 		2080 = { secede_province = THIS change_province_name = "Grootfontein" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } life_rating = 21 }
 		2082 = { secede_province = THIS change_province_name = "Gobabis" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } life_rating = 21 }
 		2079 = { secede_province = THIS change_province_name = "Swakopmund" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } life_rating = 21 }
@@ -923,7 +923,7 @@ claim_togoland = {
 		random_owned = {
 			limit = { owner = { is_culture_group = germanic } }
 			owner = {
-				1915 = { change_province_name = "Misah�he" }
+				1915 = { change_province_name = "Misahsshe" }
 			}
 		}
 	}

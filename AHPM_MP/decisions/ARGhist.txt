@@ -27,10 +27,7 @@ political_decisions = {
 			}
 			CHL = { country_event = 97090 }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	entre_rios_independent = {

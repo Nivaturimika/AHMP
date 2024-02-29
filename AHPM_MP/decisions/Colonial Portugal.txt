@@ -330,8 +330,8 @@ political_decisions = {
 			if = { limit = { primary_culture = portuguese owns = 2009 } 2009 = { change_province_name = "Malanje" } }
 			if = { limit = { primary_culture = portuguese owns = 2006 } 2006 = { change_province_name = "Silva Porto" } }
 			if = { limit = { primary_culture = portuguese owns = 2011 } 2011 = { change_province_name = "Luso" } }
-			if = { limit = { primary_culture = portuguese owns = 2002 } 2002 = { change_province_name = "U�ge" } }
-			if = { limit = { primary_culture = portuguese owns = 2001 } 2001 = { change_province_name = "S�o Salvador" } }
+			if = { limit = { primary_culture = portuguese owns = 2002 } 2002 = { change_province_name = "Uage" } }
+			if = { limit = { primary_culture = portuguese owns = 2001 } 2001 = { change_province_name = "Sao Salvador" } }
 			if = { limit = { primary_culture = portuguese owns = 2010 } 2010 = { change_province_name = "Henrique de Carvalho" } }
 			if = { limit = { primary_culture = portuguese owns = 2007 } 2007 = { change_province_name = "Cuangar" } }
 		}
