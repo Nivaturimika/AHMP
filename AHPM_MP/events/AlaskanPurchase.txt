@@ -11,12 +11,24 @@ country_event = {
 			limit = { test = is_alaskan_seller }
 			country_event = 32510
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag != USA
+			}
+		}
 	}
 	option = {
 		name = "EVT32509OPTB"
 		set_country_flag = refused_alaska
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = USA
+			}
+		}
 	}
 }
 
@@ -101,7 +113,6 @@ country_event = {
 			2630 = { change_province_name = "Tok" }
 		}
 	}
-
 	option = { name = "EVT32511OPTA" }
 }
 

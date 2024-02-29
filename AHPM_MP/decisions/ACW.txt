@@ -945,9 +945,7 @@ political_decisions = {
 				country_event = 32509
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	webster_ashburton_treaty = {
