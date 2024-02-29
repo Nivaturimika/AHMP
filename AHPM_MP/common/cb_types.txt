@@ -1716,7 +1716,7 @@ annex_africa = {
 
 	allowed_states = {
 		OR = {
-			any_owned_province = { any_neighbor_country = { owned_by = THIS } }
+			any_owned_province = { any_neighbor_province = { owned_by = THIS } }
 			any_owned_province = { port = yes }
 		}
 	}
