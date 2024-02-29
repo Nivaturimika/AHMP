@@ -407,7 +407,6 @@ political_decisions = {
             776 = { add_core = SER }
             772 = { add_core = SER }
         }
-
         ai_will_do = { factor = 1 }
     }
 

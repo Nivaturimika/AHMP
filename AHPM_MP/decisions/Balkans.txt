@@ -1206,7 +1206,7 @@ political_decisions = {
 		picture = croatian_independence
 		potential = {
 			tag = CRO
-			any_neighbor_country = { any_core = { owned_by = CRO } }
+			any_neighbor_country = { any_core = { owned_by = THIS } }
 			NOT = { has_country_flag = first_croat_independence }
 		}
 
@@ -1215,23 +1215,24 @@ political_decisions = {
 			is_vassal = no
 			AUS_771 = { owned_by = THIS }
 			OR = {
-			 AUS_780 = { owned_by = THIS }
-			 AUS_777 = { owned_by = THIS }
+				AUS_780 = { owned_by = THIS }
+				AUS_777 = { owned_by = THIS }
 			}
 		}
 
 		effect = {
 			set_country_flag = first_croat_independence
-			any_country = { limit = { exists = yes any_core = { owned_by = CRO } }
+			any_country = {
+				limit = { exists = yes any_core = { owned_by = THIS } }
 				 casus_belli = {
-					target = CRO
+					target = THIS
 					type = make_puppet
 					months = 6
 				}
 			}
-			CRO = { all_core = { remove_core = HUN } }
-			CRO = { all_core = { remove_core = AUS } }
-			CRO = { all_core = { remove_core = KUK } }
+			THIS = { all_core = { remove_core = HUN } }
+			THIS = { all_core = { remove_core = AUS } }
+			THIS = { all_core = { remove_core = KUK } }
 		}
 	}
 
@@ -1259,38 +1260,13 @@ political_decisions = {
 		}
 	}
 
-#    abolish_transylvania = {
-#        picture = create_romania
-#        potential = {
-#            tag = ROM
-#            SIE = { exists = no }
-#            exists = yes
-#            any_owned_province = { is_core = SIE }
-#        }
-#
-#        allow = {
-#            SIE = { all_core = { owned_by = THIS } }
-#            war = no
-#        }
-#
-#        effect = {
-#            badboy = 2
-#            SIE = { all_core = { remove_core = SIE } }
-#        }
-#
-#        ai_will_do = {
-#            factor = 1
-#            modifier = { factor = 0 badboy = 0.82 }
-#        }
-#    }
-
 	claim_fiume = {
 		picture = fiume_port
 		potential = {
 			tag = HUN
 			owns = 773
-			778 = { NOT = { is_core = HUN } }
-			773 = { is_core = HUN }
+			778 = { NOT = { is_core = THIS } }
+			773 = { is_core = THIS }
 		}
 
 		allow = {
@@ -1299,7 +1275,7 @@ political_decisions = {
 		}
 
 		effect = {
-			778 = { add_core = HUN }
+			778 = { add_core = THIS }
 			badboy = 1
 		}
 		ai_will_do = { factor = 1 }

@@ -2551,10 +2551,10 @@ country_event = {
 		name = "EVT31519OPTA"
 		prestige = 10
 		badboy = 20
-		AUS_612 = { add_core = GER remove_core = HUN }
-		AUS_734 = { add_core = GER remove_core = HUN }
-		AUS_613 = { add_core = GER remove_core = HUN }
-		AUS_619 = { add_core = GER remove_core = HUN }
+		AUS_612 = { add_core = THIS remove_core = HUN }
+		AUS_734 = { add_core = THIS remove_core = HUN }
+		AUS_613 = { add_core = THIS remove_core = HUN }
+		AUS_619 = { add_core = THIS remove_core = HUN }
 		AUS_733 = { remove_core = AUS remove_core = KUK }
 		AUS_736 = { remove_core = AUS remove_core = KUK }
 		AUS_768 = { remove_core = AUS remove_core = KUK }
@@ -2568,7 +2568,7 @@ country_event = {
 					}
 				}
 			}
-			AUS_625 = { add_core = GER } #Bohemia
+			AUS_625 = { add_core = THIS } #Bohemia
 		}
 		random_country = {
 			limit = {
@@ -2580,7 +2580,7 @@ country_event = {
 					}
 				}
 			}
-			AUS_627 = { add_core = GER } #Lower Silesia
+			AUS_627 = { add_core = THIS } #Lower Silesia
 		}
 		random_country = {
 			limit = {
@@ -2592,7 +2592,7 @@ country_event = {
 					}
 				}
 			}
-			AUS_626 = { add_core = GER } #Sudetes
+			AUS_626 = { add_core = THIS } #Sudetes
 		}
 		FROM = { country_event = 31520 }
 		any_country = {
@@ -2600,7 +2600,6 @@ country_event = {
 				is_greater_power = yes
 				capital_scope = { continent = europe }
 			}
-			relation = { who = THIS value = -50 }
 			casus_belli = {
 				target = THIS
 				type = free_peoples
