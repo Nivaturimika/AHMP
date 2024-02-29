@@ -1,5 +1,5 @@
 #Prussia - Sigmaringen
-vassal = {
+substate = {
 	first = PRU
 	second = SGM
 	start_date = 1836.1.1
