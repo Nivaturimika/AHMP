@@ -83,35 +83,48 @@ has_usca_failed = {
 	}
 }
 
-is_adjacent_country = {
+is_land_adjacent_country = {
 	main_parameter = nation
 	this_parameter = nation
-	OR = {
-		any_owned_province = { #Must immediately border this nation
-			any_neighbor_province = {
-				OR = {
-					owned_by = THIS
-					controlled_by = THIS
-				}
+	any_owned_province = { #Must immediately border this nation
+		any_neighbor_province = {
+			OR = {
+				owned_by = THIS
+				controlled_by = THIS
 			}
 		}
-		AND = { #Or be coastal
-			any_owned_province = { port = yes }
-			THIS = { any_owned_province = { port = yes } }
-		}
+	}
+}
+
+is_naval_adjacent_country = {
+	main_parameter = nation
+	this_parameter = nation
+	AND = { #Or be coastal
+		any_owned_province = { port = yes }
+		THIS = { any_owned_province = { port = yes } }
 	}
 }
 
 is_warable_country = {
 	main_parameter = nation
 	this_parameter = nation
-
+	OR = {
+		THIS = { total_amount_of_divisions >= 1 }
+		AND = {
+			test != is_land_adjacent_country
+			THIS = { total_amount_of_ships >= 1 }
+		}
+	}
 	THIS = { is_disarmed = no }
 	is_our_vassal != THIS
 	has_country_modifier != neutrality_modifier
 	THIS = { has_country_modifier != neutrality_modifier }
 	THIS = { has_country_modifier != no_more_war }
 	has_country_modifier != war_focus
+	OR = {
+		test = is_land_adjacent_country
+		test = is_naval_adjacent_country
+	}
 }
 
 has_elections = {
