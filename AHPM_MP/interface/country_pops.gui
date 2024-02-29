@@ -134,22 +134,10 @@ guiTypes = {
 			backGround=""
 			size = { x=220 y = 574 }
 			Orientation = "UPPER_LEFT"
-			spacing = 2
+			spacing = 0
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 		}
-		
-		# list of pops in selected area
-		#listboxType = 
-		#{
-		#		name ="pop_list"
-		#		position = { x = 271 y = 321 }
-		#		backGround=""
-		#		size = { x=708 y = 288 }
-		#		Orientation = "UPPER_LEFT"
-		#		spacing = 1
-		#		scrollbartype = "standardlistbox_slider"
-		#}
 		
 		windowType = {
 			name = "pop_list"
@@ -383,7 +371,7 @@ guiTypes = {
 		name = "poplistitem_country"
 		backGround =""
 		position = { x=0 y=0 }	
-		size = { x=200 y=38 }
+		size = { 200 26 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = "0"
@@ -411,7 +399,7 @@ guiTypes = {
 		}
 		
 		instantTextBoxType = {
-			position = { x = 83 y = 19 }
+			position = { x = 83 y = 2 }
 			name = "poplist_numpops"
 			font = "vic_18"
 			borderSize = { x = 0 y = 0 }
@@ -421,12 +409,11 @@ guiTypes = {
 			format = right
 			orientation = "UPPER_LEFT"
 		}
-		
 		iconType =
 		{
 			name ="growth_indicator"
 			spriteType = "GFX_popsortitem_growtharrow"
-			position = { x= 185 y = 18 }
+			position = { x= 185 y = 2 }
 			Orientation = "UPPER_LEFT"
 		}
 	}
@@ -438,60 +425,45 @@ guiTypes = {
 		name = "poplistitem_state"
 		backGround =""
 		position = { x=0 y=0 }	
-		size = { x=200 y=38 }
+		size = { 200 26 }
 		moveable = 0
 		dontRender = ""
 		fullScreen = no
 		orientation="UPPER_LEFT"
-	
 		guiButtonType = {
 			name = "poplistbutton"
 			position = { x = 15 y = 0 }
 			quadTextureSprite ="GFX_popsortitem_state"
 			clicksound = click
 		}
-		
 		instantTextBoxType = {
-			position = { x = 45 y = 2 }
+			position = { x = 84 y = 2 }
 			name = "poplist_name"
 			font = "vic_18_black"
 			borderSize = { x = 0 y = 0 }
 			text = "countryname"	
-			maxWidth = 160
+			maxWidth = 70
 			maxHeight = 10
 			fixedsize = yes
 			orientation = "UPPER_LEFT"
 		}
-		
-		#instantTextBoxType = {
-		#	position = { x = 45 y = 18 }
-		#	name = "colonial_state_icon_tooltip"
-		#	font = "vic_18"
-		#	borderSize = { x = 0 y = 0 }
-		#	text = ""	
-		#	maxWidth = 20
-		#	maxHeight = 16
-		#	format = left
-		#	orientation = "UPPER_LEFT"
-		#}
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="colonial_state_icon"
 			quadTextureSprite = "GFX_pops_colonial_state_icon"
-			position = { x= 45 y = 18 }
+			position = { x= 45 y = 2 }
 			Orientation = "UPPER_LEFT"
 			clicksound = click
 		}
 		
 		guiButtonType = {
 			name = "state_focus"
-			position = { x = 65 y = 18 }
+			position = { x = 65 y = 2 }
 			quadTextureSprite ="GFX_province_natfocus_strip_small"
 			clicksound = click
 		}
 		
 		instantTextBoxType = {
-			position = { x = 91 y = 19 }
+			position = { x = 91 y = 2 }
 			name = "poplist_numpops"
 			font = "vic_18_black"
 			borderSize = { x = 0 y = 0 }
@@ -504,7 +476,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "expand"
-			position = { x=-5 y =6}
+			position = { x=-5 y =6 }
 			quadTextureSprite ="GFX_pop_browse_button"
 			tooltip = ""
 			tooltipText =""
@@ -518,7 +490,7 @@ guiTypes = {
 		{
 			name ="growth_indicator"
 			spriteType = "GFX_popsortitem_growtharrow"
-			position = { x= 193 y = 18 }
+			position = { x= 193 y = 2 }
 			Orientation = "UPPER_LEFT"
 		}
 	}
@@ -530,21 +502,19 @@ guiTypes = {
 		name = "poplistitem_province"
 		backGround =""
 		position = { x=0 y=0 }	
-		size = { x=200 y=38 }
+		size = { 200 26 }
 		moveable = 0
 		dontRender = ""
 		fullScreen = no
 		orientation="UPPER_LEFT"
-	
 		guiButtonType = {
 			name = "poplistbutton"
 			position = { x = 20 y = 0 }
 			quadTextureSprite ="GFX_popsortitem_province"
 			clicksound = click
 		}
-		
 		instantTextBoxType = {
-			position = { x = 43 y = 8 }
+			position = { x = 43 y = 2 }
 			name = "poplist_name"
 			font = "vic_18_black"
 			borderSize = { x = 0 y = 0 }
@@ -554,24 +524,22 @@ guiTypes = {
 			fixedsize = yes
 			orientation = "UPPER_LEFT"
 		}
-		
 		instantTextBoxType = {
-			position = { x = 169 y = 8 }
+			position = { x = 91 y = 2 }
 			name = "poplist_numpops"
 			font = "vic_18_black"
 			borderSize = { x = 0 y = 0 }
 			text = "num"	
-			maxWidth = 30
+			maxWidth = 100
 			maxHeight = 16
 			format = right
 			orientation = "UPPER_LEFT"
 		}
-		
 		iconType =
 		{
 			name ="growth_indicator"
 			spriteType = "GFX_popsortitem_growtharrow"
-			position = { x= 199 y = 7 }
+			position = { x= 199 y = 2 }
 			Orientation = "UPPER_LEFT"
 		}
 	}
