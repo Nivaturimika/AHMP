@@ -1871,24 +1871,25 @@ guiTypes = {
 		iconType = {
 			name = "diplo_cb_entrybg"
 			spriteType = "GFX_diplo_cb_other_entry"
-			position = { x = 0 y = 0 }
+			position = { 0 0 }
 		}
 		
 		iconType = {
 			name = "cb_type_icon"
-			position = { x=10 y =5 }
-			spriteType ="GFX_diplo_wargoal_icons"
+			position = { 10 5 }
+			spriteType = "GFX_diplo_wargoal_icons"
 		}
 		
 		iconType = {
 			name = "cb_progress"
 			spriteType = "GFX_cb_progress"
-			position = { x = 192 y = 11 }
+			position = { 150 11 }
+			size = { 340 16 }
 		}
 		iconType = {
 			name = "cb_progress_overlay"
-			spriteType = "GFX_diplo_war_progress_overlay"
-			position = { x = 187 y = 6 }
+			spriteType = "GFX_diplo_war_progress_overlay_2"
+			position = { 147 6 }
 		}
 		
 		instantTextBoxType = { 
@@ -1909,7 +1910,6 @@ guiTypes = {
 			format = left
 			spacing = 1.0
 		}		
-			
 		OverlappingElementsBoxType = {
 			name = "defenders"
 			position = { x = 410 y = 10 }
@@ -1931,30 +1931,27 @@ guiTypes = {
 		horizontalBorder = "0"
 		verticalBorder = ""
 		fullScreen = no
-		
 		iconType = {
 			name = "diplo_cb_entrybg"
 			spriteType = "GFX_diplo_cb_your_entry"
 			position = { x = 0 y = 0 }
 		}
-		
 		iconType = {
 			name = "cb_type_icon"
 			position = { x=10 y =5 }
 			spriteType ="GFX_diplo_wargoal_icons"
 		}
-		
 		iconType = {
 			name = "cb_progress"
 			spriteType = "GFX_cb_progress"
-			position = { x = 192 y = 11 }
+			position = { 150 11 }
+			size = { 340 16 }
 		}
 		iconType = {
 			name = "cb_progress_overlay"
-			spriteType = "GFX_diplo_war_progress_overlay"
-			position = { x = 187 y = 6 }
+			spriteType = "GFX_diplo_war_progress_overlay_2"
+			position = { 147 6 }
 		}
-		
 		instantTextBoxType = { 
 			name = "cb_progress_text"
 			position = { x = 252 y = 11 }
@@ -1964,7 +1961,6 @@ guiTypes = {
 			maxHeight = 20
 			format = centre
 		}
-		
 		OverlappingElementsBoxType = {
 			name = "attackers"
 			position = { x = 42 y = 10 }
@@ -1972,8 +1968,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			format = left
 			spacing = 1.0
-		}		
-			
+		}
 		OverlappingElementsBoxType = {
 			name = "defenders"
 			position = { x = 410 y = 10 }

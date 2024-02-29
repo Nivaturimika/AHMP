@@ -198,6 +198,11 @@ spriteTypes = {
 		name = "GFX_diplo_war_progress_overlay"
 		texturefile = "gfx\\interface\\diplo_war_progress_overlay.tga"
 	}
+
+	spriteType = {
+		name = "GFX_diplo_war_progress_overlay_2"
+		texturefile = "gfx\\interface\\diplo_war_progress_overlay_2.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_diplo_warscore_marker1"
