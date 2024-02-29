@@ -868,6 +868,7 @@ political_decisions = {
 			any_country = {
 				is_culture_group = arab
 				all_core = { test = is_influenced }
+				owns = 1157
 				war = no
 			}
 		}
