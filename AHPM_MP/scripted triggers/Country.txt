@@ -83,6 +83,25 @@ has_usca_failed = {
 	}
 }
 
+is_adjacent_country = {
+	main_parameter = nation
+	this_parameter = nation
+	OR = {
+		any_owned_province = { #Must immediately border this nation
+			any_neighbor_province = {
+				OR = {
+					owned_by = THIS
+					controlled_by = THIS
+				}
+			}
+		}
+		AND = { #Or be coastal
+			any_owned_province = { port = yes }
+			THIS = { any_owned_province = { port = yes } }
+		}
+	}
+}
+
 is_warable_country = {
 	main_parameter = nation
 	this_parameter = nation

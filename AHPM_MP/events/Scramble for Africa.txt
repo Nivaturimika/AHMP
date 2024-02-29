@@ -330,28 +330,13 @@ country_event = {
 			}
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 60
-		modifier = {
-			factor = 0.8
-			civilization_progress = 0.5
-		}
-		modifier = {
-			factor = 0.8
-			civilization_progress = 0.75
-		}
-	}
-
+	mean_time_to_happen = { months = 60 }
 	option = {
 		name = "EVT95504OPTA"
 		any_pop = {
 			limit = { has_pop_religion = sunni }
 			militancy = -3
-			dominant_issue = {
-				factor = 0.05
-				value = jingoism
-			}
+			dominant_issue = { factor = 0.05 value = jingoism }
 		}
 		random_country = {
 			limit = {
@@ -372,10 +357,9 @@ country_event = {
 				}
 			}
 			leave_alliance = THIS
-			relation = { who = THIS value = -100 }
 			add_casus_belli = {
 				target = THIS
-				type = sahel_jihad_cb
+				type = acquire_state
 				months = 24
 			}
 		}
