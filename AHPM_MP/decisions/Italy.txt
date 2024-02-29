@@ -639,7 +639,7 @@ political_decisions = {
 			AUS_733 = { add_core = ITA } #Friuli
 			781 = { add_core = ITA } #Zadar
 		}
-		ai_chance = { factor = 0 }
+		ai_will_do = { factor = 0 }
 	}
 
 	conquest_of_the_adriatic = {
