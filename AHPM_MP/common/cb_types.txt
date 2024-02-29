@@ -1632,22 +1632,10 @@ conquest = {
 	can_use = {
 		test = is_warable_country
 		OR = {
-			AND = {
-				THIS = { total_amount_of_ships = 5 }
-				any_owned_province = { port = yes }
-			}
-			neighbour = THIS
-		}
-		OR = {
 			THIS = { civilized = no }
 			civilized = yes
 		}
-		NOT = {
-			any_state = {
-				is_colonial = no
-				NOT = { any_owned_province = { is_capital = yes } }
-			}
-		}
+		NOT = { any_state = { is_colonial = yes } }
 	}
 
 	badboy_factor = 1.2
