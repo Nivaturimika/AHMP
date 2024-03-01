@@ -63,26 +63,18 @@ country_event = {
 	option = {
 		name = "EVT95640OPTA"
 		FROM = { country_event = 95641 }
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT95640OPTB"
 		prestige = -20
 		badboy = -2
-		relation = {
-			who = FROM
-			value = 50
-		}
 		diplomatic_influence = {
 			who = FROM
 			value = 100
 		}
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -97,14 +89,13 @@ country_event = {
 	option = {
 		name = "EVT95641OPTA"
 		prestige = -10
-		relation = { who = FROM value = -50 }
 		any_pop = { militancy = 3 }
 		any_owned = {
 			limit = { region = DAI_1380 }
 			secede_province = FROM
 			1380 = { trade_goods = coffee }
 		}
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
@@ -112,7 +103,7 @@ country_event = {
 		prestige = 5
 		any_pop = { militancy = -2 }
 		FROM = { country_event = 95642 }
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -120,11 +111,6 @@ country_event = {
 	id = 95642
 	title = "EVTNAME95642"
 	desc = "EVTDESC95642"
-	news = yes
-	news_title = "EVTNAME95641_NEWS_TITLE"
-	news_desc_long = "EVTDESC95641_NEWS_LONG"
-	news_desc_medium = "EVTDESC95641_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC95641_NEWS_SHORT"
 	picture = "administration"
 
 	is_triggered_only = yes
@@ -135,46 +121,16 @@ country_event = {
 			who = FROM
 			value = -200
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { has_global_flag = berlin_conference }
-				}
-			}
-			owner = {
-				casus_belli = {
-					target = FROM
-					type = demand_concession_casus_belli
-					months = 60
-				}
-				war = {
-					target = FROM
-					attacker_goal = {
-						casus_belli = demand_concession_casus_belli
-						state_province_id = 1380
-					}
-				}
-			}
+		casus_belli = {
+			target = FROM
+			type = demand_concession_casus_belli
+			months = 60
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					has_global_flag = berlin_conference
-				}
-			}
-			owner = {
-				casus_belli = {
-					target = FROM
-					type = demand_concession_casus_belli
-					months = 60
-				}
-				war = {
-					target = FROM
-					attacker_goal = {
-						casus_belli = demand_concession_casus_belli
-						state_province_id = 1380
-					}
-				}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = demand_concession_casus_belli
+				state_province_id = 1380
 			}
 		}
 	}
@@ -231,17 +187,14 @@ country_event = {
 	option = {
 		name = "EVT95645OPTA"
 		FRA = { country_event = 95646 }
-		ai_chance = {
-			factor = 80
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT95645OPTB"
 		DAI = {
-			release_vassal = CAM
-			leave_alliance = CAM
-			relation = { who = CAM value = -200 }
+			release_vassal = THIS
+			leave_alliance = THIS
 			casus_belli = {
 				target = THIS
 				type = conquest
@@ -259,9 +212,7 @@ country_event = {
 				months = 30
 			}
 		}
-		ai_chance = {
-			factor = 20
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -270,21 +221,17 @@ country_event = {
 	title = "EVTNAME95646" #The King of Cambodia
 	desc = "EVTDESC95646"
 	picture = "deliberation"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT95646OPTA"
 		diplomatic_influence = { who = CAM value = 200 }
-		relation = { who = CAM value = 100 }
 		DAI = { country_event = 95647 }
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT95646OPTB"
 		CAM = { country_event = 95649 }
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -293,27 +240,16 @@ country_event = {
 	title = "EVTNAME95645" #The Suzerainty of Cambodia - To Dai Nam
 	desc = "EVTDESC95645"
 	picture = "asian_administration"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT95647OPTA"
-		FRA = { create_vassal = CAM }
-		relation = { who = FRA value = -100 }
-		random_country = {
-			limit = {
-				tag = SIA
-				exists = yes
-			}
-			relation = { who = FRA value = -100 }
-		}
-		ai_chance = { factor = 75 }
+		FROM = { create_vassal = CAM }
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT95647OPTB"
-		FRA = { country_event = 95648 }
-		ai_chance = { factor = 25 }
+		FROM = { country_event = 95648 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -322,13 +258,11 @@ country_event = {
 	title = "EVTNAME95648"
 	desc = "EVTDESC95648"
 	picture = "asian_administration"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT95648OPTA"
 		war = {
-			target = DAI
+			target = FROM
 			attacker_goal = {
 				casus_belli = release_puppet
 				country = CAM
@@ -342,15 +276,12 @@ country_event = {
 	title = "EVTNAME95649"
 	desc = "EVTDESC95649"
 	picture = "asian_administration"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT95649OPTA"
 		DAI = {
-			release_vassal = CAM
-			leave_alliance = CAM
-			relation = { who = CAM value = -200 }
+			release_vassal = THIS
+			leave_alliance = THIS
 			casus_belli = {
 				target = THIS
 				type = conquest
@@ -368,14 +299,14 @@ country_event = {
 				months = 30
 			}
 		}
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT95649OPTB"
 		prestige = -10
 		any_pop = { militancy = 4 }
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -400,7 +331,7 @@ country_event = {
 		1365 = { remove_core = CAM }
 		random_owned = {
 			limit = { province_id = 1366 any_neighbor_province = { owned_by = FROM } }
-			remove_core = SIA
+			remove_core = THIS
 			secede_province = FROM
 		}
 		any_owned = {
@@ -412,7 +343,7 @@ country_event = {
 				}
 				any_neighbor_province = { owned_by = FROM }
 			}
-			remove_core = SIA
+			remove_core = THIS
 			secede_province = FROM
 		}
 
@@ -424,23 +355,23 @@ country_event = {
 				ai = yes
 				vassal_of = THIS
 			}
-			SIA = { release = CHK }
+			THIS = { release = CHK }
 			FROM = { inherit = THIS }
 		}
 
 		any_owned = {
 			limit = { is_core = LUA }
-			remove_core = SIA
+			remove_core = THIS
 			secede_province = LUA
 		}
 		any_owned = {
 			limit = { is_core = CHK }
-			remove_core = SIA
+			remove_core = THIS
 			secede_province = CHK
 		}
 		any_owned = {
 			limit = { is_core = WIA }
-			remove_core = SIA
+			remove_core = THIS
 			secede_province = WIA
 		}
 		any_owned = {
@@ -471,14 +402,7 @@ country_event = {
 			}
 			secede_province = DAI
 		}
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 0.25
-				part_of_sphere = yes
-				NOT = { in_sphere = FROM }
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -489,17 +413,7 @@ country_event = {
 			limit = { is_primary_culture = yes }
 			militancy = -3
 		}
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 0
-				in_sphere = FROM
-			}
-			modifier = {
-				factor = 4
-				civilized = yes
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -514,18 +428,63 @@ country_event = {
 	option = {
 		name = "EVT95653OPTA"
 		prestige = -10
-		relation = { who = FROM value = -400 }
-		diplomatic_influence = { who = FROM value = -400 }
 		casus_belli = {
-			target = SIA
+			target = FROM
+			type = free_peoples
+			months = 360
+		}
+		casus_belli = {
+			target = FROM
+			type = cut_down_to_size
+			months = 360
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVT95653OPTB"
+		prestige = -10
+		casus_belli = {
+			target = FROM
 			type = free_peoples
 			months = 60
 		}
 		casus_belli = {
-			target = SIA
+			target = FROM
 			type = cut_down_to_size
 			months = 60
 		}
+		casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 60
+		}
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVT95653OPTC"
+		prestige = -10
+		casus_belli = {
+			target = FROM
+			type = free_peoples
+			months = 60
+		}
+		casus_belli = {
+			target = FROM
+			type = cut_down_to_size
+			months = 60
+		}
+		casus_belli = {
+			target = FROM
+			type = war_reparations
+			months = 60
+		}
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVT95653OPTD"
+		prestige = -25
+		badboy = -5
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -534,16 +493,18 @@ country_event = {
 	title = "EVTNAME95654"
 	desc = "EVTDESC95654"
 	picture = "treaty"
-
 	is_triggered_only = yes
-
+	immediate = {
+		prestige = 20
+	}
 	option = {
 		name = "EVT95654OPTA"
-		prestige = 20
-		relation = { who = SIA value = 200 }
-		diplomatic_influence = { who = SIA value = 100 }
-		diplomatic_influence = { who = LUA value = 200 }
-		diplomatic_influence = { who = WIA value = 200 }
+	}
+	option = {
+		name = "EVT95654OPTB"
+	}
+	option = {
+		name = "EVT95654OPTC"
 	}
 }
 
@@ -554,9 +515,7 @@ country_event = {
 	title = "EVTNAME95655" #The Unequal Treaty
 	desc = "EVTDESC95655"
 	picture = "Opiumwar"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT95655OPTA"
 		FROM = { country_event = 95656 }

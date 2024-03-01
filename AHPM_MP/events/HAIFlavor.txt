@@ -120,12 +120,8 @@ country_event = {
 			type = conquest
 			months = 24
 		}
-		relation = {
-			who = HAI
-			value = -25
-		}
 		any_owned = {
-			limit = { is_core = DOM }
+			limit = { is_core = THIS }
 			remove_core = HAI
 			remove_province_modifier = nationalist_agitation
 			any_pop = {
@@ -151,17 +147,14 @@ country_event = {
 		owns = 2214
 		owns = 2216
 		exists = yes
-		2214 = { is_core = HAI }
-		2216 = { is_core = HAI }
-		year = 1844
+		2214 = { is_core = THIS }
+		2216 = { is_core = THIS }
 		any_owned_province = { is_core = DOM average_militancy = 6 }
-		NOT = { year = 1870 }
 	}
 
 	mean_time_to_happen = { months = 8 }
 
-	option = {
-		name = "EVT45104OPTA"
+	immediate = {
 		remove_accepted_culture = caribeno
 		remove_accepted_culture = afro_caribeno
 		any_owned = {
@@ -170,40 +163,35 @@ country_event = {
 			remove_province_modifier = nationalist_agitation
 			secede_province = DOM
 		}
-		DOM = {
-			define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
-			add_country_modifier = { name = unrecognized_country duration = 3650 }
-		}
-		relation = { who = DOM value = -400 }
+		DOM = { define_general = { name = "Pedro Santana" personality = implacable background = nationalist } }
+	}
+
+	option = {
+		name = "EVT45104OPTA"
+		DOM = { add_country_modifier = { name = unrecognized_country duration = 3650 } }
 		war = {
 			target = DOM
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
 		}
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT45104OPTB"
-		remove_accepted_culture = caribeno
-		remove_accepted_culture = afro_caribeno
-		any_owned = {
-			limit = { is_core = DOM }
-			any_pop = { militancy = -9 consciousness = -9 }
-			remove_province_modifier = nationalist_agitation
-			secede_province = DOM
-		}
-		DOM = {
-			define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
-			add_accepted_culture = afro_caribeno
-		}
-		relation = { who = DOM value = -400 }
+		DOM = { add_accepted_culture = afro_caribeno }
+		change_tag_no_core_switch = DOM
 		war = {
 			target = DOM
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
 		}
-		change_tag_no_core_switch = DOM
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "EVT45104OPTC"
+		DOM = { add_accepted_culture = afro_caribeno }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -241,26 +229,15 @@ country_event = {
 			}
 			treasury = -100000
 		}
-
 		FROM = { inherit = THIS }
 		civilized = yes
-
-		ai_chance = {
-			factor = 0.3
-			modifier = { factor = 100 vassal_of = FROM }
-			modifier = { factor = 1.2 NOT = { literacy = 0.1 } }
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "EVT45105OPTB"
 		FROM = { diplomatic_influence = { who = THIS value = -100} }
-		relation = { who = FROM value = -50 }
-		ai_chance = {
-			factor = 0.7
-			modifier = { factor = 0 vassal_of = FROM }
-			modifier = { factor = 1.5 literacy = 0.3 }
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -390,22 +367,18 @@ country_event = {
 
 	option = {
 		name = "EVT45108OPTA"
-		random_owned = {
+		if = {
 			limit = {
-				owner = {
-					tag = HAI
-					has_recently_lost_war = yes
-					truce_with = FRA
-					NOT = { has_country_flag = agreed_to_pay_debt }
-				}
+				tag = HAI
+				has_recently_lost_war = yes
+				truce_with = FRA
+				NOT = { has_country_flag = agreed_to_pay_debt }
 			}
-			owner = {
-				HAI = {
-					set_country_flag = agreed_to_pay_debt
-					set_variable = { which = owed_cash_money value = 500 }
-				}
-				FRA = { treasury = 500000 }
+			HAI = {
+				set_country_flag = agreed_to_pay_debt
+				set_variable = { which = owed_cash_money value = 500 }
 			}
+			FRA = { treasury = 500000 }
 		}
 
 		random_owned = {

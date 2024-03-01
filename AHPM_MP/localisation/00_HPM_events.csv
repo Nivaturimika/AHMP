@@ -960,6 +960,7 @@ EVTNAME45104;Dominican War of Independence!;;;;;;;;;;;;;
 EVTDESC45104;Rebels in the east of $COUNTRY$ have seized the Ozama fortress and defeated the $COUNTRY_ADJ$ garrison in Santo Domingo. The rebels have declared the Dominican Republic's sovereignty restored and with it an end to $COUNTRY_ADJ$ rule. All government officials have been expelled from Santo Domingo at what looks to be the beginning of a Civil War that will determine the fate of Hispaniola.;;;;;;;;;;;;;
 EVT45104OPTA;Hispaniola must be united!;;;;;;;;;;;;;
 EVT45104OPTB;Onwards to Santo Domingo!;;;;;;;;;;;;;
+EVT45104OPTC;Let them go
 EVTNAME45105;Plebiscite on Dominican Independence;;;;;;;;;;;;;
 EVTDESC45105;The $MONARCHTITLE$ called a plebiscite on a possible annexation by $FROMCOUNTRY$ as a path to secure our freedoms away from Haiti and to join the prosperous country. The majority has spoken and 99.7% of the Dominican Republic wants this fusion.\n\nAt least that's the official version, it's widely known and accepted that the plebiscite was forged by the $MONARCHTITLE$ in an attempt to get rich off the more $FROMCOUNTRY_ADJ$ jingoistic politicians by selling off the Dominican Republic. The $FROMCOUNTRY_ADJ$ government seems to be in cahoots with him and intend to carry on with the facade as long as the plebiscite backs it up.;;;;;;;;;;;;;
 EVT45105OPTA;Seems like everything is in order.;;;;;;;;;;;;;
@@ -3712,19 +3713,19 @@ EVT95641OPTB;They are a paper tiger. Let them come, if they dare.;;;;;;;;;;;;;
 EVTNAME95642;$FROMCOUNTRY$ Has Refused;;;;;;;;;;;;;
 EVTDESC95642;The rulers of $FROMCOUNTRY$ have foolishly refused our demands.;;;;;;;;;;;;;
 EVT95642OPTA;Then war it is.;;;;;;;;;;;;;
-EVTNAME95645;The Suzerainty of Cambodia;;;;;;;;;;;;;
-EVTDESC95645;We have an issue before us. The Vietnamese rule over our kingdom, and it seems certain that, very soon, either they or the Thai will demand we submit in full and are swallowed whole. The French stand on our borders, eyeing Indochina with their own ambitions. Perhaps they will make kinder rulers? Rebellion seems almost certain to end with Cambodia being torn to pieces by both.;;;;;;;;;;;;;
+EVTNAME95645;The Suzerainty of $COUNTRY$;;;;;;;;;;;;;
+EVTDESC95645;We have an issue before us. The Vietnamese rule over $COUNTRY$, and it seems certain that, very soon, either they or the Thai will demand we submit in full and are swallowed whole. The French stand on our borders, eyeing Indochina with their own ambitions. Perhaps they will make kinder rulers? Rebellion seems almost certain to end with $COUNTRY$ being torn to pieces by both.;;;;;;;;;;;;;
 EVT95645OPTA;Ask for French protection.;;;;;;;;;;;;;
 EVT95645OPTB;Throw out the Thai! We will risk war.;;;;;;;;;;;;;
-EVTNAME95646;The King of Cambodia;;;;;;;;;;;;;
-EVTDESC95646;King Norodom of Cambodia has sent our government a request: he asks that the French intervene in his nation, demanding it be released from Vietnamese control and made our protectorate. This would suit our goals in Indochina, though it risks war.;;;;;;;;;;;;;
+EVTNAME95646;The King of $FROMCOUNTRY$;;;;;;;;;;;;;
+EVTDESC95646;King Norodom of $FROMCOUNTRY$ has sent the $COUNTRY_ADJ$ government a request: he asks that the $COUNTRY_ADJ$ intervene in his nation, demanding it be released from Vietnamese control and made our protectorate. This would suit our goals in Indochina, though it risks war.;;;;;;;;;;;;;
 EVTDESC95647;Cambodia has been under Vietnamese control since our war with Siam. Now it seems the Cambodia king has approached the French and asked for protection, and the French have agreed to offer it. They are demanding control over Cambodia, on threat of war.;;;;;;;;;;;;;
 EVT95646OPTA;Demand Cambodia from the Vietnamese.;;;;;;;;;;;;;
 EVT95646OPTB;Cambodia is on its own.;;;;;;;;;;;;;
 EVT95647OPTA;Surrender Cambodia.;;;;;;;;;;;;;
 EVT95647OPTB;This cannot be permitted!;;;;;;;;;;;;;
-EVTNAME95648;Dai Nam Has Refused;;;;;;;;;;;;;
-EVTDESC95648;Dai Nam has refused to surrender Cambodia to us. It seems we have little choice but to act.;;;;;;;;;;;;;
+EVTNAME95648;$FROMCOUNTRY$ Has Refused;;;;;;;;;;;;;
+EVTDESC95648;$FROMCOUNTRY$ has refused to surrender Cambodia to $COUNTRY$. It seems we have little choice but to act.;;;;;;;;;;;;;
 EVT95648OPTA;War it is.;;;;;;;;;;;;;
 EVTNAME95649;France Has Refused;;;;;;;;;;;;;
 EVTDESC95649;The French have refused to intervene. It seems we are on our own.;;;;;;;;;;;;;
@@ -3740,10 +3741,15 @@ EVT95652OPTA;We have no choice. Surrender the territory.;;;;;;;;;;;;;
 EVT95652OPTB;Never! They will have to take it from us!;;;;;;;;;;;;;
 EVTNAME95653;$FROMCOUNTRY$ Has Refused;;;;;;;;;;;;;
 EVTDESC95653;$FROMCOUNTRY$ stubbornly refuses to relinquish hold over its conquered lands. It falls on us to protect these unfortunates by use of force.;;;;;;;;;;;;;
-EVT95653OPTA;A foolish move.;;;;;;;;;;;;;
+EVT95653OPTA;A foolish move;;;;;;;;;;;;;
+EVT95653OPTB;They shall suffer our wrath
+EVT95653OPTC;Make them pay
+EVT95653OPTD;Let's not bother
 EVTNAME95654;$FROMCOUNTRY$ Has Agreed.;;;;;;;;;;;;;
 EVTDESC95654;$FROMCOUNTRY$ has bowed before our demand. Good relations have been restored..;;;;;;;;;;;;;
 EVT95654OPTA;A wise move.;;;;;;;;;;;;;
+EVT95654OPTB;Splendid
+EVT95654OPTC;Marvelous
 EVTNAME95655;The Unequal Treaty;;;;;;;;;;;;;
 EVTDESC95655;We are in a difficult situation. $COUNTRY_ADJ$ forces cannot hold out against the $FROMCOUNTRY_ADJ$ onslaught, and they plague us at every opportunity. Perhaps we must face the realities of the situation, and sit with the $FROMCOUNTRY_ADJ$ at the negotiation table to give them what they want. If we fail to do so, $COUNTRY$ is surely lost.;;;;;;;;;;;;;
 EVT95655OPTA;Give them what they want.;;;;;;;;;;;;;
