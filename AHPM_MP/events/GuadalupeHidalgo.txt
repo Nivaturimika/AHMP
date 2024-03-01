@@ -13,11 +13,8 @@ country_event = {
 		if = {
 			limit = { war_with = FROM }
 			end_war = FROM
-			any_country = {
-				limit = {
-					war_with = THIS
-					alliance_with = FROM
-				}
+			war_countries = {
+				limit = { alliance_with = FROM }
 				end_war = THIS
 			}
 		}
