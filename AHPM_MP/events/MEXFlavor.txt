@@ -780,9 +780,7 @@ country_event = {
 	option = {
 		name = "EVT44840OPTA"
 		MEX = { country_event = 44841 }
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -793,9 +791,7 @@ country_event = {
 			war_exhaustion = 40
 			remove_country_modifier = santa_ana_rule
 		}
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

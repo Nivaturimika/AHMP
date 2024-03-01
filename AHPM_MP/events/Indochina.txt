@@ -520,20 +520,14 @@ country_event = {
 		name = "EVT95655OPTA"
 		FROM = { country_event = 95656 }
 		prestige = -10
-		random_owned = {
-			limit = { owner = { has_country_modifier = uncivilized_isolationism }}
-			owner = {
-				remove_country_modifier = uncivilized_isolationism
-				add_country_modifier = {
-					name = "western_influences"
-					duration = -1
-				}
-			}
+		if = {
+			limit = { has_country_modifier = uncivilized_isolationism }
+			remove_country_modifier = uncivilized_isolationism
+			add_country_modifier = western_influences
 		}
-
-		random_owned = {
-			limit = { owner = { NOT = { border_policy = open_borders } } }
-			owner = { political_reform = open_borders }
+		if = {
+			limit = { border_policy != open_borders }
+			political_reform = open_borders
 		}
 
 		random_owned = {
@@ -559,16 +553,14 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT95655OPTB"
 		FROM = { country_event = 95657 }
 		war_exhaustion = 20
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -576,11 +568,6 @@ country_event = {
 	id = 95656
 	title = "EVTNAME95656"
 	desc = "EVTDESC95656"
-	news = yes
-	news_title = "EVTNAME95656_NEWS_TITLE"
-	news_desc_long = "EVTDESC95656_NEWS_LONG"
-	news_desc_medium = "EVTDESC95656_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC95656_NEWS_SHORT"
 	picture = "asian_administration"
 
 	is_triggered_only = yes
@@ -673,10 +660,10 @@ country_event = {
 			civilized = no
 			ai = yes
 			neighbour = THIS
-		OR = {
-			any_owned_province = { is_core = WIA }
-			any_owned_province = { is_core = LUA }
-			any_owned_province = { is_core = CHK }
+			OR = {
+				any_owned_province = { is_core = WIA }
+				any_owned_province = { is_core = LUA }
+				any_owned_province = { is_core = CHK }
 			}
 		}
 		revolution_n_counterrevolution = 1

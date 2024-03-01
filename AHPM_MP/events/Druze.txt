@@ -6,27 +6,12 @@ country_event = {
     picture = "demolished_mosque"
 
     trigger = {
-	tag = EGY
-	owns = 912
-	owns = 916
-	year = 1837
+		tag = EGY
+		owns = 912
+		owns = 916
     }
 
-    mean_time_to_happen = {
-	months = 15
-
-	modifier = {
-	    factor = 0.75
-
-	    war = yes
-	}
-
-	modifier = {
-	    factor = 0.5
-
-	    is_mobilised = yes#revolt directly caused by conscription
-	}
-    }
+    mean_time_to_happen = { months = 15 }
     fire_only_once = yes
 
     option = {
@@ -58,43 +43,21 @@ country_event = {
     title = "EVTNAME167010"
     desc = "EVTDESC167010"
     picture = "demolished_church"
-
     trigger = {
 		tag = TUR
 		owns = 902
 		owns = 912
 		owns = 913
-		year = 1850
     }
-
     mean_time_to_happen = {
 	    months = 200
-
-	    modifier = {
-		    factor = 0.5 #increase likelihood to happen
-		    912 = {
-			    any_pop = {
-				    has_pop_religion = catholic#started by Maronite peasants who rioted
-				    militancy = 4
-			    }
-		    }
-	    }
-	    modifier = {
-		    factor = 0.75 #increase likelihood to happen
-		    OR = {
-			    religion = sunni
-			    religion = shiite
-		    }
-	    }
     }
     fire_only_once = yes
-
     option = {
 		name = "EVT167010OPTA"
 		FRA = { country_event = { id = 167020 days = 5 } }
 		ai_chance = { factor = 1 }
     }
-
 	option = {
 		name = "EVT167010OPTB" #We must help our subjects
 		prestige = -10
@@ -218,9 +181,7 @@ country_event = {
 		name = "EVT167020OPTB" #We do not have the means to help out
 		prestige = -20
 		any_pop = {
-			limit = {
-				has_pop_religion = catholic
-			}
+			limit = { has_pop_religion = catholic }
 			consciousness = 0.5
 		}
 		912 = {
@@ -253,19 +214,13 @@ country_event = {
 		}
 		902 = {
 			any_pop = {
-				limit = {
-					has_pop_religion = druze
-				}
-
+				limit = { has_pop_religion = druze }
 				consciousness = 6
 				militancy = 6
 				reduce_pop = 0.98
 			}
 			any_pop = {
-				limit = {
-					has_pop_religion = orthodox
-				}
-
+				limit = { has_pop_religion = orthodox }
 				consciousness = 6
 				militancy = 6
 				reduce_pop = 0.7
@@ -294,40 +249,21 @@ country_event = {
 			}
 		}
 		owns = 906
-		year = 1900
 		early_railroad = 1 #Railroad expansion was an important factor in revolt
 	}
-
-    mean_time_to_happen = {
-	    months = 120
-
-	    modifier = {
-		    factor = 0.9
-
-		    iron_railroad = 1
-	    }
-    }
+    mean_time_to_happen = { months = 120 }
     fire_only_once = yes
-
     option = {
 		name = "EVT167030OPTA" #Crush them
 		906 = {
 			any_pop = {
-				limit = {
-					has_pop_religion = druze
-				}
-
+				limit = { has_pop_religion = druze }
 				consciousness = 6
 				militancy = 6
 				reduce_pop = 0.9
 			}
-
-			any_pop = {
-				limit = {
-					has_pop_religion = druze
-					type = soldiers
-				}
-
+			soldiers = {
+				limit = { has_pop_religion = druze }
 				pop_type = farmers
 			}
 		}

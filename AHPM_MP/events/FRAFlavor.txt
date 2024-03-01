@@ -2296,8 +2296,6 @@ country_event = {
 		has_country_modifier = louis_napoleon_iii
 		government = democracy
 		election = yes
-		year = 1850
-		rank = 4
 		is_disarmed = no
 		NOT = {
 			year = 1870
@@ -2333,45 +2331,6 @@ country_event = {
 	option = {
 		name = "EVT10405OPTA"
 		set_country_flag = napoleons_coup_de_tat
-		any_country = {
-			limit = {
-				is_greater_power = yes
-				capital_scope = { continent = europe }
-				NOT = { tag = RUS }
-				NOT = { tag = ENG }
-				NOT = { is_culture_group = germanic }
-			}
-			relation = { who = THIS value = -30 }
-		}
-		any_country = {
-			limit = {
-				is_culture_group = germanic
-				capital_scope = { continent = europe }
-			}
-			relation = { who = THIS value = -100 }
-		}
-		random_country = {
-			limit = {
-				tag = RUS
-				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-				}
-			}
-			relation = { who = FRA value = -75 }
-		}
-		random_country = {
-			limit = {
-				tag = ENG
-				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-				}
-			}
-			relation = { who = FRA value = -75 }
-		}
 		prestige = 25
 		government = absolute_monarchy
 		ruling_party_ideology = conservative
@@ -2392,7 +2351,7 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 				OR = {
 					type = soldiers
 					type = officers
@@ -2404,7 +2363,7 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_militancy = {
 				ideology = conservative
@@ -2485,12 +2444,6 @@ country_event = {
 		name = "EVT10410OPTA"
 		set_country_flag = louis_deposed
 		remove_country_modifier = louis_napoleon_iii
-		any_greater_power = {
-			limit = {
-				capital_scope = { continent = europe }
-			}
-			relation = { who = THIS value = 30 }
-		}
 		prestige = -25
 		government = democracy
 		ruling_party_ideology = liberal
@@ -2502,7 +2455,7 @@ country_event = {
 		political_reform = secret_ballots
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_militancy = {
 				ideology = reactionary
@@ -2525,21 +2478,13 @@ country_event = {
 				factor = -2
 			}
 		}
-		ai_chance = {
-			factor = 80
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT10410OPTB"
 		set_country_flag = louis_deposed
 		remove_country_modifier = louis_napoleon_iii
-		any_greater_power = {
-			limit = {
-				capital_scope = { continent = europe }
-			}
-			relation = { who = THIS value = 30 }
-		}
 		prestige = 25
 		government = absolute_monarchy
 		ruling_party_ideology = reactionary
@@ -2551,7 +2496,7 @@ country_event = {
 		political_reform = underground_parties
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_militancy = {
 				ideology = reactionary
@@ -2570,25 +2515,13 @@ country_event = {
 				factor = 2
 			}
 		}
-		ai_chance = {
-			factor = 15
-			modifier = {
-				factor = 0
-				government = hms_government
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "EVT10410OPTC"
 		set_country_flag = louis_deposed
 		remove_country_modifier = louis_napoleon_iii
-		any_greater_power = {
-			limit = {
-				capital_scope = { continent = europe }
-			}
-			relation = { who = THIS value = 30 }
-		}
 		government = hms_government
 		ruling_party_ideology = conservative
 		political_reform = universal_voting
@@ -2599,7 +2532,7 @@ country_event = {
 		political_reform = secret_ballots
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_militancy = {
 				ideology = reactionary
@@ -2622,9 +2555,7 @@ country_event = {
 				factor = 2
 			}
 		}
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -2649,7 +2580,6 @@ country_event = {
 			government = hms_government
 		}
 		war = no
-		year = 1870
 		NOT = { has_country_flag = louis_deposed }
 	}
 
@@ -2665,16 +2595,14 @@ country_event = {
 		ruling_party_ideology = conservative
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_consciousness = {
 				ideology = conservative
 				factor = -5
 			}
 		}
-		ai_chance = {
-			factor = 40
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
@@ -2685,7 +2613,7 @@ country_event = {
 		ruling_party_ideology = reactionary
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_militancy = {
 				ideology = reactionary
@@ -2696,13 +2624,7 @@ country_event = {
 				factor = 4
 			}
 		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				government = hms_government
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
@@ -2720,7 +2642,7 @@ country_event = {
 		political_reform = secret_ballots
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_militancy = {
 				ideology = reactionary
@@ -2744,7 +2666,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 50
+			factor = 1
 		}
 	}
 }

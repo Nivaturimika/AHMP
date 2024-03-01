@@ -6,7 +6,6 @@ country_event = {
 	major = yes
 
 	trigger = {
-		ai = no
 		badboy = 2
 		civilized = yes
 		has_country_modifier = kinda_bad_badboy
@@ -47,7 +46,6 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_modifier = uncivilized_isolationism }
-		ai = no
 		badboy = 1.3
 		NOT = {
 			OR = {
@@ -64,21 +62,17 @@ country_event = {
 		add_country_modifier = {
 			name = kinda_bad_badboy
 			duration = 1825
-			}
+		}
 		any_greater_power = {
-		casus_belli = {
-			target = THIS
-			type = humiliate
-			months = 60
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
 			}
-		casus_belli = {
-			target = THIS
-			type = free_peoples
-			months = 12
-			}
-		relation = {
-			who = THIS
-			value = -100
+			casus_belli = {
+				target = THIS
+				type = free_peoples
+				months = 12
 			}
 		}
 	}
@@ -101,18 +95,7 @@ country_event = {
 			set_country_flag = voralberg_annexation
 			country_event = { id = 31321 days = 1 }
 		}
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 0.25
-				NOT = { alliance_with = SWI }
-				NOT = { is_sphere_leader_of = SWI }
-				OR = {
-					primary_culture = north_italian
-					primary_culture = south_italian
-				}
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVTOPT31320B"
@@ -121,25 +104,7 @@ country_event = {
 			limit = { tag = SWI }
 			country_event = { id = 31321 days = 1 }
 		}
-		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0
-				OR = {
-					alliance_with = SWI
-					is_sphere_leader_of = SWI
-				}
-			}
-			modifier = {
-				factor = 4
-				NOT = { alliance_with = SWI }
-				NOT = { is_sphere_leader_of = SWI }
-				OR = {
-					primary_culture = north_italian
-					primary_culture = south_italian
-				}
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
