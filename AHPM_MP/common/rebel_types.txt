@@ -181,9 +181,9 @@ reactionary_rebels = {
 	}
 
 	 # Province Scope
-	 siege_won_trigger = {
+	siege_won_trigger = {
 		NOT = { has_province_modifier = war_torn }
-	 }
+	}
 
 	siege_won_effect = {
 		add_province_modifier = {
@@ -191,10 +191,7 @@ reactionary_rebels = {
 			duration = 365
 		}
 		any_pop = {
-			ideology = {
-				value = reactionary
-				factor = 0.05
-			}
+			ideology = { value = reactionary factor = 0.05 }
 		}
 	}
 
@@ -208,20 +205,45 @@ reactionary_rebels = {
 
 	demands_enforced_effect = {
 		ruling_party_ideology = reactionary
-		political_reform = none_voting
-		political_reform = party_appointed
-		political_reform = no_meeting
-		political_reform = state_press
-		political_reform = underground_parties
-		political_reform = mandatory_service
 		if = {
-			limit = { trade_unions != no_trade_unions }
-			political_reform = state_controlled
+			limit = { civilized = yes }
+			political_reform = none_voting
+			political_reform = party_appointed
+			political_reform = no_meeting
+			political_reform = state_press
+			political_reform = underground_parties
+			political_reform = mandatory_service
+			political_reform = no_trade_unions
+			social_reform = primary_culture_only
+			social_reform = no_health_care
+			social_reform = no_schools
+			social_reform = no_pensions
+			social_reform = no_subsidies
+			social_reform = capital_punishment
+			social_reform = child_labor_legal
+		} else = {
+			economic_reform = no_land_reform
+			economic_reform = no_admin_reform
+			economic_reform = no_finance_reform
+			economic_reform = no_monetary_reform
+			economic_reform = no_education_reform
+			economic_reform = no_research_reform
+			economic_reform = no_transport_improv
+			economic_reform = no_firearms_production
+			economic_reform = no_pre_indust
+			economic_reform = no_industrial_construction
+			military_reform = no_foreign_training
+			military_reform = no_foreign_weapons
+			military_reform = no_military_constructions
+			military_reform = no_foreign_officers
+			military_reform = no_army_schools
+			military_reform = no_foreign_naval_officers
+			military_reform = no_naval_schools
+			military_reform = no_foreign_navies
+			military_reform = no_western_shipyards
+			military_reform = no_foreign_artillery
 		}
-		if = {
-			limit = { citizens_rights != primary_culture_only }
-			social_reform = culture_voting_only
-		}
+
 		add_country_modifier = {
 			name = national_confusion
 			duration = 365
