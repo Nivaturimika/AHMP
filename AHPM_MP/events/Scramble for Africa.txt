@@ -185,7 +185,7 @@ country_event = {
 		name = "EVT95521OPTC"
 		prestige = 10
 		badboy = -2
-		set_country_flag = finished_berlin_conference
+		set_country_flag = abandon_berlin_conference
 		ai_chance = { factor = 1 }
 	}
 }
@@ -198,15 +198,7 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		any_country = {
-			limit = {
-				civilized = yes
-				OR = {
-					is_greater_power = yes
-					is_secondary_power = yes
-					colonial_nation = yes
-				}
-				capital_scope = { continent = europe }
-			}
+			limit = { test = is_african_colonizer }
 			if = {
 				limit = { has_country_modifier = western_influences }
 				diplomatic_influence = { who = THIS value = 100 }
@@ -281,14 +273,6 @@ country_event = {
 	option = {
 		name = "EVT95503OPTA"
 		set_country_flag = africa_in_the_modern_age
-		any_country = {
-			limit = {
-				civilized = yes
-				NOT = { relation = { who = THIS value = 25 } }
-				capital_scope = { continent = europe }
-			}
-			relation = { who = THIS value = 50 }
-		}
 	}
 }
 

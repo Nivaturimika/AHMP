@@ -22,7 +22,9 @@ is_african_colonizer = {
 	OR = {
 		is_greater_power = yes
 		is_secondary_power = yes
+		colonial_nation = yes
 	}
 	war_countries = { test != is_colonizable_african_nation }
 	capital_scope = { continent != africa }
+	has_country_flag != abandon_berlin_conference
 }
