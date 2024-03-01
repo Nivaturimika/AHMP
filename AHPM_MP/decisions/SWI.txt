@@ -285,12 +285,11 @@ political_decisions = {
 		potential = {
 			tag = SWI
 			NOT = { has_country_modifier = swiss_banking }
+			has_country_modifier = central_bank_established
 		}
 
 		allow = {
 			government = democracy
-			has_country_modifier = central_bank_established
-			industrial_score = 70
 			modern_central_bank_system = 1
 			OR = {
 				management_strategy = 1
@@ -394,13 +393,15 @@ political_decisions = {
 
 	declare_neutrality = {
 		potential = {
+			civilized = yes
+			is_independant = yes
+			capital_scope = { continent = europe }
 			has_country_modifier != neutrality_modifier
 			has_country_flag != abandoned_neutrality
 			has_country_flag != neutrality_violated
-			is_independant = yes
 		}
 		allow = {
-			NOT = { any_owned_province = { is_core = THIS } }
+			NOT = { any_owned_province = { NOT = { is_core = THIS } } }
 		}
 		effect = {
 			add_country_modifier = neutrality_modifier

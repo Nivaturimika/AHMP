@@ -574,9 +574,9 @@ political_decisions = {
 				tag = RUS
 				CIR = { part_of_sphere = yes civilized = no }
 			}
+			is_greater_power = yes
 		}
 		allow = {
-			is_greater_power = yes
 			nationalism_n_imperialism = 1
 		}
 		effect = {
