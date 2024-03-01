@@ -160,36 +160,27 @@ country_event = {
 
 country_event = {
 	id = 33002
-	trigger = {
-		tag = GER
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1881
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1882
-		}
-	}
-
 	title = "EVTNAME33002"
 	desc = "EVTDESC33002"
 	picture = "School"
-
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = north_german
+			primary_culture = south_german
+		}
+		is_cultural_union = yes
+		is_greater_power = yes
+	}
+	mean_time_to_happen =  { months = 100 }
 	option = {
 		name = "EVTOPTA33002"
 		prestige = 5
 	}
-
+	option = {
+		name = "EVTOPTB33002"
+		years_of_research = 0.01
+	}
 }
 
 country_event = {

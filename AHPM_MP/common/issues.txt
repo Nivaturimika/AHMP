@@ -250,8 +250,11 @@ political_reforms = {
 			}
 			on_execute = {
 				effect = {
-					remove_country_modifier = female_suffrage
-					country_event = 60150
+					if = {
+						limit = { has_country_modifier = female_suffrage }
+						remove_country_modifier = female_suffrage
+						country_event = 60150
+					}
 					if = {
 						limit = { government = democracy }
 						country_event = 60090
