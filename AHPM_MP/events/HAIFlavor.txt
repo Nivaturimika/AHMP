@@ -2,64 +2,40 @@
 country_event = {
 
 	id = 45100
-
-	trigger = {
-		tag = HAI
-		year = 1860
-		exists = PAP
-		NOT = { year = 1863 }
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 5
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1861
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1862
-		}
-	}
-
 	title = "EVTNAME45100"
 	desc = "EVTDESC45100"
 	picture = "pope"
-
+	trigger = {
+		tag = HAI
+		exists = PAP
+		realism = 1
+	}
+	fire_only_once = yes
+	mean_time_to_happen =  { months = 59 }
 	option = {
 		name = "EVTOPTA45100"
 		prestige = 5
 		relation = { who = PAP value = 50 }
-		any_pop = { limit = { is_state_religion = yes } scaled_militancy = { factor = -3 issue = moralism } }
+		any_pop = {
+			limit = { is_state_religion = yes }
+			scaled_militancy = { factor = -3 issue = moralism }
+		}
 	}
 }
 
 # Emperor Faustan Soulique
 country_event = {
-
 	id = 45101
-
 	title = "EVTNAME45101"
 	desc = "EVTDESC45101"
 	picture = "monarchy"
-
 	trigger = {
 		tag = HAI
-		year = 1847
 		government = democracy
-		NOT = { year = 1859 }
+		nationalism_n_imperialism = 1
 	}
-
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 6
-	}
-
+	mean_time_to_happen = { months = 60 }
 	option = {
 		name = "EVTOPTA45101"
 		government = absolute_monarchy
@@ -72,6 +48,10 @@ country_event = {
 		political_reform = underground_parties
 		prestige = -5
 		country_event = 800050
+	}
+	option = {
+		name = "EVTOPTB45101"
+		any_owned = { any_pop = { militancy = 6 } }
 	}
 }
 
@@ -87,13 +67,8 @@ country_event = {
 		owns = 2216
 		NOT = { exists = DOM }
 	}
-
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 6
-	}
-
+	mean_time_to_happen = { months = 60 }
 	option = {
 		name = "EVT45102OPTA"
 		any_pop = {

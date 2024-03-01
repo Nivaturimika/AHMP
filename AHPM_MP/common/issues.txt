@@ -252,6 +252,18 @@ political_reforms = {
 				effect = {
 					remove_country_modifier = female_suffrage
 					country_event = 60150
+					if = {
+						limit = { government = democracy }
+						country_event = 60090
+					} else_if = {
+						limit = {
+							OR = {
+								government = hms_government
+								government = prussian_constitutionalism
+							}
+						}
+						country_event = 60040
+					}
 				}
 			}
 		}
@@ -261,6 +273,17 @@ political_reforms = {
 			poor_vote = 0
 			global_immigrant_attract = 0.01
 			allow = { test = is_stable_goverment }
+			on_execute = {
+				effect = {
+					if = {
+						limit = { government = prussian_constitutionalism }
+						country_event = 60070
+					} else_if = {
+						limit = { government = absolute_monarchy }
+						country_event = 60060
+					}
+				}
+			}
 		}
 		wealth_weighted_voting = {
 			rich_vote = 2
@@ -268,12 +291,35 @@ political_reforms = {
 			poor_vote = 0
 			global_immigrant_attract = 0.02
 			allow = { test = is_stable_goverment }
+			on_execute = {
+				effect = {
+					if = {
+						limit = { government = prussian_constitutionalism }
+						country_event = 60070
+					} else_if = {
+						limit = { government = absolute_monarchy }
+						country_event = 60060
+					}
+				}
+			}
 		}
 		wealth_voting = {
 			rich_vote = 1
 			middle_vote = 1
 			poor_vote = 0
 			global_immigrant_attract = 0.08
+			allow = { test = is_stable_goverment }
+			on_execute = {
+				effect = {
+					if = {
+						limit = { government = prussian_constitutionalism }
+						country_event = 60070
+					} else_if = {
+						limit = { government = absolute_monarchy }
+						country_event = 60060
+					}
+				}
+			}
 		}
 		universal_weighted_voting = {
 			rich_vote = 3
@@ -281,6 +327,17 @@ political_reforms = {
 			poor_vote = 1
 			global_immigrant_attract = 0.30
 			allow = { test = is_stable_goverment }
+			on_execute = {
+				effect = {
+					if = {
+						limit = { government = prussian_constitutionalism }
+						country_event = 60070
+					} else_if = {
+						limit = { government = absolute_monarchy }
+						country_event = 60060
+					}
+				}
+			}
 		}
 		universal_voting = {
 			rich_vote = 1
@@ -288,6 +345,17 @@ political_reforms = {
 			poor_vote = 1
 			global_immigrant_attract = 0.55
 			allow = { test = is_stable_goverment }
+			on_execute = {
+				effect = {
+					if = {
+						limit = { government = prussian_constitutionalism }
+						country_event = 60070
+					} else_if = {
+						limit = { government = absolute_monarchy }
+						country_event = 60060
+					}
+				}
+			}
 		}
 	}
 

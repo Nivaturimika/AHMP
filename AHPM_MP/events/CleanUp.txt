@@ -2,11 +2,6 @@ country_event = {
 	id = 60000
 	title = "EVTNAME60000"
 	desc = "EVTDESC60000"
-	news = yes
-	news_title = "EVTNAME60000_NEWS_TITLE"
-	news_desc_long = "EVTDESC60000_NEWS_LONG"
-	news_desc_medium = "EVTDESC60000_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60000_NEWS_SHORT"
 	picture = "communist_crowd"
 
 	trigger = {
@@ -36,22 +31,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 12
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 40
-		}
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 75
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 9
-		}
-		modifier = {
-			factor = 0.5
-			revolt_percentage = 0.25
-		}
 	}
 	option = {
 		name = "EVTOPTA60000"
@@ -86,11 +65,6 @@ country_event = {
 	id = 60010
 	title = "EVTNAME60010"
 	desc = "EVTDESC60010"
-	news = yes
-	news_title = "EVTNAME60010_NEWS_TITLE"
-	news_desc_long = "EVTDESC60010_NEWS_LONG"
-	news_desc_medium = "EVTDESC60010_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60010_NEWS_SHORT"
 	picture = "Fascist"
 
 	trigger = {
@@ -164,22 +138,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 12
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 40
-		}
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 75
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 9
-		}
-		modifier = {
-			factor = 0.5
-			revolt_percentage = 0.25
-		}
 	}
 	major = yes
 	option = {
@@ -208,11 +166,6 @@ country_event = {
 	id = 60030
 	title = "EVTNAME60030"
 	desc = "EVTDESC60030"
-	news = yes
-	news_title = "EVTNAME60030_NEWS_TITLE"
-	news_desc_long = "EVTDESC60030_NEWS_LONG"
-	news_desc_medium = "EVTDESC60030_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60030_NEWS_SHORT"
 	picture = "Fascist"
 
 	trigger = {
@@ -238,37 +191,14 @@ country_event = {
 			average_militancy = 5
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 12
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 40
-		}
-		modifier = {
-			factor = 0.8
-			war_exhaustion = 75
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 9
-		}
-		modifier = {
-			factor = 0.5
-			revolt_percentage = 0.25
-		}
 	}
 	major = yes
 	option = {
 		name = "EVT60030OPTA"
-		random_owned = {
-			limit = { owner = { has_country_modifier = regency_government } }
-			owner = { remove_country_modifier = regency_government }
-		}
-		random_owned = {
-			limit = { owner = { has_country_modifier = santa_ana_rule } }
-			owner = { remove_country_modifier = santa_ana_rule }
-		}
+		remove_country_modifier = regency_government
+		remove_country_modifier = santa_ana_rule
 		government = fascist_dictatorship
 		political_reform = none_voting
 		political_reform = party_appointed
@@ -305,26 +235,17 @@ country_event = {
 		NOT = { political_parties = underground_parties }
 		NOT = { upper_house_composition = party_appointed }
 	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 	major = yes
 	option = {
 		name = "EVTOPTA60050"
-		random_owned = {
-			limit = { owner = { has_country_modifier = regency_government } }
-			owner = { remove_country_modifier = regency_government }
-		}
-		random_owned = {
-			limit = { owner = { has_country_modifier = santa_ana_rule } }
-			owner = { remove_country_modifier = santa_ana_rule }
-		}
+		remove_country_modifier = regency_government
+		remove_country_modifier = santa_ana_rule
 		remove_country_modifier = fight_the_power
 		government = democracy
 		election = yes
 		prestige_factor = -0.05
-		random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
+		if = { limit = { border_policy = closed_borders } political_reform = open_borders }
 	}
 }
 
@@ -333,20 +254,7 @@ country_event = {
 	title = "EVTNAME60040"
 	desc = "EVTDESC60040"
 	picture = "Monarchy"
-
-	trigger = {
-		OR = {
-			government = hms_government
-			government = prussian_constitutionalism
-		}
-		civilized = yes
-		vote_franschise = none_voting
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
+	is_triggered_only = yes
 	option = {
 		name = "EVTOPTA60040"
 		government = absolute_monarchy
@@ -357,27 +265,12 @@ country_event = {
 	id = 60060
 	title = "EVTNAME60060"
 	desc = "EVTDESC60060"
-	news = yes
-	news_title = "EVTNAME60060_NEWS_TITLE"
-	news_desc_long = "EVTDESC60060_NEWS_LONG"
-	news_desc_medium = "EVTDESC60060_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60060_NEWS_SHORT"
 	picture = "Monarchy"
-
-	trigger = {
-		government = absolute_monarchy
-		NOT = { vote_franschise = none_voting }
-		civilized = yes
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
+	is_triggered_only = yes
 	option = {
 		name = "EVTNAME60060"
 		government = prussian_constitutionalism
-		random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
+		if = { limit = { border_policy = closed_borders } political_reform = open_borders }
 	}
 }
 
@@ -385,67 +278,12 @@ country_event = {
 	id = 60070
 	title = "EVTNAME60070"
 	desc = "EVTDESC60070"
-	news = yes
-	news_title = "EVTNAME60070_NEWS_TITLE"
-	news_desc_long = "EVTDESC60070_NEWS_LONG"
-	news_desc_medium = "EVTDESC60070_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60070_NEWS_SHORT"
 	picture = "Monarchy"
-
-	trigger = {
-		government = prussian_constitutionalism
-		OR = {
-			political_parties = secret_ballots
-			political_parties = non_secret_ballots
-		}
-		civilized = yes
-		OR = {
-			vote_franschise = universal_weighted_voting
-			vote_franschise = universal_voting
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
+	is_triggered_only = yes
 	option = {
 		name = "EVTOPTA60070"
 		government = hms_government
-		random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
-	}
-}
-
-country_event = {
-	id = 60080
-	title = "EVTNAME60080"
-	desc = "EVTDESC60080"
-	news = yes
-	news_title = "EVTNAME60080_NEWS_TITLE"
-	news_desc_long = "EVTDESC60080_NEWS_LONG"
-	news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC60080_NEWS_SHORT"
-	picture = "communist_crowd"
-
-	trigger = {
-		government = democracy
-		vote_franschise = none_voting
-		OR = {
-			ruling_party_ideology = conservative
-			ruling_party_ideology = reactionary
-			ruling_party_ideology = liberal
-			ruling_party_ideology = socialist
-		}
-		civilized = yes
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-	major = yes
-	option = {
-		name = "EVT60080OPTA"
-		government = presidential_dictatorship
+		if = { limit = { border_policy = closed_borders } political_reform = open_borders }
 	}
 }
 
@@ -454,18 +292,7 @@ country_event = {
 	title = "EVTNAME60110"
 	desc = "EVTDESC60080"
 	picture = "communist_crowd"
-	trigger = {
-		government = democracy
-		vote_franschise = none_voting
-		OR = {
-			ruling_party_ideology = anarcho_liberal
-			ruling_party_ideology = communist
-			ruling_party_ideology = fascist
-		}
-		civilized = yes
-	}
-	mean_time_to_happen = { months = 1 }
-	major = yes
+	is_triggered_only = yes
 	option = {
 		name = "EVT60090OPTA"
 		if = {
@@ -477,6 +304,8 @@ country_event = {
 		} else_if = {
 			limit = { ruling_party_ideology = fascist }
 			government = fascist_dictatorship
+		} else = {
+			government = presidential_dictatorship
 		}
 	}
 }

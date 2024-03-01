@@ -5045,7 +5045,6 @@ EVTDESC45004;The Dominican Republic is seeking annexation by France.
 EVTDESC45005;Representatives of the Dominican Republic have made us the offer of annexing their nation.
 EVTDESC45006;After a decade of general stability, the assassination of President Ulises Heureaux revealed that the many deals he made with foreign banks has left the country bankrupt.
 EVTDESC45100;Relations with the Church were improved through the Concordat of 1860, which allows the return of French clergy and the establishment of parochial schools.
-EVTDESC45101;Faustan Soulique, the compromise candidate for President in 1847, declared himself the second emperor of Haiti as Faustin I.
 EVTDESC46300;Antonio de Castro Alves published O Navio Negreiro, and soon earned the sobriquet of poet of the slaves. His work was influential for the abolition of slavery in Brazil.
 EVTDESC46301;In $YEAR$ the Paulista $CULTURE_FIRST_NAME$ $CULTURE_LAST_NAME$ came back from England, where he had studied, with two footballs, a book of rules, a set of uniforms and the experience of having learned the sport invented by the English. $COUNTRY_LAST_NAME$ and other English resident in Seo Paulo played the first match in Brazil in $YEAR$, with the employees of the Gas Company playing against employees of the Seo Paulo Railway. The match was played in the valley of Carmo, and the employees of the railroad company won 4-2. Since then, the interest of Brazilians for the sport has increased dramatically.
 EVTDESC46302;Francisco Sabino, a military officer, launched a radical revolt in Bahia, calling for the end of slavery and the redistribution of land.
@@ -5070,7 +5069,6 @@ EVTDESC60080;Lately an eerie feeling has crept over you that $COUNTRY$ is growin
 EVTDESC60120;A sentiment of cultural nationalism is sweeping $COUNTRY$, as people begin to clamor for unification with our cultural brethren in $CULTURE_GROUP_UNION$. We have little reason to doubt that they would object to a petition of annexation.
 EVTDESC60130;Following a surge in popular nationalist sentiments, the $FROMCOUNTRY_ADJ$ government has placed a formal request with our authorities in $CAPITAL$ that they be allowed to join $COUNTRY$ in perpetual union. There seems to be little reason to oppose this move.
 EVTDESC60140;With the liberals firmly in control of our country, they feel that now is the time for a constitutional convention. Everyone's views, well at least everyone who truly matters, will be represented in this new gathering to shape the path of our nation.
-EVTDESC60150;With the recent rollback of voting reforms, the fairer sex is once again denied the vote.
 EVTDESC70000;Another astounding victory for $COUNTRY$ today, as it has now become clear that $STATE$ will, as has been expected for some time, be taken up into the $COUNTRY_ADJ$ patrimony with full rights of national statehood. One question that still remains to settle is, however, the issue of slavery. Slavery can be extended within our country, and the question on the table is whether we wish to extend the institution to $STATE$, or not?
 EVTDESC70001;Another astounding victory for $COUNTRY$ today, as it has now become clear that $STATE$ will, as has been expected for some time, be taken up into the $COUNTRY_ADJ$ patrimony with full rights of national statehood.
 EVTDESC90000;As everyone knows, $CB_TARGET_NAME$ is out to get us. It's only a matter of time before they launch an unprovoked attack, so it is only reasonable that we take steps to pre-emptively defend ourselves. As luck would have it, a report detailing their nefarious schemes has recently been eleakede to the press, and the public have rallied to our cause.
@@ -5906,7 +5904,6 @@ EVTNAME45004;Britain Steps In
 EVTNAME45005;Dominican Republic Annexed to France?
 EVTNAME45006;President Heureaux Assassinated
 EVTNAME45100;Concordat with the Vatican
-EVTNAME45101;Soulique Declares Himself Emperor
 EVTNAME46300;O Navio Negreiro
 EVTNAME46301;O Jogo bonito, the beautiful game
 EVTNAME46302;The Sabinada
@@ -5932,7 +5929,6 @@ EVTNAME60080;The Road to Serfdom
 EVTNAME60120;Increasing Federalism
 EVTNAME60130;$FROMCOUNTRY$ Petitions for Annexation
 EVTNAME60140;Constitutional Convention
-EVTNAME60150;The end of female suffrage
 EVTNAME90000;The $CB_TARGET_NAME_ADJ$ menace
 EVTNAME90001;Mission to $CB_TARGET_NAME$
 EVTNAME90002;The tyrany of $CB_TARGET_NAME$
@@ -6727,7 +6723,6 @@ EVTOPTA45002;The Caribbean is our Destiny
 EVTOPTA45005;It's a natural part of France!
 EVTOPTA45006;A tragedy!
 EVTOPTA45100;Harmony with the Church.
-EVTOPTA45101;Vive l'Empereur Faustin!
 EVTOPTA46300;Dangerous Ideas Afloat!
 EVTOPTA46301;The power of sport
 EVTOPTA46302;Target practice! 
@@ -6752,7 +6747,6 @@ EVTOPTA60080;Muahahaha!
 EVTOPTA60120;Let's do it
 EVTOPTA60130;Let's do it
 EVTOPTA60140;Otherwise people would exploit the situation
-EVTOPTA60150;Get back in the kitchen!
 EVTOPTA70000;Extend Slavery
 EVTOPTA70001;Excellent!
 EVTOPTA90000;They're coming right for us!
