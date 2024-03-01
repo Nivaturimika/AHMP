@@ -1,85 +1,38 @@
 country_event = {
-
 	id = 36700
 	title = "EVTNAME36700"
 	desc = "EVTDESC36700"
 	picture = "lion"
-
 	trigger = {
 		tag = BEL
 	}
-
 	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 6
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1838
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1839
-		}
-	}
-
+	mean_time_to_happen =  { months = 60 }
 	option = {
 		name = "EVTOPTA36700"
 		prestige = 5
 		any_pop = {
-			limit = {
-				has_pop_culture = flemish
-			}
+			limit = { has_pop_culture = flemish }
 			consciousness = 2
 		}
 	}
 }
 
 country_event = {
-
 	id = 36701
-	news = yes
-	news_desc_long = "EVTDESC36701_NEWS_LONG"
-	news_desc_medium = "EVTDESC36701_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC36701_NEWS_SHORT"
-
-	trigger = {
-		tag = BEL
-		year = 1846
-		NOT = { primary_culture = flemish }
-		NOT = { year = 1850 }
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 6
-
-		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1847
-		}
-
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1848
-		}
-	}
-
 	title = "EVTNAME36701"
 	desc = "EVTDESC36701"
 	picture = "Administration"
-
+	trigger = {
+		tag = BEL
+		NOT = { primary_culture = flemish }
+	}
+	fire_only_once = yes
+	mean_time_to_happen =  { months = 60 }
 	option = {
 		name = "EVTOPTA36701"
 		any_pop = {
-			limit = {
-				has_pop_culture = flemish
-			}
+			limit = { has_pop_culture = flemish }
 			consciousness = 3
 			militancy = 1
 		}
@@ -87,42 +40,15 @@ country_event = {
 }
 
 country_event = {
-
 	id = 36704
-	news = yes
-	news_desc_long = "EVTDESC36704_NEWS_LONG"
-	news_desc_medium = "EVTDESC36704_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC36704_NEWS_SHORT"
-
-	trigger = {
-		tag = BEL
-		year = 1845
-		NOT = {
-			year = 1848
-		}
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen =  {
-		months = 6
-
-		modifier = {
-			factor = 0.85 #increase likelihood to happen
-			year = 1846
-		}
-
-		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1847
-		}
-	}
-
 	title = "EVTNAME36704"
 	desc = "EVTDESC36704"
 	picture = "sax"
-
-
+	trigger = {
+		tag = BEL
+	}
+	fire_only_once = yes
+	mean_time_to_happen =  { months = 60 }
 	option = {
 		name = "EVTOPTA36704"
 		prestige = 2
