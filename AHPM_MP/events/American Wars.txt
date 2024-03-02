@@ -220,14 +220,11 @@ country_event = {
 }
 
 country_event = {
-
 	id = 44145
 	title = "EVTNAME44145" #The Hawaiian Islands Purchase
 	desc = "EVTDESC44145"
 	picture = "treaty"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT44145OPTA"
 		FROM = { country_event = 44147 }
@@ -269,16 +266,7 @@ country_event = {
 	option = {
 		name = "EVT44147OPTA"
 		money = -50000
-		FROM = {
-			any_owned = {
-				limit = { region = HAW_658 }
-				secede_province = THIS
-			}
-		}
-		relation = {
-			who = FROM
-			value = 50
-		}
+		FROM = { create_vassal = THIS }
 	}
 }
 

@@ -12,7 +12,6 @@ political_decisions = {
 			NOT = { has_country_flag = asked_to_join_csa }
 			neighbour = CSA
 		}
-
 		allow = {
 			war = no
 			is_greater_power = no
@@ -30,16 +29,12 @@ political_decisions = {
 			}
 			in_sphere = CSA
 		}
-
 		effect = {
 			set_country_flag = asked_to_join_csa
 			all_core = { add_core = CSA }
 			CSA = { country_event = 60130 }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	join_fsa = {
@@ -55,7 +50,6 @@ political_decisions = {
 			NOT = { has_country_flag = asked_to_join_fsa }
 			neighbour = FSA
 		}
-
 		allow = {
 			war = no
 			is_greater_power = no
@@ -73,16 +67,12 @@ political_decisions = {
 			}
 			in_sphere = FSA
 		}
-
 		effect = {
 			set_country_flag = asked_to_join_fsa
 			all_core = { add_core = FSA }
 			FSA = { country_event = 60130 }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	join_california = {
@@ -98,7 +88,6 @@ political_decisions = {
 			neighbour = CAL
 			exists = yes
 		}
-
 		allow = {
 			war = no
 			is_greater_power = no
@@ -116,16 +105,12 @@ political_decisions = {
 			}
 			in_sphere = CAL
 		}
-
 		effect = {
 			set_country_flag = asked_to_join_california
 			all_core = { add_core = CAL }
 			CAL = { country_event = 60130 }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	join_new_america = {
@@ -138,7 +123,6 @@ political_decisions = {
 			NOT = { has_country_flag = asked_to_join_new_america }
 			neighbour = UIL
 		}
-
 		allow = {
 			war = no
 			is_greater_power = no
@@ -156,16 +140,12 @@ political_decisions = {
 			}
 			in_sphere = UIL
 		}
-
 		effect = {
 			set_country_flag = asked_to_join_new_america
 			all_core = { add_core = UIL }
 			UIL = { country_event = 60130 }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	rejoin_usa = {
@@ -204,9 +184,7 @@ political_decisions = {
 				tag = FSA
 			}
 			is_greater_power = no
-			ai = yes
 		}
-
 		allow = {
 			war = no
 			government = democracy
@@ -220,15 +198,11 @@ political_decisions = {
 				relation = { who = THIS value = 150 }
 			}
 		}
-
 		effect = {
 			set_country_flag = asked_to_rejoin_usa
 			USA = { country_event = 60130 }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	second_alaskan_purchase = {
@@ -245,7 +219,6 @@ political_decisions = {
 			}
 			NOT = { has_country_flag = second_alaskan_purchase }
 		}
-
 		allow = {
 			war = no
 			money = 50000
@@ -256,24 +229,18 @@ political_decisions = {
 				}
 			}
 		}
-
 		effect = {
 			set_country_flag = second_alaskan_purchase
-			2599 = {
-				owner = { country_event = 44140 }
-			}
+			2599 = { owner = { country_event = 44140 } }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	hawaiian_purchase = {
 		picture = annex_hawaii
 		potential = {
 			is_greater_power = yes
-			658 = { test != is_influenced }
+			658 = { test = is_influenced }
 		}
 		allow = {
 			war = no

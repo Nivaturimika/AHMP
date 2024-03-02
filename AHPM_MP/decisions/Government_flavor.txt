@@ -311,6 +311,7 @@ political_decisions = {
 				capitalists = { militancy = 10 }
 				aristocrats = { militancy = 10 }
 			}
+			remove_country_modifier = influential_aristocracy
 		}
 		ai_will_do = { factor = 0 }
 	}

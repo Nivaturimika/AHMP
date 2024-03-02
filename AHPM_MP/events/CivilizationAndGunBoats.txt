@@ -3947,13 +3947,13 @@ province_event = {
 			}
 		}
 		port = yes
-		NOT = { has_province_modifier = treaty_port }
+		has_province_modifier != treaty_port
 		is_core = CHI
 		owner = {
 			civilized = yes
 			NOT = { is_culture_group = east_asian }
 			NOT = { is_culture_group = far_east_asian }
-			}
+		}
 		NOT = { any_neighbor_province = { owned_by = THIS } }
 		any_neighbor_province = { owner = { capital_scope = {continent = asia } } }
 	}
@@ -3961,7 +3961,7 @@ province_event = {
 	option = {
 		name = "EVTOPTA90954"
 		any_pop = { limit = { is_culture_group = east_asian } reduce_pop = 1.2 }
-		add_province_modifier = { name = treaty_port duration = -1 }
+		add_province_modifier = treaty_port
 	}
 }
 
@@ -3970,7 +3970,6 @@ province_event = {
 	id = 90955
 	title = "EVTNAME90954"
 	desc = "EVTDESC90955"
-
 	trigger = {
 		owner = { capital_scope = { continent = asia } }
 		OR = {
@@ -3985,13 +3984,12 @@ province_event = {
 			province_id = 2632
 			province_id = 1538
 		}
+		has_province_modifier != treaty_port
 	}
-
 	mean_time_to_happen = { months = 1 }
-
 	option = {
 		name = "EVTOPTA90955"
-		add_province_modifier = { name = treaty_port duration = -1 }
+		add_province_modifier = treaty_port
 	}
 }
 
