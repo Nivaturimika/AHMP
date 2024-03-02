@@ -282,11 +282,7 @@ political_decisions = {
 
 	ask_for_a_grant = {
 		picture = specific_trade_policy
-		potential = {
-			ai = no
-			test = is_goverment_decision
-		}
-
+		potential = { test = is_goverment_decision }
 		effect = {
 			prestige = -25
 			any_country = {
@@ -297,6 +293,25 @@ political_decisions = {
 				country_event = 910203
 			}
 		}
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 0 }
+	}
+
+	fight_the_aristocracy = {
+		picture = specific_trade_policy
+		potential = {
+			test = is_goverment_decision
+			has_country_modifier = influential_aristocracy
+		}
+		allow = {
+			
+		}
+		effect = {
+			any_owned = {
+				any_pop = { militancy = 10 }
+				capitalists = { militancy = 10 }
+				aristocrats = { militancy = 10 }
+			}
+		}
+		ai_will_do = { factor = 0 }
 	}
 }

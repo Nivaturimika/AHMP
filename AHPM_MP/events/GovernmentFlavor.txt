@@ -687,3 +687,26 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
+
+country_event = {
+	id = 601500
+	title = "EVTNAME601500"
+	desc = "EVTDESC601500"
+	picture = "treaty"
+	trigger = {
+		has_country_flag != informed_of_aristocracy
+	}
+	mean_time_to_happen = { days = 0 }
+	immediate = {
+		add_country_modifier = influential_aristocracy
+		set_country_flag = informed_of_aristocracy
+	}
+	option = {
+		name = "EVTOPTA601500"
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB601500"
+		ai_chance = { factor = 0 }
+	}
+}

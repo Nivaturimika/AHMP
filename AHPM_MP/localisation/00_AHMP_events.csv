@@ -143,3 +143,7 @@ EVTDESC60150;I am here as a soldier who has temporarily left the field of battle
 EVTOPTA60150;Get back in the kitchen!;;;;;;;;;;;;;
 EVTOPTB60150;Where they should be;;;;;;;;;;;;;
 EVTOPTC60150;Oh dear what have we done;;;;;;;;;;;;;
+EVTNAME601500;Influential aristocracy mechanics
+EVTDESC601500;Aristocrats in $DATE$ will be, controlling a sizable portion of $COUNTRY$ internal politics -- angering local aristocracy will lead to mass peseant revolts, influenced again, by $COUNTRY_ADJ$ aristocrats turning their backs if $COUNTRY$ feddles with them too much.
+EVTOPTA601500;We need to get rid of them
+EVTOPTB601500;Maybe we should join them?

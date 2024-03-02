@@ -205,6 +205,7 @@ reactionary_rebels = {
 
 	demands_enforced_effect = {
 		ruling_party_ideology = reactionary
+		add_country_modifier = influential_aristocracy
 		if = {
 			limit = { civilized = yes }
 			political_reform = none_voting
@@ -243,7 +244,6 @@ reactionary_rebels = {
 			military_reform = no_western_shipyards
 			military_reform = no_foreign_artillery
 		}
-
 		add_country_modifier = {
 			name = national_confusion
 			duration = 365
@@ -464,8 +464,8 @@ fascist_rebels = {
 		}
 	}
 	demands_enforced_effect = {
-		clr_country_flag = theocratic_government
 		ruling_party_ideology = fascist
+		add_country_modifier = influential_aristocracy
 		political_reform = none_voting
 		political_reform = party_appointed
 		political_reform = no_meeting
@@ -684,6 +684,7 @@ communist_rebels = {
 	}
 	demands_enforced_effect = {
 		ruling_party_ideology = communist
+		add_country_modifier = influential_aristocracy
 		social_reform = all_voting_pops
 		political_reform = none_voting
 		political_reform = party_appointed
@@ -939,6 +940,7 @@ anarcho_liberal_rebels = {
 	}
 	demands_enforced_effect = {
 		ruling_party_ideology = anarcho_liberal
+		add_country_modifier = influential_aristocracy
 		political_reform = universal_voting
 		political_reform = party_appointed
 		political_reform = no_meeting
@@ -1729,6 +1731,7 @@ carlist_rebels = {
 		}
 		change_tag = SPC
 		ruling_party_ideology = reactionary
+		add_country_modifier = influential_aristocracy
 		political_reform = none_voting
 		political_reform = party_appointed
 		political_reform = no_meeting
@@ -1916,6 +1919,7 @@ christino_rebels = {
 		}
 		change_tag = SPA
 		ruling_party_ideology = liberal
+		add_country_modifier = influential_aristocracy
 		political_reform = wealth_voting
 		political_reform = state_equal_weight
 		political_reform = yes_meeting
@@ -3013,6 +3017,7 @@ liberal_rebels = {
 	}
 	demands_enforced_effect = {
 		ruling_party_ideology = liberal
+		add_country_modifier = influential_aristocracy
 		political_reform = yes_meeting
 		political_reform = free_press
 		political_reform = open_borders
@@ -3830,6 +3835,7 @@ socialist_rebels = {
 	}
 	demands_enforced_effect = {
 		ruling_party_ideology = socialist
+		add_country_modifier = influential_aristocracy
 		political_reform = universal_voting
 		political_reform = population_equal_weight
 		political_reform = yes_meeting
@@ -4268,6 +4274,7 @@ turkish_nationalist_rebels = {
 	}
 	demands_enforced_effect = {
 		ruling_party_ideology = liberal
+		add_country_modifier = influential_aristocracy
 		political_reform = no_slavery
 		political_reform = universal_weighted_voting
 		political_reform = population_equal_weight
