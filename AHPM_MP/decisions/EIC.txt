@@ -1,25 +1,4 @@
 political_decisions = {
-	government_of_india_act = {
-		picture = map_india
-		potential = {
-			test = is_british_empire
-			has_global_flag = sepoy_rebellion
-		}
-		allow = {
-			is_our_vassal = EIC
-			war = no
-		}
-		effect = {
-			prestige = 25
-			EIC = {
-				country_event = 9990002
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
 	mughal_declaration_eic = {
 		picture = last_mughal
 		potential = {

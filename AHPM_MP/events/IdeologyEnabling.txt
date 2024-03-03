@@ -147,7 +147,7 @@ country_event = {
 	trigger = {
 		is_ideology_enabled != anarcho_liberal
 		civilized = yes
-		literacy = 0.6
+		literacy = 0.75
 		OR = {
 			laissez_faire = 10
 			pluralism = 15
@@ -158,7 +158,7 @@ country_event = {
 	}
 	major = yes
 	fire_only_once = yes
-	mean_time_to_happen = { months = 60 }
+	mean_time_to_happen = { months = 600 }
 	option = {
 		name = "EVTOPTA1002"
 		enable_ideology = anarcho_liberal

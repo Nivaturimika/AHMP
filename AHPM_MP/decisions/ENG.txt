@@ -214,8 +214,6 @@ political_decisions = {
 			ENG_2014 = { add_core = RHO }
 			ENG_2016 = { add_core = RHO }
 			RHO = { all_core = { remove_core = MAT } }
-			country_event = { id = 199067 days = 2 }
-			country_event = { id = 199050 days = 2 }
 			set_country_flag = ian_would_be_proud
 		}
 	}
@@ -224,7 +222,7 @@ political_decisions = {
 		picture = the_heligoland_question
 		potential = {
 			tag = ENG
-			533 = { owned_by = ENG }
+			533 = { owned_by = THIS }
 			GER = {
 				any_owned_province = {
 					continent = africa

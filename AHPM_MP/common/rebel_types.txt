@@ -3953,7 +3953,7 @@ socialist_rebels = {
 		}
 		prestige_factor = -0.3
 		plurality = -10
-		country_event = 810056
+		country_event = 800050
 	}
 }
 
@@ -4082,7 +4082,7 @@ independence_rebels = {
 		}
 		prestige_factor = -0.2
 		war_exhaustion = 25
-		country_event = 810055
+		country_event = 800050
 	}
 }
 

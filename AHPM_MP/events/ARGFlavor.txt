@@ -127,28 +127,17 @@ country_event = {
 				}
 			}
 		}
-
-		random_owned = {
-			limit = { owner = { is_ideology_enabled = anarcho_liberal } }
-			owner = {
-				any_country = {
-					limit = {
-						exists = yes
-						OR = {
-							tag = SBA
-							tag = ENT
-							tag = CRT
-						}
-					}
-					any_pop = {
-						limit = { is_primary_culture = yes }
-						scaled_consciousness = {
-							factor = 2
-							ideology = anarcho_liberal
-						}
+		if = {
+			limit = { is_ideology_enabled = anarcho_liberal }
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						tag = SBA
+						tag = ENT
+						tag = CRT
 					}
 				}
-
 				any_pop = {
 					limit = { is_primary_culture = yes }
 					scaled_consciousness = {
@@ -157,8 +146,15 @@ country_event = {
 					}
 				}
 			}
-		}
 
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				scaled_consciousness = {
+					factor = 2
+					ideology = anarcho_liberal
+				}
+			}
+		}
 		any_pop = {
 			limit = { is_primary_culture = yes }
 			consciousness = 1

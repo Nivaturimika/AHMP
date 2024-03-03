@@ -117,26 +117,18 @@ country_event = {
 
 #The Colonial Regime Overthrown! - REDO
 country_event = {
-
 	id = 810057
-
 	is_triggered_only = yes
-
 	title = "EVTNAME810057"
 	desc = "EVTDESC810057"
 	picture = "unite"
-
 	option = {
 		name = "EVT810055OPTA"
 		random_owned = {
 			limit = {
 				owner = {
 					has_country_modifier = regency_government
-					NOT = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-					}
+					test != is_monarchy_goverment
 				}
 			}
 			owner = { remove_country_modifier = regency_government }
