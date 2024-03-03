@@ -61,25 +61,41 @@ political_decisions = {
 		picture = titanic
 		potential = {
 			is_greater_power = yes
-			exists = yes
 			NOT = { has_global_flag = titanic_built }
+			high_sea_battle_fleet = 1
 			steel_steamers = 1
 			num_of_ports = 1
 		}
-
 		allow = {
-			invention = dreadnoughts
-			high_sea_battle_fleet = 1
 			money = 110000
 		}
-
 		effect = {
 			set_global_flag = titanic_built
-			prestige = 50
+			prestige = 15
 			money = -90000
-			random_list = {
-				75 = { set_country_flag = titanic_sinks }
-				25 = { set_country_flag = titanic_arrives }
+			if = {
+				limit = { safety_regulations = no_safety }
+				random_list = {
+					90 = { country_event = 81002213 }
+					10 = { country_event = 81002214 }
+				}
+			} else_if = {
+				limit = { safety_regulations = self_regulating_safety_regulations }
+				random_list = {
+					75 = { country_event = 81002213 }
+					25 = { country_event = 81002214 }
+				}
+			} else_if = {
+				limit = { safety_regulations = state_concerted_safety_regulations }
+				random_list = {
+					50 = { country_event = 81002213 }
+					50 = { country_event = 81002214 }
+				}
+			} else = {
+				random_list = {
+					10 = { country_event = 81002213 }
+					90 = { country_event = 81002214 }
+				}
 			}
 		}
 	}

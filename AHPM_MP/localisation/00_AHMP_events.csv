@@ -181,3 +181,15 @@ EVTDESC500006;After the defeat of the rebellious Polish, we are also left with a
 EVTOPT500006A;Restrict the Polish-speaking schools
 EVTOPT500006B;Slightly restrict the Polish language
 EVTOPT500006C;We shouldn't interfere with the Polish curriculum
+EVTNAME81002214;Titanic Maiden Voyage a Success;;;;;;;;;;;;;
+EVTDESC81002214;The Titanic - the biggest ocean liner ever built - has successfully reached its destination, where a crowd gathers to watch the massive ship anchor. Thousands of happy passengers pour down from the ship and in a new land as tales of the ship luxury and quality spread throughout the world. Undoubtedly, $COUNTRY_ADJ$ name will be forever remembered in history for this feat. Afterall, the biggest ship in history has just proven itself to be capable of transporting passengers from all over $CONTINENTNAME$, this is a pinnacle in naval engineering and we should rightfully congratulate everybody involved.;;;;;;;;;;;;;
+EVT81002214OPTA;A glorious day to our nation;;;;;;;;;;;;;
+EVT81002214OPTB;Splendid... anything else?;;;;;;;;;;;;;
+EVTNAME81002213;Titanic Sinks!;;;;;;;;;;;;;
+EVTDESC81002213;At 11:40 p.m. an iceberg was spotted immediately ahead of the Titanic and the bridge was alerted. The First Officer $CULTURE_FIRST_NAME$ $CULTURE_LAST_NAME$ ordered the ship to be steered around the obstacle and the engines to be put in reverse, but it was too late: the starboard side struck the iceberg, creating a series of holes below the waterline. Five of the ship's watertight compartments were breached. It soon became clear that the ship was doomed, as it could not survive more than four compartments being flooded. It began sinking bow-first, with water spilling from compartment to compartment as its angle in the water became steeper. Ships in $YEAR$ were seen as largely unsinkable and lifeboats were intended to transfer passengers to nearby rescue vessels so Titanic only had enough lifeboats to carry about half of those on board. More than 1500 people died, the biggest toll in history. The disaster was greeted with worldwide shock and outrage at the huge loss of life and the regulatory and operational failures that had led to it.;;;;;;;;;;;;;
+EVT81002213OPTA;Our nation mourns those who died;;;;;;;;;;;;;
+EVT81002213OPTB;Sucks to be them;;;;;;;;;;;;;
+EVT81002213OPTC;Were there any $CULTURE$ people...? Yes? Oh the tragedy!;;;;;;;;;;;;;
+EVT81002213OPTD;They left the minorities last?;;;;;;;;;;;;;
+EVT81002213OPTE;Blame the company;;;;;;;;;;;;;
+EVT81002213OPTF;This was clearly an attack by foreigners!;;;;;;;;;;;;;
