@@ -178,20 +178,10 @@ country_event = {
 	trigger = {
 		is_greater_power = yes
 		colonial_nation = yes
-		prestige = 100
 	}
 
 	mean_time_to_happen = {
 		months = 200
-
-		modifier = {
-			factor = 0.9
-			prestige = 150
-		}
-		modifier = {
-			factor = 0.9
-			prestige = 200
-		}
 		modifier = {
 			factor = 1.2
 			badboy = 0.4

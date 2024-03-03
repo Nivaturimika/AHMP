@@ -62,7 +62,6 @@ country_event = {
 		OR = {
 			is_greater_power = yes # nation is a great power
 			AND = {
-				prestige = 500 # non-Euro/non GP need to be high prestige to get invite in this era
 				literacy = 0.7
 			}
 			AND = {

@@ -9,7 +9,6 @@ greater_california = {
 	}
 
 	allow = {
-		prestige = 100
 		romanticism = 1
 		state_n_government = 1
 		invention = manifest_destiny

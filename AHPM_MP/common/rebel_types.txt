@@ -2081,18 +2081,6 @@ boxer_rebels = {
 			factor = 1.05
 			country = { has_country_modifier = western_influences }
 		}
-		modifier = {
-			factor = 1.05
-			country = {
-				NOT = { prestige = 30 }
-			}
-		}
-		modifier = {
-			factor = 5
-			country = {
-				NOT = { prestige = 25 }
-			}
-		}
 	}
 
 	 # Province Scope

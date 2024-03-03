@@ -994,7 +994,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA23203" # Success!
-		prestige = 100
+		prestige = 25
 		set_global_flag = SouthPoleDiscovered
 		clr_country_flag = YesGoToSouthPoleAgain
 		clr_country_flag = YesGoToSouthPoleThird

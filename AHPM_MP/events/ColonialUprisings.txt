@@ -1301,7 +1301,6 @@ country_event = {
 		colonial_nation = yes
 		civilized = yes
 		biologism = 1
-		prestige = 100
 	}
 
 	mean_time_to_happen = {
@@ -1496,18 +1495,6 @@ country_event = {
 		modifier = {
 			factor = 0.8
 			invention = social_anthropology
-		}
-		modifier = {
-			factor = 0.9
-			prestige = 100
-		}
-		modifier = {
-			factor = 0.9
-			prestige = 300
-		}
-		modifier = {
-			factor = 0.9
-			prestige = 500
 		}
 	}
 
@@ -2045,7 +2032,6 @@ country_event = {
 	trigger = {
 		colonial_nation = yes
 		civilized = yes
-		prestige = 100
 	}
 
 	mean_time_to_happen = {

@@ -491,10 +491,6 @@ country_event = {
 	mean_time_to_happen = {
 		months = 2000
 		modifier = {
-			factor = 0.9
-			NOT = { prestige = 500 }
-		}
-		modifier = {
 			factor = 0.95
 			NOT = { badboy = 0.2 }
 		}
@@ -632,27 +628,17 @@ country_event = {
 	trigger = {
 		NOT = { has_country_modifier = neutrality_modifier }
 		is_greater_power = yes
-		prestige = 100
 		any_greater_power = {
-			prestige = 100
 			NOT = {
 				has_country_modifier = neutrality_modifier
 				war_with = THIS
 				truce_with = THIS
-				relation = {
-					who = THIS
-					value = 50
-				}
 			}
 		}
 	}
 
 	mean_time_to_happen = {
 		months = 800
-		modifier = {
-			factor = 0.9
-			NOT = { prestige = 100 }
-		}
 		modifier = {
 			factor = 0.9
 			average_militancy = 4
@@ -700,15 +686,10 @@ country_event = {
 		random_country = {
 			limit = {
 				is_greater_power = yes
-				prestige = 100
 				NOT = {
 					has_country_modifier = neutrality_modifier
 					war_with = THIS
 					truce_with = THIS
-					relation = {
-						who = THIS
-						value = 50
-					}
 				}
 			}
 			add_casus_belli = {
@@ -716,90 +697,13 @@ country_event = {
 				type = humiliate
 				months = 3
 			}
-			relation = {
-				who = THIS
-				value = -20
-			}
 		}
 		prestige = -5
-		ai_chance = {
-			factor = 45
-			modifier = {
-				factor = 0.75
-				government = democracy
-			}
-			modifier = {
-				factor = 0.75
-				government = hms_government
-			}
-			modifier = {
-				factor = 1.25
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.1
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 0.8
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = pacifism
-			}
-		}
 	}
 
 	option = {
 		name = "EVTOPTB2520"
-		random_country = {
-			limit = {
-				is_greater_power = yes
-				prestige = 100
-				NOT = {
-					has_country_modifier = neutrality_modifier
-					war_with = THIS
-					truce_with = THIS
-					relation = {
-						who = THIS
-						value = 50
-					}
-				}
-			}
-			relation = {
-				who = THIS
-				value = 20
-			}
-		}
 		prestige = 1
-		ai_chance = {
-			factor = 55
-			modifier = {
-				factor = 1.25
-				government = democracy
-			}
-			modifier = {
-				factor = 1.25
-				government = hms_government
-			}
-			modifier = {
-				factor = 0.75
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 0.8
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 1.2
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 1.5
-				war_policy = pacifism
-			}
-		}
 	}
 }
 
@@ -843,10 +747,6 @@ country_event = {
 		modifier = {
 			factor = 4
 			NOT = { has_global_flag = berlin_conference }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { prestige = 500 }
 		}
 		modifier = {
 			factor = 0.95
@@ -1013,10 +913,6 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { prestige = 100 }
-		}
-		modifier = {
-			factor = 0.9
 			average_militancy = 4
 		}
 		modifier = {
@@ -1117,10 +1013,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 400
-		modifier = {
-			factor = 0.9
-			NOT = { prestige = 500 }
-		}
 		modifier = {
 			factor = 0.95
 			NOT = { badboy = 0.2 }

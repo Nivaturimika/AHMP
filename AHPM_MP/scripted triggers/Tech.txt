@@ -68,7 +68,6 @@ can_switch_to_culture_tech = {
 		pacifism = 3
 		secularized = 3
 	}
-	prestige = 100
 	literacy = 0.7
 	average_consciousness = 7
 }

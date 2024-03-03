@@ -1296,10 +1296,6 @@ political_decisions = {
 					}
 				}
 				AND = {
-					military_score = 40
-					prestige = 150
-				}
-				AND = {
 					1356 = {
 						OR = {
 							owned_by = THIS

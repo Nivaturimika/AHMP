@@ -173,7 +173,6 @@ political_decisions = {
         allow = {
             war = no
             money = 100000
-            prestige = 100
             plurality = 50
             phenomenalism = 1
             upper_house_composition = population_equal_weight
@@ -315,7 +314,6 @@ political_decisions = {
 
         allow = {
             phenomenalism = 1
-            prestige = 100
             has_country_modifier = freedom_of_religion
             upper_house_composition = population_equal_weight
             public_meetings = yes_meeting

@@ -2342,7 +2342,6 @@ country_event = {
 					government = hms_government
 				}
 			}
-			NOT = { prestige = 200 }
 		}
 	}
 	mean_time_to_happen = { months = 645 }

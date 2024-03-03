@@ -80,7 +80,6 @@ political_decisions = {
 		allow = {
 			civilized = yes
 			invention = secularization
-			prestige = 25
 			NOT = {
 				government = theocracy
 				religious_policy = pluralism
@@ -839,7 +838,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			prestige = 10
+			prestige = 5
 			add_accepted_culture = bedouin
 			add_accepted_culture = mashriqi
 			any_country = {
