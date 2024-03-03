@@ -462,7 +462,7 @@ political_decisions = {
 			tag = CPL
 			owns = 706
 			has_global_flag = january_uprising_happened
-			any_neighbor_country = { has_country_flag = through_january_uprising }
+			any_neighbor_country = { has_country_modifier = through_polish_uprising }
 			has_country_modifier = polish_uprising_mobilization
 		}
 
@@ -474,13 +474,51 @@ political_decisions = {
 			}
 		}
 		effect = {
-			any_neighbor_country = { clr_country_flag = through_january_uprising }
+			any_neighbor_country = { remove_country_modifier = through_polish_uprising }
 			set_country_flag = poland_is_free
 			remove_country_modifier = polish_uprising_mobilization
 			remove_country_modifier = unrecognized_country
 			any_owned = {
 				limit = { OR = { is_core = THIS is_core = POL } }
 				remove_core = RUS
+			}
+		}
+		ai_will_do = { factor = 1  }
+	}
+
+	propose_polish_unifcation = {
+		picture = become_poland
+		potential = {
+			NOT = { has_country_flag = polish_integration_asked }
+			primary_culture = polish
+		}
+		allow = {
+			THIS = { is_vassal = no }
+			OR = {
+				AND = {
+					cultural_union = { exists = no }
+					OR = {
+						is_greater_power = yes
+						is_secondary_power = yes
+					}
+				}
+				cultural_union = { tag = THIS }
+			}
+		}
+		effect = {
+			set_country_flag = polish_integration_asked
+			any_country = {
+				limit = {
+					primary_culture = polish
+					war = no
+					OR = {
+						part_of_sphere = no
+						in_sphere = THIS
+					}
+					truce_with = THIS
+					neighbour = THIS
+				}
+				country_event = 500004
 			}
 		}
 		ai_will_do = { factor = 1  }

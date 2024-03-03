@@ -147,3 +147,32 @@ EVTNAME601500;Influential aristocracy mechanics
 EVTDESC601500;Aristocrats in $DATE$ will be, controlling a sizable portion of $COUNTRY$ internal politics -- angering local aristocracy will lead to mass peseant revolts, influenced again, by $COUNTRY_ADJ$ aristocrats turning their backs if $COUNTRY$ feddles with them too much.
 EVTOPTA601500;We need to get rid of them
 EVTOPTB601500;Maybe we should join them?
+EVTNAME5000002;The Polish Uprising;;;;;;;;;;;;;
+EVTDESC5000002;After Russia was defeated in war, the Poles, Lithuanians and other minorities in Russia are getting restless. The uprising began as a spontaneous protest by young Poles against conscription into the Imperial Russian Army. It was soon joined by high-ranking Polish-Lithuanian officers and various politicians. In Vilnius alone 116 demonstrations were held in $YEAR$. Much of these manifestations in Vilnius ended in clashes with the Imperial Russian Army. In spite of Russian police and Cossack interference, a symbolic meeting of hymn-singing Poles and Lithuanians took place on the bridge across Niemen River. The crowds sang "God protect Poland" in Lithuanian and Belorussian. If we join the Uprising now, we might be able to gather arms and international support.;;;;;;;;;;;;
+EVTOPT5000002A;The Poles will get their freedom.;;;;;;;;;;;;;
+EVTOPT5000002B;We should be loyal subjects.;;;;;;;;;;;;;
+EVTNAME500000;The Organic Statute of Poland;;;;;;;;;;;;;
+EVTDESC500000;The Organic Statute of the Kingdom of Poland was a Statute which replaced the Constitution of 1815 in the aftermath of the failed November Uprising in the Russian Partition. The Statute was pronounced in occupied Warsaw on March 1832 by Marshal Ivan Fyodorovich Paskevich, who named himself a namestnik. The Statute, signed by Emperor Nicholas I of Russia, replaced the personal union between the Kingdom of Poland and the Russian Empire with the "eternal incorporation" of Poland into Russia. The Parliament of the Kingdom was abolished, and its army merged with the Russian Army. \n ï¿½RNOTE: Congress Poland is an extremely hard to play substate. You won't get any soldiers and when the Polish Uprising begins you will probably lose the game.ï¿½W;;;;;;;;;;;;;
+EVTOPT500000A;When will the Poles be free?;;;;;;;;;;;;;
+EVTNAME500001;The Polish Uprising of $YEAR$;;;;;;;;;;;;;
+EVTDESC500001;After the latest war our subjects in Poland and other parts of our empire began to grow restless. The uprising began as a spontaneous protest by young Poles against conscription into the $COUNTRY_ADJ$ Army. It was soon joined by high-ranking Polish-Lithuanian officers and various politicians. In Warsaw alone 116 demonstrations were held in $YEAR$. Much of these manifestations in ended in clashes with the $COUNTRY_ADJ$ Army. In spite of $COUNTRY_ADJ$ police interference, a symbolic meeting of hymn-singing Poles and Lithuanians took place on the bridge across an important River. The crowds sang "God protect Poland" in Lithuanian and Belarusian. Earlier in $YEAR$ the $COUNTRY_ADJ$ government introduced a state of emergency in Kovno and Grodno as well as several other Polish-majority provinces. Public gatherings were banned and some public leaders were declared outlaws. The situation threatens to break down in anarchy.;;;;;;;;;;;;;
+EVTOPT500001A;Suppress them immediately.;;;;;;;;;;;;;
+EVTOPT500001C;Let them be free.;;;;;;;;;;;;;
+EVTOPT500001D;Onwards to Poland!;;;;;;;;;;;;;
+EVTNAME500002;The Polish Uprising;;;;;;;;;;;;;
+EVTDESC500002;Poles in $FROMCOUNTRY$, together with some other nationalities in the territory of the former Polish-Lithuanian Commonwealth, started a general uprising against the $FROMCOUNTRY_ADJ$ government. There is an outcry from some sectors of our population to support Polish freedom, but there wouldn't be any problems if we stayed neutral on this matter either.;;;;;;;;;;;;;
+EVTOPT500002A;Help the Poles in any way we can;;;;;;;;;;;;;
+EVTOPT500002B;Condemn $FROMCOUNTRY$'s actions;;;;;;;;;;;;;
+EVTOPT500002C;Stay neutral on the matter;;;;;;;;;;;;;
+EVTOPT500002D;Pronounce our support to $FROMCOUNTRY$.;;;;;;;;;;;;;
+EVTNAME500003;The Polish Rebellion is Crushed;;;;;;;;;;;;;
+EVTDESC500003;Traugutt, the insurrection general, and four other members of the Polish Government were apprehended by $COUNTRY_ADJ$ troops and executed at the Warsaw citadel. In the course of the war several battles and skirmishes were fought and some twenty-five thousand Poles were killed. The $COUNTRY_ADJ$ $MONARCHTITLE$ passed laws and edicts to make the land an integral part of $COUNTRY$'s territory and all that remains now is to decide the fate of the rebels.;;;;;;;;;;;;;
+EVTOPT500003A;There will be harsh reprisals.;;;;;;;;;;;;;
+EVTOPT500003B;Be lenient with them.;;;;;;;;;;;;;
+EVTNAME500005;United $CULTURE_GROUP_UNION$;;;;;;;;;;;;;
+EVTDESC500005;As the $COUNTRY_ADJ$ State we need to protect all our citizens in $CONTINENTNAME$. $COUNTRY_aDJ$ people lived in Poznan, Silesia, Pomerelia and Luzica for centuries and these parts are a rightful and core part of $CULTURE_GROUP_UNION$.;;;;;;;;;;;;;
+EVTOPT500005A;For a united $CULTURE_GROUP_UNION$!;;;;;;;;;;;;;
+EVTNAME500004;A $FROMCOUNTRY_ADJ$ state;;;;;;;;;;;;;
+EVTDESC500004;$FROMCOUNTRY$ is free again, and for the good of both the $FROMCOUNTRY_ADJ$ and $COUNTRY_ADJ$ interests, we should join it in perpetual union.;;;;;;;;;;;;;
+EVTOPT500004A;We will unite!;;;;;;;;;;;;;
+EVTOPT500004B;We enjoy independence too much;;;;;;;;;;;;;

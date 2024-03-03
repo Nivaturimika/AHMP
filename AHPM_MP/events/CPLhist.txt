@@ -3,17 +3,10 @@ country_event = {
 	id = 500001
 	title = "EVTNAME500001"
 	desc = "EVTDESC500001"
-	news = yes
-	news_desc_long = "EVTDESC95076_NEWS_LONG"
-	news_desc_medium = "EVTDESC95076_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC95076_NEWS_SHORT"
 	picture = "january_uprising"
-
 	fire_only_once = yes
-
 	trigger = {
 		NOT = { has_global_flag = january_uprising_happened }
-		year = 1855
 		owns = 706
 		NOT = { is_culture_group = polish_culture_group }
 		NOT = { accepted_culture = polish }
@@ -33,11 +26,6 @@ country_event = {
 					}
 				}
 			}
-			AND = {
-				tag = RUS
-				has_country_flag = crimean_war
-				war = no
-			}
 			any_owned_province = {
 				any_core = { primary_culture = polish }
 				OR = {
@@ -47,12 +35,32 @@ country_event = {
 			}
 		}
 	}
-
+	immediate = {
+		set_global_flag = january_uprising_happened
+		release = CPL
+		LIT = {
+			limit = { exists = no }
+			all_core = { add_province_modifier = { name = nationalist_agitation duration = 365 } }
+		}
+		CPL = {
+			government = presidential_dictatorship
+			ruling_party_ideology = conservative
+			treasury = 10000
+			define_general = {
+				name = "Stanislaw Brzoska"
+				personality = spirited
+				background = nationalist
+			}
+			define_general = {
+				name = "Aleksander Waszkowski"
+				personality = stouthearted
+				background = nationalist
+			}
+		}
+	}
 	option = {
 		name = "EVTOPT500001A"
-		set_global_flag = january_uprising_happened
-		set_country_flag = through_january_uprising
-		release = CPL
+		add_country_modifier = through_polish_uprising
 		any_owned = {
 			limit = {
 				OR = {
@@ -62,37 +70,10 @@ country_event = {
 			}
 			secede_province = CPL
 		}
-		CPL = { all_core = { add_core = RUS } }
-		any_owned = { limit = { is_core = LIT } add_province_modifier = { name = nationalist_agitation duration = 365 } }
 		CPL = {
-			government = presidential_dictatorship
-			ruling_party_ideology = conservative
-			political_reform = none_voting
-			political_reform = party_appointed
-			political_reform = no_meeting
-			political_reform = state_press
-			political_reform = no_trade_unions
-			political_reform = underground_parties
-			political_reform = mandatory_service
-			political_reform = peonage
-			nationalvalue = nv_order
-			treasury = 10000
-
-			define_general = {
-				name = "Stanislaw Brz�ska"
-				personality = spirited
-				background = nationalist
-			}
-
-			define_general = {
-				name = "Aleksander Waszkowski"
-				personality = stouthearted
-				background = nationalist
-			}
-
+			all_core = { add_core = RUS } }
 			add_country_modifier = { name = polish_uprising_mobilization duration = 2920 }
 			add_country_modifier = { name = unrecognized_country duration = 1095 }
-
 			any_pop = {
 				limit = {
 					has_pop_culture = russian
@@ -107,13 +88,11 @@ country_event = {
 				reduce_pop = 0.9
 			}
 		}
-
 		war = {
 			target = CPL
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
 		}
-
 		any_owned = {
 			limit = {
 				OR = {
@@ -131,7 +110,6 @@ country_event = {
 				consciousness = 8
 			}
 		}
-
 		any_owned = {
 			limit = {
 				OR = {
@@ -152,23 +130,18 @@ country_event = {
 			}
 			country_event = 500002
 		}
-
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVTOPT500001C"
+		clr_global_flag = january_uprising_happened
 		CPL = { any_owned = { remove_core = RUS } }
-		release = CPL
 		prestige = -50
 		ai_chance = { factor = 0 }
 	}
-
 	option = {
 		name = "EVTOPT500001D"
-		set_global_flag = january_uprising_happened
-		set_country_flag = through_january_uprising
-		release = CPL
+		add_country_modifier = through_polish_uprising
 		any_owned = {
 			limit = {
 				OR = {
@@ -178,37 +151,10 @@ country_event = {
 			}
 			secede_province = CPL
 		}
-		CPL = { all_core = { add_core = RUS } }
-		any_owned = { limit = { is_core = LIT } add_province_modifier = { name = nationalist_agitation duration = 365 } }
 		CPL = {
-			government = presidential_dictatorship
-			ruling_party_ideology = conservative
-			political_reform = none_voting
-			political_reform = party_appointed
-			political_reform = no_meeting
-			political_reform = state_press
-			political_reform = no_trade_unions
-			political_reform = underground_parties
-			political_reform = mandatory_service
-			political_reform = peonage
-			nationalvalue = nv_order
-			treasury = 10000
-
-			define_general = {
-				name = "Stanislaw Brz�ska"
-				personality = spirited
-				background = nationalist
-			}
-
-			define_general = {
-				name = "Aleksander Waszkowski"
-				personality = stouthearted
-				background = nationalist
-			}
-
+			all_core = { add_core = RUS }
 			add_country_modifier = { name = small_country_draft duration = 30 }
 			add_country_modifier = { name = unrecognized_country duration = 1095 }
-
 			any_pop = {
 				limit = {
 					has_pop_culture = russian
@@ -223,13 +169,11 @@ country_event = {
 				reduce_pop = 0.9
 			}
 		}
-
 		war = {
 			target = CPL
 			attacker_goal = { casus_belli = conquest }
 			defender_goal = { casus_belli = status_quo }
 		}
-
 		any_owned = {
 			limit = {
 				OR = {
@@ -247,7 +191,6 @@ country_event = {
 				consciousness = 8
 			}
 		}
-
 		any_owned = {
 			limit = {
 				OR = {
@@ -279,52 +222,12 @@ country_event = {
 	title = "EVTNAME500002"
 	desc = "EVTDESC500002"
 	picture = "january_uprising"
-
 	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPT500002A"        #Help the poles
+	immediate = {
 		set_country_flag = polish_uprising_voted
-		random_owned = {
-			limit = { owner = { check_variable = { which = owed_cash_money value = 9 } } }
-			owner = { change_variable = { which = owed_cash_money value = 20 } }
-		}
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = owed_cash_money value = 1 } } } }
-			owner = { set_variable = { which = owed_cash_money value = 20 } }
-		}
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = owed_artillery value = 1 } } } }
-			owner = { set_variable = { which = owed_artillery value = 10 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = owed_artillery value = 1 } } }
-			owner = { change_variable = { which = owed_artillery value = 10 } }
-		}
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = owed_canned_food value = 1 } } } }
-			owner = { set_variable = { which = owed_canned_food value = 10 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = owed_canned_food value = 1 } } }
-			owner = { change_variable = { which = owed_canned_food value = 10 } }
-		}
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = owed_small_arms value = 1 } } } }
-			owner = { set_variable = { which = owed_small_arms value = 10 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = owed_small_arms value = 1 } } }
-			owner = { change_variable = { which = owed_small_arms value = 10 } }
-		}
-		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = owed_ammunition value = 1 } } } }
-			owner = { set_variable = { which = owed_ammunition value = 10 } }
-		}
-		random_owned = {
-			limit = { owner = { check_variable = { which = owed_ammunition value = 1 } } }
-			owner = { change_variable = { which = owed_ammunition value = 10 } }
-		}
+	}
+	option = {
+		name = "EVTOPT500002A" #Help the poles
 		CPL = {
 			treasury = 20000
 			small_arms = 10
@@ -334,108 +237,35 @@ country_event = {
 		}
 		create_alliance = CPL
 		leave_alliance = FROM
-		relation = { who = FROM value = -150 }
-		relation = { who = CPL value = 200 }
 		diplomatic_influence = { who = CPL value = 100 }
 		any_pop = {
 			limit = { has_pop_culture = polish }
 			consciousness = 4
 			militancy = -6
 		}
-
-		ai_chance = {
-			factor = 25
-			modifier = { factor = 0 alliance_with = FROM }
-			modifier = { factor = 10 war_with = FROM }
-			modifier = { factor = 2 truce_with = FROM }
-			modifier = {
-				factor = 2
-				NOT = { relation = { who = FROM value = -150 } }
-			}
-			modifier = {
-				factor = 1.5
-				NOT = { relation = { who = FROM value = -100 } }
-			}
-			modifier = {
-				factor = 1.25
-				NOT = { relation = { who = FROM value = -50 } }
-			}
-		}
 	}
-
 	option = {
-		name = "EVTOPT500002B"         #condemn Russia
-		set_country_flag = polish_uprising_voted
-		relation = { who = FROM value = -50 }
-		relation = { who = CPL value = 50 }
+		name = "EVTOPT500002B" #condemn Russia
 		any_pop = {
 			limit = { has_pop_culture = polish }
 			consciousness = 7
 			militancy = -1
 		}
-		ai_chance = {
-			factor = 25
-			modifier = { factor = 0 alliance_with = FROM }
-			modifier = {
-				factor = 1.25
-				relation = { who = FROM value = -50 }
-				NOT = { relation = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 1.25
-				relation = { who = FROM value = 0 }
-				NOT = { relation = { who = FROM value = 50 } }
-			}
-		}
 	}
-
 	option = {
-		name = "EVTOPT500002C"        #stay neutral
-		set_country_flag = polish_uprising_voted
-		relation = { who = CPL value = -25 }
+		name = "EVTOPT500002C" #stay neutral
 		any_pop = {
 			limit = { has_pop_culture = polish }
 			consciousness = 4
 			militancy = 1
 		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 5
-				any_owned_province = { pop_majority_culture = polish }
-			}
-			modifier = {
-				factor = 2
-				relation = { who = FROM value = 50 }
-				NOT = { relation = { who = FROM value = 100 } }
-			}
-		}
 	}
 	option = {
-		name = "EVTOPT500002D"        #support russia
-		set_country_flag = polish_uprising_voted
-		relation = { who = FROM value = 25 }
-		relation = { who = CPL value = -150 }
+		name = "EVTOPT500002D" #support russia
 		any_pop = {
 			limit = { has_pop_culture = polish }
 			militancy = 4
 			consciousness = 7
-		}
-		ai_chance = {
-			factor = 25
-			modifier = { factor = 5 alliance_with = FROM }
-			modifier = {
-				factor = 2
-				relation = { who = FROM value = 190 }
-			}
-			modifier = {
-				factor = 2
-				relation = { who = FROM value = 150 }
-			}
-			modifier = {
-				factor = 2
-				relation = { who = FROM value = 100 }
-			}
 		}
 	}
 }
@@ -445,36 +275,23 @@ country_event = {
 	title = "EVTNAME500003" #Polish defeated
 	desc = "EVTDESC500003"
 	picture = "vacation_on_siberia"
-
 	fire_only_once = yes
-
 	trigger = {
-		war = no
 		CPL = { exists = no }
 		owns = 706
 		has_global_flag = january_uprising_happened
-		has_country_flag = through_january_uprising
+		has_country_modifier = through_polish_uprising
 	}
-
 	mean_time_to_happen = { days = 5 }
-
 	option = {
 		name = "EVTOPT500003A"  #punish them
-		any_country = {
-			limit = { is_greater_power = yes capital_scope = { continent = europe } NOT = { alliance_with = THIS } }
-			relation = { who = THIS value = -25 }
-		}
-
-		random_owned = {
-			limit = { owner = { tag = RUS } }
-			owner = {
-				RUS_360 = { add_core = RUS }
-				CPL = { all_core = { add_core = RUS } }
+		CPL = {
+			all_core = {
+				limit = { owned_by = THIS }
+				add_core = THIS
 			}
 		}
-
 		add_tax_relative_income = 0.05
-
 		706 = { any_pop = { limit = { has_pop_culture = polish pop_type = officers } reduce_pop = 0.7 } }
 		any_owned = {
 			limit = { is_core = POL }
@@ -489,7 +306,6 @@ country_event = {
 				reduce_pop = 0.7
 			}
 		}
-
 		any_owned = {
 			limit = { is_core = CPL }
 			any_pop = {
@@ -502,18 +318,16 @@ country_event = {
 				}
 			}
 		}
-
-		ai_chance = { factor = 95 }
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
-		name = "EVTOPT500003B"    #be lenient
-		prestige = -30
+		name = "EVTOPT500003B" #be lenient
+		prestige = -15
 		any_pop = {
 			limit = { is_accepted_culture = no }
 			consciousness = 6
 		}
-		ai_chance = { factor = 5 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -522,88 +336,45 @@ country_event = {
 	title = "EVTNAME500004" #Polish petitions for annexation
 	desc = "EVTDESC500004"
 	picture = "greatpowers"
-
-
-	trigger = {
-		ai = yes
-		NOT = { has_country_flag = polish_integration_asked }
-		is_greater_power = no
-		primary_culture = polish
-		war = no
-		OR = {
-			part_of_sphere = no
-			in_sphere = POL
-		 }
-		POL = {
-			NOT = { truce_with = THIS }
-			exists = yes
-			neighbour = THIS
-			is_vassal = no
-		}
-	}
-
-	mean_time_to_happen = { months = 6 }
-
+	is_triggered_only = yes
 	option = {
 		name = "EVTOPT500004A"
-		set_country_flag = polish_integration_asked
 		all_core = {
-			add_core = POL
+			add_core = FROM
 			remove_core = THIS
 		}
-		annex_to = POL
-
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				OR = {
-					tag = DZG
-					is_secondary_power = yes
-				}
-			}
-		}
+		annex_to = FROM
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVTOPT500004B"
-		set_country_flag = polish_integration_asked
-		all_core = { add_core = POL }
-		ai_chance = {
-			factor = 0
-			modifier = {
-			factor = 100
-				OR = {
-					tag = DZG
-					is_secondary_power = yes
-					}
-				}
-			}
-		}
+		all_core = { add_core = FROM }
+		ai_chance = { factor = 0 }
 	}
+}
 
 country_event = {
 	id = 500005
 	title = "EVTNAME500005" #GP Poland gets cores
 	desc = "EVTDESC500005"
 	picture = "greatpowers"
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = POL
 		war = no
-		is_greater_power = yes
-		exists = yes
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
 	}
-
 	mean_time_to_happen = { months = 1 }
-
+	immediate = {
+		PZN = { all_core = { add_core = THIS } }
+		PML = { all_core = { add_core = THIS } }
+		SLS = { all_core = { add_core = THIS } }
+		LUZ = { all_core = { add_core = THIS } }
+	}
 	option = {
 		name = "EVTOPT500005A"
-		PZN = { all_core = { add_core = POL } }
-		PML = { all_core = { add_core = POL } }
-		SLS = { all_core = { add_core = POL } }
-		LUZ = { all_core = { add_core = POL } }
 	}
 }

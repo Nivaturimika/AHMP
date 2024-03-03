@@ -2596,3 +2596,7 @@ influential_aristocracy = {
 	research_points_modifier = -0.004
 	icon = 10
 }
+
+through_polish_uprising = {
+	icon = 8
+}
