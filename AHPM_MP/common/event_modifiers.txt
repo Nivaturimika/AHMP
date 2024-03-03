@@ -1188,11 +1188,6 @@ free_corps = {
 	icon = 18
 }
 
-#am_everywhere = {
-#    prestige = 0.01
-#    icon = 16
-#}
-
 the_massacre = {
 	pop_militancy_modifier = 0.4
 	population_growth = -0.01

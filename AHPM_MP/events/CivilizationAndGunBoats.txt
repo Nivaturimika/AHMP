@@ -3750,69 +3750,22 @@ country_event = {
 country_event = {
 	title = "westernize_nation_title"
 	desc = "westernize_nation_desc"
-	news = yes
-	news_desc_long = "westernize_nation_desc_NEWS_LONG"
-	news_desc_medium = "westernize_nation_desc_NEWS_MEDIUM"
-	news_desc_short = "westernize_nation_desc_NEWS_SHORT"
 	picture = "Prosper"
-
 	id = 90910
-
 	is_triggered_only = yes
-
-	trigger = {
-		NOT = {
-			tag = QNG
-			tag = CHI
-			tag = TPG
-			AND = {
-				NOT = { has_global_flag = the_dragon_wakes }
-				OR = {
-					tag = MCK
-					tag = XBI
-					tag = XIN
-					tag = SZC
-					tag = YNN
-					tag = GXI
-					tag = GNG
-					tag = FJN
-				}
+	immediate = {
+		if = {
+			limit = {
+				has_country_modifier = uncivilized_isolationism
+				border_policy != closed_borders
 			}
-		}
-	}
-
-	option = {
-		name = "EVTOPTA90910"
-		civilized = yes
-		prestige = 5
-		tech_school = traditional_academic
-		remove_country_modifier = lacks_writing_system
-		random_owned = { limit = { owner = { ai = yes } } owner = { add_country_modifier = { name = law_changed_by_force duration = 3 } } }
-		random_owned = {
-			limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
-			owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
-		}
-		random_list = {
-			34 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }
-			33 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
-			33 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
-		}
-		random_owned = {
+			political_reform = closed_borders
+		} else_if = {
 			limit = {
-				owner = {
-					has_country_modifier = uncivilized_isolationism
-					NOT = { border_policy = closed_borders } }
-				}
-			owner = { political_reform = closed_borders }
-		}
-
-		random_owned = {
-			limit = {
-				owner = {
-					has_country_modifier = western_influences
-					NOT = { border_policy = open_borders } }
-				}
-			owner = { political_reform = open_borders }
+				has_country_modifier = western_presence
+				border_policy = closed_borders
+			}
+			political_reform = open_borders
 		}
 		remove_country_modifier = assegai
 		remove_country_modifier = educational_reform
@@ -3837,12 +3790,63 @@ country_event = {
 			remove_province_modifier = boxer_presence
 			remove_province_modifier = boxer_agitation
 		}
-
-		DAI = {
-			country_event = { days = 2 id = 199072 }
+		random_list = {
+			34 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }
+			33 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
+			33 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
 		}
-		CAM = {
-			country_event = { days = 2 id = 199071 }
+		any_country = {
+			limit = { is_greater_power = yes }
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		civilized = yes
+	}
+	option = {
+		name = "EVTOPTA90910"
+		if = {
+			limit = {
+				NOT = {
+					tag = QNG
+					tag = CHI
+					tag = TPG
+					AND = {
+						OR = {
+							tag = MCK
+							tag = XBI
+							tag = XIN
+							tag = SZC
+							tag = YNN
+							tag = GXI
+							tag = GNG
+							tag = FJN
+						}
+					}
+				}
+			}
+			prestige = 5
+			tech_school = traditional_academic
+			remove_country_modifier = lacks_writing_system
+			random_owned = { limit = { owner = { ai = yes } } owner = { add_country_modifier = { name = law_changed_by_force duration = 3 } } }
+			random_owned = {
+				limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
+				owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
+			}
+			DAI = { country_event = { days = 2 id = 199072 } }
+			CAM = { country_event = { days = 2 id = 199071 } }
+		} else = {
+			add_country_modifier = { name = law_changed_by_force duration = 365 }
+			activate_technology = experimental_railroad
+			random_country = {
+				limit = {
+					is_culture_group = east_asian
+					is_our_vassal = THIS
+				}
+				release_vassal = THIS
+				leave_alliance = THIS
+				country_event = { id = 90904 days = 0 }
+			}
+			add_country_modifier = { name = taiping_draft duration = 90 }
+			prestige = 10
 		}
 	}
 }

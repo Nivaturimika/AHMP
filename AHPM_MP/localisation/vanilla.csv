@@ -51,7 +51,6 @@ ACT_NO_SELF;We cannot negotiate with ourselves.
 ACT_WARDESC;Declaring war will allow our troops to attack theirs and allow us to enter their country. War will continue until either party surrenders.
 ACTIVATE_GOODS;Activate: 
 ACTIVATE_TECH_EFFECT;Activate technology: 即$NAME$e!
-active_p;Active
 ACTUAL_BOUGHT;Actual bought: $VAL$
 ACW_DESC;Civil war rages in North America as the Conferate States attempt to secede from the Union. The outcome is uncertain, but already this promises to be a new type of war as both sides have access to railroads, telegraphs, and repeating rifles. Meanwhile, in Europe, Great Britain is experimenting with the first iron-hulled steam-driven warship, a combination which promises to revolutionise the war at sea. World wide the industrial revolution is gathering speed as more and more nations start to industrialise. The times they are a-changing.
 ACW_NAME;A House Divided
@@ -184,7 +183,6 @@ aeroplane_factory_desc;Machine parts, electric gear and rubber are needed to pro
 aeroplanes;Aeroplanes
 aesthetics;Aesthetics
 aesthetics_desc;This area involves the development and refinements in Literature, Art and Music.
-afar;Afar
 AFG;Afghanistan
 AFG_1214;Western Afghanistan
 AFG_1217;Eastern Afghanistan
@@ -207,7 +205,6 @@ afro_caribbean;Afro Caribbean
 afro_caribeno;Afro Caribeno
 aggressive;Aggressive
 AGREE;Agree
-AGREE_RP_TR;At least 即$VAL$%劬 is of the same ideology as the ruling party.
 AGRESSION_CIVIL_WAR_NAME;$ORDER$$FIRST$ Civil War
 AGRESSION_UNIFICATION_HUMILIATE_NAME;The $FIRST$-$SECOND$ Brother's War
 AGRESSION_WAR_ADD_SPHERE_NAME;$ORDER$War of $SECOND$ Subjugation
@@ -227,50 +224,6 @@ AGRESSION_WAR_TAKE_SPHERE_NAME;$ORDER$$FIRST$-$SECOND$ War over $COUNTRY$
 AGRESSION_WAR_UNIFICATION_ANNEX_NAME;$ORDER$ $FIRST$ Liberation of $SECOND_COUNTRY$
 AGRESSION_WAR_UNIFICATION_NAME;$ORDER$ $FIRST$ Liberation of $STATE$
 AI;AI
-AI_DIPLO_NO;They will not accept
-AI_DIPLO_YES;They will accept
-AI_DIPLOMATIC_VALUE;Diplomatic Value
-aimara;Aimara
-ainu;Ainu
-AIREASON_ALLY;Ally
-AIREASON_ALLY_OF_ALLY;Ally of Ally
-AIREASON_ATTACKING_ALLY;Attacking Ally
-AIREASON_ATTACKING_ENEMIES;Attacking Enemies
-AIREASON_ATTACKING_FRIENDS;Attacking Friends
-AIREASON_BACKED_BY_ALLY;Backed by Ally
-AIREASON_BADBOY;Infamy
-AIREASON_BASE_RELUCTANCE;Base Reluctance
-AIREASON_CIV_VS_UNCIV;Civilized vs Uncivilized
-AIREASON_COMMON_FOE;Common Foe
-AIREASON_CONSTRUCTING_CB;Strategic Interests
-AIREASON_CRISIS_OFFER;$WARGOAL$:
-AIREASON_CURRENT_WARS;Current Wars
-AIREASON_DESIRES_GP_ALLY;Wants a Great Power ally
-AIREASON_DIFFERENT_GOVTYPES;Government Type
-AIREASON_DIPLOMATIC_GOALS;Political Considerations
-AIREASON_DISTANCE;Distance
-AIREASON_GP_RELATIONS;Opinion
-AIREASON_HELD_CORES;Owns Core Provinces
-AIREASON_NEGATIVE_RELATIONS;Negative Relations
-AIREASON_NOT_OVERLORD;Not my Overlord
-AIREASON_OTHER_SPHERE;Other Sphere
-AIREASON_OTHER_SPHERE_LEADER;Other Sphere Leader
-AIREASON_OUR_CASUS_BELLI;Our Casus Belli
-AIREASON_OUR_SPHERE;Our Sphere
-AIREASON_OVERLORD;Overlord
-AIREASON_RELATIONS;Relations
-AIREASON_RELATIVE_ARMY_STRENGTH;Army Strength
-AIREASON_RELATIVE_NAVY_STRENGTH;Navy Strength
-AIREASON_STRATEGIC_INTERESTS;Strategic Interests
-AIREASON_THREATS;Threats
-AIREASON_TOO_EARLY_IN_CRISIS;Early in Crisis
-AIREASON_TOO_MANY_ALLIANCES;Too Many Alliances
-AIREASON_TOO_MANY_CRISIS_WARGOALS;Added Wargoals
-AIREASON_TOO_MANY_GP_ALLIES;Too many Great Power allies
-AIREASON_WAR_WITH_SPHERE_LEADER;War with Sphere Leader
-AIREASON_YOUR_CASUS_BELLI;Your Casus Belli
-AIRWINGS;Air Units
-akan;Akan
 alaskan_purchase_desc;After the events of the Crimean War Russia had begun believing that it could not hope to protect its North American possessions in the event of another war with Britain, and had begun considering a sale of what was to become the U.S. state of Alaska. The territory was bought by the United States in 1867 at the price of 2.3 cents per acre. The Alaska purchase was widely derided in the American press of the day as 'Seward's Icebox' after then Secretary of State William H. Seward, at whose initiative the purchase was made.
 alaskan_purchase_title;Seward's Icebox
 ALB;Albania
@@ -302,18 +255,6 @@ ALD_reactionary_2;The Nationalist Faction
 ALD_socialist;The Socialist Faction
 alfred_marshall;Alfred Marshall
 alfred_marshall_desc;He was, first and foremost, a brilliant and original theorist.
-ALL_;All 
-ALL_CORE_PROVINCE;All with cores
-ALL_CORE_PROVINCE_THAT;For all core provinces 
-ALL_CORE_PROVINCES;all states with core provinces
-ALL_COUNTRIES_EFF;All countries
-ALL_COUNTRIES_THAT_EFF;All countries that
-ALL_ORG_POP_IS_ATLEAST_TRIGGER;即$IDEOLOGY$劬 has organisation of at least 即$ORGANISATION$劬 or popularity above 即$POPULARITY$劬.\n
-ALL_ORG_POP_IS_NOT_TRIGGER;即$IDEOLOGY$劬 does not have即$ORGANISATION$劬 in organisation and 即$POPULARITY$劬 in popularity劬.\n
-ALL_PLAYERS_HERE;All players here.
-ALL_POPS_IN;All pops in $LOC$
-ALL_POPS_IN_THAT;All pops in $LOC$ where
-ALL_SATES;all states
 all_trade_unions;All Allowed
 all_trade_unions_desc;All trade unions are allowed.
 all_trade_unions_l;All Trade Unions
@@ -407,33 +348,6 @@ ALLOWDEBTDESC_BAD;Allow the nation to accumulate debt during wartime when tradin
 ALLOWDEBTNEWDESC;Do you wish to request permission to accumulate debt when trading with 即$NAME$劬? \n This will allow us to trade at a deficit during wartime, a debt that will be repaid over 即$YEAR$劬 years when peace resumes.\nThis action will cost us 即$COST$劬 influence points.
 ALLOWDEBTTITLE;Allow Debt
 ALLOWED_CAUSE;Possible here, due to the following...
-ALLREADYTHERE;This building is already built.
-ALLYTAKEOVER_1;$ACTOR$
-ALLYTAKEOVER_2;They inform us that because of their superior might and military expertise they have assumed
-ALLYTAKEOVER_3;Leadership in the war
-ALLYTAKEOVER_4;against
-ALLYTAKEOVER_5;$TARGETLIST$
-ALLYTAKEOVER_6;From now on they will handle all negotiations.
-ALLYTAKEOVER_BTN1;OK
-ALLYTAKEOVER_BTN2;OK
-ALLYTAKEOVER_BTN3;Go to
-ALLYTAKEOVER_HEADER;The Foreign Minister reports
-ALLYTAKEOVER_LOG;$ACTOR$ assumed leadership in our war against $TARGETLIST$.
-ALLYTAKEOVER_MAP;*
-ALLYTAKEOVER_SETUP;When an ally takes over leadership in our war
-ALLYTAKEOVERWE_1;The Foreign Minister reports
-ALLYTAKEOVERWE_2;Because of our superior strength and unmatched leadership, we have assumed
-ALLYTAKEOVERWE_3;Leadership in the war
-ALLYTAKEOVERWE_4;against
-ALLYTAKEOVERWE_5;$TARGETLIST$
-ALLYTAKEOVERWE_6;from now on, we will handle all negotiations.
-ALLYTAKEOVERWE_BTN1;OK
-ALLYTAKEOVERWE_BTN2;OK
-ALLYTAKEOVERWE_BTN3;Go to
-ALLYTAKEOVERWE_HEADER;$MESSENGER$
-ALLYTAKEOVERWE_LOG;We assumed leadership in the war against $TARGETLIST$.
-ALLYTAKEOVERWE_MAP;*
-ALLYTAKEOVERWE_SETUP;When we take over leadership in a war
 alphabetic_flag_signaling;Alphabetic Flag Signaling
 alphabetic_flag_signaling_desc;Alphabetic Flag Signaling
 ALREADY_ASSIMILATED;Primary or Accepted Culture
@@ -445,9 +359,6 @@ alternating_current;Alternating Current
 alternating_current_desc;In alternating current or AC systems electrons flow in both directions in wave patterns. After a fierce competition with direct current, alternating current got dominance for most domestic and industrial applications. One of the first applications were the electric chairs, which didn't help in convincing that alternating current wasn't more dangerous than direct current.
 alternative_plans;Alternative Plans
 alternative_plans_desc;By letting the staff produce several alternative plans, the best alternative could be discerned faster by the commander. Also if things changed, the commander and his staff always had an alternative to go for quickly.
-ALWAYS_FALSE;Never
-ALWAYS_TRUE;Always
-am_everywhere;I Am Everywhere
 amateur;Amateur
 amazonian;Amazonian
 AMBIENT;Ambient
@@ -3436,7 +3347,6 @@ DES_liberal;Liberal Party
 DES_reactionary;Mormon People's Party
 DES_socialist;Socialist Party
 desc_abolitionist_society;An abolitionist society in this province is spreading pamphlets decrying slavery, and calling for its abolition.
-desc_am_everywhere;A fascist newspaper have released its first copy in the province.
 desc_american_anti_slavery_society;A society dedicated to the abolition of slavery operates in this province.
 desc_anaconda_plan;The Union is blockading our ports using Winfield Scott's Anaconda Plan. While they do, our war exhaustion will increase at an increased rate, slowly choking us to death. We must secure port access!
 desc_anarchic_bomb_throwers;Less money for crime fighting results in lowered ability to respond to security threats like anarchist uprisings.
@@ -16847,24 +16757,16 @@ spoil_system;Spoil System
 spoiled;Spoiled
 springtime_of_nations;The Springtime of Nations!
 springtime_of_nations_desc;The slumbering nations of Europe awake to throw of the spectres of despotism and tyranny
-ST;st
-STABHIT_FROM_MIL_ACCESS;Has Military Access
 staff_command_support;Staff Command Support
 staff_command_support_desc;The introduction of working staffs at lower echelon units was a spin off from having an effective and functional General Staff. Soon all units had staffs that supported their leaders.
 stainless_steel;Stainless Steel
 stainless_steel_desc;The new metals discovered by using electric furnace included chromium. Chromium mixed in steel forms a protective layer of chromium oxide on the surface of the steel protecting it from corrosion. A lot more scratching was required to enable rusting compared to painted normal steel. Stainless steel was soon used in most tools, pieces of equipment and weaponry. 
 stalwart;Stalwart
-STANCE;Stance
 standard_raider_group_doctrine;Standard Raider Group Doctrine
 standard_raider_group_doctrine_desc;This doctrine enabled groups of ships to hunt and destroy in the sea lanes.
 stanley_jevons;Stanley Jevons
 stanley_jevons_desc;The impact of Jevons on economics can hardly be exaggerated.  As the father of Neoclassical economics, his legacy is secure.  However, in some ways, he stopped short of the mark.  Jevons could have gone further by connecting his insights in pure exchange into a wider theory incorporating production, capital, money and the business cycle in a more systematic and consistent manner that would have knocked the Ricardian School completely out of the picture.  Had he not died so young, Jevons might yet have done so, but the next economics treatise he was working on (published posthumously in 1905), did not really seem to go in that ambitious direction.  As such, by the time of his death, the Marginalist Revolution was still in its insurrectionist phase.  It was still a tentative proposition rather than a firmly-set and integrated system, a scientific hypothesis but not quite yet a science. It should be noted that Jevons made maybe as much for the subject of Logics as for economics, which is quite a feat.
-START;Start
 Start Research;Start Research
-START_GUARANTEE_EFFECT;即$COUNTRY$劬 will start guaranteeing 即$TARGET_COUNTRY$劬.\n
-START_NON_AGGRESSION_PACT_EFFECT;即$COUNTRY$劬 will be in a  non-aggression pact with 即$TARGET_COUNTRY$劬.\n
-START_WAR_EFFECT;即$COUNTRY$劬 and 即$TARGET_COUNTRY$劬 become enemies劬.\n
-STARTED; Started 
 state_bond_monetary_mechanism;State Bond Monetary Mechanism
 state_bond_monetary_mechanism_desc;By regulating a sound state bond system, the government could lend money internally and get control of currency flows. This was one important measure to get a stable monetary system.
 state_capitalism;State Capitalism
@@ -16878,7 +16780,6 @@ state_equal_weight_desc;Each state has two votes to appoint representatives to t
 state_equal_weight_l;Two per state in UH
 state_n_government;State & Government
 state_n_government_desc;State & Government
-STATE_NONCORES;Non-core provinces in state: 刪$VALUE$e%劬
 state_press;State Press Only
 state_press_desc;Only state-controlled press is allowed.
 state_press_l;State Press Only
@@ -17203,19 +17104,6 @@ TECH_POP_GROWTH;Pop Growth
 tech_power;Power
 tech_power_desc;This area involves the development of power and engines. Note that each application within this area is the prerequisite for each other application at the same level within the technology branch of Industry.
 TECH_REBEL_ORG_GAIN;Rebel organization gain
-TECH_REPEAT_1;$TYPE$ Advance!
-TECH_REPEAT_2;$TITLE$, we have improved our abilities in $TYPE$ to level $LEVEL$, giving us the following benefit.
-TECH_REPEAT_3;$EFFECT$
-TECH_REPEAT_4;*
-TECH_REPEAT_5;*
-TECH_REPEAT_6;*
-TECH_REPEAT_BTN1;OK
-TECH_REPEAT_BTN2;OK
-TECH_REPEAT_BTN3;Details
-TECH_REPEAT_HEADER;Technology Improvement
-TECH_REPEAT_LOG;$TYPE$ increased to $LEVEL$
-TECH_REPEAT_MAP;*
-TECH_REPEAT_SETUP;When you have increased your technological ability.
 TECH_TAX_EFF;Tax Efficiency: 
 TECH_THROUGHPUT;production throughput
 TECH_YEAR_MODIFIER;Cost modifier from years known: $VAL$
@@ -18007,28 +17895,6 @@ tut_menu_7;Trade
 tut_menu_7_description;Learn about trade. How and why does governments buy and sell.
 tut_menu_8;Diplomacy
 tut_menu_8_description;Learn about the art of diplomacy. How to make wars and alliances.
-tutorial_chapter_budget_basic;End of the Basic Budget Tutorial
-tutorial_chapter_diplomacy_basic;End of the Basic Diplomacy Tutorial
-tutorial_chapter_diplomacy_victoria;End of the Intermediary Diplomacy Tutorial
-tutorial_chapter_end;Choose how you wish to proceed.
-tutorial_chapter_industry_basic;End of the Basic Production Tutorial
-tutorial_chapter_industry_victoria;End of the Intermediary Production Tutorial
-tutorial_chapter_introduction;End of Introduction.
-tutorial_chapter_military_basic;End of Basic Military tutorial,
-tutorial_chapter_military_victoria;End of the Intermediary Military tutorial.
-tutorial_chapter_politics_basic;End of the Basic Politics Tutorial
-tutorial_chapter_politics_victoria;End of the Intermediary Politics Tutorial
-tutorial_chapter_population_basic;End of the Basic Population Tutorial
-tutorial_chapter_population_victoria;End of the Intermediary Population Tutorial
-tutorial_chapter_technology_basic;End of the Basic Technology Tutorial
-tutorial_chapter_technology_victoria;End of the Intermediary Technology Tutorial
-tutorial_chapter_trade_basic;End of the Basic Trade Tutorial
-tutorial_chapter_trade_victoria;End of the Intermediary Trade Tutorial
-tutorial_continue_advanced;Advanced $TYPE$
-tutorial_continue_basic;Basic $TYPE$
-tutorial_continue_end;Return to Menu
-tutorial_continue_intermediary;Intermediary $TYPE$
-tutorial_end_of_chapter;End of Tutorial Chapter
 twelve_hours;12 Hour Work Day
 twelve_hours_desc;Maximum 12 working hours per day.
 twelve_hours_l;12h Workday
@@ -18264,50 +18130,6 @@ USA_proletarian_dictatorship;American People's Republic
 USA_proletarian_dictatorship_ADJ;American
 USA_reactionary;Southern Democrats
 USA_socialist;Socialist Party
-USER_JOINED_CHANNEL;$NAME$ joined the channel.
-USER_LEFT_CHANNEL;$NAME$ left the channel.
-UTM_NO_ACCESS;即We can not enter neutral territory.劬
-UTM_NOT_LEGAL_RETREAT;即We can not retreat into territory where there are hostile forces present.劬
-UV_ATTACKING;This unit is attacking
-UV_BACKGROUND;Background: $VAL$
-UV_BACKGROUND_LABEL;Background
-UV_MANPOWER;Men:
-UV_MOVING;This unit is moving
-UV_NOT_MOBILE;This unit is not allowed to move
-UV_PERSONALITY;Personality: $VAL$
-UV_PERSONALITY_LABEL;Personality
-UV_REGIMENTS;Brigades:
-UV_RETREAT;This unit is retreating
-UV_SHIPS;Ships:
-UV_UNDER_ATTACK;This unit is under attack
-UW_AASIGN;Autoassign Leaders
-UW_ALL_FIT;All units are 100% fit.
-UW_ASSIGN;Auto Assign
-UW_ATEMPT_GUNBOAT;Attempt gunboat diplomacy against 即$OTHER$劬
-UW_ATTACH_TO;Attach to always follow $NAME$.
-UW_BASED_FROM;This is the base where this unit is operating from.
-UW_DETACH_FROM;Detach from following $NAME$.
-UW_DUGIN;This unit is dug in, and has been digging in for 即$CURR$劬 days. The maximum preparation possible for our country is 即$CAP$劬 days.
-UW_FOLLOWING_HURT;The following units are damaged.\n
-UW_GUNBOAT_DESC;To perform gunboat diplomacy you must place a fleet close to a port of a nation in default to you.
-UW_LEADER_BUTTON_DRO;Clicking here will allow you to replace the current leader with a new one
-UW_LEADER_BUTTON_IRO;Assign new leader.
-UW_LOAD_IS_VALID;Click to load this unit onto a transport fleet.
-UW_LOAD_NO_FLEET_FOUND;There is no fleet here that this unit can be loaded onto.
-UW_LOC_IRO;Current Location
-UW_NO_GUNBOAT_POSSIBLE;No valid target for gunboat diplomacy
-UW_NOT_POSSIBLE_TO_ATTACH;There are no friendly units here to attach to.
-UW_SELECT_AIR;Select all CAG's attached to this fleet.
-UW_SELECT_LAND;Select all attached land units.
-UW_SPEED;This is how fast the unit moves on the map. Its speed is the same as that of its slowest subunit.
-UW_SUPPLIES_FROM;This is where this unit is drawing supplies from.
-UW_SUPPLY_STATUS;This unit received 即$VAL$劬% of the supplies needed in the last day. The current daily supply consumption is: $CON$
-UW_TOTAL_STR_IRO;Maximum strength is $VALUE$.\n
-UW_UNITNAMES_DRO;This name can be edited to whatever you want it to be.
-UW_UNITNAMES_IRO;Name of Unit
-UW_UNITS_ATTACHED;The following units are attached.
-UW_UNLOAD_NOT_VALID;You can only unload if your fleet is located in a port.
-UW_UNLOAD_VALID;Unload this unit from the fleet
 uzbek;Uzbek
 vaccination;Vaccination
 vaccination_desc;This method meant that one could immunize animals and humans from illnesses that flourished. This made life easier for man and cattle tending more profitable.
@@ -18693,73 +18515,7 @@ western_influences;Western Influences
 western_presence;Western Presence
 westernize_nation_desc;Our country is under intellectual assault by modernity and the Western World. In the fields of modern technology, industry and military theory, the old traditions and institutions no longer serve us as they used to. Everywhere we turn, western influences spread like wildfire through our nation, our population, and our souls. If we are to remain what we always have been, and not become something else entirely, now is the time to assume control of our own destiny. It has become apparent to the leading members of our intellectual elite, that the only way to turn the tide on the Western Leviathan is to swim with it, for, as Sun Tzu says: The reed that bends before the wind, also offers a form of resistance.
 westernize_nation_title;Embrace Westernization
-WETARGET_BANEMBASSY_1;即$RECIPIENT$劬
-WETARGET_BANEMBASSY_2;$MONARCHTITLE$, our ambassadors has been banned!
-WETARGET_BANEMBASSY_3;即$RECIPIENT$劬 gave us no reason why they acted the way they did.
-WETARGET_BANEMBASSY_4;We suspect 即$ACTOR$劬 is behind this!
-WETARGET_BANEMBASSY_5;*
-WETARGET_BANEMBASSY_6;*
-WETARGET_BANEMBASSY_BTN1;OK
-WETARGET_BANEMBASSY_BTN2;OK
-WETARGET_BANEMBASSY_BTN3;Go to
-WETARGET_BANEMBASSY_HEADER;The Foreign Minister reports
-WETARGET_BANEMBASSY_LOG;$ACTOR$ convinced $RECIPIENT$ to ban all our ambassadors!
-WETARGET_BANEMBASSY_MAP;Embassy banned!
-WETARGET_BANEMBASSY_SETUP;When our embassy has been banned by another nation
-WETARGET_DECREASEOPINION_1;即$RECIPIENT$劬
-WETARGET_DECREASEOPINION_2;$MONARCHTITLE$, someone has talked ill of us behind our backs!
-WETARGET_DECREASEOPINION_3;The opinion of us in 即$RECIPIENT$劬 dropped to 即$OPINION$劬.
-WETARGET_DECREASEOPINION_4;We suspect 即$ACTOR$劬 is behind this!
-WETARGET_DECREASEOPINION_5;*
-WETARGET_DECREASEOPINION_6;*
-WETARGET_DECREASEOPINION_BTN1;OK
-WETARGET_DECREASEOPINION_BTN2;OK
-WETARGET_DECREASEOPINION_BTN3;Go to
-WETARGET_DECREASEOPINION_HEADER;The Foreign Minister reports
-WETARGET_DECREASEOPINION_LOG;$ACTOR$ has lowered opinion of us in $RECIPIENT$ to $OPINION$!
-WETARGET_DECREASEOPINION_MAP;Opinion decreased!
-WETARGET_DECREASEOPINION_SETUP;When a nation lowers the opinion of us in another nation
-WETARGET_DISCREDIT_1;即$RECIPIENT$劬
-WETARGET_DISCREDIT_2;$MONARCHTITLE$, our name has been discredited!
-WETARGET_DISCREDIT_3;即$RECIPIENT$劬 is accusing us of things we never even heard of!
-WETARGET_DISCREDIT_4;We suspect 即$ACTOR$劬 is behind this!
-WETARGET_DISCREDIT_5;*
-WETARGET_DISCREDIT_6;*
-WETARGET_DISCREDIT_BTN1;OK
-WETARGET_DISCREDIT_BTN2;OK
-WETARGET_DISCREDIT_BTN3;Go to
-WETARGET_DISCREDIT_HEADER;The Foreign Minister reports
-WETARGET_DISCREDIT_LOG;$ACTOR$ has discredited us! It will lessen our influence on $RECIPIENT$.
-WETARGET_DISCREDIT_MAP;Discredited!
-WETARGET_DISCREDIT_SETUP;When we have been discredited by another nation
-WETARGET_EXPELADVISORS_1;即$RECIPIENT$劬
-WETARGET_EXPELADVISORS_2;$MONARCHTITLE$, our advisors have been expelled!
-WETARGET_EXPELADVISORS_3;即$RECIPIENT$劬 threw them out without giving us a reason.
-WETARGET_EXPELADVISORS_4;We suspect 即$ACTOR$劬 is behind this!
-WETARGET_EXPELADVISORS_5;*
-WETARGET_EXPELADVISORS_6;*
-WETARGET_EXPELADVISORS_BTN1;OK
-WETARGET_EXPELADVISORS_BTN2;OK
-WETARGET_EXPELADVISORS_BTN3;Go to
-WETARGET_EXPELADVISORS_HEADER;The Foreign Minister reports
-WETARGET_EXPELADVISORS_LOG;$ACTOR$ convinced $RECIPIENT$ to expel all our advisors!
-WETARGET_EXPELADVISORS_MAP;Advisors expelled!
-WETARGET_EXPELADVISORS_SETUP;When our advisers have been expelled by another nation
-WETARGET_REMOVEFROMSPHERE_1;即$RECIPIENT$劬
-WETARGET_REMOVEFROMSPHERE_2;$MONARCHTITLE$, someone is tampering with our empire!
-WETARGET_REMOVEFROMSPHERE_3;即$RECIPIENT$劬 is no longer in our Sphere of Influence!
-WETARGET_REMOVEFROMSPHERE_4;We suspect 即$ACTOR$劬 is behind this!
-WETARGET_REMOVEFROMSPHERE_5;*
-WETARGET_REMOVEFROMSPHERE_6;*
-WETARGET_REMOVEFROMSPHERE_BTN1;OK
-WETARGET_REMOVEFROMSPHERE_BTN2;OK
-WETARGET_REMOVEFROMSPHERE_BTN3;Go to
-WETARGET_REMOVEFROMSPHERE_HEADER;The Foreign Minister reports
-WETARGET_REMOVEFROMSPHERE_LOG;$ACTOR$ has removed $RECIPIENT$ from our Sphere of Influence!
-WETARGET_REMOVEFROMSPHERE_MAP;Removed from sphere!
-WETARGET_REMOVEFROMSPHERE_SETUP;When a nation removes another nation from our Sphere of Influence
 WEWAR;We are at War
-WEX_EFFECTS;Current Effects
 whitney_n_colts_standardized_small_arms;Whitney & Colt's Standardized Small Arms
 whitney_n_colts_standardized_small_arms_desc;By constructing special machines that produced standardized parts Small Arms became cheaper and simpler to construct and repair.
 WIA;Wiang Chhan
@@ -18773,7 +18529,6 @@ WIA_reactionary;The Nationalist Faction
 WIA_socialist;The Socialist Faction
 wilhelm_roscher;Wilhelm Roscher
 wilhelm_roscher_desc;A professor at the Univ. of Leipzig (1848-94), he was a founder of the German historical school of economics, which rejected the classical laissez-faire view. Roscher's work emphasized the developmental character of capitalism through detailed historical analyses of the cultures of ancient nations. His System der Volkswirtschaft (5 vol., 1854-94, tr. of 13th ed., Principles of Political Economy, 1878) was an influential textbook in the second half of the 19th cent. His most significant work is Geschichte der National-oekonomik in Deutschland (1874).
-WILL_GET;will\n
 william_cunningham;William Cunningham
 william_cunningham_desc;Cunningham was a vocal opponent of the nascent Neoclassical economics, particularly as propounded by his colleague, Alfred Marshall and the Cambridge School.  In economics, he sought to promote the historical method, making him one of the most leading advocates of the English Historical School.  Despite the sustained attacks levied by Cunningham, Marshall was sufficiently influenced by his pleas to try to include some more historical content in his work and operate more 'inductively' in the derivation of his economic principles.  However, he refused to accept Cunningham's main charge -- that the validity of economic laws is conditional on historical, social and cultural context. Cunningham's opposition to Neoclassicism was not only one of method, but also of politics.  Cunningham was deeply opposed to utilitarian philosophy and laissez-faire politics, and penned several tracts defending labor unions and protectionism.  He also resurrected much interest in old Mercantilist thought.
 wilmot_proviso_desc;Congressman David Wilmot has suggested a bill that will ban slavery in any state acquired from the Mexican Cession. Supporting the proviso will greatly calm northern fears over Slave Power, but also increase Southern fears of abolitionism.
@@ -18784,8 +18539,6 @@ winery;Winery
 winery_desc;Wine is a major status symbol for the rich strataes of the population. A distillery uses fruit to produce wine.
 wireless;Wireless
 wireless_desc;An important development in naval warfare in the early-20th century was the wireless, or radio communications. This allowed naval headquarters to communicate with fleets at sea in order to give updated orders, and also allowed admirals to communicate much more effectively with individual warships in their fleets, in comparison with older methods such as signal flags. However, one drawback of wireless was that it was also possible for the enemy to listen in on wireless communications, and soon the major navies would establish organizations to glean valuable intelligence from enemy communications.
-WITHG;or greater with
-WITHL;with
 WLL;Wallonia
 WLL_ADJ;Wallonian
 WLL_anarcho_liberal;The Radical Faction
@@ -18796,16 +18549,12 @@ WLL_reactionary;The Nationalist Faction
 WLL_socialist;The Socialist Faction
 wolof;Wolof
 womanizer;Womanizer
-womens_suffrage_movement;Womens Sufferage Movement
-womens_suffrage_movement;Women's Suffrage Movement
+womens_suffrage_movement;Women's Sufferage Movement
 womens_suffrage_movement_desc;This protest movement had as its aim to raise the subjugated position of women as well as giving them voting rights. They used passive resistance, protests and marches. The violence used against them was abhorred in many circles and eventually women won the day. Still there will be many more fights that have to be won...
-WON;佈Won
-WONT_NEGOTIATE;They will not negotiate unless the following is true:
 wood_focus;Encourage Wood Industry 
 wood_focus_short;Wood Industry
 woods;Woods
 wool;Wool
-wool_RGO_SIZE;Sheep ranch size
 WORK_AVAILABLE;Work available for
 work_classification;Work Classification
 work_classification_desc;By classifying work tasks the organization of production was increased and made more efficient.
@@ -18874,7 +18623,6 @@ yankee;Yankee
 yao;Yao
 YEARLY;Yearly
 YEARS;Years
-YEARS_OF_RESEARCH_EFFECT;$DIRECTION$ $VALUE$ research points.\n
 YEM;Yemen
 YEM_1173;Yemen
 YEM_ADJ;Yemeni
@@ -18973,13 +18721,3 @@ ZUL_liberal;The Liberal Faction
 ZUL_reactionary;The Nationalist Faction
 ZUL_socialist;The Socialist Faction
 zulu;Zulu
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
