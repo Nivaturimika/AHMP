@@ -177,7 +177,7 @@ EVTDESC500004;$FROMCOUNTRY$ is free again, and for the good of both the $FROMCOU
 EVTOPT500004A;We will unite!;;;;;;;;;;;;;
 EVTOPT500004B;We enjoy independence too much;;;;;;;;;;;;;
 EVTNAME500006;The University of Warsaw
-EVTDESC500006;After the defeat of the rebellious $FROMCOUNTRY_ADJ$, we're left with a sweeping problem in the former capital of the $FROMCOUNTRY_ADJ$ people, nationalists and our aristocracy is calling for the immediate suppression of the $FROMCULTURE$ language, instead imposing the $CULTURE$ on the local population. This will obviously be met with fierce resistance, but if we dare to not act we may find ourselves going against the interests of the $COUNTRY_ADJ$ aristocracy.
-EVTOPT500006A;Restrict the $FROMCULTURE$-speaking schools
-EVTOPT500006B;Slightly restrict the $FROMCULTURE$ language
-EVTOPT500006C;We shouldn't interfere with the $FROMCULTURE$ curriculum
+EVTDESC500006;After the defeat of the rebellious Polish, we are also left with a sweeping problem in the former capital of the Polish people: Warsaw, nationalists and our aristocracy is calling for the immediate suppression of the Polish language, instead imposing the $CULTURE$ on the local population. This will obviously be met with fierce resistance, but if we dare to not act we may find ourselves going against the interests of the $COUNTRY_ADJ$ aristocracy.
+EVTOPT500006A;Restrict the Polish-speaking schools
+EVTOPT500006B;Slightly restrict the Polish language
+EVTOPT500006C;We shouldn't interfere with the Polish curriculum
