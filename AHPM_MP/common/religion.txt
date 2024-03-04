@@ -22,6 +22,10 @@ christian = {
         icon = 4
         color = { 0 0.5 0.7 }
     }
+    nestorian = {
+        icon = 1
+        color = { 0.9 1 0.1 }
+    }
 }
 muslim = {
     sunni = {
@@ -70,19 +74,24 @@ eastern = {
         color = { 0 0.8 0.8 }
         icon = 11
     }
-    shinto = {
-        color = { 0.8 0 0 }
-        icon = 12
-    }
     sikh = {
         color = { 0.3 0.8 0 }
         icon = 13
+    }
+    zoroastrian = {
+        color = { 0.7 0.4 0.1 }
+        icon = 16
     }
 }
 pagan = {
     animist = {
         icon = 14
         color = { 0.5 0.0 0.0 }
+        pagan = yes
+    }
+    shinto = {
+        color = { 0.8 0 0 }
+        icon = 12
         pagan = yes
     }
 }
