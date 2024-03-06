@@ -11666,23 +11666,7 @@ planned_economy;Planned Economy
 planned_economy_desc;The government makes all decisions on the production and consumption of goods and services.
 planned_economy_l;Planned Economy
 platinean;Platinean
-PLAY;PLAY
-PLAYER_BANNED;$NAME$ was banned by the host.
-PLAYER_COUNTRY_TOPBAR_RANK;$NAME$ is a §Y$RANK$§W.
-PLAYER_KICKED;$NAME$ was kicked by the host.
-PLAYER_LOST_DESC;Player(s) $playername$ disconnected. Choose your action.
-PLAYER_LOST_TITLE;Player disconnected.
-PLC;Poland-Lithuania
-PLC_ADJ;Polish-Lithuanian
-PLC_anarcho_liberal;Stronnictwo Radykalny
-PLC_communist;Partia Socjaldemokracja
-PLC_conservative;Str. Narodowo-Demokratyczne
-PLC_fascist;Stronnictwo Narodowe
-PLC_liberal;Stronnictwo Patriotyczne
-PLC_reactionary;Konfederacja Targowicka
-PLC_socialist;Partia Socjalistyczna
-PLR_CONNECT;Player §Y$NAME$§W joined the game.
-PLR_DISC;Player §Y$NAME$§W left the game.
+PLAY;Play
 pluralism;Pluralism
 pluralism_desc;The state religion is actively promoted but other religions are tolerated.
 pluralism_l;Pluralism

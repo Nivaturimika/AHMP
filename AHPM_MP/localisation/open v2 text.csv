@@ -549,6 +549,21 @@ SPL_democracy;Sarmatia
 SPL_absolute_monarchy;Sarmatia
 SPL_prussian_constitutionalism;Sarmatia
 SPL_hms_government;Sarmatia
+SPL_communist;Sarmatian United Workers' Party
+SPL_socialist;Sarmatian United Workers' Party
+SPL_conservative;Conservative Samartian Party
+SPL_liberal;Samartian Liberal Party
+SPL_reactionary;Reactionary Samartians
+SPL_anarcho_liberal;Radical Samartian Liberals
+PLC;Poland-Lithuania
+PLC_ADJ;Polish-Lithuanian
+PLC_anarcho_liberal;Stronnictwo Radykalny
+PLC_communist;Partia Socjaldemokracja
+PLC_conservative;Str. Narodowo-Demokratyczne
+PLC_fascist;Stronnictwo Narodowe
+PLC_liberal;Stronnictwo Patriotyczne
+PLC_reactionary;Konfederacja Targowicka
+PLC_socialist;Partia Socjalistyczna
 tribal;Tribal
 default_tribal;Tribal
 default_conservative;Conservative
