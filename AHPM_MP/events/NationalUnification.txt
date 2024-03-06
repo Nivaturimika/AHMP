@@ -514,21 +514,6 @@ country_event = {
 	}
 }
 
-
-# Removing cores for non-existing countries
-country_event = {
-	id = 11105
-	title = "EVTNAME11105"
-	desc = "EVTDESC11105"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT11105OPTA"
-		all_core = { remove_core = THIS }
-	}
-}
-
 # Event to Inherit (For NGF & SGF )
 country_event = {
 	id = 11106
@@ -771,11 +756,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				OR = {
-					tag = AUS
-					tag = KUK
-				}
-				exists = yes
+				test = is_austrian_empire
 				is_greater_power = no
 				in_sphere = THIS
 				war = no
@@ -794,39 +775,6 @@ country_event = {
 				}
 			}
 			country_event = 31515
-		}
-		any_country = {
-			limit = {
-				is_culture_group = germanic
-				exists = no
-				test != is_austrian_empire
-				NOT = { tag = PRU }
-				NOT = { tag = UBD }
-				NOT = { tag = BAN }
-				NOT = { has_country_flag = post_colonial_country }
-				OR = {
-					all_core = { owned_by = THIS }
-					tag = NGF
-					tag = SGF
-				}
-			}
-			country_event = 11105
-		}
-		any_country = {
-			limit = {
-				test = is_austrian_empire
-				exists = no
-				THIS = { capital = 619 }
-			}
-			country_event = 11105
-		}
-		any_country = {
-			limit = {
-				tag = PRU
-				exists = no
-				THIS = { capital = 549 }
-			}
-			country_event = 11105
 		}
 		any_country = {
 			limit = {

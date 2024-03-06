@@ -2559,10 +2559,7 @@ country_event = {
 		NOT = { owns = 78 }
 		NOT = { owns = 81 }
 		NOT = { owns = 84 }
-		NOT = {
-			exists = HAW
-			has_country_flag = HAW_created
-		}
+		NOT = { has_country_flag = HAW_created }
 	}
 	mean_time_to_happen = { months = 40 }
 	option = {
@@ -2592,12 +2589,6 @@ country_event = {
 			leadership = 40
 			any_pop = { scaled_militancy = { ideology = liberal factor = -8 } }
 		}
-		diplomatic_influence = { who = HAW value = -200 }
-		any_pop = {
-			scaled_militancy = {
-				ideology = liberal
-				factor = 3
-			}
-		}
+		any_pop = { scaled_militancy = { ideology = liberal factor = 3 } }
 	}
 }

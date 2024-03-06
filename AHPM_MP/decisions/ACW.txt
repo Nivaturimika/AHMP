@@ -913,10 +913,7 @@ political_decisions = {
 
 		effect = {
 			prestige = 2
-			if = {
-				limit = { capital_scope = { continent = north_america } }
-				HAW_658 = { add_core = THIS }
-			}
+			HAW_658 = { add_core = THIS }
 		}
 	}
 
