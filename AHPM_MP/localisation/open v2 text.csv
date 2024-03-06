@@ -572,9 +572,9 @@ default_conservative_2;Conservative
 default_conservative_3;Conservative
 default_conservative_4;Conservative
 default_reactionary;Reactionary
-default_socialist;Socialist
-default_communist;Communist
-default_fascist;Fascist
+default_socialist;United Workers' Party
+default_communist;United Workers' Party
+default_fascist;National Party
 default_liberal;Liberal
 default_liberal_2;Liberal
 default_liberal_3;Liberal
