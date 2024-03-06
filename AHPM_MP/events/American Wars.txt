@@ -266,7 +266,7 @@ country_event = {
 	option = {
 		name = "EVT44147OPTA"
 		money = -50000
-		FROM = { create_vassal = THIS }
+		THIS = { create_vassal = FROM }
 	}
 }
 
