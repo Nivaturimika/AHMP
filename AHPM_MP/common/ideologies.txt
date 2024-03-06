@@ -3,7 +3,7 @@
 fascist_group = {
 	fascist = {
 		uncivilized = no
-		color = { 0 0 0 }
+		color = { 64 64 64 }
 		date = 1890.1.1
 		add_political_reform = {
 			base = 1
@@ -82,7 +82,7 @@ conservative_group = {
 		}
 	}
 	reactionary = {
-		color = { 100 100 100 }
+		color = { 0 0 128 }
 		add_political_reform = {
 			base = 0
 		}
@@ -103,7 +103,7 @@ conservative_group = {
 		}
 	}
 	conservative = {
-		color = { 255 255 255 }
+		color = { 0 0 255 }
 		can_reduce_militancy = yes
 		add_political_reform = {
 			base = 0
@@ -261,7 +261,7 @@ conservative_group = {
 socialist_group = {
 	socialist = {
 		uncivilized = no
-		color = { 255 128 128 }
+		color = { 255 0 0 }
 		date = 1845.1.1
 		add_political_reform = {
 			base = 0
@@ -344,7 +344,7 @@ socialist_group = {
 
 	communist = {
 		uncivilized = no
-		color = { 100 30 30 }
+		color = { 128 0 0 }
 		date = 1860.1.1
 
 		add_political_reform = {
@@ -372,7 +372,7 @@ socialist_group = {
 
 liberal_group = {
 	liberal = {
-		color = { 238 130 238 }
+		color = { 255 255 0 }
 		add_political_reform = {
 			base = 1
 		}
@@ -459,7 +459,7 @@ liberal_group = {
 	}
 
 	anarcho_liberal = {
-		color = { 75 0 130 }
+		color = { 128 128 0 }
 		date = 1840.1.1
 		uncivilized = no
 		add_political_reform = {
