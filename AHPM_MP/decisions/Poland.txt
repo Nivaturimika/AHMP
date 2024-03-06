@@ -525,6 +525,7 @@ political_decisions = {
 	}
 
 	proclaim_sarmatia = {
+		picture = sarmati
 		potential = {
 			exists != SPL
 			OR = {
