@@ -404,3 +404,12 @@ ryotwari = {
 	administrative_efficiency_modifier = 0.25
 	icon = 16
 }
+
+fuck_africa = {
+	trigger = {
+		exists = yes
+		government = tribal
+	}
+	research_points_modifier = -0.95
+	icon = 16
+}
