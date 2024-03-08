@@ -4,7 +4,6 @@ fascist_group = {
 	fascist = {
 		uncivilized = no
 		color = { 64 64 64 }
-		date = 1890.1.1
 		add_political_reform = {
 			base = 1
 			modifier = {
@@ -262,7 +261,6 @@ socialist_group = {
 	socialist = {
 		uncivilized = no
 		color = { 255 0 0 }
-		date = 1845.1.1
 		add_political_reform = {
 			base = 0
 			group = {
@@ -345,8 +343,6 @@ socialist_group = {
 	communist = {
 		uncivilized = no
 		color = { 128 0 0 }
-		date = 1860.1.1
-
 		add_political_reform = {
 			base = 0
 		}
@@ -460,7 +456,6 @@ liberal_group = {
 
 	anarcho_liberal = {
 		color = { 128 128 0 }
-		date = 1840.1.1
 		uncivilized = no
 		add_political_reform = {
 			base = 0
