@@ -131,7 +131,7 @@ country_event = {
 		}
 		check_variable = {
 			which = danubian_federation_voting
-			value >= 0
+			value > 0
 		}
 	}
 	option = {
