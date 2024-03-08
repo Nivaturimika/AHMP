@@ -1,6 +1,6 @@
 color = { 166 94 16 }
 absolute_monarchy = { 71 31 12 }
-graphical_culture = MiddleEasternGC
+template = "military_junta.txt"
 
 party = {
     name = "CYR_conservative"

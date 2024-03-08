@@ -1,5 +1,5 @@
 color = { 37 128 174 }
-graphical_culture = Generic
+template = "military_junta.txt" #Generic
 
 party = {
     name = "YUG_reactionary"
@@ -130,10 +130,10 @@ unit_names = {
 
     }
     steam_transport = {
-        Jaki Silni Snaži Marljivi Ustrajni
+        Jaki Silni Snaï¿½i Marljivi Ustrajni
 
     }
     commerce_raider = {
-        Senj Stražar "Smrt Glava" Lubanja Pacov
+        Senj Straï¿½ar "Smrt Glava" Lubanja Pacov
     }
 }

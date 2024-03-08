@@ -1,5 +1,5 @@
 color = { 255 55 70 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
     name = "POL_conservative"
@@ -114,7 +114,7 @@ unit_names = {
         "Arend Dickmann" "Boleslaw I Chrobry" "Jan Kostka" "Michal Figenow" "Mateusz Schapring" "Jakob Mora" "Jan III Sobieski"
     }
     ironclad = {
-        Kraków Warszawa Lódz Poznan Wroclaw Lwów Gdansk
+        Krakï¿½w Warszawa Lï¿½dz Poznan Wroclaw Lwï¿½w Gdansk
     }
     manowar = {
         Wisla Odra Warta Narew San Notec Bug

@@ -1,8 +1,8 @@
 color = { 0  101  189 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
-    name = "FRO_liberal" # Sjálvstýrisflokkurin
+    name = "FRO_liberal" # Sjï¿½lvstï¿½risflokkurin
     start_date = 1830.1.1 # Actually founded in 1909
     end_date = 2000.1.1
 
@@ -32,7 +32,7 @@ party = {
 }
 
 party = {
-    name = "FRO_reactionary" # Hin Føroyski Flokkurin
+    name = "FRO_reactionary" # Hin Fï¿½royski Flokkurin
     start_date = 1830.1.1 # Anachronistic
     end_date = 2000.1.1
 
@@ -47,7 +47,7 @@ party = {
 }
 
 party = {
-    name = "FRO_socialist" # Javnaðarflokkurin
+    name = "FRO_socialist" # Javnaï¿½arflokkurin
     start_date = 1848.1.1 # Actually founded in 1925
     end_date = 2000.1.1
 
@@ -79,7 +79,7 @@ party = {
 }
 
 party = {
-    name = "FRO_communist" # Kommunistiski Flokkur Føroya
+    name = "FRO_communist" # Kommunistiski Flokkur Fï¿½roya
     start_date = 1848.1.1 # Anachronistic
     end_date = 2000.1.1
 
@@ -110,22 +110,22 @@ party = {
 
 unit_names = {
     dreadnought = {
-        Áss Vanr Álfr Jötunn
+        ï¿½ss Vanr ï¿½lfr Jï¿½tunn
     }
     ironclad = {
         Ellida Sleipner Viking Frithjof Rjukan Sarpen Lougen Glommen
     }
     manowar = {
-        Freia Desideira "St Olaf" "Kong Sverre" Ellida Nordssthernen Nornen Nidaros Ørnen
+        Freia Desideira "St Olaf" "Kong Sverre" Ellida Nordssthernen Nornen Nidaros ï¿½rnen
     }
     cruiser = {
         Thor Odin Njord Freyr Tyr Bragl Heimdall Hoder Vidar Ale Ullr Forseti
     }
     frigate = {
-        Freia Desideira "St Olaf" "Kong Sverre" Ellida Nordssthernen Nornen Nidaros Ørnen
+        Freia Desideira "St Olaf" "Kong Sverre" Ellida Nordssthernen Nornen Nidaros ï¿½rnen
     }
     monitor = {
-        Skorpionen Mjølner Thrudvang
+        Skorpionen Mjï¿½lner Thrudvang
     }
     clipper_transport = {
     }

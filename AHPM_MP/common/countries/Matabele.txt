@@ -1,5 +1,5 @@
 color = { 220  202  96 }
-graphical_culture = ZuluGC
+template = "military_junta.txt" #ZuluGC
 
 party = {
     name = "MAT_conservative"

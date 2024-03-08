@@ -1,5 +1,5 @@
 color = { 183  129  124 }
-graphical_culture = SouthAmericanGC
+template = "military_junta.txt" #SouthAmericanGC
 
 party = {
     name = "COS_conservative"
@@ -123,32 +123,32 @@ party = {
 
 unit_names = {
     dreadnought = {
-        Caribe Centroamérica "Costa Rica" "José María Castro" "Juan Mora" Libertad Presidente "Rafael Yglesias" República "Tomás Guardia"
+        Caribe Centroamï¿½rica "Costa Rica" "Josï¿½ Marï¿½a Castro" "Juan Mora" Libertad Presidente "Rafael Yglesias" Repï¿½blica "Tomï¿½s Guardia"
     }
     ironclad = {
-        Arenal Bebedero Diquís Jiménez Reventazón "San Juan" Sixaola Tárcoles Tempisque Tortuguero
+        Arenal Bebedero Diquï¿½s Jimï¿½nez Reventazï¿½n "San Juan" Sixaola Tï¿½rcoles Tempisque Tortuguero
     }
     manowar = {
-        Audaz Intrépido Libertad "San Antonio" "San Fernando" "San Juan" "Santa Isabel" "Santa Marta" "Santa Mónica" Vigilante
+        Audaz Intrï¿½pido Libertad "San Antonio" "San Fernando" "San Juan" "Santa Isabel" "Santa Marta" "Santa Mï¿½nica" Vigilante
     }
     cruiser = {
-        Cacique "Castillo del Oro" Chamán Chorotega Constitución "Cristóbal Colón" Independencia "Puerto Limón" "Quince de Septiembre" "Vasco Núñez de Balboa"
+        Cacique "Castillo del Oro" Chamï¿½n Chorotega Constituciï¿½n "Cristï¿½bal Colï¿½n" Independencia "Puerto Limï¿½n" "Quince de Septiembre" "Vasco Nï¿½ï¿½ez de Balboa"
     }
     frigate = {
-        Alajuela Cartago Guanacaste Heredia Liberia Limón Nicoya Papagayo Puntarenas "San José"
+        Alajuela Cartago Guanacaste Heredia Liberia Limï¿½n Nicoya Papagayo Puntarenas "San Josï¿½"
     }
     monitor = {
-        "Cacho Negro" Chato Congo Irazú Miravalles Orosí Platanar Porvenir "Santa María" Tenorio
+        "Cacho Negro" Chato Congo Irazï¿½ Miravalles Orosï¿½ Platanar Porvenir "Santa Marï¿½a" Tenorio
     }
     clipper_transport = {
-        Alicia Ana Ancla Ballena Carmen Costero Delfín Gabriel Goliat Indetectable
-        "Isla del Coco" Rafael Rápido Sansón Silencioso Sirena Tiburón "Toro Amarillo" Tritón Vida
+        Alicia Ana Ancla Ballena Carmen Costero Delfï¿½n Gabriel Goliat Indetectable
+        "Isla del Coco" Rafael Rï¿½pido Sansï¿½n Silencioso Sirena Tiburï¿½n "Toro Amarillo" Tritï¿½n Vida
     }
     steam_transport = {
-        Alicia Ana Ancla Ballena Carmen Costero Delfín Gabriel Goliat Indetectable
-        "Isla del Coco" Rafael Rápido Sansón Silencioso Sirena Tiburón "Toro Amarillo" Tritón Vida
+        Alicia Ana Ancla Ballena Carmen Costero Delfï¿½n Gabriel Goliat Indetectable
+        "Isla del Coco" Rafael Rï¿½pido Sansï¿½n Silencioso Sirena Tiburï¿½n "Toro Amarillo" Tritï¿½n Vida
     }
     commerce_raider = {
-        Barva "Cerro de la Muerte" Guanacaste Intratable Poás "Rincón de la Vieja" Talamanca Tilarán Turrialba Victorioso
+        Barva "Cerro de la Muerte" Guanacaste Intratable Poï¿½s "Rincï¿½n de la Vieja" Talamanca Tilarï¿½n Turrialba Victorioso
     }
 }

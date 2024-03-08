@@ -1,5 +1,5 @@
 color = { 129 81 124 }
-graphical_culture = Generic
+template = "military_junta.txt" #Generic
 
 party = {
     name = "IRQ_reactionary"
@@ -109,33 +109,33 @@ party = {
 unit_names = {
     dreadnought = {
         "Kuwait" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah"
-        "Al Amarah" "Al Küt" "Sulaimanya" "Al Najaf" "Al Basrah"
+        "Al Amarah" "Al Kï¿½t" "Sulaimanya" "Al Najaf" "Al Basrah"
 
 
     }
     ironclad = {
         "Kuwait" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah"
-        "Al Amarah" "Al Küt" "Sulaimanya" "Al Najaf" "Al Basrah"
+        "Al Amarah" "Al Kï¿½t" "Sulaimanya" "Al Najaf" "Al Basrah"
 
     }
     manowar = {
         "Kuwait" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah"
-        "Al Amarah" "Al Küt" "Sulaimanya" "Al Najaf" "Al Basrah"
+        "Al Amarah" "Al Kï¿½t" "Sulaimanya" "Al Najaf" "Al Basrah"
 
     }
     cruiser = {
         "Kuwait" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah"
-        "Al Amarah" "Al Küt" "Sulaimanya" "Al Najaf" "Al Basrah"
+        "Al Amarah" "Al Kï¿½t" "Sulaimanya" "Al Najaf" "Al Basrah"
 
     }
     frigate = {
         "Kuwait" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah"
-        "Al Amarah" "Al Küt" "Sulaimanya" "Al Najaf" "Al Basrah"
+        "Al Amarah" "Al Kï¿½t" "Sulaimanya" "Al Najaf" "Al Basrah"
 
     }
     monitor = {
         "Kuwait" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah"
-        "Al Amarah" "Al Küt" "Sulaimanya" "Al Najaf" "Al Basrah"
+        "Al Amarah" "Al Kï¿½t" "Sulaimanya" "Al Najaf" "Al Basrah"
 
     }
     clipper_transport = {
@@ -146,7 +146,7 @@ unit_names = {
     }
     commerce_raider = {
         "Kuwait" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah"
-        "Al Amarah" "Al Küt" "Sulaimanya" "Al Najaf" "Al Basrah"
+        "Al Amarah" "Al Kï¿½t" "Sulaimanya" "Al Najaf" "Al Basrah"
 
     }
 }

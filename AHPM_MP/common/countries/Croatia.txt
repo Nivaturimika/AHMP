@@ -1,5 +1,5 @@
 color = { 174  227  95 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
     name = "CRO_conservative"
@@ -111,7 +111,7 @@ unit_names = {
         Hrvatska "Maksimilijan Vrhovac" "Ilirski pokret" Slavonija Zagreb
     }
     ironclad = {
-        Osijek  "Janko Draškovic" "Antun Mihanovic" "Ljudevit Gaj" Rijeka
+        Osijek  "Janko Draï¿½kovic" "Antun Mihanovic" "Ljudevit Gaj" Rijeka
     }
     manowar = {
         Sava Drava Kupa Korana Cesma
@@ -120,7 +120,7 @@ unit_names = {
         "Ivan Lupis" "Janko Vukovic" "Matija Politeo" "Ante Tresic Pavicic" Branimir
     }
     frigate = {
-        Dinara Kamešnica Biokovo Velebit Plješevica
+        Dinara Kameï¿½nica Biokovo Velebit Pljeï¿½evica
     }
     monitor = {
         Dubrovnik Ragusa Split Pula Gospic
@@ -134,6 +134,6 @@ unit_names = {
 
     }
     commerce_raider = {
-        Krk Brijuni Lošinj Cres Ilovik
+        Krk Brijuni Loï¿½inj Cres Ilovik
     }
 }

@@ -1,5 +1,5 @@
 color = { 65  91  126 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
     name = "SLO_conservative"
@@ -120,10 +120,10 @@ unit_names = {
         "Mali Srpan" "Veliki Srpan" Prosinec "Mali Traven" "Veliki Traven"
     }
     frigate = {
-        "Miroslav Stumberger" "Ivan Grohar" "Jožef Tominc" "Matija Cop" "Anton Tomaž Linhart"
+        "Miroslav Stumberger" "Ivan Grohar" "Joï¿½ef Tominc" "Matija Cop" "Anton Tomaï¿½ Linhart"
     }
     monitor = {
-        Ivana Metka Štefka Duša Nataša
+        Ivana Metka ï¿½tefka Duï¿½a Nataï¿½a
     }
     clipper_transport = {
 
@@ -134,6 +134,6 @@ unit_names = {
 
     }
     commerce_raider = {
-        "Blejsko Jezero" "Blejski Grad" "Tržaški Zaliv" Karavanke Kras
+        "Blejsko Jezero" "Blejski Grad" "Trï¿½aï¿½ki Zaliv" Karavanke Kras
     }
 }

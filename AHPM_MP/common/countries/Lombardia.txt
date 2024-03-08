@@ -1,5 +1,5 @@
 color = { 0 156 45 }
-graphical_culture = ItalianGC
+template = "military_junta.txt" #ItalianGC
 party = {
     name = "LOM_reactionary"
     start_date = 1830.1.1

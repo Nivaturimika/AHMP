@@ -1,3 +1,3 @@
 color = { 210  46  28 }
-graphical_culture = AsianGC
+template = "military_junta.txt" #AsianGC
 template = "default.txt"

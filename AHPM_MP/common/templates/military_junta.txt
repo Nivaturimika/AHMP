@@ -1,0 +1,17 @@
+graphical_culture = Generic
+party = {
+	name = "default_fascist_military_junta"
+	start_date = 1836.1.1
+	end_date = 2000.1.1
+	ideology = fascist
+	social_policy = populist_welfare
+	economic_policy = state_capitalism
+	trade_policy = protectionism
+	religious_policy = pro_atheism
+	citizenship_policy = residency
+	war_policy = jingoism
+	trigger = {
+		war = yes
+		nationalism_n_imperialism = 1
+	}
+}

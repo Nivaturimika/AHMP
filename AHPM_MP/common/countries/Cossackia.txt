@@ -1,5 +1,5 @@
 color = { 51  104  204 }
-graphical_culture = RussianGC
+template = "military_junta.txt" #RussianGC
 
 party = {
     name = "DON_conservative"
@@ -123,7 +123,7 @@ unit_names = {
         Dniester Dnipro Desna Prypiat Prut
     }
     monitor = {
-        Sofyivsky "Pechers’ka lavra" "Kam’ianets’-Podil’s’kyi" Khotyn Khortyts'a
+        Sofyivsky "Pechersï¿½ka lavra" "Kamï¿½ianetsï¿½-Podilï¿½sï¿½kyi" Khotyn Khortyts'a
     }
     clipper_transport = {
 

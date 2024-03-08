@@ -1,5 +1,5 @@
 color = { 35 54 2 }
-graphical_culture = MiddleEasternGC
+template = "military_junta.txt"
 
 party = {
     name = "MUG_conservative"

@@ -1,5 +1,5 @@
 color = { 255 247 0 }
-graphical_culture = ItalianGC
+template = "military_junta.txt" #ItalianGC
 
 party = {
     name = "SIC_reactionary"
@@ -153,7 +153,7 @@ unit_names = {
         Borbone Ercole "Ettore Fieramosca" Farnese "Ferdinando II" Fulminante Monarca Napoli Roberto Urania
     }
     monitor = {
-        Altavilla Angiò Aragona Austria "Federico II" Guiscardo "Pietro I" Ruggiero Svevia Tancredi
+        Altavilla Angiï¿½ Aragona Austria "Federico II" Guiscardo "Pietro I" Ruggiero Svevia Tancredi
     }
     clipper_transport = {
         Aurora Etna Fama Flora Fortuna Galatea "San Antonio" "San Carlo" "San Ferdinando" "San Filippo"

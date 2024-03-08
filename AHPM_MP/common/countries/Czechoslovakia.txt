@@ -1,5 +1,5 @@
 color = { 43 89 202}
-graphical_culture = Generic
+template = "military_junta.txt" #Generic
 
 party = {
     name = "CZH_reactionary"
@@ -108,22 +108,22 @@ party = {
 
 unit_names = {
     dreadnought = {
-        "Jan Hus" "Karel IV" "Prokop Veliký" "Anton Bernolák" "Ludovít Štúr"
+        "Jan Hus" "Karel IV" "Prokop Velikï¿½" "Anton Bernolï¿½k" "Ludovï¿½t ï¿½tï¿½r"
     }
     ironclad = {
-        Praha Brno Ostrava Bratislava Košice
+        Praha Brno Ostrava Bratislava Koï¿½ice
     }
     manowar = {
-        Milešovka Lovos Hazmburk Beskydok "Gerlachovský štít"
+        Mileï¿½ovka Lovos Hazmburk Beskydok "Gerlachovskï¿½ ï¿½tï¿½t"
     }
     cruiser = {
         Jizera Metuje Morava Hron Bodrog
     }
     frigate = {
-        "Jan Dismas Zelenka" "Šimon Brixi" "František Tuma" "Ján Šimbracký" "Zachariáš Zarewutius"
+        "Jan Dismas Zelenka" "ï¿½imon Brixi" "Frantiï¿½ek Tuma" "Jï¿½n ï¿½imbrackï¿½" "Zachariï¿½ Zarewutius"
     }
     monitor = {
-        "Petr Brandl" "Václav Hollar" "Jan Jahn" "Majster košického oltára" "Josef Czauczik"
+        "Petr Brandl" "Vï¿½clav Hollar" "Jan Jahn" "Majster koï¿½ickï¿½ho oltï¿½ra" "Josef Czauczik"
     }
     clipper_transport = {
 
@@ -132,6 +132,6 @@ unit_names = {
 
     }
     commerce_raider = {
-        "Pražský hrad" Vyšehrad Zbraslav "Bojnický zámok" "Bratislavsky hrad"
+        "Praï¿½skï¿½ hrad" Vyï¿½ehrad Zbraslav "Bojnickï¿½ zï¿½mok" "Bratislavsky hrad"
     }
 }

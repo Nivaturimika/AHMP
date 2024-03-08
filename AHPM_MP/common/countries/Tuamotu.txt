@@ -1,5 +1,5 @@
 color = { 121  229  215 }
-graphical_culture = Generic
+template = "military_junta.txt" #Generic
 
 party = {
     name = "HAW_conservative"

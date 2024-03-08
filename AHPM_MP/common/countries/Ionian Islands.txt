@@ -1,5 +1,5 @@
 color = { 153  141  117 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
     name = "ION_liberal"
@@ -108,28 +108,28 @@ party = {
 
 unit_names = {
     dreadnought = {
-        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfù Cephalonia Cerigo Ithaca Paxò
+        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfï¿½ Cephalonia Cerigo Ithaca Paxï¿½
         "Santa Maura" Zante Argostoli Kythira Vathy Gaios Lefkada Zakynthos "St. Mikaelos" "St. Georgios"
     }
     ironclad = {
-        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfù Cephalonia Cerigo Ithaca Paxò
+        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfï¿½ Cephalonia Cerigo Ithaca Paxï¿½
         "Santa Maura" Zante Argostoli Kythira Vathy Gaios Lefkada Zakynthos "St. Mikaelos" "St. Georgios"
 
     }
     manowar = {
-        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfù Cephalonia Cerigo Ithaca Paxò
+        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfï¿½ Cephalonia Cerigo Ithaca Paxï¿½
         "Santa Maura" Zante Argostoli Kythira Vathy Gaios Lefkada Zakynthos "St. Mikaelos" "St. Georgios"
     }
     cruiser = {
-        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfù Cephalonia Cerigo Ithaca Paxò
+        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfï¿½ Cephalonia Cerigo Ithaca Paxï¿½
         "Santa Maura" Zante Argostoli Kythira Vathy Gaios Lefkada Zakynthos "St. Mikaelos" "St. Georgios"
     }
     frigate = {
-        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfù Cephalonia Cerigo Ithaca Paxò
+        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfï¿½ Cephalonia Cerigo Ithaca Paxï¿½
         "Santa Maura" Zante Argostoli Kythira Vathy Gaios Lefkada Zakynthos "St. Mikaelos" "St. Georgios"
     }
     monitor = {
-        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfù Cephalonia Cerigo Ithaca Paxò
+        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfï¿½ Cephalonia Cerigo Ithaca Paxï¿½
         "Santa Maura" Zante Argostoli Kythira Vathy Gaios Lefkada Zakynthos "St. Mikaelos" "St. Georgios"
     }
     clipper_transport = {
@@ -139,7 +139,7 @@ unit_names = {
 
     }
     commerce_raider = {
-        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfù Cephalonia Cerigo Ithaca Paxò
+        "Ioannis Kapodistrias" Kolokotronis "Rigas Feraios" "Athanasios Diakos" "Filiki Eteria" Corfï¿½ Cephalonia Cerigo Ithaca Paxï¿½
         "Santa Maura" Zante Argostoli Kythira Vathy Gaios Lefkada Zakynthos "St. Mikaelos" "St. Georgios"
     }
 }

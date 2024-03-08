@@ -1,5 +1,5 @@
 color = { 104  190  222 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
     name = "SLS_liberal"
@@ -138,22 +138,22 @@ party = {
 
 unit_names = {
     dreadnought = {
-        Schliesen "August der Starke" "Heinrich der Löwe" "König von Polen" Wettin "Friedrich August" "König Albert" Kurfürst Askanien Aurora
+        Schliesen "August der Starke" "Heinrich der Lï¿½we" "Kï¿½nig von Polen" Wettin "Friedrich August" "Kï¿½nig Albert" Kurfï¿½rst Askanien Aurora
     }
     ironclad = {
-        Schliesen "August der Starke" "Heinrich der Löwe" "König von Polen" Wettin "Friedrich August" "König Albert" Kurfürst Askanien Aurora
+        Schliesen "August der Starke" "Heinrich der Lï¿½we" "Kï¿½nig von Polen" Wettin "Friedrich August" "Kï¿½nig Albert" Kurfï¿½rst Askanien Aurora
     }
     manowar = {
-        Schliesen "August der Starke" "Heinrich der Löwe" "König von Polen" Wettin "Friedrich August" "König Albert" Kurfürst Askanien Aurora
+        Schliesen "August der Starke" "Heinrich der Lï¿½we" "Kï¿½nig von Polen" Wettin "Friedrich August" "Kï¿½nig Albert" Kurfï¿½rst Askanien Aurora
     }
     cruiser = {
-        Gorlitz Bautzen Liegnitz Breslau Oppeln Kattowicz Löbau Meißen Plauen Schwarzenberg Zwickau
+        Gorlitz Bautzen Liegnitz Breslau Oppeln Kattowicz Lï¿½bau Meiï¿½en Plauen Schwarzenberg Zwickau
     }
     frigate = {
-        Gorlitz Bautzen Liegnitz Breslau Oppeln Kattowicz Löbau Meißen Plauen Schwarzenberg Zwickau
+        Gorlitz Bautzen Liegnitz Breslau Oppeln Kattowicz Lï¿½bau Meiï¿½en Plauen Schwarzenberg Zwickau
     }
     monitor = {
-        Schliesen "August der Starke" "Heinrich der Löwe" "König von Polen" Wettin "Friedrich August" "König Albert" Kurfürst Askanien Aurora
+        Schliesen "August der Starke" "Heinrich der Lï¿½we" "Kï¿½nig von Polen" Wettin "Friedrich August" "Kï¿½nig Albert" Kurfï¿½rst Askanien Aurora
     }
     clipper_transport = {
 
@@ -162,6 +162,6 @@ unit_names = {
 
     }
     commerce_raider = {
-        Schliesen "August der Starke" "Heinrich der Löwe" "König von Polen" Wettin "Friedrich August" "König Albert" Kurfürst Askanien Aurora
+        Schliesen "August der Starke" "Heinrich der Lï¿½we" "Kï¿½nig von Polen" Wettin "Friedrich August" "Kï¿½nig Albert" Kurfï¿½rst Askanien Aurora
     }
 }

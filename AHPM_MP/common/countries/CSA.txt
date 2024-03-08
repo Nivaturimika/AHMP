@@ -1,4 +1,4 @@
-graphical_culture = ConfederateGC
+template = "military_junta.txt" #ConfederateGC
 color = { 190  186  202 }
 
 party = {

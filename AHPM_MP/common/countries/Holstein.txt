@@ -1,5 +1,5 @@
 color = { 220  150  158 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
     name = "HLS_liberal"
@@ -198,28 +198,28 @@ party = {
 
 unit_names = {
     dreadnought = {
-        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glücksburg Reichsfürst König Erbprinz Plön Segeberg "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glückstadt
+        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glï¿½cksburg Reichsfï¿½rst Kï¿½nig Erbprinz Plï¿½n Segeberg "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glï¿½ckstadt
         "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
     }
     ironclad = {
-        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glücksburg Reichsfürst König Erbprinz Plön Segeberg
-        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glückstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
+        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glï¿½cksburg Reichsfï¿½rst Kï¿½nig Erbprinz Plï¿½n Segeberg
+        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glï¿½ckstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
     }
     manowar = {
-        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glücksburg Reichsfürst König Erbprinz Plön Segeberg
-        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glückstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
+        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glï¿½cksburg Reichsfï¿½rst Kï¿½nig Erbprinz Plï¿½n Segeberg
+        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glï¿½ckstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
     }
     cruiser = {
-        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glücksburg Reichsfürst König Erbprinz Plön Segeberg
-        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glückstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
+        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glï¿½cksburg Reichsfï¿½rst Kï¿½nig Erbprinz Plï¿½n Segeberg
+        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glï¿½ckstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
     }
     frigate = {
-        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glücksburg Reichsfürst König Erbprinz Plön Segeberg
-        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glückstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
+        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glï¿½cksburg Reichsfï¿½rst Kï¿½nig Erbprinz Plï¿½n Segeberg
+        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glï¿½ckstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
     }
     monitor = {
-        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glücksburg Reichsfürst König Erbprinz Plön Segeberg
-        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glückstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
+        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glï¿½cksburg Reichsfï¿½rst Kï¿½nig Erbprinz Plï¿½n Segeberg
+        "Up ewig ungedeelt" "Vertrag von Ripen" Altona Glï¿½ckstadt "Adolf I." "Christian Albrecht" "Karl Peter Ulrich" "Magnus von Wedderkop" "Uwe Jens Lornsen"
     }
     clipper_transport = {
 
@@ -228,7 +228,7 @@ unit_names = {
 
     }
     commerce_raider = {
-        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glücksburg Reichsfürst König Erbprinz Plön Segeberg
-        "Klaus Störtebeker" "Gödeke Michels" "Hennig Wichmann" "Klaus Scheld" "Magister Wigbold" "Arnd Stuke" "Nikolaus Milies" Likedeeler
+        Holstein "Herzog Friedrich" Kiel Gottorp Sonderburg Glï¿½cksburg Reichsfï¿½rst Kï¿½nig Erbprinz Plï¿½n Segeberg
+        "Klaus Stï¿½rtebeker" "Gï¿½deke Michels" "Hennig Wichmann" "Klaus Scheld" "Magister Wigbold" "Arnd Stuke" "Nikolaus Milies" Likedeeler
     }
 }

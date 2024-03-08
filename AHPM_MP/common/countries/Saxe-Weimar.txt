@@ -1,5 +1,5 @@
 color = { 209  212  126 }
-graphical_culture = EuropeanGC
+template = "military_junta.txt" #EuropeanGC
 
 party = {
     name = "WEI_liberal"

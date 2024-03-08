@@ -1,6 +1,6 @@
 color = { 235 254 174 }
 #color = { 144 80 155}
-graphical_culture = Generic
+template = "military_junta.txt" #Generic
 
 party = {
     name = "SXI_reactionary"

@@ -1,5 +1,5 @@
 color = { 255  176  140 }
-graphical_culture = SouthAmericanGC
+template = "military_junta.txt" #SouthAmericanGC
 
 party = {
     name = "VNZ_conservative"
@@ -153,32 +153,32 @@ party = {
 
 unit_names = {
     dreadnought = {
-        "Almirante Brión" "Francisco de Miranda" "General Falcón" "General Páez" "General Zamora" Guaicaipuro "Mariscal Sucre" "Simón Bolivar" Tamanaco Venezuela
+        "Almirante Briï¿½n" "Francisco de Miranda" "General Falcï¿½n" "General Pï¿½ez" "General Zamora" Guaicaipuro "Mariscal Sucre" "Simï¿½n Bolivar" Tamanaco Venezuela
     }
     ironclad = {
-        Bolívar Carabobo "General Soublette" "General Urdaneta" Maraparari Monagas Totumo Trópico "Veintitres de Mayo"
+        Bolï¿½var Carabobo "General Soublette" "General Urdaneta" Maraparari Monagas Totumo Trï¿½pico "Veintitres de Mayo"
     }
     manowar = {
-        Brión Colombiana Conejo Eclipse Feliz Independencia Intrépido Mariño Piar Rita
+        Briï¿½n Colombiana Conejo Eclipse Feliz Independencia Intrï¿½pido Mariï¿½o Piar Rita
     }
     cruiser = {
-        Aragua Caroní Casiquiare Cumaná "General Salom" Maracaibo Orinoco Restaurador Sucre Zulia
+        Aragua Caronï¿½ Casiquiare Cumanï¿½ "General Salom" Maracaibo Orinoco Restaurador Sucre Zulia
     }
     frigate = {
-        Caribe Cojedes Lara Mérida Monagas "Nueva Esparta" Portuguesa Trujillo Warao Yecuana
+        Caribe Cojedes Lara Mï¿½rida Monagas "Nueva Esparta" Portuguesa Trujillo Warao Yecuana
     }
     monitor = {
-        Cacique Carreño "Diego de Losada" "Gran Colombia" Gual Guayana Narvate "Nueva Andalucía" Tovar Villegas
+        Cacique Carreï¿½o "Diego de Losada" "Gran Colombia" Gual Guayana Narvate "Nueva Andalucï¿½a" Tovar Villegas
     }
     clipper_transport = {
-        Diligente Móvil Navegante Neptuno Poderoso Reivindicador Remolcador República "San Juan" "San Lucas"
-        "San Marcos" "San Mateo" "San Pablo" "San Pedro" Sirena Tormenta Tritón Veloz Ventoso Zamora
+        Diligente Mï¿½vil Navegante Neptuno Poderoso Reivindicador Remolcador Repï¿½blica "San Juan" "San Lucas"
+        "San Marcos" "San Mateo" "San Pablo" "San Pedro" Sirena Tormenta Tritï¿½n Veloz Ventoso Zamora
     }
     steam_transport = {
-        Diligente Móvil Navegante Neptuno Poderoso Reivindicador Remolcador República "San Juan" "San Lucas"
-        "San Marcos" "San Mateo" "San Pablo" "San Pedro" Sirena Tormenta Tritón Veloz Ventoso Zamora
+        Diligente Mï¿½vil Navegante Neptuno Poderoso Reivindicador Remolcador Repï¿½blica "San Juan" "San Lucas"
+        "San Marcos" "San Mateo" "San Pablo" "San Pedro" Sirena Tormenta Tritï¿½n Veloz Ventoso Zamora
     }
     commerce_raider = {
-        Aragua Constitución Federación "General Crespo" Independencia Libertad Marcay Maturín Miranda Patria
+        Aragua Constituciï¿½n Federaciï¿½n "General Crespo" Independencia Libertad Marcay Maturï¿½n Miranda Patria
     }
 }

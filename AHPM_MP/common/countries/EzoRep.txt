@@ -1,5 +1,5 @@
 color = { 44  44  95 }
-graphical_culture = JapaneseGC
+template = "military_junta.txt" #JapaneseGC
 
 party = {
     name = "EZO_conservative"

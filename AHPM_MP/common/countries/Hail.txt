@@ -1,5 +1,5 @@
 color = { 153 148 87 }
-graphical_culture = MiddleEasternGC
+template = "military_junta.txt"
 
 party = {
     name = "HAL_conservative"

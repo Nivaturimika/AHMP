@@ -1,5 +1,5 @@
 color = { 174  206  203 }
-graphical_culture = Generic
+template = "military_junta.txt" #Generic
 
 party = {
     name = "GUA_conservative"
@@ -108,32 +108,32 @@ party = {
 
 unit_names = {
     dreadnought = {
-        Constitución Guatemala "José Carrera Turcios" "José María Reina" "Justo Barrios" "Manuel Estrada" "Mariano Rivera" "Pedro Molina" Presidente "Vicente Cerna"
+        Constituciï¿½n Guatemala "Josï¿½ Carrera Turcios" "Josï¿½ Marï¿½a Reina" "Justo Barrios" "Manuel Estrada" "Mariano Rivera" "Pedro Molina" Presidente "Vicente Cerna"
     }
     ironclad = {
-        Belice Dulce Hondo Lempa "Los Esclavos" "María Linda" Motagua Nahualete Paz Suchiate
+        Belice Dulce Hondo Lempa "Los Esclavos" "Marï¿½a Linda" Motagua Nahualete Paz Suchiate
     }
     manowar = {
-        Audaz Conquista Independencia Salvador "San José" "San Justo" "San Pedro" "San Vicente" "Santa María" Vencedora
+        Audaz Conquista Independencia Salvador "San Josï¿½" "San Justo" "San Pedro" "San Vicente" "Santa Marï¿½a" Vencedora
     }
     cruiser = {
-        Barrigones "Bartolomé de las Casas" Cakchiquel Itzá Kiche "Nueva Sevilla" Olmeca "Pedro de Alvarado" Qeqchi Zapotitlán
+        Barrigones "Bartolomï¿½ de las Casas" Cakchiquel Itzï¿½ Kiche "Nueva Sevilla" Olmeca "Pedro de Alvarado" Qeqchi Zapotitlï¿½n
     }
     frigate = {
-        "Ciudad de Guatemala" Flores Guastatoya Huehuetenango Jalapa Quetzaltenango Retalhuleu Salamá "Santa Cruz" Totonicapán
+        "Ciudad de Guatemala" Flores Guastatoya Huehuetenango Jalapa Quetzaltenango Retalhuleu Salamï¿½ "Santa Cruz" Totonicapï¿½n
     }
     monitor = {
-        Acatenago Agua Almolonga Atitlán Fuego "Santa María" "Santo Tomás" Tacaná Tajumulco Tolimán
+        Acatenago Agua Almolonga Atitlï¿½n Fuego "Santa Marï¿½a" "Santo Tomï¿½s" Tacanï¿½ Tajumulco Tolimï¿½n
     }
     clipper_transport = {
-        Adoración Atlántica Emprendedora Gracia Huracán Maya Móvil Neptuno Nocturna Oceánica
-        Pacífica Rompeolas "San Cosme" "San Jorge" "San Pablo" Sirena Tikal Tormenta Tritón Ventisca
+        Adoraciï¿½n Atlï¿½ntica Emprendedora Gracia Huracï¿½n Maya Mï¿½vil Neptuno Nocturna Oceï¿½nica
+        Pacï¿½fica Rompeolas "San Cosme" "San Jorge" "San Pablo" Sirena Tikal Tormenta Tritï¿½n Ventisca
     }
     steam_transport = {
-        Adoración Atlántica Emprendedora Gracia Huracán Maya Móvil Neptuno Nocturna Oceánica
-        Pacífica Rompeolas "San Cosme" "San Jorge" "San Pablo" Sirena Tikal Tormenta Tritón Ventisca
+        Adoraciï¿½n Atlï¿½ntica Emprendedora Gracia Huracï¿½n Maya Mï¿½vil Neptuno Nocturna Oceï¿½nica
+        Pacï¿½fica Rompeolas "San Cosme" "San Jorge" "San Pablo" Sirena Tikal Tormenta Tritï¿½n Ventisca
     }
     commerce_raider = {
-        Chingo Chiquimula Destructor Flores Golpeador Guatemalteco Ixtepeque Lanzador "San Patricio" Suchitán
+        Chingo Chiquimula Destructor Flores Golpeador Guatemalteco Ixtepeque Lanzador "San Patricio" Suchitï¿½n
     }
 }

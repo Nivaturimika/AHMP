@@ -8,7 +8,7 @@ democracy = { 244  121  158 }
 fascist_dictatorship = { 248 51 22 }
 
 
-graphical_culture = JapaneseGC
+template = "military_junta.txt" #JapaneseGC
 
 party = {
     name = "JAP_reactionary"

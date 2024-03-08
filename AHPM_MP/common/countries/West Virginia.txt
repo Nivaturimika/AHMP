@@ -1,4 +1,4 @@
-graphical_culture = UsGC
+template = "military_junta.txt" #UsGC
 color = { 254  52  21 }
 
 party = {
