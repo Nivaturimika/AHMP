@@ -99,5 +99,5 @@ is_same_ruling_party_ideology = {
 
 is_stable_goverment = {
 	main_parameter = nation
-	always = yes
+	capital_scope = { controlled_by = owner }
 }
