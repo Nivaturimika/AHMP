@@ -238,11 +238,8 @@ country_event = {
 
 	trigger = {
 		tag = ENG
-		is_greater_power = yes
 		nationalism_n_imperialism = 1
-		NOT = { has_global_flag = berlin_conference }
 		BUR = {
-			war = no
 			civilized = no
 			is_vassal = no
 			exists = yes
@@ -251,12 +248,6 @@ country_event = {
 				neighbour = ENG
 				neighbour = ENL
 			}
-			number_of_states = 2
-			any_owned_province = { port = yes }
-		}
-		OR = {
-			war_policy = jingoism
-			war_policy = pro_military
 		}
 	}
 
@@ -268,7 +259,6 @@ country_event = {
 		name = "EVT36955OPTA"
 		prestige = 5
 		badboy = 2
-		relation = { who = BUR value = -200 }
 		diplomatic_influence = { who = BUR value = -200 }
 		casus_belli = {
 			target = BUR
@@ -281,7 +271,6 @@ country_event = {
 	option = {
 		name = "EVT36955OPTB"
 		prestige = -25
-		relation = { who = BUR value = 25 }
 		any_pop = {
 			limit = { is_primary_culture = yes }
 			dominant_issue = {
@@ -314,12 +303,8 @@ country_event = {
 			vassal_of = ENG
 			vassal_of = ENL
 		}
+		overlord = { ideological_thought = 1 }
 		NOT = { has_country_flag = no_british_doctrine }
-		OR = {
-			EIC = { ideological_thought = 1 }
-			ENG = { ideological_thought = 1 }
-			ENL = { ideological_thought = 1 }
-		}
 		OR = {
 			primary_culture = assamese
 			primary_culture = baluchi
@@ -344,7 +329,7 @@ country_event = {
 			tag = CRL
 		}
 	}
-	mean_time_to_happen = { months = 500 }
+	mean_time_to_happen = { months = 6 }
 	immediate = {
 		any_pop = {
 			limit = { is_primary_culture = yes }

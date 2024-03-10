@@ -7,7 +7,7 @@ political_decisions = {
 			NOT = { has_country_flag = mughal_reborn }
 		}
 		allow = {
-			vassal_of = ENG
+			is_independant = no
 			any_neighbor_country = { has_country_flag = sepoy_rebellion }
 			1236 = { any_neighbor_province = { owned_by = EIC average_militancy = 7 } }
 		}
@@ -21,8 +21,8 @@ political_decisions = {
 				personality = audacious
 				background = school_of_the_bayonet
 			}
-			leave_alliance = ENG
-			ENG = {
+			overlord = {
+				leave_alliance = THIS
 				release_vassal = THIS
 				country_event = 9990012
 			}
