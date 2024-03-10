@@ -3546,15 +3546,9 @@ country_event = {
 	id = 13355
 	title = "EVTNAME13355"
 	desc = "EVTDESC13355"
-	news = yes
-	news_desc_long = "EVTDESC13355_NEWS_LONG"
-	news_desc_medium = "EVTDESC13355_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC13355_NEWS_SHORT"
 	major = yes
 	picture = "cityfire"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVTOPTA13355"
 		prestige = -25
@@ -3568,22 +3562,15 @@ country_event = {
 	id = 13357
 	title = "EVTNAME13357"
 	desc = "EVTDESC13357"
-
 	picture = "Rebellion"
-
 	trigger = {
-		vassal_of = ENG
 		NOT = {
-			tag = PAK
-			tag = HND
 			is_cultural_union = yes
 			has_country_flag = no_british_doctrine
 		}
 		overlord = {
-			is_disarmed = no
-			has_recently_lost_war = no
+			capital_scope = { continent = europe }
 			ideological_thought = 1
-			exists = yes
 		}
 		OR = {
 			primary_culture = assamese
@@ -3609,61 +3596,8 @@ country_event = {
 			tag = CRL
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 500
-		modifier = {
-			factor = 1.5
-			NOT = { average_militancy = 1 }
-		}
-		modifier = {
-			factor = 1.2
-			NOT = { average_militancy = 2 }
-		}
-		modifier = {
-			factor = 1.1
-			NOT = { average_militancy = 3 }
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.5
-			num_of_revolts = 1
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { prestige = 10 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { prestige = 5 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-		}
-		modifier = {
-			factor = 0.5
-			overlord = { revolution_n_counterrevolution = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			has_country_modifier = regency_government
-		}
-	}
-
-	option = {
-		name = "EVTOPTA13357"
+	mean_time_to_happen = { months = 500 }
+	immediate = {
 		set_country_flag = no_british_doctrine
 		any_pop = {
 			limit = {
@@ -3675,8 +3609,10 @@ country_event = {
 			militancy = 4
 			consciousness = 1
 		}
-
 		ENG = { country_event = 13358 }
+	}
+	option = {
+		name = "EVTOPTA13357"
 	}
 }
 
@@ -3685,15 +3621,8 @@ country_event = {
 	id = 13358
 	title = "EVTNAME13358"
 	desc = "EVTDESC13358"
-	news = yes
-	news_desc_long = "EVTDESC13358_NEWS_LONG"
-	news_desc_medium = "EVTDESC13358_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC13358_NEWS_SHORT"
-
 	picture = "india"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVTOPTA13358"
 		prestige = 5
@@ -3732,18 +3661,22 @@ country_event = {
 					}
 				}
 				33 = {
+					add_province_modifier = {
+						name = nationalist_agitation
+						duration = 128
+					}
 				}
 			}
 		}
 		set_global_flag = doctrine_of_lapse_has_been_used
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVTOPTB13358"
 		prestige = -2
-		FROM = {
-			any_pop = { militancy = -2 }
-		}
+		FROM = { any_pop = { militancy = -2 } }
+		ai_chance = { factor = 0 }
 	}
 }
 

@@ -396,7 +396,7 @@ political_decisions = {
 					owner = { in_sphere = THIS }
 				}
 			}
-			YEM = { exists = no }
+			exists != YEM
 		}
 
 		effect = {
@@ -428,17 +428,14 @@ political_decisions = {
 				limit = { owner = { slavery = no_slavery } }
 				YEM = { political_reform = no_slavery }
 			}
-
 			random_owned = {
 				limit = { owner = { ai = yes } }
 				owner = {
-					any_country = {
+					YEM = {
 						limit = {
-							tag = YEM
 							exists = no
 							THIS = { is_possible_vassal = YEM }
 						}
-
 						THIS = {
 							badboy = -2
 							release_vassal = YEM
@@ -446,12 +443,7 @@ political_decisions = {
 								limit = { owner = { is_greater_power = yes } }
 								owner = { diplomatic_influence = { who = YEM value = 400 } }
 							}
-							relation = { who = YEM value = 400 }
 						}
-
-						capital = 1176
-						money = 10000
-						research_points = 6000
 						government = absolute_monarchy
 						1412 = { secede_province = THIS }
 						tech_school = developing_tech_school
@@ -761,46 +753,15 @@ political_decisions = {
 			}
 			NOT = { tag = NYE }
 			NYE = { exists = yes }
-			OR = {
-				tag = YEM
-				YEM = {
-					exists = yes
-					OR = {
-						vassal_of = THIS
-						in_sphere = THIS
-						}
-					}
-				}
-			}
+			YEM = { test = is_influenced }
+		}
 
 		allow = {
 			nationalism_n_imperialism = 1
 			war = no
-			NYE = {
-				war = no
-				OR = {
-					vassal_of = THIS
-					in_sphere = THIS
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-						}
-					}
-				}
-			}
-			OR = {
-				tag = YEM
-				YEM = {
-					OR = {
-						vassal_of = THIS
-						in_sphere = THIS
-					}
-				}
-			}
+			NYE = { war = no test = is_influenced }
+			YEM = { war = no test = is_influenced }
 		}
-
 		effect = {
 			prestige = 5
 			NYE = { all_core = { add_core = YEM } }
