@@ -902,7 +902,7 @@ political_decisions = {
 		}
 
 		allow = {
-			HAW = { test != is_influenced }
+			HAW = { test != is_influenced_by_this }
 			revolution_n_counterrevolution = 1
 			OR = {
 				HAW = { militancy = 8 }
@@ -947,7 +947,7 @@ political_decisions = {
 			NOT = { has_global_flag = webster_ashburton_signed }
 		}
 		allow = {
-			250 = { test = is_influenced }
+			250 = { test = is_influenced_by_this }
 			any_country = {
 				test = is_american_union
 				any_owned_province = { region = USA_247 }

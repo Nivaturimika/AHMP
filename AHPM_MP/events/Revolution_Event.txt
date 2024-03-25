@@ -23,7 +23,7 @@ country_event = {
 			limit = {
 				alliance_with = THIS
 				test != is_same_ruling_party_ideology
-				test != is_influenced
+				test != is_influenced_by_this
 			}
 			leave_alliance = THIS
 		}
@@ -741,9 +741,8 @@ country_event = {
 				}
 			}
 		}
-		random_country = {
+		FROM = {
 			limit = {
-				tag = FROM
 				NOT = {
 					any_owned_province = {
 						OR = {
@@ -762,11 +761,9 @@ country_event = {
 			}
 			any_pop = { militancy = -4 }
 			any_owned = { change_controller = THIS }
-			annex_to = THIS
+			country_event = 23218
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVT97700OPTB"
@@ -788,9 +785,7 @@ country_event = {
 				any_pop = { militancy = -8 }
 			}
 		}
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -937,7 +932,7 @@ country_event = {
 			}
 			any_pop = { militancy = -4 }
 			any_owned = { change_controller = THIS }
-			annex_to = THIS
+			country_event = 23218
 		}
 		ai_chance = {
 			factor = 100
@@ -948,38 +943,6 @@ country_event = {
 		any_pop = {
 			limit = { is_primary_culture = yes }
 			militancy = 3
-		}
-		random_country = {
-			limit = {
-				neighbour = THIS
-				any_owned_province = {
-					has_province_modifier = patriot_uprising
-					controlled_by = REB
-					province_control_days = 90
-					is_core = THIS
-					OR = {
-						AND = {
-							is_coastal = yes
-							province_control_days = 120
-						}
-						any_neighbor_province = {
-							owned_by = THIS
-						}
-					}
-					state_scope = {
-						NOT = {
-							any_owned_province = {
-								is_core = THIS
-								NOT = { controlled_by = REB }
-							}
-						}
-					}
-				}
-			}
-			relation = {
-				who = THIS
-				value = 20
-			}
 		}
 		any_neighbor_country = {
 			any_owned = {

@@ -349,9 +349,8 @@ country_event = {
 				primary_culture = manchu
 				capital = 1555
 			}
-			annex_to = THIS
+			country_event = 23218
 		}
-
 		1613 = { add_core = MCK }
 		any_owned = { limit = { is_core = MCK } add_province_modifier = { name = nationalist_agitation duration = 365 } }
 		any_owned = { limit = { is_core = MCK } add_core = QNG }

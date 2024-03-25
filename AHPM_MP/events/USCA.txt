@@ -47,7 +47,7 @@ country_event = {
 	trigger = {
 		tag = UCA
 		war = no
-		2201 = { test = is_influenced }
+		2201 = { test = is_influenced_by_this }
 		OR = {
 			exists = NIC
 			2201 = {
@@ -89,7 +89,7 @@ country_event = {
 	trigger = {
 		tag = UCA
 		war = no
-		2197 = { test = is_influenced }
+		2197 = { test = is_influenced_by_this }
 		NOT = {
 			has_country_flag = nicaragua_independence
 			exists = NIC
@@ -140,7 +140,7 @@ country_event = {
 		tag = UCA
 		exists = yes
 		war = no
-		2193 = { test = is_influenced }
+		2193 = { test = is_influenced_by_this }
 		NOT = {
 			has_country_flag = honduras_independence
 			exists = HON
@@ -189,7 +189,7 @@ country_event = {
 	trigger = {
 		tag = UCA
 		war = no
-		2191 = { test = is_influenced }
+		2191 = { test = is_influenced_by_this }
 		NOT = {
 			has_country_flag = el_salvador_independence
 			exists = ELS
@@ -238,11 +238,11 @@ country_event = {
 		tag = UCA
 		war = no
 		2191 = {
-			test = is_influenced
+			test = is_influenced_by_this
 			NOT = { average_militancy = 2 }
 		}
 		2192 = {
-			test = is_influenced
+			test = is_influenced_by_this
 			NOT = { average_militancy = 2 }
 		}
 	}
@@ -366,9 +366,9 @@ country_event = {
 	trigger = {
 		tag = UCA
 		war = no
-		2201 = { test = is_influenced }
-		2202 = { test = is_influenced }
-		2203 = { test = is_influenced }
+		2201 = { test = is_influenced_by_this }
+		2202 = { test = is_influenced_by_this }
+		2203 = { test = is_influenced_by_this }
 	}
 
 	mean_time_to_happen = {
@@ -422,7 +422,7 @@ country_event = {
 			limit = {
 				is_primary_culture = yes
 				location = {
-					test = is_influenced
+					test = is_influenced_by_this
 					is_core != THIS
 				}
 			}
@@ -499,7 +499,7 @@ country_event = {
 		badboy = 20
 		any_country = {
 			limit = {
-				test != is_influenced
+				test != is_influenced_by_this
 				OR = {
 					tag = NIC
 					tag = ELS

@@ -17,7 +17,7 @@ political_decisions = {
 			change_tag = ROM
 			any_country = {
 				limit = { is_culture_group = pan_romanian war = no }
-				annex_to = THIS
+				country_event = 23218
 			}
 			capital = 664
 			TUR = {
@@ -65,13 +65,12 @@ political_decisions = {
 			any_country = {
 				limit = {
 					primary_culture = romanian
-					ai = yes
 					OR = {
 						in_sphere = THIS
 						vassal_of = THIS
 					}
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			release_vassal = ROM
 			create_alliance = ROM
@@ -213,7 +212,7 @@ political_decisions = {
 						sphere_owner = { is_sphere_leader_of = THIS }
 					}
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			random_country = {
 				limit = { is_culture_group = czecho_slovak_culture_group part_of_sphere = no is_vassal = no }
@@ -457,10 +456,9 @@ political_decisions = {
 						tag = SLO
 						tag = ALB
 					}
-					ai = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {

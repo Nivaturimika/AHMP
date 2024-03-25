@@ -265,8 +265,7 @@ country_event = {
     option = {
         name = "EVT955186OPTB" #Reveal that we are lying and annex it
         add_country_modifier = { name = integrating_colony duration = 3650 }
-        random_country = { limit = { tag = CNG ai = yes } annex_to = THIS }
-        random_country = { limit = { tag = CNG ai = no } release = CNG add_casus_belli = { target = THIS type = make_puppet months = 50 } }
+        CNG = { release = CNG add_casus_belli = { target = THIS type = make_puppet months = 50 } }
         badboy = 5
         any_country = { limit = { is_greater_power = yes } relation = { who = THIS value = -100 } }
         any_country = {

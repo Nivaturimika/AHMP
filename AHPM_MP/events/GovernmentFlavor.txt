@@ -688,6 +688,32 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = 23218
+	title = "EVTNAME23218"
+	desc = "EVTDESC23218"
+	picture = "treaty"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA23218"
+		overlord = { inherit = THIS }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23218"
+		release_vassal = THIS
+		overlord = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
 country_event = {
 	id = 601500
 	title = "EVTNAME601500"

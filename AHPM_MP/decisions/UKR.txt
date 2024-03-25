@@ -22,7 +22,7 @@ political_decisions = {
 			if = {
 				limit = {
 					tag = UKR
-					test != is_influenced
+					test != is_influenced_by_this
 				}
 				any_country = {
 					limit = { exists = no NOT = { primary_culture = ukrainian } accepted_culture = ukrainian }
@@ -35,7 +35,7 @@ political_decisions = {
 			} else_if = {
 				limit = {
 					tag = BYE
-					test != is_influenced
+					test != is_influenced_by_this
 				}
 				any_country = {
 					limit = { exists = no NOT = { primary_culture = byelorussian } accepted_culture = byelorussian }
@@ -48,7 +48,7 @@ political_decisions = {
 			} else_if = {
 				limit = {
 					tag = LSK
-					test != is_influenced
+					test != is_influenced_by_this
 				}
 				any_country = {
 					limit = { exists = no NOT = { primary_culture = alaskan } accepted_culture = alaskan }

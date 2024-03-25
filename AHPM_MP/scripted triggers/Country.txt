@@ -45,7 +45,7 @@ is_argentina = {
 	}
 }
 
-is_influenced = {
+is_influenced_by_this = {
 	main_parameter = nation
 	this_parameter = nation
 	OR = {
@@ -55,13 +55,13 @@ is_influenced = {
 	}
 }
 
-is_influenced = {
+is_influenced_by_this = {
 	main_parameter = province
 	this_parameter = nation
 	OR = {
 		owned_by = THIS
 		empty = yes
-		owner = { test = is_influenced }
+		owner = { test = is_influenced_by_this }
 	}
 }
 
@@ -70,19 +70,19 @@ has_usca_failed = {
 	this_parameter = nation
 	ELS = {
 		exists = yes
-		test != is_influenced
+		test != is_influenced_by_this
 	}
 	HON = {
 		exists = yes
-		test != is_influenced
+		test != is_influenced_by_this
 	}
 	NIC = {
 		exists = yes
-		test != is_influenced
+		test != is_influenced_by_this
 	}
 	COS = {
 		exists = yes
-		test != is_influenced
+		test != is_influenced_by_this
 	}
 }
 

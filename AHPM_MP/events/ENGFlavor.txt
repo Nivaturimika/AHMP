@@ -1635,7 +1635,7 @@ country_event = {
 		MUG = {
 			OR = {
 				exists = no
-				test = is_influenced
+				test = is_influenced_by_this
 			}
 		}
 	}

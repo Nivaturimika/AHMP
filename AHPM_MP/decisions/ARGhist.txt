@@ -199,10 +199,9 @@ political_decisions = {
 						tag = ENT
 						tag = SBA
 					}
-					ai = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			random_country = {
 				limit = {
@@ -240,7 +239,7 @@ political_decisions = {
 			2367 = { add_core = THIS }
 			2554 = { add_core = THIS }
 			any_country = {
-				limit = { test = is_influenced }
+				limit = { test = is_influenced_by_this }
 				any_owned = {
 					limit = {
 						OR = {

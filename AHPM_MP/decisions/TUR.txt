@@ -637,21 +637,21 @@ political_decisions = {
 						in_sphere = THIS
 					}
 				}
-			annex_to = THIS
+				country_event = 23218
 			}
 			any_owned = {
-					remove_core = BHT
-					remove_core = MKN
-					remove_core = SRN
-					remove_core = BNB
-					remove_core = BDN
-					remove_core = BTL
-					remove_core = RDL
-				}
+				remove_core = BHT
+				remove_core = MKN
+				remove_core = SRN
+				remove_core = BNB
+				remove_core = BDN
+				remove_core = BTL
+				remove_core = RDL
+			}
 		}
 
 		ai_will_do = { factor = 1 }
-		}
+	}
 
 	centralize_kurdish_states = {
 		picture = map_kurdistan

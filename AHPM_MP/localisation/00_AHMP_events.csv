@@ -193,3 +193,7 @@ EVT81002213OPTC;Were there any $CULTURE$ people...? Yes? Oh the tragedy!;;;;;;;;
 EVT81002213OPTD;They left the minorities last?;;;;;;;;;;;;;
 EVT81002213OPTE;Blame the company;;;;;;;;;;;;;
 EVT81002213OPTF;This was clearly an attack by foreigners!;;;;;;;;;;;;;
+EVTNAME23218;Anexxation ultimatum
+EVTDESC23218;Long has $COUNTRY$ being subject to the forces of $FROMCOUNTRY$, the $FROMCOUNTRY_ADJ$ government has refused our pleads for independence, has left us with an astonishing revelation: We are given an ultimatum to surrender all of our forces and land to their rule. Should we comply?
+EVTOPTA23218;We have no other options
+EVTOPTB23218;We will fight!

@@ -10,8 +10,8 @@ country_event = {
 
 	trigger = {
 		is_independant = yes
-		1053 = { test = is_influenced }
-		1056 = { test = is_influenced }
+		1053 = { test = is_influenced_by_this }
+		1056 = { test = is_influenced_by_this }
 	}
 
 	mean_time_to_happen = {
@@ -92,9 +92,9 @@ country_event = {
 
 	trigger = {
 		is_independant = yes
-		1049 = { test = is_influenced }
-		1051 = { test = is_influenced }
-		1056 = { test = is_influenced }
+		1049 = { test = is_influenced_by_this }
+		1051 = { test = is_influenced_by_this }
+		1056 = { test = is_influenced_by_this }
 		1056 = { NOT = { has_country_modifier = highlander_raids } }
 		has_global_flag = 2nd_caucasian_war
 		NOT = { government = democracy }
@@ -174,9 +174,9 @@ country_event = {
 	trigger = {
 		is_independant = yes
 		war = no
-		1049 = { test = is_influenced }
-		1051 = { test = is_influenced }
-		1056 = { test = is_influenced }
+		1049 = { test = is_influenced_by_this }
+		1051 = { test = is_influenced_by_this }
+		1056 = { test = is_influenced_by_this }
 		1056 = { NOT = { has_country_modifier = highlander_raids } }
 		NOT = { has_country_flag = shamil_captured }
 		NOT = { has_country_flag = shamil_killed }
@@ -247,10 +247,10 @@ country_event = {
 	trigger = {
 		is_independant = yes
 		war = no
-		1052 = { test = is_influenced }
-		1053 = { test = is_influenced }
-		1057 = { test = is_influenced }
-		1055 = { test = is_influenced }
+		1052 = { test = is_influenced_by_this }
+		1053 = { test = is_influenced_by_this }
+		1057 = { test = is_influenced_by_this }
+		1055 = { test = is_influenced_by_this }
 		NOT = { has_country_flag = imam_shamil_raid }
 		NOT = { has_country_flag = give_up_caucasus }
 		NOT = { has_global_flag = dagestani_caucasian_war_ended }

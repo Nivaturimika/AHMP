@@ -68,25 +68,25 @@ political_decisions = {
 			PRG = {
 				OR = {
 					exists = no
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 			}
 			URU = {
 				OR = {
 					exists = no
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 			}
 			ARG = {
 				OR = {
 					exists = no
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 			}
 			ARC = {
 				OR = {
 					exists = no
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 			}
 		}

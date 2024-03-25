@@ -240,7 +240,7 @@ political_decisions = {
 		picture = annex_hawaii
 		potential = {
 			is_greater_power = yes
-			658 = { test = is_influenced }
+			658 = { test = is_influenced_by_this }
 		}
 		allow = {
 			war = no

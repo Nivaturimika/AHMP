@@ -106,18 +106,9 @@ political_decisions = {
 			random_country = {
 				limit = {
 					tag = NEH
-					ai = yes
 				}
 				neutrality = yes
-				annex_to = THIS
 				608 = { remove_core = NEH }
-			}
-			random_country = {
-				limit = {
-					tag = NEH
-					ai = no
-				}
-				neutrality = yes
 				THIS = { create_vassal = NEH }
 			}
 		}

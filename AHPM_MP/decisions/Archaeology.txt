@@ -4,7 +4,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = machu_picchu_discovered }
 			NOT = { has_country_flag = looking_for_machu_picchu }
-			2302 = { test = is_influenced }
+			2302 = { test = is_influenced_by_this }
 		}
 		allow = {
 			money = 50000
@@ -21,7 +21,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = troy_discovered }
 			NOT = { has_country_flag = search_for_the_aegean_civilizations }
-			865 = { test = is_influenced }
+			865 = { test = is_influenced_by_this }
 		}
 		allow = {
 			money = 50000

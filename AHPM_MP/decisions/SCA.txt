@@ -95,7 +95,7 @@ political_decisions = {
 							pop_majority_culture = icelandic
 							OR = { vassal_of = THIS }
 						}
-						annex_to = THIS
+						country_event = 23218
 					}
 				}
 			}

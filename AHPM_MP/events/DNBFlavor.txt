@@ -25,7 +25,7 @@ country_event = {
 				}
 				OR = {
 					exists = no
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 			}
 			set_country_flag = voting_in_danubian_federation
@@ -139,7 +139,7 @@ country_event = {
 		any_country = {
 			limit = { has_country_flag = voting_in_danubian_federation }
 			all_core = { add_core = DNB }
-			annex_to = THIS
+			country_event = 23218
 		}
 		change_tag = DNB
 		badboy = 10

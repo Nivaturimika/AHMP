@@ -943,7 +943,7 @@ country_event = {
 	trigger = {
 		test = is_japanese_imperial_leader
 		test = is_boshin_war
-		1657 = { test = is_influenced }
+		1657 = { test = is_influenced_by_this }
 		war = no
 		OR = {
 			owns = 1649
@@ -1102,7 +1102,7 @@ country_event = {
 				test = is_japanese_imperial_leader
 				exists = yes
 			}
-			annex_to = THIS
+			country_event = 23218
 		}
 		any_country = {
 			limit = {

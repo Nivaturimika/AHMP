@@ -349,47 +349,21 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = malaya_formed
-
 			prestige = 20
 			random_country = {
 				limit = {
-					tag = JOH
+					OR = {
+						tag = JOH
+						tag = PHG
+						tag = PRK
+						tag = SLG
+					}
 					OR = {
 						in_sphere = THIS
 						vassal_of = THIS
 					}
 				}
-				annex_to = THIS
-			}
-			random_country = {
-				limit = {
-					tag = PHG
-					OR = {
-						in_sphere = THIS
-						vassal_of = THIS
-					}
-				}
-				annex_to = THIS
-			}
-			random_country = {
-				limit = {
-					tag = PRK
-					OR = {
-						in_sphere = THIS
-						vassal_of = THIS
-					}
-				}
-				annex_to = THIS
-			}
-			random_country = {
-				limit = {
-					tag = SLG
-					OR = {
-						in_sphere = THIS
-						vassal_of = THIS
-					}
-				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {
@@ -465,14 +439,13 @@ political_decisions = {
 					}
 					NOT = { tag = THIS }
 					war = no
-					ai = yes
 					OR = {
 						in_sphere = THIS
 						vassal_of = THIS
 					}
 				}
 				all_core = { add_core = MLY }
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_owned = {
 				limit = {
@@ -935,7 +908,6 @@ political_decisions = {
 			}
 			any_neighbor_country = {
 				limit = {
-					ai = yes
 					war = no
 					civilized = no
 					NOT = { has_country_flag = annexed_to_FRA }
@@ -951,7 +923,7 @@ political_decisions = {
 				}
 				set_country_flag = annexed_to_FRA
 				tech_school = developing_tech_school
-				annex_to = THIS
+				country_event = 23218
 			}
 		}
 	}
@@ -1139,22 +1111,8 @@ political_decisions = {
 		effect = {
 			set_country_flag = created_my_indochina
 			prestige = 10
-			any_neighbor_country = {
+			DAI = {
 				limit = {
-					OR = {
-						primary_culture = vietnamese
-						primary_culture = thai
-						primary_culture = lao
-						primary_culture = khmer
-					}
-					civilized = no
-					NOT = { alliance_with = THIS }
-				}
-				relation = { who = THIS value = -100 }
-			}
-			random_country = {
-				limit = {
-					tag = DAI
 					OR = {
 						AND = {
 							in_sphere = THIS
@@ -1163,7 +1121,7 @@ political_decisions = {
 						vassal_of = THIS
 					}
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 		}
 	}
@@ -1356,21 +1314,19 @@ political_decisions = {
 			}
 			any_country = {
 				limit = {
-					ai = yes
 					exists = yes
 					primary_culture = lao
 					vassal_of = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {
-					ai = yes
 					exists = yes
 					primary_culture = lao
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {
@@ -1394,13 +1350,7 @@ political_decisions = {
 				owner = { country_event = 199070 }
 			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.8
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	organize_vietnam = {

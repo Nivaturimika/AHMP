@@ -833,7 +833,7 @@ political_decisions = {
 			is_greater_power = yes
 			any_country = {
 				is_culture_group = arab
-				all_core = { test = is_influenced }
+				all_core = { test = is_influenced_by_this }
 				war = no
 			}
 		}
@@ -846,8 +846,8 @@ political_decisions = {
 				any_owned = { add_core = THIS }
 			}
 			any_country = {
-				limit = { tag != THIS is_culture_group = arab test = is_influenced }
-				if = { limit = { ai = yes } annex_to = THIS }
+				limit = { tag != THIS is_culture_group = arab test = is_influenced_by_this }
+				if = { limit = { ai = yes } country_event = 23218 }
 				else = { country_event = 11101 }
 			}
 			change_tag = ARA
@@ -866,7 +866,7 @@ political_decisions = {
 			war = no
 			any_country = {
 				is_culture_group = arab
-				all_core = { test = is_influenced }
+				all_core = { test = is_influenced_by_this }
 				owns = 1157
 				war = no
 			}
@@ -881,7 +881,7 @@ political_decisions = {
 				}
 			}
 			any_country = {
-				limit = { test = is_influenced }
+				limit = { test = is_influenced_by_this }
 				any_owned = { limit = { is_core = ARA } secede_province = THIS }
 			}
 			release_vassal = ARA
@@ -918,7 +918,7 @@ political_decisions = {
 			OR = {
 				any_neighbor_country = {
 					is_culture_group = arab
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 				any_owned_province = {
 					is_culture_group = arab
@@ -963,7 +963,7 @@ political_decisions = {
 			war = no
 			any_country = {
 				primary_culture = maghrebi
-				test = is_influenced
+				test = is_influenced_by_this
 			}
 		}
 
@@ -987,7 +987,7 @@ political_decisions = {
 			any_country = {
 				limit = {
 					NOT = { primary_culture = maghrebi }
-					test = is_influenced
+					test = is_influenced_by_this
 					war = no
 				}
 				any_owned = {
@@ -999,7 +999,7 @@ political_decisions = {
 				limit = {
 					war = no
 					primary_culture = maghrebi
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 				country_event = 98650
 			}

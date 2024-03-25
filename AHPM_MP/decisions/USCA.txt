@@ -61,11 +61,11 @@ political_decisions = {
 		}
 
 		allow = {
-			GUA = { test = is_influenced }
-			NIC = { test = is_influenced }
-			ELS = { test = is_influenced }
-			COS = { test = is_influenced }
-			HON = { test = is_influenced }
+			GUA = { test = is_influenced_by_this }
+			NIC = { test = is_influenced_by_this }
+			ELS = { test = is_influenced_by_this }
+			COS = { test = is_influenced_by_this }
+			HON = { test = is_influenced_by_this }
 		}
 
 		effect = {
@@ -159,7 +159,7 @@ political_decisions = {
 					NOT = { tag = THIS }
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			UCA_2186 = { add_core = UCA } #Guatemala
 			UCA_2191 = { add_core = UCA } #El Salvador

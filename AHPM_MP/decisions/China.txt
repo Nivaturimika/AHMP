@@ -738,23 +738,19 @@ political_decisions = {
 				}
 				HNN = { all_core = { remove_core = HNN } }
 			}
-			random_country = {
+			CHI = {
 				limit = {
-					tag = CHI
-					ai = yes
 					exists = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
-			random_country = {
+			TPG = {
 				limit = {
-					tag = TPG
-					ai = yes
 					exists = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {
@@ -774,9 +770,7 @@ political_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	reunification_of_china_communist = {
@@ -949,23 +943,19 @@ political_decisions = {
 				}
 				HNN = { all_core = { remove_core = HNN } }
 			}
-			random_country = {
+			KMT = {
 				limit = {
-					tag = KMT
-					ai = yes
 					exists = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
-			random_country = {
+			TPG = {
 				limit = {
-					tag = TPG
-					ai = yes
 					exists = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			random_owned = {
 				limit = {
@@ -1175,23 +1165,19 @@ political_decisions = {
 				}
 				HNN = { all_core = { remove_core = HNN } }
 			}
-			random_country = {
+			CHI = {
 				limit = {
-					tag = CHI
-					ai = yes
 					exists = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
-			random_country = {
+			TPG = {
 				limit = {
-					tag = TPG
-					ai = yes
 					exists = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			random_owned = {
 				limit = {

@@ -1188,7 +1188,7 @@ country_event = {
 				}
 				in_sphere = THIS
 			}
-			annex_to = THIS
+			country_event = 23218
 		}
 		random_country = {
 			limit = {

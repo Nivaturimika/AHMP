@@ -161,7 +161,7 @@ political_decisions = {
 					}
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_owned = {
 				limit = {
@@ -203,7 +203,7 @@ political_decisions = {
 			SGF = {
 				all_core = {
 					OR = {
-						test = is_influenced
+						test = is_influenced_by_this
 						culture != south_german
 					}
 				}
@@ -278,7 +278,7 @@ political_decisions = {
 			NGF = {
 				all_core = {
 					OR = {
-						test = is_influenced
+						test = is_influenced_by_this
 						culture != north_german
 					}
 				}
@@ -441,7 +441,7 @@ political_decisions = {
 			nationalism_n_imperialism = 1
 			war = no
 			GER = {
-				all_core = { test = is_influenced }
+				all_core = { test = is_influenced_by_this }
 			}
 		}
 
@@ -1065,18 +1065,16 @@ political_decisions = {
 					OR = {
 						in_sphere = THIS
 						vassal_of = THIS
-						}
+					}
 					OR = {
 						tag = KTH
 						tag = LHJ
 						tag = FDL
 						tag = MHR
 					}
-					ai = yes
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
-
 			LHJ = { all_core = { add_core = YEM } }
 			FDL = { all_core = { add_core = YEM } }
 			KTH = { all_core = { add_core = YEM } }

@@ -50,21 +50,16 @@ political_decisions = {
 			remove_accepted_culture = russian
 			remove_accepted_culture = north_german
 			change_tag = UBD
-			random_country = {
+			any_country = {
 				limit = {
-					tag = LAT
-					NOT = { in_sphere = THIS }
-					NOT = { tag = THIS }
+					OR = {
+						tag = EST
+						tag = LAT
+					}
+					in_sphere != THIS
+					tag != THIS
 				}
-				annex_to = THIS
-			}
-			random_country = {
-				limit = {
-					tag = EST
-					NOT = { in_sphere = THIS }
-					NOT = { tag = THIS }
-				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {
@@ -84,46 +79,22 @@ political_decisions = {
 	create_baltic_states = {
 		picture = form_baltic_states
 		potential = {
-			NOT = {
-				tag = RUS
-				tag = PLC
-				exists = UBD
-				is_culture_group = baltic
-			}
-			OR = {
-				LAT = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS war = no } } } }
-				EST = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS war = no } } } }
-			}
+			exists != UBD
+			is_culture_group = baltic
 		}
 		allow = {
 			war = no
-			is_greater_power = yes
-			LAT = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-					}
-				}
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
 			}
-			EST = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							war = no
-						}
-					}
-				}
+			OR = {
+				LAT = { all_core = { test = is_influenced_by_this } }
+				EST = { all_core = { test = is_influenced_by_this } }
 			}
 		}
 		effect = {
 			prestige = 20
-
 			if = {
 				limit = { is_culture_group != germanic }
 				UBD = {
@@ -140,19 +111,15 @@ political_decisions = {
 					any_pop = { limit = { NOT = { has_pop_culture = north_german } } militancy = 4 }
 				}
 			}
-
-			RUS = { relation = { who = THIS value = -50 } }
-
 			any_country = {
 				limit = {
 					OR = {
 						tag = LAT
 						tag = EST
 					}
-					ai = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {
@@ -192,7 +159,7 @@ political_decisions = {
 		picture = old_vilnius
 		potential = {
 			UBD = { exists = yes }
-			NOT = { tag = RUS }
+			tag != RUS
 			OR = {
 				tag = UBD
 				is_our_vassal = UBD
@@ -228,28 +195,24 @@ political_decisions = {
 			badboy = 1
 
 			set_global_flag = lithuania_in_the_UBD
-
 			UBD = {
 				add_accepted_culture = lithuanian
 			}
-
-			random_country = {
+			LIT = {
 				limit = {
-					tag =  LIT
 					exists = yes
-					ai = yes
 					war = no
 					OR = {
 						in_sphere = THIS
 						vassal_of = THIS
 					}
 				}
-				annex_to = THIS
+				all_core = { add_core = UBD }
+				country_event = 23218
 			}
-
 			any_country = {
 				limit = {
-					NOT = { tag = UBD }
+					tag != UBD
 					any_owned_province = { is_core = LIT }
 					OR = {
 						in_sphere = THIS
@@ -257,16 +220,21 @@ political_decisions = {
 					}
 					war = no
 				}
-				any_owned = { limit = { is_core = LIT } secede_province = THIS }
+				any_owned = {
+					limit = { is_core = LIT }
+					secede_province = THIS
+				}
 			}
-
-			any_owned = { limit = { is_core = LIT NOT = { is_core = THIS } } secede_province = UBD }
-
-			LIT = { all_core = { limit = { NOT = { is_core = THIS } } add_core = UBD } }
-
-			diplomatic_influence = { who = UBD value = 50 }
-			relation = { who = UBD value = 50 }
-			UBD = { any_pop = { limit = { has_pop_culture = lithuanian } militancy = 2 } }
+			any_owned = {
+				limit = { is_core = LIT is_core != THIS }
+				secede_province = UBD
+			}
+			UBD = {
+				any_pop = {
+					limit = { has_pop_culture = lithuanian }
+					militancy = 2
+				}
+			}
 		}
 
 		ai_will_do = { factor = 1 }

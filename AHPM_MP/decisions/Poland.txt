@@ -544,7 +544,7 @@ political_decisions = {
 						culture = polish
 						culture = ukrainian
 					}
-					test = is_influenced
+					test = is_influenced_by_this
 				}
 			}
 			NOT = {

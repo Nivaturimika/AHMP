@@ -105,13 +105,13 @@ political_decisions = {
 		allow = {
 			war = no
 			civilized = yes
-			1189 = { test = is_influenced }
-			1191 = { test = is_influenced }
-			1195 = { test = is_influenced }
-			1198 = { test = is_influenced }
-			1202 = { test = is_influenced }
-			1204 = { test = is_influenced }
-			1207 = { test = is_influenced }
+			1189 = { test = is_influenced_by_this }
+			1191 = { test = is_influenced_by_this }
+			1195 = { test = is_influenced_by_this }
+			1198 = { test = is_influenced_by_this }
+			1202 = { test = is_influenced_by_this }
+			1204 = { test = is_influenced_by_this }
+			1207 = { test = is_influenced_by_this }
 		}
 
 		effect = {
@@ -145,7 +145,7 @@ political_decisions = {
 					in_sphere = THIS
 					NOT = { tag = THIS }
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 		}
 
@@ -197,42 +197,42 @@ political_decisions = {
 			war = no
 			mass_politics = 1
 			KAZ = {
-				all_core = { test = is_influenced }
+				all_core = { test = is_influenced_by_this }
 			}
 			TAJ = {
-				all_core = { test = is_influenced }
+				all_core = { test = is_influenced_by_this }
 			}
 			TKM = {
-				all_core = { test = is_influenced }
+				all_core = { test = is_influenced_by_this }
 			}
 			KOK = {
 				OR = {
 					has_global_flag = kyrgyzstan_created
-					all_core = { test = is_influenced }
+					all_core = { test = is_influenced_by_this }
 				}
 			}
 			KYR = {
 				OR = {
 					NOT = { has_global_flag = kyrgyzstan_created }
-					all_core = { test = is_influenced }
+					all_core = { test = is_influenced_by_this }
 				}
 			}
 			KHI = {
 				OR = {
 					has_global_flag = uzbekistan_created
-					all_core = { test = is_influenced }
+					all_core = { test = is_influenced_by_this }
 				}
 			}
 			BUK = {
 				OR = {
 					has_global_flag = uzbekistan_created
-					all_core = { test = is_influenced }
+					all_core = { test = is_influenced_by_this }
 				}
 			}
 			UZB = {
 				OR = {
 					NOT = { has_global_flag = uzbekistan_created }
-					all_core = { test = is_influenced }
+					all_core = { test = is_influenced_by_this }
 				}
 			}
 		}
@@ -257,7 +257,7 @@ political_decisions = {
 					}
 					NOT = { tag = THIS }
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 
 			any_country = {

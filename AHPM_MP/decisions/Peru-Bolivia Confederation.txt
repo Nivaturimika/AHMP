@@ -386,7 +386,7 @@ political_decisions = {
 					NOT = { tag = CHL }
 				}
 				all_core = { add_core = PBC }
-				annex_to = THIS
+				country_event = 23218
 			}
 			all_core = { add_core = PBC }
 			change_tag = PBC

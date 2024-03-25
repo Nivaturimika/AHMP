@@ -593,30 +593,8 @@ political_decisions = {
 				leave_alliance = THIS
 				relation = { who = THIS value = -100 }
 			}
-			random_country = {
-				limit = {
-					tag = KOR
-					ai = yes
-					civilized = no
-				}
-				annex_to = THIS
-			}
-
-			random_country = {
-				limit = {
-					tag = KOR
-					ai = yes
-					civilized = yes
-				}
-				civilized = no
-				annex_to = THIS
-			}
-
-			random_country = {
-				limit = {
-					tag = KOR
-					ai = no
-				}
+			KOR = {
+				#country_event = 23218
 				casus_belli = {
 					target = THIS
 					type = become_independent
@@ -758,13 +736,10 @@ political_decisions = {
 			set_country_flag = made_peace_with_emperor
 			remove_country_modifier = ansei_purge
 			remove_country_modifier = kobu_gattai
-			JAP = { all_core = { remove_core = JAP } }
-			random_country = {
-				limit = {
-					tag = JAP
-					exists = yes
-				}
-				annex_to = THIS
+			JAP = {
+				limit = { exists = yes }
+				all_core = { remove_core = JAP }
+				country_event = 23218
 			}
 			any_pop = {
 				limit = { is_primary_culture = yes }

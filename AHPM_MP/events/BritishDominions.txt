@@ -1071,7 +1071,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				OR = { is_core = RPL is_core = COL }
-				test = is_influenced
+				test = is_influenced_by_this
 			}
 			secede_province = THIS
 			add_core = RPL

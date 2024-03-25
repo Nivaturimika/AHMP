@@ -162,10 +162,9 @@ political_decisions = {
 						tag = AZB
 						tag = ARM
 					}
-					ai = yes
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			any_country = {
 				limit = {

@@ -4106,19 +4106,15 @@ country_event = {
 		name = "EVT971714OPTC" #Gibraltar and Portugal
 		badboy = 25
 		517 = { add_core = THIS }
-
-		random_country = {
+		POR = {
 			limit = {
-				tag = POR
 				exists = yes
 				vassal_of = THIS
 			}
-			annex_to = THIS
+			country_event = 23218
 		}
-
-		random_country = {
+		POR = {
 			limit = {
-				tag = POR
 				exists = yes
 				is_vassal = yes
 				NOT = { vassal_of = THIS }
@@ -4153,10 +4149,8 @@ country_event = {
 				}
 			}
 		}
-
-		random_country = {
+		POR = {
 			limit = {
-				tag = POR
 				exists = yes
 				is_vassal = no
 			}
@@ -4187,19 +4181,15 @@ country_event = {
 		460 = { add_core = THIS }
 		457 = { add_core = THIS }
 		464 = { add_core = THIS }
-
-		random_country = {
+		POR = {
 			limit = {
-				tag = POR
 				exists = yes
 				vassal_of = THIS
 			}
-			annex_to = THIS
+			country_event = 23218
 		}
-
-		random_country = {
+		POR = {
 			limit = {
-				tag = POR
 				exists = yes
 				is_vassal = yes
 				NOT = { vassal_of = THIS }
@@ -4234,10 +4224,8 @@ country_event = {
 				}
 			}
 		}
-
-		random_country = {
+		POR = {
 			limit = {
-				tag = POR
 				exists = yes
 				is_vassal = no
 			}
@@ -4258,7 +4246,6 @@ country_event = {
 				}
 			}
 		}
-
 		ai_chance = { factor = 3 }
 	}
 }

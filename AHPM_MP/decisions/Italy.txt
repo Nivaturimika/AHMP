@@ -1014,7 +1014,7 @@ political_decisions = {
 					tag = SRD
 					exists = yes
 				}
-				annex_to = THIS
+				country_event = 23218
 			}
 			change_tag = SAR
 			add_accepted_culture = south_italian

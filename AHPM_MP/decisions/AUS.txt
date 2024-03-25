@@ -4,7 +4,7 @@ political_decisions = {
 			tag = AUS
 			OR = {
 				exists != HUN
-				HUN = { test = is_influenced }
+				HUN = { test = is_influenced_by_this }
 			}
 			NOT = { has_global_flag = has_become_dual_monarchy }
 		}
@@ -69,7 +69,7 @@ political_decisions = {
 			}
 			war = no
 			OR = {
-				HUN = { test != is_influenced }
+				HUN = { test != is_influenced_by_this }
 				NOT = {
 					any_owned_province = { is_core = HUN }
 				}
@@ -236,7 +236,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			BOS = { test = is_influenced }
+			BOS = { test = is_influenced_by_this }
 			OR = {
 				mass_politics = 1
 				BOS = { num_of_revolts = 1 }

@@ -2341,12 +2341,8 @@ country_event = {
 
 	option = {
 		name = "EVT900701OPTA"
-		CYP = { civilized = no }
 		FROM = { release_vassal = CYP }
-		CYP = { annex_to = THIS }
-		CYP = { civilized = yes }
-		relation = { who = FROM value = 100 }
-		diplomatic_influence = { who = FROM value = 50 }
+		CYP = { country_event = 23218 }
 	}
 }
 

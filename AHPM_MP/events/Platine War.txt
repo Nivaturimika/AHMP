@@ -40,7 +40,7 @@ country_event = {
 		relation = { who = BRZ value = 100 }
 		random_country = {
 			limit = { tag = CRT vassal_of = ARC }
-			annex_to = THIS
+			country_event = 23218
 			CRT = { all_core = { remove_core = CRT add_core = THIS } }
 		}
 		ai_chance = { factor = 100 }
@@ -60,10 +60,10 @@ country_event = {
 		add_country_modifier = { name = the_big_army duration = 730 }
 		relation = { who = URU value = 100 }
 		relation = { who = BRZ value = 100 }
-		random_country = {
-			limit = { tag = CRT vassal_of = ARC }
-			annex_to = THIS
-			CRT = { all_core = { remove_core = CRT add_core = THIS } }
+		CRT = {
+			limit = { vassal_of = ARC }
+			country_event = 23218
+			all_core = { remove_core = CRT add_core = THIS }
 		}
 		any_country = {
 			limit = { war_with = THIS }
