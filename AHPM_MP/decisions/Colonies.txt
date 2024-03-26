@@ -1,27 +1,4 @@
 political_decisions = {
-	organize_colonial_armies = {
-		picture = begin_line_of_advantage
-		potential = {
-			test = is_goverment_decision
-			civilized = yes
-			colonial_nation = yes
-			any_owned_province = { is_colonial = yes is_overseas = yes }
-			NOT = { has_country_flag = colonial_armies }
-		}
-
-		allow = {
-			naval_logistics = 1
-			invention = bell_n_greys_telephones
-			money = 11000
-		}
-
-		effect = {
-			set_country_flag = colonial_armies
-			treasury = -10000
-		}
-		ai_will_do = {  factor = 1 }
-	}
-
 	commission_warship = {
 		picture = ironclad_commissions
 		potential = {
@@ -79,15 +56,21 @@ political_decisions = {
 			random_owned = { limit = { owner = { NOT = { has_global_flag = warship_commissioned } } } set_global_flag = warship_commissioned }
 			set_country_flag = warship_commissioned
 			treasury = -50000
-			any_country = { limit = { exists = no has_country_flag = warship_commissioned } clr_country_flag = warship_commissioned }
-			random_owned = { limit = { owner = { NOT = { has_country_flag = warship_variable } } } owner = { set_country_flag = warship_variable } }
+			any_country = {
+				limit = { exists = no has_country_flag = warship_commissioned }
+				clr_country_flag = warship_commissioned
+			}
 			random_owned = {
 				limit = { owner = { NOT = { has_country_flag = warship_variable } } }
-				owner = { set_variable = { which = ironclad_commision value = 0 } }
+				owner = { set_country_flag = warship_variable }
+			}
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = warship_variable } } }
+				owner = { set_variable_to_zero = ironclad_commision }
 			}
 			random_owned = {
 				limit = { owner = { has_country_flag = warship_variable NOT = { total_amount_of_ships = 1 } } }
-				owner = { set_variable = { which = ironclad_commision value = 0 } }
+				owner = { set_variable_to_zero = ironclad_commision }
 			}
 		}
 

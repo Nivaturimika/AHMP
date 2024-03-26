@@ -229,10 +229,7 @@ serfs = {
 			location = { is_colonial = yes is_overseas = yes }
 			is_primary_culture = no
 			is_accepted_culture = no
-			OR = {
-				has_pop_religion = animist
-				NOT = { country = { has_country_flag = colonial_armies } }
-			}
+			has_pop_religion = animist
 		}
 
 		modifier = {
@@ -242,7 +239,6 @@ serfs = {
 			is_primary_culture = no
 			is_accepted_culture = no
 			NOT = { has_pop_religion = animist }
-			country = { has_country_flag = colonial_armies }
 		}
 	}
 
