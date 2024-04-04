@@ -9,7 +9,7 @@ post_nelsonian_thought = {
 }
 battleship_column_doctrine = {
     area = naval_doctrine
-    year = 1836
+    year = 1846
     cost = 7200
     unciv_military = yes
     max_naval_base = 1
@@ -17,14 +17,14 @@ battleship_column_doctrine = {
 }
 raider_group_doctrine = {
     area = naval_doctrine
-    year = 1835
+    year = 1856
     cost = 10800
     unciv_military = yes
     max_naval_base = 1
 }
 blue_and_brown_water_schools = {
     area = naval_doctrine
-    year = 1835
+    year = 1866
     cost = 14400
     unciv_military = yes
     max_naval_base = 1
@@ -32,14 +32,14 @@ blue_and_brown_water_schools = {
 
 high_sea_battle_fleet = {
     area = naval_doctrine
-    year = 1835
+    year = 1876
     cost = 18000
     unciv_military = yes
     max_naval_base = 1
 }
 modern_naval_doctrine = {
     area = naval_doctrine
-    year = 1834
+    year = 1886
     cost = 21600
     unciv_military = yes
     max_naval_base = 1
@@ -56,7 +56,7 @@ clipper_design = {
 }
 steamers = {
     area = ship_construction
-    year = 1836
+    year = 1846
     cost = 7200
     unciv_military = yes
     clipper_transport = { maximum_speed = 3 }
@@ -65,7 +65,7 @@ steamers = {
 }
 iron_steamers = {
     area = ship_construction
-    year = 1835
+    year = 1856
     cost = 10800
     unciv_military = yes
     steam_transport = { maximum_speed = 4 }
@@ -73,7 +73,7 @@ iron_steamers = {
 }
 steel_steamers = {
     area = ship_construction
-    year = 1835
+    year = 1866
     cost = 14400
     unciv_military = yes
     steam_transport = { maximum_speed = 2 } #21
@@ -83,7 +83,7 @@ steel_steamers = {
 }
 steam_turbine_ships = {
     area = ship_construction
-    year = 1835
+    year = 1876
     cost = 18000
     unciv_military = yes
     steam_transport = { maximum_speed = 6 } #29
@@ -93,7 +93,7 @@ steam_turbine_ships = {
 }
 oil_driven_ships = {
     area = ship_construction
-    year = 1835
+    year = 1886
     cost = 21600
     unciv_military = yes
     steam_transport = { maximum_speed = 7 } #34
@@ -111,7 +111,7 @@ naval_design_bureaus = {
 }
 fire_control_systems = {
     area = naval_engineering
-    year = 1836
+    year = 1846
     cost = 7200
     unciv_military = yes
     navy_base = { build_time = -10 }
@@ -119,7 +119,7 @@ fire_control_systems = {
 }
 weapon_platforms = {
     area = naval_engineering
-    year = 1830
+    year = 1856
     cost = 10800
     unciv_military = yes
     navy_base = { build_time = -10 }
@@ -127,7 +127,7 @@ weapon_platforms = {
 }
 main_armament = {
     area = naval_engineering
-    year = 1830
+    year = 1866
     cost = 14400
     unciv_military = yes
     navy_base = { build_time = -10 }
@@ -135,14 +135,14 @@ main_armament = {
 }
 advanced_naval_design = {
     area = naval_engineering
-    year = 1830
+    year = 1876
     cost = 18000
     unciv_military = yes
     navy_base = { build_time = -10 }
 }
 modern_naval_design = {
     area = naval_engineering
-    year = 1830
+    year = 1886
     cost = 21600
     unciv_military = yes
     navy_base = { build_time = -10 }
@@ -156,35 +156,35 @@ alphabetic_flag_signaling = {
 }
 naval_plans = {
     area = naval_science
-    year = 1836
+    year = 1846
     cost = 7200
     unciv_military = yes
     supply_range = 0.5
 }
 naval_statistics = {
     area = naval_science
-    year = 1830
+    year = 1856
     cost = 10800
     unciv_military = yes
     supply_range = 0.5
 }
 naval_logistics = {
     area = naval_science
-    year = 1830
+    year = 1866
     cost = 14400
     unciv_military = yes
     supply_range = 1.0
 }
 naval_directionism = {
     area = naval_science
-    year = 1830
+    year = 1876
     cost = 18000
     unciv_military = yes
     supply_range = 1.0
 }
 naval_integration = {
     area = naval_science
-    year = 1830
+    year = 1886
     cost = 21600
     unciv_military = yes
     supply_range = 1.0
@@ -201,7 +201,7 @@ the_command_principle = {
 }
 naval_professionalism = {
     area = naval_leadership
-    year = 1836
+    year = 1846
     cost = 7200
     unciv_military = yes
     navy_base = { default_organisation = 5 }
@@ -209,7 +209,7 @@ naval_professionalism = {
 }
 naval_decision_making = {
     area = naval_leadership
-    year = 1830
+    year = 1856
     cost = 10800
     unciv_military = yes
     navy_base = { default_organisation = 5 }
@@ -217,7 +217,7 @@ naval_decision_making = {
 }
 naval_risk_management = {
     area = naval_leadership
-    year = 1830
+    year = 1866
     cost = 14400
     unciv_military = yes
     navy_base = { default_organisation = 5 }
@@ -225,7 +225,7 @@ naval_risk_management = {
 }
 naval_nco_training = {
     area = naval_leadership
-    year = 1830
+    year = 1876
     cost = 18000
     unciv_military = yes
     navy_base = {
@@ -234,7 +234,7 @@ naval_nco_training = {
 }
 modern_naval_training = {
     area = naval_leadership
-    year = 1830
+    year = 1886
     cost = 21600
     unciv_military = yes
     navy_base = {

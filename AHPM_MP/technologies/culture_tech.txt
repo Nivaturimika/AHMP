@@ -7,31 +7,31 @@ classicism_n_early_romanticism = {
 }
 romanticism = {
 	area = aesthetics
-	year = 1836
+	year = 1846
 	cost = 14400
 	increase_research = 0.15
 }
 realism = {
 	area = aesthetics
-	year = 1836
+	year = 1856
 	cost = 21600
 	increase_research = 0.15
 }
 impressionism = {
 	area = aesthetics
-	year = 1830
+	year = 1866
 	cost = 28800
 	increase_research = 0.15
 }
 expressionism = {
 	area = aesthetics
-	year = 1830
+	year = 1876
 	cost = 36000
 	increase_research = 0.15
 }
 mass_culture_n_the_avant_garde = {
 	area = aesthetics
-	year = 1830
+	year = 1886
 	cost = 43200
 	increase_research = 0.15
 }
@@ -45,31 +45,31 @@ late_enlightenment_philosophy = {
 }
 idealism = {
 	area = philosophy
-	year = 1830
+	year = 1846
 	cost = 14400
 	increase_research = 0.15
 }
 empiricism = {
 	area = philosophy
-	year = 1830
+	year = 1856
 	cost = 21600
 	increase_research = 0.15
 }
 analytic_philosophy = {
 	area = philosophy
-	year = 1830
+	year = 1866
 	cost = 28800
 	increase_research = 0.15
 }
 phenomenology_n_hermeneutic = {
 	area = philosophy
-	year = 1830
+	year = 1876
 	cost = 36000
 	increase_research = 0.15
 }
 anti__rationalism = {
 	area = philosophy
-	year = 1830
+	year = 1886
 	cost = 43200
 	increase_research = 0.15
 }
@@ -79,522 +79,126 @@ malthusian_thought = {
 	area = social_thought
 	year = 1836
 	cost = 3600
-
 	colonial_migration = 0.05
 	education_efficiency = 0.1
 }
 positivism = {
 	area = social_thought
-	year = 1836
+	year = 1846
 	cost = 7200
 	colonial_migration = 0.05
 	education_efficiency = 0.1
 }
 functionalism = {
 	area = social_thought
-	year = 1836
+	year = 1856
 	cost = 10800
-
 	colonial_migration = 0.05
 	education_efficiency = 0.1
 }
 biologism = {
 	area = social_thought
-	year = 1830
+	year = 1866
 	cost = 14400
-
 	colonial_migration = 0.05
 	education_efficiency = 0.1
 }
 social_science = {
 	area = social_thought
-	year = 1830
+	year = 1876
 	cost = 18000
-
 	colonial_migration = 0.05
 	education_efficiency = 0.2
 }
 social_alienation = {
 	area = social_thought
-	year = 1830
+	year = 1886
 	cost = 21600
-
 	colonial_migration = 0.05
 	education_efficiency = 0.2
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.75 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.50 }
-		}
-		modifier = {
-			factor = 2 #2
-			not = { literacy = 0.25 }
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-	}
-
 }
-
 
 #political_thought
 enlightenment_thought = {
 	area = political_thought
 	year = 1836
 	cost = 3600
-
 	max_national_focus = 1
-
-	ai_chance = {
-		factor = 11
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-			year = 1830
-		}
-		modifier = {
-			factor = 20
-			culture_has_union_tag = yes
-		}
-	}
 }
 ideological_thought = {
 	area = political_thought
-	year = 1836
+	year = 1846
 	cost = 7200
-
 	max_national_focus = 1
-
-	ai_chance = {
-		factor = 11
-		modifier = {
-			factor = 6
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.50
-			OR = {
-				total_pops = 4000000
-				AND = {
-					is_secondary_power = yes
-					any_owned_province = { port = yes }
-				}
-				AND = {
-					capital_scope = { continent = europe }
-					colonial_nation = yes
-				}
-			}
-		}
-
-		modifier = {
-			factor = 0.25
-			is_greater_power = no
-			is_secondary_power = no
-			NOT = { total_pops = 2000000 }
-		}
-
-		modifier = {
-			factor = 51
-			rank = 16
-			year = 1830
-			any_owned_province = { port = yes }
-			total_pops = 2000000
-		}
-		modifier = {
-			factor = 51
-			year = 1830
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 20
-			culture_has_union_tag = yes
-		}
-	}
 }
 state_n_government = {
 	area = political_thought
-	year = 1830
+	year = 1856
 	cost = 10800
 	max_national_focus = 1
 }
 nationalism_n_imperialism = {
 	area = political_thought
-	year = 1830
+	year = 1866
 	cost = 14400
-
 	max_national_focus = 1
-	#colonial_life_rating = -10
+	colonial_life_rating = -10
 	cb_creation_speed = 0.1
-
-	ai_chance = {
-		factor = 20
-		modifier = {
-			factor = 21
-			is_greater_power = yes
-			OR = {
-				any_greater_power = { any_owned_province = { any_neighbor_province = { empty = yes } } }
-				any_owned_province = { any_neighbor_province = { empty = yes } }
-			}
-		}
-		modifier = {
-			factor = 11
-			rank = 16
-			year = 1830
-			any_owned_province = { has_building = naval_base }
-			total_pops = 4000000
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-			year = 1835
-		}
-		modifier = {
-			factor = 51
-			rank = 16
-			year = 1830
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				total_pops = 4000000
-				AND = {
-					is_secondary_power = yes
-					any_owned_province = { port = yes }
-				}
-				AND = {
-					capital_scope = { continent = europe }
-					colonial_nation = yes
-				}
-			}
-		}
-
-		modifier = {
-			factor = 0.25
-			is_greater_power = no
-			is_secondary_power = no
-			NOT = { any_owned_province = { continent = africa } }
-			NOT = { total_pops = 4000000 }
-		}
-
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 100
-			OR = {
-				AND = {
-					cultural_union = { exists = no }
-					is_greater_power = yes
-				}
-				tag = POR
-			}
-		}
-	}
 }
 revolution_n_counterrevolution = {
 	area = political_thought
-	year = 1830
+	year = 1876
 	cost = 18000
-
 	max_national_focus = 1
 	diplomatic_points = 0.25
-	ai_chance = {
-		factor = 20
-		modifier = {
-			factor = 21
-			is_greater_power = yes
-			OR = {
-				any_greater_power = { any_owned_province = { any_neighbor_province = { empty = yes } } }
-				any_owned_province = { any_neighbor_province = { empty = yes } }
-			}
-		}
-		modifier = {
-			factor = 5
-			total_pops = 5000000
-		}
-
-		modifier = {
-			factor = 10
-			tag = RUS
-		}
-
-		modifier = {
-			factor = 51
-			rank = 16
-			year = 1830
-		}
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 0.25
-			is_greater_power = no
-			NOT = { literacy = 0.4 }
-		}
-	}
 }
 mass_politics = {
 	area = political_thought
-	year = 1830
+	year = 1886
 	cost = 21600
-
 	max_national_focus = 1
-	ai_chance = {
-		factor = 2
-		modifier = {
-			factor = 5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 5
-			total_pops = 6000000
-		}
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
-		}
-	}
 }
-
 
 #psychology
 introspectionism = {
 	area = psychology
 	year = 1836
 	cost = 3600
-
-
 	regular_experience_level = 5
 	reinforce_rate = 0.05
-
-	ai_chance = {
-		factor = 1.25
-		modifier = {
-			factor = 1.05 #1.25
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 1.1
-			year = 1830 #1840
-		}
-		modifier = {
-			factor = 2
-			year = 1830 #1850
-		}
-		modifier = {
-			factor = 21
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 11
-			rank = 16
-			year = 1830
-			any_owned_province = { port = yes }
-			total_pops = 4000000
-		}
-		modifier = {
-			factor = 2
-			is_greater_power = yes
-			year = 1835
-		}
-		modifier = {
-			factor = 51
-			rank = 16
-			year = 1830
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
-		}
-	}
-
 }
 associationism = {
 	area = psychology
-	year = 1836
+	year = 1846
 	cost = 7200
-
 	regular_experience_level = 5
 	reinforce_rate = 0.05
-
-	ai_chance = {
-		factor = 1.25
-		modifier = {
-			factor = 1.05
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 1.1
-			year = 1830 #1840
-		}
-		modifier = {
-			factor = 2
-			year = 1830 #1850
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
-		}
-	}
 }
 phenomenalism = {
 	area = psychology
-	year = 1830
+	year = 1856
 	cost = 10800
-
 	regular_experience_level = 5
 	reinforce_rate = 0.05
-
-	ai_chance = {
-		factor = 1.25
-		modifier = {
-			factor = 1.05 #1.25
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 1.1
-			year = 1830 #1860
-		}
-		modifier = {
-			factor = 2
-			year = 1830
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
-		}
-	}
 }
 experimental_psychology = {
 	area = psychology
-	year = 1830
+	year = 1866
 	cost = 14400
-
 	regular_experience_level = 5
 	reinforce_rate = 0.05
-
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 1.05 #1.25
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 1.1
-			year = 1830 #1860
-		}
-		modifier = {
-			factor = 2
-			year = 1830 #1870
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
-		}
-	}
 }
 psychoanalysis = {
 	area = psychology
-	year = 1830
+	year = 1876
 	cost = 18000
-
 	regular_experience_level = 5
 	reinforce_rate = 0.05
-
-	ai_chance = {
-		factor = 4
-		modifier = {
-			factor = 3 #1.25
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 3
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 1.1
-			year = 1830 #1880
-		}
-		modifier = {
-			factor = 2
-			year = 1830 #1890
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
-		}
-	}
-
 }
 behaviorism = {
 	area = psychology
-	year = 1830
+	year = 1886
 	cost = 21600
-
 	regular_experience_level = 5
 	reinforce_rate = 0.05
-
-	ai_chance = {
-		factor = 1.2
-		modifier = {
-			factor = 1.25
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = culture_tech_school
-		}
-		modifier = {
-			factor = 1.1
-			year = 1830
-		}
-		modifier = {
-			factor = 2
-			year = 1920
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
-		}
-	}
 }
