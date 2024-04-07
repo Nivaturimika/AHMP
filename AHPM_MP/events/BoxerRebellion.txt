@@ -342,10 +342,6 @@ country_event = {
     desc = "EVTDESC99010"
     picture = "boxers"
     major = yes
-    news = yes
-    news_desc_long = "EVTDESC99010_NEWS_LONG"
-    news_desc_medium = "EVTDESC99010_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC99010_NEWS_SHORT"
 
     trigger = {
         tag = QNG

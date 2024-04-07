@@ -410,35 +410,6 @@ political_decisions = {
 		}
 	}
 
-	the_ruhr_boom = {
-		picture = essen_ruhr
-		potential = {
-			OR = {
-				tag = PRU
-				tag = GER
-				tag = NGF
-			}
-			owns = 578
-			owns = 2561
-			owns = 575
-			NOT = { has_global_flag = ruhr_boom_has_happened }
-		}
-
-		allow = {
-			market_structure = 1
-			organized_factories = 1
-			early_railroad = 1
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = ruhr_boom
-				duration = 3650
-			}
-			set_global_flag = ruhr_boom_has_happened
-		}
-	}
-
 	league_of_three_emperors = {
 		picture = league_of_three_emperors
 		potential = {

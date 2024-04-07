@@ -521,10 +521,6 @@ country_event = {
 	id = 44154
 	title = "EVTNAME44154" #American Claims in Columbia
 	desc = "EVTDESC44154"
-	news = yes
-	news_desc_long = "EVTDESC44154_NEWS_LONG"
-	news_desc_medium = "EVTDESC44154_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC44154_NEWS_SHORT"
 	picture = "administration"
 
 	is_triggered_only = yes
@@ -532,23 +528,22 @@ country_event = {
 	option = {
 		name = "EVT44154OPTA"
 		prestige = -20
-		USA = { country_event = 44155 }
-		relation = { who = USA value = 50 }
-		COL = { all_core = { remove_core = ENG } }
+		FROM = { country_event = 44155 }
+		COL = { all_core = { remove_core = THIS } }
 		any_owned = {
 			limit = { is_core = COL }
-			secede_province = USA
+			secede_province = FROM
 		}
 		USA_78 = {
-			remove_core = ENG
+			remove_core = THIS
 			remove_core = COL
 		}
 		USA_81 = {
-			remove_core = ENG
+			remove_core = THIS
 			remove_core = COL
 		}
 		USA_91 = {
-			remove_core = ENG
+			remove_core = THIS
 			remove_core = COL
 		}
 		114 = {
@@ -562,62 +557,24 @@ country_event = {
 			remove_accepted_culture = anglo_canadian
 			remove_accepted_culture = french_canadian
 		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 1.5
-				any_greater_power = { war_with = ENG }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { relation = { who = USA value = 100 } }
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = jingoism
-			}
-		}
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
 		name = "EVT44154OPTB"
 		prestige = 5
-		leave_alliance = USA
-		relation = { who = USA value = -200 }
 		war = {
-			target = USA
+			target = FROM
 			attacker_goal = {
 				casus_belli = acquire_all_cores
-				country = ENG
+				country = THIS
 			}
 			defender_goal = {
 				casus_belli = acquire_all_cores
-				country = USA
+				country = FROM
 			}
 		}
-		ai_chance = {
-			factor = 75
-			modifier = {
-				factor = 0.5
-				relation = { who = USA value = 100 }
-			}
-			modifier = {
-				factor = 2
-				NOT = { relation = { who = USA value = 0 } }
-			}
-			modifier = {
-				factor = 1.5
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 0.8
-				war_policy = anti_military
-			}
-			modifier = {
-				factor = 0.5
-				war_policy = pacifism
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

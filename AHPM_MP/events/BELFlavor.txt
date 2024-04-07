@@ -56,13 +56,7 @@ country_event = {
 }
 
 country_event = {
-
 	id = 36705
-	news = yes
-	news_desc_long = "EVTDESC36705_NEWS_LONG"
-	news_desc_medium = "EVTDESC36705_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC36705_NEWS_SHORT"
-
 	trigger = {
 		tag = BEL
 		year = 1861
@@ -70,9 +64,7 @@ country_event = {
 			year = 1864
 		}
 	}
-
 	fire_only_once = yes
-
 	mean_time_to_happen =  {
 		months = 6
 
@@ -99,13 +91,7 @@ country_event = {
 }
 
 country_event = {
-
 	id = 36706
-	news = yes
-	news_desc_long = "EVTDESC36706_NEWS_LONG"
-	news_desc_medium = "EVTDESC36706_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC36706_NEWS_SHORT"
-
 	trigger = {
 		tag = BEL
 		year = 1861

@@ -112,10 +112,6 @@ country_event = {
 	id = 98206
 	title = "EVTNAME98206" #The Battle of Blood River
 	desc = "EVTDESC98206"
-	news = yes
-	news_desc_long = "EVTDESC98206"
-	news_desc_medium = "EVTDESC98206_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC98206_NEWS_SHORT"
 	picture = "blood_river"
 
 	is_triggered_only = yes
@@ -206,12 +202,7 @@ country_event = {
 	id = 98207
 	title = "EVTNAME98207" #The Natalia Republic
 	desc = "EVTDESC98207"
-	news = yes
-	news_desc_long = "EVTDESC98207_NEWS_LONG"
-	news_desc_medium = "EVTDESC98207_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC98207_NEWS_SHORT"
 	picture = "boer_war"
-
 	is_triggered_only = yes
 
 	option = {
@@ -315,10 +306,6 @@ country_event = {
 	id = 98210
 	title = "EVTNAME98210" #British Rule of Natal
 	desc = "EVTDESC98210"
-	news = yes
-	news_desc_long = "EVTDESC98210_NEWS_LONG"
-	news_desc_medium = "EVTDESC98210_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC98210_NEWS_SHORT"
 	picture = "deliberation"
 	major = yes
 
@@ -1744,11 +1731,6 @@ country_event = {
 	id = 98247
 	title = "EVTNAME98247" #South Africa is Lost
 	desc = "EVTDESC98247"
-	news = yes
-	news_title = "EVTNAME98248"
-	news_desc_long = "EVTDESC98247_NEWS_LONG"
-	news_desc_medium = "EVTDESC98247_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC98247_NEWS_SHORT"
 	picture = "treaty"
 
 	is_triggered_only = yes

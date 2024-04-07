@@ -150,10 +150,6 @@ country_event = {
 	id = 16010
 	title = "EVTNAME16010"
 	desc = "EVTDESC16010"
-	news = yes
-	news_desc_long = "EVTDESC16010_NEWS_LONG"
-	news_desc_medium = "EVTDESC16010_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC16010_NEWS_SHORT"
 	picture = "john_brown_raid"
 
 	fire_only_once = yes
@@ -3841,10 +3837,6 @@ country_event = {
 	id = 16500
 	title = "EVTNAME16500"
 	desc = "EVTDESC16500"
-	news = yes
-	news_desc_long = "EVTDESC16500_NEWS_LONG"
-	news_desc_medium = "EVTDESC16500_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC16500_NEWS_SHORT"
 	picture = "senate_debate"
 
 	trigger = {
@@ -4294,10 +4286,6 @@ country_event = {
 	id = 16510
 	title = "EVTNAME16510"
 	desc = "EVTDESC16510"
-	news = yes
-	news_desc_long = "EVTDESC16510_NEWS_LONG"
-	news_desc_medium = "EVTDESC16510_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC16510_NEWS_SHORT"
 	picture = "senate_debate"
 	major = yes
 
@@ -4390,17 +4378,13 @@ country_event = {
 			limit = {
 				OR = {
 					AND = {
-						any_owned_province = { is_core = USA }
-						NOT = {
-							any_owned_province = { is_core = CSA }
-						}
+						any_owned_province = { is_core = THIS }
+						NOT = { any_owned_province = { is_core = CSA } }
 					}
 					AND = {
+						any_owned_province = { any_neighbor_province = { owned_by = FSA } }
 						any_owned_province = {
-							any_neighbor_province = { owned_by = FSA }
-						}
-						any_owned_province = {
-							is_core = USA
+							is_core = THIS
 							culture = yankee
 						}
 					}
@@ -4410,17 +4394,11 @@ country_event = {
 		}
 		war = {
 			target = FSA
-			attacker_goal = {
-				casus_belli = civil_war
-			}
-			defender_goal = {
-				casus_belli = status_quo
-			}
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
 		}
 		change_tag_no_core_switch = FSA
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
@@ -4429,7 +4407,7 @@ country_event = {
 			limit = {
 				OR = {
 					AND = {
-						any_owned_province = { is_core = USA }
+						any_owned_province = { is_core = THIS }
 						NOT = {
 							any_owned_province = { is_core = CSA }
 						}
@@ -4439,7 +4417,7 @@ country_event = {
 							any_neighbor_province = { owned_by = FSA }
 						}
 						any_owned_province = {
-							is_core = USA
+							is_core = THIS
 							culture = yankee
 						}
 					}
@@ -4449,16 +4427,10 @@ country_event = {
 		}
 		war = {
 			target = FSA
-			attacker_goal = {
-				casus_belli = civil_war
-			}
-			defender_goal = {
-				casus_belli = status_quo
-			}
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 	}
 }
 
