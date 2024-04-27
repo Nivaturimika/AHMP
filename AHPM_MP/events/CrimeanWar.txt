@@ -647,7 +647,26 @@ country_event = {
 		}
 		create_alliance = ROM
 		military_access = ROM
-		ROM = { country_event = 97517 }
+		ROM = {
+			lambda_country_event = {
+				title = "EVTNAME97517" #The Russians Have Agreed
+				desc = "EVTDESC97517"
+				picture = "administration"
+				option = {
+					name = "EVT97504OPTA"
+					set_country_flag = romanian_war_of_independence
+					TUR = {
+						release_vassal = THIS
+						casus_belli = {
+							target = THIS
+							type = make_puppet
+							months = 12
+						}
+						country_event = 97525
+					}
+				}
+			}
+		}
 		casus_belli = {
 			target = TUR
 			type = free_allied_cores
@@ -674,15 +693,29 @@ country_event = {
 	option = {
 		name = "EVT97516OPTB"
 		prestige = -5
-		ROM = { country_event = 97518 }
-		relation = { who = ROM value = -50 }
-		random_owned = {
-			limit = {
-				owner = { is_greater_power = yes }
+		ROM = {
+			lambda_country_event = {
+				title = "EVTNAME97518" #The Russians Have Refused
+				desc = "EVTDESC97518"
+				picture = "administration"
+				option = {
+					name = "EVT96161OPTA"
+					prestige = -5
+					TUR = {
+						release_vassal = THIS
+						casus_belli = {
+							target = THIS
+							type = make_puppet
+							months = 12
+						}
+						country_event = 97526
+					}
+				}
 			}
-			owner = {
-				diplomatic_influence = { who = ROM value = -100 }
-			}
+		}
+		if = {
+			limit = { is_greater_power = yes }
+			diplomatic_influence = { who = ROM value = -100 }
 		}
 		ai_chance = {
 			factor = 0
@@ -694,52 +727,6 @@ country_event = {
 				factor = 3
 				war_exhaustion = 20
 			}
-		}
-	}
-}
-
-country_event = {
-	id = 97517
-	title = "EVTNAME97517" #The Russians Have Agreed
-	desc = "EVTDESC97517"
-	picture = "administration"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97504OPTA"
-		set_country_flag = romanian_war_of_independence
-		TUR = {
-			release_vassal = THIS
-			casus_belli = {
-				target = THIS
-				type = make_puppet
-				months = 12
-			}
-			country_event = 97525
-		}
-	}
-}
-
-country_event = {
-	id = 97518
-	title = "EVTNAME97518" #The Russians Have Refused
-	desc = "EVTDESC97518"
-	picture = "administration"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT96161OPTA"
-		prestige = -5
-		TUR = {
-			release_vassal = THIS
-			casus_belli = {
-				target = THIS
-				type = make_puppet
-				months = 12
-			}
-			country_event = 97526
 		}
 	}
 }

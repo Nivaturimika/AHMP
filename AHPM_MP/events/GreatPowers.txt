@@ -80,89 +80,69 @@ country_event = {
 					value = 50
 				}
 			}
-			country_event = 19007
+			# Reply to Above
+			lambda_country_event = {
+				title = "EVTNAME19005"
+				desc = "EVTDESC19007"
+				picture = "greatpowers"
+				option = {
+					name = "EVTOPTB19005"
+					diplomatic_influence = {
+						who = FROM
+						value = -100
+					}
+					random_country = {
+						limit = {
+							tag = FROM
+							part_of_sphere = yes
+						}
+						sphere_owner = {
+							relation = {
+								who = THIS
+								value = 25
+							}
+						}
+					}
+					prestige = -5
+				}
+				option = {
+					name = "EVTOPTA19005"
+					random_country = {
+						limit = {
+							tag = FROM
+							part_of_sphere = no
+							NOT = { total_pops = 10000000 }
+						}
+						add_casus_belli = {
+							target = THIS
+							type = add_to_sphere
+							months = 12
+						}
+					}
+					random_country = {
+						limit = {
+							tag = FROM
+							part_of_sphere = yes
+						}
+						sphere_owner = {
+							add_casus_belli = {
+								target = THIS
+								type = take_from_sphere
+								months = 12
+							}
+							casus_belli = {
+								target = THIS
+								type = humiliate
+								months = 12
+							}
+						}
+					}
+					badboy = 2
+				}
+			}
 		}
 	}
 }
-
-# Reply to Above
-country_event = {
-	id = 19007
-	title = "EVTNAME19005"
-	desc = "EVTDESC19007"
-	picture = "greatpowers"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTB19005"
-		diplomatic_influence = {
-			who = FROM
-			value = -100
-		}
-		relation = {
-			who = FROM
-			value = 50
-		}
-		random_country = {
-			limit = {
-				tag = FROM
-				part_of_sphere = yes
-			}
-			sphere_owner = {
-				relation = {
-					who = THIS
-					value = 25
-				}
-			}
-		}
-		prestige = -5
-	}
-
-	option = {
-		name = "EVTOPTA19005"
-		relation = {
-			who = FROM
-			value = -50
-		}
-		random_country = {
-			limit = {
-				tag = FROM
-				part_of_sphere = no
-				NOT = { total_pops = 10000000 }
-			}
-			add_casus_belli = {
-				target = THIS
-				type = add_to_sphere
-				months = 12
-			}
-		}
-		random_country = {
-			limit = {
-				tag = FROM
-				part_of_sphere = yes
-			}
-			sphere_owner = {
-				add_casus_belli = {
-					target = THIS
-					type = take_from_sphere
-					months = 12
-				}
-				casus_belli = {
-					target = THIS
-					type = humiliate
-					months = 12
-				}
-				relation = {
-					who = THIS
-					value = -25
-				}
-			}
-		}
-		badboy = 2
-	}
-}
-
 
 # Parade
 country_event = {
@@ -346,7 +326,6 @@ country_event = {
 	id = 19017
 	title = "EVTNAME19017"
 	desc = "EVTDESC19017"
-	picture = ""
 
 	trigger = {
 		war = no
@@ -487,11 +466,8 @@ province_event = {
 	id = 19020
 	title = "EVTNAME19020"
 	desc = "EVTDESC19020"
-
 	trigger = {
-		owner = {
-			is_greater_power = yes
-		}
+		owner = { is_greater_power = yes }
 		is_colonial = yes
 		is_overseas = yes
 		NOT = {
@@ -499,7 +475,6 @@ province_event = {
 			has_global_flag = botanical_expedition_in_progress
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 600
 		modifier = {
@@ -523,7 +498,6 @@ province_event = {
 	option = {
 		name = "EVTOPTA19020"
 		set_global_flag = botanical_expedition_in_progress
-
 		owner = {
 			prestige = 5
 			treasury = -1000
@@ -540,7 +514,20 @@ province_event = {
 					}
 				}
 			}
-			country_event = 19022
+			lambda_country_event = {
+				title = "EVTNAME19022"
+				desc = "EVTDESC19022"
+				picture = "Botanic_expedition"
+				option = {
+					name = "EVTOPTA19022"
+					set_country_flag = participates_in_botanical_expedition
+					prestige = 5
+				}
+				option = {
+					name = "EVTOPTB19022"
+					prestige = -5
+				}
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -559,27 +546,6 @@ province_event = {
 		ai_chance = {
 			factor = 50
 		}
-	}
-}
-
-country_event = {
-	id = 19022
-	title = "EVTNAME19022"
-	desc = "EVTDESC19022"
-	picture = "Botanic_expedition"
-
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTA19022"
-		set_country_flag = participates_in_botanical_expedition
-		prestige = 5
-	}
-
-	option = {
-		name = "EVTOPTB19022"
-		prestige = -5
 	}
 }
 

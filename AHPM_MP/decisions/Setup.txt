@@ -1463,7 +1463,7 @@ political_decisions = {
 			##########################################################
 
 			#################Giving Starting Money to Pops and Countries######################
-			any_country = { limit = { is_greater_power = yes } capitalists = { money = 100000 } aristocrats = { money = 50000 } artisans = { money = 20000 } }
+			any_greater_power = { capitalists = { money = 100000 } aristocrats = { money = 50000 } artisans = { money = 20000 } }
 			any_country = { limit = { civilized = yes } treasury = 500000 }
 
 			#################Giving Starting Money to Pops and Countries######################

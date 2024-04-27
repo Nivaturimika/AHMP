@@ -17,7 +17,45 @@ political_decisions = {
 			set_global_flag = called_congo_conference
 			any_country = {
 				limit = { is_greater_power = yes }
-				country_event = 955182
+				#The Congo Conference
+				lambda_country_event = {
+					title = "EVTNAME955182"
+					desc = "EVTDESC955182"
+					picture = "partition_of_africa"
+					option = {
+						name = "EVT955182OPTA" #Vote for them
+						relation = { who = FROM value = 25 }
+						diplomatic_influence = { who = FROM value = 25 }
+						FROM = { change_variable = { which = yes_to_congo value = 1 } }
+						set_country_flag = yes_to_congo
+						ai_chance = {
+							factor = 0.7
+							modifier = { factor = 2 OR = { FROM = { in_sphere = THIS } relation = { who = FROM value = 150 } } }
+							modifier = { factor = 1.1 relation = { who = FROM value = 100 } }
+							modifier = { factor = 0.7 NOT = { relation = { who = FROM value = -50 } } }
+							modifier = { factor = 0.4 NOT = { relation = { who = FROM value = -100 } } }
+						}
+					}
+
+					option = {
+						name = "EVT955182OPTB" #Don't vote for them
+						relation = { who = FROM value = -25 }
+						diplomatic_influence = { who = FROM value = -25 }
+						FROM = { change_variable = { which = no_to_congo value = 1 } }
+						ai_chance = {
+							factor = 0.25
+							modifier = { factor = 0.1 OR = { FROM = { in_sphere = THIS } relation = { who = FROM value = 150 } } }
+							modifier = { factor = 1.25 NOT = { relation = { who = FROM value = -50 } } }
+							modifier = { factor = 1.5 NOT = { relation = { who = FROM value = -100 } } }
+						}
+					}
+
+					option = {
+						name = "EVT955182OPTC" #Abstain
+						FROM = { change_variable = { which = abstained_to_congo value = 1 } }
+						ai_chance = { factor = 0.05 }
+					}
+				}
 			}
 			set_variable = { which = no_to_congo value = 0 }
 			set_variable = { which = yes_to_congo value = 0 }

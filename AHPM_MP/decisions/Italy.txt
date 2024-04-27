@@ -72,18 +72,180 @@ political_decisions = {
 		effect = {
 			set_country_flag = plombieres
 			AUS_726 = { add_core = THIS }
-			random_country = {
-				limit = {
-					owns = 726
-					owns = 727
-					owns = 728
-				}
-				relation = {
-					who = THIS
-					value = -100
+			FRA = {
+				lambda_country_event = {
+					title = "EVTNAME90038" #The Pact of Plombi�res
+					desc = "EVTDESC90038"
+					picture = "pact_of_piombieres"
+					option = {
+						name = "EVT90038OPTA"
+						diplomatic_influence = { who = FROM value = 100 }
+						if = {
+							limit = {
+								NOT = { badboy = 0.68 }
+							}
+							badboy = -25
+							badboy = 18
+						}
+						FROM = {
+							prestige = 10
+							create_alliance = THIS
+							add_country_modifier = {
+								name = small_country_draft
+								duration = 365
+							}
+						}
+						any_country = {
+							limit = {
+								is_culture_group = italian
+								OR = {
+									in_sphere = THIS
+									part_of_sphere = no
+								}
+								ai = yes
+								NOT = {
+									alliance_with = THIS
+									tag = FROM
+								}
+							}
+							create_alliance = THIS
+						}
+						random_country = {
+							limit = {
+								tag = AUS
+								owns = 726
+								owns = 727
+								owns = 728
+								exists = SAR
+							}
+							THIS = {
+								casus_belli = {
+									target = AUS
+									type = free_peoples
+									months = 12
+								}
+								war = {
+									target = AUS
+									attacker_goal = {
+										casus_belli = free_peoples
+										country = SAR
+										state_province_id = 726
+									}
+									call_ally = yes
+								}
+							}
+						}
+						random_country = {
+							limit = {
+								tag = AUS
+								owns = 726
+								owns = 727
+								owns = 728
+								exists = SVY
+							}
+							THIS = {
+								casus_belli = {
+									target = AUS
+									type = free_peoples
+									months = 12
+								}
+								war = {
+									target = AUS
+									attacker_goal = {
+										casus_belli = free_peoples
+										country = SVY
+										state_province_id = 726
+									}
+									call_ally = yes
+								}
+							}
+						}
+						random_country = {
+							limit = {
+								tag = KUK
+								owns = 726
+								owns = 727
+								owns = 728
+								exists = SAR
+							}
+							THIS = {
+								casus_belli = {
+									target = KUK
+									type = free_peoples
+									months = 12
+								}
+								war = {
+									target = KUK
+									attacker_goal = {
+										casus_belli = free_peoples
+										country = SAR
+										state_province_id = 726
+									}
+									call_ally = yes
+								}
+							}
+						}
+						random_country = {
+							limit = {
+								tag = KUK
+								owns = 726
+								owns = 727
+								owns = 728
+								exists = SVY
+							}
+							THIS = {
+								casus_belli = {
+									target = KUK
+									type = free_peoples
+									months = 12
+								}
+								war = {
+									target = KUK
+									attacker_goal = {
+										casus_belli = free_peoples
+										country = SVY
+										state_province_id = 726
+									}
+									call_ally = yes
+								}
+							}
+						}
+						ai_chance = {
+							factor = 95
+						}
+					}
+
+					option = {
+						name = "EVT90038OPTB"
+						diplomatic_influence = {
+							who = FROM
+							value = -200
+						}
+						FROM = {
+							prestige = -10
+							leave_alliance = THIS
+							lambda_country_event = {
+								title = "EVTNAME96161"
+								desc = "EVTDESC96161"
+								picture = "pact_of_piombieres"
+								option = {
+									name = "EVT96161OPTA"
+									set_global_flag = plombieres_refused
+									465 = { add_core = FRA }
+									466 = { add_core = FRA }
+									472 = { add_core = FRA }
+									PAP_741 = { add_core = THIS }
+									#MOD_739 = { add_core = THIS }
+									TUS_744 = { add_core = THIS }
+								}
+							}
+						}
+						ai_chance = {
+							factor = 5
+						}
+					}
 				}
 			}
-			FRA = { country_event = 90038 }
 		}
 		ai_will_do = { factor = 1 }
 	}
