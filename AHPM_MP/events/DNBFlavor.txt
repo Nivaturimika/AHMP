@@ -30,90 +30,74 @@ country_event = {
 			}
 			set_country_flag = voting_in_danubian_federation
 			set_country_flag = pending_vote_in_danubian_federation
-			country_event = { id = 98656 days = 16 }
+			lambda_country_event = {
+				title = "EVTNAME98656"
+				desc = "EVTDESC98656"
+				picture = "deliberation"
+				option = {
+					name = "EVT98656OPTA"
+					clr_country_flag = pending_vote_in_danubian_federation
+					FROM = {
+						change_variable = {
+							which = danubian_federation_voting
+							value = 1
+						}
+						change_variable = {
+							which = danubian_federation_total_votes
+							value = 1
+						}
+						lambda_country_event = {
+							title = "EVTNAME98657"
+							desc = "EVTDESC98657"
+							picture = "deliberation"
+							option = { name = "EVT98657OPTA" }
+						}
+					}
+					#DNB = { add_accepted_culture = THIS }
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVT98656OPTB"
+					clr_country_flag = pending_vote_in_danubian_federation
+					FROM = {
+						change_variable = {
+							which = danubian_federation_total_votes
+							value = 1
+						}
+						lambda_country_event = {
+							title = "EVTNAME98658"
+							desc = "EVTDESC98658"
+							picture = "deliberation"
+							option = { name = "EVT98658OPTA" }
+						}
+					}
+					#DNB = { add_accepted_culture = THIS }
+					ai_chance = { factor = 0 }
+				}
+				option = {
+					name = "EVT98656OPTC"
+					clr_country_flag = pending_vote_in_danubian_federation
+					FROM = {
+						change_variable = {
+							which = danubian_federation_voting
+							value = -1
+						}
+						change_variable = {
+							which = danubian_federation_total_votes
+							value = 1
+						}
+						lambda_country_event = {
+							title = "EVTNAME98659"
+							desc = "EVTDESC98659"
+							picture = "deliberation"
+							option = { name = "EVT98659OPTA" }
+						}
+					}
+					ai_chance = { factor = 0 }
+				}
+			}
 		}
 	}
-}
-
-country_event = {
-	id = 98656
-	title = "EVTNAME98656"
-	desc = "EVTDESC98656"
-	picture = "deliberation"
-	is_triggered_only = yes
-	option = {
-		name = "EVT98656OPTA"
-		clr_country_flag = pending_vote_in_danubian_federation
-		FROM = {
-			change_variable = {
-				which = danubian_federation_voting
-				value = 1
-			}
-			change_variable = {
-				which = danubian_federation_total_votes
-				value = 1
-			}
-			country_event = 98657
-		}
-		#DNB = { add_accepted_culture = THIS }
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = "EVT98656OPTB"
-		clr_country_flag = pending_vote_in_danubian_federation
-		FROM = {
-			change_variable = {
-				which = danubian_federation_total_votes
-				value = 1
-			}
-			country_event = 98658
-		}
-		#DNB = { add_accepted_culture = THIS }
-		ai_chance = { factor = 0 }
-	}
-	option = {
-		name = "EVT98656OPTC"
-		clr_country_flag = pending_vote_in_danubian_federation
-		FROM = {
-			change_variable = {
-				which = danubian_federation_voting
-				value = -1
-			}
-			change_variable = {
-				which = danubian_federation_total_votes
-				value = 1
-			}
-			country_event = 98659
-		}
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
-	id = 98657
-	title = "EVTNAME98657"
-	desc = "EVTDESC98657"
-	picture = "deliberation"
-	is_triggered_only = yes
-	option = { name = "EVT98657OPTA" }
-}
-
-country_event = {
-	id = 98658
-	title = "EVTNAME98658"
-	desc = "EVTDESC98658"
-	picture = "deliberation"
-	is_triggered_only = yes
-	option = { name = "EVT98658OPTA" }
-}
-
-country_event = {
-	id = 98659
-	title = "EVTNAME98659"
-	desc = "EVTDESC98659"
-	picture = "deliberation"
-	is_triggered_only = yes
-	option = { name = "EVT98659OPTA" }
 }
 
 country_event = {

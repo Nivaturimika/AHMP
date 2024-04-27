@@ -4,16 +4,13 @@ country_event = {
     title = "EVTNAME167000"
     desc = "EVTDESC167000"
     picture = "demolished_mosque"
-
     trigger = {
 		tag = EGY
 		owns = 912
 		owns = 916
     }
-
     mean_time_to_happen = { months = 15 }
     fire_only_once = yes
-
     option = {
 		name = "EVT167000OPTA"
 		any_pop = {
@@ -55,7 +52,114 @@ country_event = {
     fire_only_once = yes
     option = {
 		name = "EVT167010OPTA"
-		FRA = { country_event = { id = 167020 days = 5 } }
+		FRA = {
+			# 1860 Mount Lebanon Civil War - French response
+			lambda_country_event = {
+				title = "EVTNAME167020"
+				desc = "EVTDESC167020"
+				picture = "abd_al_qadir"
+				option = {
+					name = "EVT167020OPTA" #Spare all aid we can
+					set_country_flag = mount_lebanon_intervene
+					prestige = 5
+					912 = {
+						any_pop = {
+							limit = {
+								OR = {
+									has_pop_religion = druze
+									has_pop_religion = catholic
+									has_pop_religion = orthodox
+								}
+							}
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.9
+						}
+					}
+					913 = {
+						any_pop = {
+							limit = {
+								OR = {
+									has_pop_religion = druze
+									has_pop_religion = catholic
+									has_pop_religion = orthodox
+								}
+							}
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.9
+						}
+					}
+					902 = {
+						any_pop = {
+							limit = { has_pop_religion = druze }
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.99
+						}
+						any_pop = {
+							limit = { has_pop_religion = orthodox }
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.8
+						}
+					}
+					ai_chance = { factor = 1 }
+				}
+
+				option = {
+					name = "EVT167020OPTB" #We do not have the means to help out
+					prestige = -20
+					any_pop = {
+						limit = { has_pop_religion = catholic }
+						consciousness = 0.5
+					}
+					912 = {
+						any_pop = {
+							limit = {
+								OR = {
+									has_pop_religion = druze
+									has_pop_religion = catholic
+									has_pop_religion = orthodox
+								}
+							}
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.85
+						}
+					}
+					913 = {
+						any_pop = {
+							limit = {
+								OR = {
+									has_pop_religion = druze
+									has_pop_religion = catholic
+									has_pop_religion = orthodox
+								}
+							}
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.85
+						}
+					}
+					902 = {
+						any_pop = {
+							limit = { has_pop_religion = druze }
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.98
+						}
+						any_pop = {
+							limit = { has_pop_religion = orthodox }
+							consciousness = 6
+							militancy = 6
+							reduce_pop = 0.7
+						}
+					}
+					ai_chance = { factor = 0 }
+				}
+			}
+		}
 		ai_chance = { factor = 1 }
     }
 	option = {
@@ -107,136 +211,12 @@ country_event = {
     }
 }
 
-# 1860 Mount Lebanon Civil War - French response
-country_event = {
-    id = 167020
-    title = "EVTNAME167020"
-    desc = "EVTDESC167020"
-    picture = "abd_al_qadir"
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-		name = "EVT167020OPTA" #Spare all aid we can
-		set_country_flag = mount_lebanon_intervene
-		prestige = 5
-		912 = {
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_religion = druze
-						has_pop_religion = catholic
-						has_pop_religion = orthodox
-					}
-				}
-
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.9
-			}
-		}
-
-		913 = {
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_religion = druze
-						has_pop_religion = catholic
-						has_pop_religion = orthodox
-					}
-				}
-
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.9
-			}
-		}
-
-		902 = {
-			any_pop = {
-				limit = {
-					has_pop_religion = druze
-				}
-
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.99
-			}
-
-			any_pop = {
-				limit = {
-					has_pop_religion = orthodox
-				}
-
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.8
-			}
-		}
-		ai_chance = { factor = 1 }
-    }
-
-    option = {
-		name = "EVT167020OPTB" #We do not have the means to help out
-		prestige = -20
-		any_pop = {
-			limit = { has_pop_religion = catholic }
-			consciousness = 0.5
-		}
-		912 = {
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_religion = druze
-						has_pop_religion = catholic
-						has_pop_religion = orthodox
-					}
-				}
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.85
-			}
-		}
-		913 = {
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_religion = druze
-						has_pop_religion = catholic
-						has_pop_religion = orthodox
-					}
-				}
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.85
-			}
-		}
-		902 = {
-			any_pop = {
-				limit = { has_pop_religion = druze }
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.98
-			}
-			any_pop = {
-				limit = { has_pop_religion = orthodox }
-				consciousness = 6
-				militancy = 6
-				reduce_pop = 0.7
-			}
-		}
-		ai_chance = { factor = 0 }
-    }
-}
-
 # Hauran Druze rebellion
 country_event = {
     id = 167030
     title = "EVTNAME167030"
     desc = "EVTDESC167030"
     picture = "arab_revolt"
-
     trigger = {
 		OR = {
 			tag = TUR
