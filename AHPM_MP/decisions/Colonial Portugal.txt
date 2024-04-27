@@ -69,28 +69,51 @@ political_decisions = {
 
 		effect = {
 			badboy = 4
-			POR = { country_event = 97010 }
-			set_country_flag = ultimatum_to_portugal_sent
-		}
+			POR = {
+				# Ultimatum from the UK, if Portugal should colonize Zambia
+				lambda_country_event = {
+					title = "EVTNAME97010" #The Portuguese Colonies
+					desc = "EVTDESC97010"
+					picture = "scramble_for_africa"
+					option = {
+						name = "EVT97010OPTA"
+						prestige = -20
+						FROM = { country_event = 97011 }
+						leave_alliance = FROM
+						ai_chance = { factor = 1 }
+					}
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.8
-			}
-			modifier = {
-				factor = 0
-				truce_with = POR
-			}
-			modifier = {
-				factor = 0
-				any_greater_power = {
-					is_sphere_leader_of = POR
-					neighbour = THIS
+					option = {
+						name = "EVT97010OPTB"
+						prestige = 5
+						FROM = {
+							lambda_country_event = {
+								title = "EVTNAME97012" #Portugal Has Refused
+								desc = "EVTDESC97012"
+								picture = "treaty"
+								option = {
+									name = "EVT97012OPTA"
+									prestige = -10
+									casus_belli = {
+										target = FROM
+										type = place_in_the_sun
+										months = 60
+									}
+									diplomatic_influence = {
+										who = FROM
+										value = -200
+									}
+								}
+							}
+						}
+						leave_alliance = FROM
+						ai_chance = { factor = 0 }
+					}
 				}
 			}
+			set_country_flag = ultimatum_to_portugal_sent
 		}
+		ai_will_do = { factor = 1 }
 	}
 
 	treaty_of_simulambuko = {
@@ -104,11 +127,10 @@ political_decisions = {
 			}
 			OR = {
 				has_global_flag = berlin_conference
-				POR = { owns = 2001 }
-				2000 = { controlled_by = POR }
+				THIS = { owns = 2001 }
+				2000 = { controlled_by = THIS }
 			}
 		}
-
 		allow = {
 			KON = {
 				neighbour = POR
@@ -116,14 +138,32 @@ political_decisions = {
 				civilized = no
 			}
 		}
-
 		effect = {
 			badboy = 2
 			prestige = 5
-			random_country = { limit = { is_sphere_leader_of = KON } country_event = 49518 }
-			random_owned = {
-				limit = { owner = { war_with = KON } }
-				owner = { end_war = KON }
+			random_country = {
+				limit = { is_sphere_leader_of = KON }
+				#Treaty of Simulambuko for the sphere owner of Kongo
+				lambda_country_event = {
+					title = "EVTNAME49518"
+					desc = "EVTDESC49518"
+					picture = "scramble_for_africa"
+					option = {
+						name = "EVT49518OPTA"
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVT49518OPTB"
+						badboy = 2
+						casus_belli = { target = FROM type = add_to_sphere months = 24 }
+						casus_belli = { target = FROM type = humiliate months = 24 }
+						ai_chance = { factor = 0 }
+					}
+				}
+			}
+			if = {
+				limit = { war_with = KON }
+				end_war = KON
 			}
 			KON = {
 				any_owned = {
@@ -133,10 +173,9 @@ political_decisions = {
 							province_id = 2001
 						}
 					}
-					secede_province = POR
+					secede_province = THIS
 				}
 			}
-			relation = { who = KON value = 400 }
 		}
 
 		ai_will_do = { factor = 1 }
@@ -185,7 +224,34 @@ political_decisions = {
 			set_country_flag = zanzibar_sale
 			2045 = {
 				owner = {
-					country_event = 97008
+					lambda_country_event = {
+						title = "EVTNAME97008"
+						desc = "EVTDESC97008"
+						picture = "treaty"
+						option = {
+							name = "EVT97008OPTA"
+							prestige = 5
+							money = -100000
+							FROM = {
+								money = 100000
+								any_owned = {
+									limit = {
+										OR = {
+											region = ENG_2036
+											region = ENG_2039
+										}
+									}
+									secede_province = THIS
+								}
+							}
+							ai_chance = { factor = 1 }
+						}
+						option = {
+							name = "EVT97008OPTB"
+							prestige = -5
+							ai_chance = { factor = 0 }
+						}
+					}
 				}
 			}
 		}
@@ -251,7 +317,30 @@ political_decisions = {
 			set_country_flag = mombasa_sale
 			2032 = {
 				owner = {
-					country_event = 97009
+					lambda_country_event = {
+						title = "EVTNAME97009"
+						desc = "EVTDESC97009"
+						picture = "treaty"
+						option = {
+							name = "EVT97008OPTA"
+							prestige = 5
+							money = -100000
+							FROM = {
+								money = 100000
+								any_owned = {
+									limit = { region = ENG_2024 }
+									secede_province = THIS
+								}
+							}
+							ai_chance = { factor = 1 }
+						}
+
+						option = {
+							name = "EVT97008OPTB"
+							prestige = -5
+							ai_chance = { factor = 0 }
+						}
+					}
 				}
 			}
 		}

@@ -1,31 +1,4 @@
 country_event = {
-	id = 4661010
-	title = "EVTNAME4661010" #Paraguay declares independence
-	desc = "EVTDESC4661010"
-	picture = "paraguay_independence"
-
-	is_triggered_only = yes
-
-
-	option = {
-		name = "EVT4661010PTA" #Recognize Paraguay
-		badboy = -1
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = "EVT4661010PTB" #Don't Recognize it
-		badboy = 10
-		casus_belli = {
-			target = PRG
-			type = make_puppet
-			months = 12
-		}
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
 	id = 700000
 	title = "EVTNAME700000" #Death of Francia
 	desc = "EVTDESC700000"
@@ -219,40 +192,39 @@ country_event = {
 	option = {
 		name = "EVTOPT700005A"
 		FROM = { military_access = THIS }
-		FROM = { country_event = 700006 }
+		FROM = {
+			lambda_country_event = {
+				title = "EVTNAME700006" #USA gets access
+				desc = "EVTDESC700006"
+				picture = "usa_ship"
+				option = {
+					name = "EVTOPT700006A"
+					PRG = {
+						country_event = {
+							id = 700008
+							days = 60
+						}
+					}
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVTOPT700006B"
+					PRG = {
+						country_event = {
+							id = 700008
+							days = 60
+						}
+					}
+					prestige = -15
+					ai_chance = { factor = 0 }
+				}
+			}
+		}
 		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVTOPT700005B"
 		FROM = { country_event = 700007 }
-		ai_chance = { factor = 0 }
-	}
-}
-country_event = {
-	id = 700006
-	title = "EVTNAME700006" #USA gets access
-	desc = "EVTDESC700006"
-	picture = "usa_ship"
-	is_triggered_only = yes
-	option = {
-		name = "EVTOPT700006A"
-		PRG = {
-			country_event = {
-				id = 700008
-				days = 60
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = "EVTOPT700006B"
-		PRG = {
-			country_event = {
-				id = 700008
-				days = 60
-			}
-		}
-		prestige = -15
 		ai_chance = { factor = 0 }
 	}
 }
@@ -299,7 +271,40 @@ country_event = {
 		FROM = {
 			treasury = 500
 			prestige = 10
-			country_event = 700009
+			lambda_country_event = {
+				title = "EVTNAME700009" #End of the war
+				desc = "EVTDESC700009"
+				picture = "paraguayan_expedition"
+				option = {
+					name = "EVTOPT700009A"
+					FROM = { clr_country_flag = asked_for_peace
+					clr_country_flag = usa_expedition }
+					end_war = FROM
+					end_military_access = URU
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVTOPT700009B"
+					FROM = { clr_country_flag = asked_for_peace
+					clr_country_flag = usa_expedition }
+					badboy = 5
+						war = {
+						target = FROM
+						attacker_goal = { casus_belli = humiliate }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = no
+					}
+					FROM = {
+						lambda_country_event = {
+							title = "EVTNAME700012" #USA doesn't end the war
+							desc = "EVTDESC700012"
+							picture = "paraguayan_expedition"
+							option = { name = "EVTOPT700012A" }
+						}
+					}
+					ai_chance = { factor = 0 }
+				}
+			}
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -322,58 +327,6 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
-
-country_event = {
-	id = 700009
-	title = "EVTNAME700009" #End of the war
-	desc = "EVTDESC700009"
-	picture = "paraguayan_expedition"
-	is_triggered_only = yes
-	option = {
-		name = "EVTOPT700009A"
-		FROM = { clr_country_flag = asked_for_peace
-		clr_country_flag = usa_expedition }
-		end_war = FROM
-		end_military_access = URU
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = "EVTOPT700009B"
-		FROM = { clr_country_flag = asked_for_peace
-		clr_country_flag = usa_expedition }
-		badboy = 5
-			war = {
-			target = FROM
-			attacker_goal = { casus_belli = humiliate }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = no
-		}
-		FROM = { country_event = 700012 }
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
-	id = 700010
-	title = "EVTNAME700010" #Paraguay claimed misiones
-	desc = "EVTDESC700010"
-	picture = "guarani_misiones"
-
-	fire_only_once = yes
-
-	is_triggered_only = yes
-
-	mean_time_to_happen = { days = 3 }
-
-
-	option = {
-		name = "EVTOPT700010A"
-		relation = {
-			who = PRG
-			value = -50
-				}
-			}
-		}
 
 country_event = {
 	id = 700011
@@ -418,31 +371,6 @@ country_event = {
 			}
 		}
 	}
-
-country_event = {
-	id = 700012
-	title = "EVTNAME700012" #USA doesn't end the war
-	desc = "EVTDESC700012"
-	picture = "paraguayan_expedition"
-	is_triggered_only = yes
-	option = { name = "EVTOPT700012A" }
-}
-
-country_event = {
-	id = 700013
-	title = "EVTNAME700013"
-	desc = "EVTDESC700013"
-	picture = "paraguay_independence"
-	is_triggered_only = yes
-	option = {
-		name = "EVTOPT700013A"
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = "EVTOPT700013B"
-		ai_chance = { factor = 0 }
-	}
-}
 
 country_event = {
 	id = 700014
@@ -529,10 +457,10 @@ country_event = {
 		BRZ = { relation = { who = THIS value = 210 } }
 		2420 = { remove_core = PRG }
 		ai_chance = { factor = 100 }
-		}
+	}
 	option = {
 		name = "EVTOPT700016B"
 		any_neighbor_country = { relation = { who = THIS value = -400 } }
 		ai_chance = { factor = 0 }
-		}
 	}
+}

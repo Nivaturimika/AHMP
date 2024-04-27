@@ -5,9 +5,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = neuchatel_question_solved }
 			tag = SWI
-			NEH = {
-				vassal_of = SWI
-			}
+			NEH = { vassal_of = THIS }
 			OR = {
 				has_country_flag = neuchatel_crisis_escalated
 				NOT = { any_greater_power = { has_country_flag = claiming_neuchatel } }
@@ -46,12 +44,12 @@ political_decisions = {
 					exists = yes
 					has_country_flag = supports_switzerland
 				}
-				leave_alliance = SWI
+				leave_alliance = THIS
 				clr_country_flag = supports_switzerland
 			}
 			NEH = {
 				neutrality = yes
-				annex_to = SWI
+				annex_to = THIS
 			}
 			608 = { remove_core = NGF }
 			608 = { remove_core = GER }
@@ -103,10 +101,7 @@ political_decisions = {
 				leave_alliance = SWI
 				clr_country_flag = supports_switzerland
 			}
-			random_country = {
-				limit = {
-					tag = NEH
-				}
+			NEH = {
 				neutrality = yes
 				608 = { remove_core = NEH }
 				THIS = { create_vassal = NEH }
@@ -156,10 +151,7 @@ political_decisions = {
 		}
 
 		effect = {
-			add_country_modifier = {
-				name = signed_the_geneva_convention
-				duration = -1
-			}
+			add_country_modifier = signed_the_geneva_convention
 			set_global_flag = geneva_convention_held
 			prestige = 10
 		}
@@ -222,11 +214,9 @@ political_decisions = {
 			badboy = -1
 		}
 	}
-
 	withdraw_signature_geneva_convetion = {
 		alert = no
 		picture = sign_the_geneva_convention
-
 		potential = {
 			has_global_flag = geneva_convention_held
 			has_country_modifier = signed_the_geneva_convention
@@ -245,9 +235,8 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 0 }
 	}
-
 	build_gotthard_tunnel = {
-	picture = build_gotthard_tunnel
+		picture = build_gotthard_tunnel
 		potential = {
 			tag = SWI
 			owns = 606
@@ -270,7 +259,6 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-
 	swiss_banking_and_industry = {
 		picture = institute_central_bank
 		potential = {
@@ -278,7 +266,6 @@ political_decisions = {
 			NOT = { has_country_modifier = swiss_banking }
 			has_country_modifier = central_bank_established
 		}
-
 		allow = {
 			government = democracy
 			modern_central_bank_system = 1
@@ -291,10 +278,9 @@ political_decisions = {
 
 		effect = {
 			add_country_modifier = { name = land_of_opportunity duration = 730 }
-			add_country_modifier = { name = swiss_banking duration = -1 }
+			add_country_modifier = swiss_banking
 		}
 	}
-
 	enact_freedom_of_religion = {
 		picture = preacher
 		potential = {
@@ -304,7 +290,6 @@ political_decisions = {
 			}
 			NOT = { has_country_modifier = freedom_of_religion }
 		}
-
 		allow = {
 			OR = {
 				government = democracy
@@ -325,12 +310,10 @@ political_decisions = {
 				}
 			}
 		}
-
 		effect = {
 			add_country_modifier = { name = freedom_of_religion duration = -1 }
 		}
 	}
-
 	removing_neuchatel_cores = {
 		picture = declare_republic_of_neuchatel
 		potential = {
@@ -346,9 +329,7 @@ political_decisions = {
 				}
 			}
 		}
-
 		allow = { war = no }
-
 		effect = {
 			608 = { remove_core = NEH }
 			608 = { remove_core = PRU }
@@ -357,13 +338,12 @@ political_decisions = {
 			any_country = { clr_country_flag = neuchatel_crisis_escalated }
 		}
 	}
-
 	claim_vorarlberg = {
 		picture = claim_vorarlberg
 		potential = {
 			tag = SWI
 			exists = yes
-			614 = { NOT = { is_core = SWI } }
+			614 = { NOT = { is_core = THIS } }
 		}
 
 		allow = {
@@ -378,10 +358,9 @@ political_decisions = {
 
 		effect = {
 			badboy = 5
-			614 = { add_core = SWI }
+			614 = { add_core = THIS }
 		}
 	}
-
 	declare_neutrality = {
 		potential = {
 			civilized = yes
@@ -405,17 +384,13 @@ political_decisions = {
 			}
 		}
 	}
-
 	abandon_neutrality = {
 		picture = declare_neutrality
 		potential = {
 			has_country_modifier = neutrality_modifier
 			NOT = { has_country_flag = abandoned_neutrality }
 		}
-
-		allow = {
-		}
-
+		allow = {}
 		effect = {
 			set_country_flag = abandoned_neutrality
 			prestige = -20

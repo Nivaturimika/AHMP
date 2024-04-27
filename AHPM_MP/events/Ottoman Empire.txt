@@ -1865,20 +1865,6 @@ country_event = {
 	}
 }
 
-#Rise of Bedr Khan - For Persia
-country_event = {
-	id = 986501
-	title = "EVTNAME986501"
-	desc = "EVTDESC986501"
-	picture = "bedr_khan_massacres"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT986501OPTA"
-	}
-}
-
 #Rise of Bedr Khan
 country_event = {
 	id = 986503
@@ -1964,11 +1950,14 @@ country_event = {
 				}
 				defender_goal = { casus_belli = humiliate }
 		}
-
-		random_country = {
-			limit = { tag = PER ai = yes exists = yes }
-			relation = { who = BHT value = -400 }
-			country_event = 986501
+		PER = {
+			#Rise of Bedr Khan - For Persia
+			lambda_country_event = {
+				title = "EVTNAME986501"
+				desc = "EVTDESC986501"
+				picture = "bedr_khan_massacres"
+				option = { name = "EVT986501OPTA" }
+			}
 			war = {
 				target = BHT
 				attacker_goal = {
@@ -1983,13 +1972,7 @@ country_event = {
 			}
 		}
 
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				BHT = { ai = no }
-			}
-		}
+		ai_chance = { factor = 100 }
 	}
 
 	option = {

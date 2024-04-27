@@ -68,9 +68,112 @@ country_event = {
 		set_country_flag = noattend_olympiad
 		any_country = { #Send invites to other IOC members
 			limit = { test = can_attend_olympiads }
-			country_event = {
-				id = 23403
-				days = 60
+			lambda_country_event = {
+				title = "EVTNAME23403"
+				desc = "EVTDESC23403"
+				picture = "Olympics"
+				option = {
+					name = "EVTOPTA23403"
+					set_country_flag = attend_olympiad
+					prestige = 3
+					if = {
+						limit = { test != pending_olympiad_delegations }
+						random_country = {
+							limit = { has_country_flag = host_olympiad }
+							lambda_country_event = {
+								title = "EVTNAME23404"
+								desc = "EVTDESC23404"
+								picture = "Olympics"
+								major = yes
+								immediate = {
+									prestige = 15
+									plurality = 1
+									random_country = {
+										limit = { has_country_flag = attend_olympiad }
+										lambda_country_event = {
+											title = "EVTNAME23405"
+											desc = "EVTDESC23405"
+											picture = "Olympics"
+											option = {
+												name = "EVTOPTA23405"
+												prestige = 3
+												plurality = 0.5
+											}
+											option = {
+												name = "EVTOPTB23405"
+												prestige = 3.5
+												plurality = 0.45
+											}
+											option = {
+												name = "EVTOPTC23405"
+												prestige = 4
+												plurality = 0.4
+											}
+											option = {
+												name = "EVTOPTD23405"
+												prestige = 4.5
+												plurality = 0.35
+											}
+											option = {
+												name = "EVTOPTE23405"
+												prestige = 5
+												plurality = 0.3
+											}
+										}
+									}
+									random_country = {
+										limit = { has_country_flag = attend_olympiad }
+										random = {
+											95 = {  }
+											5 = {
+												lambda_country_event = {
+													title = "EVTNAME23406"
+													desc = "EVTDESC23406"
+													picture = "Olympics"
+													option = {
+														name = "EVTOPTA23406"
+														prestige = -2
+														ai_chance = { factor = 1 }
+													}
+													option = {
+														name = "EVTOPTB23406"
+														prestige = -10
+														FROM = { prestige = -5 }
+														ai_chance = { factor = 0 }
+													}
+													option = {
+														name = "EVTOPTC23406"
+														badboy = 2
+														prestige = 5
+														add_casus_belli = {
+															target = FROM
+															type = humiliate
+															months = 18
+														}
+														ai_chance = { factor = 0 }
+													}
+												}
+											}
+										}
+									}
+									any_country = {
+										clr_country_flag = attend_olympiad
+										clr_country_flag = nohost_olympiad
+										clr_country_flag = host_olympiad
+									}
+								}
+								option = { name = "EVTOPTA23404" }
+							}
+						}
+					}
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVTOPTB23403"
+					set_country_flag = noattend_olympiad
+					prestige = -1
+					ai_chance = { factor = 0 }
+				}
 			}
 		}
 		ai_chance = { factor = 0 }
@@ -83,125 +186,6 @@ country_event = {
 		random_country = { #Find another host
 			limit = { test = can_host_olympiads }
 			country_event = 23401
-		}
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
-	id = 23403
-	title = "EVTNAME23403"
-	desc = "EVTDESC23403"
-	picture = "Olympics"
-	is_triggered_only = yes
-	option = {
-		name = "EVTOPTA23403"
-		set_country_flag = attend_olympiad
-		prestige = 3
-		if = {
-			limit = { test != pending_olympiad_delegations }
-			random_country = {
-				limit = { has_country_flag = host_olympiad }
-				country_event = 23404
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = "EVTOPTB23403"
-		set_country_flag = noattend_olympiad
-		prestige = -1
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
-	id = 23404
-	title = "EVTNAME23404"
-	desc = "EVTDESC23404"
-	picture = "Olympics"
-	major = yes
-	is_triggered_only = yes
-	immediate = {
-		prestige = 15
-		plurality = 1
-		random_country = {
-			limit = { has_country_flag = attend_olympiad }
-			country_event = 23405
-		}
-		random_country = {
-			limit = { has_country_flag = attend_olympiad }
-			random = {
-				95 = {  }
-				5 = { country_event = 23406 }
-			}
-		}
-		any_country = {
-			clr_country_flag = attend_olympiad
-			clr_country_flag = nohost_olympiad
-			clr_country_flag = host_olympiad
-		}
-	}
-	option = { name = "EVTOPTA23404" }
-}
-country_event = {
-	id = 23405
-	title = "EVTNAME23405"
-	desc = "EVTDESC23405"
-	picture = "Olympics"
-	is_triggered_only = yes
-	option = {
-		name = "EVTOPTA23405"
-		prestige = 3
-		plurality = 0.5
-	}
-	option = {
-		name = "EVTOPTB23405"
-		prestige = 3.5
-		plurality = 0.45
-	}
-	option = {
-		name = "EVTOPTC23405"
-		prestige = 4
-		plurality = 0.4
-	}
-	option = {
-		name = "EVTOPTD23405"
-		prestige = 4.5
-		plurality = 0.35
-	}
-	option = {
-		name = "EVTOPTE23405"
-		prestige = 5
-		plurality = 0.3
-	}
-}
-
-country_event = {
-	id = 23406
-	title = "EVTNAME23406"
-	desc = "EVTDESC23406"
-	picture = "Olympics"
-	is_triggered_only = yes
-	option = {
-		name = "EVTOPTA23406"
-		prestige = -2
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = "EVTOPTB23406"
-		prestige = -10
-		FROM = { prestige = -5 }
-		ai_chance = { factor = 0 }
-	}
-	option = {
-		name = "EVTOPTC23406"
-		badboy = 2
-		prestige = 5
-		add_casus_belli = {
-			target = FROM
-			type = humiliate
-			months = 18
 		}
 		ai_chance = { factor = 0 }
 	}

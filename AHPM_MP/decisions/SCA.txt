@@ -305,7 +305,29 @@ political_decisions = {
 						}
 					}
 				}
-				country_event = 49501
+				lambda_country_event = {
+					title = "EVTNAME49501" #Reforming the Kalmar Union
+					desc = "EVTDESC49501"
+					picture = "danishgovernment"
+					option = {
+						name = "EVTOPTA49501"
+						create_alliance = FROM
+						add_country_modifier = kalmar_union
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVTOPTB49501" #Refuse
+						set_country_flag = refused_kalmar_union
+						FROM = {
+							diplomatic_influence = {
+								who = THIS
+								value = -50
+							}
+							country_event = 49502
+						}
+						ai_chance = { factor = 0 }
+					}
+				}
 			}
 			add_country_modifier = {
 				name = leader_of_kalmar
@@ -367,7 +389,46 @@ political_decisions = {
 					exists = yes
 					has_country_modifier = kalmar_union
 				}
-				country_event = 49503
+				lambda_country_event = {
+					title = "EVTNAME49503" #Form a Customs Union?
+					desc = "EVTDESC49503"
+					picture = "danishgovernment"
+					option = {
+						name = "EVTOPTA49503" #Agree
+						random_country = {
+							limit = {
+								is_sphere_leader_of = THIS
+								tag != FROM
+							}
+							diplomatic_influence = {
+								who = THIS
+								value = -100
+							}
+						}
+						FROM = {
+							diplomatic_influence = {
+								who = THIS
+								value = 50
+							}
+						}
+						add_country_modifier = customs_union
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVTOPTB49503" #Refuse
+						set_country_flag = refused_kalmar_union
+						remove_country_modifier = kalmar_union
+						remove_country_modifier = customs_union
+						FROM = {
+							diplomatic_influence = {
+								who = THIS
+								value = -50
+							}
+							country_event = 49502
+						}
+						ai_chance = { factor = 0 }
+					}
+				}
 			}
 			add_country_modifier = {
 				name = customs_union
@@ -528,18 +589,29 @@ political_decisions = {
 		effect = {
 			random_country = {
 				limit = { has_country_modifier = leader_of_kalmar }
-				country_event = 49509
+				lambda_country_event = {
+					title = "EVTNAME49509" #Leadership of Kalmar changes hands
+					desc = "EVTDESC49509"
+					picture = "danishgovernment"
+					option = {
+						name = "EVT49509OPTA"
+						FROM = {
+							diplomatic_influence = {
+								who = THIS
+								value = 100
+							}
+						}
+						create_alliance = FROM
+						remove_country_modifier = leader_of_kalmar
+						add_country_modifier = kalmar_union
+					}
+				}
 			}
 			remove_country_modifier = kalmar_union
-			add_country_modifier = {
-				name = leader_of_kalmar
-				duration = -1
-			}
+			add_country_modifier = leader_of_kalmar
 		}
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	join_kalmar_union = {

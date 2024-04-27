@@ -25,7 +25,44 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
-			CHL = { country_event = 97090 }
+			CHL = {
+				lambda_country_event = {
+					title = "EVTNAME97090" #The Argentina-Chile Border Treaty
+					desc = "EVTDESC97090"
+					picture = "argentina_chile_border_treaty"
+					option = {
+						name = "EVT97090OPTA" #Sign the treaty.
+						CHL_2332 = { add_core = THIS }
+						any_owned = {
+							limit = {
+								FROM = { test = is_argentina }
+								is_core = FROM
+							}
+							secede_province = FROM
+						}
+						FROM = {
+							any_owned = {
+								limit = { is_core = THIS }
+								secede_province = THIS
+							}
+						}
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVT97090OPTB" #There is no need for such an agreement.
+						CHL_2332 = { add_core = THIS }
+						2399 = { add_core = THIS }
+						2400 = { add_core = THIS }
+						if = {
+							limit = { FROM = { test = is_argentina } }
+							2335 = { add_core = THIS }
+							2334 = { add_core = THIS }
+							2333 = { add_core = THIS }
+						}
+						ai_chance = { factor = 0 }
+					}
+				}
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -38,7 +75,6 @@ political_decisions = {
 			has_global_flag = entre_rios_rebellion
 			NOT = { has_country_flag = called_for_recruits }
 		}
-
 		allow = {
 			OR = {
 				war_with = ARG
@@ -46,7 +82,6 @@ political_decisions = {
 			}
 			NOT = { has_country_modifier = small_country_draft }
 		}
-
 		effect = {
 			set_country_flag = called_for_recruits
 			money = 50000
@@ -54,7 +89,6 @@ political_decisions = {
 				name = small_country_draft
 				duration = 365
 			}
-
 			ARC = {
 				any_pop = {
 					scaled_militancy = {
@@ -63,12 +97,8 @@ political_decisions = {
 					}
 				}
 			}
-
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	make_buenos_aires_capital = {

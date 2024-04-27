@@ -115,48 +115,43 @@ country_event = {
 	mean_time_to_happen = { months = 50 }
 	option = {
 		name = "EVT95612OPTA"
-		ENG = { country_event = 95613 }
-		RUS = { country_event = 95613 }
-		add_country_modifier = { name = border_incident duration = 1825 }
-	}
-}
-country_event = {
-	id = 95613
-	title = "EVTNAME95613" #Border Incident
-	desc = "EVTDESC95613"
-	picture = "rebellion"
-	is_triggered_only = yes
-	option = {
-		name = "EVT95613OPTA"
-		casus_belli = {
-			target = FROM
-			type = make_puppet
-			months = 12
-		}
-		war = {
-			target = FROM
-			attacker_goal = {
-				casus_belli = make_puppet
+		any_country = {
+			limit = { OR = { tag = ENG tag = RUS } }
+			lambda_country_event = {
+				title = "EVTNAME95613" #Border Incident
+				desc = "EVTDESC95613"
+				picture = "rebellion"
+				option = {
+					name = "EVT95613OPTA"
+					casus_belli = {
+						target = FROM
+						type = make_puppet
+						months = 12
+					}
+					war = {
+						target = FROM
+						attacker_goal = { casus_belli = make_puppet }
+					}
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVT95613OPTB"
+					prestige = -10
+					FROM = {
+						lambda_country_event = {
+							title = "EVTNAME95614" #Peace With $FROMCOUNTRY$
+							desc = "EVTDESC95614"
+							picture = "india"
+							option = {
+								name = "EVT95614OPTA"
+								prestige = 2
+							}
+						}
+					}
+					ai_chance = { factor = 0 }
+				}
 			}
 		}
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = "EVT95613OPTB"
-		prestige = -10
-		FROM = { country_event = 95614 }
-		ai_chance = { factor = 0 }
-	}
-}
-country_event = {
-	id = 95614
-	title = "EVTNAME95614" #Peace With $FROMCOUNTRY$
-	desc = "EVTDESC95614"
-	picture = "india"
-	is_triggered_only = yes
-	option = {
-		name = "EVT95614OPTA"
-		prestige = 2
-		relation = { who = FROM value = 50 }
+		add_country_modifier = { name = border_incident duration = 1825 }
 	}
 }

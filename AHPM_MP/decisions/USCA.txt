@@ -220,7 +220,48 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = belize_purchase
-			2190 = { owner = { country_event = 32550 } }
+			2190 = {
+				owner = {
+					# Belize Purchase 1/3
+					lambda_country_event = {
+						title = "EVTNAME32550"
+						desc = "EVTDESC32550"
+						picture = "administration"
+						option = {
+							name = "EVT32550OPTA"
+							money = 50000
+							2190 = { remove_core = THIS }
+							FROM = {
+								# Belize Purchase 2/3
+								lambda_country_event = {
+									title = "EVTNAME32551"
+									desc = "EVTDESC32551"
+									picture = "administration"
+									option = {
+										name = "EVT32551OPTA"
+										prestige = 5
+										money = -50000
+										2190 = { secede_province = THIS }
+										any_pop = { consciousness = -1 }
+									}
+								}
+							}
+						}
+						option = {
+							name = "EVT32550OPTB"
+							FROM = {
+								# Belize Purchase 3/3
+								lambda_country_event = {
+									title = "EVTNAME32552"
+									desc = "EVTDESC32552"
+									picture = "administration"
+									option = { name = "EVT32552OPTA" }
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -324,7 +365,86 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = miskito_crisis
-			2200 = { owner = { country_event = 32553 } }
+			2200 = {
+				owner = {
+					#Moskito Coast Crisis / Nicaragua Crisis of 1895
+					lambda_country_event = {
+						title = "EVTNAME32553"
+						desc = "EVTDESC32553"
+						picture = "moskito_coast"
+						option = {
+							name = "EVT32553OPTA" #Demand monetary compensation
+							2200 = { secede_province = FROM }
+							FROM = {
+								#FROMCOUNTRY asks for reparations for Moskito
+								lambda_country_event = {
+									title = "EVTNAME32554"
+									desc = "EVTDESC32554"
+									picture = "moskito_coast"
+									option = {
+										name = "EVT32554OPTB" #Refuse to pay
+										FROM = {
+											casus_belli = {
+												target = THIS
+												type = cut_down_to_size
+												months = 30
+											}
+										}
+										any_greater_power = { limit = { capital_scope = { continent = north_america } } relation = { who = FROM value = -50 } }
+										ai_chance = { factor = 1 }
+									}
+									option = {
+										name = "EVT32554OPTA" #Pay up
+										treasury = -50000
+										FROM = { treasury = 50000 }
+										ai_chance = { factor = 0 }
+									}
+								}
+							}
+							ai_chance = { factor = 1 }
+						}
+						option = {
+							name = "EVT32553OPTB" #Demand the territory back
+							2200 = { secede_province = FROM }
+							FROM = {
+								#FROMCOUNTRY demands the Moskito back
+								lambda_country_event = {
+									title = "EVTNAME32555"
+									desc = "EVTDESC32555"
+									picture = "moskito_coast"
+									option = {
+										name = "EVT32555OPTA" #They will have to fight for it
+										relation = { who = FROM value = -100 }
+										FROM = {
+											set_country_flag = bluefields_will_be_ours
+											casus_belli = {
+												target = THIS
+												type = cut_down_to_size
+												months = 60
+											}
+										}
+										ai_chance = { factor = 1 }
+									}
+									option = {
+										name = "EVT32555OPTB" #Give up our territory
+										prestige = -20
+										2200 = { secede_province = FROM }
+										ai_chance = { factor = 0 }
+									}
+								}
+							}
+							ai_chance = { factor = 0 }
+						}
+						option = {
+							name = "EVT32553OPTC" #Let the territory go
+							2200 = { secede_province = FROM }
+							relation = { who = FROM value = 50 }
+							prestige = -5
+							ai_chance = { factor = 0 }
+						}
+					}
+				}
+			}
 		}
 
 		ai_will_do = { factor = 1 }

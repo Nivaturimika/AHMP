@@ -4,173 +4,6 @@
 #                                                                                    #
 #####################################################################################
 
-#Commodore Perry's Expedition events
-country_event = {
-	id = 97605
-	title = "EVTNAME97605" #Kurofune
-	desc = "EVTDESC97605"
-	picture = "commodore_perry"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97605OPTA"
-		set_country_flag = caved_to_commodore_perry
-		prestige = -10
-		remove_country_modifier = sakoku
-		remove_country_modifier = rangaku
-		remove_country_modifier = uncivilized_isolationism
-		random_owned = {
-			limit = { owner = { NOT = { border_policy = open_borders } } }
-			owner = { political_reform = open_borders }
-		}
-		add_country_modifier = {
-			name = "western_influences"
-			duration = -1
-		}
-		FROM = { country_event = 97606 }
-	}
-
-	option = {
-		name = "EVT97605OPTB"
-		set_country_flag = rejected_commodore_perry
-		leave_alliance = USA
-		add_casus_belli = {
-			target = USA
-			type = add_to_sphere
-			months = 12
-		}
-		add_casus_belli = {
-			target = USA
-			type = humiliate
-			months = 12
-		}
-		FROM = { country_event = 97607 }
-	}
-}
-
-country_event = {
-	id = 97606
-	title = "EVTNAME97606" #Commodore Perry Successful
-	desc = "EVTDESC97606"
-	news = yes
-	news_title = "EVTNAME97606_NEWS_TITLE"
-	news_desc_long = "EVTDESC97606_NEWS_LONG"
-	news_desc_medium = "EVTDESC97606_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC97606_NEWS_SHORT"
-	picture = "commodore_perry"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97606OPTA"
-		prestige = 20
-		random_country = {
-			limit = {
-				is_sphere_leader_of = TKG
-				NOT = { tag = THIS }
-			}
-			diplomatic_influence = { who = TKG value = -100 }
-		}
-		diplomatic_influence = { who = TKG value = 100 }
-		relation = { who = TKG value = 100 }
-	}
-}
-
-country_event = {
-	id = 97607
-	title = "EVTNAME97607" #The Japanese Are Defiant
-	desc = "EVTDESC97607"
-	picture = "commodore_perry"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97607OPTA"
-		any_pop = {
-			dominant_issue = {
-				factor = 0.05
-				value = jingoism
-			}
-		}
-		diplomatic_influence = { who = TKG value = -200 }
-		war = {
-			target = TKG
-			attacker_goal = {
-				casus_belli = add_to_sphere
-			}
-		}
-	}
-
-	option = {
-		name = "EVT97607OPTB"
-		prestige = -20
-		any_pop = {
-			dominant_issue = {
-				factor = 0.05
-				value = pacifism
-			}
-		}
-	}
-}
-
-country_event = {
-	id = 97608
-	title = "EVTNAME97608" #Japanese Surrender
-	desc = "EVTDESC97608"
-	picture = "treaty"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97608OPTA"
-		clr_country_flag = rejected_commodore_perry
-		set_country_flag = surrendered_to_perry
-		prestige = -10
-		FROM = { country_event = 97609 }
-		remove_country_modifier = uncivilized_isolationism
-		random_owned = {
-			limit = { owner = { NOT = { border_policy = open_borders } } }
-			owner = { political_reform = open_borders }
-		}
-		add_country_modifier = {
-			name = "western_influences"
-			duration = -1
-		}
-
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 100000 }
-					check_variable = { which = owed_cash_money value = 9 }
-				}
-			}
-			owner = { change_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = { owner = { money = 100000 } }
-			owner = { treasury = -100000 }
-		}
-
-		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = "EVT97608OPTB"
-		war_exhaustion = 20
-		FROM = { country_event = 97610 }
-		ai_chance = { factor = 0 }
-	}
-}
 
 country_event = {
 	id = 97609
@@ -189,21 +22,6 @@ country_event = {
 		treasury = 100000
 		relation = { who = FROM value = 300 }
 		diplomatic_influence = { who = FROM value = 200 }
-	}
-}
-
-country_event = {
-	id = 97610
-	title = "EVTNAME97610" #The Japanese Have Refused!
-	desc = "EVTDESC97610"
-	picture = "treaty"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97610OPTA"
-		prestige = -5
-		FROM = { clr_country_flag = negotiate_unequal_treaty_TKG }
 	}
 }
 
@@ -345,30 +163,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = 97618
-	title = "EVTNAME97617" #Order to Expel the Barbarians - Response from Substates
-	desc = "EVTDESC97618"
-	picture = "sonno_joi"
-	is_triggered_only = yes
-	option = {
-		name = "EVT97618OPTA"
-		add_country_modifier = {
-			name = supports_imperial_edict
-			duration = -1
-		}
-		ruling_party_ideology = conservative
-	}
-	option = {
-		name = "EVT97618OPTB"
-		add_country_modifier = {
-			name = opposes_imperial_edict
-			duration = -1
-		}
-		ruling_party_ideology = reactionary
-	}
-}
-
 #Death of the Shogun
 country_event = {
 	id = 97620
@@ -406,15 +200,40 @@ country_event = {
 			limit = { substate_of = THIS }
 			if = {
 				limit = { has_country_flag = tozama_daimyo }
-				country_event = 97621
+				lambda_country_event = {
+					title = "EVTNAME97621" #Tokugawa Yoshinobu is Shogun - Tozama
+					desc = "EVTDESC97621"
+					picture = "emperor_funeral"
+					option = {
+						name = "EVT97624OPTA"
+						any_pop = {
+							scaled_militancy = {
+								ideology = conservative
+								factor = -3
+							}
+						}
+					}
+				}
 			} else_if = {
 				limit = { has_country_flag = fudai_daimyo }
-				country_event = 97622
+				lambda_country_event = {
+					title = "EVTNAME97621" #Tokugawa Yoshinobu is Shogun - Fudai
+					desc = "EVTDESC97622"
+					picture = "emperor_funeral"
+					option = {
+						name = "EVT97623OPTA"
+						set_country_flag = angered_by_bakufu
+						any_pop = {
+							scaled_militancy = {
+								ideology = reactionary
+								factor = 3
+							}
+						}
+					}
+				}
 			}
 		}
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -435,89 +254,43 @@ country_event = {
 				substate_of = THIS
 				has_country_flag = tozama_daimyo
 			}
-			country_event = 97623
+			lambda_country_event = {
+				title = "EVTNAME97623" #Tokugawa Iemochi is Shogun - Tozama
+				desc = "EVTDESC97623"
+				picture = "emperor_funeral"
+				option = {
+					name = "EVT97623OPTA"
+					set_country_flag = angered_by_bakufu
+					any_pop = {
+						scaled_militancy = {
+							ideology = conservative
+							factor = 3
+						}
+					}
+				}
+			}
 		}
 		any_country = {
 			limit = {
 				substate_of = THIS
 				has_country_flag = fudai_daimyo
 			}
-			country_event = 97624
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-country_event = {
-	id = 97621
-	title = "EVTNAME97621" #Tokugawa Yoshinobu is Shogun - Tozama
-	desc = "EVTDESC97621"
-	picture = "emperor_funeral"
-	is_triggered_only = yes
-	option = {
-		name = "EVT97624OPTA"
-		any_pop = {
-			scaled_militancy = {
-				ideology = conservative
-				factor = -3
+			lambda_country_event = {
+				title = "EVTNAME97623" #Tokugawa Iemochi is Shogun - Fudai
+				desc = "EVTDESC97624"
+				picture = "emperor_funeral"
+				option = {
+					name = "EVT97624OPTA"
+					any_pop = {
+						scaled_militancy = {
+							ideology = reactionary
+							factor = -3
+						}
+					}
+				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = 97622
-	title = "EVTNAME97621" #Tokugawa Yoshinobu is Shogun - Fudai
-	desc = "EVTDESC97622"
-	picture = "emperor_funeral"
-	is_triggered_only = yes
-	option = {
-		name = "EVT97623OPTA"
-		set_country_flag = angered_by_bakufu
-		any_pop = {
-			scaled_militancy = {
-				ideology = reactionary
-				factor = 3
-			}
-		}
-	}
-}
-
-country_event = {
-	id = 97623
-	title = "EVTNAME97623" #Tokugawa Iemochi is Shogun - Tozama
-	desc = "EVTDESC97623"
-	picture = "emperor_funeral"
-	is_triggered_only = yes
-	option = {
-		name = "EVT97623OPTA"
-		set_country_flag = angered_by_bakufu
-		any_pop = {
-			scaled_militancy = {
-				ideology = conservative
-				factor = 3
-			}
-		}
-	}
-}
-
-country_event = {
-	id = 97624
-	title = "EVTNAME97623" #Tokugawa Iemochi is Shogun - Fudai
-	desc = "EVTDESC97624"
-	picture = "emperor_funeral"
-	is_triggered_only = yes
-	option = {
-		name = "EVT97624OPTA"
-		relation = { who = TKG value = 50 }
-		any_pop = {
-			scaled_militancy = {
-				ideology = reactionary
-				factor = -3
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -558,7 +331,19 @@ country_event = {
 				NOT = { tag = THIS }
 				has_country_modifier = ansei_purge
 			}
-			country_event = 97626
+			lambda_country_event = {
+				title = "EVTNAME97625" #Sakuradamon Incident
+				desc = "EVTDESC97626"
+				picture = "sakuradamon"
+				option = {
+					name = "EVT97627OPTA"
+					remove_country_modifier = ansei_purge
+					add_country_modifier = {
+						name = kobu_gattai
+						duration = -1
+					}
+				}
+			}
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -567,43 +352,17 @@ country_event = {
 		name = "EVT97625OPTB"
 		any_country = {
 			limit = {
-				NOT = { tag = THIS }
+				tag != THIS
 				has_country_modifier = ansei_purge
 			}
-			country_event = 97627
+			lambda_country_event = {
+				title = "EVTNAME97625" #Sakuradamon Incident
+				desc = "EVTDESC97627"
+				picture = "sakuradamon"
+				option = { name = "EVT97627OPTA" }
+			}
 		}
 		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
-	id = 97626
-	title = "EVTNAME97625" #Sakuradamon Incident
-	desc = "EVTDESC97626"
-	picture = "sakuradamon"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97627OPTA"
-		remove_country_modifier = ansei_purge
-		add_country_modifier = {
-			name = kobu_gattai
-			duration = -1
-		}
-	}
-}
-
-country_event = {
-	id = 97627
-	title = "EVTNAME97625" #Sakuradamon Incident
-	desc = "EVTDESC97627"
-	picture = "sakuradamon"
-	major = yes
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97627OPTA"
 	}
 }
 
@@ -644,28 +403,21 @@ country_event = {
 		remove_country_modifier = kobu_gattai
 		any_country = {
 			limit = { substate_of = THIS }
-			country_event = 97631
+			lambda_country_event = {
+				title = "EVTNAME97630" #The Death of Emperor Komei
+				desc = "EVTDESC97630"
+				picture = "emperor_funeral"
+				option = {
+					name = "EVT97630OPTA"
+					add_country_modifier = emperor_meiji
+					remove_country_modifier = kobu_gattai
+				}
+			}
 		}
 	}
 
 	option = {
 		name = "EVT97630OPTA"
-	}
-}
-
-country_event = {
-	id = 97631
-	title = "EVTNAME97630" #The Death of Emperor Komei
-	desc = "EVTDESC97630"
-	picture = "emperor_funeral"
-	is_triggered_only = yes
-	option = {
-		name = "EVT97630OPTA"
-		add_country_modifier = {
-			name = emperor_meiji
-			duration = -1
-		}
-		remove_country_modifier = kobu_gattai
 	}
 }
 

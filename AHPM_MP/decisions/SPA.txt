@@ -39,10 +39,6 @@ political_decisions = {
 		effect = {
 			treasury = 25000
 			prestige = 10
-			relation = {
-				who = PAP
-				value = -50
-			}
 			any_pop = {
 				scaled_militancy = {
 					ideology = conservative
@@ -89,9 +85,7 @@ political_decisions = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	falangist_doctrine = {

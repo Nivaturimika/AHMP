@@ -1272,7 +1272,98 @@ country_event = {
 		# Send acknowledgment to attending countries
 		any_greater_power = {
 			limit = { has_country_flag = attending_berlin_congress }
-			country_event = 90069
+			lambda_country_event = {
+				title = "EVTNAME90069" # The OE Agrees (OE Supported)
+				desc = "EVTDESC90069"
+				picture = "berlin_congress_htm"
+				option = {
+					name = "EVT90069OPTA"
+					#Hosting country gains prestige and loses relations with Russia
+					random_owned = {
+						limit = {
+							owner = { has_country_flag = hosting_berlin_congress }
+						}
+						owner = {
+							prestige_factor = 0.2
+							relation = {
+								who = RUS
+								value = -25
+							}
+						}
+					}
+					#Other countries gain some prestige
+					random_owned = {
+						limit = {
+							owner = { NOT = { has_country_flag = hosting_berlin_congress } }
+						}
+						owner = { prestige = 10 }
+					}
+					#Everyone but Russia gain relations & influence with OE if they supported them
+					random_owned = {
+						limit = {
+							owner = {
+								NOT = { tag = RUS }
+								has_country_flag = supported_oe_berlin_congress
+							}
+						}
+						owner = {
+							relation = { who = TUR value = 25 }
+							diplomatic_influence = { who = TUR value = 25 }
+							any_country = {
+								limit = { has_country_flag = supported_oe_berlin_congress }
+								relation = { who = THIS value = 20 }
+							}
+							clr_country_flag = supported_oe_berlin_congress
+						}
+					}
+					#Everyone but Russia lose relations & influence with OE if they didn't support them
+					random_owned = {
+						limit = {
+							owner = {
+								NOT = { tag = RUS }
+								has_country_flag = supported_balkans_berlin_congress
+							}
+						}
+						owner = {
+							leave_alliance = TUR
+							relation = { who = TUR value = -25 }
+							diplomatic_influence = { who = TUR value = -25 }
+							any_country = {
+								limit = { has_country_flag = supported_balkans_berlin_congress }
+								relation = { who = THIS value = 20 }
+							}
+							clr_country_flag = supported_balkans_berlin_congress
+						}
+					}
+					#Russia loses lots of relations & influence with the OE
+					random_owned = {
+						limit = {
+							owner = { tag = RUS }
+						}
+						owner = {
+							relation = {
+								who = TUR
+								value = -50
+							}
+							diplomatic_influence = {
+								who = TUR
+								value = -200
+							}
+						}
+					}
+					#Get provinces back from the OE
+					FROM = {
+						any_owned = {
+							limit = {
+								is_core = THIS
+								NOT = { is_core = TUR }
+							}
+							secede_province = THIS
+						}
+					}
+					clr_country_flag = hosting_berlin_congress
+				}
+			}
 		}
 
 		# Military Upset
@@ -1848,29 +1939,79 @@ country_event = {
 		# Send acknowledgment to attending countries
 		any_greater_power = {
 			limit = { has_country_flag = attending_berlin_congress }
-			country_event = 90070
+			lambda_country_event = {
+				title = "EVTNAME90070" # The OE Agrees (Balkans Supported)
+				desc = "EVTDESC90070"
+				picture = "berlin_congress_htm"
+				option = {
+					name = "EVT90069OPTA"
+					#Hosting country gains prestige & relations with Russia
+					if = {
+						limit = { has_country_flag = hosting_berlin_congress }
+						prestige_factor = 0.2
+					} else = {
+						prestige = 10
+					}
+					##Everyone but Russia gain relations & influence with OE if they supported them
+					if = {
+						limit = {
+							tag != RUS
+							has_country_flag = supported_oe_berlin_congress
+						}
+						diplomatic_influence = { who = TUR value = 20 }
+						any_country = {
+							limit = { has_country_flag = supported_oe_berlin_congress }
+							relation = { who = THIS value = 20 }
+						}
+						clr_country_flag = supported_oe_berlin_congress
+					}
+					#Everyone but Russia lose relations & influence with OE if they didn't support them
+					if = {
+						limit = {
+							tag != RUS
+							has_country_flag = supported_balkans_berlin_congress
+						}
+						leave_alliance = TUR
+						diplomatic_influence = { who = TUR value = -25 }
+						any_country = {
+							limit = { has_country_flag = supported_balkans_berlin_congress }
+							relation = { who = THIS value = 20 }
+						}
+						clr_country_flag = supported_balkans_berlin_congress
+					}
+					#Russia gains relations & loses influence in the OE
+					if = {
+						limit = { tag = RUS }
+						leave_alliance = TUR
+						diplomatic_influence = { who = TUR value = -200 }
+					}
+					#Get lands back from the OE
+					FROM = {
+						any_owned = {
+							limit = {
+								is_core = THIS
+								NOT = { is_core = TUR }
+							}
+							secede_province = THIS
+						}
+					}
+					clr_country_flag = hosting_berlin_congress
+				}
+			}
 		}
 
 		# Military Upset
 		soldiers = {
 			limit = { is_primary_culture = yes }
-			ideology = {
-				value = reactionary
-				factor = 0.20
-			}
+			ideology = { value = reactionary factor = 0.20 }
 			militancy = 5
 		}
 		officers = {
 			limit = { is_primary_culture = yes }
-			ideology = {
-				value = reactionary
-				factor = 0.40
-			}
+			ideology = { value = reactionary factor = 0.40 }
 			militancy = 5
 		}
-		ai_chance = {
-			factor = 70
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -1880,7 +2021,106 @@ country_event = {
 		# Send refusal to attending countries
 		any_greater_power = {
 			limit = { has_country_flag = attending_berlin_congress }
-			country_event = 90071
+			lambda_country_event = {
+				title = "EVTNAME90071" # OE Defies the Congress
+				desc = "EVTDESC90071"
+				picture = "greatpowers"
+				option = {
+					name = "EVT90071OPTA"
+					set_country_flag = oe_refused_congress
+					clr_country_flag = claimed_croatia
+					clr_country_flag = claimed_bosnia
+					clr_country_flag = receiving_cyprus
+					random_owned = {
+						limit = { owner = { has_country_flag = supported_oe_berlin_congress } }
+						owner = {
+							any_country = {
+								limit = { has_country_flag = supported_oe_berlin_congress }
+								relation = { who = THIS value = 20 }
+							}
+							clr_country_flag = supported_oe_berlin_congress
+						}
+					}
+					random_owned = {
+						limit = { owner = { has_country_flag = supported_balkans_berlin_congress } }
+						owner = {
+							any_country = {
+								limit = { has_country_flag = supported_balkans_berlin_congress }
+								relation = { who = THIS value = 20 }
+							}
+							clr_country_flag = supported_balkans_berlin_congress
+						}
+					}
+					relation = { who = TUR value = -200 }
+					diplomatic_influence = { who = TUR value = -200 }
+					leave_alliance = TUR
+					casus_belli = {
+						target = TUR
+						type = humiliate
+						months = 30
+					}
+					casus_belli = {
+						target = TUR
+						type = cut_down_to_size
+						months = 30
+					}
+					clr_country_flag = hosting_berlin_congress
+					ai_chance = { factor = 80 }
+				}
+
+				option = {
+					name = "EVT90071OPTB"
+					clr_country_flag = claimed_croatia
+					clr_country_flag = claimed_bosnia
+					clr_country_flag = receiving_cyprus
+					clr_country_flag = hosting_berlin_congress
+					random_owned = {
+						limit = {
+							owner = {
+								OR = {
+									is_our_vassal = TUR
+									is_sphere_leader_of = TUR
+									alliance_with = TUR
+								}
+							}
+						}
+						owner = { prestige_factor = -0.1 }
+					}
+					random_owned = {
+						limit = {
+							owner = {
+								OR = {
+									is_our_vassal = TUR
+									is_sphere_leader_of = TUR
+									alliance_with = TUR
+								}
+							}
+						}
+						owner = { badboy = 1 }
+					}
+					random_owned = {
+						limit = { owner = { has_country_flag = supported_oe_berlin_congress } }
+						owner = {
+							any_country = {
+								limit = { has_country_flag = supported_oe_berlin_congress }
+								relation = { who = THIS value = 20 }
+							}
+							clr_country_flag = supported_oe_berlin_congress
+						}
+					}
+					random_owned = {
+						limit = { owner = { has_country_flag = supported_balkans_berlin_congress } }
+						owner = {
+							any_country = {
+								limit = { has_country_flag = supported_balkans_berlin_congress }
+								relation = { who = THIS value = 20 }
+							}
+							clr_country_flag = supported_balkans_berlin_congress
+						}
+					}
+					ai_chance = { factor = 0 }
+				}
+			}
 		}
 
 		# Balkans Upset
@@ -1922,360 +2162,7 @@ country_event = {
 			militancy = -3
 			consciousness = -3
 		}
-		ai_chance = {
-			factor = 30
-		}
-	}
-}
-
-country_event = {
-
-	id = 90069
-
-	title = "EVTNAME90069" # The OE Agrees (OE Supported)
-	desc = "EVTDESC90069"
-	picture = "berlin_congress_htm"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT90069OPTA"
-
-		#Hosting country gains prestige and loses relations with Russia
-		random_owned = {
-			limit = {
-				owner = { has_country_flag = hosting_berlin_congress }
-			}
-			owner = {
-				prestige_factor = 0.2
-				relation = {
-					who = RUS
-					value = -25
-				}
-			}
-		}
-
-		#Other countries gain some prestige
-		random_owned = {
-			limit = {
-				owner = { NOT = { has_country_flag = hosting_berlin_congress } }
-			}
-			owner = { prestige = 10 }
-		}
-
-		#Everyone but Russia gain relations & influence with OE if they supported them
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { tag = RUS }
-					has_country_flag = supported_oe_berlin_congress
-				}
-			}
-			owner = {
-				relation = { who = TUR value = 25 }
-				diplomatic_influence = { who = TUR value = 25 }
-				any_country = {
-					limit = { has_country_flag = supported_oe_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_oe_berlin_congress
-			}
-		}
-		#Everyone but Russia lose relations & influence with OE if they didn't support them
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { tag = RUS }
-					has_country_flag = supported_balkans_berlin_congress
-				}
-			}
-			owner = {
-				leave_alliance = TUR
-				relation = { who = TUR value = -25 }
-				diplomatic_influence = { who = TUR value = -25 }
-				any_country = {
-					limit = { has_country_flag = supported_balkans_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_balkans_berlin_congress
-			}
-		}
-
-		#Russia loses lots of relations & influence with the OE
-		random_owned = {
-			limit = {
-				owner = { tag = RUS }
-			}
-			owner = {
-				relation = {
-					who = TUR
-					value = -50
-				}
-				diplomatic_influence = {
-					who = TUR
-					value = -200
-				}
-			}
-		}
-
-		#Get provinces back from the OE
-		FROM = {
-			any_owned = {
-				limit = {
-					is_core = THIS
-					NOT = { is_core = TUR }
-				}
-				secede_province = THIS
-			}
-		}
-		clr_country_flag = hosting_berlin_congress
-	}
-
-}
-
-country_event = {
-
-	id = 90070
-
-	title = "EVTNAME90070" # The OE Agrees (Balkans Supported)
-	desc = "EVTDESC90070"
-	picture = "berlin_congress_htm"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT90069OPTA"
-
-		#Hosting country gains prestige & relations with Russia
-		random_owned = {
-			limit = {
-				owner = { has_country_flag = hosting_berlin_congress }
-			}
-			owner = {
-				prestige_factor = 0.2
-				relation = {
-					who = RUS
-					value = 50
-				}
-			}
-		}
-
-		#Other countries gain some prestige
-		random_owned = {
-			limit = {
-				owner = { NOT = { has_country_flag = hosting_berlin_congress } }
-			}
-			owner = { prestige = 10 }
-		}
-
-		##Everyone but Russia gain relations & influence with OE if they supported them
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { tag = RUS }
-					has_country_flag = supported_oe_berlin_congress
-				}
-			}
-			owner = {
-				relation = { who = TUR value = 20 }
-				diplomatic_influence = { who = TUR value = 20 }
-				any_country = {
-					limit = { has_country_flag = supported_oe_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_oe_berlin_congress
-			}
-		}
-		#Everyone but Russia lose relations & influence with OE if they didn't support them
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { tag = RUS }
-					has_country_flag = supported_balkans_berlin_congress
-				}
-			}
-			owner = {
-				leave_alliance = TUR
-				relation = { who = TUR value = -25 }
-				diplomatic_influence = { who = TUR value = -25 }
-				any_country = {
-					limit = { has_country_flag = supported_balkans_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_balkans_berlin_congress
-			}
-		}
-
-		#Russia gains relations & loses influence in the OE
-		random_owned = {
-			limit = {
-				owner = { tag = RUS }
-			}
-			owner = {
-				leave_alliance = TUR
-				relation = {
-					who = TUR
-					value = 50
-				}
-				diplomatic_influence = {
-					who = TUR
-					value = -200
-				}
-			}
-		}
-
-		#Get lands back from the OE
-		FROM = {
-			any_owned = {
-				limit = {
-					is_core = THIS
-					NOT = { is_core = TUR }
-				}
-				secede_province = THIS
-			}
-		}
-		clr_country_flag = hosting_berlin_congress
-	}
-}
-
-country_event = {
-
-	id = 90071
-
-	title = "EVTNAME90071" # OE Defies the Congress
-	desc = "EVTDESC90071"
-	picture = "greatpowers"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT90071OPTA"
-		set_country_flag = oe_refused_congress
-		clr_country_flag = claimed_croatia
-		clr_country_flag = claimed_bosnia
-		clr_country_flag = receiving_cyprus
-		random_owned = {
-			limit = { owner = { has_country_flag = supported_oe_berlin_congress } }
-			owner = {
-				any_country = {
-					limit = { has_country_flag = supported_oe_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_oe_berlin_congress
-			}
-		}
-		random_owned = {
-			limit = { owner = { has_country_flag = supported_balkans_berlin_congress } }
-			owner = {
-				any_country = {
-					limit = { has_country_flag = supported_balkans_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_balkans_berlin_congress
-			}
-		}
-		relation = { who = TUR value = -200 }
-		diplomatic_influence = { who = TUR value = -200 }
-		leave_alliance = TUR
-		casus_belli = {
-			target = TUR
-			type = humiliate
-			months = 30
-		}
-		casus_belli = {
-			target = TUR
-			type = cut_down_to_size
-			months = 30
-		}
-		clr_country_flag = hosting_berlin_congress
-		ai_chance = { factor = 80 }
-	}
-
-	option = {
-		name = "EVT90071OPTB"
-		clr_country_flag = claimed_croatia
-		clr_country_flag = claimed_bosnia
-		clr_country_flag = receiving_cyprus
-		clr_country_flag = hosting_berlin_congress
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						is_our_vassal = TUR
-						is_sphere_leader_of = TUR
-						alliance_with = TUR
-					}
-				}
-			}
-			owner = { prestige_factor = -0.1 }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						is_our_vassal = TUR
-						is_sphere_leader_of = TUR
-						alliance_with = TUR
-					}
-				}
-			}
-			owner = { badboy = 1 }
-		}
-		random_owned = {
-			limit = { owner = { has_country_flag = supported_oe_berlin_congress } }
-			owner = {
-				any_country = {
-					limit = { has_country_flag = supported_oe_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_oe_berlin_congress
-			}
-		}
-		random_owned = {
-			limit = { owner = { has_country_flag = supported_balkans_berlin_congress } }
-			owner = {
-				any_country = {
-					limit = { has_country_flag = supported_balkans_berlin_congress }
-					relation = { who = THIS value = 20 }
-				}
-				clr_country_flag = supported_balkans_berlin_congress
-			}
-		}
-		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 1.5
-				alliance_with = TUR
-			}
-			modifier = {
-				factor = 1.5
-				is_sphere_leader_of = TUR
-			}
-			modifier = {
-				factor = 1.5
-				is_our_vassal = TUR
-			}
-			modifier = {
-				factor = 1.25
-				relation = { who = TUR value = 190 }
-			}
-			modifier = {
-				factor = 1.25
-				has_recently_lost_war = yes
-			}
-			modifier = {
-				factor = 0
-				NOT = { relation = { who = TUR value = 0 } }
-			}
-			modifier = {
-				factor = 0.75
-				NOT = { relation = { who = TUR value = 50 } }
-			}
-			modifier = {
-				factor = 0.75
-				NOT = { relation = { who = TUR value = 100 } }
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -2514,27 +2401,15 @@ country_event = {
 	title = "EVTNAME900710"
 	desc = "EVTDESC900710"
 	picture = "greatpowers"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT900710OPTA"
-		relation = { who = FROM value = 200 }
 		diplomatic_influence = { who = FROM value = 200 }
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 0
-				war_with = FROM
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT900710OPTB"
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 5 }
 	}
 }
 
@@ -2543,27 +2418,15 @@ country_event = {
 	title = "EVTNAME900712"
 	desc = "EVTDESC900711"
 	picture = "greatpowers"
-
 	is_triggered_only = yes
-
 	option = {
 		name = "EVT900710OPTA"
-		relation = { who = FROM value = 100 }
 		diplomatic_influence = { who = FROM value = 50 }
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 0
-				war_with = FROM
-			}
-		}
+		ai_chance = { factor = 1 }
 	}
-
 	option = {
 		name = "EVT900710OPTB"
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

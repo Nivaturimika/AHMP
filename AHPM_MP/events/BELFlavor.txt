@@ -143,21 +143,85 @@ country_event = {
 	option = {
 		name = "EVT36709OPTA"
 		badboy = -4
-		BEL = { country_event = 36710 }
-		relation = { who = ENG value = 150 }
-		relation = { who = FRA value = 150 }
-		ai_chance = {
-			factor = 1
+		BEL = {
+			lambda_country_event = {
+				title = "EVTNAME36710" #The Treaty of London
+				desc = "EVTDESC36710"
+				major = yes
+				is_triggered_only = yes
+				option = {
+					name = "EVT36710OPTA"
+					badboy = -2
+					prestige = -20
+					relation = { who = ENG value = 50 }
+					relation = { who = NET value = 150 }
+					random_owned = {
+						limit = { LUX = { exists = no } }
+						398 = { remove_core = LUX }
+					}
+					any_owned = {
+						limit = { is_core != WLL is_core != FLA }
+						remove_core = THIS
+						secede_province = NET
+					}
+					NET = { country_event = 36711 }
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVT36710OPTB"
+					badboy = 2
+					if = {
+						limit = { exists != LUX }
+						398 = { remove_core = LUX }
+					}
+					NET = {
+						diplomatic_influence = { who = THIS value = -200 }
+						leave_alliance = THIS
+					}
+					ENG = {
+						prestige = -10
+						diplomatic_influence = { who = THIS value = -100 }
+						leave_alliance = THIS
+						casus_belli = {
+							target = THIS
+							type = free_peoples
+							months = 120
+						}
+						casus_belli = {
+							target = THIS
+							type = free_allied_cores
+							months = 120
+						}
+					}
+					any_greater_power = {
+						limit = {
+							capital_scope = { continent = europe }
+							NOT = { tag = ENG }
+							NOT = { tag = NET }
+							NOT = { tag = THIS }
+						}
+						casus_belli = {
+							target = THIS
+							type = free_peoples
+							months = 120
+						}
+						casus_belli = {
+							target = THIS
+							type = free_allied_cores
+							months = 120
+						}
+					}
+					ai_chance = { factor = 0 }
+				}
+			}
 		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "EVT36709OPTB"
 		badboy = 2
-		ENG = {
-			diplomatic_influence = { who = THIS value = -100 }
-			relation = { who = THIS value = -100 }
-		}
+		ENG = { diplomatic_influence = { who = THIS value = -100 } }
 		any_greater_power = {
 			limit = {
 				capital_scope = { continent = europe }
@@ -180,88 +244,7 @@ country_event = {
 				months = 120
 			}
 		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-country_event = {
-	id = 36710
-	title = "EVTNAME36710" #The Treaty of London
-	desc = "EVTDESC36710"
-	major = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT36710OPTA"
-		badboy = -2
-		prestige = -20
-		relation = { who = ENG value = 50 }
-		relation = { who = NET value = 150 }
-		random_owned = {
-			limit = { LUX = { exists = no } }
-			398 = { remove_core = LUX }
-		}
-		any_owned = {
-			limit = { is_core != WLL is_core != FLA }
-			remove_core = THIS
-			secede_province = NET
-		}
-		NET = { country_event = 36711 }
-		ai_chance = {
-			factor = 1
-		}
-	}
-
-	option = {
-		name = "EVT36710OPTB"
-		badboy = 2
-		random_owned = {
-			limit = { LUX = { exists = no } }
-			398 = { remove_core = LUX }
-		}
-		NET = {
-			diplomatic_influence = { who = THIS value = -200 }
-			leave_alliance = THIS
-		}
-		ENG = {
-			prestige = -10
-			diplomatic_influence = { who = THIS value = -100 }
-			leave_alliance = THIS
-			casus_belli = {
-				target = THIS
-				type = free_peoples
-				months = 120
-			}
-			casus_belli = {
-				target = THIS
-				type = free_allied_cores
-				months = 120
-			}
-		}
-		any_greater_power = {
-			limit = {
-				capital_scope = { continent = europe }
-				NOT = { tag = ENG }
-				NOT = { tag = NET }
-				NOT = { tag = THIS }
-			}
-			casus_belli = {
-				target = THIS
-				type = free_peoples
-				months = 120
-			}
-			casus_belli = {
-				target = THIS
-				type = free_allied_cores
-				months = 120
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

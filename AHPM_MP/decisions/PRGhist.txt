@@ -17,17 +17,20 @@ political_decisions = {
 		effect = {
 			set_country_flag = misiones_occupied
 			prestige = 2
-			2554 = { secede_province = PRG
-			add_core = PRG
-			remove_core = CRT
+			2554 = {
+				secede_province = THIS
+				add_core = THIS
+				remove_core = CRT
 			}
-			ARC = { country_event = 700010 }
-			SBA = { country_event = 700010 }
-			CRT = { country_event = 700010 }
+			lambda_country_event = {
+				title = "EVTNAME700010" #Paraguay claimed misiones
+				desc = "EVTDESC700010"
+				picture = "guarani_misiones"
+				major = yes
+				option = { name = "EVTOPT700010A" }
+			}
 		}
-		ai_will_do = {
-			factor = 100
-			}
+		ai_will_do = { factor = 1 }
 	}
 
 	paraguay_independence = {
@@ -48,12 +51,11 @@ political_decisions = {
 		}
 
 		effect = {
-		set_country_flag = paraguay_declared_independence
+			set_country_flag = paraguay_declared_independence
 			prestige = 2
 			random_country = {
 				limit = {
 					primary_culture = platinean
-					exists = yes
 					any_core = { owned_by = THIS }
 					OR = {
 						tag = ARC
@@ -70,19 +72,45 @@ political_decisions = {
 						}
 					}
 				}
-				country_event = 4661010
-			}
-
-			any_country = {
-				limit = {
-					exists = yes
-					neighbour = THIS
-					OR = {
-						NOT = { primary_culture = platinean }
-						tag = URU
+				lambda_country_event = {
+					title = "EVTNAME4661010" #Paraguay declares independence
+					desc = "EVTDESC4661010"
+					picture = "paraguay_independence"
+					option = {
+						name = "EVT4661010PTA" #Recognize Paraguay
+						badboy = -1
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVT4661010PTB" #Don't Recognize it
+						badboy = 10
+						casus_belli = {
+							target = FROM
+							type = make_puppet
+							months = 12
+						}
+						ai_chance = { factor = 0 }
 					}
 				}
-				country_event = 700013
+			}
+			any_neighbor_country = {
+				limit = {
+					primary_culture != platinean
+					tag = URU
+				}
+				lambda_country_event = {
+					title = "EVTNAME700013"
+					desc = "EVTDESC700013"
+					picture = "paraguay_independence"
+					option = {
+						name = "EVTOPT700013A"
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVTOPT700013B"
+						ai_chance = { factor = 0 }
+					}
+				}
 			}
 		}
 		ai_will_do = { factor = 1 }

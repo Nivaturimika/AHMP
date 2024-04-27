@@ -39,7 +39,99 @@ political_decisions = {
 		effect = {
 			set_country_flag = commodore_perry_expedition
 			badboy = 2
-			TKG = { country_event = 97605 }
+			TKG = {
+				#Commodore Perry's Expedition events
+				lambda_country_event = {
+					title = "EVTNAME97605" #Kurofune
+					desc = "EVTDESC97605"
+					picture = "commodore_perry"
+					option = {
+						name = "EVT97605OPTA"
+						set_country_flag = caved_to_commodore_perry
+						prestige = -10
+						remove_country_modifier = sakoku
+						remove_country_modifier = rangaku
+						remove_country_modifier = uncivilized_isolationism
+						random_owned = {
+							limit = { owner = { NOT = { border_policy = open_borders } } }
+							owner = { political_reform = open_borders }
+						}
+						add_country_modifier = {
+							name = "western_influences"
+							duration = -1
+						}
+						FROM = {
+							lambda_country_event = {
+								title = "EVTNAME97606" #Commodore Perry Successful
+								desc = "EVTDESC97606"
+								picture = "commodore_perry"
+								option = {
+									name = "EVT97606OPTA"
+									prestige = 20
+									random_country = {
+										limit = {
+											is_sphere_leader_of = TKG
+											tag != THIS
+										}
+										diplomatic_influence = { who = TKG value = -100 }
+									}
+									diplomatic_influence = { who = TKG value = 100 }
+								}
+							}
+						}
+					}
+
+					option = {
+						name = "EVT97605OPTB"
+						set_country_flag = rejected_commodore_perry
+						leave_alliance = USA
+						add_casus_belli = {
+							target = USA
+							type = add_to_sphere
+							months = 12
+						}
+						add_casus_belli = {
+							target = USA
+							type = humiliate
+							months = 12
+						}
+						FROM = {
+							lambda_country_event = {
+								title = "EVTNAME97607" #The Japanese Are Defiant
+								desc = "EVTDESC97607"
+								picture = "commodore_perry"
+								option = {
+									name = "EVT97607OPTA"
+									any_pop = {
+										dominant_issue = {
+											factor = 0.05
+											value = jingoism
+										}
+									}
+									diplomatic_influence = { who = TKG value = -200 }
+									war = {
+										target = TKG
+										attacker_goal = {
+											casus_belli = add_to_sphere
+										}
+									}
+								}
+
+								option = {
+									name = "EVT97607OPTB"
+									prestige = -20
+									any_pop = {
+										dominant_issue = {
+											factor = 0.05
+											value = pacifism
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -82,7 +174,47 @@ political_decisions = {
 			set_country_flag = negotiate_unequal_treaty_TKG
 			TKG = {
 				set_country_flag = negotiate_unequal_treaty_TKG
-				country_event = 97608
+				lambda_country_event = {
+					title = "EVTNAME97608" #Japanese Surrender
+					desc = "EVTDESC97608"
+					picture = "treaty"
+					option = {
+						name = "EVT97608OPTA"
+						clr_country_flag = rejected_commodore_perry
+						set_country_flag = surrendered_to_perry
+						prestige = -10
+						FROM = { country_event = 97609 }
+						remove_country_modifier = uncivilized_isolationism
+						random_owned = {
+							limit = { owner = { NOT = { border_policy = open_borders } } }
+							owner = { political_reform = open_borders }
+						}
+						add_country_modifier = {
+							name = "western_influences"
+							duration = -1
+						}
+						treasury = -100000
+						ai_chance = { factor = 100 }
+					}
+
+					option = {
+						name = "EVT97608OPTB"
+						war_exhaustion = 20
+						FROM = {
+							lambda_country_event = {
+								title = "EVTNAME97610" #The Japanese Have Refused!
+								desc = "EVTDESC97610"
+								picture = "treaty"
+								option = {
+									name = "EVT97610OPTA"
+									prestige = -5
+									FROM = { clr_country_flag = negotiate_unequal_treaty_TKG }
+								}
+							}
+						}
+						ai_chance = { factor = 0 }
+					}
+				}
 			}
 		}
 
@@ -700,7 +832,27 @@ political_decisions = {
 					primary_culture = japanese
 					tag != THIS
 				}
-				country_event = 97618
+				lambda_country_event = {
+					title = "EVTNAME97617" #Order to Expel the Barbarians - Response from Substates
+					desc = "EVTDESC97618"
+					picture = "sonno_joi"
+					option = {
+						name = "EVT97618OPTA"
+						add_country_modifier = {
+							name = supports_imperial_edict
+							duration = -1
+						}
+						ruling_party_ideology = conservative
+					}
+					option = {
+						name = "EVT97618OPTB"
+						add_country_modifier = {
+							name = opposes_imperial_edict
+							duration = -1
+						}
+						ruling_party_ideology = reactionary
+					}
+				}
 			}
 			any_pop = { militancy = -4 }
 		}

@@ -301,7 +301,133 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = mongolian_protectorate
-			MGL = { country_event = 80115 }
+			MGL = {
+				lambda_country_event = {
+					title = "EVTNAME80115"
+					desc = "EVTDESC80115"
+					picture = "asian_administration"
+					option = {
+						name = "EVT80115OPTA"
+						prestige = -5
+						any_owned = {
+							limit = { is_core = FROM }
+							secede_province = FROM
+						}
+						create_alliance = FROM
+						FROM = {
+							create_vassal = THIS
+							diplomatic_influence = { who = THIS value = 100 }
+						}
+						random_country = {
+							limit = {
+								OR = {
+									tag = QNG
+									tag = CHI
+									tag = KMT
+									tag = TPG
+								}
+								exists = yes
+								neighbour = THIS
+							}
+							casus_belli = {
+								target = FROM
+								type = release_puppet
+								months = 60
+							}
+						}
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVT80115OPTB"
+						prestige = 5
+						any_pop = { militancy = -3 }
+						RUS = {
+							lambda_country_event = {
+								title = "EVTNAME80116"
+								desc = "EVTDESC80116"
+								picture = "asian_administration"
+								option = {
+									name = "EVT80116OPTA"
+									prestige = -5
+									leave_alliance = FROM
+									diplomatic_influence = { who = FROM value = -100 }
+									FROM = {
+										limit = {
+											number_of_states = 2
+											civilized = yes
+										}
+										add_casus_belli = {
+											target = THIS
+											type = acquire_state
+											months = 24
+										}
+									}
+									FROM = {
+										limit = {
+											number_of_states = 2
+											civilized = no
+											NOT = { has_global_flag = berlin_conference }
+										}
+										add_casus_belli = {
+											target = THIS
+											type = demand_concession_casus_belli
+											months = 24
+										}
+									}
+									FROM = {
+										limit = {
+											number_of_states = 2
+											civilized = no
+											has_global_flag = berlin_conference
+										}
+										add_casus_belli = {
+											target = THIS
+											type = demand_concession_casus_belli
+											months = 24
+										}
+									}
+									FROM = {
+										limit = {
+											NOT = { number_of_states = 2 }
+											civilized = yes
+										}
+										add_casus_belli = {
+											target = THIS
+											type = conquest
+											months = 24
+										}
+									}
+									FROM = {
+										limit = {
+											NOT = { number_of_states = 2 }
+											civilized = no
+											NOT = { has_global_flag = berlin_conference }
+										}
+										add_casus_belli = {
+											target = THIS
+											type = establish_protectorate_casus_belli
+											months = 24
+										}
+									}
+									FROM = {
+										limit = {
+											NOT = { number_of_states = 2 }
+											civilized = no
+											has_global_flag = berlin_conference
+										}
+										add_casus_belli = {
+											target = THIS
+											type = establish_protectorate_casus_belli
+											months = 24
+										}
+									}
+								}
+							}
+						}
+						ai_chance = { factor = 0 }
+					}
+				}
+			}
 		}
 	}
 
@@ -1487,7 +1613,78 @@ political_decisions = {
 					FIN = { all_core = { add_core = SCA } }
 				}
 			}
-			FIN = { country_event = 325460 }
+			FIN = {
+				#Integration of Finland
+				lambda_country_event = {
+					title = "EVTNAME325460"
+					desc = "EVTDESC325460"
+					picture = "february_manifesto_russia"
+					option = {
+						name = "EVT325460OPTA"
+						any_owned = { add_province_modifier = { name = nationalist_agitation duration = 1825 } }
+						random_country = {
+							limit = {
+								tag = FROM
+								primary_culture = russian
+							}
+							FIN = {
+								any_pop = {
+									limit = {
+										OR = {
+											has_pop_culture = finnish
+											has_pop_culture = swedish
+										}
+									}
+									militancy = 2
+									consciousness = 3
+								}
+							}
+						}
+						random_country = {
+							limit = {
+								tag = FROM
+								is_culture_group = scandinavian
+							}
+							FIN = {
+								any_pop = {
+									limit = { has_pop_culture = finnish }
+									militancy = 2
+									consciousness = 3
+								}
+							}
+						}
+						FROM = { inherit = THIS }
+						ai_chance = { factor = 1 }
+					}
+					option = {
+						name = "EVT325460OPTB"
+						relation = { who = FROM value = -400 }
+						FROM = {
+							diplomatic_influence = { who = THIS value = -400 }
+							end_military_access = THIS
+							leave_alliance = THIS
+							release_vassal = THIS
+						}
+						add_country_modifier = { name = small_country_draft duration = 720 }
+						political_reform = mandatory_service
+						set_country_flag = annex_to_master
+						FROM = {
+							casus_belli = {
+								target = THIS
+								type = make_puppet
+								months = 12
+							}
+							war = {
+								target = THIS
+								attacker_goal = { casus_belli = make_puppet }
+								defender_goal = { casus_belli = status_quo }
+								call_ally = yes
+							}
+						}
+						ai_chance = { factor = 0 }
+					}
+				}
+			}
 		}
 
 		ai_will_do = {
