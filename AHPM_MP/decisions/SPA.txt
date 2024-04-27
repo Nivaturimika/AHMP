@@ -18,7 +18,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			add_country_modifier = { name = la_guardia_civil duration = -1 }
+			add_country_modifier = la_guardia_civil
 			set_country_flag = guardia_civil_established
 		}
 	}

@@ -131,93 +131,19 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = unite_with_greece
-			GRE = {
-				limit = {
-					ai = yes
-					THIS = { ai = yes }
+			THIS = {
+				remove_accepted_culture = turkish
+				remove_accepted_culture = north_italian
+				remove_accepted_culture = british
+				if = {
+					limit = { owns = 834 }
+					capital = 834
 				}
-				THIS = {
-					remove_accepted_culture = north_italian
-					remove_accepted_culture = british
-				}
-				inherit = THIS
+				change_tag = GRE
 			}
-			GRE = {
-				limit = {
-					ai = yes
-					THIS = { ai = no }
-				}
-				any_owned = { secede_province = THIS }
-				THIS = {
-					remove_accepted_culture = turkish
-					remove_accepted_culture = north_italian
-					remove_accepted_culture = british
-					random_owned = {
-						limit = { province_id = 834 }
-						owner = { capital = 834 }
-					}
-					change_tag = GRE
-				}
-			}
-			GRE = {
-				limit = { ai = no }
-				country_event = 60130
-			}
+			GRE = { country_event = 60130 }
 		}
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				government = fascist_dictatorship
-				GRE = {
-					NOT = { government = fascist_dictatorship }
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = { government = fascist_dictatorship }
-				GRE = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				NOT = { government = proletarian_dictatorship }
-				GRE = { government = proletarian_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = democracy
-					government = hms_government
-				}
-				GRE = {
-					NOT = {
-						government = democracy
-						government = hms_government
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				GRE = {
-					OR = {
-						government = democracy
-						government = hms_government
-					}
-				}
-				NOT = {
-					government = democracy
-					government = hms_government
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = presidential_dictatorship
-					government = bourgeois_dictatorship
-					government = absolute_monarchy
-				}
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 }

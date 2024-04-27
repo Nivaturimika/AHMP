@@ -566,13 +566,37 @@ political_decisions = {
 		effect = {
 			KMT = {
 				prestige = 5
-				country_event = 131741
+				lambda_country_event = {
+					title = "EVTNAME131741" #Joining the Kuomintang
+					desc = "EVTDESC131741"
+					picture = "warlords"
+					option = {
+						name = "EVT131741OPTA"
+						FROM = {
+							sphere_owner = {
+								limit = {
+									NOT = { is_sphere_leader_of = THIS }
+									NOT = { is_culture_group = east_asian }
+								}
+								casus_belli = {
+									target = THIS
+									type = free_peoples
+									months = 36
+								}
+								casus_belli = {
+									target = THIS
+									type = cut_down_to_size
+									months = 36
+								}
+							}
+							all_core = { add_core = THIS }
+							any_owned = { secede_province = THIS }
+						}
+					}
+				}
 			}
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	reunification_of_china_KMT = {
@@ -943,32 +967,23 @@ political_decisions = {
 				}
 				HNN = { all_core = { remove_core = HNN } }
 			}
-			KMT = {
+			any_country = {
 				limit = {
-					exists = yes
-					in_sphere = THIS
-				}
-				country_event = 23218
-			}
-			TPG = {
-				limit = {
-					exists = yes
-					in_sphere = THIS
-				}
-				country_event = 23218
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { tag = CHI }
+					OR = {
+						tag = KMT
+						tag = TPG
 					}
+					exists = yes
+					in_sphere = THIS
 				}
-				owner = {
-					all_core = { remove_core = THIS }
-					change_tag = CHI
-					primary_culture = beifaren
-					add_accepted_culture = nanfaren
-				}
+				country_event = 23218
+			}
+			if = {
+				limit = { NOT = { tag = CHI } }
+				all_core = { remove_core = THIS }
+				change_tag = CHI
+				primary_culture = beifaren
+				add_accepted_culture = nanfaren
 			}
 			any_country = {
 				limit = {

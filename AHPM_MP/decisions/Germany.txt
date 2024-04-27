@@ -7,11 +7,7 @@ political_decisions = {
 			}
 			OR = { primary_culture = south_german primary_culture = north_german }
 			FRA = { any_owned_province = { is_core = GER } }
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			test = is_monarchy_goverment
 		}
 
 		allow = {
@@ -164,9 +160,7 @@ political_decisions = {
 		}
 
 		effect = {
-			any_pop = {
-				militancy = -2
-			}
+			any_pop = { militancy = -2 }
 			badboy = -3
 			set_country_flag = niederwald_denkmal
 		}
@@ -201,11 +195,9 @@ political_decisions = {
 			}
 			exists = PRU
 		}
-
 		allow = {
 			is_independant = yes
 		}
-
 		effect = {
 			prestige = 5
 			set_country_flag = lippe_dispute_solved
@@ -215,22 +207,16 @@ political_decisions = {
 	support_schaumburgs = {
 		potential = {
 			tag = LIP
-			year = 1880
 			NOT = {
 				has_country_flag = lippe_dispute_solved
 			}
 			exists = PRU
 		}
-
 		allow = {
 			is_independant = yes
 		}
-
 		effect = {
-			relation = {
-				who = PRU
-				value = 50
-			}
+			prestige = 5
 			set_country_flag = lippe_dispute_solved
 		}
 	}
@@ -239,9 +225,7 @@ political_decisions = {
 		picture = das_zivilgesetzbuch
 		potential = {
 			tag = HES
-			NOT = {
-				has_country_flag = code_of_laws
-			}
+			NOT = { has_country_flag = code_of_laws }
 		}
 
 		allow = {
@@ -251,9 +235,7 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			years_of_research = 0.05
-			any_pop = {
-				militancy = -1
-			}
+			any_pop = { militancy = -1 }
 			set_country_flag = code_of_laws
 		}
 	}
@@ -284,9 +266,7 @@ political_decisions = {
 			2858 = { change_province_name = "Bismarck Sea" }
 			2531 = {
 				change_province_name = "Friedrich-Wilhelmshafen"
-				state_scope = {
-					change_region_name = "Kaiser-Wilhelms-Land"
-				}
+				state_scope = { change_region_name = "Kaiser-Wilhelms-Land" }
 			}
 			set_global_flag = wir_wollen_unseren_alten_kaiser_wilhelm_wiederhaben
 		}
@@ -296,7 +276,7 @@ political_decisions = {
 		potential = {
 			tag = GER
 			NOT = { has_country_flag = has_questioned_heligoland }
-			533 = { NOT = { is_core = GER } }
+			533 = { NOT = { is_core = THIS } }
 		}
 
 		allow = {
@@ -316,7 +296,7 @@ political_decisions = {
 
 		effect = {
 			533 = {
-				add_core = GER # Heligoland is my last territorial demand!
+				add_core = THIS # Heligoland is my last territorial demand!
 				add_core = ENG
 			}
 			set_country_flag = has_questioned_heligoland
@@ -343,10 +323,7 @@ political_decisions = {
 
 		effect = {
 			602 = {
-				add_province_modifier = {
-					name = the_walhalla
-					duration = -1
-				}
+				add_province_modifier = the_walhalla
 			}
 			set_global_flag = the_walhalla_is_built
 		}
@@ -369,9 +346,7 @@ political_decisions = {
 
 		effect = {
 			any_pop = {
-				limit = {
-					has_pop_religion = protestant
-				}
+				limit = { has_pop_religion = protestant }
 				militancy = -1
 			}
 			set_country_flag = presbyteries_introduced
@@ -401,13 +376,7 @@ political_decisions = {
 			prestige = 5
 			set_country_flag = von_moltke
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				war = no
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	league_of_three_emperors = {
@@ -614,9 +583,9 @@ political_decisions = {
 			random_country = {
 				limit = {
 					owns = 412
-					NOT = { tag = THIS }
+					tag != THIS
 				}
-				leave_alliance = GER
+				leave_alliance = THIS
 				casus_belli = {
 					target = THIS
 					type = cut_down_to_size
@@ -782,10 +751,7 @@ political_decisions = {
 			566 = { add_core = THIS }
 			568 = { add_core = THIS }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 #Luderitz Expedition
@@ -891,11 +857,9 @@ claim_togoland = {
 		1914 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
 		1917 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
 		1918 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
-		random_owned = {
-			limit = { owner = { is_culture_group = germanic } }
-			owner = {
-				1915 = { change_province_name = "Misahsshe" }
-			}
+		if = {
+			limit = { is_culture_group = germanic }
+			1915 = { change_province_name = "Misahsshe" }
 		}
 	}
 
@@ -914,11 +878,9 @@ core_heligoland = {
 		}
 		NOT = { has_global_flag = heligoland_claimed }
 	}
-
 	allow = {
 		nationalism_n_imperialism = 1
 	}
-
 	effect = {
 		set_global_flag = heligoland_claimed
 		533 = {
@@ -926,55 +888,7 @@ core_heligoland = {
 			add_core = GER
 		}
 	}
-
 	ai_will_do = { factor = 1 }
 }
 
-#    sudeteland_exchange = {
-#        picture = treaty_signing
-#        potential = {
-#            OR = {
-#                tag = NGF
-#                tag = PRU
-#                tag = GER
-#            }
-#            owns = 631
-#            owns = 632
-#            owns = 688
-#            owns = 689
-#            owns = 2584
-#            NOT = { owns = 625 }
-#            NOT = { has_country_flag = sudeteland_treaty }
-#            625 = {
-#                owner = {
-#                    ai = yes
-#                    owns = 627
-#                    owns = 628
-#                    owns = 629
-#                }
-#            }
-#        }
-#
-#        allow = {
-#            war = no
-#            money = 45000
-#        }
-#
-#        effect = {
-#            set_country_flag = sudeteland_treaty
-#            625 = {
-#                owner = {
-#                    treasury = 40000
-#                    relation = { who = THIS value = 100 }
-#                    631 = { secede_province = THIS }
-#                    632 = { secede_province = THIS }
-#                    689 = { secede_province = THIS }
-#                    2584 = { secede_province = THIS }
-#                }
-#            }
-#            627 = { secede_province = THIS }
-#            628 = { secede_province = THIS }
-#            629 = { secede_province = THIS }
-#        }
-#    }
 }

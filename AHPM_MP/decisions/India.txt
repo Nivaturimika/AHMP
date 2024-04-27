@@ -1,7 +1,6 @@
 political_decisions = {
-
 	form_dravidistan = {
-	picture = form_dravidistan
+		picture = form_dravidistan
 		potential = {
 			OR = {
 				primary_culture = tamil
@@ -17,89 +16,52 @@ political_decisions = {
 		allow = {
 			war = no
 			is_vassal = no
-			1304 = { #Madras
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-			1319 = { #Trivandrum
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-			1313 = { #Bangalore
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-			1317 = { #Calicut
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
+			1304 = { test = is_influenced_by_this }
+			1319 = { test = is_influenced_by_this }
+			1313 = { test = is_influenced_by_this }
+			1317 = { test = is_influenced_by_this }
 		}
 
 		effect = {
-			set_global_flag = dravidistan_formed
-			prestige = 10
-			add_accepted_culture = tamil
-			add_accepted_culture = kannada
-			add_accepted_culture = telegu
-			add_accepted_culture = malayalam
-			all_core = {
-				add_core = DRA
-				remove_core = THIS
-			}
 			change_tag = DRA
-			MYS = {
-				all_core = { add_core = DRA }
-			}
-			TRA = {
-				all_core = { add_core = DRA }
-			}
-			KRN = {
-				all_core = { add_core = DRA }
-			}
-			ENG_1305 = { add_core = DRA } #Vizagapatnam
-			1286 = { add_core = DRA } #Gulbarga
-			1283 = { add_core = DRA } #Hyderabad
-			1287 = { add_core = DRA } #Warangal
-			1279 = { add_core = DRA } #Jagdalpur
-			1322 = { add_core = DRA } #Jaffna
-			1324 = { add_core = DRA } #Tricomalee
-			MYS = {
-				limit = { ai = yes }
-				THIS = { inherit = MYS }
-			}
-			MYS = {
-				limit = { ai = no }
-				country_event = 11101
-			}
-			TRA = {
-				limit = { ai = yes }
-				THIS = { inherit = TRA }
-			}
-			TRA = {
-				limit = { ai = no }
-				country_event = 11101
-			}
-			KRN = {
-				limit = { ai = yes }
-				THIS = { inherit = KRN }
-			}
-			KRN = {
-				limit = { ai = no }
-				country_event = 11101
+			DRA = {
+				lambda_country_event = {
+					title = "Delegate"
+					desc = "Delegate"
+					option = {
+						name = "OK"
+						set_global_flag = dravidistan_formed
+						prestige = 10
+						add_accepted_culture = tamil
+						add_accepted_culture = kannada
+						add_accepted_culture = telegu
+						add_accepted_culture = malayalam
+						MYS = { all_core = { add_core = THIS } }
+						TRA = { all_core = { add_core = THIS } }
+						KRN = { all_core = { add_core = THIS } }
+						ENG_1305 = { add_core = THIS } #Vizagapatnam
+						1286 = { add_core = THIS } #Gulbarga
+						1283 = { add_core = THIS } #Hyderabad
+						1287 = { add_core = THIS } #Warangal
+						1279 = { add_core = THIS } #Jagdalpur
+						1322 = { add_core = THIS } #Jaffna
+						1324 = { add_core = THIS } #Tricomalee
+						any_country = {
+							limit = {
+								OR = {
+									tag = KRN
+									tag = TRA
+									tag = MYS
+								}
+							}
+							country_event = 11101
+						}
+					}
+				}
 			}
 		}
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	form_rajputana = {
@@ -115,40 +77,22 @@ political_decisions = {
 			war = no
 			is_vassal = no
 			1267 = { #Bikaner
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1265 = { #Jaisalmer
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1266 = { #Jodhpur
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1268 = { #Jaipur
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1264 = { #Ajmer
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1269 = { #Udaipur
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 		}
 
@@ -167,12 +111,7 @@ political_decisions = {
 						tag = MEW
 					}
 				}
-				if = {
-					limit = { ai = yes }
-					THIS = { inherit = BIK }
-				} else = {
-					country_event = 11101
-				}
+				country_event = 11101
 			}
 		}
 
@@ -204,40 +143,22 @@ political_decisions = {
 			war = no
 			is_vassal = no
 			1267 = { #Bikaner
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1265 = { #Jaisalmer
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1266 = { #Jodhpur
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1268 = { #Jaipur
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1264 = { #Ajmer
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 			1269 = { #Udaipur
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
+ test = is_influenced_by_this 
 			}
 		}
 
@@ -245,83 +166,16 @@ political_decisions = {
 			set_global_flag = rajputana_formed
 			prestige = 5
 			ENG_1264 = { add_core = RAJ }
-			random_country = {
+			any_country = {
 				limit = {
-					tag = BIK
+					OR = {
+						tag = BIK
+						tag = JAS
+						tag = JOD
+						tag = JAI
+						tag = MEW
+					}
 					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = BIK }
-			}
-			random_country = {
-				limit = {
-					tag = BIK
-					exists = yes
-					ai = no
-				}
-				country_event = 11101
-			}
-			random_country = {
-				limit = {
-					tag = JAS
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = JAS }
-			}
-			random_country = {
-				limit = {
-					tag = JAS
-					exists = yes
-					ai = no
-				}
-				country_event = 11101
-			}
-			random_country = {
-				limit = {
-					tag = JOD
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = JOD }
-			}
-			random_country = {
-				limit = {
-					tag = JOD
-					exists = yes
-					ai = no
-				}
-				country_event = 11101
-			}
-			random_country = {
-				limit = {
-					tag = JAI
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = JAI }
-			}
-			random_country = {
-				limit = {
-					tag = JAI
-					exists = yes
-					ai = no
-				}
-				country_event = 11101
-			}
-			random_country = {
-				limit = {
-					tag = MEW
-					exists = yes
-					ai = yes
-				}
-				THIS = { inherit = MEW }
-			}
-			random_country = {
-				limit = {
-					tag = MEW
-					exists = yes
-					ai = no
 				}
 				country_event = 11101
 			}
@@ -1005,7 +859,6 @@ political_decisions = {
 
 		effect = {
 			prestige = 5
-
 			HND = {
 				any_pop = { militancy = -6 }
 				tech_school = developing_tech_school
@@ -1025,22 +878,9 @@ political_decisions = {
 			}
 			release_vassal = HND
 			create_alliance = HND
-			relation = { who = HND value = 400 }
 			diplomatic_influence = { who = HND value = 400 }
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					has_global_flag = pakistan_born
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = { 1251 = { state_scope = { average_militancy = 7 } } }
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	end_sikh_war = {

@@ -16,14 +16,14 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = greater_norway
-			GRN = { all_core = { add_core = NOR } }
-			ICL = { all_core = { add_core = NOR } }
-			253 = { add_core = NOR }
-			982 = { add_core = NOR }
-			983 = { add_core = NOR }
-			2587 = { add_core = NOR }
-			338 = { add_core = NOR }
-			319 = { add_core = NOR }
+			GRN = { all_core = { add_core = THIS } }
+			ICL = { all_core = { add_core = THIS } }
+			253 = { add_core = THIS }
+			982 = { add_core = THIS }
+			983 = { add_core = THIS }
+			2587 = { add_core = THIS }
+			338 = { add_core = THIS }
+			319 = { add_core = THIS }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -114,26 +114,14 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = claim_greater_albania
-			800 = { #Ulcinj
-				add_core = ALB
-			}
-			802 = { #Pristina
-				add_core = ALB
-			}
-			803 = { #Prizren
-				add_core = ALB
-			}
-			807 = { #Bitola
-				add_core = ALB
-			}
-			824 = { #Janina
-				add_core = ALB
-			}
+			800 = { add_core = THIS }
+			802 = { add_core = THIS }
+			803 = { add_core = THIS }
+			807 = { add_core = THIS }
+			824 = { add_core = THIS }
 		}
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	claim_greater_mongolia = {
@@ -157,53 +145,47 @@ political_decisions = {
 			badboy = 20
 			set_country_flag = claim_greater_mongolia
 			1075 = { #Irkutsk
-				add_core = MGL
+				add_core = THIS
 			}
 			1078 = { #Chita
-				add_core = MGL
+				add_core = THIS
 			}
 			1079 = { #Nerchinsk
-				add_core = MGL
+				add_core = THIS
 			}
 			1488 = { #Gansu
-				add_core = MGL
+				add_core = THIS
 			}
 			1490 = { #Lanzhou
-				add_core = MGL
+				add_core = THIS
 			}
 			1491 = { #Ningxia
-				add_core = MGL
+				add_core = THIS
 			}
 			1532 = { #Guihua Tumed
-				add_core = MGL
+				add_core = THIS
 			}
 			1534 = { #Ulaan Chab Chuulghan
-				add_core = MGL
+				add_core = THIS
 			}
 			1535 = { #Yeke Juu Chuulghan
-				add_core = MGL
+				add_core = THIS
 			}
 			1596 = { #Tulta
-				add_core = MGL
+				add_core = THIS
 			}
-			1002 = { add_core = MGL }
-			2670 = { add_core = MGL }
-			2671 = { add_core = MGL }
-			1075 = { add_core = MGL }
-			1469 = { add_core = MGL }
-			1599 = { add_core = MGL }
-			1557 = { add_core = MGL }
-			1600 = { add_core = MGL }
-			1595 = { add_core = MGL }
+			1002 = { add_core = THIS }
+			2670 = { add_core = THIS }
+			2671 = { add_core = THIS }
+			1075 = { add_core = THIS }
+			1469 = { add_core = THIS }
+			1599 = { add_core = THIS }
+			1557 = { add_core = THIS }
+			1600 = { add_core = THIS }
+			1595 = { add_core = THIS }
 		}
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.02
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	greater_afghanistan = {
@@ -227,64 +209,18 @@ political_decisions = {
 		}
 		effect = {
 			1218 = {
-				add_core = AFG
+				add_core = THIS
 			}
 			1219 = {
-				add_core = AFG
+				add_core = THIS
 			}
 			1223 = {
-				add_core = AFG
+				add_core = THIS
 			}
 			set_country_flag = greater_afghanistan
 			badboy = 2
-			any_country = {
-				limit = {
-					OR = {
-						owns = 1218
-						owns = 1219
-						owns = 1223
-					}
-				}
-				relation = {
-					who = AFG
-					value = -100
-				}
-			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				1218 = {
-					owner = {
-						is_greater_power = yes
-						military_score = 60
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				1219 = {
-					owner = {
-						is_greater_power = yes
-						military_score = 60
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				1223 = {
-					owner = {
-						is_greater_power = yes
-						military_score = 60
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				badboy = 0.8
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	greater_nepal = {
@@ -309,10 +245,10 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = claimed_greater_nepal
-			1235 = { add_core = NEP }
-			1328 = { add_core = NEP }
-			1252 = { add_core = NEP }
-			1255 = { add_core = NEP }
+			1235 = { add_core = THIS }
+			1328 = { add_core = THIS }
+			1252 = { add_core = THIS }
+			1255 = { add_core = THIS }
 			any_country = {
 				limit = {
 					OR = {
@@ -343,20 +279,18 @@ political_decisions = {
 			is_vassal = no
 			is_disarmed = no
 			war_policy = jingoism
-			SER = {
-				all_core = { owned_by = SER }
-			}
+			THIS = { all_core = { owned_by = THIS } }
 		}
 
 		effect = {
 			set_country_flag = claimed_greater_serbia
 			prestige = 10
-			AUS_777 = { add_core = SER }
-			TUR_788 = { add_core = SER }
-			MON_2582 = { add_core = SER }
-			AUS_780 = { add_core = SER }
-			776 = { add_core = SER }
-			772 = { add_core = SER }
+			AUS_777 = { add_core = THIS }
+			TUR_788 = { add_core = THIS }
+			MON_2582 = { add_core = THIS }
+			AUS_780 = { add_core = THIS }
+			776 = { add_core = THIS }
+			772 = { add_core = THIS }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -365,9 +299,7 @@ political_decisions = {
 	picture = reclaim_croatia
 		potential = {
 			tag = HUN
-			771 = {
-				NOT = { is_core = HUN }
-			}
+			771 = { NOT = { is_core = THIS } }
 			NOT = { has_country_flag = reclaimed_croatia }
 		}
 		allow = {
@@ -382,20 +314,11 @@ political_decisions = {
 		effect = {
 			set_country_flag = reclaimed_croatia
 			prestige = 5
-			AUS_771 = { add_core = HUN }
-			AUS_777 = { add_core = HUN }
-			778 = { add_core = HUN }
-			any_country = {
-				limit = {
-					any_owned_province = { region = AUS_771 }
-					NOT = { tag = THIS }
-				}
-				relation = { who = THIS value = -50 }
-			}
+			AUS_771 = { add_core = THIS }
+			AUS_777 = { add_core = THIS }
+			778 = { add_core = THIS }
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	greater_macedonia = {
@@ -420,18 +343,15 @@ political_decisions = {
 		effect = {
 			set_country_flag = claimed_greater_macedonia
 			prestige = 5
-			808 = { add_core = MCD }
-			823 = { add_core = MCD }
-			805 = { add_core = MCD }
-			822 = { add_core = MCD }
-			821 = { add_core = MCD }
-			819 = { add_core = MCD }
-			820 = { add_core = MCD }
+			808 = { add_core = THIS }
+			823 = { add_core = THIS }
+			805 = { add_core = THIS }
+			822 = { add_core = THIS }
+			821 = { add_core = THIS }
+			819 = { add_core = THIS }
+			820 = { add_core = THIS }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	greater_ukraine = {
@@ -452,29 +372,18 @@ political_decisions = {
 		effect = {
 			set_country_flag = claimed_greater_ukraine
 			prestige = 10
-			DON = { all_core = { add_core = UKR } }
-			RUT = { all_core = { add_core = UKR } }
-			676 = { add_core = UKR }
-			677 = { add_core = UKR }
-			663 = { add_core = UKR }
-			715 = { add_core = UKR }
-			705 = { add_core = UKR }
-			977 = { add_core = UKR }
-			1018 = { add_core = UKR }
-			1019 = { add_core = UKR }
-			any_country = {
-				limit = {
-					NOT = { tag = THIS }
-					any_owned_province = { is_core = UKR }
-				}
-				relation = { who = THIS value = -100 }
-				leave_alliance = THIS
-			}
+			DON = { all_core = { add_core = THIS } }
+			RUT = { all_core = { add_core = THIS } }
+			676 = { add_core = THIS }
+			677 = { add_core = THIS }
+			663 = { add_core = THIS }
+			715 = { add_core = THIS }
+			705 = { add_core = THIS }
+			977 = { add_core = THIS }
+			1018 = { add_core = THIS }
+			1019 = { add_core = THIS }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	unite_with_ukraine = {
@@ -502,28 +411,14 @@ political_decisions = {
 		effect = {
 			set_country_flag = unite_with_ukraine
 			all_core = {
-				remove_core = RUT
+				remove_core = THIS
 				add_core = UKR
 			}
 			675 = { add_core = UKR }
 			663 = { add_core = UKR }
 			704 = { add_core = UKR }
 			705 = { add_core = UKR }
-			random_country = {
-				limit = {
-					tag = UKR
-					ai = yes
-					THIS = { ai = yes }
-				}
-				inherit = THIS
-			}
-			random_country = {
-				limit = {
-					tag = UKR
-					ai = yes
-					THIS = { ai = no }
-				}
-				any_owned = { secede_province = THIS }
+			UKR = {
 				THIS = {
 					random_owned = {
 						limit = { province_id = 958 }
@@ -531,19 +426,10 @@ political_decisions = {
 					}
 					change_tag = UKR
 				}
-			}
-			random_country = {
-				limit = {
-					tag = UKR
-					ai = no
-				}
 				country_event = 60130
 			}
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	greater_assyria = {
@@ -570,22 +456,17 @@ political_decisions = {
 		effect = {
 			set_country_flag = claimed_greater_assyria
 			prestige = 5
-			923 = {
-				change_province_name = "Nineveh"
-			}
-			889 = { add_core = ASY }
-			890 = { add_core = ASY }
-			891 = { add_core = ASY }
-			892 = { add_core = ASY }
-			893 = { add_core = ASY }
-			2414 = { add_core = ASY }
-			925 = { add_core = ASY }
-			928 = { add_core = ASY }
+			923 = { change_province_name = "Nineveh" }
+			889 = { add_core = THIS }
+			890 = { add_core = THIS }
+			891 = { add_core = THIS }
+			892 = { add_core = THIS }
+			893 = { add_core = THIS }
+			2414 = { add_core = THIS }
+			925 = { add_core = THIS }
+			928 = { add_core = THIS }
 		}
-
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	reclaim_palestine = {
@@ -595,14 +476,12 @@ political_decisions = {
 			has_country_flag = israel_received_cores
 			NOT = { has_country_flag = palestine_reclaimed_cores }
 		}
-
 		allow = {
 			war = no
 		}
-
 		effect = {
 			set_country_flag = palestine_reclaimed_cores
-			EGY_921 = { add_core = PLS }
+			EGY_921 = { add_core = THIS }
 		}
 	}
 
@@ -635,23 +514,21 @@ political_decisions = {
 			set_country_flag = cisplatina_is_ours #Uruguay provinces
 			badboy = 10
 			2344 = {
-				add_core = BRZ
+				add_core = THIS
 			}
 			2345 = {
-				add_core = BRZ
+				add_core = THIS
 			}
 			2346 = {
-				add_core = BRZ
+				add_core = THIS
 			}
 			2347 = {
-				add_core = BRZ
+				add_core = THIS
 			}
 
 		}
 
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	rio_da_prata = {
@@ -672,117 +549,57 @@ political_decisions = {
 			set_country_flag = prata_is_ours
 			badboy = 10
 			2554 = { #posadas
-				add_core = BRZ
+				add_core = THIS
 			}
 			2358= { #santo tomas
-				add_core = BRZ
+				add_core = THIS
 			}
 			2357 = { #curuzu
-				add_core = BRZ
+				add_core = THIS
 			}
 			2356 = { #corrientes
-				add_core = BRZ
+				add_core = THIS
 			}
 			2359 = { #colon
-				add_core = BRZ
+				add_core = THIS
 			}
 			2360 = { #parana
-				add_core = BRZ
+				add_core = THIS
 			}
 
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 
-	total_war_in_rio_grande_sul = {
+	total_war_in_small_nation = {
 		alert = yes
 		picture = begin_line_of_advantage
 		potential = {
 			NOT = { has_country_modifier = small_country_draft }
-			NOT = { has_country_flag = rgs_draft_happened }
-			tag = RGS
+			OR = {
+				tag = RGS
+				tag = RGR
+				tag = YUC
+			}
 		}
-
 		allow = {
-			war_with = BRZ
+			war = yes
 		}
-
 		effect = {
-			iron = 10
-			wool = 10
-			timber = 25
-			small_arms = 10
-			leadership = 20
+			iron = 1000
+			wool = 1000
+			timber = 2500
+			small_arms = 3000
+			leadership = 30
 			add_country_modifier = {
 				name = small_country_draft
 				duration = 30
 			}
-			set_country_flag = rgs_draft_happened
 		}
 		ai_will_do = { factor = 1 }
-	}
-
-	total_war_in_rio_grande = {
-		alert = yes
-		picture = begin_line_of_advantage
-		potential = {
-			NOT = { has_country_modifier = small_country_draft }
-			NOT = { has_country_flag = rgr_draft_happened }
-			tag = RGR
-		}
-
-		allow = {
-			war_with = MEX
-		}
-
-		effect = {
-			iron = 10
-			wool = 10
-			timber = 25
-			small_arms = 10
-			leadership = 20
-			add_country_modifier = {
-				name = small_country_draft
-				duration = 30
-			}
-			set_country_flag = rgr_draft_happened
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	total_war_in_yucatan = {
-		alert = yes
-		picture = begin_line_of_advantage
-		potential = {
-			NOT = { has_country_modifier = small_country_draft }
-			NOT = { has_country_flag = yucatan_draft_happened }
-			tag = YUC
-		}
-
-		allow = {
-			war_with = MEX
-		}
-
-		effect = {
-			iron = 10
-			wool = 10
-			timber = 25
-			small_arms = 10
-			leadership = 20
-			add_country_modifier = {
-				name = small_country_draft
-				duration = 30
-			}
-			set_country_flag = yucatan_draft_happened
-		}
-		ai_will_do = {
-			factor = 1
-		}
 	}
 
 	deseret_complete_cores = {

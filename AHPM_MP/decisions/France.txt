@@ -5,13 +5,12 @@ political_decisions = {
 				has_global_flag = statue_of_liberty_has_been_built
 			}
 			tag = FRA
-			exists = FRA
 			exists = USA
 			USA = {
 				government = democracy
 				owns = 232
 			}
-			FRA = {
+			THIS = {
 				OR = {
 					government = hms_government
 					government = democracy
@@ -57,10 +56,7 @@ political_decisions = {
 			army_professionalism = 1
 		}
 		effect = {
-			add_country_modifier = {
-				name = the_french_foreign_legion
-				duration = -1
-			}
+			add_country_modifier = the_french_foreign_legion
 			set_country_flag = french_foreign_legion_supported
 		}
 	}
@@ -101,7 +97,6 @@ political_decisions = {
 					}
 					exists = yes
 				}
-				relation = { who = FRA value = 50 }
 				years_of_research = 0.2
 			}
 			set_country_flag = military_mission_in_japan
@@ -142,19 +137,18 @@ political_decisions = {
 			MAD = {
 				civilized = no
 				OR = {
-					in_sphere = FRA
+					in_sphere = THIS
 					part_of_sphere = no
 				}
 			}
 		}
 
 		effect = {
-			random_country = {
-				limit = {
-					NOT = { tag = THIS }
-					is_sphere_leader_of = MAD
+			MAD = {
+				sphere_owner = {
+					limit = { tag != THIS }
+					diplomatic_influence = { who = MAD value = -150 }
 				}
-				diplomatic_influence = { who = MAD value = -150 }
 			}
 			diplomatic_influence = {
 				who = MAD
@@ -222,7 +216,6 @@ political_decisions = {
 			set_country_flag = brazzas_expedition
 			prestige = 5
 			diplomatic_influence = { who = LOA value = 200 }
-			relation = { who = LOA value = 200 }
 		}
 	}
 
@@ -245,18 +238,6 @@ political_decisions = {
 
 		effect = {
 			badboy = 5
-			any_country = {
-				limit = {
-					OR = {
-						primary_culture = north_german
-						primary_culture = south_german
-					}
-				}
-				relation = {
-					who = THIS
-					value = -100
-				}
-			}
 			casus_belli = {
 				target = PRU
 				type = acquire_state
@@ -270,13 +251,7 @@ political_decisions = {
 			prestige = 10
 			set_country_flag = crisis_on_the_rhine
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.5
-			}
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	build_the_eiffel_tower = {
@@ -286,21 +261,48 @@ political_decisions = {
 			NOT = {
 				has_country_flag = the_eiffel_tower_was_built
 			}
-
 			has_country_flag = world_fair_planner
 		}
 
 		allow = {
 			war = no
 			invention = bessemer_steel
-			OR = {
-				money = 30000
-				ai = yes
-			}
+			money = 30000
 		}
 
 		effect = {
-			country_event = 37236
+			lambda_country_event = {
+				title = "EVTNAME37236" #Eiffel Tower Construction
+				desc = "EVTDESC37236"
+				picture = "eiffel_tower_construction"
+				option = {
+					name = "EVT37236OPTA"
+					treasury = -40000
+					random_list = {
+						50 = { add_country_modifier = { name = eiffel_tower_construction duration = 600 } }
+						40 = { add_country_modifier = { name = eiffel_tower_construction duration = 730 } }
+						10 = { add_country_modifier = { name = eiffel_tower_construction duration = 900 } }
+					}
+				}
+				option = {
+					name = "EVT37236OPTB"
+					treasury = -30000
+					random_list = {
+						30 = { add_country_modifier = { name = eiffel_tower_construction duration = 600 } }
+						50 = { add_country_modifier = { name = eiffel_tower_construction duration = 730} }
+						20 = { add_country_modifier = { name = eiffel_tower_construction duration = 900 } }
+					}
+				}
+				option = {
+					name = "EVT37236OPTC"
+					treasury = -20000
+					random_list = {
+						30 = { add_country_modifier = { name = eiffel_tower_construction duration = 600 } }
+						30 = { add_country_modifier = { name = eiffel_tower_construction duration = 730 } }
+						40 = { add_country_modifier = { name = eiffel_tower_construction duration = 900 } }
+					}
+				}
+			}
 			set_country_flag = the_eiffel_tower_was_built
 		}
 	}
@@ -321,37 +323,11 @@ political_decisions = {
 			impressionism = 1
 			iron_railroad = 1
 			business_banks = 1
-			OR = {
-				money = 50000
-				ai = yes
-			}
+			money = 50000
 		}
 
 		effect = {
-
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 50000 }
-						check_variable = { which = owed_cash_money value = 9 }
-					}
-				}
-				owner = { change_variable = { which = owed_cash_money value = 50 } }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 50000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					}
-				}
-				owner = { set_variable = { which = owed_cash_money value = 50 } }
-			}
-			random_owned = {
-				limit = { owner = { money = 50000 } }
-				owner = { treasury = -50000 }
-			}
-
+			treasury = -50000
 			425 = { life_rating = 5 add_province_modifier = { name = haussmanns_renovations duration = -1 } }
 			prestige = 10
 			set_country_flag = extreme_home_makeover

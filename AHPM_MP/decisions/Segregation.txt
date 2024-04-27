@@ -117,7 +117,6 @@ political_decisions = {
 					}
 				}
 			}
-
 			random_owned = {
 				limit = { OR = { continent = australia_new_zealand continent = polynesia } }
 				owner = {
@@ -133,7 +132,6 @@ political_decisions = {
 					}
 				}
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = mayan } NOT = { owner = { accepted_culture = mayan } } }
 				owner = { add_accepted_culture = mayan }

@@ -2218,7 +2218,193 @@ acquire_any_state = {
 					any_owned_province = { port = yes }
 				}
 			}
-			owner = { country_event = 1316089 }
+			owner = {
+				#Unequal Treaty if war is won
+				lambda_country_event = {
+					title = "EVTNAME1316089" #The Unequal Treaty (with other countries -- if war was won)
+					desc = "EVTDESC1316089"
+					picture = "Opiumwar"
+					option = {
+						name = "EVT97161OPTA"
+						FROM = {
+							limit = {
+								NOT = {
+									AND = {
+										OR = {
+											tag = JAP
+											tag = TKG
+										}
+										has_country_modifier = fukoku_kyohei
+										NOT = { has_country_flag = negotiate_treaty_shimonoseki }
+										THIS = { owns = 2681 }
+										THIS = { NOT = { capital = 2681 } }
+									}
+								}
+							}
+							lambda_country_event = {
+								title = "EVTNAME1316091" #The Unequal Treaty (to the GP)
+								desc = "EVTDESC1316091"
+								picture = "Opiumwar"
+								option = {
+									name = "EVT1316090OPTA"
+									prestige_factor = 0.1
+									treasury = 200000
+									diplomatic_influence = { who = FROM value = 50 }
+									ENG = {
+										limit = {
+											OR = {
+												1496 = {
+													NOT = { owned_by = ENG }
+													NOT = { owned_by = FROM }
+												}
+												has_country_flag = treaty_of_nanking
+											}
+										}
+										FROM = {
+											random_owned = {
+												limit = {
+													OR = {
+														province_id = 1498
+														province_id = 1538
+														province_id = 1566
+														province_id = 1481
+														province_id = 1569
+														province_id = 1606
+														province_id = 2632
+													}
+												}
+												secede_province = THIS
+											}
+										}
+									}
+									ENG = {
+										limit = {
+											NOT = { has_country_flag = treaty_of_nanking }
+											FROM = { owns = 1496 }
+										}
+										1496 = { secede_province = ENG }
+									}
+									RUS = {
+										if = {
+											limit = { FROM = { owns = 1481 } }
+											1481 = { secede_province = RUS }
+										} else = {
+											FROM = {
+												random_owned = {
+													limit = {
+														OR = {
+															province_id = 1498
+															province_id = 1538
+															province_id = 1566
+															province_id = 1569
+															province_id = 1606
+															province_id = 1496
+														}
+													}
+													secede_province = THIS
+												}
+											}
+										}
+									}
+									random_owned = {
+										limit = {
+											owner = {
+												NOT = { tag = ENG }
+												NOT = { tag = RUS }
+											}
+										}
+										FROM = {
+											random_owned = {
+												limit = {
+													OR = {
+														province_id = 1498
+														province_id = 1538
+														province_id = 1566
+														province_id = 1569
+														province_id = 1606
+														province_id = 1481
+														province_id = 1496
+														province_id = 2632
+													}
+												}
+												secede_province = THIS
+											}
+										}
+									}
+									any_owned = {
+										limit = {
+											is_core = CHI
+											NOT = {
+												is_core = THIS
+												region = CHI_1082
+												region = JAP_1086
+												region = CHI_1485
+												province_id = 1498
+												province_id = 1538
+												province_id = 1496
+												province_id = 1566
+												province_id = 1481
+												province_id = 1569
+												province_id = 1606
+												province_id = 1499
+												province_id = 2632
+											}
+										}
+										secede_province = CHI
+									}
+									FROM = {
+										lambda_country_event = {
+											title = "EVTNAME1316092" #The Unequal Treaty (to China)
+											desc = "EVTDESC1316092"
+											picture = "asian_administration"
+											option = {
+												name = "EVT1316092OPTA"
+												prestige_factor = -0.2
+												treasury = -200000
+												any_owned = { limit = { is_core = FROM } secede_province = FROM }
+												add_country_modifier = { name = legation_quarter duration = -1 }
+											}
+										}
+									}
+									ai_chance = { factor = 100 }
+								}
+
+								option = {
+									name = "EVT1316091OPTB"
+									badboy = 3
+									any_owned = {
+										limit = { is_core = CHI }
+										any_pop = { militancy = 6 }
+									}
+									any_greater_power = {
+										limit = {
+											any_owned_province = { continent = asia }
+											NOT = { tag = THIS }
+										}
+										relation = { who = THIS value = -50 }
+										casus_belli = {
+											target = THIS
+											type = war_reparations
+											months = 60
+										}
+									}
+									ai_chance = { factor = 0 }
+								}
+							}
+						}
+						FROM = {
+							limit = {
+								OR = { tag = JAP tag = TKG }
+								has_country_modifier = fukoku_kyohei
+								NOT = { has_country_flag = negotiate_treaty_shimonoseki }
+								THIS = { owns = 2681 }
+								THIS = { NOT = { capital = 2681 } }
+							}
+							country_event = 1316090
+						}
+					}
+				}
+			}
 		}
 	}
 }

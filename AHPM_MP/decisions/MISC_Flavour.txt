@@ -83,11 +83,7 @@ political_decisions = {
 		effect = {
 			badboy = 5
 			set_country_flag = artois_claimed
-			FRA_404 = { add_core = NET }
-			relation = {
-				who = FRA
-				value = -400
-			}
+			FRA_404 = { add_core = THIS }
 		}
 		ai_will_do = { factor = 1 }
 	}

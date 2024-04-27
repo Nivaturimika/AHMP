@@ -23,14 +23,9 @@ political_decisions = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = liquor_prohibition
-				duration = -1
-			}
+			add_country_modifier = liquor_prohibition
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	abolish_prohibition = {
