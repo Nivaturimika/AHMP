@@ -4845,42 +4845,36 @@ country_event = {
 				ai = yes
 				NOT = { any_owned_province = { controlled_by = THIS } }
 			}
-			country_event = 16050223
-		}
-	}
-}
-
-country_event = {
-	id = 16050223
-	title = "EVTNAME16050223"
-	desc = "EVTDESC16050223"
-	picture = "warlords"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT16050223OPTA"
-		random_country = {
-			limit = {
-				tag = FROM
-				OR = {
-					NOT = { any_owned_province = { controlled_by = THIS } }
-					NOT = { neighbour = THIS }
+			lambda_country_event = {
+				title = "EVTNAME16050223"
+				desc = "EVTDESC16050223"
+				picture = "warlords"
+				option = {
+					name = "EVT16050223OPTA"
+					FROM = {
+						limit = {
+							OR = {
+								NOT = { any_owned_province = { controlled_by = THIS } }
+								NOT = { neighbour = THIS }
+							}
+						}
+						end_war = THIS
+						THIS = { set_country_flag = ending_war_now }
+					}
+					FROM = {
+						war_countries = {
+							limit = {
+								alliance_with = THIS
+								NOT = { is_culture_group = east_asian }
+								THIS = { has_country_flag = ending_war_now }
+							}
+							end_war = FROM
+						}
+					}
+					THIS = { clr_country_flag = ending_war_now }
 				}
 			}
-			end_war = THIS
-			THIS = { set_country_flag = ending_war_now }
 		}
-		any_country = {
-			limit = {
-				alliance_with = THIS
-				war_with = FROM
-				NOT = { is_culture_group = east_asian }
-				THIS = { has_country_flag = ending_war_now }
-			}
-			end_war = FROM
-		}
-		THIS = { clr_country_flag = ending_war_now }
 	}
 }
 
@@ -4902,20 +4896,19 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA90900"
-		random_owned = { limit = { owner = { ai = yes } } owner = { add_country_modifier = { name = law_changed_by_force duration = 3 } } }
 		random_owned = {
 			limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
 			owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
 		}
-		MCK = { all_core = { add_core = CHI } }
-		XBI = { all_core = { add_core = CHI } }
-		XIN = { all_core = { add_core = CHI } }
-		SZC = { all_core = { add_core = CHI } }
-		YNN = { all_core = { add_core = CHI } }
-		GXI = { all_core = { add_core = CHI } }
-		GNG = { all_core = { add_core = CHI } }
-		FJN = { all_core = { add_core = CHI } }
-		KML = { all_core = { add_core = CHI } }
+		MCK = { all_core = { add_core = THIS } }
+		XBI = { all_core = { add_core = THIS } }
+		XIN = { all_core = { add_core = THIS } }
+		SZC = { all_core = { add_core = THIS } }
+		YNN = { all_core = { add_core = THIS } }
+		GXI = { all_core = { add_core = THIS } }
+		GNG = { all_core = { add_core = THIS } }
+		FJN = { all_core = { add_core = THIS } }
+		KML = { all_core = { add_core = THIS } }
 		random_owned = {
 			limit = {
 				owner = {
@@ -4992,62 +4985,33 @@ country_event = {
 					tag = KML
 				}
 			}
-			country_event = { id=90901 days=0 }
-		}
-	}
-}
-
-# Event to Inherit
-country_event = {
-	id = 90901
-	title = "EVTNAME90900"
-	desc = "EVTDESC90901"
-	picture = "Celebration"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVTOPTA90901"
-		random_owned = {
-			limit = {
-				owner = { civilized = no }
-			}
-			owner = { civilized = yes }
-		}
-		FROM = { inherit = THIS }
-		ai_chance = {
-			factor = 10
-			 modifier = {
-				factor = 10
-				relation = { who = FROM value = 100 }
-			}
-		}
-	}
-
-	option = {
-		name = "EVTOPTB90100"
-		random_owned = {
-			limit = {
-				owner = { civilized = no }
-			}
-			owner = { civilized = yes }
-		}
-		prestige = 10
-		relation = {
-			who = FROM
-			value = -200
-		}
-		release_vassal = THIS
-		leave_alliance = FROM
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 5
-				civilized = yes
-			}
-			modifier = {
-				factor = 0.5
-				relation = { who = FROM value = 100 }
+			# Event to Inherit
+			lambda_country_event = {
+				title = "EVTNAME90900"
+				desc = "EVTDESC90901"
+				picture = "Celebration"
+				immediate = {
+					if = {
+						limit = { civilized = no }
+						civilized = yes
+					}
+				}
+				option = {
+					name = "EVTOPTB90100"
+					prestige = 10
+					relation = {
+						who = FROM
+						value = -200
+					}
+					release_vassal = THIS
+					leave_alliance = FROM
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVTOPTA90901"
+					FROM = { inherit = THIS }
+					ai_chance = { factor = 0 }
+				}
 			}
 		}
 	}
@@ -5073,9 +5037,7 @@ country_event = {
 			name = self_strengthening_movement
 			duration = 730
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -5096,9 +5058,7 @@ country_event = {
 			name = self_strengthening_movement
 			duration = 730
 		}
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

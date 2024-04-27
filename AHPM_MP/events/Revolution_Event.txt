@@ -328,9 +328,8 @@ country_event = {
 			limit = { is_core = THIS }
 			remove_province_modifier = nationalist_agitation
 		}
-		random_country = {
+		sphere_owner = {
 			limit = {
-				is_sphere_leader_of = THIS
 				NOT = { is_our_vassal = THIS }
 			}
 			diplomatic_influence = {
@@ -352,10 +351,6 @@ country_event = {
 			diplomatic_influence = {
 				who = THIS
 				value = -200
-			}
-			relation = {
-				who = THIS
-				value = -50
 			}
 			set_country_flag = former_overlord
 			country_event = 800055
@@ -613,10 +608,8 @@ country_event = {
 			limit = { owner = { has_country_modifier = european_military_mission } }
 			owner = { remove_country_modifier = european_military_mission }
 		}
-		random_country = {
+		sphere_owner = {
 			limit = {
-				is_sphere_leader_of = THIS
-				NOT = { is_our_vassal = THIS }
 				THIS = { is_substate = no }
 			}
 			diplomatic_influence = {

@@ -249,24 +249,10 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = 60040
-	title = "EVTNAME60040"
-	desc = "EVTDESC60040"
-	picture = "Monarchy"
-	is_triggered_only = yes
-	option = {
-		name = "EVTOPTA60040"
-		government = absolute_monarchy
-	}
-}
-
-country_event = {
-	id = 60060
+lambda_country_event = {
 	title = "EVTNAME60060"
 	desc = "EVTDESC60060"
 	picture = "Monarchy"
-	is_triggered_only = yes
 	option = {
 		name = "EVTNAME60060"
 		government = prussian_constitutionalism
@@ -284,29 +270,6 @@ country_event = {
 		name = "EVTOPTA60070"
 		government = hms_government
 		if = { limit = { border_policy = closed_borders } political_reform = open_borders }
-	}
-}
-
-country_event = {
-	id = 60090
-	title = "EVTNAME60110"
-	desc = "EVTDESC60080"
-	picture = "communist_crowd"
-	is_triggered_only = yes
-	option = {
-		name = "EVT60090OPTA"
-		if = {
-			limit = { ruling_party_ideology = anarcho_liberal }
-			government = bourgeois_dictatorship
-		} else_if = {
-			limit = { ruling_party_ideology = communist }
-			government = proletarian_dictatorship
-		} else_if = {
-			limit = { ruling_party_ideology = fascist }
-			government = fascist_dictatorship
-		} else = {
-			government = presidential_dictatorship
-		}
 	}
 }
 
@@ -442,19 +405,6 @@ country_event = {
 		name = "EVTOPTA60141"
 		political_reform = state_controlled
 	}
-}
-
-country_event = {
-	id = 60150
-	title = "EVTNAME60150"
-	desc = "EVTDESC60150"
-	picture = "Unite"
-	is_triggered_only = yes
-	mean_time_to_happen = { months = 1 }
-	immediate = { war_exhaustion = 5 }
-	option = { name = "EVTOPTA60150" }
-	option = { name = "EVTOPTB60150" }
-	option = { name = "EVTOPTC60150" }
 }
 
 #Warship commission is ready

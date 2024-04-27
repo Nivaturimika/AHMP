@@ -253,11 +253,38 @@ political_reforms = {
 					if = {
 						limit = { has_country_modifier = female_suffrage }
 						remove_country_modifier = female_suffrage
-						country_event = 60150
+						lambda_country_event = {
+							title = "EVTNAME60150"
+							desc = "EVTDESC60150"
+							picture = "Unite"
+							immediate = { war_exhaustion = 5 }
+							option = { name = "EVTOPTA60150" }
+							option = { name = "EVTOPTB60150" }
+							option = { name = "EVTOPTC60150" }
+						}
 					}
 					if = {
 						limit = { government = democracy }
-						country_event = 60090
+						lambda_country_event = {
+							title = "EVTNAME60110"
+							desc = "EVTDESC60080"
+							picture = "communist_crowd"
+							option = {
+								name = "EVT60090OPTA"
+								if = {
+									limit = { ruling_party_ideology = anarcho_liberal }
+									government = bourgeois_dictatorship
+								} else_if = {
+									limit = { ruling_party_ideology = communist }
+									government = proletarian_dictatorship
+								} else_if = {
+									limit = { ruling_party_ideology = fascist }
+									government = fascist_dictatorship
+								} else = {
+									government = presidential_dictatorship
+								}
+							}
+						}
 					} else_if = {
 						limit = {
 							OR = {
@@ -265,7 +292,15 @@ political_reforms = {
 								government = prussian_constitutionalism
 							}
 						}
-						country_event = 60040
+						lambda_country_event = {
+							title = "EVTNAME60040"
+							desc = "EVTDESC60040"
+							picture = "Monarchy"
+							option = {
+								name = "EVTOPTA60040"
+								government = absolute_monarchy
+							}
+						}
 					}
 				}
 			}

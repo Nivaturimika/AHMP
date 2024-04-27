@@ -1221,23 +1221,16 @@ country_event = {
 			}
 			militancy = 5
 		}
-		random_country = {
+		sphere_owner = {
 			limit = {
-				is_sphere_leader_of = THIS
-				NOT = {
-					is_sphere_leader_of = FROM
-					tag = FROM
-				}
+				is_sphere_leader_of != FROM
+				tag != FROM
 			}
 			leave_alliance = THIS
 			casus_belli = {
 				target = FROM
 				type = free_peoples
 				months = 12
-			}
-			relation = {
-				who = FROM
-				value = -50
 			}
 		}
 		FROM = { inherit = THIS }

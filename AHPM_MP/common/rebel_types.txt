@@ -2115,9 +2115,22 @@ boxer_rebels = {
 			name = boxer_rebellion
 			duration = 365
 		}
-		random_country = {
-			limit = { is_greater_power = yes }
-			country_event = 13360
+		any_greater_power = {
+			#Boxers Burn something
+			lambda_country_event = {
+				title = "EVTNAME13356"
+				desc = "EVTDESC13356"
+				picture = "boxers"
+				option = {
+					name = "EVTOPTA13356"
+					prestige = -2
+					casus_belli = {
+						target = QNG
+						type = cut_down_to_size
+						months = 12
+					}
+				}
+			}
 		}
 	}
 

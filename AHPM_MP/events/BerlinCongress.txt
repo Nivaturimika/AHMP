@@ -2527,18 +2527,6 @@ country_event = {
 			limit = {
 				has_country_flag = attending_berlin_congress
 				THIS = { NOT = { has_country_flag = congress_released_country } }
-				neighbour = THIS
-				NOT = { is_sphere_leader_of = THIS }
-				NOT = { tag = RUS }
-				NOT = { tag = TUR }
-			}
-			country_event = 900712
-		}
-		any_country = {
-			limit = {
-				has_country_flag = attending_berlin_congress
-				THIS = { has_country_flag = congress_released_country }
-				NOT = { neighbour = THIS }
 				NOT = { is_sphere_leader_of = THIS }
 				NOT = { tag = RUS }
 				NOT = { tag = TUR }

@@ -56,9 +56,8 @@ country_event = {
 			country_event = 60130
 			set_country_flag = crown_from_the_gutter
 		}
-		random_country = {
+		sphere_owner = {
 			limit = {
-				is_sphere_leader_of = THIS
 				NOT = {
 					is_our_vassal = THIS
 					is_culture_group = THIS
@@ -467,33 +466,30 @@ country_event = {
 					value = -100
 				}
 			}
-			random_country = {
+			any_greater_power = {
 				limit = {
 					primary_culture = north_german
-					is_greater_power = yes
 					is_sphere_leader_of = THIS
 					neighbour = THIS
 				}
 				country_event = 60130
 			}
-			random_country = {
-				limit = {
-					primary_culture = north_german
-					is_greater_power = yes
-					OR = {
-						NOT = { is_sphere_leader_of = THIS }
-						NOT = { neighbour = THIS }
-					}
-				}
-				country_event = 11104
-			}
-			random_country = {
+			any_greater_power = {
 				limit = {
 					primary_culture = south_german
-					is_greater_power = yes
-					NOT = {
-						is_sphere_leader_of = THIS
-						any_greater_power = { primary_culture = north_german }
+					OR = {
+						AND = {
+							OR = {
+								NOT = { is_sphere_leader_of = THIS }
+								NOT = { neighbour = THIS }
+							}
+						}
+						AND = {
+							NOT = {
+								is_sphere_leader_of = THIS
+								any_greater_power = { primary_culture = north_german }
+							}
+						}
 					}
 				}
 				country_event = 11104
@@ -520,10 +516,6 @@ country_event = {
 					who = THIS
 					value = -400
 				}
-				relation = {
-					who = THIS
-					value = -100
-				}
 			}
 			random_country = {
 				limit = {
@@ -535,24 +527,20 @@ country_event = {
 				}
 				country_event = 60130
 			}
-			random_country = {
+			any_greater_power = {
 				limit = {
 					primary_culture = south_german
-					is_greater_power = yes
 					OR = {
-						NOT = { is_sphere_leader_of = THIS }
-						NOT = { neighbour = THIS }
-						test = is_austrian_empire
-					}
-				}
-				country_event = 11104
-			}
-			random_country = {
-				limit = {
-					primary_culture = north_german
-					is_greater_power = yes
-					NOT = {
-						any_greater_power = { primary_culture = south_german }
+						AND = {
+							OR = {
+								NOT = { is_sphere_leader_of = THIS }
+								NOT = { neighbour = THIS }
+								test = is_austrian_empire
+							}
+						}
+						NOT = {
+							any_greater_power = { primary_culture = south_german }
+						}
 					}
 				}
 				country_event = 11104
@@ -1286,9 +1274,8 @@ country_event = {
 			create_alliance = THIS
 			set_country_flag = crown_from_the_gutter
 		}
-		random_country = {
+		sphere_owner = {
 			limit = {
-				is_sphere_leader_of = THIS
 				NOT = {
 					is_our_vassal = THIS
 					is_culture_group = scandinavian
@@ -1423,9 +1410,8 @@ country_event = {
 				value = 200
 			}
 		}
-		random_country = {
+		sphere_owner = {
 			limit = {
-				is_sphere_leader_of = THIS
 				NOT = {
 					is_our_vassal = THIS
 					is_culture_group = pan_romanian

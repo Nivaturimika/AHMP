@@ -196,50 +196,6 @@ country_event = {
 	}
 }
 
-country_event = {
-
-	id = 45105
-
-	title = "EVTNAME45105"
-	desc = "EVTDESC45105"
-	picture = "annexation_santo_domingo"
-
-	is_triggered_only = yes
-
-	immediate = {
-		civilized = no
-	}
-
-	option = {
-		name = "EVT45105OPTA"
-		FROM = {
-			random = {
-				chance = 60
-				badboy = 5
-				any_owned = {
-					any_pop = {
-						scaled_militancy = { factor = 1 ideology = conservative }
-						scaled_militancy = { factor = 3 ideology = liberal }
-						scaled_militancy = { factor = 3 ideology = socialist }
-						scaled_militancy = { factor = 2 issue = pacifism }
-						scaled_consciousness = { factor = 4 issue = pacifism }
-					}
-				}
-			}
-			treasury = -100000
-		}
-		FROM = { inherit = THIS }
-		civilized = yes
-		ai_chance = { factor = 0 }
-	}
-
-	option = {
-		name = "EVT45105OPTB"
-		FROM = { diplomatic_influence = { who = THIS value = -100} }
-		ai_chance = { factor = 1 }
-	}
-}
-
 
 country_event = {
 
@@ -274,82 +230,75 @@ country_event = {
 	option = {
 		name = "EVT45106OPTB"
 		prestige = 10
-		FRA = { country_event = 45107 }
-	}
-}
-
-country_event = {
-
-	id = 45107
-
-	title = "EVTNAME45107"
-	desc = "EVTDESC45107"
-	picture = "haiti_debts"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT45107OPTA"
-		casus_belli = {
-			target = FROM
-			type = war_reparations
-			months = 12
+		FRA = {
+			lambda_country_event = {
+				title = "EVTNAME45107"
+				desc = "EVTDESC45107"
+				picture = "haiti_debts"
+				option = {
+					name = "EVT45107OPTA"
+					casus_belli = {
+						target = FROM
+						type = war_reparations
+						months = 12
+					}
+					war = {
+						target = FROM
+						attacker_goal = { casus_belli = war_reparations }
+					}
+					ai_chance = { factor = 1 }
+				}
+				option = {
+					name = "EVT45107OPTB"
+					badboy = 8
+					add_casus_belli = {
+						target = USA
+						type = cut_down_to_size
+						months = 48
+					}
+					casus_belli = {
+						target = FROM
+						type = war_reparations
+						months = 80
+					}
+					casus_belli = {
+						target = FROM
+						type = make_puppet
+						months = 120
+					}
+					war = {
+						target = FROM
+						attacker_goal = { casus_belli = war_reparations }
+					}
+					ai_chance = { factor = 0 }
+				}
+				option = {
+					name = "EVT45107OPTC"
+					badboy = 10
+					add_casus_belli = {
+						target = USA
+						type = cut_down_to_size
+						months = 48
+					}
+					casus_belli = {
+						target = FROM
+						type = conquest
+						months = 12
+					}
+					war = {
+						target = FROM
+						attacker_goal = { casus_belli = conquest }
+					}
+					ai_chance = { factor = 0 }
+				}
+				option = {
+					name = "EVT45107OPTD"
+					badboy = -2
+					prestige = -20
+					ai_chance = { factor = 0 }
+				}
+			}
 		}
-		war = {
-			target = FROM
-			attacker_goal = { casus_belli = war_reparations }
-		}
-		ai_chance = { factor = 1 }
-	}
-
-	option = {
-		name = "EVT45107OPTB"
-		badboy = 8
-		add_casus_belli = {
-			target = USA
-			type = cut_down_to_size
-			months = 48
-		}
-		casus_belli = {
-			target = FROM
-			type = war_reparations
-			months = 80
-		}
-		casus_belli = {
-			target = FROM
-			type = make_puppet
-			months = 120
-		}
-		war = {
-			target = FROM
-			attacker_goal = { casus_belli = war_reparations }
-		}
-		ai_chance = { factor = 0 }
-	}
-	option = {
-		name = "EVT45107OPTC"
-		badboy = 10
-		add_casus_belli = {
-			target = USA
-			type = cut_down_to_size
-			months = 48
-		}
-		casus_belli = {
-			target = FROM
-			type = conquest
-			months = 12
-		}
-		war = {
-			target = FROM
-			attacker_goal = { casus_belli = conquest }
-		}
-		ai_chance = { factor = 0 }
-	}
-	option = {
-		name = "EVT45107OPTD"
-		badboy = -2
-		prestige = -20
-		ai_chance = { factor = 0 }
 	}
 }
 

@@ -1507,18 +1507,9 @@ country_event = {
 			political_reform = mandatory_service
 			add_country_modifier = { name = national_confusion duration = 365 }
 		}
-
-		any_country = {
-			limit = { is_greater_power = yes }
-			relation = { who = SUD value = -400 }
+		any_greater_power = {
 			diplomatic_influence = { who = SUD value = -400 }
 		}
-
-		any_country = {
-			limit = { NOT = { is_greater_power = yes } neighbour = SUD }
-			relation = { who = SUD value = -400 }
-		}
-
 		ai_chance = { factor = 100 }
 	}
 
@@ -1531,7 +1522,8 @@ country_event = {
 			who = SUD
 			value = -400
 			}
-		SUD = { any_owned = { remove_province_modifier = fundamentalist_sympathies }
+		SUD = {
+			any_owned = { remove_province_modifier = fundamentalist_sympathies }
 			any_pop = { limit = { has_pop_religion = sunni } militancy = -10 }
 		}
 		SUD = {
@@ -1548,18 +1540,9 @@ country_event = {
 			political_reform = mandatory_service
 			add_country_modifier = { name = national_confusion duration = 365 }
 		}
-
-		any_country = {
-			limit = { is_greater_power = yes }
-			relation = { who = SUD value = -400 }
+		any_greater_power = {
 			diplomatic_influence = { who = SUD value = -400 }
 		}
-
-		any_country = {
-			limit = { NOT = { is_greater_power = yes } neighbour = SUD }
-			relation = { who = SUD value = -400 }
-		}
-
 		change_tag_no_core_switch = SUD
 		ai_chance = { factor = 0 }
 	}
