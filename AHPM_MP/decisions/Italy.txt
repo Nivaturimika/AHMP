@@ -211,7 +211,7 @@ political_decisions = {
 							}
 						}
 						ai_chance = {
-							factor = 95
+							factor = 1
 						}
 					}
 
@@ -241,7 +241,7 @@ political_decisions = {
 							}
 						}
 						ai_chance = {
-							factor = 5
+							factor = 0
 						}
 					}
 				}
